@@ -19,10 +19,10 @@ copy_input_files = False # set to False if you want to customize them
 # Manually create input/phenotype_common.txt
 
 # %%
-model = cobra.io.load_json_model('../build_model/input/iRhtoC.json')
+model = cobra.io.load_json_model('../build_model/input/GSM_iSace1144_rba.json')
 model = deepcopy(model)
 model.solver = 'glpk'
-newmodel_path = './input/iRhtoC_pathwayadd.json'
+newmodel_path = './input/GSM_iSace1144_rba_pathwayadd.json'
 
 # %%
 path_gams = '../GAMS/'
@@ -38,7 +38,7 @@ model.objective = dict()
 
 model.reactions.ATPM_c.lower_bound = 1
 model.reactions.EX_glc__D_e.bounds = (-13.21,1000)
-model.reactions.BIOMASS_RT_CLIM.bounds = (0.1, 0.1)
+model.reactions.BIOMASS_AERO_SC_hvd.bounds = (0.1, 0.1)
 model.reactions.EX_o2_e.bounds = (-1000,1000)
 model.reactions.EX_co2_e.bounds = (-1000,1000)
 
