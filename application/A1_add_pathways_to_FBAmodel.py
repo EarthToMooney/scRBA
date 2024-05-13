@@ -193,7 +193,12 @@ for p in prods:
 #             os.path.join(path_out, 'cplex.opt'));
 
 if rerun_RBA:
-    for p in prods:
+    for prodname in prods:
+        if prodname == '3hpp':
+            plist = ['3hppa', '3hppb']
+        else:
+            plist = [prodname]
+        for p in plist:
             cmds = ['cd output_max/' + p,
                     'module load gams',
                     'python3 runRBA.py']
