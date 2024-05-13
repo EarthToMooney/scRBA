@@ -1,0 +1,9 @@
+/
+'PROSYN-rtmATP9'
+'PROSYN-rtmCOX1'
+'PROSYN-rtmCOX2'
+'PROSYN-rtmCOX3'
+'PROSYN-rtmCOB'
+'PROSYN-rtmATP6'
+'PROSYN-rtmATP8'
+/

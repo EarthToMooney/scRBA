@@ -1,4 +1,6 @@
+
 $include ../../input/phenotype_common.txt
+$setGlobal max_allowed_mito_proteome_allo_fraction 1
 v.up('RXNADD-RSVTOL1_FWD-SPONT') = 1e3 * %nscale%;
 v.up('RXNADD-RSVTOL2_FWD-SPONT') = 1e3 * %nscale%;
 v.up('RXNADD-RSVTOL3_FWD-SPONT') = 1e3 * %nscale%;

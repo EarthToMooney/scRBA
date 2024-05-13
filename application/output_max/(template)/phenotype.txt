@@ -1,0 +1,2 @@
+$include ../../input/phenotype_common.txt
+* add production rxns using the following format: v.up('RXNADD-2PHETOH1_FWD-SPONT') = 1e3 * %nscale%;

@@ -1,1 +1,3 @@
+
 $include ../../input/phenotype_common.txt
+$setGlobal max_allowed_mito_proteome_allo_fraction 1

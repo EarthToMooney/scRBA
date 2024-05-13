@@ -1,6 +1,15 @@
 * Parameters define in this file will overwrite ones define in GAMS runRBA.gms file
 * Select appropriate biomass reaction (different in GAM value)
 v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
+* Optional constraint on allowed proteome allocation to mitochondrial proteins (disable by setting to 1)
+$setGlobal max_allowed_mito_proteome_allo_fraction 0.056
+
+* Ribosome efficiency
+$setGlobal kribonuc 13.2*3600
+$setGlobal kribomito 13.2*3600
+
+* Enforce part of proteome allocate to non-modeled protein
+$setGlobal nonmodeled_proteome_allocation 0.45
 
 * NGAM
 v.fx('RXN-ATPM_c_FWD-SPONT') = 1 * %nscale%;
