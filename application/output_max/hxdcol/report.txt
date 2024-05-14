@@ -1,4 +1,4 @@
-stat	optimal
-vglc	6.91905878817538
-vprod	1.235427474261389
-yield	0.2402845124888821
+stat	infeasible
+vglc	0
+vprod	0
+yield	0
