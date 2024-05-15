@@ -2,21 +2,29 @@
 * Select appropriate biomass reaction (different in GAM value)
 v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
 * Optional constraint on allowed proteome allocation to mitochondrial proteins (disable by setting to 1)
-$setGlobal max_allowed_mito_proteome_allo_fraction 0.056
+
+* chemo-clim 
+v.fx('BIOSYN-PROTTOBIO') = 0.358 * %mu% * %nscale%;
+$setGlobal max_allowed_mito_proteome_allo_fraction 0.1
+* Enforce part of proteome allocate to non-modeled protein
+$setGlobal nonmodeled_proteome_allocation 0.34
+* NGAM
+v.fx('RXN-ATPM_c_FWD-SPONT') = 1 * %nscale%;
+
+** batch
+*$setGlobal max_allowed_mito_proteome_allo_fraction 0.056
+** Enforce part of proteome allocate to non-modeled protein
+*$setGlobal nonmodeled_proteome_allocation 0.45
+** NGAM
+*v.fx('RXN-ATPM_c_FWD-SPONT') = 1 * %nscale%;
 
 * Ribosome efficiency
 $setGlobal kribonuc 13.2*3600
 $setGlobal kribomito 13.2*3600
 
-* Enforce part of proteome allocate to non-modeled protein
-$setGlobal nonmodeled_proteome_allocation 0.45
-
-* NGAM
-v.fx('RXN-ATPM_c_FWD-SPONT') = 1 * %nscale%;
-
-* Carbohydrate, RNA, and protein fraction constraints
-* C-lim protein fraction
-v.fx('BIOSYN-PROTTOBIO') = %mu% * (36.94 + 34.22*%mu%) / 100 * %nscale%;
+** Carbohydrate, RNA, and protein fraction constraints
+** C-lim protein fraction
+*v.fx('BIOSYN-PROTTOBIO') = %mu% * (36.94 + 34.22*%mu%) / 100 * %nscale%;
 *** N-lim protein fraction
 *** v.fx('BIOSYN-PROTTOBIO') = %mu% * (10.57 + 108.56*%mu%) / 100 * %nscale%;
 
