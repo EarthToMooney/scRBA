@@ -1,7 +1,7 @@
-path_gams = '../../../GAMS/'
-path_pycore = '../../../pycore/'
-path_enz_mw = '../../enz_mw_g_per_mmol.txt'
-path_pro_mw = '../../pro_mw_g_per_mmol.txt'
+path_gams = '../../GAMS/'
+path_pycore = '../../pycore/'
+path_enz_mw = '../../input/enz_mw_g_per_mmol.txt'
+path_pro_mw = '../../input/pro_mw_g_per_mmol.txt'
 
 report_file = './binary_search_report.txt' # Text file recording binary search process
 mu_tol = 1e-5; # Tolerance of upper and lower bound gap to tolerance search
