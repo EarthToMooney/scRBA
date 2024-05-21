@@ -257,20 +257,22 @@ with open('../exclude_parameterization_list.txt') as f:
 excl = [r for r in excl if r != '']
 excl += []
 
+import numpy as np
+default_kapp = np.median(list(kapp.values()))
+
 texts = ['rxnid\tkapp (1/s)']
-perhr_texts = ['rxnid\tkapp (1/s)']
+perhr_texts = ['/']
 for k,v in kapp.items():
     if k not in excl:
         texts.append(k + '\t' + str(v))
-        perhr_texts.append(k + '\t' + str(v*3600))
+        perhr_texts.append("'" + k + "'" + '\t' + str(v*3600))
     
 with open('./kapps_in_vivo.txt', 'w') as f:
     f.write('\n'.join(texts))
 with open('./kapps_per_hr.txt', 'w') as f:
-    f.write('\n'.join(texts))
+    f.write('\n'.join(texts + '/'))
 
 # %%
-import numpy as np
-np.median(list(kapp.values()))
+
 
 # %%
