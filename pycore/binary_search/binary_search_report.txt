@@ -1,1 +1,17 @@
-Model is infeasible at mu = 0, check model connectivity and other bugs. Terminate program.
+Pass mu = 0 test, now proceed to binary search.
+mu = 0.2500000, status = infeasible
+mu = 0.1250000, status = infeasible
+mu = 0.0625000, status = infeasible
+mu = 0.0312500, status = infeasible
+mu = 0.0156250, status = infeasible
+mu = 0.0078125, status = infeasible
+mu = 0.0039062, status = infeasible
+mu = 0.0019531, status = infeasible
+mu = 0.0009766, status = infeasible
+mu = 0.0004883, status = infeasible
+mu = 0.0002441, status = infeasible
+mu = 0.0001221, status = infeasible
+mu = 0.0000610, status = infeasible
+mu = 0.0000305, status = infeasible
+mu = 0.0000153, status = infeasible
+mu = 0.0000076, status = infeasible

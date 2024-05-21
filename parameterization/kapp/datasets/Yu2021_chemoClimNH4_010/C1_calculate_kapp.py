@@ -228,6 +228,9 @@ for enztext,x in mapper.items():
     rxnval = 0
     rxns_on = []
     for rxn in rxns:
+        if rxn not in all_rxns:
+            print('Reaction from '+set4_path+' ignored due to its absence from model: '+rxn)
+            continue
         if rxn in res_metab.metabolic_flux.keys():
             rxns_on.append(rxn)
             rxnval += abs(res_metab.metabolic_flux[rxn])
@@ -295,7 +298,7 @@ for rxn in all_rxns:
     rxn_name_without_enz = rxn.split('-')[-2]
     if enz not in ['SPONT', 'UNKNOWN']:
         if rxn in kapp_per_hr.keys():
-            continue
+            pass
             # if kapp_per_hr[rxn] <= 1e-5:
             #     # output_info.append('kapp <= cutoff for ' + rxn)
             #     kapp_per_hr[rxn] = default_kapp

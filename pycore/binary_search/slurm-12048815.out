@@ -1,0 +1,2491 @@
+--- Job runRBA.gms Start 05/21/24 16:02:52 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(50419) 6 Mb--- . RBA_sij.txt(68380) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.321
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  78,859 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 1.140E+01, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.394
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 5172 rows, 6820 columns, 70395 nonzeros, 36 col bounds, 6346 row bounds
+Reduced LP has 864 rows 2225 columns 8134 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 1.01e+06 |        7 | 0.00000000e+00
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 1.18e+04 |       30 | 0.00000000e+00
+  L  |    0.0 |     399 |     6 | 0.00e+00 | 4.03e+04 |       74 | 0.00000000e+00
+  L  |    0.0 |     599 |     9 | 1.30e-08 | 1.10e+05 |       48 | 2.48542891e-07
+  L  |    0.1 |     799 |    10 | 1.30e-08 | 2.55e+04 |       39 | 5.68862925e-07
+  L  |    0.1 |     999 |    12 | 1.31e-08 | 5.44e+03 |       17 | 1.17223777e-06
+  E  |    0.1 |    1164 |    14 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.1 |    1164 |    14 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 1/4398046511104
+Max. row violation = 3/2199023255552
+Max. reduced cost violation = 0
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution primal infeasible (3).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 19/79228162514264337593543950336
+Max. reduced cost violation = 0
+Max. dual violation = 0
+Tolerances reached.
+Solved to optimality.
+
+SoPlex status       : problem is solved [optimal]
+Solving time (sec)  : 0.36
+Iterations          : 1164
+Objective value     : 0.00000000e+00
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:01.423
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:02:54 elapsed 0:00:01.426
+--- Job runRBA.gms Start 05/21/24 16:02:54 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(47795) 5 Mb--- . RBA_sij.txt(64620) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.327
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  78,859 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 1.140E+01, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.398
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 5172 rows, 6820 columns, 70395 nonzeros, 36 col bounds, 6346 row bounds
+Reduced LP has 864 rows 2225 columns 8134 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 1.01e+06 |        7 | 0.00000000e+00
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 1.18e+04 |       30 | 0.00000000e+00
+  L  |    0.0 |     399 |     6 | 0.00e+00 | 4.03e+04 |       74 | 0.00000000e+00
+  L  |    0.0 |     599 |     9 | 1.30e-08 | 1.10e+05 |       48 | 2.48542891e-07
+  L  |    0.1 |     799 |    10 | 1.30e-08 | 2.55e+04 |       39 | 5.68862925e-07
+  L  |    0.1 |     999 |    12 | 1.31e-08 | 5.44e+03 |       17 | 1.17223777e-06
+  E  |    0.1 |    1164 |    14 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.1 |    1164 |    14 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 1/4398046511104
+Max. row violation = 3/2199023255552
+Max. reduced cost violation = 0
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution primal infeasible (3).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 19/79228162514264337593543950336
+Max. reduced cost violation = 0
+Max. dual violation = 0
+Tolerances reached.
+Solved to optimality.
+
+SoPlex status       : problem is solved [optimal]
+Solving time (sec)  : 0.35
+Iterations          : 1164
+Objective value     : 0.00000000e+00
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:01.424
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:02:56 elapsed 0:00:01.426
+--- Job runRBA.gms Start 05/21/24 16:02:56 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.5
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(48346) 5 Mb--- . RBA_sij.txt(65381) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.325
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 1.140E+01, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.395
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier result: 1
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 6028 rows, 9032 columns, 81654 nonzeros, 60 col bounds, 114144 row bounds
+Reduced LP has 8 rows 14 columns 32 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 299/2199023255552
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 13/1237940039285380274899124224
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.73
+Iterations          : 0
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.872
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:03:03 elapsed 0:00:06.873
+--- Job runRBA.gms Start 05/21/24 16:03:03 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.25
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(48201) 5 Mb--- . RBA_sij.txt(65308) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.325
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 1.140E+01, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.395
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier result: 1
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 6028 rows, 9032 columns, 81654 nonzeros, 60 col bounds, 114109 row bounds
+Reduced LP has 8 rows 14 columns 32 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 637/2199023255552
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 43/309485009821345068724781056
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.64
+Iterations          : 0
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.747
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:03:10 elapsed 0:00:06.748
+--- Job runRBA.gms Start 05/21/24 16:03:10 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.125
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(49533) 5 Mb--- . RBA_sij.txt(66692) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.321
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 6.906E+00, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.391
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier result: 1
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 6028 rows, 9032 columns, 81654 nonzeros, 60 col bounds, 114097 row bounds
+Reduced LP has 8 rows 14 columns 32 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 59/68719476736
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 11/38685626227668133590597632
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.62
+Iterations          : 0
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.725
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:03:17 elapsed 0:00:06.726
+--- Job runRBA.gms Start 05/21/24 16:03:17 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.0625
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(48938) 5 Mb--- . RBA_sij.txt(65900) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.324
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 2.911E+00, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.395
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier result: 1
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 6028 rows, 9032 columns, 81654 nonzeros, 60 col bounds, 114097 row bounds
+Reduced LP has 8 rows 14 columns 32 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 1921/549755813888
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 25/9671406556917033397649408
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.60
+Iterations          : 0
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.718
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:03:23 elapsed 0:00:06.719
+--- Job runRBA.gms Start 05/21/24 16:03:24 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.03125
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(49016) 5 Mb--- . RBA_sij.txt(66391) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.321
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 1.320E+00, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.392
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33212 nonzeros, 595 col bounds, 113386 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.19e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 5.75e+10 |      134 | 0.00000000e+00
+  L  |    0.0 |     374 |     4 | 0.00e+00 | 1.50e+11 |      256 | 0.00000000e+00
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32824 nonzeros, 77 col bounds, 113295 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 1.61e+04 |      102 | -1.00000000e+00
+  L  |    0.0 |      19 |     1 | 0.00e+00 | 3.31e+04 |      102 | -1.00000000e+00
+  L  |    0.0 |     219 |     2 | 0.00e+00 | 7.00e+05 |      135 | -1.00000000e+00
+  L  |    0.0 |     419 |     4 | 0.00e+00 | 4.71e-04 |      187 | 1.85856516e-11
+  L  |    0.0 |     420 |     5 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 17139407177/36893488147419103232
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 3.99e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.0 |       0 |     1 | 0.00e+00 | 3.99e+00 |        2 | 0.00000000e+00
+  E  |    0.0 |      70 |     2 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 189265/4835703278458516698824704
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.05
+Iterations          : 864
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.165
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:03:30 elapsed 0:00:06.166
+--- Job runRBA.gms Start 05/21/24 16:03:30 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.015625
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(49060) 5 Mb--- . RBA_sij.txt(66092) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.323
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 6.261E-01, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.395
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33212 nonzeros, 575 col bounds, 113386 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.18e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 1.03e+05 |      140 | 0.00000000e+00
+  L  |    0.0 |     399 |     3 | 0.00e+00 | 6.57e+05 |      192 | 0.00000000e+00
+  L  |    0.0 |     441 |     4 | 0.00e+00 | 2.35e+08 |      236 | 0.00000000e+00
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32824 nonzeros, 77 col bounds, 113295 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 1.23e+04 |      102 | -1.00000000e+00
+  L  |    0.0 |     154 |     2 | 0.00e+00 | 1.45e+05 |      141 | -1.00000000e+00
+  L  |    0.0 |     354 |     3 | 0.00e+00 | 1.67e+05 |      153 | -1.00000000e+00
+  L  |    0.0 |     551 |     7 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 2401311595861/4611686018427387904
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 3.06e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.0 |       0 |     1 | 0.00e+00 | 3.06e+00 |        3 | 0.00000000e+00
+  E  |    0.0 |       4 |     2 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 9935/37778931862957161709568
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.08
+Iterations          : 996
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.184
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:03:36 elapsed 0:00:06.185
+--- Job runRBA.gms Start 05/21/24 16:03:36 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.0078125
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(47837) 5 Mb--- . RBA_sij.txt(64368) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.329
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 3.046E-01, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.400
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33212 nonzeros, 572 col bounds, 113386 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.18e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 5.71e+04 |      177 | 0.00000000e+00
+  L  |    0.0 |     399 |     5 | 0.00e+00 | 4.91e+04 |      168 | 0.00000000e+00
+  L  |    0.1 |     577 |     8 | 0.00e+00 | 9.53e+05 |      211 | 0.00000000e+00
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32824 nonzeros, 77 col bounds, 113295 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 1.06e+04 |      102 | -1.00000000e+00
+  L  |    0.0 |      18 |     1 | 0.00e+00 | 2.78e+04 |      102 | -1.00000000e+00
+  L  |    0.0 |     218 |     2 | 0.00e+00 | 1.91e+05 |      149 | -1.00000000e+00
+  L  |    0.0 |     418 |     4 | 0.00e+00 | 1.79e+05 |      216 | -1.00000000e+00
+  L  |    0.1 |     605 |     7 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 818663/295147905179352825856
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.02
+Iterations          : 1182
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.148
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:03:43 elapsed 0:00:06.149
+--- Job runRBA.gms Start 05/21/24 16:03:43 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.00390625
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(48920) 5 Mb--- . RBA_sij.txt(66244) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.323
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 1.502E-01, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.394
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33212 nonzeros, 570 col bounds, 113386 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.18e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 8.59e+04 |      164 | 0.00000000e+00
+  L  |    0.0 |     399 |     4 | 0.00e+00 | 3.07e+05 |      199 | 0.00000000e+00
+  L  |    0.0 |     599 |     5 | 0.00e+00 | 1.04e+06 |      221 | 0.00000000e+00
+  L  |    0.1 |     664 |     8 | 0.00e+00 | 4.72e+07 |      235 | 0.00000000e+00
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32824 nonzeros, 76 col bounds, 113268 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 9.86e+03 |      102 | -1.00000000e+00
+  L  |    0.0 |     131 |     2 | 0.00e+00 | 6.67e+04 |      140 | -1.00000000e+00
+  L  |    0.0 |     331 |     5 | 0.00e+00 | 4.48e+05 |      157 | -1.00000000e+00
+  L  |    0.1 |     531 |     6 | 0.00e+00 | 1.17e+06 |      187 | -1.00000000e+00
+  L  |    0.1 |     641 |     8 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 933435448583633767/324518553658426726783156020576256
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.03
+Iterations          : 1305
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.141
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:03:49 elapsed 0:00:06.142
+--- Job runRBA.gms Start 05/21/24 16:03:49 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.001953125
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(49173) 5 Mb--- . RBA_sij.txt(66405) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.321
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 7.455E-02, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.392
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33212 nonzeros, 570 col bounds, 113386 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.18e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 4.95e+04 |      150 | 0.00000000e+00
+  L  |    0.0 |     399 |     6 | 0.00e+00 | 7.78e+04 |      215 | 0.00000000e+00
+  L  |    0.1 |     599 |     8 | 0.00e+00 | 2.83e+05 |      242 | 0.00000000e+00
+  L  |    0.1 |     722 |    10 | 3.72e-09 | 3.04e+08 |      313 | 6.76997956e-04
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32824 nonzeros, 76 col bounds, 113268 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 9.48e+03 |      102 | -1.00000000e+00
+  L  |    0.0 |      73 |     1 | 0.00e+00 | 1.23e+05 |      102 | -1.00000000e+00
+  L  |    0.0 |     273 |     3 | 0.00e+00 | 2.93e+05 |      159 | -1.00000000e+00
+  L  |    0.1 |     473 |     6 | 0.00e+00 | 4.25e+05 |      186 | -1.00000000e+00
+  L  |    0.1 |     673 |     7 | 7.75e-09 | 1.15e+06 |      187 | -9.99996162e-01
+  E  |    0.1 |     823 |    10 | 0.00e+00 | 4.42e-12 |        1 | 0.00000000e+00
+  E  |    0.1 |     824 |    12 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 986335877084979/1180591620717411303424
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 3.50e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.0 |       0 |     1 | 0.00e+00 | 3.50e+00 |        4 | 0.00000000e+00
+  E  |    0.0 |       3 |     2 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 91/36893488147419103232
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.24
+Iterations          : 1549
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.356
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:03:55 elapsed 0:00:06.357
+--- Job runRBA.gms Start 05/21/24 16:03:56 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.0009765625
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(49310) 5 Mb--- . RBA_sij.txt(66311) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.322
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 3.714E-02, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.395
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33212 nonzeros, 570 col bounds, 113386 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.14e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     3 | 0.00e+00 | 9.13e+06 |      138 | 0.00000000e+00
+  L  |    0.0 |     399 |     5 | 0.00e+00 | 2.20e+05 |      204 | 0.00000000e+00
+  L  |    0.1 |     599 |     7 | 1.24e-08 | 6.15e+05 |      211 | 3.43749289e-07
+  L  |    0.1 |     788 |    10 | 1.24e-08 | 7.08e+08 |      258 | 8.49989511e-05
+  L  |    0.1 |     810 |    11 | 1.24e-08 | 1.04e+11 |      222 | 2.14329718e+00
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32824 nonzeros, 76 col bounds, 113268 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 9.29e+03 |      102 | -1.00000000e+00
+  L  |    0.0 |     117 |     1 | 0.00e+00 | 7.59e+04 |      102 | -1.00000000e+00
+  L  |    0.0 |     317 |     3 | 0.00e+00 | 1.44e+05 |      171 | -1.00000000e+00
+  L  |    0.0 |     517 |     5 | 0.00e+00 | 7.69e+04 |      155 | -1.00000000e+00
+  L  |    0.1 |     717 |     7 | 6.96e-09 | 1.06e+06 |      215 | -9.99993600e-01
+  E  |    0.1 |     759 |     9 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.1 |     759 |     9 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 565563612356097143/81129638414606681695789005144064
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.10
+Iterations          : 1569
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.216
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:04:02 elapsed 0:00:06.217
+--- Job runRBA.gms Start 05/21/24 16:04:02 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.00048828125
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(49121) 5 Mb--- . RBA_sij.txt(66356) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.323
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 1.854E-02, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.393
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33212 nonzeros, 570 col bounds, 113378 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.12e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 2.35e+06 |      161 | 0.00000000e+00
+  L  |    0.0 |     399 |     6 | 0.00e+00 | 2.82e+05 |      260 | 0.00000000e+00
+  L  |    0.1 |     599 |     8 | 0.00e+00 | 1.08e+05 |      251 | 0.00000000e+00
+  L  |    0.1 |     799 |     9 | 1.37e-08 | 1.29e+06 |      217 | 2.17665993e-06
+  L  |    0.1 |     870 |    11 | 1.37e-08 | 3.40e+07 |      234 | 1.41003414e-04
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32824 nonzeros, 75 col bounds, 113239 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 9.20e+03 |      102 | -1.00000000e+00
+  L  |    0.0 |     125 |     3 | 0.00e+00 | 4.17e+04 |      161 | -1.00000000e+00
+  L  |    0.0 |     325 |     5 | 0.00e+00 | 1.06e+05 |      206 | -1.00000000e+00
+  L  |    0.1 |     525 |     6 | 0.00e+00 | 1.20e+05 |      228 | -1.00000000e+00
+  L  |    0.1 |     725 |     8 | 1.09e-08 | 9.31e+04 |      234 | -9.99999111e-01
+  L  |    0.1 |     925 |     9 | 1.10e-08 | 9.67e+04 |      229 | -9.99997085e-01
+  E  |    0.1 |    1082 |    11 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.1 |    1082 |    11 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 99191716663/9223372036854775808
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 1.30e+01 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.0 |       0 |     1 | 0.00e+00 | 1.30e+01 |        9 | 0.00000000e+00
+  E  |    0.0 |       1 |     2 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 5/75557863725914323419136
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.28
+Iterations          : 1953
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.415
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:04:09 elapsed 0:00:06.416
+--- Job runRBA.gms Start 05/21/24 16:04:10 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.000244140625
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(49131) 5 Mb--- . RBA_sij.txt(66355) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.322
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 9.261E-03, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.393
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33212 nonzeros, 570 col bounds, 113378 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.11e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     4 | 0.00e+00 | 2.17e+06 |      175 | 0.00000000e+00
+  L  |    0.0 |     399 |     7 | 0.00e+00 | 7.66e+04 |      238 | 0.00000000e+00
+  L  |    0.1 |     599 |     8 | 0.00e+00 | 1.51e+05 |      252 | 0.00000000e+00
+  L  |    0.1 |     799 |    10 | 1.81e-08 | 5.33e+04 |      288 | 1.82015030e-07
+  L  |    0.1 |     999 |    11 | 1.81e-08 | 1.12e+05 |      245 | 6.02754457e-07
+  L  |    0.2 |    1199 |    13 | 1.82e-08 | 1.94e+05 |      265 | 2.07026560e-06
+  L  |    0.2 |    1382 |    14 | 2.74e-07 | 1.43e+10 |      268 | 1.90014126e-01
+  L  |    0.2 |    1425 |    16 | 2.74e-07 | 3.11e+08 |      370 | 8.71050686e-01
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32824 nonzeros, 75 col bounds, 113239 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 9.16e+03 |      102 | -1.00000000e+00
+  L  |    0.0 |      47 |     1 | 0.00e+00 | 2.02e+04 |      102 | -1.00000000e+00
+  L  |    0.0 |     247 |     2 | 0.00e+00 | 7.50e+04 |      171 | -1.00000000e+00
+  L  |    0.0 |     447 |     6 | 0.00e+00 | 3.96e+04 |      203 | -1.00000000e+00
+  L  |    0.1 |     647 |     8 | 8.85e-09 | 6.08e+04 |      212 | -9.99998616e-01
+  L  |    0.1 |     847 |    10 | 8.89e-09 | 6.52e+04 |      270 | -9.99997322e-01
+  L  |    0.1 |    1045 |    11 | 8.90e-09 | 1.43e+05 |      257 | 3.70416272e-13
+  E  |    0.1 |    1045 |    12 | 0.00e+00 | 5.66e-12 |        1 | 0.00000000e+00
+  E  |    0.1 |    1046 |    13 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 1142866350188234551/20282409603651670423947251286016
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.45
+Iterations          : 2471
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- runRBA.gms(103613) 15 Mb  6 secs
+--- Executing after solve: elapsed 0:00:06.569
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:04:16 elapsed 0:00:06.570
+--- Job runRBA.gms Start 05/21/24 16:04:17 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.0001220703125
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(48895) 5 Mb--- . RBA_sij.txt(66304) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.323
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 4.629E-03, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.394
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33212 nonzeros, 570 col bounds, 113378 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.11e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 1.27e+06 |      172 | 0.00000000e+00
+  L  |    0.0 |     399 |     6 | 0.00e+00 | 1.17e+05 |      238 | 0.00000000e+00
+  L  |    0.1 |     599 |     8 | 2.52e-08 | 9.05e+04 |      248 | -1.28111389e-08
+  L  |    0.1 |     799 |     9 | 2.53e-08 | 8.55e+04 |      257 | 5.94859511e-07
+  L  |    0.1 |     999 |    10 | 2.53e-08 | 2.31e+05 |      247 | 1.14730896e-06
+  L  |    0.2 |    1199 |    11 | 2.54e-08 | 2.90e+05 |      260 | 3.86539884e-06
+  L  |    0.2 |    1346 |    14 | 2.10e-05 | 1.27e+10 |      316 | 1.64470151e-01
+  L  |    0.2 |    1346 |    15 | 2.10e-05 | 1.98e+07 |      338 | 1.64470151e-01
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32824 nonzeros, 75 col bounds, 113239 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 9.13e+03 |      102 | -1.00000000e+00
+  L  |    0.0 |     196 |     2 | 0.00e+00 | 5.61e+04 |      177 | -1.00000000e+00
+  L  |    0.0 |     396 |     5 | 0.00e+00 | 6.55e+04 |      185 | -1.00000000e+00
+  L  |    0.1 |     596 |     8 | 1.75e-08 | 2.84e+05 |      269 | -9.99999732e-01
+  L  |    0.1 |     796 |     9 | 1.75e-08 | 9.00e+04 |      216 | -9.99998557e-01
+  L  |    0.1 |     996 |    11 | 1.76e-08 | 1.63e+05 |      283 | -9.99994662e-01
+  E  |    0.2 |    1094 |    13 | 0.00e+00 | 3.22e-10 |        3 | 0.00000000e+00
+  E  |    0.2 |    1097 |    14 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 62870958091603/73786976294838206464
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 1.79e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.0 |       0 |     1 | 0.00e+00 | 1.79e+00 |        1 | 0.00000000e+00
+  E  |    0.0 |      13 |     2 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 615/4611686018427387904
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.44
+Iterations          : 2456
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- runRBA.gms(103613) 15 Mb  6 secs
+--- Executing after solve: elapsed 0:00:06.561
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:04:23 elapsed 0:00:06.562
+--- Job runRBA.gms Start 05/21/24 16:04:23 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 6.103515625e-05
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(49282) 5 Mb--- . RBA_sij.txt(66387) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.324
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 2.314E-03, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 6.104E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.395
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33212 nonzeros, 570 col bounds, 113378 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.10e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 5.48e+05 |      181 | 0.00000000e+00
+  L  |    0.0 |     399 |     5 | 0.00e+00 | 1.71e+05 |      244 | 0.00000000e+00
+  L  |    0.1 |     599 |     8 | 2.02e-08 | 9.05e+05 |      270 | 5.52332964e-07
+  L  |    0.1 |     799 |     9 | 2.02e-08 | 9.77e+04 |      233 | 2.05534780e-06
+  L  |    0.1 |     999 |    10 | 2.02e-08 | 2.51e+04 |      238 | 3.37965566e-06
+  L  |    0.2 |    1199 |    12 | 2.02e-08 | 1.15e+05 |      216 | 5.50344094e-06
+  L  |    0.2 |    1399 |    13 | 1.01e-08 | 6.09e+06 |      243 | 2.14381807e-04
+  L  |    0.3 |    1489 |    14 | 7.43e-04 | 2.33e+10 |      323 | 1.06996004e+02
+  L  |    0.3 |    1512 |    16 | 1.92e-03 | 4.76e+08 |      271 | 1.09813462e+02
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32824 nonzeros, 75 col bounds, 113239 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 9.12e+03 |      101 | -1.00000000e+00
+  L  |    0.0 |     104 |     3 | 0.00e+00 | 3.15e+04 |      171 | -1.00000000e+00
+  L  |    0.0 |     304 |     6 | 0.00e+00 | 2.96e+04 |      203 | -1.00000000e+00
+  L  |    0.1 |     504 |     9 | 0.00e+00 | 7.08e+04 |      239 | -1.00000000e+00
+  L  |    0.1 |     704 |    11 | 1.90e-08 | 1.97e+05 |      269 | -9.99999717e-01
+  L  |    0.1 |     904 |    12 | 1.91e-08 | 1.61e+05 |      290 | -9.99998801e-01
+  L  |    0.2 |    1104 |    14 | 1.92e-08 | 2.03e+05 |      225 | -9.99996692e-01
+  E  |    0.2 |    1282 |    16 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.2 |    1282 |    16 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 923132839147832077/1208925819614629174706176
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 1.71e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.0 |       0 |     1 | 0.00e+00 | 1.71e+00 |       10 | 0.00000000e+00
+  E  |    0.0 |      11 |     2 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 1371/2417851639229258349412352
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.54
+Iterations          : 2805
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.658
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:04:30 elapsed 0:00:06.659
+--- Job runRBA.gms Start 05/21/24 16:04:30 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 3.0517578125e-05
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(44512) 5 Mb--- . RBA_sij.txt(60215) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.347
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 1.157E-03, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 3.052E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.417
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33212 nonzeros, 570 col bounds, 113378 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.10e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     3 | 0.00e+00 | 1.33e+05 |      160 | 0.00000000e+00
+  L  |    0.0 |     399 |     6 | 0.00e+00 | 1.20e+07 |      218 | 0.00000000e+00
+  L  |    0.1 |     599 |     8 | 1.46e-08 | 7.21e+04 |      273 | 1.75133507e-07
+  L  |    0.1 |     799 |     9 | 1.47e-08 | 3.05e+05 |      246 | 7.13739937e-07
+  L  |    0.1 |     999 |    10 | 1.47e-08 | 3.31e+05 |      265 | 2.02981637e-06
+  L  |    0.2 |    1170 |    13 | 1.47e-08 | 6.27e+06 |      294 | 1.58721566e-04
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32824 nonzeros, 75 col bounds, 113239 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 9.12e+03 |      101 | -1.00000000e+00
+  L  |    0.0 |      25 |     1 | 0.00e+00 | 2.16e+04 |      101 | -1.00000000e+00
+  L  |    0.0 |     225 |     4 | 0.00e+00 | 2.23e+04 |      197 | -1.00000000e+00
+  L  |    0.0 |     425 |     5 | 0.00e+00 | 2.71e+04 |      223 | -1.00000000e+00
+  L  |    0.1 |     625 |     8 | 1.38e-08 | 1.77e+05 |      262 | -9.99999440e-01
+  L  |    0.1 |     825 |     9 | 1.39e-08 | 5.01e+05 |      263 | -9.99997979e-01
+  L  |    0.1 |    1025 |    11 | 1.39e-08 | 5.04e+06 |      307 | -9.99954842e-01
+  E  |    0.1 |    1060 |    12 | 0.00e+00 | 6.14e-04 |       27 | 0.00000000e+00
+  E  |    0.2 |    1093 |    13 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 337437404377/36893488147419103232
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 1.10e+01 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.0 |       0 |     1 | 0.00e+00 | 1.10e+01 |        9 | 0.00000000e+00
+  E  |    0.0 |      13 |     2 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 2022508972340329/1298074214633706907132624082305024
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.35
+Iterations          : 2276
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.493
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:04:37 elapsed 0:00:06.494
+--- Job runRBA.gms Start 05/21/24 16:04:37 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 1.52587890625e-05
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(49223) 5 Mb--- . RBA_sij.txt(66368) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.323
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 5.783E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.526E-05, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.402
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33209 nonzeros, 570 col bounds, 113378 row bounds
+Reduced LP has 1333 rows 2739 columns 48750 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.10e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 1.37e+05 |      167 | 0.00000000e+00
+  L  |    0.0 |     399 |     4 | 0.00e+00 | 1.29e+05 |      205 | 0.00000000e+00
+  L  |    0.1 |     599 |     7 | 1.41e-08 | 3.36e+05 |      279 | 2.98818623e-07
+  L  |    0.1 |     799 |     8 | 1.41e-08 | 2.55e+05 |      282 | 1.31136281e-06
+  L  |    0.1 |     985 |    10 | 1.41e-08 | 3.45e+08 |      261 | 4.72477122e-03
+  L  |    0.2 |    1018 |    11 | 1.78e-06 | 1.02e+07 |      288 | 3.93460599e-01
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32821 nonzeros, 75 col bounds, 113239 row bounds
+Reduced LP has 1357 rows 2770 columns 49190 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 9.11e+03 |      101 | -1.00000000e+00
+  L  |    0.0 |      58 |     1 | 0.00e+00 | 3.14e+04 |      101 | -1.00000000e+00
+  L  |    0.0 |     258 |     3 | 0.00e+00 | 3.22e+04 |      173 | -1.00000000e+00
+  L  |    0.0 |     458 |     5 | 0.00e+00 | 6.63e+04 |      233 | -1.00000000e+00
+  L  |    0.1 |     658 |     8 | 1.48e-08 | 2.03e+05 |      317 | -9.99999243e-01
+  L  |    0.1 |     858 |     9 | 1.49e-08 | 4.75e+04 |      256 | -9.99997862e-01
+  L  |    0.1 |    1058 |    11 | 1.49e-08 | 3.68e+05 |      258 | -9.99996136e-01
+  L  |    0.2 |    1251 |    12 | 7.14e-05 | 1.39e+06 |      249 | -1.31089815e-02
+  E  |    0.2 |    1252 |    13 | 0.00e+00 | 1.03e-01 |       27 | 0.00000000e+00
+  E  |    0.2 |    1308 |    14 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 246190724003/36893488147419103232
+Max. dual violation = 0
+Performing rational reconstruction . . .
+Reconstructed solution dual infeasible (4).
+Refined floating-point solve . . .
+
+  L  |    0.0 |       0 |     1 | 1.61e+01 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.0 |       0 |     1 | 0.00e+00 | 1.61e+01 |        9 | 0.00000000e+00
+  E  |    0.0 |       1 |     2 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 6733/309485009821345068724781056
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.39
+Iterations          : 2327
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- runRBA.gms(103613) 15 Mb  6 secs
+--- Executing after solve: elapsed 0:00:06.526
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:04:44 elapsed 0:00:06.527
+--- Job runRBA.gms Start 05/21/24 16:04:44 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 7.62939453125e-06
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(16) 2 Mb
+--- runRBA.gms(46) 2 Mb
+--- . RBA_species.txt(3809) 3 Mb
+--- runRBA.gms(48) 3 Mb
+--- . RBA_rxns.txt(9047) 4 Mb
+--- runRBA.gms(50) 4 Mb
+--- . RBA_rxns_prosyn.txt(1211) 4 Mb
+--- runRBA.gms(52) 4 Mb
+--- . RBA_rxns_prowaste.txt(1210) 4 Mb
+--- runRBA.gms(54) 4 Mb
+--- . RBA_nuc_translation.txt(1204) 4 Mb
+--- runRBA.gms(56) 4 Mb
+--- . RBA_mito_translation.txt(9) 4 Mb
+--- runRBA.gms(58) 4 Mb
+--- . RBA_rxns_EXREV.txt(159) 4 Mb
+--- runRBA.gms(60) 4 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 4 Mb
+--- runRBA.gms(65) 4 Mb
+--- . RBA_sij.txt(48782) 5 Mb--- . RBA_sij.txt(65624) 6 Mb--- . RBA_sij.txt(76628) 7 Mb
+--- runRBA.gms(67) 7 Mb
+--- . RBA_proteinLength.txt(1211) 7 Mb
+--- runRBA.gms(69) 7 Mb
+--- . kapps_per_hr.txt(2226) 7 Mb
+--- runRBA.gms(97) 7 Mb
+--- . phenotype.txt(53) 7 Mb
+--- runRBA.gms(111) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(121) 7 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2224) 7 Mb
+--- runRBA.gms(126) 7 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2224) 7 Mb
+--- runRBA.gms(145) 7 Mb
+--- Starting execution: elapsed 0:00:00.326
+--- runRBA.gms(103610) 9 Mb
+--- Generating LP model rba
+--- runRBA.gms(103613) 15 Mb
+---   6,037 rows  9,046 columns  82,292 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 2.892E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 7.629E-06, 7.631E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.396
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/scRBA/pycore/binary_search/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 1.00000000e+06
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 4703 rows, 6306 columns, 33204 nonzeros, 570 col bounds, 113378 row bounds
+Reduced LP has 1333 rows 2739 columns 48749 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 3.10e+07 |      117 | 0.00000000e+00
+  L  |    0.0 |     199 |     3 | 0.00e+00 | 9.92e+04 |      160 | 0.00000000e+00
+  L  |    0.0 |     399 |     6 | 0.00e+00 | 9.20e+06 |      251 | 0.00000000e+00
+  L  |    0.1 |     599 |     8 | 0.00e+00 | 1.61e+07 |      285 | 0.00000000e+00
+  L  |    0.1 |     799 |    10 | 2.28e-08 | 2.41e+07 |      289 | -1.89868317e-04
+  L  |    0.1 |     999 |    11 | 2.28e-08 | 7.24e+06 |      278 | -3.07867292e-05
+  L  |    0.2 |    1199 |    12 | 2.29e-08 | 7.21e+04 |      272 | 2.42727291e-07
+  L  |    0.2 |    1399 |    14 | 1.30e-08 | 1.65e+05 |      252 | 1.87605132e-06
+  L  |    0.3 |    1599 |    15 | 1.30e-08 | 6.37e+04 |      279 | 5.57002489e-06
+  L  |    0.3 |    1796 |    16 | 5.26e-08 | 1.85e+08 |      203 | 1.06218409e-02
+  L  |    0.4 |    1896 |    17 | 1.15e-03 | 1.51e+10 |      307 | 3.14075446e+04
+  L  |    0.4 |    1943 |    18 | 3.87e-02 | 6.27e+10 |      292 | 5.45144459e+06
+  L  |    0.4 |    1951 |    19 | 3.97e-02 | 2.03e+10 |      300 | 1.53564900e+07
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 4679 rows, 6276 columns, 32816 nonzeros, 75 col bounds, 113239 row bounds
+Reduced LP has 1357 rows 2770 columns 49189 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 9.11e+03 |      101 | -1.00000000e+00
+  L  |    0.0 |     145 |     2 | 0.00e+00 | 3.71e+04 |      160 | -1.00000000e+00
+  L  |    0.0 |     345 |     3 | 0.00e+00 | 4.85e+04 |      173 | -1.00000000e+00
+  L  |    0.1 |     545 |     5 | 0.00e+00 | 7.04e+04 |      234 | -1.00000000e+00
+  L  |    0.1 |     745 |     7 | 1.20e-08 | 3.63e+05 |      295 | -9.99999189e-01
+  L  |    0.1 |     945 |     9 | 1.20e-08 | 2.59e+05 |      294 | -9.99996431e-01
+  L  |    0.1 |    1145 |    10 | 1.21e-08 | 1.37e+05 |      263 | -9.99993498e-01
+  L  |    0.2 |    1345 |    11 | 1.21e-08 | 8.21e+05 |      292 | -4.13616081e-01
+  E  |    0.2 |    1502 |    13 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+  E  |    0.2 |    1502 |    13 | 0.00e+00 | 0.00e+00 |        0 | 0.00000000e+00
+
+ --- unsimplifying solution and basis
+Floating-point optimal.
+Max. bound violation = 0
+Max. row violation = 0
+Max. reduced cost violation = 236750976713514679/316912650057057350374175801344
+Max. dual violation = 0
+Tolerances reached.
+Primal infeasible.  Dual Farkas ray available.
+
+SoPlex status       : problem is solved [infeasible]
+Solving time (sec)  : 5.55
+Iterations          : 3453
+Objective value     : 1.00000000e+100
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:06.676
+--- runRBA.gms(103616) 15 Mb--- runRBA.gms(103627) 15 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/pycore/binary_search/runRBA.modelStat.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 05/21/24 16:04:50 elapsed 0:00:06.677
+[91mmu = 0.2500000, status = infeasible[0m
+[91mmu = 0.1250000, status = infeasible[0m
+[91mmu = 0.0625000, status = infeasible[0m
+[91mmu = 0.0312500, status = infeasible[0m
+[91mmu = 0.0156250, status = infeasible[0m
+[91mmu = 0.0078125, status = infeasible[0m
+[91mmu = 0.0039062, status = infeasible[0m
+[91mmu = 0.0019531, status = infeasible[0m
+[91mmu = 0.0009766, status = infeasible[0m
+[91mmu = 0.0004883, status = infeasible[0m
+[91mmu = 0.0002441, status = infeasible[0m
+[91mmu = 0.0001221, status = infeasible[0m
+[91mmu = 0.0000610, status = infeasible[0m
+[91mmu = 0.0000305, status = infeasible[0m
+[91mmu = 0.0000153, status = infeasible[0m
+[91mmu = 0.0000076, status = infeasible[0m
+Traceback (most recent call last):
+  File "/scratch/ejm6426/scRBA/pycore/binary_search/binary_search.py", line 138, in <module>
+    final_res.calculate_all()
+  File "/scratch/ejm6426/scRBA/pycore/binary_search/simulate.py", line 140, in calculate_all
+    self.calculate_metabolic_flux()
+  File "/scratch/ejm6426/scRBA/pycore/binary_search/simulate.py", line 60, in calculate_metabolic_flux
+    for k,v in self.raw_flux.items():
+               ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'items'

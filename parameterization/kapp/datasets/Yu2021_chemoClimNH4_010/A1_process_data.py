@@ -165,8 +165,3 @@ df_data.to_excel(fout_name, index=None)
 # %%
 idx = [i for i in pdata.index if i not in idx_truedata_old]
 pdata[idx].sum()
-
-# %%
-
-
-
