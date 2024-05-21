@@ -22,6 +22,9 @@ res_metab.calculate_metabolic_flux()
 res_esyn = RBA_result(biom_id=biom_id, twocol_format=True)
 res_esyn.load_raw_flux('./enz_from_proteome/enz_flux_calculation.txt')
 
+with open("../../../../GAMS/model/RBA_rxns_rxnmetabolicnetwork.txt","r") as f: 
+    all_rxns = [line.strip().replace("'","") for line in f.readlines() if line.strip() != "/"]
+
 mu = res_metab.growth_rate
 print('Growth rate:', mu)
 
@@ -261,18 +264,69 @@ import numpy as np
 default_kapp = np.median(list(kapp.values()))
 
 texts = ['rxnid\tkapp (1/s)']
-perhr_texts = ['/']
+perhr_texts_used_only = ['/']
+kapp_per_hr = dict()
 for k,v in kapp.items():
     if k not in excl:
         texts.append(k + '\t' + str(v))
-        perhr_texts.append("'" + k + "'" + '\t' + str(v*3600))
+        kapp_per_hr[k] = v*3600
     
 with open('./kapps_in_vivo.txt', 'w') as f:
     f.write('\n'.join(texts))
+
+# check if any inactive rxns were used in last step
+with open('min_flux_violation/min_flux_violation.flux_essential_inactive_rxns.txt') as f:
+    rxns_essential_inactive = f.read().split('\n')
+rxns_essential_inactive = [i for i in rxns_essential_inactive if i != '']
+rxns_essential_inactive = [i.split('\t')[0] for i in rxns_essential_inactive]
+for r in rxns_essential_inactive:
+    if r not in kapp_per_hr.keys():
+        kapp_per_hr[r] = default_kapp
+for k,v in kapp_per_hr.items():
+    perhr_texts_used_only.append("'" + k + "'" + '\t' + str(v))
+
+with open('./kapps_per_hr_without_unused_rxns.txt', 'w') as f:
+    f.write('\n'.join(perhr_texts_used_only + ['/']))
+
+perhr_texts = ['/']
+# add all other rxns with default kapp
+for rxn in all_rxns: 
+    enz = rxn.split('-')[-1]
+    rxn_name_without_enz = rxn.split('-')[-2]
+    if enz not in ['SPONT', 'UNKNOWN']:
+        if rxn in kapp_per_hr.keys():
+            continue
+            # if kapp_per_hr[rxn] <= 1e-5:
+            #     # output_info.append('kapp <= cutoff for ' + rxn)
+            #     kapp_per_hr[rxn] = default_kapp
+        elif rxn in rxns_essential_inactive:
+            kapp_per_hr[rxn] = default_kapp # to minimize the risk of kapps making growth infeasible 
+        else: 
+            # output_info.append('No kapp found for ' + rxn)
+            kapp_per_hr[rxn] = default_kapp
+        # if rxn not in kapp_minimal_assumptions.keys():
+        #     # set kapp to the max value of all kapps for that enzyme (or reaction, if unavailable), to minimize risk of overestimation
+        #     new_kapp = 0
+        #     for k,v in kapp_minimal_assumptions.items():
+        #         if enz in k.split('-')[-1]:
+        #             if v > new_kapp:
+        #                 new_kapp = v
+        #         # find max kapp for that reaction
+        #         elif rxn_name_without_enz == k.split('-')[-2]:
+        #             if v > new_kapp:
+        #                 new_kapp = v
+        #         # remove location to see if enzyme is identical to another
+        #         elif enz == k.split('-')[-2].split('_')[-1]:
+        #             if v > new_kapp:
+        #                 new_kapp = v
+        #     if new_kapp == 0:
+        #         output_info.append('No kapp found for ' + rxn + ' or enzyme ' + enz)
+        #         new_kapp = kapp_ma_med
+        #     kapp_minimal_assumptions[rxn] = new_kapp
+        #     kapp_ma_text.append("'" + rxn + "'\t" + str(kapp_minimal_assumptions[rxn]))
+        # elif kapp_minimal_assumptions[rxn] <= kapp_ma_cutoff:
+        #     kapp_ma_text.append("'" + rxn + "'\t" + str(kapp_ma_med))
+        perhr_texts.append("'" + rxn + "'\t" + str(kapp_per_hr[rxn]))
+
 with open('./kapps_per_hr.txt', 'w') as f:
-    f.write('\n'.join(texts + '/'))
-
-# %%
-
-
-# %%
+    f.write('\n'.join(perhr_texts + ['/']))
