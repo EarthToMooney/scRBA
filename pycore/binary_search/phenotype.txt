@@ -1,6 +1,5 @@
 * Note: If infeasible, relax constraints and parameters by up to 10%. Change GAM to 36.7 (compared to 84 of aerobic)
 * Growth rate
-$setGlobal mu 0.1
 v.fx('BIOSYN-BIODILNOGAM') = %mu% * %nscale%;
 
 * NGAM
