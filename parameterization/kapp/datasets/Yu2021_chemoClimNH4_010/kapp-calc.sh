@@ -7,4 +7,5 @@
 python3 A1_process_data.py
 python3 B1_enz_from_proteome.py
 python3 B2_min_flux_violation.py
+python3 B3_min_flux_sum.py
 python3 C1_calculate_kapp.py
