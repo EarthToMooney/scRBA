@@ -5,7 +5,7 @@ from simulate import RBA_result
 from utils import extract_details_from_rxnid
 import os
 # Load enzyme info
-df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xlsx')
+df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation_2021-10-01.xlsx')
 
 # Load path of set4 (enzyme-reaction many-to-many mapping)
 set4_path = '../kapp_ambiguousLoad_case_resolve_common.txt'
@@ -17,7 +17,7 @@ set4_path = '../kapp_ambiguousLoad_case_resolve_common.txt'
 #       noRxnFlux_resolveByManualCheck: behaves identically to disableManually, but perhaps serves as a warning
 #   rule: 
 #       divmaxenz for cases where I want to treat the [enzyme] as equaling its maximum value
-biom_id = 'BIOSYN-BIODILAERO'
+biom_id = 'BIOSYN-BIODILNOGAM'
 
 res_metab = RBA_result(biom_id=biom_id)
 res_metab.load_raw_flux('./min_flux_violation/enz_alloc.flux.txt')
@@ -105,7 +105,10 @@ enzs = []
 for i in text:
     enzs += i.split('\t')[0].split(',')
 for i in set4 - set(enzs):
-    print(i)
+    # Manually verified these enzymes catalyzing very low flux values / unverified flux
+    # Ignore in kapp calculation
+    if i not in ['YOR348C', 'YMR313C']:
+        print(i)
 # Find enzymes whose together carry a total load of reactions
 x = {k:v for k,v in rxndict.items() if len(v) > 1.5}
 enz_share_rxn_load = set().union(*[v for v in x.values()])
@@ -272,6 +275,9 @@ for enztext,x in mapper.items():
     rxnval = 0
     rxns_on = []
     for rxn in rxns:
+        if rxn not in all_rxns:
+            print('Reaction from '+set4_path+' ignored due to its absence from model: '+rxn)
+            continue
         if rxn in res_metab.metabolic_flux.keys():
             rxns_on.append(rxn)
             rxnval += abs(res_metab.metabolic_flux[rxn])
