@@ -1,0 +1,2714 @@
+No kapp found for RXN-12AMANTF_g_FWD-rt2093
+No kapp found for RXN-12AMANTF_g_FWD-rt2093 or enzyme rt2093
+No kapp found for RXN-12AMANTF_g_FWD-rt7201
+No kapp found for RXN-13BGH_e_FWD-rt5185
+No kapp found for RXN-13BGH_e_FWD-rt5185 or enzyme rt5185
+No kapp found for RXN-14BMANTF_c_FWD-rt6298
+No kapp found for RXN-16GS_c_FWD-rt3279
+No kapp found for RXN-1MLCLAT_mm_FWD-rt8106
+No kapp found for RXN-1MLCLAT_mm_FWD-rt8106 or enzyme rt8106
+No kapp found for RXN-1MLCLAT_mm_REV-rt8106
+No kapp found for RXN-2DOXG6PP_c_FWD-rt0208
+No kapp found for RXN-2DOXG6PP_c_FWD-rt0208 or enzyme rt0208
+No kapp found for RXN-2DOXG6PP_c_FWD-rt5045
+No kapp found for RXN-2OGMAH_c_FWD-rt6557
+No kapp found for RXN-2OGMAH_c_FWD-rt6557 or enzyme rt6557
+No kapp found for RXN-2OSUCAH_c_FWD-rt6557
+No kapp found for RXN-2OXOADPt_c_m_REV-rt2267
+No kapp found for RXN-3DHSKD_c_FWD-rt3472
+No kapp found for RXN-3DHSKD_c_FWD-rt3472 or enzyme rt3472
+No kapp found for RXN-3DHSKD_c_REV-rt3472
+No kapp found for RXN-3HACD200_rm_REV-rt2309
+No kapp found for RXN-3HACD220_rm_REV-rt2309
+No kapp found for RXN-3HACD240_rm_REV-rt2309
+No kapp found for RXN-3HACD260_rm_REV-rt2309
+No kapp found for RXN-3HAD40_c_REV-rt0302
+No kapp found for RXN-3HAD40_m_FWD-rt7207_m
+No kapp found for RXN-3HAD40_m_FWD-rt7207_m or enzyme rt7207_m
+No kapp found for RXN-3HAD40_m_REV-rt7207_m
+No kapp found for RXN-3HAD60_m_FWD-rt7207_m
+No kapp found for RXN-3HAD60_m_REV-rt7207_m
+No kapp found for RXN-3HAD80_m_FWD-rt7207_m
+No kapp found for RXN-3HAD80_m_REV-rt7207_m
+No kapp found for RXN-3HAO_c_FWD-rt0234
+No kapp found for RXN-3HAO_c_FWD-rt0234 or enzyme rt0234
+No kapp found for RXN-3HBHYOX_c_FWD-rt5813
+No kapp found for RXN-3HBHYOX_c_FWD-rt5813 or enzyme rt5813
+No kapp found for RXN-3HBRDH_c_FWD-rt4427
+No kapp found for RXN-3HBRDH_c_FWD-rt4427 or enzyme rt4427
+No kapp found for RXN-3HBRDH_c_REV-rt4427
+No kapp found for RXN-3HCINNMH_c_FWD-rt6518
+No kapp found for RXN-3HCINNMH_c_FWD-rt6518 or enzyme rt6518
+No kapp found for RXN-3HPPPNH_c_FWD-rt6518
+No kapp found for RXN-3INDACNLAH_c_FWD-rt4042
+No kapp found for RXN-3INDACNLAH_c_FWD-rt4042 or enzyme rt4042
+No kapp found for RXN-3INDACNLAH_c_REV-rt4042
+No kapp found for RXN-3IPM3MT_c_FWD-rt6691
+No kapp found for RXN-3IPM3MT_c_FWD-rt6691 or enzyme rt6691
+No kapp found for RXN-3MLCLAT_mm_FWD-rt8106
+No kapp found for RXN-3MLCLAT_mm_REV-rt8106
+No kapp found for RXN-3MOBDC_c_FWD-rt7423
+No kapp found for RXN-3MOBDC_c_FWD-rt7423 or enzyme rt7423
+No kapp found for RXN-3MOBR_m_FWD-rt41987068
+No kapp found for RXN-3MOBR_m_FWD-rt41987068 or enzyme rt41987068
+No kapp found for RXN-3MOBR_m_REV-rt41987068
+No kapp found for RXN-3MOPDC_c_FWD-rt7423
+No kapp found for RXN-3MOPR_m_FWD-rt4198
+No kapp found for RXN-3MOPR_m_REV-rt4198
+No kapp found for RXN-3NPDHBZH_m_FWD-rt7829
+No kapp found for RXN-3NPDHBZH_m_FWD-rt7829 or enzyme rt7829
+No kapp found for RXN-3NPDHMT_m_FWD-rt3097
+No kapp found for RXN-3NPDHMT_m_FWD-rt3097 or enzyme rt3097
+No kapp found for RXN-3OACE200_rm_FWD-rt8287
+No kapp found for RXN-3OACE220_rm_FWD-rt8287
+No kapp found for RXN-3OACE240_rm_FWD-rt8287
+No kapp found for RXN-3OACE260_rm_FWD-rt8287
+No kapp found for RXN-3OADPCOAT_m_FWD-rt4722
+No kapp found for RXN-3OADPCOAT_m_FWD-rt4722 or enzyme rt4722
+No kapp found for RXN-3OADPCOAT_m_REV-rt4722
+No kapp found for RXN-3OAR100_c_REV-rt0409
+No kapp found for RXN-3OAR100_c_FWD-rt1363
+No kapp found for RXN-3OAR100_c_REV-rt1363
+No kapp found for RXN-3OAR100_c_FWD-rt2183
+No kapp found for RXN-3OAR100_c_REV-rt2183
+No kapp found for RXN-3OAR100_c_FWD-rt2190
+No kapp found for RXN-3OAR100_c_REV-rt2190
+No kapp found for RXN-3OAR120_c_REV-rt0409
+No kapp found for RXN-3OAR120_c_FWD-rt1363
+No kapp found for RXN-3OAR120_c_REV-rt1363
+No kapp found for RXN-3OAR120_c_FWD-rt2183
+No kapp found for RXN-3OAR120_c_REV-rt2183
+No kapp found for RXN-3OAR120_c_FWD-rt2190
+No kapp found for RXN-3OAR120_c_REV-rt2190
+No kapp found for RXN-3OAR140_c_REV-rt0409
+No kapp found for RXN-3OAR140_c_FWD-rt1363
+No kapp found for RXN-3OAR140_c_REV-rt1363
+No kapp found for RXN-3OAR140_c_FWD-rt2183
+No kapp found for RXN-3OAR140_c_REV-rt2183
+No kapp found for RXN-3OAR140_c_FWD-rt2190
+No kapp found for RXN-3OAR140_c_REV-rt2190
+No kapp found for RXN-3OAR160_c_REV-rt0409
+No kapp found for RXN-3OAR160_c_FWD-rt1363
+No kapp found for RXN-3OAR160_c_REV-rt1363
+No kapp found for RXN-3OAR160_c_FWD-rt2183
+No kapp found for RXN-3OAR160_c_REV-rt2183
+No kapp found for RXN-3OAR160_c_FWD-rt2190
+No kapp found for RXN-3OAR160_c_REV-rt2190
+No kapp found for RXN-3OAR180_c_REV-rt0409
+No kapp found for RXN-3OAR180_c_FWD-rt1363
+No kapp found for RXN-3OAR180_c_REV-rt1363
+No kapp found for RXN-3OAR180_c_FWD-rt2183
+No kapp found for RXN-3OAR180_c_REV-rt2183
+No kapp found for RXN-3OAR180_c_FWD-rt2190
+No kapp found for RXN-3OAR180_c_REV-rt2190
+No kapp found for RXN-3OAR40_c_REV-rt0409
+No kapp found for RXN-3OAR40_c_FWD-rt1363
+No kapp found for RXN-3OAR40_c_REV-rt1363
+No kapp found for RXN-3OAR40_c_FWD-rt2183
+No kapp found for RXN-3OAR40_c_REV-rt2183
+No kapp found for RXN-3OAR40_c_FWD-rt2190
+No kapp found for RXN-3OAR40_c_REV-rt2190
+No kapp found for RXN-3OAR40_m_FWD-rt1622_m
+No kapp found for RXN-3OAR40_m_FWD-rt1622_m or enzyme rt1622_m
+No kapp found for RXN-3OAR60_c_REV-rt0409
+No kapp found for RXN-3OAR60_c_FWD-rt1363
+No kapp found for RXN-3OAR60_c_REV-rt1363
+No kapp found for RXN-3OAR60_c_FWD-rt2183
+No kapp found for RXN-3OAR60_c_REV-rt2183
+No kapp found for RXN-3OAR60_c_FWD-rt2190
+No kapp found for RXN-3OAR60_c_REV-rt2190
+No kapp found for RXN-3OAR60_m_FWD-rt1622_m
+No kapp found for RXN-3OAR80_c_REV-rt0409
+No kapp found for RXN-3OAR80_c_FWD-rt1363
+No kapp found for RXN-3OAR80_c_REV-rt1363
+No kapp found for RXN-3OAR80_c_FWD-rt2183
+No kapp found for RXN-3OAR80_c_REV-rt2183
+No kapp found for RXN-3OAR80_c_FWD-rt2190
+No kapp found for RXN-3OAR80_c_REV-rt2190
+No kapp found for RXN-3OAR80_m_FWD-rt1622_m
+No kapp found for RXN-3OAS40_c_REV-rt0409
+No kapp found for RXN-4ABUTtps_e_FWD-rt2901
+No kapp found for RXN-4ABUTtps_e_FWD-rt2901 or enzyme rt2901
+No kapp found for RXN-4ABUTtps_e_FWD-rt4390
+No kapp found for RXN-4AMPMS_c_FWD-rt2779
+No kapp found for RXN-4AMPMS_c_FWD-rt2779 or enzyme rt2779
+No kapp found for RXN-4CMCOAL_c_FWD-rt3465
+No kapp found for RXN-4CMCOAL_c_FWD-rt3465 or enzyme rt3465
+No kapp found for RXN-4CMCOAL_c_FWD-rt5332
+No kapp found for RXN-4CMCOAL_c_FWD-rt6434_c
+No kapp found for RXN-4CMCOAL_c_FWD-rt8267_c
+No kapp found for RXN-4CMCOAL_x_FWD-rt3465_x
+No kapp found for RXN-4CMCOAL_x_FWD-rt3465_x or enzyme rt3465_x
+No kapp found for RXN-4CMCOAL_x_FWD-rt5332_x
+No kapp found for RXN-4CMCOAL_x_FWD-rt6434_x
+No kapp found for RXN-4CMCOAL_x_FWD-rt8267_x
+No kapp found for RXN-4DPMIPPH_c_FWD-rt1973
+No kapp found for RXN-4DPMIPPH_c_FWD-rt1973 or enzyme rt1973
+No kapp found for RXN-4DPMIPPH_c_REV-rt1973
+No kapp found for RXN-4HBZNPT_m_FWD-rt6869
+No kapp found for RXN-4HBZNPT_m_FWD-rt6869 or enzyme rt6869
+No kapp found for RXN-4HGLSD_m_FWD-rt0201
+No kapp found for RXN-4HGLSD_m_FWD-rt0201 or enzyme rt0201
+No kapp found for RXN-4HTHRS_c_FWD-rt1374
+No kapp found for RXN-4MOPR_m_FWD-rt4198
+No kapp found for RXN-5AOPtps_e_FWD-rt2901
+No kapp found for RXN-6DPMIPPH_c_FWD-rt1395
+No kapp found for RXN-6DPMIPPH_c_FWD-rt1395 or enzyme rt1395
+No kapp found for RXN-6DPMIPPH_c_REV-rt1395
+No kapp found for RXN-6DPMIPPH_c_FWD-rt1973
+No kapp found for RXN-6DPMIPPH_c_REV-rt1973
+No kapp found for RXN-AATA_c_REV-rt0172
+No kapp found for RXN-AATA_c_FWD-rt4039
+No kapp found for RXN-AATA_c_REV-rt4039
+No kapp found for RXN-AATA_c_REV-rt7471
+No kapp found for RXN-ABTA_c_FWD-rt2569
+No kapp found for RXN-ABTA_c_FWD-rt2569 or enzyme rt2569
+No kapp found for RXN-ABTA_c_FWD-rt7537
+No kapp found for RXN-ABTD2Dx_c_FWD-rt1622_c
+No kapp found for RXN-ABTD2Dx_c_FWD-rt1622_c or enzyme rt1622_c
+No kapp found for RXN-ABTD2Dy_c_FWD-rt4606
+No kapp found for RXN-ABTD2Dy_c_FWD-rt4606 or enzyme rt4606
+No kapp found for RXN-ABTD2Dy_c_REV-rt4606
+No kapp found for RXN-ABTD2Dy_c_REV-rt8084
+No kapp found for RXN-ABTD4Dx_c_FWD-rt1622_c
+No kapp found for RXN-ABTD4Dx_c_REV-rt1622_c
+No kapp found for RXN-ABTD4Dy_c_FWD-rt4606
+No kapp found for RXN-ABTD4Dy_c_REV-rt4606
+No kapp found for RXN-ABTD4Dy_c_FWD-rt8084
+No kapp found for RXN-ABTD4Dy_c_REV-rt8084
+No kapp found for RXN-ABUTD_m_FWD-rt2756_m
+No kapp found for RXN-ABUTD_m_FWD-rt2756_m or enzyme rt2756_m
+No kapp found for RXN-ACACT100i_m_FWD-rt0517
+No kapp found for RXN-ACACT100i_m_FWD-rt0517 or enzyme rt0517
+No kapp found for RXN-ACACT100i_x_FWD-rt0697
+No kapp found for RXN-ACACT100i_x_FWD-rt0697 or enzyme rt0697
+No kapp found for RXN-ACACT100i_x_FWD-rt5445
+No kapp found for RXN-ACACT100i_x_FWD-rt6860
+No kapp found for RXN-ACACT101ei_x_FWD-rt0697
+No kapp found for RXN-ACACT101ei_x_FWD-rt5445
+No kapp found for RXN-ACACT101ei_x_FWD-rt6860
+No kapp found for RXN-ACACT120i_m_FWD-rt0517
+No kapp found for RXN-ACACT120i_x_FWD-rt0697
+No kapp found for RXN-ACACT120i_x_FWD-rt5445
+No kapp found for RXN-ACACT120i_x_FWD-rt6860
+No kapp found for RXN-ACACT121ai_m_FWD-rt0517
+No kapp found for RXN-ACACT121ai_x_FWD-rt0697
+No kapp found for RXN-ACACT121ai_x_FWD-rt5445
+No kapp found for RXN-ACACT121ai_x_FWD-rt6860
+No kapp found for RXN-ACACT121di_x_FWD-rt0697
+No kapp found for RXN-ACACT121di_x_FWD-rt5445
+No kapp found for RXN-ACACT121di_x_FWD-rt6860
+No kapp found for RXN-ACACT122ei_x_FWD-rt0697
+No kapp found for RXN-ACACT122ei_x_FWD-rt5445
+No kapp found for RXN-ACACT122ei_x_FWD-rt6860
+No kapp found for RXN-ACACT140i_m_FWD-rt0517
+No kapp found for RXN-ACACT140i_x_FWD-rt0697
+No kapp found for RXN-ACACT140i_x_FWD-rt5445
+No kapp found for RXN-ACACT140i_x_FWD-rt6860
+No kapp found for RXN-ACACT141ai_m_FWD-rt0517
+No kapp found for RXN-ACACT141ai_x_FWD-rt0697
+No kapp found for RXN-ACACT141ai_x_FWD-rt5445
+No kapp found for RXN-ACACT141ai_x_FWD-rt6860
+No kapp found for RXN-ACACT141bi_m_FWD-rt0517
+No kapp found for RXN-ACACT141bi_x_FWD-rt0697
+No kapp found for RXN-ACACT141bi_x_FWD-rt5445
+No kapp found for RXN-ACACT141bi_x_FWD-rt6860
+No kapp found for RXN-ACACT142i_x_FWD-rt0697
+No kapp found for RXN-ACACT142i_x_FWD-rt5445
+No kapp found for RXN-ACACT142i_x_FWD-rt6860
+No kapp found for RXN-ACACT143i_x_FWD-rt0697
+No kapp found for RXN-ACACT143i_x_FWD-rt5445
+No kapp found for RXN-ACACT143i_x_FWD-rt6860
+No kapp found for RXN-ACACT160i_m_FWD-rt0517
+No kapp found for RXN-ACACT160i_x_FWD-rt0697
+No kapp found for RXN-ACACT160i_x_FWD-rt5445
+No kapp found for RXN-ACACT160i_x_FWD-rt6860
+No kapp found for RXN-ACACT161ai_m_FWD-rt0517
+No kapp found for RXN-ACACT161ai_x_FWD-rt0697
+No kapp found for RXN-ACACT161ai_x_FWD-rt5445
+No kapp found for RXN-ACACT161ai_x_FWD-rt6860
+No kapp found for RXN-ACACT161bi_m_FWD-rt0517
+No kapp found for RXN-ACACT161bi_x_FWD-rt0697
+No kapp found for RXN-ACACT161bi_x_FWD-rt5445
+No kapp found for RXN-ACACT161bi_x_FWD-rt6860
+No kapp found for RXN-ACACT162i_x_FWD-rt0697
+No kapp found for RXN-ACACT162i_x_FWD-rt5445
+No kapp found for RXN-ACACT162i_x_FWD-rt6860
+No kapp found for RXN-ACACT163i_x_FWD-rt0697
+No kapp found for RXN-ACACT163i_x_FWD-rt5445
+No kapp found for RXN-ACACT163i_x_FWD-rt6860
+No kapp found for RXN-ACACT180i_m_FWD-rt0517
+No kapp found for RXN-ACACT180i_x_FWD-rt0697
+No kapp found for RXN-ACACT180i_x_FWD-rt5445
+No kapp found for RXN-ACACT180i_x_FWD-rt6860
+No kapp found for RXN-ACACT181ai_m_FWD-rt0517
+No kapp found for RXN-ACACT181ai_x_FWD-rt0697
+No kapp found for RXN-ACACT181ai_x_FWD-rt5445
+No kapp found for RXN-ACACT181ai_x_FWD-rt6860
+No kapp found for RXN-ACACT182i_x_FWD-rt0697
+No kapp found for RXN-ACACT182i_x_FWD-rt5445
+No kapp found for RXN-ACACT182i_x_FWD-rt6860
+No kapp found for RXN-ACACT183i_x_FWD-rt0697
+No kapp found for RXN-ACACT183i_x_FWD-rt5445
+No kapp found for RXN-ACACT183i_x_FWD-rt6860
+No kapp found for RXN-ACACT200i_m_FWD-rt0517
+No kapp found for RXN-ACACT200i_x_FWD-rt0697
+No kapp found for RXN-ACACT200i_x_FWD-rt5445
+No kapp found for RXN-ACACT200i_x_FWD-rt6860
+No kapp found for RXN-ACACT220i_m_FWD-rt0517
+No kapp found for RXN-ACACT220i_x_FWD-rt0697
+No kapp found for RXN-ACACT220i_x_FWD-rt5445
+No kapp found for RXN-ACACT220i_x_FWD-rt6860
+No kapp found for RXN-ACACT240i_m_FWD-rt0517
+No kapp found for RXN-ACACT240i_x_FWD-rt0697
+No kapp found for RXN-ACACT240i_x_FWD-rt5445
+No kapp found for RXN-ACACT240i_x_FWD-rt6860
+No kapp found for RXN-ACACT260i_m_FWD-rt0517
+No kapp found for RXN-ACACT260i_x_FWD-rt0697
+No kapp found for RXN-ACACT260i_x_FWD-rt5445
+No kapp found for RXN-ACACT260i_x_FWD-rt6860
+No kapp found for RXN-ACACT40i_m_FWD-rt0517
+No kapp found for RXN-ACACT40i_x_FWD-rt0697
+No kapp found for RXN-ACACT40i_x_FWD-rt5445
+No kapp found for RXN-ACACT40i_x_FWD-rt6860
+No kapp found for RXN-ACACT60i_m_FWD-rt0517
+No kapp found for RXN-ACACT60i_x_FWD-rt0697
+No kapp found for RXN-ACACT60i_x_FWD-rt5445
+No kapp found for RXN-ACACT60i_x_FWD-rt6860
+No kapp found for RXN-ACACT80i_m_FWD-rt0517
+No kapp found for RXN-ACACT80i_x_FWD-rt0697
+No kapp found for RXN-ACACT80i_x_FWD-rt5445
+No kapp found for RXN-ACACT80i_x_FWD-rt6860
+No kapp found for RXN-ACALDCD_c_FWD-rt7423
+No kapp found for RXN-ACCOAt_c_r_FWD-rt2578
+No kapp found for RXN-ACCOAt_c_r_FWD-rt2578 or enzyme rt2578
+No kapp found for RXN-ACCOAt_c_r_REV-rt2578
+No kapp found for RXN-ACCOATsucac_m_FWD-rt5429
+No kapp found for RXN-ACCOATsucac_m_FWD-rt5429 or enzyme rt5429
+No kapp found for RXN-ACCOATsucpp_m_FWD-rt5429
+No kapp found for RXN-ACEST1_m_FWD-rt1634
+No kapp found for RXN-ACEST1_m_FWD-rt1634 or enzyme rt1634
+No kapp found for RXN-ACEST1_m_FWD-rt6091
+No kapp found for RXN-ACGAM6PS_c_REV-rt4107
+No kapp found for RXN-ACGAM6S1_r_FWD-rt5121
+No kapp found for RXN-ACGAM6S1_r_FWD-rt5121 or enzyme rt5121
+No kapp found for RXN-ACGAM6S1_r_REV-rt5121
+No kapp found for RXN-ACGAM6S2_r_FWD-rt5121
+No kapp found for RXN-ACGAM6S2_r_REV-rt5121
+No kapp found for RXN-ACGAMPM_c_REV-rt4597
+No kapp found for RXN-ACGS_m_FWD-rt7899
+No kapp found for RXN-ACGS_m_FWD-rt7899 or enzyme rt7899
+No kapp found for RXN-ACHAH_c_FWD-rt3378
+No kapp found for RXN-ACHAH_c_FWD-rt3378 or enzyme rt3378
+No kapp found for RXN-ACHAH_c_REV-rt3378
+No kapp found for RXN-ACHAH_e_FWD-rt1203
+No kapp found for RXN-ACHAH_e_FWD-rt1203 or enzyme rt1203
+No kapp found for RXN-ACHBS_m_FWD-rt7317
+No kapp found for RXN-ACHLE1_c_FWD-rt6872
+No kapp found for RXN-ACHLE1_c_FWD-rt6872 or enzyme rt6872
+No kapp found for RXN-ACHLE2_c_FWD-rt6872
+No kapp found for RXN-ACHLE3_c_FWD-rt6872
+No kapp found for RXN-ACKr_c_FWD-rt5015
+No kapp found for RXN-ACKr_c_FWD-rt5015 or enzyme rt5015
+No kapp found for RXN-ACKr_c_REV-rt5015
+No kapp found for RXN-ACLS_m_FWD-rt7317
+No kapp found for RXN-ACOAD100f_m_FWD-rt4202
+No kapp found for RXN-ACOAD100f_m_FWD-rt4202 or enzyme rt4202
+No kapp found for RXN-ACOAD100f_x_FWD-rt2040
+No kapp found for RXN-ACOAD100f_x_FWD-rt2040 or enzyme rt2040
+No kapp found for RXN-ACOAD101df_x_FWD-rt2040
+No kapp found for RXN-ACOAD102ef_x_FWD-rt2040
+No kapp found for RXN-ACOAD120f_m_FWD-rt4202
+No kapp found for RXN-ACOAD120f_x_FWD-rt2040
+No kapp found for RXN-ACOAD121af_x_FWD-rt2040
+No kapp found for RXN-ACOAD140f_x_FWD-rt2040
+No kapp found for RXN-ACOAD141af_x_FWD-rt2040
+No kapp found for RXN-ACOAD141bf_x_FWD-rt2040
+No kapp found for RXN-ACOAD142f_x_FWD-rt2040
+No kapp found for RXN-ACOAD143f_x_FWD-rt2040
+No kapp found for RXN-ACOAD160f_x_FWD-rt2040
+No kapp found for RXN-ACOAD161af_x_FWD-rt2040
+No kapp found for RXN-ACOAD161bf_x_FWD-rt2040
+No kapp found for RXN-ACOAD162f_x_FWD-rt2040
+No kapp found for RXN-ACOAD163f_x_FWD-rt2040
+No kapp found for RXN-ACOAD180f_x_FWD-rt2040
+No kapp found for RXN-ACOAD181af_x_FWD-rt2040
+No kapp found for RXN-ACOAD182f_x_FWD-rt2040
+No kapp found for RXN-ACOAD183f_x_FWD-rt2040
+No kapp found for RXN-ACOAD40f_m_FWD-rt5702
+No kapp found for RXN-ACOAD40f_m_FWD-rt5702 or enzyme rt5702
+No kapp found for RXN-ACOAD40f_m_REV-rt5702
+No kapp found for RXN-ACOAD40f_x_FWD-rt2040
+No kapp found for RXN-ACOAD60f_m_FWD-rt5702
+No kapp found for RXN-ACOAD60f_m_REV-rt5702
+No kapp found for RXN-ACOAD60f_x_FWD-rt2040
+No kapp found for RXN-ACOAD80f_m_FWD-rt4202
+No kapp found for RXN-ACOAD80f_m_REV-rt4202
+No kapp found for RXN-ACOAD80f_x_FWD-rt2040
+No kapp found for RXN-ACOAD82ef_x_FWD-rt2040
+No kapp found for RXN-ACOADm30f_m_FWD-rt5702
+No kapp found for RXN-ACOADm30f_m_REV-rt5702
+No kapp found for RXN-ACOADm40f_m_FWD-rt5702
+No kapp found for RXN-ACOADm40f_m_REV-rt5702
+No kapp found for RXN-ACOADm50f_m_FWD-rt1644
+No kapp found for RXN-ACOADm50f_m_FWD-rt1644 or enzyme rt1644
+No kapp found for RXN-ACOADm50f_m_REV-rt1644
+No kapp found for RXN-ACOADS160_rm_FWD-rt1362
+No kapp found for RXN-ACOAO100_x_FWD-rt1332
+No kapp found for RXN-ACOAO100_x_FWD-rt1332 or enzyme rt1332
+No kapp found for RXN-ACOAO100_x_FWD-rt4374
+No kapp found for RXN-ACOAO100_x_FWD-rt4384
+No kapp found for RXN-ACOAO101d_x_FWD-rt1332
+No kapp found for RXN-ACOAO101d_x_FWD-rt4374
+No kapp found for RXN-ACOAO101d_x_FWD-rt4384
+No kapp found for RXN-ACOAO102e_x_FWD-rt1332
+No kapp found for RXN-ACOAO102e_x_FWD-rt4374
+No kapp found for RXN-ACOAO102e_x_FWD-rt4384
+No kapp found for RXN-ACOAO120_x_FWD-rt1332
+No kapp found for RXN-ACOAO120_x_FWD-rt4374
+No kapp found for RXN-ACOAO120_x_FWD-rt4384
+No kapp found for RXN-ACOAO121a_x_FWD-rt1332
+No kapp found for RXN-ACOAO121a_x_FWD-rt4374
+No kapp found for RXN-ACOAO121a_x_FWD-rt4384
+No kapp found for RXN-ACOAO140_x_FWD-rt1332
+No kapp found for RXN-ACOAO140_x_FWD-rt4374
+No kapp found for RXN-ACOAO140_x_FWD-rt4384
+No kapp found for RXN-ACOAO141a_x_FWD-rt1332
+No kapp found for RXN-ACOAO141a_x_FWD-rt4374
+No kapp found for RXN-ACOAO141a_x_FWD-rt4384
+No kapp found for RXN-ACOAO141b_x_FWD-rt1332
+No kapp found for RXN-ACOAO141b_x_FWD-rt4374
+No kapp found for RXN-ACOAO141b_x_FWD-rt4384
+No kapp found for RXN-ACOAO142_x_FWD-rt1332
+No kapp found for RXN-ACOAO142_x_FWD-rt4374
+No kapp found for RXN-ACOAO142_x_FWD-rt4384
+No kapp found for RXN-ACOAO143_x_FWD-rt1332
+No kapp found for RXN-ACOAO143_x_FWD-rt4374
+No kapp found for RXN-ACOAO143_x_FWD-rt4384
+No kapp found for RXN-ACOAO160_x_FWD-rt1332
+No kapp found for RXN-ACOAO160_x_FWD-rt4374
+No kapp found for RXN-ACOAO160_x_FWD-rt4384
+No kapp found for RXN-ACOAO161a_x_FWD-rt1332
+No kapp found for RXN-ACOAO161a_x_FWD-rt4374
+No kapp found for RXN-ACOAO161a_x_FWD-rt4384
+No kapp found for RXN-ACOAO161b_x_FWD-rt1332
+No kapp found for RXN-ACOAO161b_x_FWD-rt4374
+No kapp found for RXN-ACOAO161b_x_FWD-rt4384
+No kapp found for RXN-ACOAO162_x_FWD-rt1332
+No kapp found for RXN-ACOAO162_x_FWD-rt4374
+No kapp found for RXN-ACOAO162_x_FWD-rt4384
+No kapp found for RXN-ACOAO163_x_FWD-rt1332
+No kapp found for RXN-ACOAO163_x_FWD-rt4374
+No kapp found for RXN-ACOAO163_x_FWD-rt4384
+No kapp found for RXN-ACOAO180_x_FWD-rt1332
+No kapp found for RXN-ACOAO180_x_FWD-rt4374
+No kapp found for RXN-ACOAO180_x_FWD-rt4384
+No kapp found for RXN-ACOAO181a_x_FWD-rt1332
+No kapp found for RXN-ACOAO181a_x_FWD-rt4374
+No kapp found for RXN-ACOAO181a_x_FWD-rt4384
+No kapp found for RXN-ACOAO182_x_FWD-rt1332
+No kapp found for RXN-ACOAO182_x_FWD-rt4374
+No kapp found for RXN-ACOAO182_x_FWD-rt4384
+No kapp found for RXN-ACOAO183_x_FWD-rt1332
+No kapp found for RXN-ACOAO183_x_FWD-rt4374
+No kapp found for RXN-ACOAO183_x_FWD-rt4384
+No kapp found for RXN-ACOAO200_x_FWD-rt1332
+No kapp found for RXN-ACOAO200_x_FWD-rt4374
+No kapp found for RXN-ACOAO200_x_FWD-rt4384
+No kapp found for RXN-ACOAO220_x_FWD-rt1332
+No kapp found for RXN-ACOAO220_x_FWD-rt4374
+No kapp found for RXN-ACOAO220_x_FWD-rt4384
+No kapp found for RXN-ACOAO240_x_FWD-rt1332
+No kapp found for RXN-ACOAO240_x_FWD-rt4374
+No kapp found for RXN-ACOAO240_x_FWD-rt4384
+No kapp found for RXN-ACOAO260_x_FWD-rt1332
+No kapp found for RXN-ACOAO260_x_FWD-rt4374
+No kapp found for RXN-ACOAO260_x_FWD-rt4384
+No kapp found for RXN-ACOAO40_x_FWD-rt1332
+No kapp found for RXN-ACOAO40_x_FWD-rt4374
+No kapp found for RXN-ACOAO40_x_FWD-rt4384
+No kapp found for RXN-ACOAO60_x_FWD-rt1332
+No kapp found for RXN-ACOAO60_x_FWD-rt4374
+No kapp found for RXN-ACOAO60_x_FWD-rt4384
+No kapp found for RXN-ACOAO80_x_FWD-rt1332
+No kapp found for RXN-ACOAO80_x_FWD-rt4374
+No kapp found for RXN-ACOAO80_x_FWD-rt4384
+No kapp found for RXN-ACOAO82e_x_FWD-rt1332
+No kapp found for RXN-ACOAO82e_x_FWD-rt4374
+No kapp found for RXN-ACOAO82e_x_FWD-rt4384
+No kapp found for RXN-ACOATA_c_REV-rt0302
+No kapp found for RXN-ACOATA_m_FWD-rt5893
+No kapp found for RXN-ACOATA_m_FWD-rt5893 or enzyme rt5893
+No kapp found for RXN-ACOATA_m_REV-rt5893
+No kapp found for RXN-ACONMT_c_FWD-rt6691
+No kapp found for RXN-ACONT2_m_FWD-rt4274
+No kapp found for RXN-ACONT2_m_FWD-rt4274 or enzyme rt4274
+No kapp found for RXN-ACONT2_m_REV-rt4274
+No kapp found for RXN-ACONTa_m_FWD-rt3256
+No kapp found for RXN-ACONTa_m_REV-rt3256
+No kapp found for RXN-ACONTa_m_FWD-rt6232
+No kapp found for RXN-ACONTa_m_REV-rt6232
+No kapp found for RXN-ACONTb_m_FWD-rt3256
+No kapp found for RXN-ACONTb_m_REV-rt3256
+No kapp found for RXN-ACONTb_m_FWD-rt6232
+No kapp found for RXN-ACONTb_m_REV-rt6232
+No kapp found for RXN-ACP1_e_FWD-rt1163
+No kapp found for RXN-ACP1_e_FWD-rt1163 or enzyme rt1163
+No kapp found for RXN-ACP1_e_FWD-rt5051
+No kapp found for RXN-ACPCS_c_FWD-rt0245
+No kapp found for RXN-ACPCS_c_FWD-rt0245 or enzyme rt0245
+No kapp found for RXN-ACPCS_c_REV-rt0245
+No kapp found for RXN-ACRNAH_x_FWD-rt5418
+No kapp found for RXN-ACRNAH_x_FWD-rt5418 or enzyme rt5418
+No kapp found for RXN-ACRNt_c_m_FWD-rt0963
+No kapp found for RXN-ACRNt_c_m_FWD-rt0963 or enzyme rt0963
+No kapp found for RXN-ACS_c_FWD-rt7532_c
+No kapp found for RXN-ACS_n_FWD-rt6229_n
+No kapp found for RXN-ACS_n_FWD-rt6229_n or enzyme rt6229_n
+No kapp found for RXN-ACS_n_FWD-rt7532_n
+No kapp found for RXN-ACt_c_e_FWD-rt7285
+No kapp found for RXN-ACt_c_e_FWD-rt7285 or enzyme rt7285
+No kapp found for RXN-ACt_c_e_REV-rt7285
+No kapp found for RXN-ACt_c_m_FWD-rt5456
+No kapp found for RXN-ACt_c_m_FWD-rt5456 or enzyme rt5456
+No kapp found for RXN-ACt_c_m_REV-rt5456
+No kapp found for RXN-ADA_c_FWD-rt8364
+No kapp found for RXN-ADA_c_FWD-rt8364 or enzyme rt8364
+No kapp found for RXN-ADCL_c_FWD-rt4108
+No kapp found for RXN-ADCL_c_FWD-rt4108 or enzyme rt4108
+No kapp found for RXN-ADCS_c_FWD-rt5301
+No kapp found for RXN-ADCS_c_FWD-rt5301 or enzyme rt5301
+No kapp found for RXN-ADD_c_FWD-rt3300
+No kapp found for RXN-ADD_c_FWD-rt3300 or enzyme rt3300
+No kapp found for RXN-ADD_c_FWD-rt8364
+No kapp found for RXN-ADEtps_e_FWD-rt6190
+No kapp found for RXN-ADEtps_e_FWD-rt6190 or enzyme rt6190
+No kapp found for RXN-ADK1_c_FWD-rt7128_c
+No kapp found for RXN-ADK1_m_FWD-rt6761
+No kapp found for RXN-ADK1_m_FWD-rt6761 or enzyme rt6761
+No kapp found for RXN-ADK1_m_FWD-rt7128_m
+No kapp found for RXN-ADK3_m_FWD-rt6761
+No kapp found for RXN-ADK3_m_REV-rt6761
+No kapp found for RXN-ADK3_m_FWD-rt7128_m
+No kapp found for RXN-ADK3_m_REV-rt7128_m
+No kapp found for RXN-ADNCYC_c_FWD-rt4919
+No kapp found for RXN-ADNCYC_c_FWD-rt4919 or enzyme rt4919
+No kapp found for RXN-ADNtps_e_FWD-rt5601
+No kapp found for RXN-ADNtps_e_FWD-rt5601 or enzyme rt5601
+No kapp found for RXN-ADPATPt_c_m_REV-rt4336
+No kapp found for RXN-ADPATPt_c_x_FWD-rt7777
+No kapp found for RXN-ADPATPt_c_x_FWD-rt7777 or enzyme rt7777
+No kapp found for RXN-ADPRDP_m_FWD-rt8143
+No kapp found for RXN-ADPRDP_m_FWD-rt8143 or enzyme rt8143
+No kapp found for RXN-ADSL1r_c_REV-rt7437
+No kapp found for RXN-AEPI1_c_FWD-rt0136
+No kapp found for RXN-AEPI1_c_FWD-rt0136 or enzyme rt0136
+No kapp found for RXN-AEPI1_c_REV-rt0136
+No kapp found for RXN-AEPI2_c_FWD-rt0136
+No kapp found for RXN-AEPI2_c_REV-rt0136
+No kapp found for RXN-AFLTXNB1S_c_FWD-rt2689
+No kapp found for RXN-AFLTXNB1S_c_FWD-rt2689 or enzyme rt2689
+No kapp found for RXN-AFLTXNB2S_c_FWD-rt2689
+No kapp found for RXN-AGMT_e_FWD-rt1772
+No kapp found for RXN-AGMT_e_FWD-rt1772 or enzyme rt1772
+No kapp found for RXN-AGNPR_l_FWD-rt7207_l
+No kapp found for RXN-AGNPR_l_FWD-rt7207_l or enzyme rt7207_l
+No kapp found for RXN-AGNPR_rm_FWD-rt7207_rm
+No kapp found for RXN-AGNPR_rm_FWD-rt7207_rm or enzyme rt7207_rm
+No kapp found for RXN-AGPAT_l_FWD-rt2059_l
+No kapp found for RXN-AGPAT_rm_FWD-rt2059_rm
+No kapp found for RXN-AGTi_c_FWD-rt0451
+No kapp found for RXN-AGTi_c_FWD-rt0451 or enzyme rt0451
+No kapp found for RXN-AHGDf_m_FWD-rt1883
+No kapp found for RXN-AHGDf_m_FWD-rt1883 or enzyme rt1883
+No kapp found for RXN-AHGDf_m_REV-rt1883
+No kapp found for RXN-AHMMPS4_c_FWD-rt2779
+No kapp found for RXN-AHSERL_c_FWD-rt8250
+No kapp found for RXN-AICART_c_REV-rt4053
+No kapp found for RXN-AKGCITta_m_FWD-rt8378
+No kapp found for RXN-AKGCITta_m_FWD-rt8378 or enzyme rt8378
+No kapp found for RXN-AKGDH_m_FWD-KGDCPLX2
+No kapp found for RXN-AKP1_c_FWD-rt3253
+No kapp found for RXN-AKP1_c_FWD-rt3253 or enzyme rt3253
+No kapp found for RXN-AKP1_c_FWD-rt5041
+No kapp found for RXN-ALATA_L_m_FWD-rt1267
+No kapp found for RXN-ALAtps_e_FWD-rt0594
+No kapp found for RXN-ALAtps_e_FWD-rt0594 or enzyme rt0594
+No kapp found for RXN-ALAtps_e_REV-rt0594
+No kapp found for RXN-ALAtps_e_FWD-rt4390
+No kapp found for RXN-ALAtps_e_REV-rt4390
+No kapp found for RXN-ALAtps_e_FWD-rt5861
+No kapp found for RXN-ALAtps_e_REV-rt5861
+No kapp found for RXN-ALCD19y_c_FWD-rt3514
+No kapp found for RXN-ALCD19y_c_FWD-rt3514 or enzyme rt3514
+No kapp found for RXN-ALCD22xi_c_FWD-rt5740
+No kapp found for RXN-ALCD22xi_c_FWD-rt5740 or enzyme rt5740
+No kapp found for RXN-ALCD22xi_c_FWD-rt7110
+No kapp found for RXN-ALCD22xi_c_FWD-rt8149
+No kapp found for RXN-ALCD22xi_m_FWD-rt0733_m
+No kapp found for RXN-ALCD22xi_m_FWD-rt0733_m or enzyme rt0733_m
+No kapp found for RXN-ALCD22xi_m_FWD-rt3939_m
+No kapp found for RXN-ALCD22yi_c_FWD-rt1661
+No kapp found for RXN-ALCD22yi_c_FWD-rt1661 or enzyme rt1661
+No kapp found for RXN-ALCD22yi_c_FWD-rt3514
+No kapp found for RXN-ALCD22yi_c_FWD-rt4416
+No kapp found for RXN-ALCD22yi_c_FWD-rt5186
+No kapp found for RXN-ALCD22yi_c_FWD-rt5194
+No kapp found for RXN-ALCD22yi_c_FWD-rt5579
+No kapp found for RXN-ALCD23xi_c_FWD-rt5740
+No kapp found for RXN-ALCD23xi_c_FWD-rt7110
+No kapp found for RXN-ALCD23xi_c_FWD-rt8149
+No kapp found for RXN-ALCD23xi_m_FWD-rt0733_m
+No kapp found for RXN-ALCD23xi_m_FWD-rt3939_m
+No kapp found for RXN-ALCD23yi_c_FWD-rt1661
+No kapp found for RXN-ALCD23yi_c_FWD-rt4416
+No kapp found for RXN-ALCD23yi_c_FWD-rt5186
+No kapp found for RXN-ALCD23yi_c_FWD-rt5194
+No kapp found for RXN-ALCD23yi_c_FWD-rt5579
+No kapp found for RXN-ALCD24xi_c_FWD-rt5740
+No kapp found for RXN-ALCD24xi_c_FWD-rt7110
+No kapp found for RXN-ALCD24xi_c_FWD-rt8149
+No kapp found for RXN-ALCD24xi_m_FWD-rt0733_m
+No kapp found for RXN-ALCD24xi_m_FWD-rt3939_m
+No kapp found for RXN-ALCD24yi_c_FWD-rt1661
+No kapp found for RXN-ALCD24yi_c_FWD-rt4416
+No kapp found for RXN-ALCD24yi_c_FWD-rt5186
+No kapp found for RXN-ALCD24yi_c_FWD-rt5194
+No kapp found for RXN-ALCD24yi_c_FWD-rt5579
+No kapp found for RXN-ALCD25xi_c_FWD-rt5740
+No kapp found for RXN-ALCD25xi_c_FWD-rt7110
+No kapp found for RXN-ALCD25xi_c_FWD-rt8149
+No kapp found for RXN-ALCD25xi_m_FWD-rt0733_m
+No kapp found for RXN-ALCD25xi_m_FWD-rt3939_m
+No kapp found for RXN-ALCD25yi_c_FWD-rt1661
+No kapp found for RXN-ALCD25yi_c_FWD-rt4416
+No kapp found for RXN-ALCD25yi_c_FWD-rt5186
+No kapp found for RXN-ALCD25yi_c_FWD-rt5194
+No kapp found for RXN-ALCD25yi_c_FWD-rt5579
+No kapp found for RXN-ALCD26xi_c_FWD-rt5740
+No kapp found for RXN-ALCD26xi_c_FWD-rt7110
+No kapp found for RXN-ALCD26xi_c_FWD-rt8149
+No kapp found for RXN-ALCD26xi_m_FWD-rt0733_m
+No kapp found for RXN-ALCD26xi_m_FWD-rt3939_m
+No kapp found for RXN-ALCD2i1_c_FWD-rt3282
+No kapp found for RXN-ALCD2i1_c_FWD-rt3282 or enzyme rt3282
+No kapp found for RXN-ALCD2i2_c_FWD-rt0733_c
+No kapp found for RXN-ALCD2i2_c_FWD-rt0733_c or enzyme rt0733_c
+No kapp found for RXN-ALCD2i2_c_FWD-rt3939_c
+No kapp found for RXN-ALCD2i2_c_FWD-rt7070
+No kapp found for RXN-ALCD2i2_c_FWD-rt7110
+No kapp found for RXN-ALCD2i2_c_FWD-rt8149
+No kapp found for RXN-ALCD2i2_m_FWD-rt0733_m
+No kapp found for RXN-ALCD2i2_m_FWD-rt3939_m
+No kapp found for RXN-ALDD20x_m_FWD-rt2756_m
+No kapp found for RXN-ALDD20y_c_FWD-rt7041
+No kapp found for RXN-ALDD20y_c_FWD-rt7041 or enzyme rt7041
+No kapp found for RXN-ALDD20y_m_FWD-rt2756_m
+No kapp found for RXN-ALDD20y_m_FWD-rt3674_m
+No kapp found for RXN-ALDD22x_c_FWD-rt2756_c
+No kapp found for RXN-ALDD22x_c_FWD-rt2756_c or enzyme rt2756_c
+No kapp found for RXN-ALDD22x_c_FWD-rt7955_c
+No kapp found for RXN-ALDD2x_c_FWD-rt2756_c
+No kapp found for RXN-ALDD2y_c_FWD-rt2756_c
+No kapp found for RXN-ALDD2y_c_FWD-rt3674_c
+No kapp found for RXN-ALLTN_c_FWD-rt3516
+No kapp found for RXN-ALLTN_c_FWD-rt3516 or enzyme rt3516
+No kapp found for RXN-ALLTN_c_REV-rt3516
+No kapp found for RXN-ALLTNt_c_FWD-rt4534
+No kapp found for RXN-ALLTNt_c_FWD-rt4534 or enzyme rt4534
+No kapp found for RXN-ALLTTt_c_FWD-rt6702
+No kapp found for RXN-ALLTTt_c_FWD-rt6702 or enzyme rt6702
+No kapp found for RXN-ALPHNH_c_FWD-rt0958
+No kapp found for RXN-ALPHNH_c_FWD-rt0958 or enzyme rt0958
+No kapp found for RXN-AMAOTr_c_FWD-rt4363
+No kapp found for RXN-AMAOTr_c_FWD-rt4363 or enzyme rt4363
+No kapp found for RXN-AMAOTr_c_REV-rt4363
+No kapp found for RXN-AMETt_c_m_FWD-rt3664
+No kapp found for RXN-AMETt_c_m_FWD-rt3664 or enzyme rt3664
+No kapp found for RXN-AMETt_c_m_REV-rt3664
+No kapp found for RXN-AMID_c_FWD-rt1908
+No kapp found for RXN-AMID_c_FWD-rt1908 or enzyme rt1908
+No kapp found for RXN-AMID_c_FWD-rt3257_c
+No kapp found for RXN-AMPATPt_c_x_FWD-rt7777
+No kapp found for RXN-AMPDA_c_FWD-rt3101
+No kapp found for RXN-AMPDA_c_FWD-rt3101 or enzyme rt3101
+No kapp found for RXN-ANNAT_c_FWD-rt2062_c
+No kapp found for RXN-ANNAT_c_FWD-rt7589
+No kapp found for RXN-ANNAT_n_FWD-rt2062_n
+No kapp found for RXN-ANNAT_n_FWD-rt2062_n or enzyme rt2062_n
+No kapp found for RXN-AOXS_c_FWD-rt4368
+No kapp found for RXN-AOXS_c_FWD-rt4368 or enzyme rt4368
+No kapp found for RXN-AP4AH_c_FWD-rt0084
+No kapp found for RXN-AP4AH_c_FWD-rt0084 or enzyme rt0084
+No kapp found for RXN-AP4AH_c_REV-rt0084
+No kapp found for RXN-ARAB14LO_c_FWD-rt5365
+No kapp found for RXN-ARAB14LO_c_FWD-rt5365 or enzyme rt5365
+No kapp found for RXN-ARAB14LO_x_FWD-rt2122
+No kapp found for RXN-ARAB14LO_x_FWD-rt2122 or enzyme rt2122
+No kapp found for RXN-ARAB1Dx_c_FWD-rt8345
+No kapp found for RXN-ARAB1Dx_c_FWD-rt8345 or enzyme rt8345
+No kapp found for RXN-ARABRy_c_FWD-rt5845
+No kapp found for RXN-ARABRy_c_FWD-rt5845 or enzyme rt5845
+No kapp found for RXN-ARABRy_c_REV-rt5845
+No kapp found for RXN-ARACHt_c_e_FWD-rt15442799
+No kapp found for RXN-ARACHt_c_e_FWD-rt15442799 or enzyme rt15442799
+No kapp found for RXN-ARACHt_c_e_REV-rt15442799
+No kapp found for RXN-ARAI2_c_FWD-rt6112
+No kapp found for RXN-ARAI2_c_FWD-rt6112 or enzyme rt6112
+No kapp found for RXN-ARAI2_c_REV-rt6112
+No kapp found for RXN-ARAK_c_FWD-rt4526
+No kapp found for RXN-ARAK_c_FWD-rt4526 or enzyme rt4526
+No kapp found for RXN-ARGN_c_FWD-rt7813
+No kapp found for RXN-ARGN_c_FWD-rt7813 or enzyme rt7813
+No kapp found for RXN-ARGSL_c_REV-rt3236
+No kapp found for RXN-ARGSS_c_REV-rt7828
+No kapp found for RXN-ARGtpa_v_FWD-rt0111
+No kapp found for RXN-ARGtpa_v_FWD-rt0111 or enzyme rt0111
+No kapp found for RXN-ARGtps_e_FWD-rt1689
+No kapp found for RXN-ARGtps_e_FWD-rt1689 or enzyme rt1689
+No kapp found for RXN-ARGtps_e_REV-rt1689
+No kapp found for RXN-ARGtps_e_FWD-rt5861
+No kapp found for RXN-ARGtps_e_REV-rt5861
+No kapp found for RXN-ARMT_c_FWD-rt1648
+No kapp found for RXN-ARMT_c_FWD-rt1648 or enzyme rt1648
+No kapp found for RXN-ARMT_c_FWD-rt3356
+No kapp found for RXN-ARMT_c_FWD-rt7912
+No kapp found for RXN-ARMT_c_FWD-rt7917
+No kapp found for RXN-AROHL_c_FWD-rt5827
+No kapp found for RXN-AROHL_c_REV-rt5827
+No kapp found for RXN-ARSO4H_c_FWD-rt6899
+No kapp found for RXN-ARSO4H_c_FWD-rt6899 or enzyme rt6899
+No kapp found for RXN-ARSO4H_c_FWD-rt6915
+No kapp found for RXN-ASCBOX_c_FWD-rt5489
+No kapp found for RXN-ASCBOX_c_FWD-rt5489 or enzyme rt5489
+No kapp found for RXN-ASNN_e_FWD-rt1675
+No kapp found for RXN-ASNN_e_FWD-rt1675 or enzyme rt1675
+No kapp found for RXN-ASNN_e_FWD-rt5259
+No kapp found for RXN-ASNtpa_v_FWD-rt7819
+No kapp found for RXN-ASNtpa_v_FWD-rt7819 or enzyme rt7819
+No kapp found for RXN-ASNtps_v_FWD-rt4375
+No kapp found for RXN-ASNtps_v_FWD-rt4375 or enzyme rt4375
+No kapp found for RXN-ASNTRS_m_FWD-rt3755
+No kapp found for RXN-ASNTRS_m_FWD-rt3755 or enzyme rt3755
+No kapp found for RXN-ASPCT_c_FWD-rt8313
+No kapp found for RXN-ASPCT_c_FWD-rt8313 or enzyme rt8313
+No kapp found for RXN-ASPTA_c_REV-rt0568_c
+No kapp found for RXN-ASPTA_x_FWD-rt5562_x
+No kapp found for RXN-ASPTA_x_FWD-rt5562_x or enzyme rt5562_x
+No kapp found for RXN-ASPTA_x_REV-rt5562_x
+No kapp found for RXN-ASPTA_x_FWD-rt5913_x
+No kapp found for RXN-ASPTA_x_REV-rt5913_x
+No kapp found for RXN-ASPTA4_c_FWD-rt1784_c
+No kapp found for RXN-ASPTA4_c_REV-rt1784_c
+No kapp found for RXN-ASPTAi_m_FWD-rt5913_m
+No kapp found for RXN-ASPtps_e_FWD-rt0594
+No kapp found for RXN-ASPtps_e_REV-rt0594
+No kapp found for RXN-ASPtps_e_FWD-rt5861
+No kapp found for RXN-ASPtps_e_REV-rt5861
+No kapp found for RXN-ASPtps_v_FWD-rt0398
+No kapp found for RXN-ASPtps_v_FWD-rt0398 or enzyme rt0398
+No kapp found for RXN-ATAH_c_FWD-rt6356
+No kapp found for RXN-ATAH_c_FWD-rt6356 or enzyme rt6356
+No kapp found for RXN-ATAH_c_REV-rt6356
+No kapp found for RXN-ATHRDHr_c_FWD-rt1844
+No kapp found for RXN-ATHRDHr_c_FWD-rt1844 or enzyme rt1844
+No kapp found for RXN-ATHRDHr_c_REV-rt1844
+No kapp found for RXN-ATPASEP2e_c_FWD-rt5249
+No kapp found for RXN-ATPASEP2e_c_FWD-rt7216
+No kapp found for RXN-ATPASEV_v_FWD-ATPASECPLXgm
+No kapp found for RXN-ATPASEV_v_FWD-ATPASECPLXgm or enzyme ATPASECPLXgm
+No kapp found for RXN-ATPATF1_c_FWD-rt5328
+No kapp found for RXN-ATPATF1_c_FWD-rt5328 or enzyme rt5328
+No kapp found for RXN-ATPATF1_c_FWD-rt8184
+No kapp found for RXN-AVNORy_c_FWD-rt7877
+No kapp found for RXN-AVNORy_c_FWD-rt7877 or enzyme rt7877
+No kapp found for RXN-AVNORy_c_REV-rt7877
+No kapp found for RXN-BACCL_c_FWD-rt8036_c
+No kapp found for RXN-BACCL_c_FWD-rt8036_c or enzyme rt8036_c
+No kapp found for RXN-BBOX_m_FWD-rt6692_m
+No kapp found for RXN-BBOX_m_FWD-rt6692_m or enzyme rt6692_m
+No kapp found for RXN-BETALDHx_x_FWD-rt2053
+No kapp found for RXN-BETALDHx_x_FWD-rt2053 or enzyme rt2053
+No kapp found for RXN-BTDDH_c_FWD-rt5273
+No kapp found for RXN-BTDDH_c_FWD-rt5273 or enzyme rt5273
+No kapp found for RXN-BTDDH_c_REV-rt5273
+No kapp found for RXN-BTS1_c_FWD-rt7540_c
+No kapp found for RXN-BTS1_c_FWD-rt7540_c or enzyme rt7540_c
+No kapp found for RXN-BTS1_c_REV-rt7540_c
+No kapp found for RXN-BTS1_m_FWD-rt7540_m
+No kapp found for RXN-BTS1_m_FWD-rt7540_m or enzyme rt7540_m
+No kapp found for RXN-BZHYOX_c_FWD-rt5813
+No kapp found for RXN-BZHYOX_r_FWD-rt1936
+No kapp found for RXN-BZHYOX_r_FWD-rt1936 or enzyme rt1936
+No kapp found for RXN-C22STDSy_c_FWD-rt3348
+No kapp found for RXN-C22STDSy_c_FWD-rt3348 or enzyme rt3348
+No kapp found for RXN-C24STR_r_FWD-rt2613
+No kapp found for RXN-C24STR_r_FWD-rt2613 or enzyme rt2613
+No kapp found for RXN-C3STDH1_c_FWD-rt5356
+No kapp found for RXN-C3STDH2_c_FWD-rt5356
+No kapp found for RXN-C5STDS_c_FWD-rt0413
+No kapp found for RXN-C5STDS_c_FWD-rt0413 or enzyme rt0413
+No kapp found for RXN-CAROL1_c_FWD-rt0221
+No kapp found for RXN-CAROL1_c_FWD-rt0221 or enzyme rt0221
+No kapp found for RXN-CAROL1_c_REV-rt0221
+No kapp found for RXN-CAROL2_c_FWD-rt0221
+No kapp found for RXN-CAROL2_c_REV-rt0221
+No kapp found for RXN-CAROL3_c_FWD-rt0221
+No kapp found for RXN-CAROL3_c_REV-rt0221
+No kapp found for RXN-CAROMOX1_c_FWD-rt0220
+No kapp found for RXN-CAROMOX1_c_FWD-rt0220 or enzyme rt0220
+No kapp found for RXN-CAROMOX2_c_FWD-rt0220
+No kapp found for RXN-CAT_c_FWD-rt0986
+No kapp found for RXN-CAT_c_FWD-rt0986 or enzyme rt0986
+No kapp found for RXN-CAT_x_FWD-rt6937
+No kapp found for RXN-CAT_x_FWD-rt6937 or enzyme rt6937
+No kapp found for RXN-CATDOX_c_FWD-rt0267
+No kapp found for RXN-CATDOX_c_FWD-rt0267 or enzyme rt0267
+No kapp found for RXN-CATOX_e_FWD-rt4763
+No kapp found for RXN-CATOX_e_FWD-rt4763 or enzyme rt4763
+No kapp found for RXN-CATOX_e_FWD-rt4767
+No kapp found for RXN-CBL_c_FWD-rt0389
+No kapp found for RXN-CBL_c_FWD-rt0389 or enzyme rt0389
+No kapp found for RXN-CBL_c_FWD-rt0391
+No kapp found for RXN-CBMHL_c_FWD-rt2726
+No kapp found for RXN-CBMHL_c_FWD-rt2726 or enzyme rt2726
+No kapp found for RXN-CBMHL_c_REV-rt2726
+No kapp found for RXN-CBPS_c_FWD-rt3934
+No kapp found for RXN-CDPDAGS_mm_FWD-rt4513_mm
+No kapp found for RXN-CDPDAGS_mm_FWD-rt4513_mm or enzyme rt4513_mm
+No kapp found for RXN-CELLBH_e_FWD-rt0160
+No kapp found for RXN-CELLBH_e_FWD-rt0160 or enzyme rt0160
+No kapp found for RXN-CELLBH_e_FWD-rt1271
+No kapp found for RXN-CELLBH_e_FWD-rt5118
+No kapp found for RXN-CELLBH_e_FWD-rt8348
+No kapp found for RXN-CELLBH_e_FWD-rt8349
+No kapp found for RXN-CEPHSCOX_x_FWD-rt3508
+No kapp found for RXN-CEPHSCOX_x_FWD-rt3508 or enzyme rt3508
+No kapp found for RXN-CEPHSCOX_x_FWD-rt7081
+No kapp found for RXN-CEPHSCOX_x_FWD-rt7626
+No kapp found for RXN-CERH124B_r_FWD-rt1296
+No kapp found for RXN-CERH124B_r_FWD-rt1296 or enzyme rt1296
+No kapp found for RXN-CERH126B_r_FWD-rt1296
+No kapp found for RXN-CERH2A24_r_FWD-rt1296
+No kapp found for RXN-CERH2A26_r_FWD-rt1296
+No kapp found for RXN-CERH324_r_FWD-rt1296
+No kapp found for RXN-CERH326_r_FWD-rt1296
+No kapp found for RXN-CERS124_c_FWD-rt6800_c
+No kapp found for RXN-CERS126_c_FWD-rt6800_c
+No kapp found for RXN-CERS2A24_r_FWD-rt3023_r
+No kapp found for RXN-CERS2A24_r_FWD-rt3023_r or enzyme rt3023_r
+No kapp found for RXN-CERS2A24_r_FWD-rt6800_r
+No kapp found for RXN-CERS2A26_r_FWD-rt3023_r
+No kapp found for RXN-CERS2A26_r_FWD-rt6800_r
+No kapp found for RXN-CFCOAMT_c_FWD-rt5076
+No kapp found for RXN-CFCOAMT_c_FWD-rt5076 or enzyme rt5076
+No kapp found for RXN-CFCOAMT_c_FWD-rt5077
+No kapp found for RXN-CHITOSNSE_c_FWD-rt2528
+No kapp found for RXN-CHITOSNSE_c_FWD-rt2528 or enzyme rt2528
+No kapp found for RXN-CHLPCTD_c_FWD-rt2172
+No kapp found for RXN-CHLPCTD_c_FWD-rt2172 or enzyme rt2172
+No kapp found for RXN-CHLSTI2_c_FWD-rt5191
+No kapp found for RXN-CHLSTI2_c_FWD-rt5191 or enzyme rt5191
+No kapp found for RXN-CHLSTI2_c_REV-rt5191
+No kapp found for RXN-CHOLD_c_FWD-rt2848
+No kapp found for RXN-CHOLD_c_FWD-rt2848 or enzyme rt2848
+No kapp found for RXN-CHOLD_c_FWD-rt3274
+No kapp found for RXN-CHOLK_c_FWD-rt7614
+No kapp found for RXN-CHOLK_c_FWD-rt7614 or enzyme rt7614
+No kapp found for RXN-CHOLPT_rm_FWD-rt0720
+No kapp found for RXN-CHOLPT_rm_FWD-rt0720 or enzyme rt0720
+No kapp found for RXN-CHOLPT_rm_FWD-rt2983
+No kapp found for RXN-CHOLtps_e_FWD-rt7623
+No kapp found for RXN-CHOLtps_e_FWD-rt7623 or enzyme rt7623
+No kapp found for RXN-CHTNDA_c_FWD-rt0086
+No kapp found for RXN-CHTNDA_c_FWD-rt0086 or enzyme rt0086
+No kapp found for RXN-CHTNDA_c_FWD-rt0089
+No kapp found for RXN-CHTNDA_c_FWD-rt4385
+No kapp found for RXN-CHTNDA_c_FWD-rt6255
+No kapp found for RXN-CHTNDA_c_FWD-rt6259
+No kapp found for RXN-CHTNH_e_FWD-rt4171
+No kapp found for RXN-CHTNH_e_FWD-rt4171 or enzyme rt4171
+No kapp found for RXN-CHTNH_e_FWD-rt4186
+No kapp found for RXN-CHTNH_e_FWD-rt4714
+No kapp found for RXN-CHTNH_e_FWD-rt5596
+No kapp found for RXN-CHTNH_e_FWD-rt5734
+No kapp found for RXN-CHTNH_e_FWD-rt6409
+No kapp found for RXN-CHTNH_v_FWD-rt4284
+No kapp found for RXN-CHTNH_v_FWD-rt4284 or enzyme rt4284
+No kapp found for RXN-CHTNS_c_FWD-rt0144
+No kapp found for RXN-CHTNS_c_FWD-rt0540
+No kapp found for RXN-CHTNS_c_FWD-rt1343
+No kapp found for RXN-CHTNS_c_FWD-rt1388
+No kapp found for RXN-CHTNS_c_FWD-rt6173
+No kapp found for RXN-CHTNS_c_FWD-rt6592
+No kapp found for RXN-CHTNS_c_FWD-rt7460
+No kapp found for RXN-CITCOAL_c_FWD-rt1454
+No kapp found for RXN-CITCOAL_c_FWD-rt1454 or enzyme rt1454
+No kapp found for RXN-CITCOAL_c_REV-rt1454
+No kapp found for RXN-CITICITta_m_FWD-rt2146
+No kapp found for RXN-CITICITta_m_REV-rt2146
+No kapp found for RXN-CITMALta_m_REV-rt2146
+No kapp found for RXN-CITt3_m_FWD-rt2146
+No kapp found for RXN-CLPNS_mm_FWD-rt8047
+No kapp found for RXN-CLPNS_mm_FWD-rt8047 or enzyme rt8047
+No kapp found for RXN-CLt_c_e_FWD-rt6468
+No kapp found for RXN-CLt_c_e_FWD-rt6468 or enzyme rt6468
+No kapp found for RXN-CLt_c_e_REV-rt6468
+No kapp found for RXN-CMBOLHcis_c_FWD-rt4023
+No kapp found for RXN-CMBOLHcis_c_FWD-rt4023 or enzyme rt4023
+No kapp found for RXN-CMBOLHcis_c_FWD-rt6386
+No kapp found for RXN-CMBOLHtrans_c_FWD-rt4023
+No kapp found for RXN-CMBOLHtrans_c_FWD-rt6386
+No kapp found for RXN-CMPA_c_FWD-rt3507
+No kapp found for RXN-CMPA_c_FWD-rt3507 or enzyme rt3507
+No kapp found for RXN-CMUCOC_c_FWD-rt5764
+No kapp found for RXN-CMUCOC_c_FWD-rt5764 or enzyme rt5764
+No kapp found for RXN-CMUCOC_c_REV-rt5764
+No kapp found for RXN-COAt_c_m_FWD-rt0548
+No kapp found for RXN-COAt_c_m_FWD-rt0548 or enzyme rt0548
+No kapp found for RXN-CPLSPNEST_e_FWD-rt3377
+No kapp found for RXN-CPLSPNEST_e_FWD-rt3377 or enzyme rt3377
+No kapp found for RXN-CRN100t_c_m_FWD-rt0963
+No kapp found for RXN-CRN100t_c_x_FWD-rt7415_x
+No kapp found for RXN-CRN100t_c_x_FWD-rt7415_x or enzyme rt7415_x
+No kapp found for RXN-CRN120t_c_m_FWD-rt0963
+No kapp found for RXN-CRN120t_c_x_FWD-rt7415_x
+No kapp found for RXN-CRN40t_c_m_FWD-rt0963
+No kapp found for RXN-CRN40t_c_x_FWD-rt7415_x
+No kapp found for RXN-CRN60t_c_m_FWD-rt0963
+No kapp found for RXN-CRN60t_c_x_FWD-rt7415_x
+No kapp found for RXN-CRN80t_c_m_FWD-rt0963
+No kapp found for RXN-CRN80t_c_x_FWD-rt7415_x
+No kapp found for RXN-CRNACRNt_c_m_FWD-rt0963
+No kapp found for RXN-CRNAT100_m_FWD-rt7415_m
+No kapp found for RXN-CRNAT100_m_FWD-rt7415_m or enzyme rt7415_m
+No kapp found for RXN-CRNAT100_x_FWD-rt5212_x
+No kapp found for RXN-CRNAT100_x_FWD-rt5212_x or enzyme rt5212_x
+No kapp found for RXN-CRNAT100_x_FWD-rt5877_x
+No kapp found for RXN-CRNAT120_m_FWD-rt7415_m
+No kapp found for RXN-CRNAT120_m_REV-rt7415_m
+No kapp found for RXN-CRNAT120_x_FWD-rt5212_x
+No kapp found for RXN-CRNAT120_x_FWD-rt5877_x
+No kapp found for RXN-CRNAT40_m_FWD-rt7415_m
+No kapp found for RXN-CRNAT40_x_FWD-rt5212_x
+No kapp found for RXN-CRNAT40_x_FWD-rt5877_x
+No kapp found for RXN-CRNAT60_m_FWD-rt7415_m
+No kapp found for RXN-CRNAT60_x_FWD-rt5212_x
+No kapp found for RXN-CRNAT60_x_FWD-rt5877_x
+No kapp found for RXN-CRNAT80_m_FWD-rt7415_m
+No kapp found for RXN-CRNAT80_x_FWD-rt5212_x
+No kapp found for RXN-CRNAT80_x_FWD-rt5877_x
+No kapp found for RXN-CRNOAT_c_FWD-rt5212_c
+No kapp found for RXN-CRNOAT_c_FWD-rt5212_c or enzyme rt5212_c
+No kapp found for RXN-CRNOAT_m_FWD-rt0947
+No kapp found for RXN-CRNOAT_m_FWD-rt0947 or enzyme rt0947
+No kapp found for RXN-CRNOAT_m_FWD-rt5877_m
+No kapp found for RXN-CRNOAT_x_FWD-rt5877_x
+No kapp found for RXN-CRNt_c_m_FWD-rt0963
+No kapp found for RXN-CS_m_FWD-CIT13
+No kapp found for RXN-CS_m_FWD-rt2963
+No kapp found for RXN-CS_x_FWD-rt0180
+No kapp found for RXN-CS_x_FWD-rt0180 or enzyme rt0180
+No kapp found for RXN-CSND_c_FWD-rt6191
+No kapp found for RXN-CSND_c_FWD-rt6191 or enzyme rt6191
+No kapp found for RXN-CSNPURt_c_e_FWD-rt6644
+No kapp found for RXN-CSNPURt_c_e_FWD-rt6644 or enzyme rt6644
+No kapp found for RXN-CSNPURt_c_e_REV-rt6644
+No kapp found for RXN-CSNtps_e_FWD-rt6190
+No kapp found for RXN-CTPCMPt_c_m_FWD-rt4019
+No kapp found for RXN-CTPCMPt_c_m_FWD-rt4019 or enzyme rt4019
+No kapp found for RXN-CTPS2_c_FWD-rt8107
+No kapp found for RXN-CTPt2_m_FWD-rt4019
+No kapp found for RXN-CYSItps_v_FWD-rt6589
+No kapp found for RXN-CYSItps_v_FWD-rt6589 or enzyme rt6589
+No kapp found for RXN-CYSS_c_FWD-rt3663
+No kapp found for RXN-CYSS_c_FWD-rt3663 or enzyme rt3663
+No kapp found for RXN-CYStps_e_FWD-rt5861
+No kapp found for RXN-CYStps_e_REV-rt5861
+No kapp found for RXN-CYTD_c_FWD-rt7919
+No kapp found for RXN-CYTD_c_FWD-rt7919 or enzyme rt7919
+No kapp found for RXN-CYTDK2_c_FWD-rt0265
+No kapp found for RXN-CYTDK2_c_FWD-rt0265 or enzyme rt0265
+No kapp found for RXN-CYTDtps_e_FWD-rt5601
+No kapp found for RXN-DADA_c_FWD-rt8364
+No kapp found for RXN-DADK_c_FWD-rt3932
+No kapp found for RXN-DADK_c_REV-rt3932
+No kapp found for RXN-DAG3Pabct_c_m_FWD-rt1060
+No kapp found for RXN-DAG3Pabct_c_m_FWD-rt1060 or enzyme rt1060
+No kapp found for RXN-DAG3Pabct_c_m_REV-rt1060
+No kapp found for RXN-DAG3Pabct_c_m_FWD-rt4312
+No kapp found for RXN-DAG3Pabct_c_m_REV-rt4312
+No kapp found for RXN-DAGL_m_FWD-rt0632
+No kapp found for RXN-DAGL_m_FWD-rt0632 or enzyme rt0632
+No kapp found for RXN-DAGL_m_FWD-rt5949
+No kapp found for RXN-DAO4hpro_x_FWD-rt3508
+No kapp found for RXN-DAO4hpro_x_FWD-rt7081
+No kapp found for RXN-DAO4hpro_x_FWD-rt7626
+No kapp found for RXN-DAOala_x_FWD-rt3508
+No kapp found for RXN-DAOala_x_FWD-rt7081
+No kapp found for RXN-DAOala_x_FWD-rt7626
+No kapp found for RXN-DAOarg_x_FWD-rt3508
+No kapp found for RXN-DAOarg_x_FWD-rt7081
+No kapp found for RXN-DAOarg_x_FWD-rt7626
+No kapp found for RXN-DAOgly_x_FWD-rt3508
+No kapp found for RXN-DAOgly_x_FWD-rt7081
+No kapp found for RXN-DAOgly_x_FWD-rt7626
+No kapp found for RXN-DAOorn_x_FWD-rt3508
+No kapp found for RXN-DAOorn_x_FWD-rt7081
+No kapp found for RXN-DAOorn_x_FWD-rt7626
+No kapp found for RXN-DAOpro_x_FWD-rt3508
+No kapp found for RXN-DAOpro_x_FWD-rt7081
+No kapp found for RXN-DAOpro_x_FWD-rt7626
+No kapp found for RXN-DCAt_c_e_FWD-rt15442799
+No kapp found for RXN-DCAt_c_e_REV-rt15442799
+No kapp found for RXN-DCAt_c_x_FWD-rt5693
+No kapp found for RXN-DCAt_c_x_FWD-rt5693 or enzyme rt5693
+No kapp found for RXN-DCAt_c_x_REV-rt5693
+No kapp found for RXN-DCMPDA_c_FWD-rt8268
+No kapp found for RXN-DCTPD_c_FWD-rt0757
+No kapp found for RXN-DCYTD_c_FWD-rt7919
+No kapp found for RXN-DDCAt_c_e_FWD-rt15442799
+No kapp found for RXN-DDCAt_c_e_REV-rt15442799
+No kapp found for RXN-DDCAt_c_x_FWD-rt5693
+No kapp found for RXN-DDCAt_c_x_REV-rt5693
+No kapp found for RXN-DDPA_c_FWD-rt2234_c
+No kapp found for RXN-DDPA_c_FWD-rt2234_c or enzyme rt2234_c
+No kapp found for RXN-DDPA_c_FWD-rt3787_c
+No kapp found for RXN-DDPA_m_FWD-rt3787_m
+No kapp found for RXN-DECOAI82e_x_FWD-rt3539
+No kapp found for RXN-DECOAI82e_x_FWD-rt3539 or enzyme rt3539
+No kapp found for RXN-DECOAR102d_x_FWD-rt4860
+No kapp found for RXN-DECOAR102d_x_FWD-rt4860 or enzyme rt4860
+No kapp found for RXN-DECOAR103e_x_FWD-rt4860
+No kapp found for RXN-DECOAR82e_x_FWD-rt4860
+No kapp found for RXN-DGAT_l_FWD-rt8092_l
+No kapp found for RXN-DGAT_l_FWD-rt8092_l or enzyme rt8092_l
+No kapp found for RXN-DGAT_rm_FWD-rt8092_rm or enzyme rt8092_rm
+No kapp found for RXN-DGK1_c_FWD-rt3157
+No kapp found for RXN-DGK1_c_REV-rt3157
+No kapp found for RXN-DGK1_c_FWD-rt3670
+No kapp found for RXN-DGK1_c_REV-rt3670
+No kapp found for RXN-DGLCND3H_c_FWD-rt2544
+No kapp found for RXN-DGLCND3H_c_FWD-rt2544 or enzyme rt2544
+No kapp found for RXN-DGLCND3H_c_REV-rt2544
+No kapp found for RXN-DGLCND5H_c_FWD-rt2544
+No kapp found for RXN-DGLCND5H_c_REV-rt2544
+No kapp found for RXN-DGPP_vm_FWD-rt4719
+No kapp found for RXN-DGPP_vm_FWD-rt4719 or enzyme rt4719
+No kapp found for RXN-DHAD1_c_FWD-rt6258
+No kapp found for RXN-DHAD1_c_FWD-rt6258 or enzyme rt6258
+No kapp found for RXN-DHAD2_c_FWD-rt6258
+No kapp found for RXN-DHAK_c_FWD-rt3901
+No kapp found for RXN-DHAK_c_FWD-rt3901 or enzyme rt3901
+No kapp found for RXN-DHAPAT_l_FWD-rt5001_l
+No kapp found for RXN-DHAPAT_l_FWD-rt5001_l or enzyme rt5001_l
+No kapp found for RXN-DHAPAT_rm_FWD-rt5001_rm
+No kapp found for RXN-DHAPAT_rm_FWD-rt5001_rm or enzyme rt5001_rm
+No kapp found for RXN-DHFRi_m_FWD-rt3791_m
+No kapp found for RXN-DHFRi_m_FWD-rt3791_m or enzyme rt3791_m
+No kapp found for RXN-DHFS_1_c_FWD-rt2092
+No kapp found for RXN-DHFS_1_c_FWD-rt2092 or enzyme rt2092
+No kapp found for RXN-DHNPA2i_m_FWD-rt6009
+No kapp found for RXN-DHNPA2i_m_FWD-rt6009 or enzyme rt6009
+No kapp found for RXN-DHORTS_c_FWD-rt3923
+No kapp found for RXN-DHPM2_c_FWD-rt3509
+No kapp found for RXN-DHPM2_c_FWD-rt3509 or enzyme rt3509
+No kapp found for RXN-DHPM2_c_REV-rt3509
+No kapp found for RXN-DHPTS_m_FWD-rt6009
+No kapp found for RXN-DIPS_c_FWD-rt8137
+No kapp found for RXN-DIPS_c_FWD-rt8137 or enzyme rt8137
+No kapp found for RXN-DKMPPH_c_FWD-rt7962_DKMPPH_c
+No kapp found for RXN-DKMPPH_c_FWD-rt7962_DKMPPH_c or enzyme rt7962_DKMPPH_c
+No kapp found for RXN-DNMPPA_c_FWD-rt6247
+No kapp found for RXN-DNMPPA_c_FWD-rt6247 or enzyme rt6247
+No kapp found for RXN-DNTP_c_FWD-rt4736
+No kapp found for RXN-DNTP_c_FWD-rt4736 or enzyme rt4736
+No kapp found for RXN-DOLDPP_c_FWD-rt5681 or enzyme rt5681
+No kapp found for RXN-DOLDPP_c_REV-rt5681
+No kapp found for RXN-DOLK_c_FWD-rt0544
+No kapp found for RXN-DOLK_c_FWD-rt0544 or enzyme rt0544
+No kapp found for RXN-DOLPMMT_r_FWD-PMT12
+No kapp found for RXN-DOLPMMT_r_FWD-rt3753
+No kapp found for RXN-DPGM_c_FWD-rt1542
+No kapp found for RXN-DPGM_c_REV-rt1542
+No kapp found for RXN-DPGT_c_FWD-rt3441
+No kapp found for RXN-DPGT_c_FWD-rt3441 or enzyme rt3441
+No kapp found for RXN-DPGT_c_REV-rt3441
+No kapp found for RXN-DPR_c_FWD-rt5909
+No kapp found for RXN-DPR_c_FWD-rt5909 or enzyme rt5909
+No kapp found for RXN-DPR_c_FWD-rt8154
+No kapp found for RXN-DRBK_c_FWD-rt2501
+No kapp found for RXN-DRBK_c_FWD-rt2501 or enzyme rt2501
+No kapp found for RXN-DUTPDP_c_FWD-rt0031
+No kapp found for RXN-DUTPDP_c_FWD-rt0031 or enzyme rt0031
+No kapp found for RXN-DUTPDP_c_FWD-rt5532
+No kapp found for RXN-DXHPSq9_c_FWD-rt1830
+No kapp found for RXN-DXHPSq9_c_FWD-rt1830 or enzyme rt1830
+No kapp found for RXN-EAR40y_m_FWD-rt3469
+No kapp found for RXN-EAR40y_m_FWD-rt3469 or enzyme rt3469
+No kapp found for RXN-EAR60y_m_FWD-rt3469
+No kapp found for RXN-EAR80y_m_FWD-rt3469
+No kapp found for RXN-ECOAH100_m_FWD-rt6437
+No kapp found for RXN-ECOAH100_m_FWD-rt6437 or enzyme rt6437
+No kapp found for RXN-ECOAH100_m_REV-rt6437
+No kapp found for RXN-ECOAH100_x_FWD-rt2994
+No kapp found for RXN-ECOAH100_x_FWD-rt2994 or enzyme rt2994
+No kapp found for RXN-ECOAH100_x_FWD-rt8147
+No kapp found for RXN-ECOAH101e_x_FWD-rt2994
+No kapp found for RXN-ECOAH101e_x_FWD-rt8147
+No kapp found for RXN-ECOAH120_m_FWD-rt6437
+No kapp found for RXN-ECOAH120_m_REV-rt6437
+No kapp found for RXN-ECOAH120_x_FWD-rt2994
+No kapp found for RXN-ECOAH120_x_FWD-rt8147
+No kapp found for RXN-ECOAH121a_m_FWD-rt6437
+No kapp found for RXN-ECOAH121a_x_FWD-rt2994
+No kapp found for RXN-ECOAH121a_x_FWD-rt8147
+No kapp found for RXN-ECOAH121d_x_FWD-rt2994
+No kapp found for RXN-ECOAH121d_x_FWD-rt8147
+No kapp found for RXN-ECOAH122e_x_FWD-rt2994
+No kapp found for RXN-ECOAH122e_x_FWD-rt8147
+No kapp found for RXN-ECOAH140_m_FWD-rt6437
+No kapp found for RXN-ECOAH140_m_REV-rt6437
+No kapp found for RXN-ECOAH140_x_FWD-rt2994
+No kapp found for RXN-ECOAH140_x_FWD-rt8147
+No kapp found for RXN-ECOAH141b_m_FWD-rt6437
+No kapp found for RXN-ECOAH141b_x_FWD-rt2994
+No kapp found for RXN-ECOAH141b_x_FWD-rt8147
+No kapp found for RXN-ECOAH141c_m_FWD-rt6437
+No kapp found for RXN-ECOAH141c_x_FWD-rt2994
+No kapp found for RXN-ECOAH141c_x_FWD-rt8147
+No kapp found for RXN-ECOAH142_x_FWD-rt2994
+No kapp found for RXN-ECOAH142_x_FWD-rt8147
+No kapp found for RXN-ECOAH143_x_FWD-rt2994
+No kapp found for RXN-ECOAH143_x_FWD-rt8147
+No kapp found for RXN-ECOAH160_m_FWD-rt6437
+No kapp found for RXN-ECOAH160_m_REV-rt6437
+No kapp found for RXN-ECOAH160_x_FWD-rt2994
+No kapp found for RXN-ECOAH160_x_FWD-rt8147
+No kapp found for RXN-ECOAH161b_m_FWD-rt6437
+No kapp found for RXN-ECOAH161b_x_FWD-rt2994
+No kapp found for RXN-ECOAH161b_x_FWD-rt8147
+No kapp found for RXN-ECOAH161c_m_FWD-rt6437
+No kapp found for RXN-ECOAH161c_x_FWD-rt2994
+No kapp found for RXN-ECOAH161c_x_FWD-rt8147
+No kapp found for RXN-ECOAH162_x_FWD-rt2994
+No kapp found for RXN-ECOAH162_x_FWD-rt8147
+No kapp found for RXN-ECOAH163_x_FWD-rt2994
+No kapp found for RXN-ECOAH163_x_FWD-rt8147
+No kapp found for RXN-ECOAH180_m_FWD-rt6437
+No kapp found for RXN-ECOAH180_x_FWD-rt2994
+No kapp found for RXN-ECOAH180_x_FWD-rt8147
+No kapp found for RXN-ECOAH181a_m_FWD-rt6437
+No kapp found for RXN-ECOAH181a_x_FWD-rt2994
+No kapp found for RXN-ECOAH181a_x_FWD-rt8147
+No kapp found for RXN-ECOAH182_x_FWD-rt2994
+No kapp found for RXN-ECOAH182_x_FWD-rt8147
+No kapp found for RXN-ECOAH183_x_FWD-rt2994
+No kapp found for RXN-ECOAH183_x_FWD-rt8147
+No kapp found for RXN-ECOAH200_x_FWD-rt2994
+No kapp found for RXN-ECOAH200_x_FWD-rt8147
+No kapp found for RXN-ECOAH220_x_FWD-rt2994
+No kapp found for RXN-ECOAH220_x_FWD-rt8147
+No kapp found for RXN-ECOAH240_x_FWD-rt2994
+No kapp found for RXN-ECOAH240_x_FWD-rt8147
+No kapp found for RXN-ECOAH260_x_FWD-rt2994
+No kapp found for RXN-ECOAH260_x_FWD-rt8147
+No kapp found for RXN-ECOAH40_m_FWD-rt6437
+No kapp found for RXN-ECOAH40_m_REV-rt6437
+No kapp found for RXN-ECOAH40_x_FWD-rt2994
+No kapp found for RXN-ECOAH40_x_FWD-rt8147
+No kapp found for RXN-ECOAH60_m_FWD-rt6437
+No kapp found for RXN-ECOAH60_m_REV-rt6437
+No kapp found for RXN-ECOAH60_x_FWD-rt2994
+No kapp found for RXN-ECOAH60_x_FWD-rt8147
+No kapp found for RXN-ECOAH80_m_FWD-rt6437
+No kapp found for RXN-ECOAH80_m_REV-rt6437
+No kapp found for RXN-ECOAH80_x_FWD-rt2994
+No kapp found for RXN-ECOAH80_x_FWD-rt8147
+No kapp found for RXN-ECOAI101a_x_FWD-rt1925
+No kapp found for RXN-ECOAI101a_x_FWD-rt1925 or enzyme rt1925
+No kapp found for RXN-ECOAI101d_x_FWD-rt1925
+No kapp found for RXN-ECOAI102e_x_FWD-rt1925
+No kapp found for RXN-ECOAI121a_x_FWD-rt1925
+No kapp found for RXN-ECOAI121b_x_FWD-rt1925
+No kapp found for RXN-ECOAI122c_x_FWD-rt1925
+No kapp found for RXN-ECOAI122d_x_FWD-rt1925
+No kapp found for RXN-ECOAI123e_x_FWD-rt1925
+No kapp found for RXN-ECOAI141a_x_FWD-rt1925
+No kapp found for RXN-ECOAI142c_x_FWD-rt1925
+No kapp found for RXN-ECOAI81e_x_FWD-rt1925
+No kapp found for RXN-ECOAI82e_x_FWD-rt1925
+No kapp found for RXN-ECOAR122_x_FWD-rt4860
+No kapp found for RXN-ECOAR142_x_FWD-rt4860
+No kapp found for RXN-EGHLAT_c_FWD-rt0568_c
+No kapp found for RXN-EGHLAT_c_FWD-rt1784_c
+No kapp found for RXN-EGHLAT_m_FWD-rt5562_m
+No kapp found for RXN-EGHLAT_x_FWD-rt0568_x
+No kapp found for RXN-EGHLAT_x_FWD-rt0568_x or enzyme rt0568_x
+No kapp found for RXN-EGHLAT_x_FWD-rt5562_x
+No kapp found for RXN-ENO_c_REV-rt0669
+No kapp found for RXN-EPGALURS_e_FWD-rt2116
+No kapp found for RXN-EPGALURS_e_FWD-rt2116 or enzyme rt2116
+No kapp found for RXN-EPISTt_c_e_FWD-rt6543
+No kapp found for RXN-EPISTt_c_e_FWD-rt6543 or enzyme rt6543
+No kapp found for RXN-EPISTt_c_e_REV-rt6543
+No kapp found for RXN-ERGSTGLCT_c_FWD-rt5466
+No kapp found for RXN-ERGSTGLCT_c_FWD-rt5466 or enzyme rt5466
+No kapp found for RXN-ERGSTt_c_e_FWD-rt6543
+No kapp found for RXN-ERGSTt_c_e_REV-rt6543
+No kapp found for RXN-ETFOXRq9_c_FWD-CIR1AIM45
+No kapp found for RXN-ETFOXRq9_c_FWD-CIR1AIM45 or enzyme CIR1AIM45
+No kapp found for RXN-ETFOXRq9_m_FWD-CIR1AIM45
+No kapp found for RXN-ETFOXRq9_m_REV-CIR1AIM45
+No kapp found for RXN-ETHAK_c_FWD-rt7614
+No kapp found for RXN-ETHAPT_rm_FWD-rt2983
+No kapp found for RXN-ETNO2OX_c_FWD-rt3897
+No kapp found for RXN-ETNO2OX_c_FWD-rt3897 or enzyme rt3897
+No kapp found for RXN-F1PP_c_FWD-rt0208
+No kapp found for RXN-F1PP_c_FWD-rt5045
+No kapp found for RXN-FACOA120tabc_x_FWD-PXA12
+No kapp found for RXN-FACOA120tabc_x_FWD-PXA12 or enzyme PXA12
+No kapp found for RXN-FACOA140tabc_x_FWD-PXA12
+No kapp found for RXN-FACOA160tabc_x_FWD-PXA12
+No kapp found for RXN-FACOA161tabc_x_FWD-PXA12
+No kapp found for RXN-FACOA180tabc_x_FWD-PXA12
+No kapp found for RXN-FACOA181tabc_x_FWD-PXA12
+No kapp found for RXN-FACOA182tabc_x_FWD-PXA12
+No kapp found for RXN-FACOA183tabc_x_FWD-PXA12
+No kapp found for RXN-FACOA200tabc_x_FWD-PXA12
+No kapp found for RXN-FACOA220tabc_x_FWD-PXA12
+No kapp found for RXN-FACOA240tabc_x_FWD-PXA12
+No kapp found for RXN-FACOA260tabc_x_FWD-PXA12
+No kapp found for RXN-FACOAE100_x_FWD-rt7680
+No kapp found for RXN-FACOAE100_x_FWD-rt7680 or enzyme rt7680
+No kapp found for RXN-FACOAE120_c_FWD-rt4680
+No kapp found for RXN-FACOAE120_c_FWD-rt4680 or enzyme rt4680
+No kapp found for RXN-FACOAE120_x_FWD-rt7680
+No kapp found for RXN-FACOAE140_c_FWD-rt4680
+No kapp found for RXN-FACOAE140_x_FWD-rt7680
+No kapp found for RXN-FACOAE160_c_FWD-rt0088
+No kapp found for RXN-FACOAE160_c_FWD-rt0088 or enzyme rt0088
+No kapp found for RXN-FACOAE160_c_FWD-rt4680
+No kapp found for RXN-FACOAE160_x_FWD-rt7680
+No kapp found for RXN-FACOAE161_c_FWD-rt0088
+No kapp found for RXN-FACOAE161_c_FWD-rt4680
+No kapp found for RXN-FACOAE161_x_FWD-rt7680
+No kapp found for RXN-FACOAE180_c_FWD-rt0088
+No kapp found for RXN-FACOAE180_c_FWD-rt4680
+No kapp found for RXN-FACOAE180_x_FWD-rt7680
+No kapp found for RXN-FACOAE181_c_FWD-rt0088
+No kapp found for RXN-FACOAE181_c_FWD-rt4680
+No kapp found for RXN-FACOAE181_x_FWD-rt7680
+No kapp found for RXN-FACOAE182_c_FWD-rt0088
+No kapp found for RXN-FACOAE182_c_FWD-rt4680
+No kapp found for RXN-FACOAE182_x_FWD-rt7680
+No kapp found for RXN-FACOAE183_c_FWD-rt0088
+No kapp found for RXN-FACOAE183_c_FWD-rt4680
+No kapp found for RXN-FACOAE183_x_FWD-rt7680
+No kapp found for RXN-FACOAE40_x_FWD-rt7680
+No kapp found for RXN-FACOAE60_x_FWD-rt7680
+No kapp found for RXN-FACOAE80_x_FWD-rt7680
+No kapp found for RXN-FACOAL100_c_FWD-rt7532_c
+No kapp found for RXN-FACOAL100_x_FWD-rt4187
+No kapp found for RXN-FACOAL100_x_FWD-rt4187 or enzyme rt4187
+No kapp found for RXN-FACOAL100_x_FWD-rt7761
+No kapp found for RXN-FACOAL120_c_FWD-rt7532_c
+No kapp found for RXN-FACOAL120_l_FWD-rt2799_l
+No kapp found for RXN-FACOAL120_rm_FWD-rt2799_rm
+No kapp found for RXN-FACOAL120_rm_FWD-rt2799_rm or enzyme rt2799_rm
+No kapp found for RXN-FACOAL120_x_FWD-rt4187
+No kapp found for RXN-FACOAL120_x_FWD-rt7761
+No kapp found for RXN-FACOAL140_l_FWD-rt2799_l
+No kapp found for RXN-FACOAL140_rm_FWD-rt2799_rm
+No kapp found for RXN-FACOAL140_x_FWD-rt4187
+No kapp found for RXN-FACOAL140_x_FWD-rt7761
+No kapp found for RXN-FACOAL160_l_FWD-rt2799_l
+No kapp found for RXN-FACOAL160_rm_FWD-rt2799_rm
+No kapp found for RXN-FACOAL160_x_FWD-rt4187
+No kapp found for RXN-FACOAL160_x_FWD-rt7761
+No kapp found for RXN-FACOAL161_l_FWD-rt2799_l
+No kapp found for RXN-FACOAL161_rm_FWD-rt2799_rm
+No kapp found for RXN-FACOAL161_x_FWD-rt4187
+No kapp found for RXN-FACOAL161_x_FWD-rt7761
+No kapp found for RXN-FACOAL180_l_FWD-rt2799_l
+No kapp found for RXN-FACOAL180_rm_FWD-rt2799_rm
+No kapp found for RXN-FACOAL180_x_FWD-rt4187
+No kapp found for RXN-FACOAL180_x_FWD-rt7761
+No kapp found for RXN-FACOAL181_rm_FWD-rt2799_rm
+No kapp found for RXN-FACOAL181_x_FWD-rt4187
+No kapp found for RXN-FACOAL181_x_FWD-rt7761
+No kapp found for RXN-FACOAL182_rm_FWD-rt2799_rm
+No kapp found for RXN-FACOAL182_x_FWD-rt4187
+No kapp found for RXN-FACOAL182_x_FWD-rt7761
+No kapp found for RXN-FACOAL183_l_FWD-rt2799_l
+No kapp found for RXN-FACOAL183_rm_FWD-rt2799_rm
+No kapp found for RXN-FACOAL183_x_FWD-rt4187
+No kapp found for RXN-FACOAL183_x_FWD-rt7761
+No kapp found for RXN-FACOAL200_en_FWD-rt7380
+No kapp found for RXN-FACOAL200_en_FWD-rt7380 or enzyme rt7380
+No kapp found for RXN-FACOAL200_l_FWD-rt1544_l
+No kapp found for RXN-FACOAL200_rm_FWD-rt1544_rm
+No kapp found for RXN-FACOAL200_rm_FWD-rt1544_rm or enzyme rt1544_rm
+No kapp found for RXN-FACOAL200_x_FWD-rt7761
+No kapp found for RXN-FACOAL220_en_FWD-rt7380
+No kapp found for RXN-FACOAL220_rm_FWD-rt1544_rm
+No kapp found for RXN-FACOAL220_x_FWD-rt7761
+No kapp found for RXN-FACOAL240_en_FWD-rt7380
+No kapp found for RXN-FACOAL240_l_FWD-rt1544_l
+No kapp found for RXN-FACOAL240_rm_FWD-rt1544_rm
+No kapp found for RXN-FACOAL240_x_FWD-rt7761
+No kapp found for RXN-FACOAL260_en_FWD-rt7380
+No kapp found for RXN-FACOAL260_l_FWD-rt1544_l
+No kapp found for RXN-FACOAL260_rm_FWD-rt1544_rm
+No kapp found for RXN-FACOAL260_x_FWD-rt7761
+No kapp found for RXN-FACOAL40_c_FWD-rt7532_c
+No kapp found for RXN-FACOAL40o_x_FWD-rt6908
+No kapp found for RXN-FACOAL40o_x_FWD-rt6908 or enzyme rt6908
+No kapp found for RXN-FACOAL60_c_FWD-rt7532_c
+No kapp found for RXN-FACOAL80_c_FWD-rt7532_c
+No kapp found for RXN-FACOAL80_x_FWD-rt4187
+No kapp found for RXN-FACOAL80_x_FWD-rt7761
+No kapp found for RXN-FADH2t_c_m_FWD-rt5791
+No kapp found for RXN-FADH2t_c_m_FWD-rt5791 or enzyme rt5791
+No kapp found for RXN-FADt_c_m_FWD-rt5791
+No kapp found for RXN-FALDH_c_FWD-rt5740
+No kapp found for RXN-FBA_c_REV-rt7052
+No kapp found for RXN-FBA2_c_FWD-rt7052
+No kapp found for RXN-FBA2_c_REV-rt7052
+No kapp found for RXN-FBA3_c_FWD-rt7052
+No kapp found for RXN-FBA3_c_REV-rt7052
+No kapp found for RXN-FBP_c_FWD-rt7055
+No kapp found for RXN-FBP_c_FWD-rt7055 or enzyme rt7055
+No kapp found for RXN-FBP2_c_FWD-rt6827
+No kapp found for RXN-FBP2_c_FWD-rt6827 or enzyme rt6827
+No kapp found for RXN-FBP2_c_FWD-rt7376
+No kapp found for RXN-FDH_c_FWD-rt3584 or enzyme rt3584
+No kapp found for RXN-FE2t_c_e_FWD-rt2087
+No kapp found for RXN-FECOOR_m_FWD-FECOORCPLX2
+No kapp found for RXN-FECOOR_m_FWD-FECOORCPLX3
+No kapp found for RXN-FECOOR_m_FWD-FECOORCPLX4
+No kapp found for RXN-FECPOR_m_FWD-CCP1CYC7
+No kapp found for RXN-FECPOR_m_FWD-CCP1CYC7 or enzyme CCP1CYC7
+No kapp found for RXN-FECPOR_m_FWD-CCP1CYC7a
+No kapp found for RXN-FER_c_FWD-rt7329
+No kapp found for RXN-FER_c_FWD-rt7329 or enzyme rt7329
+No kapp found for RXN-FKYNH_c_FWD-rt0172
+No kapp found for RXN-FKYNH_c_FWD-rt3408
+No kapp found for RXN-FKYNH_c_FWD-rt6420
+No kapp found for RXN-FMETTRS_m_FWD-rt3531
+No kapp found for RXN-FMETTRS_m_FWD-rt3531 or enzyme rt3531
+No kapp found for RXN-FMNAT_m_FWD-rt3174_m
+No kapp found for RXN-FMNAT_m_FWD-rt3174_m or enzyme rt3174_m
+No kapp found for RXN-FMNRx2_c_FWD-rt8485
+No kapp found for RXN-FOLD3_m_FWD-rt6009
+No kapp found for RXN-FOLR_m_FWD-rt3791_m
+No kapp found for RXN-FRD_c_FWD-rt3052
+No kapp found for RXN-FRD_c_FWD-rt3052 or enzyme rt3052
+No kapp found for RXN-FRMDAH_c_FWD-rt7438
+No kapp found for RXN-FRMDAH_c_FWD-rt7438 or enzyme rt7438
+No kapp found for RXN-FRMDH_c_FWD-rt6471
+No kapp found for RXN-FRMDH_c_FWD-rt6471 or enzyme rt6471
+No kapp found for RXN-FRMDH_c_REV-rt6471
+No kapp found for RXN-FRTT_c_FWD-rt8135
+No kapp found for RXN-FRTT_c_FWD-rt8135 or enzyme rt8135
+No kapp found for RXN-FRUtps_e_FWD-rt1375
+No kapp found for RXN-FRUtps_e_FWD-rt1375 or enzyme rt1375
+No kapp found for RXN-FRUtps_e_FWD-rt1480
+No kapp found for RXN-FRUtps_e_FWD-rt2496
+No kapp found for RXN-FRUtps_e_FWD-rt2707
+No kapp found for RXN-FRUtps_e_FWD-rt2833
+No kapp found for RXN-FRUtps_e_FWD-rt3556
+No kapp found for RXN-FRUtps_e_FWD-rt7817
+No kapp found for RXN-FTHFCL_c_FWD-rt4194
+No kapp found for RXN-FTHFCL_c_FWD-rt4194 or enzyme rt4194
+No kapp found for RXN-FTHFL_m_FWD-rt6998
+No kapp found for RXN-FTHFL_m_REV-rt6998
+No kapp found for RXN-FUM_c_REV-rt5633_c
+No kapp found for RXN-FUM_m_FWD-rt5633_m
+No kapp found for RXN-FUM_m_FWD-rt5633_m or enzyme rt5633_m
+No kapp found for RXN-FUM_m_REV-rt5633_m
+No kapp found for RXN-FUMACACH_c_FWD-rt3594
+No kapp found for RXN-FUMACACH_c_FWD-rt3594 or enzyme rt3594
+No kapp found for RXN-FUMACACH_c_REV-rt3594
+No kapp found for RXN-FUMACACH_m_FWD-rt3874
+No kapp found for RXN-FUMACACH_m_FWD-rt3874 or enzyme rt3874
+No kapp found for RXN-FUMACACH_m_FWD-rt7056
+No kapp found for RXN-FUMACACH_m_FWD-rt7624
+No kapp found for RXN-G3PAT_rm_FWD-rt2297_rm
+No kapp found for RXN-G3PAT_rm_FWD-rt2297_rm or enzyme rt2297_rm
+No kapp found for RXN-G3PAT_rm_FWD-rt7067
+No kapp found for RXN-G3PCt_c_e_FWD-rt4413
+No kapp found for RXN-G3PCt_c_e_FWD-rt4413 or enzyme rt4413
+No kapp found for RXN-G3PCt_c_e_REV-rt4413
+No kapp found for RXN-G3PD1i_m_FWD-rt6208_m
+No kapp found for RXN-G3PD1i_m_FWD-rt6208_m or enzyme rt6208_m
+No kapp found for RXN-G3PD1i_x_FWD-rt3786_x
+No kapp found for RXN-G3PD1i_x_FWD-rt3786_x or enzyme rt3786_x
+No kapp found for RXN-G3PD1r_c_FWD-rt3786_c
+No kapp found for RXN-G3PD1r_c_REV-rt3786_c
+No kapp found for RXN-G3PD1r_c_REV-rt6208_c
+No kapp found for RXN-G3PDf_m_FWD-rt2671
+No kapp found for RXN-G3PDf_m_FWD-rt2671 or enzyme rt2671
+No kapp found for RXN-G3PIt_c_e_FWD-rt4413
+No kapp found for RXN-G3PIt_c_e_REV-rt4413
+No kapp found for RXN-G3PT_c_FWD-rt0092
+No kapp found for RXN-G3PT_c_FWD-rt0092 or enzyme rt0092
+No kapp found for RXN-G6PDH2i_c_FWD-rt1632
+No kapp found for RXN-G6PDH2i_c_FWD-rt1632 or enzyme rt1632
+No kapp found for RXN-G6PE_c_FWD-rt8255
+No kapp found for RXN-G6PE_c_FWD-rt8255 or enzyme rt8255
+No kapp found for RXN-G6PE_c_REV-rt8255
+No kapp found for RXN-GALKi_c_FWD-rt5622
+No kapp found for RXN-GALKi_c_FWD-rt5622 or enzyme rt5622
+No kapp found for RXN-GALOX_e_FWD-rt0174
+No kapp found for RXN-GALOX_e_FWD-rt0174 or enzyme rt0174
+No kapp found for RXN-GALT_c_FWD-rt2964
+No kapp found for RXN-GALT_c_FWD-rt2964 or enzyme rt2964
+No kapp found for RXN-GALtps_e_FWD-rt2336
+No kapp found for RXN-GALtps_e_FWD-rt2833
+No kapp found for RXN-GALtps_e_FWD-rt3556
+No kapp found for RXN-GALtps_e_FWD-rt7817
+No kapp found for RXN-GALUi_c_REV-rt3384
+No kapp found for RXN-GAPD_c_REV-rt2245
+No kapp found for RXN-GAPD_c_FWD-rt3311
+No kapp found for RXN-GAPD_c_REV-rt3311
+No kapp found for RXN-GBBOX_c_FWD-rt6692_c
+No kapp found for RXN-GBBOX_c_FWD-rt6692_c or enzyme rt6692_c
+No kapp found for RXN-GDPMANt_c_g_FWD-rt4177
+No kapp found for RXN-GDPMANt_c_g_FWD-rt4177 or enzyme rt4177
+No kapp found for RXN-GF6PTA_c_FWD-rt3731 or enzyme rt3731
+No kapp found for RXN-GHMT2r_c_REV-rt1299
+No kapp found for RXN-GK1_c_FWD-rt3670
+No kapp found for RXN-GK2_c_FWD-rt3157
+No kapp found for RXN-GK2_c_REV-rt3157
+No kapp found for RXN-GLCDx_c_FWD-rt0298
+No kapp found for RXN-GLCDx_c_FWD-rt0298 or enzyme rt0298
+No kapp found for RXN-GLCDx_c_REV-rt0298
+No kapp found for RXN-GLCDx_c_FWD-rt5828
+No kapp found for RXN-GLCDx_c_REV-rt5828
+No kapp found for RXN-GLCGSD_c_FWD-rt4271
+No kapp found for RXN-GLCGSD_c_FWD-rt4271 or enzyme rt4271
+No kapp found for RXN-GLCGSD_v_FWD-rt6375
+No kapp found for RXN-GLCGSD_v_FWD-rt6375 or enzyme rt6375
+No kapp found for RXN-GLCNtps_e_FWD-rt0518
+No kapp found for RXN-GLCNtps_e_FWD-rt0518 or enzyme rt0518
+No kapp found for RXN-GLCNtps_e_REV-rt0518
+No kapp found for RXN-GLCP_c_FWD-rt5888
+No kapp found for RXN-GLCP_c_FWD-rt5888 or enzyme rt5888
+No kapp found for RXN-GLCt_c_e_FWD-rt1375
+No kapp found for RXN-GLCt_c_e_FWD-rt1473
+No kapp found for RXN-GLCt_c_e_FWD-rt1480
+No kapp found for RXN-GLCt_c_e_FWD-rt2496
+No kapp found for RXN-GLCt_c_e_FWD-rt2707
+No kapp found for RXN-GLCt_c_e_FWD-rt2833
+No kapp found for RXN-GLCt_c_e_FWD-rt3556
+No kapp found for RXN-GLCt_c_e_FWD-rt7817
+No kapp found for RXN-GLCt_c_v_FWD-rt7394
+No kapp found for RXN-GLCt_c_v_FWD-rt7394 or enzyme rt7394
+No kapp found for RXN-GLCt_c_v_REV-rt7394
+No kapp found for RXN-GLCtps_e_FWD-rt3525
+No kapp found for RXN-GLCtps_e_FWD-rt3525 or enzyme rt3525
+No kapp found for RXN-GLCtps_e_REV-rt3525
+No kapp found for RXN-GLNtpa_v_FWD-rt7819
+No kapp found for RXN-GLNtps_v_FWD-rt4375
+No kapp found for RXN-GLUCYS_c_FWD-rt3639
+No kapp found for RXN-GLUCYS_c_FWD-rt3639 or enzyme rt3639
+No kapp found for RXN-GLUCYS_c_FWD-rt3654
+No kapp found for RXN-GLUDC_c_FWD-rt1066
+No kapp found for RXN-GLUDC_c_FWD-rt1066 or enzyme rt1066
+No kapp found for RXN-GLUDC_c_FWD-rt1067
+No kapp found for RXN-GLUDC_c_FWD-rt2354
+No kapp found for RXN-GLUDxi_c_FWD-rt1488
+No kapp found for RXN-GLUDxi_c_FWD-rt1488 or enzyme rt1488
+No kapp found for RXN-GLUN_c_FWD-rt5611
+No kapp found for RXN-GLUN_c_FWD-rt5611 or enzyme rt5611
+No kapp found for RXN-GLUN_e_FWD-rt1675
+No kapp found for RXN-GLUN_e_FWD-rt5259
+No kapp found for RXN-GLUR_c_FWD-rt4701
+No kapp found for RXN-GLUR_c_FWD-rt4701 or enzyme rt4701
+No kapp found for RXN-GLUR_c_REV-rt4701
+No kapp found for RXN-GLUSx_c_FWD-rt7345
+No kapp found for RXN-GLUSx_c_FWD-rt7345 or enzyme rt7345
+No kapp found for RXN-GLUTCOADH_m_FWD-rt3621
+No kapp found for RXN-GLUTCOADH_m_FWD-rt3621 or enzyme rt3621
+No kapp found for RXN-GLUTCOADH_m_REV-rt3621
+No kapp found for RXN-GLUtps_e_FWD-rt0594
+No kapp found for RXN-GLUtps_e_REV-rt0594
+No kapp found for RXN-GLUtps_e_FWD-rt5861
+No kapp found for RXN-GLUtps_e_REV-rt5861
+No kapp found for RXN-GLUtps_v_FWD-rt0398
+No kapp found for RXN-GLUTRS_m_FWD-rt6197
+No kapp found for RXN-GLUTRS_m_FWD-rt6197 or enzyme rt6197
+No kapp found for RXN-GLYCDy_c_FWD-rt3388
+No kapp found for RXN-GLYCDy_c_FWD-rt3388 or enzyme rt3388
+No kapp found for RXN-GLYCK_c_FWD-rt1670
+No kapp found for RXN-GLYCK_c_FWD-rt1670 or enzyme rt1670
+No kapp found for RXN-GLYCL_m_REV-GCV123LPD1
+No kapp found for RXN-GLYCtps_e_FWD-rt2336
+No kapp found for RXN-GLYCtps_e_REV-rt2336
+No kapp found for RXN-GLYGS_c_FWD-rt12285634
+No kapp found for RXN-GLYGS_c_FWD-rt12285634 or enzyme rt12285634
+No kapp found for RXN-GLYK_c_FWD-rt2654
+No kapp found for RXN-GLYK_c_FWD-rt2654 or enzyme rt2654
+No kapp found for RXN-GLYOX_c_FWD-rt4673
+No kapp found for RXN-GLYOX_c_FWD-rt4673 or enzyme rt4673
+No kapp found for RXN-GLYOX_m_FWD-rt5195
+No kapp found for RXN-GLYOX_m_FWD-rt5195 or enzyme rt5195
+No kapp found for RXN-GLYt_c_m_FWD-rt0066
+No kapp found for RXN-GLYt_c_m_REV-rt0066
+No kapp found for RXN-GLYt_c_m_REV-rt4150
+No kapp found for RXN-GLYtps_e_FWD-rt0594
+No kapp found for RXN-GLYtps_e_REV-rt0594
+No kapp found for RXN-GLYtps_e_FWD-rt4390
+No kapp found for RXN-GLYtps_e_REV-rt4390
+No kapp found for RXN-GLYtps_e_FWD-rt5861
+No kapp found for RXN-GLYtps_e_REV-rt5861
+No kapp found for RXN-GMAND_c_FWD-rt2621
+No kapp found for RXN-GMAND_c_FWD-rt2621 or enzyme rt2621
+No kapp found for RXN-GMAND_c_FWD-rt3255
+No kapp found for RXN-GND_c_FWD-rt2224
+No kapp found for RXN-GND_c_FWD-rt2224 or enzyme rt2224
+No kapp found for RXN-GND_c_FWD-rt6799
+No kapp found for RXN-GNK_c_FWD-rt8291
+No kapp found for RXN-GNK_c_FWD-rt8291 or enzyme rt8291
+No kapp found for RXN-GPIA1_c_FWD-GPIA1CPLX1 or enzyme GPIA1CPLX1
+No kapp found for RXN-GPIA1_c_FWD-GPIA1CPLX2
+No kapp found for RXN-GPIA10a_r_FWD-rt5724
+No kapp found for RXN-GPIA3_c_r_FWD-rt3333 or enzyme rt3333
+No kapp found for RXN-GPIA4_r_FWD-rt3077 or enzyme rt3077
+No kapp found for RXN-GPIA5_r_FWD-GPI14 or enzyme GPI14
+No kapp found for RXN-GPIA5_r_FWD-MCD4GPI14
+No kapp found for RXN-GPIA7_r_FWD-rt4593 or enzyme rt4593
+No kapp found for RXN-GPIA8a_r_FWD-rt0237 or enzyme rt0237
+No kapp found for RXN-GPIA8b_r_FWD-rt0563
+No kapp found for RXN-GPIA8b_r_FWD-rt4069
+No kapp found for RXN-GTHO_c_FWD-GLR1GRX1
+No kapp found for RXN-GTHO_c_FWD-GLR1GRX1 or enzyme GLR1GRX1
+No kapp found for RXN-GTHO_c_FWD-GLR1GRX2
+No kapp found for RXN-GTHO_c_FWD-GLR1GRX3
+No kapp found for RXN-GTHO_m_FWD-GLR1GRX5
+No kapp found for RXN-GTHO_m_FWD-GLR1GRX5 or enzyme GLR1GRX5
+No kapp found for RXN-GTHP_c_FWD-rt0211
+No kapp found for RXN-GTHP_c_FWD-rt0211 or enzyme rt0211
+No kapp found for RXN-GTHP_c_REV-rt0211
+No kapp found for RXN-GTHP_c_FWD-rt2565
+No kapp found for RXN-GTHP_c_REV-rt2565
+No kapp found for RXN-GTHP_c_FWD-rt8181
+No kapp found for RXN-GTHP_c_REV-rt8181
+No kapp found for RXN-GTHP_m_FWD-rt0422_m
+No kapp found for RXN-GTHP_m_FWD-rt0422_m or enzyme rt0422_m
+No kapp found for RXN-GTHP_m_REV-rt0422_m
+No kapp found for RXN-GTHP_m_FWD-rt0882
+No kapp found for RXN-GTHP_m_REV-rt0882
+No kapp found for RXN-GTHRDt_c_e_FWD-rt5171
+No kapp found for RXN-GTHRDt_c_e_FWD-rt5171 or enzyme rt5171
+No kapp found for RXN-GTHRDt_c_v_FWD-rt4896
+No kapp found for RXN-GTHRDt_c_v_FWD-rt4896 or enzyme rt4896
+No kapp found for RXN-GTHRDt_c_v_REV-rt4896
+No kapp found for RXN-GTHRDtabc_v_FWD-rt4896
+No kapp found for RXN-GTHS_c_FWD-rt1561
+No kapp found for RXN-GTHS_c_FWD-rt1561 or enzyme rt1561
+No kapp found for RXN-GTMLT_c_FWD-rt1470
+No kapp found for RXN-GTMLT_c_FWD-rt1470 or enzyme rt1470
+No kapp found for RXN-GTPCI_c_FWD-rt1964
+No kapp found for RXN-GTPCI_c_FWD-rt1964 or enzyme rt1964
+No kapp found for RXN-GTPDPDP_c_FWD-rt1567
+No kapp found for RXN-GTPDPDP_c_FWD-rt1567 or enzyme rt1567
+No kapp found for RXN-GTPDPDP_c_FWD-rt6258
+No kapp found for RXN-GTPGDPtp_m_FWD-rt5389
+No kapp found for RXN-GTPGDPtp_m_FWD-rt5389 or enzyme rt5389
+No kapp found for RXN-GUAD_1_c_FWD-rt0682
+No kapp found for RXN-GUAD_1_c_FWD-rt0682 or enzyme rt0682
+No kapp found for RXN-GUAD_1_c_FWD-rt1340
+No kapp found for RXN-GUAD_1_c_FWD-rt3492
+No kapp found for RXN-GUAPRT_c_FWD-rt4077
+No kapp found for RXN-GUAPRT_c_FWD-rt4077 or enzyme rt4077
+No kapp found for RXN-GUAPRT_c_FWD-rt7825
+No kapp found for RXN-GUAtps_e_FWD-rt6190
+No kapp found for RXN-GUAtps_e_REV-rt6190
+No kapp found for RXN-H2Ot_c_e_FWD-rt0646
+No kapp found for RXN-H2Ot_c_e_FWD-rt0646 or enzyme rt0646
+No kapp found for RXN-H2Ot_c_e_FWD-rt5618
+No kapp found for RXN-H2Ot_c_e_REV-rt5618
+No kapp found for RXN-HACD100i_m_FWD-rt2835
+No kapp found for RXN-HACD100i_m_FWD-rt2835 or enzyme rt2835
+No kapp found for RXN-HACD100i_x_FWD-rt2994
+No kapp found for RXN-HACD100i_x_FWD-rt7916_x
+No kapp found for RXN-HACD101ei_x_FWD-rt2994
+No kapp found for RXN-HACD101ei_x_FWD-rt7916_x
+No kapp found for RXN-HACD120i_m_FWD-rt2835
+No kapp found for RXN-HACD120i_x_FWD-rt2994
+No kapp found for RXN-HACD120i_x_FWD-rt7916_x
+No kapp found for RXN-HACD121ai_m_FWD-rt2835
+No kapp found for RXN-HACD121ai_x_FWD-rt2994
+No kapp found for RXN-HACD121ai_x_FWD-rt7916_x
+No kapp found for RXN-HACD121di_x_FWD-rt2994
+No kapp found for RXN-HACD121di_x_FWD-rt7916_x
+No kapp found for RXN-HACD122ei_x_FWD-rt2994
+No kapp found for RXN-HACD122ei_x_FWD-rt7916_x
+No kapp found for RXN-HACD140i_m_FWD-rt2835
+No kapp found for RXN-HACD140i_x_FWD-rt2994
+No kapp found for RXN-HACD140i_x_FWD-rt7916_x
+No kapp found for RXN-HACD141ai_m_FWD-rt2835
+No kapp found for RXN-HACD141ai_x_FWD-rt2994
+No kapp found for RXN-HACD141ai_x_FWD-rt7916_x
+No kapp found for RXN-HACD141bi_m_FWD-rt2835
+No kapp found for RXN-HACD141bi_x_FWD-rt2994
+No kapp found for RXN-HACD141bi_x_FWD-rt7916_x
+No kapp found for RXN-HACD142i_x_FWD-rt2994
+No kapp found for RXN-HACD142i_x_FWD-rt7916_x
+No kapp found for RXN-HACD143i_x_FWD-rt2994
+No kapp found for RXN-HACD143i_x_FWD-rt7916_x
+No kapp found for RXN-HACD160i_m_FWD-rt2835
+No kapp found for RXN-HACD160i_x_FWD-rt2994
+No kapp found for RXN-HACD160i_x_FWD-rt7916_x
+No kapp found for RXN-HACD161ai_m_FWD-rt2835
+No kapp found for RXN-HACD161ai_x_FWD-rt2994
+No kapp found for RXN-HACD161ai_x_FWD-rt7916_x
+No kapp found for RXN-HACD161bi_m_FWD-rt2835
+No kapp found for RXN-HACD161bi_x_FWD-rt2994
+No kapp found for RXN-HACD161bi_x_FWD-rt7916_x
+No kapp found for RXN-HACD162i_x_FWD-rt2994
+No kapp found for RXN-HACD162i_x_FWD-rt7916_x
+No kapp found for RXN-HACD163i_x_FWD-rt2994
+No kapp found for RXN-HACD163i_x_FWD-rt7916_x
+No kapp found for RXN-HACD180i_m_FWD-rt2835
+No kapp found for RXN-HACD180i_x_FWD-rt2994
+No kapp found for RXN-HACD180i_x_FWD-rt7916_x
+No kapp found for RXN-HACD181ai_m_FWD-rt2835
+No kapp found for RXN-HACD181ai_x_FWD-rt2994
+No kapp found for RXN-HACD181ai_x_FWD-rt7916_x
+No kapp found for RXN-HACD182i_x_FWD-rt2994
+No kapp found for RXN-HACD182i_x_FWD-rt7916_x
+No kapp found for RXN-HACD183i_x_FWD-rt2994
+No kapp found for RXN-HACD183i_x_FWD-rt7916_x
+No kapp found for RXN-HACD200i_x_FWD-rt2994
+No kapp found for RXN-HACD200i_x_FWD-rt7916_x
+No kapp found for RXN-HACD220i_x_FWD-rt2994
+No kapp found for RXN-HACD220i_x_FWD-rt7916_x
+No kapp found for RXN-HACD240i_x_FWD-rt2994
+No kapp found for RXN-HACD240i_x_FWD-rt7916_x
+No kapp found for RXN-HACD260i_x_FWD-rt2994
+No kapp found for RXN-HACD260i_x_FWD-rt7916_x
+No kapp found for RXN-HACD40i_m_FWD-rt2835
+No kapp found for RXN-HACD40i_x_FWD-rt2994
+No kapp found for RXN-HACD40i_x_FWD-rt7916_x
+No kapp found for RXN-HACD40y_c_FWD-rt6812
+No kapp found for RXN-HACD40y_c_FWD-rt6812 or enzyme rt6812
+No kapp found for RXN-HACD40y_c_REV-rt6812
+No kapp found for RXN-HACD60i_m_FWD-rt2835
+No kapp found for RXN-HACD60i_x_FWD-rt2994
+No kapp found for RXN-HACD60i_x_FWD-rt7916_x
+No kapp found for RXN-HACD80i_m_FWD-rt2835
+No kapp found for RXN-HACD80i_x_FWD-rt2994
+No kapp found for RXN-HACD80i_x_FWD-rt7916_x
+No kapp found for RXN-HACDm40_c_FWD-rt7916_c
+No kapp found for RXN-HACDm40_c_FWD-rt7916_c or enzyme rt7916_c
+No kapp found for RXN-HACDm40_c_REV-rt7916_c
+No kapp found for RXN-HACNH_m_FWD-rt3256
+No kapp found for RXN-HACNH_m_REV-rt3256
+No kapp found for RXN-HACNH_m_FWD-rt6232
+No kapp found for RXN-HACNH_m_REV-rt6232
+No kapp found for RXN-HACNH_m_REV-rt7648
+No kapp found for RXN-HCITR_m_REV-rt7648
+No kapp found for RXN-HCITS_n_FWD-rt6488_n
+No kapp found for RXN-HCITS_n_FWD-rt6488_n or enzyme rt6488_n
+No kapp found for RXN-HCO3E_c_REV-rt4213
+No kapp found for RXN-HCYSMT_c_FWD-rt7391
+No kapp found for RXN-HCYSMT_c_FWD-rt7391 or enzyme rt7391
+No kapp found for RXN-HDCAt_c_e_FWD-rt15442799
+No kapp found for RXN-HDCAt_c_e_REV-rt15442799
+No kapp found for RXN-HDCEAt_c_e_FWD-rt15442799
+No kapp found for RXN-HDCEAt_c_e_REV-rt15442799
+No kapp found for RXN-HEMEOS_m_FWD-rt2735 or enzyme rt2735
+No kapp found for RXN-HETZK_c_FWD-rt7845
+No kapp found for RXN-HETZK_c_FWD-rt7845 or enzyme rt7845
+No kapp found for RXN-HEX1_c_FWD-rt3614
+No kapp found for RXN-HEX4_c_FWD-rt3614
+No kapp found for RXN-HEX7_c_FWD-rt3614
+No kapp found for RXN-HEX7b_c_FWD-rt3614
+No kapp found for RXN-HEX7b_c_REV-rt3614
+No kapp found for RXN-HGENDO_c_FWD-rt7338
+No kapp found for RXN-HGENDO_c_FWD-rt7338 or enzyme rt7338
+No kapp found for RXN-HIBH_m_FWD-rt6850
+No kapp found for RXN-HIBH_m_FWD-rt6850 or enzyme rt6850
+No kapp found for RXN-HIBH_m_REV-rt6850
+No kapp found for RXN-HIBTD_c_FWD-rt5326
+No kapp found for RXN-HIBTD_c_FWD-rt5326 or enzyme rt5326
+No kapp found for RXN-HIBTD_c_REV-rt5326
+No kapp found for RXN-HIStpa_v_FWD-rt0111
+No kapp found for RXN-HIStpa_v_FWD-rt1949
+No kapp found for RXN-HISTRS_m_FWD-rt0207_m
+No kapp found for RXN-HISTRS_m_FWD-rt0207_m or enzyme rt0207_m
+No kapp found for RXN-HKYNH_c_FWD-rt0357
+No kapp found for RXN-HKYNH_c_FWD-rt0357 or enzyme rt0357
+No kapp found for RXN-HLYSMT_m_FWD-rt1397
+No kapp found for RXN-HLYSMT_m_FWD-rt1397 or enzyme rt1397
+No kapp found for RXN-HLYSMT_m_FWD-rt1965
+No kapp found for RXN-HLYSMT_m_FWD-rt2181
+No kapp found for RXN-HLYSMT_m_FWD-rt2220
+No kapp found for RXN-HLYSMT_m_FWD-rt4178
+No kapp found for RXN-HLYSMT_m_FWD-rt6162
+No kapp found for RXN-HLYSMT_m_FWD-rt6500
+No kapp found for RXN-HMGCOAS_m_FWD-rt3754_m
+No kapp found for RXN-HMGCOAS_m_FWD-rt3754_m or enzyme rt3754_m
+No kapp found for RXN-HMPK1_c_FWD-rt4410
+No kapp found for RXN-HMPK1_c_FWD-rt4410 or enzyme rt4410
+No kapp found for RXN-HPPK2_m_FWD-rt6009
+No kapp found for RXN-HPRORy_c_FWD-rt5064
+No kapp found for RXN-HQLOR_c_FWD-rt3938
+No kapp found for RXN-HQLOR_c_FWD-rt3938 or enzyme rt3938
+No kapp found for RXN-HSDx_c_FWD-rt8370
+No kapp found for RXN-HSDy_c_FWD-rt3712
+No kapp found for RXN-HSDy_c_FWD-rt8370
+No kapp found for RXN-HXAND_c_FWD-rt7594
+No kapp found for RXN-HXAND_c_FWD-rt7594 or enzyme rt7594
+No kapp found for RXN-HXAND_c_REV-rt7594
+No kapp found for RXN-ICDHyi_m_FWD-rt2761
+No kapp found for RXN-ICDHyi_m_FWD-rt2761 or enzyme rt2761
+No kapp found for RXN-ICL_1_c_FWD-rt5654_c
+No kapp found for RXN-ICL_1_c_FWD-rt5654_c or enzyme rt5654_c
+No kapp found for RXN-ILEt_c_v_FWD-rt6501
+No kapp found for RXN-ILEt_c_v_FWD-rt6501 or enzyme rt6501
+No kapp found for RXN-ILETA_c_FWD-rt5646
+No kapp found for RXN-ILETA_c_REV-rt5646
+No kapp found for RXN-ILETA_c_FWD-rt6485
+No kapp found for RXN-ILETA_c_REV-rt6485
+No kapp found for RXN-ILETA_m_FWD-rt6242_m
+No kapp found for RXN-ILEtpa_v_FWD-rt7819
+No kapp found for RXN-ILEtps_v_FWD-rt4375
+No kapp found for RXN-ILETRS_m_FWD-rt7188
+No kapp found for RXN-ILETRS_m_FWD-rt7188 or enzyme rt7188
+No kapp found for RXN-IMPC_c_REV-rt4053
+No kapp found for RXN-INDPYRD_c_FWD-rt7423
+No kapp found for RXN-INO3GALT_c_FWD-rt5713
+No kapp found for RXN-INO3GALT_c_FWD-rt5713 or enzyme rt5713
+No kapp found for RXN-INO3GALT_c_REV-rt5713
+No kapp found for RXN-INO3GALT_c_FWD-rt5966
+No kapp found for RXN-INO3GALT_c_REV-rt5966
+No kapp found for RXN-INOSHP3H_v_FWD-rt2517_v
+No kapp found for RXN-INOSHP3H_v_FWD-rt2517_v or enzyme rt2517_v
+No kapp found for RXN-INOSTtps_e_FWD-rt0734
+No kapp found for RXN-INOSTtps_e_FWD-rt4674
+No kapp found for RXN-IPDDI_c_REV-rt7835
+No kapp found for RXN-IPK2_n_FWD-rt4892
+No kapp found for RXN-IPK2_n_FWD-rt4892 or enzyme rt4892
+No kapp found for RXN-IPK3_n_FWD-rt4892
+No kapp found for RXN-IPK4_n_FWD-rt4892
+No kapp found for RXN-IPK5_n_FWD-rt4892
+No kapp found for RXN-IPPMIa_c_FWD-rt6546
+No kapp found for RXN-IPPMIb_c_FWD-rt6546
+No kapp found for RXN-IPPYP1_c_FWD-rt1395
+No kapp found for RXN-IPPYP2_c_FWD-rt1973
+No kapp found for RXN-IPPYP3_c_FWD-rt1973
+No kapp found for RXN-IPPYP4_c_FWD-rt1395
+No kapp found for RXN-IPT_g_FWD-rt4804
+No kapp found for RXN-IPT_g_FWD-rt4804 or enzyme rt4804
+No kapp found for RXN-ITCOAL_m_FWD-LSC12
+No kapp found for RXN-ITCOAL_m_REV-LSC12
+No kapp found for RXN-Kt_c_m_FWD-rt7131
+No kapp found for RXN-Kt_c_m_FWD-rt7131 or enzyme rt7131
+No kapp found for RXN-Kt_c_m_REV-rt7131
+No kapp found for RXN-Ktps_e_FWD-rt2101_e
+No kapp found for RXN-Ktps_e_FWD-rt2101_e or enzyme rt2101_e
+No kapp found for RXN-KYN_c_FWD-rt0357
+No kapp found for RXN-KYN3OX_c_FWD-rt0899
+No kapp found for RXN-KYN3OX_c_FWD-rt0899 or enzyme rt0899
+No kapp found for RXN-KYNAT2_c_FWD-rt0172
+No kapp found for RXN-KYNAT2_c_REV-rt0172
+No kapp found for RXN-KYNAT2_c_FWD-rt4039
+No kapp found for RXN-KYNAT2_c_REV-rt4039
+No kapp found for RXN-LACDtps_c_FWD-rt1816_c
+No kapp found for RXN-LACDtps_c_FWD-rt1816_c or enzyme rt1816_c
+No kapp found for RXN-LACDtps_c_REV-rt1816_c
+No kapp found for RXN-LACLtps_c_FWD-rt1816_c
+No kapp found for RXN-LACt_c_m_FWD-rt1816_m
+No kapp found for RXN-LACt_c_m_FWD-rt1816_m or enzyme rt1816_m
+No kapp found for RXN-LACt_c_m_REV-rt1816_m
+No kapp found for RXN-LALDO3_c_FWD-rt3783
+No kapp found for RXN-LALDO3_c_FWD-rt3783 or enzyme rt3783
+No kapp found for RXN-LANOSTt_c_e_FWD-rt6543
+No kapp found for RXN-LANOSTt_c_e_REV-rt6543
+No kapp found for RXN-LCADi_c_FWD-rt3783
+No kapp found for RXN-LCYSTAT_c_FWD-rt1784_c
+No kapp found for RXN-LCYSTAT_c_REV-rt1784_c
+No kapp found for RXN-LDH_L_x_FWD-rt5258_x
+No kapp found for RXN-LDH_L_x_FWD-rt5258_x or enzyme rt5258_x
+No kapp found for RXN-LEUt_c_v_FWD-rt6501
+No kapp found for RXN-LEUTA_c_FWD-rt5646
+No kapp found for RXN-LEUTA_c_FWD-rt6485
+No kapp found for RXN-LEUTA_c_REV-rt6485
+No kapp found for RXN-LEUTA_m_FWD-rt6242_m
+No kapp found for RXN-LEUTA_m_REV-rt6242_m
+No kapp found for RXN-LEUtpa_v_FWD-rt7819
+No kapp found for RXN-LEUtps_v_FWD-rt4375
+No kapp found for RXN-LGTHL_c_FWD-rt4897
+No kapp found for RXN-LGTHL_c_FWD-rt4897 or enzyme rt4897
+No kapp found for RXN-LGTHL_c_FWD-rt8152
+No kapp found for RXN-LLFC2O_c_FWD-rt0745
+No kapp found for RXN-LLFC2O_c_FWD-rt0745 or enzyme rt0745
+No kapp found for RXN-LLFC2O_c_FWD-rt8239
+No kapp found for RXN-LPAP_vm_FWD-rt4719
+No kapp found for RXN-LPCAT_mm_FWD-rt8106
+No kapp found for RXN-LPIAT_rm_FWD-rt1153
+No kapp found for RXN-LPIAT_rm_FWD-rt1153 or enzyme rt1153
+No kapp found for RXN-LSERDHi_c_FWD-rt1844
+No kapp found for RXN-LTA4H_c_FWD-rt2643_c
+No kapp found for RXN-LTA4H_c_FWD-rt2643_c or enzyme rt2643_c
+No kapp found for RXN-LTA4H_c_REV-rt2643_c
+No kapp found for RXN-LTA4H_n_FWD-rt2643_n
+No kapp found for RXN-LTA4H_n_FWD-rt2643_n or enzyme rt2643_n
+No kapp found for RXN-LTA4H_n_REV-rt2643_n
+No kapp found for RXN-LTA4H2_c_FWD-rt2643_c
+No kapp found for RXN-LTA4H2_c_REV-rt2643_c
+No kapp found for RXN-LTA4H2_n_FWD-rt2643_n
+No kapp found for RXN-LTA4H2_n_REV-rt2643_n
+No kapp found for RXN-LTA4H3_c_FWD-rt2643_c
+No kapp found for RXN-LTA4H3_c_REV-rt2643_c
+No kapp found for RXN-LTA4H3_n_FWD-rt2643_n
+No kapp found for RXN-LTA4H3_n_REV-rt2643_n
+No kapp found for RXN-LYSN6MOX_c_FWD-rt2880
+No kapp found for RXN-LYSN6MOX_c_FWD-rt2880 or enzyme rt2880
+No kapp found for RXN-LYStpa_v_FWD-rt0111
+No kapp found for RXN-LYStpa_v_FWD-rt1949
+No kapp found for RXN-LYStps_e_FWD-rt5861
+No kapp found for RXN-LYStps_e_REV-rt5861
+No kapp found for RXN-M1PS_c_FWD-rt1768
+No kapp found for RXN-M1PS_c_FWD-rt1768 or enzyme rt1768
+No kapp found for RXN-MACACI_c_FWD-rt0063
+No kapp found for RXN-MACACI_c_FWD-rt0063 or enzyme rt0063
+No kapp found for RXN-MACACI_c_REV-rt0063
+No kapp found for RXN-MACACI_c_FWD-rt3852
+No kapp found for RXN-MACACI_c_REV-rt3852
+No kapp found for RXN-MALS_c_FWD-rt1089
+No kapp found for RXN-MALS_c_FWD-rt1089 or enzyme rt1089
+No kapp found for RXN-MALT_c_FWD-rt0767
+No kapp found for RXN-MALT_c_FWD-rt0767 or enzyme rt0767
+No kapp found for RXN-MALt2_m_FWD-rt5142
+No kapp found for RXN-MALt2_m_FWD-rt5142 or enzyme rt5142
+No kapp found for RXN-MALTtps_e_FWD-rt0769
+No kapp found for RXN-MALTtps_e_FWD-rt0769 or enzyme rt0769
+No kapp found for RXN-MAN6PI_c_FWD-rt0239
+No kapp found for RXN-MANNAN14H_c_FWD-rt0045
+No kapp found for RXN-MANNAN14H_c_FWD-rt0045 or enzyme rt0045
+No kapp found for RXN-MANNANH_c_FWD-rt2404
+No kapp found for RXN-MANNANH_c_FWD-rt2404 or enzyme rt2404
+No kapp found for RXN-MANNANH_c_REV-rt2404
+No kapp found for RXN-MANNANH_e_FWD-rt0564_e
+No kapp found for RXN-MANNANH_e_FWD-rt0564_e or enzyme rt0564_e
+No kapp found for RXN-MANNANH_e_REV-rt0564_e
+No kapp found for RXN-MANNANH_e_FWD-rt2416
+No kapp found for RXN-MANNANH_e_REV-rt2416
+No kapp found for RXN-MANNANH_e_FWD-rt2418
+No kapp found for RXN-MANNANH_e_REV-rt2418
+No kapp found for RXN-MANNANH_e_FWD-rt6980
+No kapp found for RXN-MANNANH_e_REV-rt6980
+No kapp found for RXN-MANNANH_e_FWD-rt7383
+No kapp found for RXN-MANNANH_e_REV-rt7383
+No kapp found for RXN-MANtps_e_FWD-rt1375
+No kapp found for RXN-MANtps_e_FWD-rt1480
+No kapp found for RXN-MANtps_e_FWD-rt2496
+No kapp found for RXN-MANtps_e_FWD-rt2707
+No kapp found for RXN-MANtps_e_FWD-rt2833
+No kapp found for RXN-MANtps_e_FWD-rt3556
+No kapp found for RXN-MANtps_e_FWD-rt7817
+No kapp found for RXN-MASCBRx_c_FWD-rt1779
+No kapp found for RXN-MASCBRx_c_FWD-rt1779 or enzyme rt1779
+No kapp found for RXN-MCCC_m_FWD-rt44997326
+No kapp found for RXN-MCCC_m_FWD-rt44997326 or enzyme rt44997326
+No kapp found for RXN-MCITL2_m_FWD-rt5654_m
+No kapp found for RXN-MCITL2_m_FWD-rt5654_m or enzyme rt5654_m
+No kapp found for RXN-MCITL2_m_FWD-rt5794
+No kapp found for RXN-MCITS_m_FWD-rt2960
+No kapp found for RXN-MCITS_m_FWD-rt2963
+No kapp found for RXN-MCOATA_m_FWD-ACP1MCT1
+No kapp found for RXN-MCOATA_m_FWD-ACP1MCT1 or enzyme ACP1MCT1
+No kapp found for RXN-MCOATA_m_REV-ACP1MCT1
+No kapp found for RXN-MDH_c_FWD-rt2246
+No kapp found for RXN-MDH_m_REV-rt2810
+No kapp found for RXN-MDLDH_x_FWD-rt5416
+No kapp found for RXN-MDLDH_x_FWD-rt5416 or enzyme rt5416
+No kapp found for RXN-MDLDH_x_REV-rt5416
+No kapp found for RXN-ME2_c_FWD-rt4393
+No kapp found for RXN-ME2_c_FWD-rt4393 or enzyme rt4393
+No kapp found for RXN-MERLACOR_c_FWD-rt5258_c
+No kapp found for RXN-MERLACOR_c_FWD-rt5258_c or enzyme rt5258_c
+No kapp found for RXN-MERLACOR_c_REV-rt5258_c
+No kapp found for RXN-METB1_c_FWD-rt3095
+No kapp found for RXN-METB1_c_FWD-rt3095 or enzyme rt3095
+No kapp found for RXN-METB1_c_FWD-rt8357
+No kapp found for RXN-METB1_c_FWD-rt8374
+No kapp found for RXN-METtps_e_FWD-rt3257_e
+No kapp found for RXN-METtps_e_FWD-rt3257_e or enzyme rt3257_e
+No kapp found for RXN-METtps_e_REV-rt3257_e
+No kapp found for RXN-METtps_e_FWD-rt5861
+No kapp found for RXN-METtps_e_REV-rt5861
+No kapp found for RXN-METTRS_m_FWD-rt7150
+No kapp found for RXN-METTRS_m_FWD-rt7150 or enzyme rt7150
+No kapp found for RXN-MEVK2_c_FWD-rt0390
+No kapp found for RXN-MEVK3_c_FWD-rt0390
+No kapp found for RXN-MEVK4_c_FWD-rt0390
+No kapp found for RXN-MGCH_m_FWD-rt7760
+No kapp found for RXN-MGCH_m_FWD-rt7760 or enzyme rt7760
+No kapp found for RXN-MGCH_m_REV-rt7760
+No kapp found for RXN-MHPGLUT_c_FWD-rt1457
+No kapp found for RXN-MI134PPH_c_FWD-rt6885
+No kapp found for RXN-MI134PPH_c_FWD-rt6885 or enzyme rt6885
+No kapp found for RXN-MI134PPH_c_REV-rt6885
+No kapp found for RXN-MI1PP_c_FWD-rt5340
+No kapp found for RXN-MI1PP_c_FWD-rt5340 or enzyme rt5340
+No kapp found for RXN-MI1PP_c_FWD-rt8001
+No kapp found for RXN-MIPCS_g_FWD-rt8085
+No kapp found for RXN-MIPCS_g_FWD-rt8085 or enzyme rt8085
+No kapp found for RXN-MPYRCNST_c_FWD-rt7838
+No kapp found for RXN-MPYRCNST_c_FWD-rt7838 or enzyme rt7838
+No kapp found for RXN-MPYRCNST_c_REV-rt7838
+No kapp found for RXN-MTHFC_m_FWD-rt6998
+No kapp found for RXN-MTHFC_m_REV-rt6998
+No kapp found for RXN-MTHFD_c_REV-rt6998
+No kapp found for RXN-MTHFD_m_FWD-rt6998
+No kapp found for RXN-MTHFD_m_REV-rt6998
+No kapp found for RXN-MTHFD2i_c_FWD-rt4257
+No kapp found for RXN-MTHFD2i_c_FWD-rt4257 or enzyme rt4257
+No kapp found for RXN-MTMOHT_m_FWD-rt0075
+No kapp found for RXN-MTMOHT_m_FWD-rt0075 or enzyme rt0075
+No kapp found for RXN-MTRI_c_REV-rt5017
+No kapp found for RXN-MUCOCI_c_FWD-rt5684
+No kapp found for RXN-MUCOCI_c_FWD-rt5684 or enzyme rt5684
+No kapp found for RXN-MUCOCI_c_REV-rt5684
+No kapp found for RXN-MUCOCI_e_FWD-rt4254
+No kapp found for RXN-MUCOCI_e_FWD-rt4254 or enzyme rt4254
+No kapp found for RXN-MUCOCI_e_REV-rt4254
+No kapp found for RXN-NACt_c_e_REV-rt3853
+No kapp found for RXN-NADDP_x_FWD-rt4066
+No kapp found for RXN-NADDP_x_FWD-rt4066 or enzyme rt4066
+No kapp found for RXN-NADHcplxI_c_m_FWD-NADHCPLX1
+No kapp found for RXN-NADHcplxI_c_m_FWD-NADHCPLX2
+No kapp found for RXN-NADHcplxI_c_m_FWD-NADHCPLX3
+No kapp found for RXN-NADHcplxI_c_m_FWD-NADHCPLX4
+No kapp found for RXN-NADHcplxI_c_m_FWD-NADHCPLX5
+No kapp found for RXN-NADHcplxI_c_m_FWD-NADHCPLX6
+No kapp found for RXN-NADHcplxI_c_m_FWD-NADHCPLX7
+No kapp found for RXN-NADHcplxI_c_m_FWD-NADHCPLX8
+No kapp found for RXN-NADHK1_m_FWD-rt1814_m
+No kapp found for RXN-NADHK1_m_FWD-rt1814_m or enzyme rt1814_m
+No kapp found for RXN-NADHq9_c_FWD-rt0604
+No kapp found for RXN-NADHq9_c_FWD-rt0604 or enzyme rt0604
+No kapp found for RXN-NADHq9_c_FWD-rt1441
+No kapp found for RXN-NADK_c_FWD-rt1814_c
+No kapp found for RXN-NADK_m_FWD-rt1814_m
+No kapp found for RXN-NADN_n_FWD-rt3107
+No kapp found for RXN-NADN_n_FWD-rt3107 or enzyme rt3107
+No kapp found for RXN-NADN_n_FWD-rt4419
+No kapp found for RXN-NADN_n_FWD-rt7872
+No kapp found for RXN-NADS2_n_FWD-rt0915_n
+No kapp found for RXN-NADS2_n_FWD-rt0915_n or enzyme rt0915_n
+No kapp found for RXN-NADS2_n_REV-rt0915_n
+No kapp found for RXN-NADt_c_m_FWD-rt2593
+No kapp found for RXN-NADt_c_m_FWD-rt2593 or enzyme rt2593
+No kapp found for RXN-NADt_c_m_FWD-rt5934
+No kapp found for RXN-NADt1_m_FWD-rt2593
+No kapp found for RXN-NADt2_m_FWD-rt2593
+No kapp found for RXN-NADt3_m_FWD-rt2593
+No kapp found for RXN-NAMNPP_m_FWD-rt1924_m
+No kapp found for RXN-NAMNPP_m_FWD-rt1924_m or enzyme rt1924_m
+No kapp found for RXN-NAtpa_c_FWD-rt2101_c
+No kapp found for RXN-NAtpa_c_FWD-rt2101_c or enzyme rt2101_c
+No kapp found for RXN-NAtpa_c_REV-rt2101_c
+No kapp found for RXN-NAtpa_c_FWD-rt2444
+No kapp found for RXN-NAtpa_c_REV-rt2444
+No kapp found for RXN-NDP1_c_FWD-rt0602_c
+No kapp found for RXN-NDP10_c_FWD-rt0602_c
+No kapp found for RXN-NDP3_c_FWD-rt0602_c
+No kapp found for RXN-NDP3_g_FWD-rt1437
+No kapp found for RXN-NDP3_g_FWD-rt1437 or enzyme rt1437
+No kapp found for RXN-NDP4_c_FWD-rt0602_c
+No kapp found for RXN-NDP5_c_FWD-rt0602_c
+No kapp found for RXN-NDP7_c_FWD-rt0602_c
+No kapp found for RXN-NDP7_g_FWD-rt0602_g
+No kapp found for RXN-NDP7_g_FWD-rt0602_g or enzyme rt0602_g
+No kapp found for RXN-NDP7_g_FWD-rt1437
+No kapp found for RXN-NDPK1_c_FWD-rt0575
+No kapp found for RXN-NDPK10_c_FWD-rt0575
+No kapp found for RXN-NDPK10_c_FWD-rt7311
+No kapp found for RXN-NDPK2_c_FWD-rt0575
+No kapp found for RXN-NDPK3_c_FWD-rt0575
+No kapp found for RXN-NDPK4_c_FWD-rt0575
+No kapp found for RXN-NDPK5_c_FWD-rt0575
+No kapp found for RXN-NDPK6_c_FWD-rt0575
+No kapp found for RXN-NDPK6_c_FWD-rt7311
+No kapp found for RXN-NDPK7_c_FWD-rt0575
+No kapp found for RXN-NDPK8_c_FWD-rt0575
+No kapp found for RXN-NDPK9_c_FWD-rt0575
+No kapp found for RXN-NDPK9_c_FWD-rt7311
+No kapp found for RXN-NFORTYR2t_c_e_FWD-rt2566
+No kapp found for RXN-NFORTYR2t_c_e_FWD-rt2566 or enzyme rt2566
+No kapp found for RXN-NFTYROX_c_FWD-rt0820
+No kapp found for RXN-NFTYROX_c_FWD-rt0820 or enzyme rt0820
+No kapp found for RXN-NGLYCANS10_r_FWD-rt2904
+No kapp found for RXN-NGLYCANS10_r_FWD-rt2904 or enzyme rt2904
+No kapp found for RXN-NGLYCANS10_r_REV-rt2904
+No kapp found for RXN-NGLYCANS11_r_FWD-rt0671
+No kapp found for RXN-NGLYCANS11_r_FWD-rt0671 or enzyme rt0671
+No kapp found for RXN-NGLYCANS11_r_REV-rt0671
+No kapp found for RXN-NGLYCANS12_r_FWD-rt2573
+No kapp found for RXN-NGLYCANS12_r_FWD-rt2573 or enzyme rt2573
+No kapp found for RXN-NGLYCANS12_r_REV-rt2573
+No kapp found for RXN-NGLYCANS13_r_FWD-rt6611
+No kapp found for RXN-NGLYCANS13_r_FWD-rt6611 or enzyme rt6611
+No kapp found for RXN-NGLYCANS13_r_REV-rt6611
+No kapp found for RXN-NGLYCANS14_r_FWD-rt2972
+No kapp found for RXN-NGLYCANS14_r_FWD-rt2972 or enzyme rt2972
+No kapp found for RXN-NGLYCANS14_r_REV-rt2972
+No kapp found for RXN-NGLYCANS15_r_FWD-rt3790
+No kapp found for RXN-NGLYCANS15_r_FWD-rt3790 or enzyme rt3790
+No kapp found for RXN-NGLYCANS15_r_REV-rt3790
+No kapp found for RXN-NGLYCANS16_r_FWD-rt1613
+No kapp found for RXN-NGLYCANS16_r_FWD-rt1613 or enzyme rt1613
+No kapp found for RXN-NGLYCANS16_r_REV-rt1613
+No kapp found for RXN-NGLYCANS17_r_FWD-rt1802
+No kapp found for RXN-NGLYCANS17_r_FWD-rt1802 or enzyme rt1802
+No kapp found for RXN-NGLYCANS17_r_REV-rt1802
+No kapp found for RXN-NGLYCANS18_r_FWD-rt1802
+No kapp found for RXN-NGLYCANS18_r_REV-rt1802
+No kapp found for RXN-NGLYCANS19_g_FWD-rt0564_g
+No kapp found for RXN-NGLYCANS19_g_FWD-rt0564_g or enzyme rt0564_g
+No kapp found for RXN-NGLYCANS19_g_REV-rt0564_g
+No kapp found for RXN-NGLYCANS19_g_FWD-rt8131
+No kapp found for RXN-NGLYCANS19_g_REV-rt8131
+No kapp found for RXN-NGLYCANS2_c_REV-ALG1314
+No kapp found for RXN-NGLYCANS3_c_REV-rt6298
+No kapp found for RXN-NGLYCANS4_c_REV-rt1727
+No kapp found for RXN-NGLYCANS5_c_REV-rt1727
+No kapp found for RXN-NGLYCANS6_c_REV-rt1577
+No kapp found for RXN-NGLYCANS7_c_REV-rt1577
+No kapp found for RXN-NGLYCANS8_r_FWD-rt5214
+No kapp found for RXN-NGLYCANS8_r_FWD-rt5214 or enzyme rt5214
+No kapp found for RXN-NGLYCANS8_r_REV-rt5214
+No kapp found for RXN-NGLYCANS9_r_FWD-rt0671
+No kapp found for RXN-NGLYCANS9_r_REV-rt0671
+No kapp found for RXN-NH4t_c_e_REV-rt4558
+No kapp found for RXN-NITROPP_c_FWD-rt3422
+No kapp found for RXN-NITROPP_c_FWD-rt3422 or enzyme rt3422
+No kapp found for RXN-NITROPP_c_FWD-rt4676
+No kapp found for RXN-NITRx_c_FWD-rt4334
+No kapp found for RXN-NITRx_c_FWD-rt4334 or enzyme rt4334
+No kapp found for RXN-NITRx_c_REV-rt4334
+No kapp found for RXN-NITRx_c_FWD-rt6640
+No kapp found for RXN-NITRx_c_REV-rt6640
+No kapp found for RXN-NITRy_c_FWD-rt6640
+No kapp found for RXN-NNAM_c_FWD-rt3293
+No kapp found for RXN-NNAM_c_FWD-rt3293 or enzyme rt3293
+No kapp found for RXN-NNDPR_c_FWD-rt1963_c
+No kapp found for RXN-NNDPR_c_FWD-rt1963_c or enzyme rt1963_c
+No kapp found for RXN-NNDPR_m_FWD-rt1963_m
+No kapp found for RXN-NNDPR_m_FWD-rt1963_m or enzyme rt1963_m
+No kapp found for RXN-NNMT_c_FWD-rt4917
+No kapp found for RXN-NNMT_c_FWD-rt4917 or enzyme rt4917
+No kapp found for RXN-NNMT_c_FWD-rt5672
+No kapp found for RXN-NNMT_c_FWD-rt8212
+No kapp found for RXN-NO3t_c_e_FWD-rt4068
+No kapp found for RXN-NO3t_c_e_FWD-rt4068 or enzyme rt4068
+No kapp found for RXN-NO3t_c_e_REV-rt4068
+No kapp found for RXN-NOX_c_FWD-rt4914
+No kapp found for RXN-NOX_c_FWD-rt4914 or enzyme rt4914
+No kapp found for RXN-NTD2pp_c_FWD-rt1627
+No kapp found for RXN-NTD2pp_c_FWD-rt1627 or enzyme rt1627
+No kapp found for RXN-NTD4pp_c_FWD-rt1627
+No kapp found for RXN-NTP10_c_FWD-rt0602_c
+No kapp found for RXN-NTP3_c_FWD-rt0602_c
+No kapp found for RXN-NTP3_c_FWD-rt5972
+No kapp found for RXN-NTP3_c_FWD-rt7922
+No kapp found for RXN-NTP4_c_FWD-rt0602_c
+No kapp found for RXN-NTP5_c_FWD-rt0602_c
+No kapp found for RXN-NTP7_c_FWD-rt0602_c
+No kapp found for RXN-OAADC_c_FWD-rt7226
+No kapp found for RXN-OAADC_c_FWD-rt7226 or enzyme rt7226
+No kapp found for RXN-OAAtps_m_FWD-rt0643
+No kapp found for RXN-OAAtps_m_FWD-rt0643 or enzyme rt0643
+No kapp found for RXN-OAR1_c_FWD-rt2815_c
+No kapp found for RXN-OAR1_c_FWD-rt2815_c or enzyme rt2815_c
+No kapp found for RXN-OAR1_c_REV-rt2815_c
+No kapp found for RXN-OAR2_c_FWD-rt2815_c
+No kapp found for RXN-OAR2_c_REV-rt2815_c
+No kapp found for RXN-OAR3_m_FWD-rt0607
+No kapp found for RXN-OAR3_m_FWD-rt0607 or enzyme rt0607
+No kapp found for RXN-OAR3_m_REV-rt0607
+No kapp found for RXN-OCDCAt_c_e_FWD-rt15442799
+No kapp found for RXN-OCDCAt_c_e_REV-rt15442799
+No kapp found for RXN-OCDCEAt_c_e_FWD-rt15442799
+No kapp found for RXN-OCDCEAt_c_e_REV-rt15442799
+No kapp found for RXN-OCOAT1_m_FWD-rt4722
+No kapp found for RXN-OCTAt_c_e_FWD-rt15442799
+No kapp found for RXN-OCTAt_c_e_REV-rt15442799
+No kapp found for RXN-OCTAt_c_x_FWD-rt5693
+No kapp found for RXN-OCTAt_c_x_REV-rt5693
+No kapp found for RXN-OGLYCANS_B3GAT1_r_FWD-rt2574
+No kapp found for RXN-OGLYCANS_B3GAT1_r_FWD-rt2574 or enzyme rt2574
+No kapp found for RXN-OGLYCANS_B3GAT1_r_REV-rt2574
+No kapp found for RXN-OGLYCANS1_r_FWD-rt3753
+No kapp found for RXN-OGLYCANS2_g_FWD-rt2093
+No kapp found for RXN-OGLYCANS2_g_FWD-rt7201
+No kapp found for RXN-OGLYCANS2_g_FWD-rt7295
+No kapp found for RXN-OGLYCANS3_g_FWD-rt2093
+No kapp found for RXN-OGLYCANS3_g_FWD-rt7201
+No kapp found for RXN-OGLYCANS3_g_FWD-rt7295
+No kapp found for RXN-OGLYCANS4_g_FWD-rt3226
+No kapp found for RXN-OGLYCANS5_g_FWD-rt3226
+No kapp found for RXN-OMCDC_m_FWD-rt6242_m
+No kapp found for RXN-OPAH_c_FWD-rt1168
+No kapp found for RXN-OPAH_c_FWD-rt1168 or enzyme rt1168
+No kapp found for RXN-OPAH_c_REV-rt1168
+No kapp found for RXN-OPAH_c_FWD-rt1169
+No kapp found for RXN-OPAH_c_REV-rt1169
+No kapp found for RXN-OPAH_c_FWD-rt6960
+No kapp found for RXN-OPAH_c_REV-rt6960
+No kapp found for RXN-OPAH_c_FWD-rt7643
+No kapp found for RXN-OPAH_c_REV-rt7643
+No kapp found for RXN-ORNCD_m_FWD-rt6574
+No kapp found for RXN-ORNCD_m_FWD-rt6574 or enzyme rt6574
+No kapp found for RXN-ORNDC_c_FWD-rt4267
+No kapp found for RXN-ORNDC_c_FWD-rt4267 or enzyme rt4267
+No kapp found for RXN-ORNN5MOX_c_FWD-rt2880
+No kapp found for RXN-ORNTA_c_FWD-rt6698
+No kapp found for RXN-ORNTA_c_FWD-rt6698 or enzyme rt6698
+No kapp found for RXN-ORNtps_e_FWD-rt1689
+No kapp found for RXN-ORNtps_e_REV-rt1689
+No kapp found for RXN-ORNtps_e_FWD-rt5861
+No kapp found for RXN-ORNtps_e_REV-rt5861
+No kapp found for RXN-ORPT_c_FWD-rt2348
+No kapp found for RXN-P5CD2_m_FWD-rt0201
+No kapp found for RXN-PACCOAE_c_FWD-rt6217
+No kapp found for RXN-PACCOAE_c_FWD-rt6217 or enzyme rt6217
+No kapp found for RXN-PACCOAE_x_FWD-rt5558
+No kapp found for RXN-PACCOAE_x_FWD-rt5558 or enzyme rt5558
+No kapp found for RXN-PACCOAL_x_FWD-rt6434_x
+No kapp found for RXN-PADAH_c_FWD-rt1908
+No kapp found for RXN-PADAH_c_REV-rt1908
+No kapp found for RXN-PAFH_c_FWD-rt3915
+No kapp found for RXN-PAFH_c_FWD-rt3915 or enzyme rt3915
+No kapp found for RXN-PAIL3K_vm_FWD-VPS15TOR1
+No kapp found for RXN-PAIL3K_vm_FWD-VPS15TOR1 or enzyme VPS15TOR1
+No kapp found for RXN-PAIL3K_vm_FWD-VPS15VPS34
+No kapp found for RXN-PAIL4K_en_FWD-rt6718_en
+No kapp found for RXN-PAIL4K_en_FWD-rt6718_en or enzyme rt6718_en
+No kapp found for RXN-PAIL4K_en_FWD-rt6791
+No kapp found for RXN-PAIL4K_gm_FWD-PIK1FRQ1
+No kapp found for RXN-PAIL4K_gm_FWD-PIK1FRQ1 or enzyme PIK1FRQ1
+No kapp found for RXN-PAIL4K_n_FWD-rt1414_n
+No kapp found for RXN-PAIL4K_n_FWD-rt1414_n or enzyme rt1414_n
+No kapp found for RXN-PAIL4K_vm_FWD-rt6718_vm
+No kapp found for RXN-PAIL4K_vm_FWD-rt6718_vm or enzyme rt6718_vm
+No kapp found for RXN-PAP_rm_FWD-rt4117
+No kapp found for RXN-PAP_rm_FWD-rt4117 or enzyme rt4117
+No kapp found for RXN-PAP_vm_FWD-rt4719
+No kapp found for RXN-PAPSR_c_FWD-MET16TRX2
+No kapp found for RXN-PBAL_c_FWD-rt2107
+No kapp found for RXN-PBAL_c_FWD-rt2107 or enzyme rt2107
+No kapp found for RXN-PC_c_FWD-rt8262
+No kapp found for RXN-PCLAD_c_FWD-rt4548
+No kapp found for RXN-PCLAD_c_FWD-rt4548 or enzyme rt4548
+No kapp found for RXN-PCLAD_c_REV-rt4548
+No kapp found for RXN-PCOATA160_c_REV-rt0302
+No kapp found for RXN-PCOATA180_c_REV-rt0302
+No kapp found for RXN-PDAGATpc_rm_FWD-rt8109
+No kapp found for RXN-PDAGATpc_rm_FWD-rt8109 or enzyme rt8109
+No kapp found for RXN-PDAGATpc_rm_REV-rt8109
+No kapp found for RXN-PDAGATpe_rm_FWD-rt8109
+No kapp found for RXN-PDAGATpe_rm_REV-rt8109
+No kapp found for RXN-PDE1_c_FWD-rt3419
+No kapp found for RXN-PDE1_c_FWD-rt3419 or enzyme rt3419
+No kapp found for RXN-PDE1_c_FWD-rt5322
+No kapp found for RXN-PDE2_c_FWD-rt3419
+No kapp found for RXN-PDE2_c_FWD-rt5322
+No kapp found for RXN-PDE3_c_FWD-rt3419
+No kapp found for RXN-PDE4_c_FWD-rt3419
+No kapp found for RXN-PDE5_c_FWD-rt3419
+No kapp found for RXN-PDX5POi_c_FWD-rt2312
+No kapp found for RXN-PDX5POi_c_FWD-rt2312 or enzyme rt2312
+No kapp found for RXN-PEtabc_m_FWD-rt1060
+No kapp found for RXN-PEtabc_m_REV-rt1060
+No kapp found for RXN-PEtabc_m_FWD-rt4312
+No kapp found for RXN-PEtabc_m_REV-rt4312
+No kapp found for RXN-PFK_c_FWD-rt0491
+No kapp found for RXN-PFK_c_FWD-rt0495
+No kapp found for RXN-PGAMT_c_FWD-rt4597
+No kapp found for RXN-PGAMT_c_REV-rt4597
+No kapp found for RXN-PGCD_c_FWD-rt1147
+No kapp found for RXN-PGCPH_c_FWD-rt4502
+No kapp found for RXN-PGCPH_c_FWD-rt4502 or enzyme rt4502
+No kapp found for RXN-PGI_c_REV-rt1221
+No kapp found for RXN-PGK_c_REV-rt7353
+No kapp found for RXN-PGL_c_FWD-rt6131
+No kapp found for RXN-PGL_c_FWD-rt6131 or enzyme rt6131
+No kapp found for RXN-PGLYCP_c_FWD-rt3422
+No kapp found for RXN-PGLYCP_c_FWD-rt4676
+No kapp found for RXN-PGM_c_REV-rt1542
+No kapp found for RXN-PGM_c_FWD-rt7057
+No kapp found for RXN-PGM_c_REV-rt7057
+No kapp found for RXN-PGMT_c_REV-rt1591
+No kapp found for RXN-PGPP_mm_FWD-rt2532
+No kapp found for RXN-PGPP_mm_FWD-rt2532 or enzyme rt2532
+No kapp found for RXN-PGPS_mm_FWD-rt4228
+No kapp found for RXN-PGPS_mm_FWD-rt4228 or enzyme rt4228
+No kapp found for RXN-PGS_x_FWD-rt5040
+No kapp found for RXN-PGS_x_FWD-rt5040 or enzyme rt5040
+No kapp found for RXN-PGt_c_m_FWD-rt1060
+No kapp found for RXN-PGt_c_m_REV-rt1060
+No kapp found for RXN-PGt_c_m_FWD-rt4312
+No kapp found for RXN-PGt_c_m_REV-rt4312
+No kapp found for RXN-PHACRDC1_c_FWD-rt4099
+No kapp found for RXN-PHACRDC1_c_FWD-rt4099 or enzyme rt4099
+No kapp found for RXN-PHACRDC1_c_REV-rt4099
+No kapp found for RXN-PHACRDC2_c_FWD-rt4099
+No kapp found for RXN-PHACRDC2_c_REV-rt4099
+No kapp found for RXN-PHACRDC3_c_FWD-rt4099
+No kapp found for RXN-PHACRDC3_c_REV-rt4099
+No kapp found for RXN-PHACRDC4_c_FWD-rt4099
+No kapp found for RXN-PHACRDC4_c_REV-rt4099
+No kapp found for RXN-PHCD_m_FWD-rt0201
+No kapp found for RXN-PHEN2MOXy_c_FWD-rt4453
+No kapp found for RXN-PHEN2MOXy_c_FWD-rt4453 or enzyme rt4453
+No kapp found for RXN-PHEN2MOXy_c_FWD-rt4454
+No kapp found for RXN-PHEN2MOXy_c_FWD-rt4555
+No kapp found for RXN-PHETA1_c_FWD-rt1784_c
+No kapp found for RXN-PHETA1_c_FWD-rt7471
+No kapp found for RXN-PHETA1_c_FWD-rt7697
+No kapp found for RXN-PHETA1_c_REV-rt7697
+No kapp found for RXN-PHETA1_m_FWD-rt5562_m
+No kapp found for RXN-PHEtps_e_FWD-rt5861
+No kapp found for RXN-PHEtps_e_REV-rt5861
+No kapp found for RXN-PHETRS_m_FWD-rt5030
+No kapp found for RXN-PHETRS_m_FWD-rt5030 or enzyme rt5030
+No kapp found for RXN-PHYTOED1_c_FWD-rt0217
+No kapp found for RXN-PHYTOED1_c_FWD-rt0217 or enzyme rt0217
+No kapp found for RXN-PHYTOED2_c_FWD-rt0217
+No kapp found for RXN-PHYTOED3_c_FWD-rt0217
+No kapp found for RXN-PHYTOED4_c_FWD-rt0217
+No kapp found for RXN-PHYTOED5_c_FWD-rt0217
+No kapp found for RXN-PHYTOES_c_FWD-rt0221
+No kapp found for RXN-PHYTOES_c_REV-rt0221
+No kapp found for RXN-PHYTOES_c_FWD-rt2239
+No kapp found for RXN-PHYTOES_c_REV-rt2239
+No kapp found for RXN-PI35P5P_c_FWD-rt7001_c
+No kapp found for RXN-PI35P5P_c_FWD-rt7001_c or enzyme rt7001_c
+No kapp found for RXN-PI35P5P_c_FWD-rt7049_c
+No kapp found for RXN-PI35P5P_en_FWD-rt7001_en
+No kapp found for RXN-PI35P5P_en_FWD-rt7001_en or enzyme rt7001_en
+No kapp found for RXN-PI35P5P_en_FWD-rt7049_en
+No kapp found for RXN-PI35P5P_vm_FWD-VAC14FIG4
+No kapp found for RXN-PI35P5P_vm_FWD-VAC14FIG4 or enzyme VAC14FIG4
+No kapp found for RXN-PI3P5K_vm_FWD-rt5771
+No kapp found for RXN-PI3P5K_vm_FWD-rt5771 or enzyme rt5771
+No kapp found for RXN-PI3PP_c_FWD-rt6512
+No kapp found for RXN-PI3PP_c_FWD-rt6512 or enzyme rt6512
+No kapp found for RXN-PI3PP_c_FWD-rt7001_c
+No kapp found for RXN-PI3PP_c_FWD-rt7049_c
+No kapp found for RXN-PI3PP_en_FWD-rt7001_en
+No kapp found for RXN-PI3PP_en_FWD-rt7049_en
+No kapp found for RXN-PI3PP_gm_FWD-rt3013_gm
+No kapp found for RXN-PI3PP_gm_FWD-rt3013_gm or enzyme rt3013_gm
+No kapp found for RXN-PI3PP_rm_FWD-rt3013_rm
+No kapp found for RXN-PI3PP_rm_FWD-rt3013_rm or enzyme rt3013_rm
+No kapp found for RXN-PI45P5P_c_FWD-rt6972_c
+No kapp found for RXN-PI45P5P_c_FWD-rt6972_c or enzyme rt6972_c
+No kapp found for RXN-PI45P5P_c_FWD-rt7001_c
+No kapp found for RXN-PI45P5P_c_FWD-rt7049_c
+No kapp found for RXN-PI45P5P_c_FWD-rt7177_c
+No kapp found for RXN-PI45P5P_en_FWD-rt6972_en
+No kapp found for RXN-PI45P5P_en_FWD-rt6972_en or enzyme rt6972_en
+No kapp found for RXN-PI45P5P_en_FWD-rt7001_en
+No kapp found for RXN-PI45P5P_en_FWD-rt7049_en
+No kapp found for RXN-PI45P5P_en_FWD-rt7177_en
+No kapp found for RXN-PI4P5K_en_FWD-rt3510_en
+No kapp found for RXN-PI4P5K_en_FWD-rt3510_en or enzyme rt3510_en
+No kapp found for RXN-PI4P5K_n_FWD-rt3510_n
+No kapp found for RXN-PI4P5K_n_FWD-rt3510_n or enzyme rt3510_n
+No kapp found for RXN-PI4PP_c_FWD-rt7001_c
+No kapp found for RXN-PI4PP_c_FWD-rt7049_c
+No kapp found for RXN-PI4PP_en_FWD-rt7001_en
+No kapp found for RXN-PI4PP_en_FWD-rt7049_en
+No kapp found for RXN-PI4PP_gm_FWD-rt3013_gm
+No kapp found for RXN-PI4PP_rm_FWD-rt3013_rm
+No kapp found for RXN-PIt_c_v_FWD-rt3050_v
+No kapp found for RXN-PIt_c_v_FWD-rt3050_v or enzyme rt3050_v
+No kapp found for RXN-PIt_c_v_REV-rt3050_v
+No kapp found for RXN-PIt_c_v_FWD-rt3166_v
+No kapp found for RXN-PIt_c_v_REV-rt3166_v
+No kapp found for RXN-PIt_c_vm_FWD-rt3050_vm
+No kapp found for RXN-PIt_c_vm_FWD-rt3050_vm or enzyme rt3050_vm
+No kapp found for RXN-PIt_c_vm_REV-rt3050_vm
+No kapp found for RXN-PIt_c_vm_FWD-rt3166_vm
+No kapp found for RXN-PIt_c_vm_REV-rt3166_vm
+No kapp found for RXN-PItps_e_REV-rt1948
+No kapp found for RXN-PItps_e_FWD-rt3318
+No kapp found for RXN-PItps_e_REV-rt3318
+No kapp found for RXN-PItps_m_FWD-rt7506
+No kapp found for RXN-PKETF_c_FWD-rt5014
+No kapp found for RXN-PKETF_c_FWD-rt5014 or enzyme rt5014
+No kapp found for RXN-PKETX_c_FWD-rt5014
+No kapp found for RXN-PLAA1lpc_en_FWD-rt4017
+No kapp found for RXN-PLAA1lpc_en_FWD-rt4017 or enzyme rt4017
+No kapp found for RXN-PLAA1lpc_mm_FWD-rt5790
+No kapp found for RXN-PLAA1lpc_mm_FWD-rt5790 or enzyme rt5790
+No kapp found for RXN-PLAA1lpc_rm_FWD-rt5941
+No kapp found for RXN-PLAA1lpc_rm_FWD-rt5941 or enzyme rt5941
+No kapp found for RXN-PLAA1lpe_en_FWD-rt4017
+No kapp found for RXN-PLAA1lpe_mm_FWD-rt5790
+No kapp found for RXN-PLAA2pc_en_FWD-rt4017
+No kapp found for RXN-PLAA2pc_mm_FWD-rt4445
+No kapp found for RXN-PLAA2pc_mm_FWD-rt4445 or enzyme rt4445
+No kapp found for RXN-PLAA2pc_rm_FWD-rt5941
+No kapp found for RXN-PLAA2pe_en_FWD-rt4017
+No kapp found for RXN-PLAA2pe_mm_FWD-rt4445
+No kapp found for RXN-PLACipc_m_FWD-rt7489_m
+No kapp found for RXN-PLACipc_m_FWD-rt7489_m or enzyme rt7489_m
+No kapp found for RXN-PLACipc_r_FWD-rt7489_r
+No kapp found for RXN-PLACipc_r_FWD-rt7489_r or enzyme rt7489_r
+No kapp found for RXN-PLACmip2c_m_FWD-rt7489_m
+No kapp found for RXN-PLACmip2c_r_FWD-rt7489_r
+No kapp found for RXN-PLACmipc_m_FWD-rt7489_m
+No kapp found for RXN-PLACmipc_r_FWD-rt7489_r
+No kapp found for RXN-PLACpail_c_FWD-rt3387
+No kapp found for RXN-PLACpail_c_FWD-rt3387 or enzyme rt3387
+No kapp found for RXN-PLACpail45p_c_FWD-rt4487_c
+No kapp found for RXN-PLACpail45p_c_FWD-rt4487_c or enzyme rt4487_c
+No kapp found for RXN-PLACpail45p_n_FWD-rt4487_n
+No kapp found for RXN-PLACpail45p_n_FWD-rt4487_n or enzyme rt4487_n
+No kapp found for RXN-PLACpg_mm_FWD-rt3355
+No kapp found for RXN-PLACpg_mm_FWD-rt3355 or enzyme rt3355
+No kapp found for RXN-PLADpc_en_FWD-rt5655
+No kapp found for RXN-PLADpc_en_FWD-rt5655 or enzyme rt5655
+No kapp found for RXN-PLADpc_en_FWD-rt8446
+No kapp found for RXN-PMANM_c_FWD-rt0873
+No kapp found for RXN-PMI12346PS_c_FWD-rt1395
+No kapp found for RXN-PMI1346PS_c_FWD-rt1395
+No kapp found for RXN-PMPK_c_FWD-rt4410
+No kapp found for RXN-PNP_c_FWD-rt7908_c
+No kapp found for RXN-PNP_c_FWD-rt7908_c or enzyme rt7908_c
+No kapp found for RXN-PNTOtps_e_FWD-rt3985
+No kapp found for RXN-PNTOtps_e_FWD-rt3985 or enzyme rt3985
+No kapp found for RXN-PNTOtps_e_REV-rt3985
+No kapp found for RXN-POLYAO1_c_FWD-rt7571
+No kapp found for RXN-POLYAO1_c_FWD-rt7571 or enzyme rt7571
+No kapp found for RXN-POLYAO2_c_FWD-rt7571
+No kapp found for RXN-POLYAO3_c_FWD-rt7571
+No kapp found for RXN-PPCDC_c_FWD-rt0168 or enzyme rt0168
+No kapp found for RXN-PPCK_c_FWD-rt2473
+No kapp found for RXN-PPCK_c_FWD-rt2473 or enzyme rt2473
+No kapp found for RXN-PPGPPDP_c_FWD-rt8139
+No kapp found for RXN-PPGPPDP_c_FWD-rt8139 or enzyme rt8139
+No kapp found for RXN-PPM_c_FWD-rt1591
+No kapp found for RXN-PPM_c_REV-rt1591
+No kapp found for RXN-PPM_c_FWD-rt5343
+No kapp found for RXN-PPM_c_REV-rt5343
+No kapp found for RXN-PPTT_m_FWD-rt0532
+No kapp found for RXN-PPTT_m_FWD-rt0532 or enzyme rt0532
+No kapp found for RXN-PRENT16_l_REV-rt4281
+No kapp found for RXN-PRENT17_l_REV-rt4281
+No kapp found for RXN-PROD2_m_FWD-rt6234
+No kapp found for RXN-PROD2_m_FWD-rt6234 or enzyme rt6234
+No kapp found for RXN-PROtps_e_FWD-rt4390
+No kapp found for RXN-PROtps_e_REV-rt4390
+No kapp found for RXN-PROtps_e_FWD-rt5861
+No kapp found for RXN-PROtps_e_REV-rt5861
+No kapp found for RXN-PSCIT_c_FWD-rt5884
+No kapp found for RXN-PSD_gm_FWD-rt0683_gm
+No kapp found for RXN-PSD_gm_FWD-rt0683_gm or enzyme rt0683_gm
+No kapp found for RXN-PSD_gm_FWD-rt2529_gm
+No kapp found for RXN-PSD_gm_FWD-rt3078_gm
+No kapp found for RXN-PSD_mm_FWD-rt2529_mm
+No kapp found for RXN-PSD_mm_FWD-rt6186
+No kapp found for RXN-PSD_vm_FWD-rt0683_vm
+No kapp found for RXN-PSD_vm_FWD-rt0683_vm or enzyme rt0683_vm
+No kapp found for RXN-PSD_vm_FWD-rt2529_vm
+No kapp found for RXN-PSD_vm_FWD-rt3078_vm
+No kapp found for RXN-PSPHPL_r_FWD-rt3557
+No kapp found for RXN-PSPHPL_r_FWD-rt3557 or enzyme rt3557
+No kapp found for RXN-PSPHS_r_FWD-rt6946
+No kapp found for RXN-PSt_c_m_FWD-rt1060
+No kapp found for RXN-PSt_c_m_REV-rt1060
+No kapp found for RXN-PSt_c_m_FWD-rt4312
+No kapp found for RXN-PSt_c_m_REV-rt4312
+No kapp found for RXN-PTRCAT1_c_FWD-rt7678
+No kapp found for RXN-PTRCAT1_c_FWD-rt7678 or enzyme rt7678
+No kapp found for RXN-PTRCAT1_c_REV-rt7678
+No kapp found for RXN-PTRCtpa_e_FWD-rt1939_e
+No kapp found for RXN-PTRCtpa_e_FWD-rt1939_e or enzyme rt1939_e
+No kapp found for RXN-PTRCtpa_e_REV-rt1939_e
+No kapp found for RXN-PTRCtpa_e_FWD-rt1987_e
+No kapp found for RXN-PTRCtpa_e_REV-rt1987_e
+No kapp found for RXN-PTRCtpa_e_FWD-rt2649_e
+No kapp found for RXN-PTRCtpa_e_REV-rt2649_e
+No kapp found for RXN-PTRCtpa_e_FWD-rt2739_e
+No kapp found for RXN-PTRCtpa_e_REV-rt2739_e
+No kapp found for RXN-PTRCtpa_v_FWD-rt1939_v
+No kapp found for RXN-PTRCtpa_v_FWD-rt1939_v or enzyme rt1939_v
+No kapp found for RXN-PTRCtpa_v_REV-rt1939_v
+No kapp found for RXN-PTRCtpa_v_FWD-rt1987_v
+No kapp found for RXN-PTRCtpa_v_REV-rt1987_v
+No kapp found for RXN-PTRCtpa_v_FWD-rt2649_v
+No kapp found for RXN-PTRCtpa_v_REV-rt2649_v
+No kapp found for RXN-PTRCtpa_v_FWD-rt2739_v
+No kapp found for RXN-PTRCtpa_v_REV-rt2739_v
+No kapp found for RXN-PUNP3_c_FWD-rt7908_c
+No kapp found for RXN-PUNP3_c_REV-rt7908_c
+No kapp found for RXN-PUNP3_m_FWD-rt7908_m
+No kapp found for RXN-PUNP3_m_FWD-rt7908_m or enzyme rt7908_m
+No kapp found for RXN-PUNP3_m_REV-rt7908_m
+No kapp found for RXN-PUNP5_c_FWD-rt7908_c
+No kapp found for RXN-PUNP5_c_REV-rt7908_c
+No kapp found for RXN-PYAM5PO_c_FWD-rt2312
+No kapp found for RXN-PYDAMK_c_FWD-rt6177
+No kapp found for RXN-PYDAMK_c_FWD-rt6177 or enzyme rt6177
+No kapp found for RXN-PYDXK_c_FWD-rt6177
+No kapp found for RXN-PYDXNK_c_FWD-rt6177
+No kapp found for RXN-PYDXNO_c_FWD-rt2312
+No kapp found for RXN-PYDXNOR_c_FWD-rt3182
+No kapp found for RXN-PYDXNOR_c_FWD-rt3182 or enzyme rt3182
+No kapp found for RXN-PYDXNOR_c_REV-rt3182
+No kapp found for RXN-PYDXNOR_c_FWD-rt6001
+No kapp found for RXN-PYDXNOR_c_REV-rt6001
+No kapp found for RXN-PYDXO_c_FWD-rt2312
+No kapp found for RXN-PYRDC_c_FWD-rt7423
+No kapp found for RXN-PYRDC2_c_FWD-rt7423
+No kapp found for RXN-PYRtps_e_FWD-rt1816_e
+No kapp found for RXN-PYRtps_e_FWD-rt1816_e or enzyme rt1816_e
+No kapp found for RXN-PYRtps_e_REV-rt1816_e
+No kapp found for RXN-Q9MO_m_FWD-rt7829
+No kapp found for RXN-Q9MT1_m_FWD-COQCPLX
+No kapp found for RXN-Q9MT1_m_FWD-COQCPLX or enzyme COQCPLX
+No kapp found for RXN-Q9MT2_m_FWD-rt3097
+No kapp found for RXN-Q9OR_m_FWD-Q9ORCPLX
+No kapp found for RXN-Q9OR_m_FWD-Q9ORCPLX or enzyme Q9ORCPLX
+No kapp found for RXN-QUINDH_c_FWD-rt5341
+No kapp found for RXN-QUINDH_c_FWD-rt5341 or enzyme rt5341
+No kapp found for RXN-QUINDH_c_REV-rt5341
+No kapp found for RXN-QUINt_c_e_FWD-rt3125
+No kapp found for RXN-QUINt_c_e_FWD-rt3125 or enzyme rt3125
+No kapp found for RXN-QUINt_c_e_REV-rt3125
+No kapp found for RXN-QUINt_c_e_FWD-rt5359
+No kapp found for RXN-QUINt_c_e_REV-rt5359
+No kapp found for RXN-QUINt_c_e_FWD-rt5363
+No kapp found for RXN-QUINt_c_e_REV-rt5363
+No kapp found for RXN-RADHx_m_FWD-rt5058
+No kapp found for RXN-RADHx_m_FWD-rt5058 or enzyme rt5058
+No kapp found for RXN-RAFH_e_FWD-rt3242_e
+No kapp found for RXN-RAFH_e_FWD-rt3242_e or enzyme rt3242_e
+No kapp found for RXN-RBFK_m_FWD-rt0930_m
+No kapp found for RXN-RBFK_m_FWD-rt0930_m or enzyme rt0930_m
+No kapp found for RXN-RBK_c_FWD-rt2501
+No kapp found for RXN-RBK_D_c_FWD-rt6000
+No kapp found for RXN-RBK_D_c_FWD-rt6000 or enzyme rt6000
+No kapp found for RXN-RDH_c_FWD-rt5407
+No kapp found for RXN-RDH_c_FWD-rt5407 or enzyme rt5407
+No kapp found for RXN-RDH_c_REV-rt5407
+No kapp found for RXN-RHMND2_c_FWD-rt1893
+No kapp found for RXN-RHMND2_c_FWD-rt1893 or enzyme rt1893
+No kapp found for RXN-RHMND2_c_REV-rt1893
+No kapp found for RXN-RLFC2O_c_FWD-rt4960
+No kapp found for RXN-RLFC2O_c_FWD-rt4960 or enzyme rt4960
+No kapp found for RXN-RLFC2O_m_FWD-rt8275
+No kapp found for RXN-RLFC2O_m_FWD-rt8275 or enzyme rt8275
+No kapp found for RXN-RNDR1_n_FWD-RNR124
+No kapp found for RXN-RNDR2_n_FWD-RNR124
+No kapp found for RXN-RNDR3_n_FWD-RNR124
+No kapp found for RXN-RNDR4_c_FWD-RNR124
+No kapp found for RXN-RNDR4_n_FWD-RNR124
+No kapp found for RXN-RNMK_c_FWD-rt6206
+No kapp found for RXN-RNMK_c_FWD-rt6206 or enzyme rt6206
+No kapp found for RXN-RPE_c_FWD-rt3505
+No kapp found for RXN-RPE_c_FWD-rt7896
+No kapp found for RXN-RPE_c_REV-rt7896
+No kapp found for RXN-RPI_c_REV-rt4920
+No kapp found for RXN-SALCMOX_x_FWD-rt1970
+No kapp found for RXN-SALCMOX_x_FWD-rt1970 or enzyme rt1970
+No kapp found for RXN-SALCMOX_x_FWD-rt2557
+No kapp found for RXN-SALCMOX_x_FWD-rt3875
+No kapp found for RXN-SALCMOX_x_FWD-rt5198
+No kapp found for RXN-SALCMOX_x_FWD-rt5285
+No kapp found for RXN-SALCMOX_x_FWD-rt5815
+No kapp found for RXN-SALCMOX_x_FWD-rt7337
+No kapp found for RXN-SALCMOX_x_FWD-rt7373
+No kapp found for RXN-SBP_c_FWD-rt4269
+No kapp found for RXN-SBP_c_FWD-rt4269 or enzyme rt4269
+No kapp found for RXN-SBPP1_r_FWD-rt5044
+No kapp found for RXN-SBPP1_r_FWD-rt5044 or enzyme rt5044
+No kapp found for RXN-SBPP2_r_FWD-rt5044
+No kapp found for RXN-SBTD_D2_c_FWD-rt4606
+No kapp found for RXN-SBTD_D2_c_FWD-rt8084
+No kapp found for RXN-SBTD_L_c_FWD-rt4606
+No kapp found for RXN-SDPDS_c_FWD-rt3986
+No kapp found for RXN-SDPDS_c_FWD-rt3986 or enzyme rt3986
+No kapp found for RXN-SERAT_c_FWD-rt6880
+No kapp found for RXN-SERAT_c_FWD-rt6880 or enzyme rt6880
+No kapp found for RXN-SERD_L_c_FWD-rt0848_c
+No kapp found for RXN-SERD_L_c_FWD-rt0848_c or enzyme rt0848_c
+No kapp found for RXN-SERt_c_m_FWD-rt7910
+No kapp found for RXN-SERtps_e_FWD-rt0594
+No kapp found for RXN-SERtps_e_REV-rt0594
+No kapp found for RXN-SERtps_e_FWD-rt2976
+No kapp found for RXN-SERtps_e_REV-rt2976
+No kapp found for RXN-SERtps_e_FWD-rt5861
+No kapp found for RXN-SERtps_e_REV-rt5861
+No kapp found for RXN-SERTRS_c_FWD-rt5857
+No kapp found for RXN-SFGTHi_c_FWD-rt1276
+No kapp found for RXN-SFGTHi_c_FWD-rt1276 or enzyme rt1276
+No kapp found for RXN-SFGTHi_c_REV-rt1276
+No kapp found for RXN-SHK3Di_c_FWD-rt5884
+No kapp found for RXN-SHKK_c_FWD-rt5884
+No kapp found for RXN-SHSL1_c_FWD-rt1131
+No kapp found for RXN-SHSL1_c_REV-rt1131
+No kapp found for RXN-SHSL1_c_FWD-rt3095
+No kapp found for RXN-SHSL1_c_REV-rt3095
+No kapp found for RXN-SLCBK1_r_FWD-rt2023
+No kapp found for RXN-SLCBK1_r_FWD-rt2023 or enzyme rt2023
+No kapp found for RXN-SO3t_c_e_FWD-rt4278
+No kapp found for RXN-SO3t_c_e_FWD-rt4278 or enzyme rt4278
+No kapp found for RXN-SO4t_c_e_FWD-rt5751
+No kapp found for RXN-SPHGAT181_c_FWD-rt3023_c
+No kapp found for RXN-SPHGAT181_c_REV-rt3023_c
+No kapp found for RXN-SPHGLpK_r_FWD-rt2023
+No kapp found for RXN-SPHINGSt_c_e_FWD-rt8393
+No kapp found for RXN-SPHINGSt_c_e_FWD-rt8393 or enzyme rt8393
+No kapp found for RXN-SPHINGSt_c_e_REV-rt8393
+No kapp found for RXN-SPHPL_r_FWD-rt3557
+No kapp found for RXN-SPMDtpa_e_FWD-rt1939_e
+No kapp found for RXN-SPMDtpa_e_REV-rt1939_e
+No kapp found for RXN-SPMDtpa_e_FWD-rt1987_e
+No kapp found for RXN-SPMDtpa_e_REV-rt1987_e
+No kapp found for RXN-SPMDtpa_e_FWD-rt2649_e
+No kapp found for RXN-SPMDtpa_e_REV-rt2649_e
+No kapp found for RXN-SPMDtpa_e_FWD-rt2739_e
+No kapp found for RXN-SPMDtpa_e_REV-rt2739_e
+No kapp found for RXN-SPMDtpa_e_FWD-rt5861
+No kapp found for RXN-SPMDtpa_e_REV-rt5861
+No kapp found for RXN-SPMDtpa_e_FWD-rt7439
+No kapp found for RXN-SPMDtpa_e_REV-rt7439
+No kapp found for RXN-SPMDtpa_v_FWD-rt1939_v
+No kapp found for RXN-SPMDtpa_v_REV-rt1939_v
+No kapp found for RXN-SPMDtpa_v_FWD-rt1987_v
+No kapp found for RXN-SPMDtpa_v_REV-rt1987_v
+No kapp found for RXN-SPMDtpa_v_FWD-rt2649_v
+No kapp found for RXN-SPMDtpa_v_REV-rt2649_v
+No kapp found for RXN-SPMDtpa_v_FWD-rt2739_v
+No kapp found for RXN-SPMDtpa_v_REV-rt2739_v
+No kapp found for RXN-SPRMAT_c_FWD-rt1145
+No kapp found for RXN-SPRMAT_c_FWD-rt1145 or enzyme rt1145
+No kapp found for RXN-SPRMS_c_FWD-rt4913
+No kapp found for RXN-SPRMS_c_FWD-rt4913 or enzyme rt4913
+No kapp found for RXN-SPRMtpa_e_FWD-rt1939_e
+No kapp found for RXN-SPRMtpa_e_REV-rt1939_e
+No kapp found for RXN-SPRMtpa_e_FWD-rt1987_e
+No kapp found for RXN-SPRMtpa_e_REV-rt1987_e
+No kapp found for RXN-SPRMtpa_e_FWD-rt2649_e
+No kapp found for RXN-SPRMtpa_e_REV-rt2649_e
+No kapp found for RXN-SPRMtpa_e_FWD-rt2739_e
+No kapp found for RXN-SPRMtpa_e_REV-rt2739_e
+No kapp found for RXN-SPRMtpa_e_FWD-rt3281_e
+No kapp found for RXN-SPRMtpa_e_REV-rt3281_e
+No kapp found for RXN-SPRMtpa_e_FWD-rt6406_e
+No kapp found for RXN-SPRMtpa_e_REV-rt6406_e
+No kapp found for RXN-SPRMtpa_v_FWD-rt1939_v
+No kapp found for RXN-SPRMtpa_v_REV-rt1939_v
+No kapp found for RXN-SPRMtpa_v_FWD-rt1987_v
+No kapp found for RXN-SPRMtpa_v_REV-rt1987_v
+No kapp found for RXN-SPRMtpa_v_FWD-rt2649_v
+No kapp found for RXN-SPRMtpa_v_REV-rt2649_v
+No kapp found for RXN-SPRMtpa_v_FWD-rt2739_v
+No kapp found for RXN-SPRMtpa_v_REV-rt2739_v
+No kapp found for RXN-SPRMtpa_v_FWD-rt3281_v
+No kapp found for RXN-SPRMtpa_v_REV-rt3281_v
+No kapp found for RXN-SPRMtpa_v_FWD-rt6406_v
+No kapp found for RXN-SPRMtpa_v_REV-rt6406_v
+No kapp found for RXN-SQLEx_r_FWD-rt5361
+No kapp found for RXN-SSALy_c_FWD-rt0324
+No kapp found for RXN-SSALy_c_FWD-rt0324 or enzyme rt0324
+No kapp found for RXN-SSALy_c_FWD-rt8468
+No kapp found for RXN-STATg_rm_FWD-rt3431
+No kapp found for RXN-STATg_rm_FWD-rt3431 or enzyme rt3431
+No kapp found for RXN-STEHz161_en_FWD-rt5879
+No kapp found for RXN-STEHz161_en_FWD-rt5879 or enzyme rt5879
+No kapp found for RXN-STEHz161_rm_FWD-rt6249
+No kapp found for RXN-STEHz161_rm_FWD-rt6249 or enzyme rt6249
+No kapp found for RXN-STEHz181_en_FWD-rt5879
+No kapp found for RXN-STEHz181_rm_FWD-rt6249
+No kapp found for RXN-SUCCt2_m_FWD-rt5142
+No kapp found for RXN-SUCDq9_m_REV-SDH1234
+No kapp found for RXN-SUCR_e_FWD-rt6458
+No kapp found for RXN-SUCR_e_FWD-rt6458 or enzyme rt6458
+No kapp found for RXN-SULFOX2_c_FWD-rt8390
+No kapp found for RXN-SULFOX2_c_FWD-rt8390 or enzyme rt8390
+No kapp found for RXN-TAGL_l_FWD-rt1378
+No kapp found for RXN-TAGL_m_FWD-rt0632
+No kapp found for RXN-TAGL_m_FWD-rt5949
+No kapp found for RXN-TALA_c_FWD-rt1805
+No kapp found for RXN-TAUDO_c_FWD-rt0250
+No kapp found for RXN-TAUDO_c_FWD-rt0250 or enzyme rt0250
+No kapp found for RXN-TAUDO_c_FWD-rt1858
+No kapp found for RXN-TCHOLAtabc_v_FWD-rt0777
+No kapp found for RXN-TCHOLAtabc_v_FWD-rt0777 or enzyme rt0777
+No kapp found for RXN-TCHOLAtabc_v_FWD-rt2898
+No kapp found for RXN-TCHOLAtabc_v_FWD-rt6095
+No kapp found for RXN-TCHOLAtabc_v_FWD-rt6476
+No kapp found for RXN-TDPDRR_c_FWD-rt3425
+No kapp found for RXN-TDPDRR_c_FWD-rt3425 or enzyme rt3425
+No kapp found for RXN-THFGLUS_c_FWD-rt6435
+No kapp found for RXN-THFGLUS_c_FWD-rt6435 or enzyme rt6435
+No kapp found for RXN-THFGLUS_c_REV-rt6435
+No kapp found for RXN-THIORDXi_m_FWD-rt0553
+No kapp found for RXN-THIORDXi_m_FWD-rt0553 or enzyme rt0553
+No kapp found for RXN-THIORDXi_n_FWD-rt6669
+No kapp found for RXN-THIORDXi_n_FWD-rt6669 or enzyme rt6669
+No kapp found for RXN-THIORDXi_x_FWD-rt4894
+No kapp found for RXN-THIORDXi_x_FWD-rt4894 or enzyme rt4894
+No kapp found for RXN-THMP_c_FWD-rt2517_c
+No kapp found for RXN-THMP_c_FWD-rt2517_c or enzyme rt2517_c
+No kapp found for RXN-THRA_c_FWD-rt0854
+No kapp found for RXN-THRA_c_FWD-rt0854 or enzyme rt0854
+No kapp found for RXN-THRA_c_FWD-rt7814
+No kapp found for RXN-THRA2_c_FWD-rt0854
+No kapp found for RXN-THRD_L_m_FWD-rt3541
+No kapp found for RXN-THRtps_e_FWD-rt5861
+No kapp found for RXN-THRtps_e_REV-rt5861
+No kapp found for RXN-TKT1_c_FWD-rt7263_c
+No kapp found for RXN-TKT2_c_FWD-rt7263_c
+No kapp found for RXN-TMABADH_m_FWD-rt7955_m
+No kapp found for RXN-TMABADH_m_FWD-rt7955_m or enzyme rt7955_m
+No kapp found for RXN-TMDPPK_c_FWD-rt8116
+No kapp found for RXN-TMDS_c_FWD-rt2476
+No kapp found for RXN-TMLYSOX_m_FWD-rt0812
+No kapp found for RXN-TMLYSOX_m_FWD-rt0812 or enzyme rt0812
+No kapp found for RXN-TMN_c_FWD-rt4410
+No kapp found for RXN-TMPPP_c_FWD-rt7845
+No kapp found for RXN-TPI_c_REV-rt0932
+No kapp found for RXN-TRDR_m_FWD-rt7114_m
+No kapp found for RXN-TRDR_m_FWD-rt7114_m or enzyme rt7114_m
+No kapp found for RXN-TRE6PP_c_FWD-TPS12TSL1
+No kapp found for RXN-TRE6PP_c_FWD-TPS12TSL1 or enzyme TPS12TSL1
+No kapp found for RXN-TRE6PS_c_FWD-TPS12TSL1
+No kapp found for RXN-TREH_v_FWD-rt0008
+No kapp found for RXN-TREH_v_FWD-rt0008 or enzyme rt0008
+No kapp found for RXN-TREH_v_FWD-rt0212
+No kapp found for RXN-TREtps_e_FWD-rt0769
+No kapp found for RXN-TREtps_e_REV-rt0769
+No kapp found for RXN-TROPNDH_c_FWD-rt0537
+No kapp found for RXN-TROPNDH_c_FWD-rt0537 or enzyme rt0537
+No kapp found for RXN-TROPNDH_c_REV-rt0537
+No kapp found for RXN-TRPDC_c_FWD-rt1736
+No kapp found for RXN-TRPDC_c_FWD-rt1736 or enzyme rt1736
+No kapp found for RXN-TRPDC_c_REV-rt1736
+No kapp found for RXN-TRPO2_c_FWD-rt7555
+No kapp found for RXN-TRPO2_c_FWD-rt7555 or enzyme rt7555
+No kapp found for RXN-TRPTA_c_FWD-rt7471
+No kapp found for RXN-TRPTRS_m_FWD-rt7165
+No kapp found for RXN-TRPTRS_m_FWD-rt7165 or enzyme rt7165
+No kapp found for RXN-TTDCAt_c_e_FWD-rt15442799
+No kapp found for RXN-TTDCAt_c_e_REV-rt15442799
+No kapp found for RXN-TTDCAt_c_x_FWD-rt5693
+No kapp found for RXN-TTDCAt_c_x_REV-rt5693
+No kapp found for RXN-TYRCBOX_x_FWD-rt5309
+No kapp found for RXN-TYRCBOX_x_FWD-rt5309 or enzyme rt5309
+No kapp found for RXN-TYRCBOX_x_REV-rt5309
+No kapp found for RXN-TYRt_c_v_FWD-rt6501
+No kapp found for RXN-TYRTA_c_REV-rt7471
+No kapp found for RXN-TYRTA_c_FWD-rt7697
+No kapp found for RXN-TYRTA_c_REV-rt7697
+No kapp found for RXN-TYRTA_m_FWD-rt5562_m
+No kapp found for RXN-TYRTAi_x_FWD-rt0568_x
+No kapp found for RXN-TYRTAi_x_FWD-rt1784_x
+No kapp found for RXN-TYRTAi_x_FWD-rt5562_x
+No kapp found for RXN-TYRtpa_v_FWD-rt0111
+No kapp found for RXN-TYRtpa_v_FWD-rt7819
+No kapp found for RXN-TYRtps_v_FWD-rt4375
+No kapp found for RXN-TYRTRS_m_FWD-rt4769
+No kapp found for RXN-TYRTRS_m_FWD-rt4769 or enzyme rt4769
+No kapp found for RXN-UAGDP_c_REV-rt0711
+No kapp found for RXN-UDPG4E_c_FWD-rt0601
+No kapp found for RXN-UDPG4E_c_FWD-rt0601 or enzyme rt0601
+No kapp found for RXN-UDPG4E_c_REV-rt0601
+No kapp found for RXN-UDPGALt_c_g_FWD-rt7574
+No kapp found for RXN-UDPGALt_c_g_FWD-rt7574 or enzyme rt7574
+No kapp found for RXN-UDPGD_c_FWD-rt3408
+No kapp found for RXN-UDPGLDC_c_FWD-rt7050
+No kapp found for RXN-UDPGLDC_c_FWD-rt7050 or enzyme rt7050
+No kapp found for RXN-UGLT_c_FWD-rt2964
+No kapp found for RXN-UMPK_n_FWD-rt4822_n
+No kapp found for RXN-UMPK_n_FWD-rt4822_n or enzyme rt4822_n
+No kapp found for RXN-UNK3_c_FWD-rt6242_c
+No kapp found for RXN-UNK3_c_FWD-rt7697
+No kapp found for RXN-UPPRT_c_FWD-rt5873
+No kapp found for RXN-UPPRT_c_FWD-rt5873 or enzyme rt5873
+No kapp found for RXN-UPPRT_c_FWD-rt6727
+No kapp found for RXN-URAtps_e_FWD-rt4541
+No kapp found for RXN-URAtps_e_FWD-rt4541 or enzyme rt4541
+No kapp found for RXN-UREA_c_FWD-rt2839
+No kapp found for RXN-UREA_c_FWD-rt2839 or enzyme rt2839
+No kapp found for RXN-UREA_c_REV-rt2839
+No kapp found for RXN-UREASE_c_FWD-rt0958
+No kapp found for RXN-UREAtps_e_FWD-rt7439
+No kapp found for RXN-UREAtps_e_REV-rt7439
+No kapp found for RXN-URIDK2_n_FWD-rt4822_n
+No kapp found for RXN-URIDK2i_c_FWD-rt4822_c
+No kapp found for RXN-URIH_c_FWD-rt4016
+No kapp found for RXN-URIH_c_FWD-rt4016 or enzyme rt4016
+No kapp found for RXN-URIH_c_FWD-rt5402
+No kapp found for RXN-URIK1_c_FWD-rt0265
+No kapp found for RXN-URIK2_c_FWD-rt0265
+No kapp found for RXN-URItps_e_FWD-rt1991
+No kapp found for RXN-URItps_e_FWD-rt1991 or enzyme rt1991
+No kapp found for RXN-URO_c_FWD-rt2202
+No kapp found for RXN-URO_c_FWD-rt2202 or enzyme rt2202
+No kapp found for RXN-UTPt_c_m_FWD-rt4019
+No kapp found for RXN-UTPUMPtp_m_FWD-rt4019
+No kapp found for RXN-VALTA_c_REV-rt5646
+No kapp found for RXN-VALTA_c_FWD-rt6485
+No kapp found for RXN-VALTA_c_REV-rt6485
+No kapp found for RXN-VALTA_m_FWD-rt6242_m
+No kapp found for RXN-VALtps_e_FWD-rt5861
+No kapp found for RXN-VALtps_e_REV-rt5861
+No kapp found for RXN-VALTRS_m_FWD-rt8160_m
+No kapp found for RXN-VALTRS_m_FWD-rt8160_m or enzyme rt8160_m
+No kapp found for RXN-VANLLOX_x_FWD-rt7726
+No kapp found for RXN-VANLLOX_x_FWD-rt7726 or enzyme rt7726
+No kapp found for RXN-XAND_c_FWD-rt7594
+No kapp found for RXN-XAND_c_REV-rt7594
+No kapp found for RXN-XPPT_c_FWD-rt4077
+No kapp found for RXN-XU5PFGT_x_FWD-rt7263_x
+No kapp found for RXN-XU5PFGT_x_FWD-rt7263_x or enzyme rt7263_x
+No kapp found for RXN-XYLI1_c_FWD-rt0738
+No kapp found for RXN-XYLI1_c_FWD-rt0738 or enzyme rt0738
+No kapp found for RXN-XYLI1_c_REV-rt0738
+No kapp found for RXN-XYLI1_c_FWD-rt5360
+No kapp found for RXN-XYLI1_c_REV-rt5360
+No kapp found for RXN-XYLI2_c_FWD-rt0738
+No kapp found for RXN-XYLI2_c_FWD-rt5360
+No kapp found for RXN-XYLK_c_FWD-rt8482
+No kapp found for RXN-XYLK_c_FWD-rt8482 or enzyme rt8482
+No kapp found for RXN-XYLRy_c_FWD-rt1406
+No kapp found for RXN-XYLRy_c_FWD-rt1406 or enzyme rt1406
+No kapp found for RXN-XYLRy_c_REV-rt1406
+No kapp found for RXN-XYLTOR_c_FWD-rt4609
+No kapp found for RXN-XYLTOR_c_FWD-rt4609 or enzyme rt4609
+No kapp found for RXN-XYLTOR_c_REV-rt4609
+No kapp found for RXN-XYLURx_c_FWD-rt0620
+No kapp found for RXN-XYLURx_c_FWD-rt0620 or enzyme rt0620
+No kapp found for RXN-XYLURx_c_FWD-rt0736
+No kapp found for RXN-XYLURy_c_FWD-rt0620
+No kapp found for RXN-XYLURy_c_FWD-rt0736
+No kapp found for RXN-YUMPS_c_FWD-rt6068
+No kapp found for RXN-YUMPS_c_FWD-rt6068 or enzyme rt6068
+No kapp found for RXN-YUMPS_c_REV-rt6068
+No kapp found for RXN-YUMPS_c_FWD-rt7720
+No kapp found for RXN-YUMPS_c_REV-rt7720
+No kapp found for RXN-YUMPS_c_FWD-rt8055
+No kapp found for RXN-YUMPS_c_REV-rt8055
+No kapp found for RXN-ZEAEPOX1_c_FWD-rt0235
+No kapp found for RXN-ZEAEPOX1_c_FWD-rt0235 or enzyme rt0235
+No kapp found for RXN-ZEAEPOX1_c_FWD-rt3591
+No kapp found for RXN-ZEAEPOX1_c_FWD-rt3595
+No kapp found for RXN-ZEAEPOX2_c_FWD-rt0235
+No kapp found for RXN-ZEAEPOX2_c_FWD-rt3591
+No kapp found for RXN-ZEAEPOX2_c_FWD-rt3595
+No kapp found for RXN-THFAT_m_FWD-THFATcplx
+No kapp found for RXN-THFAT_m_FWD-THFATcplx or enzyme THFATcplx

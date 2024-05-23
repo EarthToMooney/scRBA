@@ -1,0 +1,15 @@
+Equation EnzCap0; EnzCap0.. v('ENZLOAD-DGAT_rm_FWD-rt8092_rm')*304686599.6739175 =e= %mu% * v('RXN-DGAT_rm_FWD-rt8092_rm');
+Equation EnzCap1; EnzCap1.. v('ENZLOAD-DOLDPP_c_FWD-rt5681')*304686599.6739175 =e= %mu% * v('RXN-DOLDPP_c_FWD-rt5681');
+Equation EnzCap2; EnzCap2.. v('ENZLOAD-FDH_c_FWD-rt3584')*304686599.6739175 =e= %mu% * v('RXN-FDH_c_FWD-rt3584');
+Equation EnzCap3; EnzCap3.. v('ENZLOAD-GF6PTA_c_FWD-rt3731')*304686599.6739175 =e= %mu% * v('RXN-GF6PTA_c_FWD-rt3731');
+Equation EnzCap4; EnzCap4.. v('ENZLOAD-GPIA1_c_FWD-GPIA1CPLX1')*304686599.6739175 =e= %mu% * v('RXN-GPIA1_c_FWD-GPIA1CPLX1');
+Equation EnzCap5; EnzCap5.. v('ENZLOAD-GPIA3_c_r_FWD-rt3333')*304686599.6739175 =e= %mu% * v('RXN-GPIA3_c_r_FWD-rt3333');
+Equation EnzCap6; EnzCap6.. v('ENZLOAD-GPIA4_r_FWD-rt3077')*304686599.6739175 =e= %mu% * v('RXN-GPIA4_r_FWD-rt3077');
+Equation EnzCap7; EnzCap7.. v('ENZLOAD-GPIA5_r_FWD-GPI14')*304686599.6739175 =e= %mu% * v('RXN-GPIA5_r_FWD-GPI14');
+Equation EnzCap8; EnzCap8.. v('ENZLOAD-GPIA6_r_FWD-rt3077')*304686599.6739175 =e= %mu% * v('RXN-GPIA6_r_FWD-rt3077');
+Equation EnzCap9; EnzCap9.. v('ENZLOAD-GPIA7_r_FWD-rt4593')*304686599.6739175 =e= %mu% * v('RXN-GPIA7_r_FWD-rt4593');
+Equation EnzCap10; EnzCap10.. v('ENZLOAD-GPIA8a_r_FWD-rt0237')*304686599.6739175 =e= %mu% * v('RXN-GPIA8a_r_FWD-rt0237');
+Equation EnzCap11; EnzCap11.. v('ENZLOAD-H2Ot_c_e_REV-rt0646')*304686599.6739175 =e= %mu% * v('RXN-H2Ot_c_e_REV-rt0646');
+Equation EnzCap12; EnzCap12.. v('ENZLOAD-HEMEOS_m_FWD-rt2735')*304686599.6739175 =e= %mu% * v('RXN-HEMEOS_m_FWD-rt2735');
+Equation EnzCap13; EnzCap13.. v('ENZLOAD-PPCDC_c_FWD-rt0168')*304686599.6739175 =e= %mu% * v('RXN-PPCDC_c_FWD-rt0168');
+Equation EnzCap14; EnzCap14.. v('ENZLOAD-UPP3S_c_FWD-rt2147')*304686599.6739175 =e= %mu% * v('RXN-UPP3S_c_FWD-rt2147');

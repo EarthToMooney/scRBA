@@ -1,0 +1,74 @@
+
+--- Job min_flux_violation.gms Start 05/04/24 14:51:49 46.2.0 ac4adda6 DAX-DAC arm 64bit/macOS
+--- Applying:
+    /Library/Frameworks/GAMS.framework/Versions/46/Resources/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /Users/ejm6426/Documents/rtRBA-main/parameterization/kapp/datasets/Rabinowitz2023_batchGlc/min_flux_violation/min_flux_violation.gms
+    PageSize 0
+    ScrDir /Users/ejm6426/Documents/rtRBA-main/parameterization/kapp/datasets/Rabinowitz2023_batchGlc/min_flux_violation/225b/
+    SysDir /Library/Frameworks/GAMS.framework/Versions/46/Resources/
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: GAMS Demo, for EULA and demo limitations see   G240131/0001CB-GEN
+          https://www.gams.com/latest/docs/UG%5FLicense.html         DC0000
+          /Library/Frameworks/GAMS.framework/Versions/46/Resources/gamslice.txt
+          Demo license for demonstration and instructional purposes only
+Processor information: 1 socket(s), 12 core(s), and 12 thread(s) available
+GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
+--- Starting compilation
+--- min_flux_violation.gms(6) 2 Mb
+--- . min_flux_violation_GAMS_settings.txt(18) 2 Mb
+--- min_flux_violation.gms(27) 3 Mb
+--- . unique_proteins_no_locations.txt(1018) 3 Mb
+--- min_flux_violation.gms(29) 3 Mb
+--- . RBA_species.txt(4721) 3 Mb
+--- min_flux_violation.gms(31) 3 Mb
+--- . RBA_rxns.txt(10642) 5 Mb
+--- min_flux_violation.gms(33) 5 Mb
+--- . RBA_rxns_enzsyn.txt(1094) 5 Mb
+--- min_flux_violation.gms(35) 5 Mb
+--- . RBA_rxns_enzload.txt(2592) 5 Mb
+--- min_flux_violation.gms(37) 5 Mb
+--- . RBA_nuc_translation.txt(1369) 5 Mb
+--- min_flux_violation.gms(39) 5 Mb
+--- . RBA_mito_translation.txt(9) 5 Mb
+--- min_flux_violation.gms(41) 5 Mb
+--- . RBA_rxns_EXREV.txt(190) 5 Mb
+--- min_flux_violation.gms(43) 5 Mb
+--- . RBA_rxns_EXREV_YPD.txt(30) 5 Mb
+--- min_flux_violation.gms(45) 5 Mb
+--- . rxns_inactive.txt(2592) 5 Mb
+--- min_flux_violation.gms(47) 5 Mb
+--- . proteome_data_set.txt(1042) 5 Mb
+--- min_flux_violation.gms(52) 5 Mb
+--- . RBA_sij.txt(90034) 8 Mb
+--- min_flux_violation.gms(54) 8 Mb
+--- . RBA_proteinLength.txt(1378) 8 Mb
+--- min_flux_violation.gms(56) 8 Mb
+--- . proteome_data.txt(1042) 8 Mb
+--- min_flux_violation.gms(89) 8 Mb
+--- . prosyn_abundance_constraints.txt(1016) 8 Mb
+--- min_flux_violation.gms(91) 8 Mb
+--- . phenotype.txt(7) 8 Mb
+--- .. model-version-settings.txt(4) 8 Mb
+--- . phenotype.txt(43) 8 Mb
+--- min_flux_violation.gms(179) 8 Mb
+--- Starting execution: elapsed 0:00:00.173
+--- min_flux_violation.gms(118947) 11 Mb
+--- Generating LP model rba
+--- min_flux_violation.gms(118950) 18 Mb
+---   5,741 rows  12,673 columns  97,139 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 6.066E-12, 7.883E-06] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E+00, 1.000E+07] - Zero values observed as well
+--- Matrix    [min, max] : [ 6.066E-12, 4.223E+04]
+*** The model exceeds the demo license limits for linear models of more than 2000 rows or columns
+    As an academic user, you can submit large models to the NEOS service for free (see https://www.gams.com/neos)
+    Alternatively, feel free to contact sales@gams.com to discuss your options
+*** Status: Terminated due to a licensing error
+***         License file: /Library/Frameworks/GAMS.framework/Versions/46/Resources/gamslice.txt
+***         Inspect listing file for more information.
+--- Job min_flux_violation.gms Stop 05/04/24 14:51:50 elapsed 0:00:00.966

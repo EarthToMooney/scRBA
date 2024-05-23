@@ -1,0 +1,1 @@
+prosynSlackSum	prosynSlackSuminactiveFluxSum	inactiveFluxSumfluxSum	fluxSum
