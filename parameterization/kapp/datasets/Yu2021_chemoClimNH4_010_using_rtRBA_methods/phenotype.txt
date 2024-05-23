@@ -3,7 +3,7 @@
 $setGlobal mu 0.1
 v.fx('BIOSYN-BIODILNOGAM') = %mu% * %nscale%;
 
-* NGAM
+* NGAM and GAM
 v.lo('RXN-ATPM_c_FWD-SPONT') = (1 + 36.7*%mu%) * %nscale%;
 
 * Ribosome efficiency
