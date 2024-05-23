@@ -35,7 +35,8 @@ df_prot.index = df_prot.id.to_list()
 df_prot.index = [i.split('_')[0] if '_' in i else i for i in df_prot.index]
 df_prot['id'] = df_prot.index.to_list()
 df_prot = df_prot.drop_duplicates(subset=['id'])
-# Protein copy selector
+# Protein copy selector: start with empty file
+# per Hoang: "protein_copies_selector.txt" is a manually written file. It should be empty for you in the first run. Then, you have to check your kapp calculation to see if you need to add any entries. For example, an enzyme ILV2-ILV6 complex and ILV2 are functional, but I choose to assign estimated kapp value to ILV2-6 complex only (which I think is the primary complex for catalysis, otherwise it doesn't make sense to me why ILV2-6 complex is even needed). There will be many cases like this where you have to write entries to the "protein_copies_selector.txt" file
 df_select = pd.read_csv('./input/protein_copies_selector.txt', sep='\t')
 df_select.index = df_select.gene_src.to_list()
 

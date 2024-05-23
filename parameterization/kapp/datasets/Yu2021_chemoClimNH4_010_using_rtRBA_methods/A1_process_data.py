@@ -1,6 +1,4 @@
 # %%
-
-
 import pandas as pd
 import numpy as np
 
@@ -8,30 +6,27 @@ import sys
 sys.path.append('../../../../pycore/')
 from utils import metabolites_dict_from_reaction_equation_RBA
 
-
+# %%
+mu = 0.1
+cols_data = ['prot.4', 'prot.5', 'prot.6']
+raw_data_path = '../raw_data_files/Yu2021_rawdata.xlsx'
+fout_name = './Yu2021_chemoClimNH4_010.xlsx'
 
 # %%
-
-
 # Load path
 path_gen = '../../../../build_model/'
 
-prot_path = path_gen + 'input/PROTEIN_stoich_curation.xlsx'
+prot_path = path_gen + 'input/PROTEIN_stoich_curation_2021-09-28.xlsx'
 model_xlsx_path = path_gen + 'model/RBA_stoichiometry.xlsx'
 ribonuc_path = path_gen + 'input/RIBOSOME_nucleus.xlsx'
 ribomito_path = path_gen + 'input/RIBOSOME_mitochondria.xlsx'
 
-
-
 # %%
-
-
-# Use only name and abundance cols
-df_raw = pd.read_excel('../raw_data_files/Rabinowitz-BatchGlc-abridged.xlsx',
-                         sheet_name='for-kapps-v2', usecols=[0,1,2,3])
-# df_raw = pd.read_excel('../raw_data_files/Rekena_Datasets.xlsx',
-#                          sheet_name='S2 Dataset Final', usecols=[0,1,2,3,4,5,6,17,18,19,20,21,22])
-df_raw.index = df_raw['TRUE best match'].to_list()
+verified_dubious_genes = ['YJL182C', 'YPL044C', 'YML009W-B']
+df_raw = pd.read_excel(raw_data_path, sheet_name='Supplementary File 1b', skiprows=[0])
+df_raw.index = df_raw['standard_id'].to_list()
+idx = [i for i in df_raw.index if i not in verified_dubious_genes]
+df_raw = df_raw.loc[idx, :]
 
 # Load protein
 df_prot = pd.read_excel(prot_path)
@@ -49,99 +44,71 @@ df_select.index = df_select.gene_src.to_list()
 df_ribonuc = pd.read_excel(ribonuc_path)
 df_ribomito = pd.read_excel(ribomito_path)
 
-
-
 # %%
-
-
 #### HANDLE MISSING MEASUREMENTS FOR SUBUNIT COMPONENT OF HETEROMERIC ENZYMES
 # E.g., missing subunit measurements for ATP synthase complex
 # Stoichiometry
 df_eqn = pd.read_excel(model_xlsx_path)
 df_eqn.index = df_eqn.id.to_list()
 
+# %%
+#### MW
+df_mw = pd.read_csv('../scProteins_MW.csv', sep='\t')
+df_mw.index = df_mw.gene_id.to_list()
 
+# %% [markdown]
 # Process data
 
+# %%
+pdata_raw = df_raw.loc[:, cols_data].mean(axis=1).fillna(0)
+mw = df_mw.loc[pdata_raw.index.to_list(), 'MW (g/mmol)']
+
+weight_tot = sum(pdata_raw * mw)
+# pdata variable: protein fraction in proteome (g protein / gDW)
+pdata = (pdata_raw * mw) / weight_tot
+pdata = pdata[pdata > 0]
 
 # %%
-
-
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)', 'type', 'conc (g/gDW)', 'vtrans (mmol/gDW/h)']
-idx = [i for i in df_prot.index if i in df_raw.index]
+idx = [i for i in df_prot.index if i in pdata.index]
 
 df_data = pd.DataFrame(columns=cols, index=idx)
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)']
 df_data.loc[idx, cols] = df_prot.loc[idx, cols]
 
-# must match the growth rate in other files
-mu = 0.1
-# protein fraction (disable by uncommenting "ptot = 1" unless composition varies w/ growth rate)
-# ptot = (36.94 + 34.22*mu) / 100
-# nlim: ptot = 14.2 / 100
-ptot = 36.8 / 100
+ptot = (36.94 + 34.22*mu) / 100 #Clim
+#ptot = (10.57 + 108.56*mu) / 100 #Nlim
 
-cols_data = ['C_frac_final']
 for i in df_data.index:
-    data = df_raw.loc[i, cols_data]
-    # for d in data:
-    #     if type(d) != ('int' or 'float'): 
+    pval = pdata[i]
+    mw = df_data.loc[i, 'MW (g/mmol)']
+    df_data.loc[i, 'conc (g/gDW)'] = pval * ptot
+    df_data.loc[i, 'vtrans (mmol/gDW/h)'] = mu * pval * ptot / mw
+    df_data.loc[i, 'type'] = 'truedata_enz'
     
-    # Filter out null values
-    data = [c for c in data if pd.isnull(c) == False]
-    print(data)
-    #if data == []:
-    #    df_data.loc[i, 'conc (g/gDW)'] = 0
-    #    df_data.loc[i, 'vtrans (mmol/gDW/h)'] = 0
-    if data != []:
-        # print(data)
-        c_list = []
-        for c in data:
-            if type(c) != 'int' and type(c) != 'float': 
-                continue
-            else:
-                c_list.append(c)
-        # Average out the data for each protein (accounts for replicate experiments, if done)
-        c_avg = np.mean([data])
-        # c_avg = np.mean([c_list])
-        # c_avg = 
-        # # print(c_avg)
-        # # c_avg = data
-        mw = df_prot.loc[i, 'MW (g/mmol)']
-        df_data.loc[i, 'conc (g/gDW)'] = c_avg * ptot
-        df_data.loc[i, 'vtrans (mmol/gDW/h)'] = mu * c_avg * ptot / mw
-        df_data.loc[i, 'type'] = 'truedata_enz'
-        
-        if i in df_ribonuc.id.to_list():
-            df_data.loc[i, 'type'] = 'truedata_ribonuc'
-        elif i in df_ribomito.id.to_list():
-            df_data.loc[i, 'type'] = 'truedata_ribomito'
-
-
+    if i in df_ribonuc.id.to_list():
+        df_data.loc[i, 'type'] = 'truedata_ribonuc'
+    elif i in  df_ribomito.id.to_list():
+        df_data.loc[i, 'type'] = 'truedata_ribomito'
 
 # %%
-
+# Store index that matches the raw data
+idx_truedata_old = df_data.index.to_list()
 
 # Reindex - incorporate info from protein copy selector
-idx = [df_select.selected_compartmental_copy[i] if i in df_select.index        else i for i in df_data.index]
+idx = [df_select.selected_compartmental_copy[i] if i in df_select.index \
+       else i for i in df_data.index]
 df_data.index = idx
 df_data['id'] = df_data.index.to_list()
 
-
-
 # %%
-
-
 # Clean out NaN rows
 df_data = df_data[df_data['conc (g/gDW)'].isnull() == False]
 
-
+# %% [markdown]
 # Gap-fill data
 
-
 # %%
-
-
 # Load protein
 df_prot = pd.read_excel(prot_path)
 df_prot.index = df_prot.id.to_list()
@@ -223,7 +190,7 @@ df_data_copy_filtered
 
 idx_enzsyn = df_eqn[df_eqn.id.str.contains('ENZSYN-')].index
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)']
-# print(df_prot)
+
 for i in idx_enzsyn:
     x = metabolites_dict_from_reaction_equation_RBA(df_eqn.reaction[i])
     met_dict = dict()
@@ -245,20 +212,20 @@ for i in idx_enzsyn:
         for k in met_dict.keys():
             # print(df_data)
             if k not in in_data:
-                # print("k=",k)
+                idx_truedata_old.append(k)
                 df_data_copy_filtered.loc[k, cols] = df_prot.loc[k, cols]
                 df_data_copy_filtered.loc[k, 'conc (g/gDW)'] = cmin * met_dict[k]
                 df_data_copy_filtered.loc[k, 'vtrans (mmol/gDW/h)'] = vmin * met_dict[k]
                 df_data_copy_filtered.loc[k, 'type'] = 'gapfill_subunit'
 
-df_data_copy_filtered.to_excel('./Rabinowitz2023_batch_glc.xlsx', index=None)
+df_data_copy_filtered.to_excel(fout_name, index=None)
 
 # %%
-display(df_data_copy_filtered[df_data_copy_filtered.duplicated(subset='uniprot', keep=False)].sort_values('uniprot'))
+print(df_data_copy_filtered[df_data_copy_filtered.duplicated(subset='uniprot', keep=False)].sort_values('uniprot'))
 
 # %%
 # show all gapfill_subunit rows
-display(df_data_copy_filtered[df_data_copy_filtered['id'] == 'gapfill_subunit'])
+print(df_data_copy_filtered[df_data_copy_filtered['id'] == 'gapfill_subunit'])
 
 # %%
 # if any row has an "id" value not in the "id" values of df_prot, then print that row
@@ -269,46 +236,7 @@ if errors:
 # %%
 
 # Calculate fraction of non-enzymatic and non-ribosomal proteins
-# df_nomodel
-
-
 
 # %%
-
-
-# cols = ['id', 'pfrac (g protein/gDW)']
-# idx = [i for i in df_raw.index if i not in df_prot.index]
-
-# df_nomodel = pd.DataFrame(columns=cols, index=idx)
-# cols = ['id', 'pfrac (g protein/gDW)']
-# df_nomodel['id'] = idx
-
-# # cols_data = ['Min_aerobic_1', 'Min_aerobic_2']
-# for i in df_nomodel.index:
-#     data = df_raw.loc[i, cols_data]
-#     data = [c for c in data if pd.isnull(c) == False]
-#     print(i)
-#     if data == []:
-#         df_nomodel.loc[i, 'pfrac (g protein/gDW)'] = 0
-#     elif data != []:
-#         print(i,data)
-#         c_avg = np.mean(data)
-#         df_nomodel.loc[i, 'pfrac (g protein/gDW)'] = c_avg
-
-
-
-# %%
-
-
-# df_nomodel['pfrac (g protein/gDW)'].sum()
-
-
-
-# %%
-
-
-# df_nomodel['pfrac (g protein/gDW)']
-
-
-
-
+idx = [i for i in pdata.index if i not in idx_truedata_old]
+pdata[idx].sum()
