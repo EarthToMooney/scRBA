@@ -27,6 +27,9 @@ res_metab.calculate_metabolic_flux()
 res_esyn = RBA_result(biom_id=biom_id, twocol_format=True)
 res_esyn.load_raw_flux('./min_flux_violation/enz_flux_calculation.txt')
 
+with open("../../../../GAMS/model/RBA_rxns_rxnmetabolicnetwork.txt","r") as f: 
+    all_rxns = [line.strip().replace("'","") for line in f.readlines() if line.strip() != "/"]
+
 mu = res_metab.growth_rate
 print('Growth rate:', mu)
 print('EX_glc__D_e', res_metab.metabolic_flux['EX_glc__D_e'])
@@ -142,7 +145,7 @@ set2 = set2 - set4
 set3 = set3 - set4
 
 kapp = dict()
-kapps_rba = dict()
+kapp_per_hr = dict()
 ### For testing only: set each rxn-enzyme's kapp individually
 kapp_minimal_assumptions = dict()
 kapp_ma_cutoff = 1e-1
@@ -187,7 +190,7 @@ for enz in set1:
     
     enzval = res_esyn.raw_flux['ENZSYN-' + enz]
     kapp[rid] = mu * abs(rval) / enzval / 3600
-    kapps_rba[rid] = kapp[rid] * 3600
+    kapp_per_hr[rid] = kapp[rid] * 3600
     
 ### Set 2: Enzyme-reaction one-to-many
 for enz in set2:
@@ -208,7 +211,7 @@ for enz in set2:
     
     for rid in rids:
         kapp[rid] = mu * rvalsum / enzval / 3600
-        kapps_rba[rid] = kapp[rid] * 3600
+        kapp_per_hr[rid] = kapp[rid] * 3600
         
 ### Set 3: Enzyme-reaction many-to-one
 rxns = set().union(*[enzdict[enz] for enz in set3])
@@ -229,7 +232,7 @@ for rxn in rxns:
         
     for rid in rids:
         kapp[rid] = mu * abs(rval) / enzval / 3600
-        kapps_rba[rid] = kapp[rid] * 3600
+        kapp_per_hr[rid] = kapp[rid] * 3600
         
         
 ### Set 4: Enzyme-reaction many-to-many
@@ -300,7 +303,7 @@ for enztext,x in mapper.items():
             
     for rid in rids:
         kapp[rid] = mu * rxnval / enzval / 3600
-        kapps_rba[rid] = kapp[rid] * 3600
+        kapp_per_hr[rid] = kapp[rid] * 3600
 #Flux is numerically low, near zero
 with open('../exclude_parameterization_list.txt') as f:
     excl = f.read().split('\n')
@@ -311,42 +314,56 @@ with open('../exclude_parameterization_list.txt') as f:
 excl = [r for r in excl if r != '']
 excl += []
 
+import numpy as np
+default_kapp = np.median(list(kapp.values())) * 3600
+
 texts = ['rxnid\tkapp (1/s)']
+perhr_texts_used_only = ['/']
+kapp_per_hr = dict()
 for k,v in kapp.items():
     if k not in excl:
         texts.append(k + '\t' + str(v))
+        kapp_per_hr[k] = v*3600
     
 with open('./kapps_in_vivo.txt', 'w') as f:
     f.write('\n'.join(texts))
-import numpy as np
-kapp_med = np.median(list(kapp.values())) * 3600
 kapp_max = max(list(kapp.values())) * 3600
 kapp_ma_med = np.median(list(kapp_minimal_assumptions.values()))
 # return kapps in a format suitable for use in RBA
 kapp_txt = ['/']
-with open("../../../../GAMS/model/RBA_rxns_rxnmetabolicnetwork.txt","r") as f: 
-    all_rxns = [line.strip().replace("'","") for line in f.readlines() if line.strip() != "/"]
 
-# check if any inactive rxns were used in B2
+# check if any inactive rxns were used in last step
 with open('min_flux_violation/min_flux_violation.flux_essential_inactive_rxns.txt') as f:
     rxns_essential_inactive = f.read().split('\n')
 rxns_essential_inactive = [i for i in rxns_essential_inactive if i != '']
 rxns_essential_inactive = [i.split('\t')[0] for i in rxns_essential_inactive]
 
 output_info = []
+for r in rxns_essential_inactive:
+    if r not in kapp_per_hr.keys():
+        kapp_per_hr[r] = default_kapp
+for k,v in kapp_per_hr.items():
+    perhr_texts_used_only.append("'" + k + "'" + '\t' + str(v))
+
+with open('./kapps_per_hr_without_unused_rxns.txt', 'w') as f:
+    f.write('\n'.join(perhr_texts_used_only + ['/']))
+
+perhr_texts = ['/']
+# add all other rxns with default kapp
 for rxn in all_rxns: 
     enz = rxn.split('-')[-1]
     rxn_name_without_enz = rxn.split('-')[-2]
     if enz not in ['SPONT', 'UNKNOWN']:
-        if rxn in kapps_rba.keys():
-            if kapps_rba[rxn] <= 1e-5:
-                output_info.append('kapp <= cutoff for ' + rxn)
-                kapps_rba[rxn] = kapp_med
+        if rxn in kapp_per_hr.keys():
+            pass
+            # if kapp_per_hr[rxn] <= 1e-5:
+                # output_info.append('kapp <= cutoff for ' + rxn)
+                # kapp_per_hr[rxn] = default_kapp
         elif rxn in rxns_essential_inactive:
-            kapps_rba[rxn] = kapp_med # to minimize the risk of kapps making growth infeasible 
+            kapp_per_hr[rxn] = default_kapp # to minimize the risk of kapps making growth infeasible 
         else: 
             output_info.append('No kapp found for ' + rxn)
-            kapps_rba[rxn] = kapp_med
+            kapp_per_hr[rxn] = default_kapp
         if rxn not in kapp_minimal_assumptions.keys():
             # set kapp to the max value of all kapps for that enzyme (or reaction, if unavailable), to minimize risk of overestimation
             new_kapp = 0
@@ -369,7 +386,11 @@ for rxn in all_rxns:
             kapp_ma_text.append("'" + rxn + "'\t" + str(kapp_minimal_assumptions[rxn]))
         elif kapp_minimal_assumptions[rxn] <= kapp_ma_cutoff:
             kapp_ma_text.append("'" + rxn + "'\t" + str(kapp_ma_med))
-        kapp_txt.append("'" + rxn + "'\t" + str(kapps_rba[rxn]))
+        kapp_txt.append("'" + rxn + "'\t" + str(kapp_per_hr[rxn]))
+        perhr_texts.append("'" + rxn + "'\t" + str(kapp_per_hr[rxn]))
+
+with open('./kapps_per_hr.txt', 'w') as f:
+    f.write('\n'.join(perhr_texts + ['/']))
 with open('./kapp_default_values.txt', 'w') as f:
     f.write('\n'.join(output_info))
 with open('./kapps_RBA.txt', 'w') as output:
@@ -389,14 +410,14 @@ if len(rxns_essential_inactive) > 0:
     # enzsyn_fluxes = []
     c = 0
     for rxn in rxns_essential_inactive:
-        if rxn in kapps_rba.keys():
+        if rxn in kapp_per_hr.keys():
             # assume kapp is at its max value, to prevent excessive constraints
-            kapps_rba[rxn] = kapp_max 
-            kapp_test_text.append('Equation EnzCap'+str(c)+'; EnzCap'+str(c)+".. v('"+rxn.replace('RXN-','ENZLOAD-')+"')*"+str(kapps_rba[rxn])+" =e= %mu% * v('"+rxn+"');")
+            kapp_per_hr[rxn] = kapp_max 
+            kapp_test_text.append('Equation EnzCap'+str(c)+'; EnzCap'+str(c)+".. v('"+rxn.replace('RXN-','ENZLOAD-')+"')*"+str(kapp_per_hr[rxn])+" =e= %mu% * v('"+rxn+"');")
             c += 1
         # add its kapp as a constraint on ENZLOAD and flux
-    #     if rxn in kapps_rba.keys() and rxn in fluxes.keys():
-    #         enzsyn_fluxes.append('ENZSYN-' + rxn + '\t' + str(mu*fluxes[rxn]/kapps_rba[rxn]))
+    #     if rxn in kapp_per_hr.keys() and rxn in fluxes.keys():
+    #         enzsyn_fluxes.append('ENZSYN-' + rxn + '\t' + str(mu*fluxes[rxn]/kapp_per_hr[rxn]))
     # with open('./enzsyn_fluxes.txt', 'w') as f:
     #     f.write('\n'.join(enzsyn_fluxes))
     with open('./kapp_test.txt', 'w') as f:
