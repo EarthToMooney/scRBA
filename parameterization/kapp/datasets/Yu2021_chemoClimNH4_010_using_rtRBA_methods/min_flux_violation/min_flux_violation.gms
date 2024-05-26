@@ -80,9 +80,10 @@ v.up(j)$media(j) = 1e4 * %nscale%;
 
 * Turning off all versions of biomass dilution reaction
 * You need to turn on the respective version corresponding to your growth condition
-v.fx('BIOSYN-COFACTORANAEROBIC') = 0; v.fx('BIOSYN-compCERANAEROBIC') = 0;
-v.fx('BIOSYN-BIODILNOGAM') = 0; v.fx('BIOSYN-BIODILAERO') = 0; v.fx('BIOSYN-BIODILAERO-NOGAM') = 0; v.fx('BIOSYN-BIODILBATCHANAERO') = 0;
-v.fx('BIOSYN-BIODILCHEMOANAERO') = 0; v.fx('BIOSYN-BIODILSTARVE') = 0;
+v.up('BIOSYN-BIODILAERO') = 0; v.up('BIOSYN-COFACTORANAEROBIC') = 0;
+v.up('BIOSYN-compCERANAEROBIC') = 0; v.up('BIOSYN-BIODILBATCHANAERO') = 0;
+v.up('BIOSYN-BIODILCHEMOANAERO') = 0; v.up('BIOSYN-BIODILSTARVE') = 0;
+v.up('BIOSYN-BIODILNOGAM') = 0;
 
 * protein abundance limits
 $include "../prosyn_abundance_constraints.txt"
@@ -211,3 +212,4 @@ loop(pro,
     );
 );
 putclose ff7;
+

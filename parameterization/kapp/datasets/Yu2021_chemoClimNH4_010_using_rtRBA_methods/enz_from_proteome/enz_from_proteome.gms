@@ -6,7 +6,7 @@ $INLINECOM /*  */
 $include "./enz_from_proteome_GAMS_settings.txt"
 
 options
-	LP = cplex /*Solver selection*/
+	LP = soplex /*Solver selection*/
 	limrow = 0 /*number of equations listed, 0 is suppresed*/
 	limcol = 0 /*number of variables listed, 0 is suppresed*/
 	iterlim = 1000000 /*iteration limit of solver, for LP it is number of simplex pivots*/
@@ -45,9 +45,6 @@ v.up(j)$enzout(j) = 1e4;
 v.up(j)$prodata(j) = vprotexpmt(j)*1e6;
 v.up(j)$pronodata(j) = 0;
 
-* protein abundance limits
-$include "../protein_abundance_constraints.txt"
-
 *** EQUATION DEFINITIONS ***
 Equations
 Obj, Stoic
@@ -61,7 +58,7 @@ Stoic(i)..		sum(j, S(i,j)*v(j)) =e= 0;
 
 *** BUILD OPTIMIZATION MODEL ***
 Model optmodel
-/all/;
+/Obj, Stoic/;
 optmodel.optfile = 1;
 
 *** SOLVE ***

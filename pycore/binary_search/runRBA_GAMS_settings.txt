@@ -8,7 +8,7 @@ $setGlobal uptake_path ../../GAMS/model/RBA_rxns_EXREV.txt
 $setGlobal media_path ../../GAMS/model/RBA_rxns_EXREV_YNB.txt
 $setGlobal sij_path ../../GAMS/model/RBA_sij.txt
 $setGlobal prolen_path ../../GAMS/model/RBA_proteinLength.txt
-$setGlobal kapp_path ../../parameterization/kapp/datasets/Yu2021_chemoClimNH4_010/kapps_per_hr.txt
+$setGlobal kapp_path ../../parameterization/kapp/datasets/Yu2021_chemoClimNH4_010_using_rtRBA_methods/kapps_per_hr.txt
 *$setGlobal kapp_path ../../parameterization/kapp/datasets/Yu2021_chemoClimNH4_010/kapps_per_hr_without_unused_rxns.txt
 *$setGlobal kapp_path ./old-kapps-with-defaults.txt
 *$setGlobal kapp_path ../RBA_kapp_clim_per_hour.txt

@@ -1,6 +1,6 @@
 path_gams = '../../../../GAMS/parameterization/enz_from_proteome/'
 path_out = './enz_from_proteome/'
-path_data = './Rabinowitz2023_batch_glc.xlsx'
+path_data = './Yu2021_chemoClimNH4_010.xlsx'
 
 run_setting_file_from = './GAMS_setting_files/enz_from_proteome_GAMS_settings.txt'
 run_setting_file_to = './enz_from_proteome/enz_from_proteome_GAMS_settings.txt'

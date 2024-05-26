@@ -1,0 +1,4 @@
+Input=test.gms
+ScrDir=225an
+SysDir=/storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx
+ScriptNext=225an/gamsnext.sh

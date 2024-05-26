@@ -1,7 +1,7 @@
 path_gams = '../../../../GAMS/parameterization/min_flux_violation/'
 path_rxns_list = '../../../../GAMS/model/RBA_rxns.txt'
 path_out = './min_flux_violation/'
-path_data = './Rabinowitz2023_batch_glc.xlsx'
+path_data = './Yu2021_chemoClimNH4_010.xlsx'
 path_enz_level = './enz_from_proteome/enz_flux_calculation.txt'
 
 nscale=1e4 # will be used as scale when running GAMS

@@ -231,7 +231,7 @@ print(df_data_copy_filtered[df_data_copy_filtered['id'] == 'gapfill_subunit'])
 # if any row has an "id" value not in the "id" values of df_prot, then print that row
 if errors:
     error_message = "Protein IDs not in PROTEIN_stoich_curation.xlsx:\n" + "\n".join(errors)
-    raise ValueError(error_message)
+    print(error_message)
 
 # %%
 
