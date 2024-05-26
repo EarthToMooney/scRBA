@@ -47,6 +47,7 @@
 'BIO-protdummy'
 'BIO-protmito'
 'BIO-protmodeled'
+'BIO-protwasted'
 'BIO-ps_c'
 'BIO-ribflv_c'
 'BIO-rna'
