@@ -96,7 +96,8 @@ for i in fluxes:
     r,vtype,val = i.split('\t')
     fluxes_new.append('\t'.join([r, vtype, str(float(val) / nscale)]))
     rxns_used.append("'" + r + "'")
-    enz = r.split('-')[-1]
+    # "enz" comes after _FWD- or _REV- in rxn ID
+    enz = r.replace('_REV-','_FWD-').split('_FWD-')[-1]
     # if rxn (as determined by characters after last "-") isn't SPONT or UNKNOWN
     if enz not in ['SPONT', 'UNKNOWN'] and r.split('-')[0] == 'RXN':
         enzload = r.replace('RXN-', 'ENZLOAD-',1)
