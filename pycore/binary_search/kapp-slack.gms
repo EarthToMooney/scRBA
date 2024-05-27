@@ -5,8 +5,8 @@
 $INLINECOM /*  */
 $include "./runRBA_GAMS_settings.txt"
 * Scale values of all variables by a factor, then when write to file, descale them
-$setGlobal nscale 1e3
-$setGlobal nscaleback 1e-3
+$setGlobal nscale 1e5
+$setGlobal nscaleback 1e-5
 
 * For second run when the protein capacity is corrected, overwrite this default value of 1
 * Value of 1 means the protein capacity is used freely, which leads to cheap proteins that
@@ -80,7 +80,7 @@ kapp_slack_ub.fx(j)$(prosyn(j) or prowaste(j) or nuc_translation(j) or mito_tran
 kapp_slack_lb.fx(j)$(prosyn(j) or prowaste(j) or nuc_translation(j) or mito_translation(j) or uptake(j) or media(j)) = 0;
 
 *** SET FLUX LOWER AND UPPER BOUNDS ***
-v.lo(j) = 0; v.up(j) = 1e3 * %nscale%;
+v.lo(j) = 0; v.up(j) = 1e4 * %nscale%;
 
 * Simulation top-level settings
 * Enable or disable wasteful protein production, disabled by default (to solve faster)
@@ -105,12 +105,14 @@ v.fx(j)$prowaste(j) = 0;
 
 * Disable all biomass reactions
 * Condition-specific biomass reaction activation has to be done in phenotype.txt file
-v.up('BIOSYN-BIODILAERO') = 0; 
-v.up('BIOSYN-COFACTORANAEROBIC') = 0; v.up('BIOSYN-compCERANAEROBIC') = 0; v.up('BIOSYN-BIODILBATCHANAERO') = 0; v.up('BIOSYN-BIODILCHEMOANAERO') = 0; v.up('BIOSYN-BIODILSTARVE') = 0; v.up('BIOSYN-BIODILNOGAM') = 0;
+v.up('BIOSYN-BIODILAERO') = 0; v.up('BIOSYN-COFACTORANAEROBIC') = 0;
+v.up('BIOSYN-compCERANAEROBIC') = 0; v.up('BIOSYN-BIODILBATCHANAERO') = 0;
+v.up('BIOSYN-BIODILCHEMOANAERO') = 0; v.up('BIOSYN-BIODILSTARVE') = 0;
+v.up('BIOSYN-BIODILNOGAM') = 0;
 
 * Media
 v.up(j)$uptake(j) = 0;
-v.up(j)$media(j) = 1e3 * %nscale%;
+v.up(j)$media(j) = 1e4 * %nscale%;
 
 $include "%phenotype_path%"
 * Set all organism-specific parameters in phenotype.txt
@@ -120,8 +122,9 @@ $include "%phenotype_path%"
 
 *** EQUATION DEFINITIONS ***
 Equations
-Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo, ModelProtAlloCorrection
+Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo
 ;
+*, ModelProtAlloCorrection
 *$include %enz_cap_declares_path%
 
 Obj..			z =e= sum(j, kapp_slack_lb(j) + kapp_slack_ub(j));
@@ -129,7 +132,7 @@ Stoic(i)..		sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityMito.. 	v('RIBOSYN-ribomito') * %kribomito% =e= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
 RiboCapacityNuc.. 	v('RIBOSYN-ribonuc') * %kribonuc% =e= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
 NonModelProtAllo..	v('BIOSYN-PROTMODELED') =e= (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
-ModelProtAlloCorrection..	v('BIOSYN-PROTDUMMY2') =g= (1 - %corrected_protein_capacity_percentage%) * (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
+*ModelProtAlloCorrection..	v('BIOSYN-PROTDUMMY2') =g= (1 - %corrected_protein_capacity_percentage%) * (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
 MitoProtAllo..		v('BIOSYN-PROTMITO') =l= %max_allowed_mito_proteome_allo_fraction% * v('BIOSYN-PROTMODELED');
 *$include %kapp_slack_enz_cap_eqns_path%
 $include "../../GAMS/model/kapp-slack-RBA_enzCapacityConstraints_equality_version.txt" 
