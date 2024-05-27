@@ -12,7 +12,7 @@ $setGlobal fluxSlackAllow 0
 $setGlobal prosynSlackAllow 0
 
 options
-    LP = soplex /*Solver selection*/
+    LP = cplex /*Solver selection*/
     limrow = 1000000 /*number of equations listed, 0 is suppresed*/
     limcol = 1000000 /*number of variables listed, 0 is suppresed*/
     iterlim = 1000000 /*iteration limit of solver, for LP it is number of simplex pivots*/
@@ -115,7 +115,9 @@ prosyn.optfile = 1;
 Solve prosyn using lp minimizing prosynSlackSum;
 
 * step 2: minimize inactive fluxes, to reduce reliance on rxns whose proteins aren't made
-prosynSlackSum.up = prosynSlackSum.l;
+*prosynSlackSum.up = prosynSlackSum.l;
+prosynSlackUB.up(pro) = prosynSlackUB.l(pro);
+prosynSlackLB.up(pro) = prosynSlackLB.l(pro);
 Model minInactive /all/;
 minInactive.optfile = 1;
 Solve minInactive using lp minimizing inactiveFluxSum;

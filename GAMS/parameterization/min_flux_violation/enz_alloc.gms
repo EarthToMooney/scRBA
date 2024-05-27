@@ -8,10 +8,10 @@ $setGlobal venzSlackAllow 0
 $setGlobal fluxSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * update to match solver tolerance
-$setGlobal tol 1e-12
+$setGlobal tol 2e-9
 
 options
-    LP = soplex /*Solver selection*/
+    LP = cplex /*Solver selection*/
     limrow = 1000000 /*number of equations listed, 0 is suppresed*/
     limcol = 1000000 /*number of variables listed, 0 is suppresed*/
     iterlim = 1000000 /*iteration limit of solver, for LP it is number of simplex pivots*/
@@ -78,7 +78,7 @@ v.lo(j) = 0; v.up(j) = 1e4 * %nscale%;
 
 ** Disable enzyme load network for reactions that can't be used
 v.fx(j)$rxns_enzload(j) = 0;
-v.lo(j)$rxns_enzload_used(j) = %tol%; 
+v.lo(j)$rxns_enzload_used(j) = 1e-12; 
 v.up(j)$rxns_enzload_used(j) = 1e4 * %nscale%;
 
 * Optional constraint on allowed proteome allocation to mitochondrial proteins (disable by setting to 1)
@@ -128,18 +128,19 @@ Solve prosyn using lp minimizing z;
 
 * Solve again, encouraging more equal use of all enzymes
 * force total flux to previous value
-z.fx = z.l;
+z.up = z.l+%tol%;
 
 model ni_rxns /all/;
 ni_rxns.optfile = 1;
 Solve ni_rxns using lp minimizing nonessentialInactiveFluxSum;
-
-nonessentialInactiveFluxSum.up = nonessentialInactiveFluxSum.l;
+v.up(j)$rxns_nonessential_inactive(j) = v.l(j)$rxns_nonessential_inactive(j)+%tol%;
+*nonessentialInactiveFluxSum.up = nonessentialInactiveFluxSum.l+%tol%;
 model i_rxns /all/;
 i_rxns.optfile = 1;
 Solve i_rxns using lp minimizing inactiveFluxSum;
 
-inactiveFluxSum.up = inactiveFluxSum.l+%tol%;
+*v.up(j)$rxns_inactive(j) = v.l(j)$rxns_inactive(j)+1e-8;
+*inactiveFluxSum.up = inactiveFluxSum.l+%tol%;
 model m_rxns /all/;
 m_rxns.optfile = 1;
 Solve m_rxns using lp minimizing fluxSum;
