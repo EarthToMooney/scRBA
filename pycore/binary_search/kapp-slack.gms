@@ -73,9 +73,9 @@ Variables
 z, v(j), kapp_slack_ub(j),kapp_slack_lb(j)
 ;
 kapp_slack_ub.lo(j) = 0;
-kapp_slack_ub.up(j) = 1e5;
+kapp_slack_ub.up(j) = 1e10;
 kapp_slack_lb.lo(j) = 0;
-kapp_slack_lb.up(j) = 1e5;
+kapp_slack_lb.up(j) = 1e10;
 kapp_slack_ub.fx(j)$(prosyn(j) or prowaste(j) or nuc_translation(j) or mito_translation(j) or uptake(j) or media(j)) = 0;
 kapp_slack_lb.fx(j)$(prosyn(j) or prowaste(j) or nuc_translation(j) or mito_translation(j) or uptake(j) or media(j)) = 0;
 
@@ -132,7 +132,7 @@ NonModelProtAllo..	v('BIOSYN-PROTMODELED') =e= (1 - %nonmodeled_proteome_allocat
 ModelProtAlloCorrection..	v('BIOSYN-PROTDUMMY2') =g= (1 - %corrected_protein_capacity_percentage%) * (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
 MitoProtAllo..		v('BIOSYN-PROTMITO') =l= %max_allowed_mito_proteome_allo_fraction% * v('BIOSYN-PROTMODELED');
 *$include %kapp_slack_enz_cap_eqns_path%
-$include "../../GAMS/model/kapp-slack-RBA_enzCapacityConstraints_eqns_equality_version.txt" 
+$include "../../GAMS/model/kapp-slack-RBA_enzCapacityConstraints_equality_version.txt" 
 
 *** BUILD OPTIMIZATION MODEL ***
 Model rba
@@ -168,4 +168,13 @@ loop(j,
 	);
 );
 putclose ff3;
+
+file ff4 /%system.FN%.kapp_slack_users.txt/;
+put ff4;
+loop(j,
+	if ( (kapp_slack_ub.l(j) gt 0) or (kapp_slack_lb.l(j) gt 0),
+		put "'", j.tl:0, "'"/;
+	);
+);
+putclose ff4;
 
