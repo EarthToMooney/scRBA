@@ -1,0 +1,210 @@
+<RBARnas>
+  <listOfComponents>
+    <component id="COM-nurA" type="Nucleotide" weight="2.9036"/>
+    <component id="COM-nurC" type="Nucleotide" weight="2.7017"/>
+    <component id="COM-nurG" type="Nucleotide" weight="3.0382"/>
+    <component id="COM-nurT" type="Nucleotide" weight="2.7102"/>
+  </listOfComponents>
+  <listOfMacromolecules>
+    <macromolecule id="MAC-trnaala_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="10.5"/>
+        <componentReference component="COM-nurC" stoichiometry="19.5"/>
+        <componentReference component="COM-nurG" stoichiometry="26.0"/>
+        <componentReference component="COM-nurU" stoichiometry="17.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnaarg_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="14.666667"/>
+        <componentReference component="COM-nurC" stoichiometry="19.0"/>
+        <componentReference component="COM-nurG" stoichiometry="22.333333"/>
+        <componentReference component="COM-nurU" stoichiometry="16.333333"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnaasn_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="16.0"/>
+        <componentReference component="COM-nurC" stoichiometry="18.0"/>
+        <componentReference component="COM-nurG" stoichiometry="22.0"/>
+        <componentReference component="COM-nurU" stoichiometry="18.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnaasp_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="12.0"/>
+        <componentReference component="COM-nurC" stoichiometry="16.5"/>
+        <componentReference component="COM-nurG" stoichiometry="24.0"/>
+        <componentReference component="COM-nurU" stoichiometry="19.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnacys_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="13.0"/>
+        <componentReference component="COM-nurC" stoichiometry="16.0"/>
+        <componentReference component="COM-nurG" stoichiometry="23.0"/>
+        <componentReference component="COM-nurU" stoichiometry="20.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnagln_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="13.333333"/>
+        <componentReference component="COM-nurC" stoichiometry="17.666667"/>
+        <componentReference component="COM-nurG" stoichiometry="19.666667"/>
+        <componentReference component="COM-nurU" stoichiometry="21.333333"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnaglu_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="14.333333"/>
+        <componentReference component="COM-nurC" stoichiometry="21.333333"/>
+        <componentReference component="COM-nurG" stoichiometry="19.666667"/>
+        <componentReference component="COM-nurU" stoichiometry="16.666667"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnagly_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="12.0"/>
+        <componentReference component="COM-nurC" stoichiometry="19.0"/>
+        <componentReference component="COM-nurG" stoichiometry="22.0"/>
+        <componentReference component="COM-nurU" stoichiometry="18.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnahis_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="17.0"/>
+        <componentReference component="COM-nurC" stoichiometry="14.0"/>
+        <componentReference component="COM-nurG" stoichiometry="20.0"/>
+        <componentReference component="COM-nurU" stoichiometry="21.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnaile_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="14.0"/>
+        <componentReference component="COM-nurC" stoichiometry="20.5"/>
+        <componentReference component="COM-nurG" stoichiometry="21.5"/>
+        <componentReference component="COM-nurU" stoichiometry="17.5"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnaleu_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="16.666667"/>
+        <componentReference component="COM-nurC" stoichiometry="19.666667"/>
+        <componentReference component="COM-nurG" stoichiometry="27.0"/>
+        <componentReference component="COM-nurU" stoichiometry="20.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnalys_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="14.0"/>
+        <componentReference component="COM-nurC" stoichiometry="17.0"/>
+        <componentReference component="COM-nurG" stoichiometry="22.333333"/>
+        <componentReference component="COM-nurU" stoichiometry="19.333333"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnamet_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="19.0"/>
+        <componentReference component="COM-nurC" stoichiometry="17.5"/>
+        <componentReference component="COM-nurG" stoichiometry="20.0"/>
+        <componentReference component="COM-nurU" stoichiometry="16.5"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnaphe_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="16.0"/>
+        <componentReference component="COM-nurC" stoichiometry="16.75"/>
+        <componentReference component="COM-nurG" stoichiometry="22.75"/>
+        <componentReference component="COM-nurU" stoichiometry="17.5"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnapro_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="8.0"/>
+        <componentReference component="COM-nurC" stoichiometry="19.5"/>
+        <componentReference component="COM-nurG" stoichiometry="25.0"/>
+        <componentReference component="COM-nurU" stoichiometry="19.5"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnaser_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="14.0"/>
+        <componentReference component="COM-nurC" stoichiometry="20.0"/>
+        <componentReference component="COM-nurG" stoichiometry="27.0"/>
+        <componentReference component="COM-nurU" stoichiometry="20.8"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnathr_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="16.666667"/>
+        <componentReference component="COM-nurC" stoichiometry="16.0"/>
+        <componentReference component="COM-nurG" stoichiometry="21.333333"/>
+        <componentReference component="COM-nurU" stoichiometry="18.333333"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnatrp_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="15.5"/>
+        <componentReference component="COM-nurC" stoichiometry="16.0"/>
+        <componentReference component="COM-nurG" stoichiometry="20.0"/>
+        <componentReference component="COM-nurU" stoichiometry="21.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnatyr_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="15.5"/>
+        <componentReference component="COM-nurC" stoichiometry="19.0"/>
+        <componentReference component="COM-nurG" stoichiometry="23.0"/>
+        <componentReference component="COM-nurU" stoichiometry="17.5"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-trnaval_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="15.0"/>
+        <componentReference component="COM-nurC" stoichiometry="19.333333"/>
+        <componentReference component="COM-nurG" stoichiometry="20.666667"/>
+        <componentReference component="COM-nurU" stoichiometry="19.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-mrna_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="0.192398"/>
+        <componentReference component="COM-nurC" stoichiometry="0.336719"/>
+        <componentReference component="COM-nurG" stoichiometry="0.294495"/>
+        <componentReference component="COM-nurU" stoichiometry="0.176388"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-rrna18s_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="483.0"/>
+        <componentReference component="COM-nurC" stoichiometry="348.0"/>
+        <componentReference component="COM-nurG" stoichiometry="459.0"/>
+        <componentReference component="COM-nurU" stoichiometry="510.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-rrna5s_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="30.0"/>
+        <componentReference component="COM-nurC" stoichiometry="30.0"/>
+        <componentReference component="COM-nurG" stoichiometry="33.0"/>
+        <componentReference component="COM-nurU" stoichiometry="28.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-rrna58s_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="41.0"/>
+        <componentReference component="COM-nurC" stoichiometry="36.0"/>
+        <componentReference component="COM-nurG" stoichiometry="37.0"/>
+        <componentReference component="COM-nurU" stoichiometry="44.0"/>
+      </composition>
+    </macromolecule>
+    <macromolecule id="MAC-rrna25s_c" compartment="PART-c">
+      <composition>
+        <componentReference component="COM-nurA" stoichiometry="899.0"/>
+        <componentReference component="COM-nurC" stoichiometry="662.0"/>
+        <componentReference component="COM-nurG" stoichiometry="966.0"/>
+        <componentReference component="COM-nurU" stoichiometry="869.0"/>
+      </composition>
+    </macromolecule>
+  </listOfMacromolecules>
+</RBARnas>
