@@ -1,0 +1,192 @@
+unknown metabolite 'hxdcal_c' created
+unknown metabolite 'hxdcol_c' created
+unknown metabolite '2etmal_m' created
+unknown metabolite '2etmal_c' created
+unknown metabolite '3etmal_c' created
+unknown metabolite '2oxptn_c' created
+unknown metabolite 'btal_c' created
+unknown metabolite 'btoh_c' created
+unknown metabolite 'citm_m' created
+unknown metabolite 'citac_m' created
+unknown metabolite '3mmal_m' created
+unknown metabolite 'btoh_e' created
+unknown metabolite 'tag_e' created
+unknown metabolite 'cou_c' created
+unknown metabolite 'nrgnch_c' created
+unknown metabolite 'nrgn_c' created
+unknown metabolite 'nrgn_e' created
+unknown metabolite 'cou_e' created
+unknown metabolite 'citm_c' created
+unknown metabolite 'citm_e' created
+unknown metabolite '3hbcoa__R_c' created
+unknown metabolite 'polyhb_c' created
+unknown metabolite 'polyhb_e' created
+unknown metabolite 'amorph_c' created
+unknown metabolite 'nhemrd_c' created
+unknown metabolite 'arte_c' created
+unknown metabolite 'nhemox_c' created
+unknown metabolite 'arte_e' created
+unknown metabolite 'sesqt_c' created
+unknown metabolite 'sesqt_e' created
+unknown metabolite 'alac_c' created
+unknown metabolite 'actn_c' created
+unknown metabolite '3oxpp_c' created
+unknown metabolite '3hpp_c' created
+unknown metabolite '3hpp_e' created
+unknown metabolite '34dhbz_c' created
+unknown metabolite '4hbz_e' created
+unknown metabolite 'rsvtol_c' created
+unknown metabolite 'rsvtol_e' created
+unknown metabolite 'styr_e' created
+unknown metabolite 'hphpyr_c' created
+unknown metabolite 'hpacald_c' created
+unknown metabolite 'thptdn_c' created
+unknown metabolite '34dopa_c' created
+unknown metabolite 'hthbp_c' created
+unknown metabolite 'dhptdn_c' created
+unknown metabolite 'dopa_c' created
+unknown metabolite 'nrco_c' created
+unknown metabolite 'cocl_c' created
+unknown metabolite 'mcocl_c' created
+unknown metabolite '3hmcocl_c' created
+unknown metabolite 'retcln_c' created
+unknown metabolite 'retcln_e' created
+unknown metabolite '3hppnl_c' created
+unknown metabolite '13ppd_c' created
+unknown metabolite '13ppd_e' created
+unknown metabolite 'skm_e' created
+unknown metabolite 'tal_c' created
+unknown metabolite 'tal_e' created
+unknown metabolite 'odealc_r' created
+unknown metabolite 'odealc_e' created
+unknown metabolite 'odealc_rm' created
+unknown metabolite 'stalc_r' created
+unknown metabolite 'stalc_e' created
+unknown metabolite 'stalc_rm' created
+unknown metabolite 'pmtalc_r' created
+unknown metabolite 'pmtalc_e' created
+unknown metabolite 'pmtalc_rm' created
+['skm', 'btd', 'stalc', '13ppd', 'lac__L', 'tal', '3hpp', 'retcln', 'nrgn', 'hdca', 'arte', 'odealc', 'tag', 'pmtalc', '4hbz', '2phetoh', 'hxdcol', 'styr', 'rsvtol', 'muco', 'cou', 'polyhb', '3hppb', 'citm', 'btoh', '3hppa', 'sesqt', 'ibutoh']
+/storage/home/ejm6426/.conda/envs/rba/lib/python3.12/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:443: RuntimeWarning: divide by zero encountered in scalar divide
+  fba_results[p]['yield'] = -prod_info[p_for_mw]['MW (g/mol)']*fba[objrxns]/(-g_all_substrates)
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:447: RuntimeWarning: divide by zero encountered in scalar divide
+  print(objrxns+' flux / '+c['rxn']+' flux: '+str(fba[objrxns]/c['v']))
+--- Job runRBA_max_prod.gms Start 08/01/24 15:47:14 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/rtRBA-main/application/output_max/skm/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/rtRBA-main/application/output_max/skm/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --vprod RXNADD-EX_skm_e_FWD-SPONT
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(32) 2 Mb
+--- . RBA_species.txt(4802) 3 Mb
+--- runRBA_max_prod.gms(34) 3 Mb
+--- . RBA_rxns.txt(10778) 5 Mb
+--- runRBA_max_prod.gms(36) 5 Mb
+--- . RBA_rxns_prosyn.txt(1381) 5 Mb
+--- runRBA_max_prod.gms(38) 5 Mb
+--- . RBA_rxns_prowaste.txt(1380) 5 Mb
+--- runRBA_max_prod.gms(40) 5 Mb
+--- . RBA_nuc_translation.txt(1372) 5 Mb
+--- runRBA_max_prod.gms(42) 5 Mb
+--- . RBA_mito_translation.txt(9) 5 Mb
+--- runRBA_max_prod.gms(44) 5 Mb
+--- . RBA_rxns_EXREV.txt(190) 5 Mb
+--- runRBA_max_prod.gms(46) 5 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(30) 5 Mb
+--- runRBA_max_prod.gms(48) 5 Mb
+--- . RBA_rxns_whole_biomass.txt(4) 5 Mb
+--- runRBA_max_prod.gms(50) 5 Mb
+--- . RBA_rxns_add.txt(118) 5 Mb
+--- runRBA_max_prod.gms(55) 5 Mb
+--- . RBA_sij.txt(38126) 5 Mb--- . RBA_sij.txt(52711) 7 Mb--- . RBA_sij.txt(90652) 8 Mb
+--- runRBA_max_prod.gms(57) 8 Mb
+--- . RBA_proteinLength.txt(1381) 8 Mb
+--- runRBA_max_prod.gms(59) 8 Mb
+--- . kapp_Glc_lim_per_hour.txt(2592) 8 Mb
+--- runRBA_max_prod.gms(87) 8 Mb
+--- . phenotype.txt(2) 8 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 8 Mb
+--- ... phenotype_common.txt(8) 8 Mb
+--- .... model-version-settings.txt(4) 8 Mb
+--- ... phenotype_common.txt(23) 8 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(550) 8 Mb
+--- . phenotype.txt(4) 8 Mb
+--- runRBA_max_prod.gms(95) 8 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2596) 8 Mb
+--- runRBA_max_prod.gms(104) 8 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2596) 8 Mb
+--- runRBA_max_prod.gms(126) 9 Mb
+--- Starting execution: elapsed 0:00:00.431
+--- runRBA_max_prod.gms(115346) 10 Mb--- runRBA_max_prod.gms(120591) 10 Mb
+--- Generating LP model rba
+--- runRBA_max_prod.gms(118528) 18 Mb--- runRBA_max_prod.gms(120594) 18 Mb
+---   7,402 rows  10,777 columns  97,223 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E+01, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.512E-05, 3.047E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.579
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/rtRBA-main/application/output_max/skm/soplex.opt> . . .Parameter settings:
+
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 6.00000000e+02
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 5906 rows, 7798 columns, 43738 nonzeros, 1835 col bounds, 115999 row bounds
+Reduced LP has 1495 rows 2978 columns 52949 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 8.99e+07 |      118 | -1.00000000e+06
+  L  |    0.0 |     199 |     3 | 0.00e+00 | 1.90e+07 |      190 | -1.00000000e+06
+  L  |    0.0 |     399 |     6 | 0.00e+00 | 3.12e+07 |      235 | -1.00000000e+06
+  L  |    0.1 |     599 |     9 | 2.73e-08 | 3.98e+07 |      308 | -1.00000000e+06
+  L  |    0.1 |     799 |    11 | 2.73e-08 | 1.24e+08 |      378 | -1.00000000e+06
+  L  |    0.1 |     999 |    12 | 2.75e-08 | 1.62e+08 |      374 | -1.00000000e+06
+  L  |    0.2 |    1199 |    14 | 2.76e-08 | 7.83e+08 |      379 | -9.99999999e+05
+  L  |    0.2 |    1399 |    15 | 2.77e-08 | 2.59e+08 |      422 | -9.99999999e+05
+  L  |    0.3 |    1599 |    17 | 1.50e-08 | 1.86e+08 |      418 | -9.99999998e+05
+  L  |    0.3 |    1799 |    18 | 1.50e-08 | 1.83e+08 |      431 | -6.51563464e+05
+  L  |    0.4 |    1999 |    19 | 1.50e-08 | 1.12e+08 |      376 | -5.04268819e+05
+  L  |    0.4 |    2199 |    20 | 1.50e-08 | 8.92e+07 |      369 | -2.15493262e+05
+  L  |    0.5 |    2399 |    21 | 1.50e-08 | 8.02e+06 |      388 | -2.07674286e+04
+  L  |    0.5 |    2599 |    22 | 1.50e-08 | 3.11e+05 |      340 | -3.87499704e+03
+  L  |    0.6 |    2799 |    23 | 1.50e-08 | 1.13e+05 |      266 | -2.67915734e+03
+  L  |    0.6 |    2999 |    25 | 1.19e-08 | 2.17e+03 |      246 | -1.62536673e+03
+  L  |    0.7 |    3199 |    26 | 1.19e-08 | 8.02e+02 |      176 | -1.37085235e+03
+  L  |    0.7 |    3395 |    27 | 1.20e-08 | 5.85e+02 |      131 | -1.27106595e+03
+  L  |    0.7 |    3506 |    27 | 2.04e-04 | 4.99e+00 |      131 | -1.09890225e+03
+  L  |    0.8 |    3591 |    28 | 7.29e-04 | 7.06e-02 |       31 | -1.00364893e+03
+  L  |    0.8 |    3607 |    29 | 7.29e-04 | 1.21e-04 |       12 | -1.00197447e+03
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+slurmstepd: error: *** JOB 17441614 ON p-bc-5005 CANCELLED AT 2024-08-01T15:47:22 ***

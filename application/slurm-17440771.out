@@ -1,0 +1,317 @@
+/storage/home/ejm6426/.conda/envs/rba/lib/python3.12/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:443: RuntimeWarning: divide by zero encountered in scalar divide
+  fba_results[p]['yield'] = -prod_info[p_for_mw]['MW (g/mol)']*fba[objrxns]/(-g_all_substrates)
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:447: RuntimeWarning: divide by zero encountered in scalar divide
+  print(objrxns+' flux / '+c['rxn']+' flux: '+str(fba[objrxns]/c['v']))
+unknown metabolite 'hxdcal_c' created
+unknown metabolite 'hxdcol_c' created
+unknown metabolite '2etmal_m' created
+unknown metabolite '2etmal_c' created
+unknown metabolite '3etmal_c' created
+unknown metabolite '2oxptn_c' created
+unknown metabolite 'btal_c' created
+unknown metabolite 'btoh_c' created
+unknown metabolite 'citm_m' created
+unknown metabolite 'citac_m' created
+unknown metabolite '3mmal_m' created
+unknown metabolite 'btoh_e' created
+unknown metabolite 'tag_e' created
+unknown metabolite 'cou_c' created
+unknown metabolite 'nrgnch_c' created
+unknown metabolite 'nrgn_c' created
+unknown metabolite 'nrgn_e' created
+unknown metabolite 'cou_e' created
+unknown metabolite 'citm_c' created
+unknown metabolite 'citm_e' created
+unknown metabolite '3hbcoa__R_c' created
+unknown metabolite 'polyhb_c' created
+unknown metabolite 'polyhb_e' created
+unknown metabolite 'amorph_c' created
+unknown metabolite 'nhemrd_c' created
+unknown metabolite 'arte_c' created
+unknown metabolite 'nhemox_c' created
+unknown metabolite 'arte_e' created
+unknown metabolite 'sesqt_c' created
+unknown metabolite 'sesqt_e' created
+unknown metabolite 'alac_c' created
+unknown metabolite 'actn_c' created
+unknown metabolite '3oxpp_c' created
+unknown metabolite '3hpp_c' created
+unknown metabolite '3hpp_e' created
+unknown metabolite '34dhbz_c' created
+unknown metabolite '4hbz_e' created
+unknown metabolite 'rsvtol_c' created
+unknown metabolite 'rsvtol_e' created
+unknown metabolite 'styr_e' created
+unknown metabolite 'hphpyr_c' created
+unknown metabolite 'hpacald_c' created
+unknown metabolite 'thptdn_c' created
+unknown metabolite '34dopa_c' created
+unknown metabolite 'hthbp_c' created
+unknown metabolite 'dhptdn_c' created
+unknown metabolite 'dopa_c' created
+unknown metabolite 'nrco_c' created
+unknown metabolite 'cocl_c' created
+unknown metabolite 'mcocl_c' created
+unknown metabolite '3hmcocl_c' created
+unknown metabolite 'retcln_c' created
+unknown metabolite 'retcln_e' created
+unknown metabolite '3hppnl_c' created
+unknown metabolite '13ppd_c' created
+unknown metabolite '13ppd_e' created
+unknown metabolite 'skm_e' created
+unknown metabolite 'tal_c' created
+unknown metabolite 'tal_e' created
+unknown metabolite 'odealc_r' created
+unknown metabolite 'odealc_e' created
+unknown metabolite 'odealc_rm' created
+unknown metabolite 'stalc_r' created
+unknown metabolite 'stalc_e' created
+unknown metabolite 'stalc_rm' created
+unknown metabolite 'pmtalc_r' created
+unknown metabolite 'pmtalc_e' created
+unknown metabolite 'pmtalc_rm' created
+['hdca', 'arte', 'btd', 'cou', 'pmtalc', 'muco', 'hxdcol', 'styr', 'citm', '3hpp', 'sesqt', 'btoh', '2phetoh', 'odealc', 'polyhb', '3hppa', 'retcln', 'nrgn', '4hbz', 'lac__L', 'skm', '3hppb', 'tal', 'rsvtol', 'tag', 'ibutoh', '13ppd', 'stalc']
+EX_hdca_e flux: 2.785172382736219
+EX_hdca_e flux / EX_glc__D_e flux: -0.21083818188767742
+Simulated yields for hdca: -0.30006721861054025 g/g all C sources
+EX_arte_e flux: 2.8108349093830767
+EX_arte_e flux / EX_glc__D_e flux: -0.21278084098282185
+Simulated yields for arte: -0.2767653282016954 g/g all C sources
+EX_btd_e flux: 13.160532251539854
+EX_btd_e flux / EX_glc__D_e flux: -0.9962552802074075
+Simulated yields for btd: -0.49835989837858063 g/g all C sources
+EX_cou_e flux: 7.056545944484278
+EX_cou_e flux / EX_glc__D_e flux: -0.5341821305438514
+Simulated yields for cou: -0.4837574912755022 g/g all C sources
+FBA for pmtalc failed
+Maximize
+0.34229648*EX_sucr_e - 0.34229648*EX_sucr_e_reverse_0215c
+EX_sucr_e (-1000, 1000)
+Max growth rate: 13.154509067464264
+Minimum total mass flux (g/gDW/h) needed to support max growth: -0.09110155973693326
+Flux for each source:
+pnto__R_e: -1.3333333333376658e-06
+chol_e: -0.00038938666666666575
+fol_e: -1.3333333333683373e-06
+fe2_e: -1.017333333333331e-05
+uptake exceeds normal bounds: arg__L_e: -0.0016659066666666624
+uptake exceeds normal bounds: glu__L_e: -0.33225892412253477
+uptake exceeds normal bounds: met__L_e: -0.0005551066666666803
+uptake exceeds normal bounds: phe__L_e: -0.001622759999999996
+uptake exceeds normal bounds: pro__L_e: -0.12637730305513434
+nac_e: -2.6666673268845867e-06
+o2_e: -0.8217209480773721
+uptake exceeds normal bounds: pi_e: -0.006718986673263691
+so4_e: -0.00041553333333333234
+thm_e: -1.3333333333333302e-06
+uptake exceeds normal bounds: k_e: -0.00803367999999998
+ca2_e: -1.7119999999999958e-05
+cu2_e: -1.5199999999999965e-06
+mg2_e: -0.0008465199999999981
+mn2_e: -1.2533333333333304e-06
+zn2_e: -2.0973333333333284e-05
+btn_c: -1.3333333333333302e-06
+EX_pmtalc_e: 0.000753211910791016
+EX_pmtalc_e flux: 0.000753211910791016
+EX_pmtalc_e flux / EX_sucr_e flux: inf
+Simulated yields for pmtalc: inf g/g all C sources
+inf% of LB of experimental yield: 0.0036
+inf% of UB of experimental yield: 0.006
+EX_muco_e flux: 10.36169878779008
+EX_muco_e flux / EX_glc__D_e flux: -0.7843829513845633
+Simulated yields for muco: -0.6099392063515147 g/g all C sources
+EX_hxdcol_e flux: 2.692622226278064
+EX_hxdcol_e flux / EX_glc__D_e flux: -0.2038321140255915
+Simulated yields for hxdcol: -0.2743014816290571 g/g all C sources
+EX_styr_e flux: 6.807902058070328
+EX_styr_e flux / EX_glc__D_e flux: -0.5153597318751194
+Simulated yields for styr: -0.29793465704608063 g/g all C sources
+EX_citm_e flux: 14.629731859903398
+EX_citm_e flux / EX_glc__D_e flux: -1.1074740242167598
+Simulated yields for citm: -0.8981213777951809 g/g all C sources
+EX_3hpp_e flux: 0.0
+EX_3hpp_e flux / EX_glc__D_e flux: -0.0
+Simulated yields for 3hpp: -0.0 g/g all C sources
+EX_sesqt_e flux: 2.9907672478728693
+EX_sesqt_e flux / EX_glc__D_e flux: -0.2264017598692558
+Simulated yields for sesqt: -0.30952481991050923 g/g all C sources
+EX_btoh_e flux: 11.1474419664308
+EX_btoh_e flux / EX_glc__D_e flux: -0.8438638884504769
+Simulated yields for btoh: -0.34718350436260437 g/g all C sources
+EX_2phetoh_e flux: 6.859600760434772
+EX_2phetoh_e flux / EX_glc__D_e flux: -0.5192733353849184
+Simulated yields for 2phetoh: -0.35210834305058747 g/g all C sources
+FBA for odealc failed
+Maximize
+0.34229648*EX_sucr_e - 0.34229648*EX_sucr_e_reverse_0215c
+EX_sucr_e (-1000, 1000)
+Max growth rate: 13.15419634082893
+Minimum total mass flux (g/gDW/h) needed to support max growth: -0.09541266695366149
+Flux for each source:
+pnto__R_e: -1.333333333368596e-06
+chol_e: -0.00038938666666666575
+fol_e: -1.3333288261400183e-06
+fe2_e: -1.017333333333331e-05
+uptake exceeds normal bounds: arg__L_e: -0.0016659066666666624
+uptake exceeds normal bounds: glu__L_e: -0.384564971787797
+uptake exceeds normal bounds: met__L_e: -0.0005551066666667007
+uptake exceeds normal bounds: phe__L_e: -0.001622759999999996
+uptake exceeds normal bounds: pro__L_e: -0.09673378267910186
+nac_e: -2.666666846744625e-06
+o2_e: -0.8242507500521177
+uptake exceeds normal bounds: pi_e: -0.006718986667207343
+so4_e: -0.00041553333333333234
+thm_e: -1.3333333333333302e-06
+uptake exceeds normal bounds: k_e: -0.00803367999999998
+ca2_e: -1.7119999999999958e-05
+cu2_e: -1.5199999999999965e-06
+mg2_e: -0.0008465199999999981
+mn2_e: -1.2533333333333304e-06
+zn2_e: -2.0973333333333284e-05
+btn_c: -1.3333333333333302e-06
+EX_odealc_e: 0.005138585269748739
+EX_odealc_e flux: 0.005138585269748739
+EX_odealc_e flux / EX_sucr_e flux: inf
+Simulated yields for odealc: inf g/g all C sources
+inf% of LB of experimental yield: 0.027200000000000002
+inf% of UB of experimental yield: 0.027999999999999997
+EX_polyhb_e flux: 14.691190956973179
+EX_polyhb_e flux / EX_glc__D_e flux: -1.112126491822345
+Simulated yields for polyhb: -0.6364497508097635 g/g all C sources
+EX_3hpp_e flux: 20.57574879486479
+EX_3hpp_e flux / EX_glc__D_e flux: -1.5575888565378342
+Simulated yields for 3hppa: -0.7788117198257516 g/g all C sources
+EX_retcln_e flux: 2.671636406811017
+EX_retcln_e flux / EX_glc__D_e flux: -0.20224348272604217
+Simulated yields for retcln: -0.3697850929747457 g/g all C sources
+EX_nrgn_e flux: 4.063817918724476
+EX_nrgn_e flux / EX_glc__D_e flux: -0.3076319393432609
+Simulated yields for nrgn: -0.4648904032405403 g/g all C sources
+EX_4hbz_e flux: 9.135051294387004
+EX_4hbz_e flux / EX_glc__D_e flux: -0.6915254575614689
+Simulated yields for 4hbz: -0.5262941866285498 g/g all C sources
+EX_lac__L_e flux: 23.675576314670646
+EX_lac__L_e flux / EX_glc__D_e flux: -1.792246503760079
+Simulated yields for lac__L: -0.8860953622966221 g/g all C sources
+EX_skm_e flux: 9.657347553885199
+EX_skm_e flux / EX_glc__D_e flux: -0.7310634030193186
+Simulated yields for skm: -0.7066913765615042 g/g all C sources
+EX_3hpp_e flux: 21.323944533221816
+EX_3hpp_e flux / EX_glc__D_e flux: -1.6142274438472228
+Simulated yields for 3hppb: -0.8071316422531465 g/g all C sources
+FBA for tal failed
+Maximize
+0.18015588*EX_glc__D_e - 0.18015588*EX_glc__D_e_reverse_af641 + 0.1501299*EX_xyl__D_e - 0.1501299*EX_xyl__D_e_reverse_e202a
+EX_xyl__D_e (-1000, 1000)
+EX_glc__D_e (-1000, 1000)
+Minimum total mass flux (g/gDW/h) needed to match experimental results with target of EX_tal_e: -0.05759523592442406
+Flux for each source:
+pnto__R_e: -0.03340044674137338
+nh4_e: -0.27455480544909483
+uptake exceeds normal bounds: glc__D_e: -0.3196966755924677
+xyl__D_e: 1.1368683772161603e-13
+fol_e: -1.3888888890051504e-06
+fe2_e: -1.0597222222222232e-05
+inost_e: -0.0006235138888888893
+nac_e: -2.7777779207150104e-06
+o2_e: -0.8392368439651735
+pi_e: -0.10719611800232533
+so4_e: -0.03441014118581783
+thm_e: -1.3888888888888902e-06
+h_e: 0.07931956864348995
+k_e: -0.008368416666666675
+h2o_e: 1.7103322876238551
+ca2_e: -1.7833333333333348e-05
+cu2_e: -1.583333333333335e-06
+mg2_e: -0.0008817916666666676
+mn2_e: -1.3055555555555567e-06
+zn2_e: -2.1847222222222238e-05
+btn_c: -1.38888888888889e-06
+Max flux w/ biomass off: 8.672000630048135
+    EX_mev__R_e: 6.616669238842263e-29 bounds: (0.0, 1000.0)
+    EX_pnto__R_e: -26.016001890144416 bounds: (-1000.0, 1000.0)
+    EX_nh4_e: -156.0960113408693 bounds: (-1000.0, 1000.0)
+    EX_co2_e: 182.8578303768086 bounds: (0.0, 1000.0)
+    EX_chol_e: 2.3835381192611875e-17 bounds: (0.0, 1000.0)
+    EX_glc__D_e: -0.3196966755924677 bounds: (-0.3196966755924677, 1000)
+    EX_xyl__D_e: -200.9559420355688 bounds: (-1000, 1000)
+    EX_fol_e: 3.046359690366269e-14 bounds: (-1000.0, 1000.0)
+    EX_glyc_e: 147.4240107108219 bounds: (0.0, 1000.0)
+    EX_ibutac_e: 2.0813125421453075e-15 bounds: (0.0, 1000.0)
+    EX_lys__L_e: -3.0440398936055085e-14 bounds: (0.0, 1000.0)
+    EX_met__L_e: -1.0734324002290502e-29 bounds: (0.0, 1000.0)
+    EX_nac_e: -1.9779568840915675e-13 bounds: (-1000.0, 1000.0)
+    EX_o2_e: -126.4898262814951 bounds: (-1000.0, 1000.0)
+    EX_pi_e: -78.04800567043434 bounds: (-1000.0, 1000.0)
+    EX_sprm_e: -2.850389470152833e-16 bounds: (0.0, 1000.0)
+    EX_so4_e: -26.016001890144423 bounds: (-1000.0, 1000.0)
+    EX_h_e: 43.3600031502432 bounds: (-1000.0, 1000.0)
+    EX_h2o_e: 521.0658549486819 bounds: (-1000.0, 1000.0)
+    EX_caro_c: 2.6814803841681186e-17 bounds: (0.0, 1000.0)
+    EX_ppa_e: 1.0284813529509932e-15 bounds: (0.0, 1000.0)
+    EX_tal_e: 8.672000630048135 bounds: (0, 1000)
+EX_tal_e flux: 8.672000630048135
+EX_tal_e flux / EX_xyl__D_e flux: -0.043153740776240436
+EX_tal_e flux / EX_glc__D_e flux: -27.12571412879732
+Simulated yields for tal: -0.03618033758304896 g/g all C sources
+-31.5958630075275% of LB of experimental yield: 0.11450973051259666
+-29.940184596652696% of UB of experimental yield: 0.1208420658404822
+EX_rsvtol_e flux: 4.063817918724477
+EX_rsvtol_e flux / EX_glc__D_e flux: -0.30763193934326094
+Simulated yields for rsvtol: -0.38973952483240015 g/g all C sources
+EX_tag_e flux: 0.7792094156239683
+EX_tag_e flux / EX_glc__D_e flux: -0.05898632972172356
+Simulated yields for tag: -0.26989071465627973 g/g all C sources
+-208.5966693380014% of LB of experimental yield: 0.129384
+-183.84926066504065% of UB of experimental yield: 0.1468
+EX_ibutoh_e flux: 12.223039658198731
+EX_ibutoh_e flux / EX_glc__D_e flux: -0.9252868779862778
+Simulated yields for ibutoh: -0.3806826494612609 g/g all C sources
+EX_13ppd_e flux: 17.604922461411324
+EX_13ppd_e flux / EX_glc__D_e flux: -1.3326966284187223
+Simulated yields for 13ppd: -0.5628726573435278 g/g all C sources
+FBA for stalc failed
+Maximize
+0.34229648*EX_sucr_e - 0.34229648*EX_sucr_e_reverse_0215c
+EX_sucr_e (-1000, 1000)
+Max growth rate: 13.154474624412936
+Minimum total mass flux (g/gDW/h) needed to support max growth: -0.09147545637397728
+Flux for each source:
+pnto__R_e: -1.3333333333212473e-06
+chol_e: -0.00038938666666666575
+fol_e: -1.333333160122177e-06
+fe2_e: -1.017333333333331e-05
+uptake exceeds normal bounds: arg__L_e: -0.0016659066666666624
+uptake exceeds normal bounds: glu__L_e: -0.33700034441678994
+uptake exceeds normal bounds: met__L_e: -0.0005551066666666535
+uptake exceeds normal bounds: phe__L_e: -0.001622759999999996
+uptake exceeds normal bounds: pro__L_e: -0.12366160061813934
+nac_e: -2.6666668457509944e-06
+o2_e: -0.8215251318748238
+uptake exceeds normal bounds: pi_e: -0.006718986667053853
+so4_e: -0.00041553333333333234
+thm_e: -1.3333333333333302e-06
+uptake exceeds normal bounds: k_e: -0.00803367999999998
+ca2_e: -1.7119999999999958e-05
+cu2_e: -1.5199999999999965e-06
+mg2_e: -0.0008465199999999981
+mn2_e: -1.2533333333333304e-06
+zn2_e: -2.0973333333333284e-05
+btn_c: -1.3333333333333302e-06
+EX_stalc_e: 0.001125130595515551
+EX_stalc_e flux: 0.001125130595515551
+EX_stalc_e flux / EX_sucr_e flux: inf
+Simulated yields for stalc: inf g/g all C sources
+inf% of LB of experimental yield: 0.006
+inf% of UB of experimental yield: 0.0092
+58766.209689556585
+59602.20437186314
+1072371.083289346
+101514.74710129546
+Traceback (most recent call last):
+  File "/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py", line 572, in <module>
+    with open(outputFolder + p + '/report.txt') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './output_max/pmtalc/report.txt'

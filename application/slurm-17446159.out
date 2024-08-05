@@ -1,0 +1,837 @@
+unknown metabolite 'hxdcal_c' created
+unknown metabolite 'hxdcol_c' created
+unknown metabolite '2etmal_m' created
+unknown metabolite '2etmal_c' created
+unknown metabolite '3etmal_c' created
+unknown metabolite '2oxptn_c' created
+unknown metabolite 'btal_c' created
+unknown metabolite 'btoh_c' created
+unknown metabolite 'citm_m' created
+unknown metabolite 'citac_m' created
+unknown metabolite '3mmal_m' created
+unknown metabolite 'btoh_e' created
+unknown metabolite 'tag_e' created
+unknown metabolite 'cou_c' created
+unknown metabolite 'nrgnch_c' created
+unknown metabolite 'nrgn_c' created
+unknown metabolite 'nrgn_e' created
+unknown metabolite 'cou_e' created
+unknown metabolite 'citm_c' created
+unknown metabolite 'citm_e' created
+unknown metabolite '3hbcoa__R_c' created
+unknown metabolite 'polyhb_c' created
+unknown metabolite 'polyhb_e' created
+unknown metabolite 'amorph_c' created
+unknown metabolite 'nhemrd_c' created
+unknown metabolite 'arte_c' created
+unknown metabolite 'nhemox_c' created
+unknown metabolite 'arte_e' created
+unknown metabolite 'sesqt_c' created
+unknown metabolite 'sesqt_e' created
+unknown metabolite 'alac_c' created
+unknown metabolite 'actn_c' created
+unknown metabolite '3oxpp_c' created
+unknown metabolite '3hpp_c' created
+unknown metabolite '3hpp_e' created
+unknown metabolite '34dhbz_c' created
+unknown metabolite '4hbz_e' created
+unknown metabolite 'rsvtol_c' created
+unknown metabolite 'rsvtol_e' created
+unknown metabolite 'styr_e' created
+unknown metabolite 'hphpyr_c' created
+unknown metabolite 'hpacald_c' created
+unknown metabolite 'thptdn_c' created
+unknown metabolite '34dopa_c' created
+unknown metabolite 'hthbp_c' created
+unknown metabolite 'dhptdn_c' created
+unknown metabolite 'dopa_c' created
+unknown metabolite 'nrco_c' created
+unknown metabolite 'cocl_c' created
+unknown metabolite 'mcocl_c' created
+unknown metabolite '3hmcocl_c' created
+unknown metabolite 'retcln_c' created
+unknown metabolite 'retcln_e' created
+unknown metabolite '3hppnl_c' created
+unknown metabolite '13ppd_c' created
+unknown metabolite '13ppd_e' created
+unknown metabolite 'skm_e' created
+unknown metabolite 'tal_c' created
+unknown metabolite 'tal_e' created
+unknown metabolite 'odealc_r' created
+unknown metabolite 'odealc_e' created
+unknown metabolite 'odealc_rm' created
+unknown metabolite 'stalc_r' created
+unknown metabolite 'stalc_e' created
+unknown metabolite 'stalc_rm' created
+unknown metabolite 'pmtalc_r' created
+unknown metabolite 'pmtalc_e' created
+unknown metabolite 'pmtalc_rm' created
+['arte', 'hxdcol', 'lac__L', 'cou', '3hpp', '2phetoh', 'nrgn', 'sesqt', 'citm', 'btd', 'skm', '4hbz', '13ppd', 'retcln', 'styr', 'muco', 'stalc', 'ibutoh', 'tal', '3hppa', 'btoh', 'odealc', 'tag', '3hppb', 'hdca', 'polyhb', 'pmtalc', 'rsvtol']
+EX_arte_e flux: 2.810834909383073
+EX_arte_e flux / EX_glc__D_e flux: -0.21278084098282157
+Simulated yields for arte: -0.2767653282016951 g/g all C sources
+EX_hxdcol_e flux: 2.6926222262781767
+EX_hxdcol_e flux / EX_glc__D_e flux: -0.20383211402560003
+Simulated yields for hxdcol: -0.27430148162906853 g/g all C sources
+EX_lac__L_e flux: 23.675576314671975
+EX_lac__L_e flux / EX_glc__D_e flux: -1.7922465037601796
+Simulated yields for lac__L: -0.8860953622966717 g/g all C sources
+EX_cou_e flux: 7.056545944484284
+EX_cou_e flux / EX_glc__D_e flux: -0.5341821305438519
+Simulated yields for cou: -0.4837574912755026 g/g all C sources
+EX_3hpp_e flux: 0.0
+EX_3hpp_e flux / EX_glc__D_e flux: -0.0
+Simulated yields for 3hpp: -0.0 g/g all C sources
+EX_2phetoh_e flux: 6.8596007604351055
+EX_2phetoh_e flux / EX_glc__D_e flux: -0.5192733353849436
+Simulated yields for 2phetoh: -0.35210834305060457 g/g all C sources
+EX_nrgn_e flux: 4.063817918724629
+EX_nrgn_e flux / EX_glc__D_e flux: -0.30763193934327243
+Simulated yields for nrgn: -0.4648904032405578 g/g all C sources
+EX_sesqt_e flux: 2.990767247873012
+EX_sesqt_e flux / EX_glc__D_e flux: -0.22640175986926658
+Simulated yields for sesqt: -0.309524819910524 g/g all C sources
+EX_citm_e flux: 14.62973185990438
+EX_citm_e flux / EX_glc__D_e flux: -1.1074740242168342
+Simulated yields for citm: -0.8981213777952413 g/g all C sources
+EX_btd_e flux: 13.160532251539703
+EX_btd_e flux / EX_glc__D_e flux: -0.9962552802073961
+Simulated yields for btd: -0.49835989837857486 g/g all C sources
+EX_skm_e flux: 9.657347553885618
+EX_skm_e flux / EX_glc__D_e flux: -0.7310634030193502
+Simulated yields for skm: -0.7066913765615348 g/g all C sources
+EX_4hbz_e flux: 9.135051294387411
+EX_4hbz_e flux / EX_glc__D_e flux: -0.6915254575614996
+Simulated yields for 4hbz: -0.5262941866285732 g/g all C sources
+EX_13ppd_e flux: 17.604922461412173
+EX_13ppd_e flux / EX_glc__D_e flux: -1.3326966284187867
+Simulated yields for 13ppd: -0.562872657343555 g/g all C sources
+EX_retcln_e flux: 2.6716364068112184
+EX_retcln_e flux / EX_glc__D_e flux: -0.2022434827260574
+Simulated yields for retcln: -0.3697850929747736 g/g all C sources
+EX_styr_e flux: 6.8079020580705905
+EX_styr_e flux / EX_glc__D_e flux: -0.5153597318751393
+Simulated yields for styr: -0.29793465704609207 g/g all C sources
+EX_muco_e flux: 10.3616987877904
+EX_muco_e flux / EX_glc__D_e flux: -0.7843829513845875
+Simulated yields for muco: -0.6099392063515334 g/g all C sources
+/storage/home/ejm6426/.conda/envs/rba/lib/python3.12/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+FBA for stalc failed
+Maximize
+0.34229648*EX_sucr_e - 0.34229648*EX_sucr_e_reverse_0215c
+EX_sucr_e (-1000, 1000)
+Max growth rate: 13.15447462441257
+Minimum total mass flux (g/gDW/h) needed to support max growth: -0.0914754563755515
+Flux for each source:
+pnto__R_e: -1.3333333333404976e-06
+chol_e: -0.0003893866666666658
+fol_e: -1.333333324896345e-06
+fe2_e: -1.017333333333331e-05
+uptake exceeds normal bounds: arg__L_e: -0.0016659066664741094
+uptake exceeds normal bounds: glu__L_e: -0.337000344429231
+uptake exceeds normal bounds: met__L_e: -0.0005551066666657833
+uptake exceeds normal bounds: phe__L_e: -0.001622759999999996
+uptake exceeds normal bounds: pro__L_e: -0.12366160061163219
+nac_e: -2.66666738708005e-06
+o2_e: -0.8215251318776778
+uptake exceeds normal bounds: pi_e: -0.006718986670279051
+so4_e: -0.00041553333333333234
+thm_e: -1.3333333333333302e-06
+uptake exceeds normal bounds: k_e: -0.00803367999999998
+ca2_e: -1.7119999999999958e-05
+cu2_e: -1.5199999999999965e-06
+mg2_e: -0.0008465199999999981
+mn2_e: -1.2533333333333304e-06
+zn2_e: -2.0973333333333284e-05
+btn_c: -1.3333333333333302e-06
+EX_stalc_e: 0.001125130595515551
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:448: RuntimeWarning: divide by zero encountered in scalar divide
+  fba_results[p]['yield'] = -prod_info[p_for_mw]['MW (g/mol)']*fba[objrxns]/(-g_all_substrates)
+EX_stalc_e flux: 0.001125130595515551
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:452: RuntimeWarning: divide by zero encountered in scalar divide
+  print(objrxns+' flux / '+c['rxn']+' flux: '+str(fba[objrxns]/c['v']))
+EX_stalc_e flux / EX_sucr_e flux: inf
+Simulated yields for stalc: inf g/g all C sources
+inf% of LB of experimental yield: 0.006
+inf% of UB of experimental yield: 0.0092
+EX_ibutoh_e flux: 12.223039658198555
+EX_ibutoh_e flux / EX_glc__D_e flux: -0.9252868779862645
+Simulated yields for ibutoh: -0.3806826494612554 g/g all C sources
+FBA for tal failed
+Maximize
+0.18015588*EX_glc__D_e - 0.18015588*EX_glc__D_e_reverse_af641 + 0.1501299*EX_xyl__D_e - 0.1501299*EX_xyl__D_e_reverse_e202a
+EX_xyl__D_e (-1000, 1000)
+EX_glc__D_e (-1000, 1000)
+Minimum total mass flux (g/gDW/h) needed to match experimental results with target of EX_tal_e: -0.0575952359244809
+Flux for each source:
+pnto__R_e: -0.03340044674137336
+nh4_e: -0.27455480545005695
+uptake exceeds normal bounds: glc__D_e: -0.3196966755926951
+xyl__D_e: -1.1368683772161603e-13
+fol_e: -1.388888889172694e-06
+fe2_e: -1.0597222222222232e-05
+inost_e: -0.0006235138888888893
+nac_e: -2.7777779207410834e-06
+o2_e: -0.8392368439659238
+pi_e: -0.10719611800261711
+so4_e: -0.03441014118581781
+thm_e: -1.3888888888888902e-06
+h_e: 0.07931956864574614
+k_e: -0.008368416666666675
+h2o_e: 1.710332287626646
+ca2_e: -1.7833333333333348e-05
+cu2_e: -1.583333333333335e-06
+mg2_e: -0.0008817916666666676
+mn2_e: -1.3055555555555567e-06
+zn2_e: -2.1847222222222238e-05
+btn_c: -1.38888888888889e-06
+    EX_pnto__R_e: -0.03340044674137336 bounds: (-1000.0, 1000.0)
+    EX_nh4_e: -0.27455480545005695 bounds: (-1000.0, 1000.0)
+    EX_co2_e: 0.8659170644834739 bounds: (0.0, 1000.0)
+    EX_glc__D_e: -0.3196966755926951 bounds: (-0.3196966755926951, 1000)
+    EX_xyl__D_e: -1.1368683772161603e-13 bounds: (-1000, 1000)
+    EX_fol_e: -1.388888889172694e-06 bounds: (-1000.0, 1000.0)
+    EX_fe2_e: -1.0597222222222232e-05 bounds: (-1000.0, 1000.0)
+    EX_inost_e: -0.0006235138888888893 bounds: (-1000.0, 1000.0)
+    EX_nac_e: -2.7777779207410834e-06 bounds: (-1000.0, 1000.0)
+    EX_o2_e: -0.8392368439659238 bounds: (-1000.0, 1000.0)
+    EX_pi_e: -0.10719611800261711 bounds: (-1000.0, 1000.0)
+    EX_so4_e: -0.03441014118581781 bounds: (-1000.0, 1000.0)
+    EX_thm_e: -1.3888888888888902e-06 bounds: (-1000.0, 1000.0)
+    EX_h_e: 0.07931956864574614 bounds: (-1000.0, 1000.0)
+    EX_k_e: -0.008368416666666675 bounds: (-1000.0, 1000.0)
+    EX_h2o_e: 1.710332287626646 bounds: (-1000.0, 1000.0)
+    EX_ca2_e: -1.7833333333333348e-05 bounds: (-1000.0, 1000.0)
+    EX_cu2_e: -1.583333333333335e-06 bounds: (-1000.0, 1000.0)
+    EX_mg2_e: -0.0008817916666666676 bounds: (-1000.0, 1000.0)
+    EX_mn2_e: -1.3055555555555567e-06 bounds: (-1000.0, 1000.0)
+    EX_zn2_e: -2.1847222222222238e-05 bounds: (-1000.0, 1000.0)
+    EX_btn_c: -1.38888888888889e-06 bounds: (-0.01, 0.0)
+    EX_tal_e: 0.011133019284161489 bounds: (0.011133019284161489, 0.012780647900976147)
+EX_tal_e flux: 0.011133019284161489
+EX_tal_e flux / EX_xyl__D_e flux: -97927073241.51997
+EX_tal_e flux / EX_glc__D_e flux: -0.034823694251814336
+Simulated yields for tal: -0.02437676458321968 g/g all C sources
+-21.287941622164684% of LB of experimental yield: 0.11450973051259666
+-20.172416296985748% of UB of experimental yield: 0.1208420658404822
+EX_3hpp_e flux: 20.575748794865305
+EX_3hpp_e flux / EX_glc__D_e flux: -1.557588856537873
+Simulated yields for 3hppa: -0.778811719825771 g/g all C sources
+EX_btoh_e flux: 11.147441966430904
+EX_btoh_e flux / EX_glc__D_e flux: -0.8438638884504848
+Simulated yields for btoh: -0.3471835043626076 g/g all C sources
+FBA for odealc failed
+Maximize
+0.34229648*EX_sucr_e - 0.34229648*EX_sucr_e_reverse_0215c
+EX_sucr_e (-1000, 1000)
+Max growth rate: 13.154196340828857
+Minimum total mass flux (g/gDW/h) needed to support max growth: -0.09541266695598671
+Flux for each source:
+pnto__R_e: -1.3333333333640096e-06
+chol_e: -0.00038938666666666575
+fol_e: -1.3333333332005688e-06
+fe2_e: -1.017333333333331e-05
+uptake exceeds normal bounds: arg__L_e: -0.0016659066666666624
+uptake exceeds normal bounds: glu__L_e: -0.3845649718047608
+uptake exceeds normal bounds: met__L_e: -0.000555106666666696
+uptake exceeds normal bounds: phe__L_e: -0.001622759999999996
+uptake exceeds normal bounds: pro__L_e: -0.09673378266263408
+nac_e: -2.666666633537352e-06
+o2_e: -0.8242507500461721
+uptake exceeds normal bounds: pi_e: -0.00671898666698169
+so4_e: -0.00041553333333333234
+thm_e: -1.3333333333333302e-06
+uptake exceeds normal bounds: k_e: -0.00803367999999998
+ca2_e: -1.7119999999999958e-05
+cu2_e: -1.5199999999999965e-06
+mg2_e: -0.0008465199999999981
+mn2_e: -1.2533333333333304e-06
+zn2_e: -2.0973333333333284e-05
+btn_c: -1.3333333333333302e-06
+EX_odealc_e: 0.005138585269748739
+EX_odealc_e flux: 0.005138585269748739
+EX_odealc_e flux / EX_sucr_e flux: inf
+Simulated yields for odealc: inf g/g all C sources
+inf% of LB of experimental yield: 0.027200000000000002
+inf% of UB of experimental yield: 0.027999999999999997
+EX_tag_e flux: 0.7792094156239614
+EX_tag_e flux / EX_glc__D_e flux: -0.05898632972172304
+Simulated yields for tag: -0.26989071465627734 g/g all C sources
+-208.59666933799957% of LB of experimental yield: 0.129384
+-183.84926066503903% of UB of experimental yield: 0.1468
+EX_3hpp_e flux: 21.32394453322157
+EX_3hpp_e flux / EX_glc__D_e flux: -1.6142274438472044
+Simulated yields for 3hppb: -0.8071316422531372 g/g all C sources
+EX_hdca_e flux: 2.7851723827362407
+EX_hdca_e flux / EX_glc__D_e flux: -0.21083818188767908
+Simulated yields for hdca: -0.30006721861054264 g/g all C sources
+EX_polyhb_e flux: 14.691190956973431
+EX_polyhb_e flux / EX_glc__D_e flux: -1.1121264918223641
+Simulated yields for polyhb: -0.6364497508097745 g/g all C sources
+FBA for pmtalc failed
+Maximize
+0.34229648*EX_sucr_e - 0.34229648*EX_sucr_e_reverse_0215c
+EX_sucr_e (-1000, 1000)
+Max growth rate: 13.154509067466439
+Minimum total mass flux (g/gDW/h) needed to support max growth: -0.09110155973597354
+Flux for each source:
+pnto__R_e: -1.333333333347904e-06
+chol_e: -0.00038938666666666575
+fol_e: -1.33333333337405e-06
+fe2_e: -1.017333333333331e-05
+uptake exceeds normal bounds: arg__L_e: -0.0016659066666666622
+uptake exceeds normal bounds: glu__L_e: -0.3322589241127796
+uptake exceeds normal bounds: met__L_e: -0.0005551066666666803
+uptake exceeds normal bounds: phe__L_e: -0.001622759999999996
+uptake exceeds normal bounds: pro__L_e: -0.12637730306102007
+nac_e: -2.666668410443624e-06
+o2_e: -0.8217209480767111
+uptake exceeds normal bounds: pi_e: -0.006718986669897636
+so4_e: -0.00041553333333333234
+thm_e: -1.3333333333333302e-06
+uptake exceeds normal bounds: k_e: -0.00803367999999998
+ca2_e: -1.7119999999999958e-05
+cu2_e: -1.5199999999999965e-06
+mg2_e: -0.0008465199999999981
+mn2_e: -1.2533333333333304e-06
+zn2_e: -2.0973333333333284e-05
+btn_c: -1.3333333333333302e-06
+EX_pmtalc_e: 0.000753211910791016
+EX_pmtalc_e flux: 0.000753211910791016
+EX_pmtalc_e flux / EX_sucr_e flux: inf
+Simulated yields for pmtalc: inf g/g all C sources
+inf% of LB of experimental yield: 0.0036
+inf% of UB of experimental yield: 0.006
+EX_rsvtol_e flux: 4.063817918724449
+EX_rsvtol_e flux / EX_glc__D_e flux: -0.3076319393432588
+Simulated yields for rsvtol: -0.38973952483239743 g/g all C sources
+Running RBA...
+--- Job runRBA_max_prod.gms Start 08/01/24 17:10:01 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/rtRBA-main/application/output_max/arte/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/rtRBA-main/application/output_max/arte/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --vprod RXNADD-EX_arte_e_FWD-SPONT
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(32) 2 Mb
+--- . RBA_species.txt(4802) 3 Mb
+--- runRBA_max_prod.gms(34) 3 Mb
+--- . RBA_rxns.txt(10778) 5 Mb
+--- runRBA_max_prod.gms(36) 5 Mb
+--- . RBA_rxns_prosyn.txt(1381) 5 Mb
+--- runRBA_max_prod.gms(38) 5 Mb
+--- . RBA_rxns_prowaste.txt(1380) 5 Mb
+--- runRBA_max_prod.gms(40) 5 Mb
+--- . RBA_nuc_translation.txt(1372) 5 Mb
+--- runRBA_max_prod.gms(42) 5 Mb
+--- . RBA_mito_translation.txt(9) 5 Mb
+--- runRBA_max_prod.gms(44) 5 Mb
+--- . RBA_rxns_EXREV.txt(190) 5 Mb
+--- runRBA_max_prod.gms(46) 5 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(30) 5 Mb
+--- runRBA_max_prod.gms(48) 5 Mb
+--- . RBA_rxns_whole_biomass.txt(4) 5 Mb
+--- runRBA_max_prod.gms(50) 5 Mb
+--- . RBA_rxns_add.txt(118) 5 Mb
+--- runRBA_max_prod.gms(55) 5 Mb
+--- . RBA_sij.txt(37505) 5 Mb--- . RBA_sij.txt(50089) 6 Mb--- . RBA_sij.txt(90652) 8 Mb
+--- runRBA_max_prod.gms(57) 8 Mb
+--- . RBA_proteinLength.txt(1381) 8 Mb
+--- runRBA_max_prod.gms(59) 8 Mb
+--- . kapp_Glc_lim_per_hour.txt(2592) 8 Mb
+--- runRBA_max_prod.gms(87) 8 Mb
+--- . phenotype.txt(2) 8 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 8 Mb
+--- ... phenotype_common.txt(8) 8 Mb
+--- .... model-version-settings.txt(4) 8 Mb
+--- ... phenotype_common.txt(23) 8 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(553) 8 Mb
+--- . phenotype.txt(4) 8 Mb
+--- runRBA_max_prod.gms(95) 8 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2596) 8 Mb
+--- runRBA_max_prod.gms(104) 8 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2431) 8 Mb--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2596) 8 Mb
+--- runRBA_max_prod.gms(126) 9 Mb
+--- Starting execution: elapsed 0:00:00.455
+--- runRBA_max_prod.gms(120594) 10 Mb
+--- Generating LP model rba
+--- runRBA_max_prod.gms(117988) 14 Mb--- runRBA_max_prod.gms(120597) 18 Mb
+---   7,402 rows  10,777 columns  97,223 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E+01, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.512E-05, 3.047E+08]
+--- Executing SOPLEX (Solvelink=2): elapsed 0:00:00.622
+
+SoPlex           42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+SoPlex version 6.0 (f900e3d0) [PaPILO 2.1 (2fe2543)]
+Copyright (c) 1996-2022 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+Loading settings file </storage/home/ejm6426/scratch/rtRBA-main/application/output_max/arte/soplex.opt> . . .
+Parameter settings:
+int:objsense = -1
+int:iterlimit = 1000000
+int:timer = 2
+real:feastol = 1.00000000e-12
+real:opttol = 1.00000000e-10
+real:timelimit = 6.00000000e+02
+real:fpfeastol = 1.00000000e-12
+real:fpopttol = 1.00000000e-12
+
+Initial floating-point solve . . .
+Simplifier removed 5907 rows, 7799 columns, 43734 nonzeros, 1708 col bounds, 109966 row bounds
+Reduced LP has 1494 rows 2977 columns 52951 nonzeros
+Equilibrium scaling LP
+
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 8.20e+07 |      117 | -3.33333333e+05
+  L  |    0.0 |     199 |     2 | 0.00e+00 | 2.90e+07 |      151 | -3.33333333e+05
+  L  |    0.0 |     399 |     5 | 0.00e+00 | 1.04e+08 |      253 | -3.33333333e+05
+  L  |    0.1 |     599 |     7 | 2.54e-08 | 1.44e+08 |      327 | -3.33333333e+05
+  L  |    0.1 |     799 |     8 | 2.55e-08 | 1.38e+08 |      350 | -3.33333333e+05
+  L  |    0.1 |     999 |     9 | 2.56e-08 | 3.25e+08 |      339 | -3.33333333e+05
+  L  |    0.2 |    1199 |    10 | 2.56e-08 | 1.52e+08 |      404 | -3.33333333e+05
+  L  |    0.2 |    1399 |    11 | 2.56e-08 | 7.86e+09 |      397 | -3.33333320e+05
+  L  |    0.3 |    1599 |    13 | 1.28e-08 | 2.76e+10 |      458 | -3.33333215e+05
+  L  |    0.3 |    1799 |    14 | 1.40e-08 | 9.28e+11 |      499 | -3.33332475e+05
+  L  |    0.4 |    1999 |    15 | 1.49e-08 | 7.00e+09 |      525 | -1.74500576e+05
+  L  |    0.4 |    2199 |    16 | 1.49e-08 | 1.73e+09 |      528 | -1.69760284e+05
+  L  |    0.4 |    2398 |    17 | 3.65e-05 | 2.34e+09 |      469 | -1.68376742e+05
+  L  |    0.5 |    2598 |    18 | 3.65e-05 | 1.59e+09 |      515 | -1.67807168e+05
+  L  |    0.5 |    2798 |    19 | 3.65e-05 | 8.09e+08 |      482 | -1.67525870e+05
+  L  |    0.5 |    2991 |    21 | 1.01e-04 | 1.03e+10 |      446 | -1.67446842e+05
+  L  |    0.6 |    3187 |    21 | 1.34e-04 | 5.14e+09 |      446 | -1.67350549e+05
+  L  |    0.6 |    3386 |    22 | 1.36e-04 | 6.78e+08 |      405 | -1.67187845e+05
+  L  |    0.7 |    3586 |    23 | 1.36e-04 | 4.62e+08 |      406 | -1.67142562e+05
+  L  |    0.7 |    3786 |    24 | 1.36e-04 | 5.17e+08 |      430 | -1.67074219e+05
+  L  |    0.7 |    3985 |    25 | 1.49e-04 | 4.61e+08 |      371 | -1.66991713e+05
+  L  |    0.8 |    4185 |    27 | 1.49e-04 | 2.76e+08 |      391 | -1.66937441e+05
+  L  |    0.8 |    4385 |    28 | 1.49e-04 | 2.44e+08 |      372 | -1.66898596e+05
+  L  |    0.9 |    4585 |    30 | 8.28e-05 | 3.02e+08 |      379 | -1.66845535e+05
+  L  |    0.9 |    4785 |    31 | 8.28e-05 | 2.23e+08 |      366 | -1.66803101e+05
+  L  |    0.9 |    4985 |    32 | 8.28e-05 | 2.10e+08 |      328 | -1.66765195e+05
+  L  |    1.0 |    5185 |    33 | 8.28e-05 | 2.74e+08 |      338 | -1.66701552e+05
+  L  |    1.0 |    5385 |    34 | 8.28e-05 | 1.15e+08 |      315 | -1.66671264e+05
+  L  |    1.1 |    5585 |    35 | 8.28e-05 | 1.83e+08 |      320 | -1.66614905e+05
+  L  |    1.1 |    5785 |    36 | 8.28e-05 | 1.16e+08 |      314 | -1.66555638e+05
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    1.2 |    5985 |    38 | 6.74e-05 | 1.84e+08 |      284 | -1.66452266e+05
+  L  |    1.2 |    6185 |    39 | 6.74e-05 | 6.63e+07 |      309 | -1.66343301e+05
+  L  |    1.3 |    6385 |    40 | 6.74e-05 | 1.43e+08 |      296 | -1.66193779e+05
+  L  |    1.3 |    6584 |    41 | 7.96e-05 | 5.41e+07 |      335 | -1.65463962e+05
+  L  |    1.4 |    6784 |    42 | 7.96e-05 | 4.62e+07 |      322 | -1.47860948e+05
+  L  |    1.4 |    6981 |    43 | 7.96e-05 | 4.19e+09 |      335 | -9.08705519e+04
+  L  |    1.5 |    7181 |    44 | 8.09e-05 | 4.79e+08 |      299 | -8.34052108e+04
+  L  |    1.5 |    7381 |    46 | 8.09e-05 | 4.66e+07 |      269 | -5.40760990e+04
+  L  |    1.6 |    7581 |    48 | 6.64e-05 | 1.09e+08 |      283 | -2.23526540e+04
+  L  |    1.6 |    7766 |    49 | 4.03e-04 | 4.60e+07 |      242 | -4.51951648e+03
+  L  |    1.7 |    7963 |    50 | 4.29e-04 | 8.62e+06 |      216 | -4.18106001e+03
+  L  |    1.8 |    8139 |    50 | 1.59e-03 | 1.85e+07 |      216 | -3.05062889e+03
+  L  |    1.8 |    8332 |    51 | 1.59e-03 | 3.09e+06 |      252 | -1.51944352e+03
+  L  |    1.9 |    8473 |    52 | 1.60e-03 | 5.19e+05 |      257 | -8.55149313e+02
+  L  |    1.9 |    8619 |    53 | 2.82e-03 | 1.46e+04 |      212 | -6.34192172e+02
+  L  |    2.0 |    8756 |    54 | 3.45e-03 | 8.91e+02 |      174 | -4.30674627e+02
+  L  |    2.0 |    8846 |    54 | 3.87e-03 | 1.19e+02 |      174 | -3.60813468e+02
+  L  |    2.1 |    8926 |    54 | 4.44e-03 | 1.75e+02 |      174 | -3.42106602e+02
+  L  |    2.1 |    9057 |    56 | 4.63e-03 | 1.55e+02 |       47 | -3.31205286e+02
+  L  |    2.2 |    9100 |    57 | 4.63e-03 | 1.16e-04 |       11 | -3.16320894e+02
+
+Floating-point infeasible.
+Setting up LP to test for feasibility.
+Initial floating-point solve . . .
+Simplifier removed 5879 rows, 7764 columns, 43053 nonzeros, 123 col bounds, 109933 row bounds
+Reduced LP has 1522 rows 3013 columns 53681 nonzeros
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 1.11e+05 |       96 | -1.00000000e+00
+  L  |    0.0 |      52 |     1 | 0.00e+00 | 2.08e+05 |       96 | -1.00000000e+00
+  L  |    0.0 |     252 |     4 | 0.00e+00 | 5.60e+04 |      192 | -1.00000000e+00
+  L  |    0.1 |     452 |     5 | 0.00e+00 | 3.28e+05 |      204 | -1.00000000e+00
+  L  |    0.1 |     652 |     8 | 0.00e+00 | 1.30e+05 |      241 | -1.00000000e+00
+  L  |    0.1 |     852 |     9 | 1.68e-08 | 4.12e+05 |      271 | -9.99998931e-01
+  L  |    0.2 |    1052 |    11 | 1.69e-08 | 3.74e+05 |      327 | -9.99997630e-01
+  L  |    0.2 |    1252 |    14 | 1.70e-08 | 7.25e+04 |      262 | -9.99996422e-01
+  L  |    0.3 |    1452 |    15 | 1.70e-08 | 4.67e+03 |      203 | -9.99995705e-01
+  L  |    0.3 |    1651 |    16 | 9.99e-09 | 1.25e+02 |      139 | -9.99995165e-01
+  L  |    0.3 |    1851 |    17 | 1.00e-08 | 1.33e+02 |      135 | -9.99995074e-01
+  L  |    0.4 |    1989 |    20 | 1.50e-07 | 1.50e-10 |       10 | -9.99981968e-01
+
+Numerical troubles during floating-point solve.
+Turning off preprocessing.
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 1.09e+05 |       14 | -1.00000000e+00
+  L  |    0.0 |      57 |     1 | 0.00e+00 | 2.20e+05 |       14 | -1.00000000e+00
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.1 |     257 |     2 | 0.00e+00 | 3.10e+05 |       85 | -1.00000000e+00
+  L  |    0.1 |     457 |     3 | 0.00e+00 | 1.71e+05 |      170 | -1.00000000e+00
+  L  |    0.2 |     657 |     4 | 0.00e+00 | 9.82e+04 |      174 | -1.00000000e+00
+  L  |    0.2 |     857 |     5 | 0.00e+00 | 4.31e+05 |      344 | -1.00000000e+00
+  L  |    0.3 |    1051 |     6 | 0.00e+00 | 1.44e+05 |      482 | -1.00000000e+00
+  L  |    0.4 |    1245 |     7 | 5.43e-08 | 2.03e+05 |      491 | -9.99999726e-01
+  L  |    0.4 |    1441 |     8 | 5.62e-08 | 2.09e+05 |      346 | -9.99999476e-01
+  L  |    0.5 |    1640 |     9 | 5.69e-08 | 5.11e+03 |      292 | -9.99999448e-01
+  L  |    0.5 |    1839 |    10 | 5.73e-08 | 5.29e+03 |      479 | -9.99999445e-01
+  L  |    0.6 |    2034 |    11 | 5.76e-08 | 5.67e+03 |      489 | -9.99999431e-01
+  L  |    0.6 |    2226 |    12 | 5.89e-08 | 2.91e+03 |      440 | -9.99999423e-01
+  L  |    0.6 |    2424 |    13 | 6.03e-08 | 2.47e+03 |      476 | -9.99999407e-01
+  L  |    0.7 |    2611 |    14 | 6.18e-08 | 2.42e+03 |      505 | -9.99999384e-01
+  L  |    0.7 |    2799 |    15 | 7.00e-08 | 2.50e+03 |      469 | -9.99999357e-01
+  L  |    0.8 |    2993 |    16 | 8.46e-08 | 3.78e+03 |      521 | -9.99999340e-01
+  L  |    0.9 |    3193 |    17 | 1.16e-07 | 4.04e+03 |      488 | -9.99999329e-01
+  L  |    0.9 |    3385 |    18 | 2.36e-07 | 3.73e+03 |      428 | -9.99999300e-01
+  L  |    1.0 |    3585 |    19 | 2.37e-07 | 5.20e+04 |      418 | -9.99999275e-01
+  L  |    1.1 |    3784 |    20 | 2.37e-07 | 1.27e+05 |      400 | -9.99999275e-01
+  L  |    1.2 |    3984 |    21 | 2.37e-07 | 4.55e+04 |      395 | -9.99999275e-01
+  L  |    1.2 |    4184 |    22 | 2.37e-07 | 6.07e+05 |      398 | -9.99999274e-01
+  L  |    1.3 |    4384 |    23 | 2.37e-07 | 1.06e+05 |      381 | -9.99999274e-01
+  L  |    1.4 |    4584 |    24 | 2.37e-07 | 2.75e+04 |      402 | -9.99999273e-01
+  L  |    1.6 |    4784 |    25 | 2.37e-07 | 3.36e+05 |      399 | -9.99999270e-01
+  L  |    1.7 |    4984 |    26 | 2.37e-07 | 9.03e+04 |      443 | -9.99999266e-01
+  L  |    1.8 |    5184 |    27 | 3.00e-07 | 1.19e+07 |      408 | -9.99999255e-01
+  L  |    1.9 |    5380 |    28 | 4.48e-07 | 4.65e+04 |      316 | -9.99999218e-01
+  L  |    2.0 |    5580 |    29 | 6.87e-07 | 1.99e+04 |      303 | -9.99999217e-01
+  L  |    2.2 |    5779 |    30 | 1.01e-05 | 7.81e+04 |      440 | -9.99993432e-01
+  L  |    2.3 |    5977 |    31 | 4.20e-05 | 1.29e+06 |      524 | -9.99993407e-01
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    2.4 |    6169 |    31 | 8.07e-05 | 4.99e+05 |      524 | -9.91128874e-01
+  L  |    2.6 |    6345 |    32 | 1.88e-03 | 1.76e+05 |      586 | -3.03772694e-01
+  L  |    2.8 |    6523 |    33 | 3.19e-03 | 3.24e+03 |      299 | -7.31999534e-02
+  L  |    2.9 |    6688 |    34 | 7.72e+00 | 2.59e+09 |      286 | -1.64231760e+01
+  L  |    3.1 |    6775 |    42 | 0.00e+00 | 1.09e+05 |       14 | -1.00000000e+00
+  L  |    3.1 |    6837 |    42 | 0.00e+00 | 1.35e+05 |       14 | -1.00000000e+00
+  L  |    3.2 |    7037 |    43 | 0.00e+00 | 7.36e+04 |       85 | -1.00000000e+00
+  L  |    3.2 |    7237 |    44 | 0.00e+00 | 1.71e+05 |      170 | -1.00000000e+00
+  L  |    3.3 |    7437 |    46 | 0.00e+00 | 6.09e+05 |      394 | -1.00000000e+00
+  L  |    3.4 |    7637 |    47 | 0.00e+00 | 2.79e+05 |      299 | -1.00000000e+00
+  L  |    3.4 |    7836 |    48 | 0.00e+00 | 2.61e+05 |      364 | -1.00000000e+00
+  L  |    3.5 |    8034 |    49 | 6.51e-10 | 1.87e+05 |      500 | -9.99999998e-01
+  L  |    3.6 |    8229 |    50 | 6.74e-10 | 9.54e+04 |      453 | -9.99999989e-01
+  L  |    3.6 |    8428 |    51 | 7.66e-10 | 2.79e+05 |      477 | -9.99999982e-01
+  L  |    3.7 |    8620 |    52 | 9.16e-10 | 1.22e+06 |      521 | -9.99999961e-01
+  L  |    3.8 |    8819 |    53 | 1.06e-09 | 7.94e+04 |      404 | -9.99999957e-01
+  L  |    3.9 |    9013 |    54 | 1.23e-09 | 5.83e+05 |      418 | -9.99999945e-01
+  L  |    4.0 |    9209 |    55 | 1.39e-09 | 1.34e+06 |      410 | -9.99999936e-01
+  L  |    4.0 |    9406 |    56 | 3.55e-09 | 1.12e+05 |      479 | -9.99999804e-01
+  L  |    4.1 |    9603 |    57 | 4.59e-09 | 8.56e+06 |      442 | -9.99999769e-01
+  L  |    4.2 |    9800 |    57 | 5.70e-09 | 7.99e+04 |      442 | -9.99999755e-01
+  L  |    4.3 |    9983 |    58 | 1.24e-08 | 5.49e+04 |      596 | -9.99999150e-01
+ --- initializing steepest edge multipliers
+ --- active pricer: SteepEx
+  L  |    4.7 |   10183 |    59 | 2.78e-08 | 5.62e+04 |      608 | -9.99999394e-01
+  L  |    4.9 |   10383 |    60 | 2.94e-08 | 2.07e+06 |      728 | -9.99999299e-01
+  L  |    5.0 |   10583 |    61 | 2.94e-08 | 6.03e+06 |      693 | -9.99999293e-01
+  L  |    5.1 |   10783 |    62 | 2.94e-08 | 4.55e+09 |      697 | -9.99999286e-01
+  L  |    5.3 |   10983 |    63 | 2.94e-08 | 6.80e+09 |      763 | -9.99999266e-01
+  L  |    5.4 |   11183 |    64 | 2.95e-08 | 2.46e+07 |      520 | -9.99999150e-01
+  L  |    5.6 |   11383 |    65 | 2.95e-08 | 6.56e+06 |      464 | -9.99998936e-01
+  L  |    5.8 |   11583 |    66 | 2.95e-08 | 6.41e+06 |      528 | -9.99998881e-01
+  L  |    5.9 |   11783 |    67 | 2.96e-08 | 6.64e+06 |      531 | -9.99998793e-01
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    6.1 |   11983 |    68 | 3.01e-08 | 5.59e+06 |      484 | -9.99998634e-01
+  L  |    6.3 |   12183 |    69 | 3.02e-08 | 6.78e+06 |      466 | -9.99998583e-01
+  L  |    6.5 |   12383 |    70 | 3.02e-08 | 5.76e+06 |      497 | -9.99998535e-01
+  L  |    6.6 |   12583 |    71 | 3.03e-08 | 5.03e+06 |      538 | -9.99998523e-01
+  L  |    6.8 |   12782 |    72 | 3.03e-08 | 4.99e+06 |      499 | -9.99998483e-01
+  L  |    7.0 |   12981 |    73 | 1.34e-07 | 4.81e+06 |      459 | -9.99998476e-01
+  L  |    7.3 |   13176 |    74 | 2.15e-07 | 1.16e+05 |      461 | -9.99998414e-01
+  L  |    7.5 |   13368 |    75 | 4.42e-07 | 2.02e+06 |      671 | -9.99996150e-01
+  L  |    7.7 |   13567 |    76 | 1.50e-06 | 2.98e+06 |      257 | -9.99992826e-01
+  L  |    8.0 |   13766 |    77 | 2.57e-06 | 1.27e+07 |      447 | -9.99992825e-01
+  L  |    8.2 |   13959 |    78 | 1.20e-05 | 1.55e+05 |      389 | -9.99991957e-01
+  L  |    8.4 |   14131 |    79 | 1.77e-05 | 4.76e+05 |      185 | -9.99751645e-01
+ --- initializing steepest edge multipliers
+ --- initializing steepest edge multipliers
+  E  |    8.5 |   14195 |    80 | 0.00e+00 | 2.93e-02 |      329 | 0.00000000e+00
+  E  |    8.6 |   14302 |    80 | 8.95e-11 | 1.29e+02 |      329 | 0.00000000e+00
+  E  |    9.1 |   14502 |    81 | 8.95e-11 | 2.72e+01 |      838 | 0.00000000e+00
+  E  |    9.5 |   14702 |    82 | 8.95e-11 | 3.08e+01 |      892 | 0.00000000e+00
+  E  |   10.0 |   14902 |    84 | 6.91e-11 | 3.47e+01 |      637 | 0.00000000e+00
+  E  |   10.4 |   15102 |    85 | 6.91e-11 | 1.15e+04 |      997 | 0.00000000e+00
+  E  |   10.7 |   15302 |    86 | 6.91e-11 | 3.07e+03 |      747 | 0.00000000e+00
+  E  |   11.1 |   15502 |    87 | 6.91e-11 | 4.58e+02 |      651 | 0.00000000e+00
+  E  |   11.6 |   15702 |    88 | 6.91e-11 | 7.39e+03 |      697 | 0.00000000e+00
+  E  |   12.1 |   15902 |    89 | 6.91e-11 | 1.30e+02 |      657 | 0.00000000e+00
+  E  |   12.5 |   16102 |    90 | 6.91e-11 | 4.64e+00 |     1235 | 0.00000000e+00
+  E  |   12.9 |   16302 |    91 | 6.91e-11 | 2.74e+03 |      926 | 0.00000000e+00
+  E  |   13.3 |   16502 |    92 | 6.91e-11 | 1.17e-01 |      863 | 0.00000000e+00
+  E  |   13.9 |   16702 |    93 | 6.91e-11 | 1.71e+00 |     1097 | 0.00000000e+00
+  E  |   14.3 |   16902 |    94 | 6.91e-11 | 6.60e+02 |     1288 | 0.00000000e+00
+  E  |   14.8 |   17102 |    95 | 6.91e-11 | 5.76e+01 |      616 | 0.00000000e+00
+  E  |   15.3 |   17302 |    96 | 6.91e-11 | 1.42e+03 |      947 | 0.00000000e+00
+  E  |   15.8 |   17502 |    97 | 6.91e-11 | 1.83e+01 |      920 | 0.00000000e+00
+  E  |   16.4 |   17702 |    98 | 6.91e-11 | 3.38e+02 |      689 | 0.00000000e+00
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  E  |   16.9 |   17902 |    99 | 6.91e-11 | 3.99e+01 |      921 | 0.00000000e+00
+  E  |   17.5 |   18102 |   100 | 6.91e-11 | 6.27e+03 |      849 | 0.00000000e+00
+  E  |   18.0 |   18302 |   101 | 6.91e-11 | 1.67e+02 |      670 | 0.00000000e+00
+  E  |   18.5 |   18502 |   102 | 6.91e-11 | 5.03e+02 |      963 | 0.00000000e+00
+  E  |   19.0 |   18702 |   103 | 6.91e-11 | 2.12e+01 |      693 | 0.00000000e+00
+  E  |   19.5 |   18902 |   104 | 6.91e-11 | 4.12e+02 |      613 | 0.00000000e+00
+  E  |   19.9 |   19102 |   105 | 6.91e-11 | 6.90e+01 |      853 | 0.00000000e+00
+  E  |   20.5 |   19302 |   106 | 6.91e-11 | 2.03e+01 |      695 | 0.00000000e+00
+  E  |   21.1 |   19502 |   107 | 6.91e-11 | 2.77e+01 |      716 | 0.00000000e+00
+  E  |   21.7 |   19702 |   108 | 6.91e-11 | 6.86e+01 |      743 | 0.00000000e+00
+  E  |   22.2 |   19902 |   109 | 6.91e-11 | 8.56e+00 |      758 | 0.00000000e+00
+  E  |   22.7 |   20102 |   110 | 6.91e-11 | 1.08e+02 |      577 | 0.00000000e+00
+  E  |   23.2 |   20302 |   111 | 6.91e-11 | 9.65e+01 |      865 | 0.00000000e+00
+  E  |   23.8 |   20502 |   112 | 6.91e-11 | 1.22e+02 |      880 | 0.00000000e+00
+  E  |   24.3 |   20702 |   113 | 6.91e-11 | 9.62e+01 |      869 | 0.00000000e+00
+  E  |   24.7 |   20902 |   114 | 6.91e-11 | 4.47e+02 |      870 | 0.00000000e+00
+  E  |   25.2 |   21102 |   115 | 6.91e-11 | 1.79e+00 |      757 | 0.00000000e+00
+  E  |   25.7 |   21302 |   116 | 6.91e-11 | 6.52e+02 |      714 | 0.00000000e+00
+  E  |   26.3 |   21502 |   117 | 6.91e-11 | 4.19e+01 |      718 | 0.00000000e+00
+  E  |   26.8 |   21702 |   118 | 6.91e-11 | 1.95e+01 |      722 | 0.00000000e+00
+  E  |   27.3 |   21902 |   119 | 6.91e-11 | 7.71e+01 |     1174 | 0.00000000e+00
+  E  |   27.7 |   22102 |   120 | 6.91e-11 | 6.22e+03 |      768 | 0.00000000e+00
+  E  |   28.3 |   22302 |   121 | 0.00e+00 | 1.89e+01 |      530 | 0.00000000e+00
+  E  |   28.8 |   22502 |   122 | 0.00e+00 | 1.42e+01 |      707 | 0.00000000e+00
+  E  |   29.3 |   22702 |   123 | 0.00e+00 | 3.24e+01 |     1015 | 0.00000000e+00
+  E  |   29.8 |   22902 |   124 | 0.00e+00 | 3.55e+01 |      890 | 0.00000000e+00
+  E  |   30.4 |   23102 |   125 | 0.00e+00 | 1.81e+01 |      949 | 0.00000000e+00
+  E  |   30.9 |   23302 |   126 | 3.14e-11 | 3.19e+01 |      897 | 0.00000000e+00
+  E  |   31.5 |   23502 |   127 | 3.14e-11 | 2.22e+01 |      947 | 0.00000000e+00
+  E  |   32.1 |   23702 |   128 | 3.14e-11 | 2.59e+01 |      735 | 0.00000000e+00
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  E  |   32.6 |   23902 |   129 | 3.14e-11 | 6.20e+01 |      784 | 0.00000000e+00
+  E  |   33.2 |   24102 |   130 | 3.14e-11 | 3.55e+01 |      501 | 0.00000000e+00
+  E  |   33.8 |   24302 |   131 | 3.14e-11 | 2.36e+02 |      719 | 0.00000000e+00
+  E  |   34.3 |   24502 |   132 | 3.14e-11 | 3.74e+01 |      674 | 0.00000000e+00
+  E  |   34.8 |   24702 |   133 | 3.14e-11 | 9.14e+00 |      905 | 0.00000000e+00
+  E  |   35.3 |   24902 |   134 | 3.14e-11 | 1.81e+04 |      722 | 0.00000000e+00
+  E  |   35.7 |   25102 |   135 | 3.14e-11 | 5.75e+01 |      809 | 0.00000000e+00
+  E  |   36.2 |   25302 |   136 | 3.14e-11 | 3.18e+02 |      873 | 0.00000000e+00
+  E  |   36.7 |   25502 |   137 | 3.14e-11 | 7.25e+02 |      789 | 0.00000000e+00
+  E  |   37.3 |   25702 |   138 | 3.14e-11 | 2.85e+01 |      690 | 0.00000000e+00
+  E  |   37.9 |   25902 |   139 | 3.14e-11 | 7.42e+01 |      945 | 0.00000000e+00
+  E  |   38.5 |   26102 |   140 | 3.14e-11 | 2.51e+01 |      633 | 0.00000000e+00
+  E  |   39.0 |   26302 |   141 | 3.14e-11 | 7.90e+01 |      467 | 0.00000000e+00
+  E  |   39.5 |   26502 |   142 | 3.14e-11 | 3.05e+01 |     1238 | 0.00000000e+00
+  E  |   39.8 |   26647 |   143 | 3.27e-11 | 4.06e+01 |      361 | -9.66243166e-13
+  E  |   40.1 |   26735 |   143 | 2.90e-05 | 2.68e+06 |      361 | -3.09657623e-03
+  E  |   40.2 |   26775 |   143 | 2.90e-05 | 2.69e+06 |      361 | -1.00000000e+00
+  E  |   40.3 |   26789 |   143 | 2.90e-05 | 2.69e+06 |      361 | -1.00000000e+00
+  E  |   40.4 |   26802 |   144 | 2.90e-05 | 3.37e-04 |      930 | -1.00000000e+00
+  E  |   40.4 |   26802 |   144 | 2.90e-05 | 3.37e-04 |      930 | -1.00000000e+00
+  E  |   40.4 |   26802 |   144 | 2.90e-05 | 3.37e-04 |      930 | -1.00000000e+00
+
+Increasing Markowitz threshold.
+Simplifier removed 5879 rows, 7764 columns, 43053 nonzeros, 123 col bounds, 109933 row bounds
+Reduced LP has 1522 rows 3013 columns 53681 nonzeros
+Equilibrium scaling LP
+
+ --- initializing steepest edge multipliers
+ --- initializing steepest edge multipliers
+  L  |    0.0 |       0 |     2 | 0.00e+00 | 1.11e+05 |       96 | -1.00000000e+00
+ --- active pricer: Devex
+  L  |    0.0 |     168 |     3 | 0.00e+00 | 1.73e+05 |      170 | -1.00000000e+00
+  L  |    0.0 |     368 |     5 | 0.00e+00 | 8.53e+04 |      226 | -1.00000000e+00
+  L  |    0.1 |     568 |     7 | 0.00e+00 | 3.37e+05 |      305 | -1.00000000e+00
+  L  |    0.1 |     768 |     8 | 1.31e-08 | 1.53e+05 |      282 | -9.99998398e-01
+  L  |    0.2 |     968 |     9 | 1.32e-08 | 2.15e+04 |      293 | -9.99996916e-01
+  L  |    0.2 |    1168 |    11 | 1.32e-08 | 3.06e+03 |      224 | -9.99996639e-01
+  L  |    0.3 |    1368 |    12 | 1.32e-08 | 5.96e+03 |      229 | -9.99996382e-01
+  L  |    0.3 |    1567 |    14 | 8.71e-09 | 1.95e+02 |      133 | -9.99996053e-01
+  L  |    0.3 |    1767 |    15 | 8.72e-09 | 2.27e+02 |       89 | -9.99995825e-01
+  L  |    0.4 |    1964 |    17 | 1.72e-07 | 5.07e-01 |       28 | -9.99982808e-01
+  L  |    0.4 |    2084 |    18 | 1.76e-07 | 1.56e-11 |        7 | -9.99982788e-01
+
+Switching scaling.
+Simplifier removed 5879 rows, 7764 columns, 43053 nonzeros, 123 col bounds, 109933 row bounds
+Reduced LP has 1522 rows 3013 columns 53681 nonzeros
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 1.11e+05 |       96 | -1.00000000e+00
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.0 |      75 |     1 | 0.00e+00 | 5.19e+05 |       96 | -1.00000000e+00
+  L  |    0.0 |     275 |     3 | 0.00e+00 | 3.29e+05 |      196 | -1.00000000e+00
+  L  |    0.1 |     475 |     5 | 0.00e+00 | 3.84e+06 |      286 | -1.00000000e+00
+  L  |    0.1 |     675 |     6 | 2.85e-08 | 8.02e+04 |      279 | -9.99999914e-01
+  L  |    0.1 |     875 |     7 | 2.86e-08 | 5.48e+04 |      231 | -9.99999852e-01
+  L  |    0.2 |    1075 |     8 | 2.87e-08 | 1.94e+04 |      282 | -9.99999815e-01
+  L  |    0.2 |    1275 |    10 | 2.87e-08 | 1.06e+04 |      269 | -9.99999811e-01
+  L  |    0.3 |    1475 |    11 | 2.87e-08 | 5.50e+03 |      245 | -9.99999788e-01
+  L  |    0.3 |    1675 |    12 | 1.57e-08 | 7.55e+02 |      206 | -9.99999765e-01
+  L  |    0.3 |    1875 |    13 | 1.57e-08 | 5.37e+02 |      187 | -9.99999748e-01
+  L  |    0.4 |    2075 |    14 | 1.57e-08 | 1.37e+01 |      166 | -9.99999704e-01
+  L  |    0.4 |    2267 |    15 | 2.87e-08 | 7.10e+01 |       52 | -9.99998654e-01
+  L  |    0.5 |    2308 |    17 | 2.90e-05 | 4.27e-11 |       12 | -9.99975742e-01
+
+Switching simplification.
+Equilibrium scaling LP
+
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 1.09e+05 |       14 | -1.00000000e+00
+  L  |    0.0 |     150 |     1 | 0.00e+00 | 6.81e+04 |       14 | -1.00000000e+00
+  L  |    0.1 |     350 |     2 | 0.00e+00 | 8.77e+04 |      114 | -1.00000000e+00
+  L  |    0.1 |     550 |     3 | 0.00e+00 | 2.30e+05 |       69 | -1.00000000e+00
+  L  |    0.2 |     750 |     4 | 0.00e+00 | 1.45e+05 |      165 | -1.00000000e+00
+  L  |    0.2 |     950 |     5 | 0.00e+00 | 1.08e+05 |      139 | -1.00000000e+00
+  L  |    0.3 |    1150 |     6 | 0.00e+00 | 2.62e+05 |      204 | -1.00000000e+00
+  L  |    0.3 |    1350 |     7 | 5.01e-08 | 5.32e+04 |      261 | -9.99999584e-01
+  L  |    0.4 |    1550 |     8 | 5.02e-08 | 6.79e+05 |      402 | -9.99999429e-01
+  L  |    0.5 |    1750 |     9 | 5.02e-08 | 4.13e+04 |      463 | -9.99999242e-01
+  L  |    0.5 |    1950 |    10 | 5.03e-08 | 2.55e+04 |      515 | -9.99999183e-01
+  L  |    0.6 |    2150 |    11 | 5.03e-08 | 1.34e+04 |      501 | -9.99999139e-01
+  L  |    0.6 |    2348 |    12 | 5.06e-08 | 2.61e+05 |      524 | -9.99998570e-01
+  L  |    0.7 |    2544 |    13 | 5.11e-08 | 1.13e+05 |      529 | -9.99997846e-01
+  L  |    0.8 |    2731 |    14 | 1.86e-05 | 1.06e+05 |      627 | -9.99635937e-01
+  L  |    0.9 |    2916 |    15 | 2.56e-05 | 2.93e+06 |      776 | -9.98918900e-01
+  L  |    1.0 |    3099 |    16 | 7.46e-05 | 1.30e+06 |      869 | -9.97360507e-01
+  L  |    1.1 |    3278 |    17 | 1.08e-04 | 4.93e+04 |      732 | -9.97228722e-01
+  L  |    1.2 |    3470 |    18 | 1.13e-04 | 1.88e+05 |      633 | -9.97225850e-01
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    1.2 |    3652 |    20 | 2.02e-04 | 2.53e+04 |      480 | -9.96721147e-01
+  L  |    1.3 |    3830 |    21 | 3.31e-04 | 7.99e+05 |      426 | -9.93134569e-01
+  L  |    1.5 |    4012 |    22 | 5.93e-04 | 1.27e+06 |      366 | -9.38566115e-01
+  L  |    1.6 |    4154 |    23 | 6.72e-04 | 4.30e+06 |      470 | -8.59578000e-01
+  L  |    1.7 |    4236 |    27 | 2.50e-02 | 7.15e+05 |      468 | 1.10310163e+02
+  L  |    1.8 |    4323 |    27 | 1.44e-01 | 1.42e+06 |      468 | 2.63214747e+02
+  E  |    2.0 |    4385 |    28 | 0.00e+00 | 2.62e-03 |      205 | 0.00000000e+00
+  E  |    2.0 |    4391 |    28 | 0.00e+00 | 1.02e-02 |      205 | 0.00000000e+00
+  E  |    2.1 |    4591 |    29 | 4.49e-11 | 2.74e-01 |     1130 | 0.00000000e+00
+  E  |    2.3 |    4791 |    30 | 4.49e-11 | 2.10e-02 |     1550 | 0.00000000e+00
+  E  |    2.5 |    4991 |    31 | 4.49e-11 | 2.25e-02 |      470 | 0.00000000e+00
+  E  |    2.7 |    5191 |    32 | 4.49e-11 | 1.29e-02 |      266 | 0.00000000e+00
+  E  |    2.8 |    5391 |    33 | 4.49e-11 | 1.01e-02 |      779 | 0.00000000e+00
+  E  |    3.0 |    5591 |    34 | 4.49e-11 | 2.07e-02 |     1391 | 0.00000000e+00
+  E  |    3.2 |    5791 |    35 | 4.49e-11 | 1.58e-02 |     1062 | 0.00000000e+00
+  E  |    3.3 |    5991 |    36 | 4.49e-11 | 1.84e-02 |      791 | 0.00000000e+00
+  E  |    3.5 |    6191 |    37 | 4.49e-11 | 1.39e-01 |      181 | 0.00000000e+00
+  E  |    3.7 |    6391 |    38 | 4.49e-11 | 1.42e-02 |      785 | 0.00000000e+00
+  E  |    3.9 |    6591 |    39 | 4.49e-11 | 1.69e-02 |      589 | 0.00000000e+00
+  E  |    4.0 |    6791 |    40 | 4.49e-11 | 4.81e-02 |     1105 | 0.00000000e+00
+  E  |    4.2 |    6991 |    41 | 4.49e-11 | 1.91e-02 |      987 | 0.00000000e+00
+  E  |    4.4 |    7191 |    42 | 4.49e-11 | 3.01e-02 |      761 | 0.00000000e+00
+  E  |    4.6 |    7391 |    43 | 4.49e-11 | 4.70e-02 |      245 | 0.00000000e+00
+  E  |    4.7 |    7591 |    44 | 4.28e-11 | 4.81e-02 |      869 | 0.00000000e+00
+  E  |    4.9 |    7791 |    45 | 4.28e-11 | 5.57e-02 |      204 | 0.00000000e+00
+  E  |    5.1 |    7991 |    46 | 4.28e-11 | 8.57e-02 |      741 | 0.00000000e+00
+  E  |    5.3 |    8191 |    47 | 4.28e-11 | 5.82e-02 |     1007 | 0.00000000e+00
+  E  |    5.4 |    8391 |    48 | 4.28e-11 | 3.69e-02 |      214 | 0.00000000e+00
+  E  |    5.6 |    8591 |    49 | 4.28e-11 | 4.39e-02 |      484 | 0.00000000e+00
+  E  |    5.8 |    8791 |    50 | 4.28e-11 | 5.77e-02 |      218 | 0.00000000e+00
+  E  |    6.0 |    8991 |    51 | 4.28e-11 | 2.67e+01 |     1292 | 0.00000000e+00
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  E  |    6.1 |    9191 |    52 | 4.28e-11 | 4.32e-02 |     1302 | 0.00000000e+00
+  E  |    6.3 |    9391 |    53 | 4.28e-11 | 4.10e-02 |      511 | 0.00000000e+00
+  E  |    6.5 |    9591 |    55 | 4.28e-11 | 7.65e-02 |      608 | 0.00000000e+00
+  E  |    6.7 |    9791 |    56 | 4.28e-11 | 6.31e-02 |      296 | 0.00000000e+00
+  E  |    6.9 |    9991 |    57 | 4.28e-11 | 3.30e-02 |      259 | 0.00000000e+00
+ --- initializing steepest edge multipliers
+ --- active pricer: SteepEx
+  E  |    7.2 |   10191 |    58 | 4.28e-11 | 3.54e-02 |     1291 | 0.00000000e+00
+  E  |    7.6 |   10391 |    59 | 4.28e-11 | 6.92e-02 |      223 | 0.00000000e+00
+  E  |    8.0 |   10591 |    60 | 4.28e-11 | 2.38e+00 |      366 | 0.00000000e+00
+  E  |    8.4 |   10791 |    61 | 4.28e-11 | 2.84e+01 |      970 | 0.00000000e+00
+  E  |    8.6 |   10895 |    62 | 4.28e-11 | 3.28e+02 |        3 | 0.00000000e+00
+  E  |    8.8 |   11018 |    63 | 4.28e-11 | 2.61e+00 |      160 | 0.00000000e+00
+  E  |    9.1 |   11192 |    64 | 4.28e-11 | 5.89e+01 |     1443 | 0.00000000e+00
+  E  |    9.3 |   11316 |    64 | 4.28e-11 | 8.35e+02 |     1443 | 0.00000000e+00
+  E  |    9.5 |   11415 |    65 | 5.23e-11 | 5.44e+02 |       53 | -7.97183445e-27
+  E  |    9.7 |   11510 |    65 | 1.95e-10 | 7.86e+02 |       53 | -2.17752346e-25
+  E  |    9.8 |   11586 |    66 | 1.04e-09 | 2.93e+03 |       73 | 1.45478375e-19
+  E  |   10.0 |   11667 |    66 | 1.04e-09 | 4.69e+03 |       73 | -2.19393385e-13
+  E  |   10.4 |   11867 |    67 | 1.79e-07 | 1.01e+02 |      178 | -2.06822570e-10
+  E  |   10.7 |   12067 |    68 | 2.74e-06 | 1.36e+01 |      170 | -1.09502644e-06
+  E  |   10.9 |   12145 |    69 | 4.90e-06 | 4.21e+02 |      542 | -3.53814294e-05
+  E  |   11.0 |   12210 |    69 | 4.90e-06 | 9.80e+01 |      542 | -1.53689379e-04
+  E  |   11.2 |   12284 |    69 | 1.54e-04 | 7.51e+03 |      542 | -1.82977644e-01
+  E  |   11.3 |   12316 |    71 | 1.54e-04 | 3.31e-08 |      142 | -1.00000000e+00
+ --- initializing steepest edge multipliers
+ --- initializing steepest edge multipliers
+  L  |   11.9 |   12316 |    71 | 0.00e+00 | 9.66e-02 |      133 | -1.00000000e+00
+  L  |   12.1 |   12499 |    72 | 0.00e+00 | 2.29e+04 |      272 | -1.00000000e+00
+  L  |   12.3 |   12692 |    77 | 0.00e+00 | 8.06e-11 |        9 | -1.00000000e+00
+
+Relaxing tolerances.
+Equilibrium scaling LP
+
+ --- initializing steepest edge multipliers
+ --- initializing steepest edge multipliers
+  E  |    0.0 |       0 |     1 | 1.09e+05 | 0.00e+00 |        0 | -1.00000000e+00
+ --- active pricer: Devex
+  L  |    0.0 |       0 |     1 | 0.00e+00 | 1.09e+05 |       14 | -1.00000000e+00
+  L  |    0.0 |     199 |     1 | 0.00e+00 | 1.03e+05 |       14 | -1.00000000e+00
+  L  |    0.1 |     399 |     2 | 0.00e+00 | 1.06e+05 |       75 | -1.00000000e+00
+  L  |    0.1 |     599 |     3 | 0.00e+00 | 1.61e+05 |      180 | -1.00000000e+00
+  L  |    0.2 |     799 |     4 | 0.00e+00 | 8.63e+04 |      220 | -1.00000000e+00
+  L  |    0.2 |     999 |     5 | 0.00e+00 | 7.03e+04 |      206 | -1.00000000e+00
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  L  |    0.3 |    1199 |     6 | 3.19e-05 | 8.61e+04 |      239 | -9.99922988e-01
+  L  |    0.3 |    1399 |     7 | 3.19e-05 | 1.05e+05 |      231 | -9.99683106e-01
+  L  |    0.4 |    1599 |     8 | 3.20e-05 | 1.07e+05 |      248 | -9.99242317e-01
+  L  |    0.5 |    1799 |     9 | 3.20e-05 | 5.81e+04 |      371 | -9.99000127e-01
+  L  |    0.5 |    1999 |    10 | 3.21e-05 | 5.32e+03 |      425 | -9.98880927e-01
+  L  |    0.6 |    2199 |    11 | 3.21e-05 | 2.74e+04 |      575 | -9.98785450e-01
+  L  |    0.7 |    2399 |    12 | 3.21e-05 | 3.27e+05 |      597 | -9.98434892e-01
+  L  |    0.7 |    2598 |    13 | 3.57e-05 | 6.95e+05 |      562 | -9.92589285e-01
+  L  |    0.8 |    2796 |    14 | 1.08e-03 | 6.51e+05 |      513 | 2.79949897e-01
+  E  |    0.8 |    2826 |    16 | 0.00e+00 | 3.44e-03 |      136 | 0.00000000e+00
+  E  |    0.9 |    2990 |    16 | 2.56e-08 | 4.55e-01 |      136 | 0.00000000e+00
+  E  |    1.1 |    3190 |    17 | 2.56e-08 | 4.31e-02 |      211 | 0.00000000e+00
+  E  |    1.2 |    3390 |    18 | 2.56e-08 | 5.25e-02 |      981 | 0.00000000e+00
+  E  |    1.3 |    3590 |    19 | 2.56e-08 | 8.00e-02 |      875 | 0.00000000e+00
+  E  |    1.4 |    3790 |    20 | 2.56e-08 | 5.24e-02 |      255 | 0.00000000e+00
+  E  |    1.6 |    3990 |    21 | 2.56e-08 | 6.72e-02 |      503 | 0.00000000e+00
+  E  |    1.7 |    4190 |    22 | 2.56e-08 | 7.80e-02 |      689 | 0.00000000e+00
+  E  |    1.8 |    4390 |    23 | 2.56e-08 | 4.54e-02 |      310 | 0.00000000e+00
+  E  |    2.0 |    4590 |    24 | 2.56e-08 | 7.82e-02 |      263 | 0.00000000e+00
+  E  |    2.1 |    4790 |    25 | 2.56e-08 | 4.80e-02 |      188 | 0.00000000e+00
+  E  |    2.2 |    4990 |    26 | 2.56e-08 | 7.38e-02 |      954 | 0.00000000e+00
+  E  |    2.4 |    5190 |    27 | 2.56e-08 | 1.20e-01 |      757 | 0.00000000e+00
+  E  |    2.5 |    5390 |    28 | 2.56e-08 | 8.21e-02 |     1538 | 0.00000000e+00
+  E  |    2.6 |    5590 |    29 | 2.56e-08 | 8.06e-02 |     1530 | 0.00000000e+00
+  E  |    2.8 |    5790 |    30 | 2.56e-08 | 7.18e-02 |     1685 | 0.00000000e+00
+  E  |    2.9 |    5990 |    31 | 2.56e-08 | 5.07e-02 |      201 | 0.00000000e+00
+  E  |    3.0 |    6190 |    32 | 2.56e-08 | 6.11e-02 |     1605 | 0.00000000e+00
+  E  |    3.1 |    6390 |    33 | 2.56e-08 | 5.78e-02 |     1256 | 0.00000000e+00
+  E  |    3.3 |    6590 |    34 | 2.56e-08 | 4.54e-02 |      774 | 0.00000000e+00
+  E  |    3.4 |    6790 |    35 | 2.56e-08 | 1.10e-01 |      476 | 0.00000000e+00
+  E  |    3.5 |    6990 |    36 | 2.56e-08 | 1.01e-01 |      324 | 0.00000000e+00
+type |   time |   iters | facts |    shift | viol sum | viol num | obj value 
+  E  |    3.7 |    7190 |    37 | 2.56e-08 | 5.91e-02 |      196 | 0.00000000e+00
+  E  |    3.8 |    7390 |    38 | 2.56e-08 | 3.28e-02 |      688 | 0.00000000e+00
+  E  |    3.9 |    7590 |    39 | 1.92e-08 | 5.62e-02 |      407 | 0.00000000e+00
+  E  |    4.1 |    7790 |    40 | 1.92e-08 | 3.51e-02 |      210 | 0.00000000e+00
+  E  |    4.2 |    7990 |    41 | 1.92e-08 | 4.37e-02 |      379 | 0.00000000e+00
+  E  |    4.3 |    8190 |    42 | 1.92e-08 | 4.64e-02 |     1656 | 0.00000000e+00
+  E  |    4.5 |    8390 |    43 | 1.92e-08 | 8.29e-02 |      205 | 0.00000000e+00
+  E  |    4.6 |    8590 |    44 | 1.92e-08 | 2.36e-02 |      230 | 0.00000000e+00
+  E  |    4.7 |    8790 |    45 | 1.92e-08 | 3.81e-01 |      166 | 0.00000000e+00
+  E  |    4.8 |    8990 |    46 | 1.92e-08 | 7.18e-02 |      342 | 0.00000000e+00
+  E  |    5.0 |    9190 |    47 | 1.92e-08 | 5.05e-02 |      146 | 0.00000000e+00
+  E  |    5.1 |    9390 |    48 | 1.92e-08 | 3.56e+00 |      400 | 0.00000000e+00
+  E  |    5.2 |    9590 |    49 | 2.10e-08 | 5.63e+01 |     1388 | -1.40966252e-09
+  E  |    5.3 |    9729 |    50 | 4.30e-08 | 2.62e+02 |      786 | -1.02118681e-08
+  E  |    5.4 |    9833 |    51 | 2.11e-07 | 5.07e+02 |       39 | -1.26481323e-07
+  E  |    5.4 |    9917 |    51 | 9.62e-05 | 1.51e+03 |       39 | -1.84370189e-02
+ --- initializing steepest edge multipliers
+ --- active pricer: SteepEx
+  E  |    5.5 |   10000 |    52 | 4.81e-03 | 3.39e+01 |      235 | -5.95992972e-02
+  E  |    5.6 |   10140 |    52 | 7.10e-03 | 5.66e+01 |      235 | -7.20891586e-02
+  E  |    5.7 |   10246 |    53 | 7.10e-03 | 1.13e+02 |     1630 | -1.01603291e-01
+  E  |    5.8 |   10332 |    53 | 7.10e-03 | 5.79e+02 |     1630 | -1.11404197e-01
+  E  |    5.9 |   10419 |    54 | 7.10e-03 | 1.11e+02 |     1264 | -2.16565832e-01
+  E  |    6.0 |   10519 |    54 | 2.07e-02 | 4.04e+02 |     1264 | -3.32170735e-01
+  E  |    6.1 |   10605 |    55 | 3.96e-02 | 3.06e+01 |      176 | -4.41460428e-01
+  E  |    6.1 |   10681 |    55 | 7.16e-02 | 4.04e+03 |      176 | -4.93308906e-01
+  E  |    6.2 |   10756 |    55 | 7.31e-02 | 4.20e+03 |      176 | -6.86848825e-01
+ --- initializing steepest edge multipliers
+ --- initializing steepest edge multipliers
+  L  |    6.8 |   10807 |    57 | 0.00e+00 | 1.32e+02 |      343 | -1.00000000e+00
+  L  |    6.9 |   10868 |    57 | 0.00e+00 | 2.55e+05 |      343 | -1.00000000e+00
+  L  |    7.0 |   11068 |    59 | 0.00e+00 | 2.65e+00 |      470 | -1.00000000e+00
+  L  |    7.1 |   11268 |    60 | 1.01e-05 | 4.31e+04 |      356 | -9.99993104e-01
+  L  |    7.3 |   11467 |    61 | 1.01e-05 | 6.50e+02 |      384 | -9.99964146e-01slurmstepd: error: *** JOB 17446159 ON p-bc-5005 CANCELLED AT 2024-08-01T17:11:14 ***

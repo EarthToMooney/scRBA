@@ -1,3 +1,4 @@
-$include ../../input/phenotype_common.txt
-v.up('RXNADD-SKM1_FWD-SPONT') = 1e3 * %nscale%;
-v.up('RXNADD-EX_skm_e_FWD-SPONT') = 1e3 * %nscale%;
+* adds phenotype_common.txt, then settings based on FBA yield predictions
+$include RBA_GAMS_defaults_from_FBA.txt
+
+* everything below overrides default settings, including phenotype_common.txt

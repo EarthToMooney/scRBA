@@ -1,0 +1,352 @@
+unknown metabolite 'hxdcal_c' created
+unknown metabolite 'hxdcol_c' created
+unknown metabolite '2etmal_m' created
+unknown metabolite '2etmal_c' created
+unknown metabolite '3etmal_c' created
+unknown metabolite '2oxptn_c' created
+unknown metabolite 'btal_c' created
+unknown metabolite 'btoh_c' created
+unknown metabolite 'citm_m' created
+unknown metabolite 'citac_m' created
+unknown metabolite '3mmal_m' created
+unknown metabolite 'btoh_e' created
+unknown metabolite 'tag_e' created
+unknown metabolite 'cou_c' created
+unknown metabolite 'nrgnch_c' created
+unknown metabolite 'nrgn_c' created
+unknown metabolite 'nrgn_e' created
+unknown metabolite 'cou_e' created
+unknown metabolite 'citm_c' created
+unknown metabolite 'citm_e' created
+unknown metabolite '3hbcoa__R_c' created
+unknown metabolite 'polyhb_c' created
+unknown metabolite 'polyhb_e' created
+unknown metabolite 'amorph_c' created
+unknown metabolite 'nhemrd_c' created
+unknown metabolite 'arte_c' created
+unknown metabolite 'nhemox_c' created
+unknown metabolite 'arte_e' created
+unknown metabolite 'sesqt_c' created
+unknown metabolite 'sesqt_e' created
+unknown metabolite 'alac_c' created
+unknown metabolite 'actn_c' created
+unknown metabolite '3oxpp_c' created
+unknown metabolite '3hpp_c' created
+unknown metabolite '3hpp_e' created
+unknown metabolite '34dhbz_c' created
+unknown metabolite '4hbz_e' created
+unknown metabolite 'rsvtol_c' created
+unknown metabolite 'rsvtol_e' created
+unknown metabolite 'styr_e' created
+unknown metabolite 'hphpyr_c' created
+unknown metabolite 'hpacald_c' created
+unknown metabolite 'thptdn_c' created
+unknown metabolite '34dopa_c' created
+unknown metabolite 'hthbp_c' created
+unknown metabolite 'dhptdn_c' created
+unknown metabolite 'dopa_c' created
+unknown metabolite 'nrco_c' created
+unknown metabolite 'cocl_c' created
+unknown metabolite 'mcocl_c' created
+unknown metabolite '3hmcocl_c' created
+unknown metabolite 'retcln_c' created
+unknown metabolite 'retcln_e' created
+unknown metabolite '3hppnl_c' created
+unknown metabolite '13ppd_c' created
+unknown metabolite '13ppd_e' created
+unknown metabolite 'skm_e' created
+unknown metabolite 'tal_c' created
+unknown metabolite 'tal_e' created
+unknown metabolite 'odealc_r' created
+unknown metabolite 'odealc_e' created
+unknown metabolite 'odealc_rm' created
+unknown metabolite 'stalc_r' created
+unknown metabolite 'stalc_e' created
+unknown metabolite 'stalc_rm' created
+unknown metabolite 'pmtalc_r' created
+unknown metabolite 'pmtalc_e' created
+unknown metabolite 'pmtalc_rm' created
+['rsvtol', 'polyhb', '13ppd', 'btd', 'lac__L', '4hbz', 'btoh', 'stalc', '3hpp', 'citm', 'nrgn', '3hppa', '3hppb', 'skm', 'muco', 'styr', 'pmtalc', 'hdca', 'arte', 'odealc', 'tag', 'cou', 'ibutoh', 'hxdcol', 'retcln', 'sesqt', '2phetoh', 'tal']
+EX_rsvtol_e flux: 4.06381791872468
+EX_rsvtol_e flux / EX_glc__D_e flux: -0.30763193934327626
+Simulated yields for rsvtol: -0.3897395248324196 g/g all C sources
+EX_polyhb_e flux: 14.691190956973584
+EX_polyhb_e flux / EX_glc__D_e flux: -1.1121264918223757
+Simulated yields for polyhb: -0.6364497508097812 g/g all C sources
+EX_13ppd_e flux: 17.60492246140773
+EX_13ppd_e flux / EX_glc__D_e flux: -1.3326966284184505
+Simulated yields for 13ppd: -0.562872657343413 g/g all C sources
+EX_btd_e flux: 13.1605322515397
+EX_btd_e flux / EX_glc__D_e flux: -0.9962552802073957
+Simulated yields for btd: -0.4983598983785748 g/g all C sources
+EX_lac__L_e flux: 23.675576314671748
+EX_lac__L_e flux / EX_glc__D_e flux: -1.7922465037601625
+Simulated yields for lac__L: -0.8860953622966633 g/g all C sources
+EX_4hbz_e flux: 9.135051294387429
+EX_4hbz_e flux / EX_glc__D_e flux: -0.691525457561501
+Simulated yields for 4hbz: -0.5262941866285742 g/g all C sources
+EX_btoh_e flux: 11.14744196643138
+EX_btoh_e flux / EX_glc__D_e flux: -0.8438638884505207
+Simulated yields for btoh: -0.34718350436262246 g/g all C sources
+/storage/home/ejm6426/.conda/envs/rba/lib/python3.12/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+FBA for stalc failed
+Maximize
+0.34229648*EX_sucr_e - 0.34229648*EX_sucr_e_reverse_0215c
+EX_sucr_e (-1000, 1000)
+Max growth rate: 13.154474624412417
+Minimum total mass flux (g/gDW/h) needed to support max growth: -0.09147545637425537
+Flux for each source:
+pnto__R_e: -1.3333333333476097e-06
+chol_e: -0.00038938666666666575
+fol_e: -1.3333333334497943e-06
+fe2_e: -1.017333333333331e-05
+uptake exceeds normal bounds: arg__L_e: -0.0016659066666666624
+uptake exceeds normal bounds: glu__L_e: -0.33700034442230503
+uptake exceeds normal bounds: met__L_e: -0.0005551066666666811
+uptake exceeds normal bounds: phe__L_e: -0.001622759999999996
+uptake exceeds normal bounds: pro__L_e: -0.12366160061372052
+nac_e: -2.666666666743418e-06
+o2_e: -0.8215251318736887
+uptake exceeds normal bounds: pi_e: -0.006718986666668134
+so4_e: -0.00041553333333333234
+thm_e: -1.3333333333333302e-06
+uptake exceeds normal bounds: k_e: -0.00803367999999998
+ca2_e: -1.7119999999999958e-05
+cu2_e: -1.5199999999999965e-06
+mg2_e: -0.0008465199999999981
+mn2_e: -1.2533333333333304e-06
+zn2_e: -2.0973333333333284e-05
+btn_c: -1.3333333333333302e-06
+EX_stalc_e: 0.001125130595515551
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:448: RuntimeWarning: divide by zero encountered in scalar divide
+  fba_results[p]['yield'] = -prod_info[p_for_mw]['MW (g/mol)']*fba[objrxns]/(-g_all_substrates)
+EX_stalc_e flux: 0.001125130595515551
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:452: RuntimeWarning: divide by zero encountered in scalar divide
+  print(objrxns+' flux / '+c['rxn']+' flux: '+str(fba[objrxns]/c['v']))
+EX_stalc_e flux / EX_sucr_e flux: inf
+Simulated yields for stalc: inf g/g all C sources
+inf% of LB of experimental yield: 0.006
+inf% of UB of experimental yield: 0.0092
+EX_3hpp_e flux: 0.0
+EX_3hpp_e flux / EX_glc__D_e flux: -0.0
+Simulated yields for 3hpp: -0.0 g/g all C sources
+EX_citm_e flux: 14.629731859904158
+EX_citm_e flux / EX_glc__D_e flux: -1.1074740242168173
+Simulated yields for citm: -0.8981213777952275 g/g all C sources
+EX_nrgn_e flux: 4.063817918724654
+EX_nrgn_e flux / EX_glc__D_e flux: -0.3076319393432743
+Simulated yields for nrgn: -0.4648904032405606 g/g all C sources
+EX_3hpp_e flux: 20.57574879486627
+EX_3hpp_e flux / EX_glc__D_e flux: -1.5575888565379463
+Simulated yields for 3hppa: -0.7788117198258077 g/g all C sources
+EX_3hpp_e flux: 21.32394453322233
+EX_3hpp_e flux / EX_glc__D_e flux: -1.614227443847262
+Simulated yields for 3hppb: -0.8071316422531659 g/g all C sources
+EX_skm_e flux: 9.657347553885636
+EX_skm_e flux / EX_glc__D_e flux: -0.7310634030193517
+Simulated yields for skm: -0.7066913765615361 g/g all C sources
+EX_muco_e flux: 10.36169878779036
+EX_muco_e flux / EX_glc__D_e flux: -0.7843829513845844
+Simulated yields for muco: -0.6099392063515311 g/g all C sources
+EX_styr_e flux: 6.80790205807058
+EX_styr_e flux / EX_glc__D_e flux: -0.5153597318751385
+Simulated yields for styr: -0.29793465704609157 g/g all C sources
+FBA for pmtalc failed
+Maximize
+0.34229648*EX_sucr_e - 0.34229648*EX_sucr_e_reverse_0215c
+EX_sucr_e (-1000, 1000)
+Max growth rate: 13.154509067466359
+Minimum total mass flux (g/gDW/h) needed to support max growth: -0.09110155973358391
+Flux for each source:
+pnto__R_e: -1.3333333333847087e-06
+chol_e: -0.0003893866666666658
+fol_e: -1.3333333333841672e-06
+fe2_e: -1.017333333333331e-05
+uptake exceeds normal bounds: arg__L_e: -0.001665906666663005
+uptake exceeds normal bounds: glu__L_e: -0.3322589240971616
+uptake exceeds normal bounds: met__L_e: -0.000555106666666781
+uptake exceeds normal bounds: phe__L_e: -0.001622759999999996
+uptake exceeds normal bounds: pro__L_e: -0.1263773030667614
+nac_e: -2.6666666667133345e-06
+o2_e: -0.8217209480689187
+uptake exceeds normal bounds: pi_e: -0.006718986666713275
+so4_e: -0.00041553333333333234
+thm_e: -1.3333333333333302e-06
+uptake exceeds normal bounds: k_e: -0.00803367999999998
+ca2_e: -1.7119999999999958e-05
+cu2_e: -1.5199999999999965e-06
+mg2_e: -0.0008465199999999981
+mn2_e: -1.2533333333333304e-06
+zn2_e: -2.0973333333333284e-05
+btn_c: -1.3333333333333302e-06
+EX_pmtalc_e: 0.000753211910791016
+EX_pmtalc_e flux: 0.000753211910791016
+EX_pmtalc_e flux / EX_sucr_e flux: inf
+Simulated yields for pmtalc: inf g/g all C sources
+inf% of LB of experimental yield: 0.0036
+inf% of UB of experimental yield: 0.006
+EX_hdca_e flux: 2.7851723827362194
+EX_hdca_e flux / EX_glc__D_e flux: -0.21083818188767744
+Simulated yields for hdca: -0.30006721861054025 g/g all C sources
+EX_arte_e flux: 2.8108349093830687
+EX_arte_e flux / EX_glc__D_e flux: -0.21278084098282124
+Simulated yields for arte: -0.2767653282016947 g/g all C sources
+FBA for odealc failed
+Maximize
+0.34229648*EX_sucr_e - 0.34229648*EX_sucr_e_reverse_0215c
+EX_sucr_e (-1000, 1000)
+Max growth rate: 13.15419634083281
+Minimum total mass flux (g/gDW/h) needed to support max growth: -0.0954126669557402
+Flux for each source:
+pnto__R_e: -1.3333333333502423e-06
+chol_e: -0.00038938666666666575
+fol_e: -1.3333333338598652e-06
+fe2_e: -1.017333333333331e-05
+uptake exceeds normal bounds: arg__L_e: -0.0016659066666666624
+uptake exceeds normal bounds: glu__L_e: -0.38456497180133875
+uptake exceeds normal bounds: met__L_e: -0.0005551066666666821
+uptake exceeds normal bounds: phe__L_e: -0.001622759999999996
+uptake exceeds normal bounds: pro__L_e: -0.09673378266508034
+nac_e: -2.666666666522499e-06
+o2_e: -0.8242507500460823
+uptake exceeds normal bounds: pi_e: -0.0067189866666737584
+so4_e: -0.00041553333333333234
+thm_e: -1.3333333333333302e-06
+uptake exceeds normal bounds: k_e: -0.00803367999999998
+ca2_e: -1.7119999999999958e-05
+cu2_e: -1.5199999999999965e-06
+mg2_e: -0.0008465199999999981
+mn2_e: -1.2533333333333304e-06
+zn2_e: -2.0973333333333284e-05
+btn_c: -1.3333333333333302e-06
+EX_odealc_e: 0.005138585269748739
+EX_odealc_e flux: 0.005138585269748739
+EX_odealc_e flux / EX_sucr_e flux: inf
+Simulated yields for odealc: inf g/g all C sources
+inf% of LB of experimental yield: 0.027200000000000002
+inf% of UB of experimental yield: 0.027999999999999997
+EX_tag_e flux: 0.7792094156239902
+EX_tag_e flux / EX_glc__D_e flux: -0.05898632972172522
+Simulated yields for tag: -0.26989071465628733 g/g all C sources
+-208.5966693380073% of LB of experimental yield: 0.129384
+-183.84926066504585% of UB of experimental yield: 0.1468
+EX_cou_e flux: 7.056545944484332
+EX_cou_e flux / EX_glc__D_e flux: -0.5341821305438555
+Simulated yields for cou: -0.48375749127550594 g/g all C sources
+EX_ibutoh_e flux: 12.223039658199262
+EX_ibutoh_e flux / EX_glc__D_e flux: -0.925286877986318
+Simulated yields for ibutoh: -0.38068264946127744 g/g all C sources
+EX_hxdcol_e flux: 2.692622226278176
+EX_hxdcol_e flux / EX_glc__D_e flux: -0.20383211402559998
+Simulated yields for hxdcol: -0.2743014816290685 g/g all C sources
+EX_retcln_e flux: 2.671636406811182
+EX_retcln_e flux / EX_glc__D_e flux: -0.20224348272605464
+Simulated yields for retcln: -0.3697850929747685 g/g all C sources
+EX_sesqt_e flux: 2.990767247872964
+EX_sesqt_e flux / EX_glc__D_e flux: -0.22640175986926295
+Simulated yields for sesqt: -0.30952481991051906 g/g all C sources
+EX_2phetoh_e flux: 6.8596007604350016
+EX_2phetoh_e flux / EX_glc__D_e flux: -0.5192733353849357
+Simulated yields for 2phetoh: -0.35210834305059924 g/g all C sources
+FBA for tal failed
+Maximize
+0.18015588*EX_glc__D_e - 0.18015588*EX_glc__D_e_reverse_af641 + 0.1501299*EX_xyl__D_e - 0.1501299*EX_xyl__D_e_reverse_e202a
+EX_xyl__D_e (-1000, 1000)
+EX_glc__D_e (-1000, 1000)
+Minimum total mass flux (g/gDW/h) needed to match experimental results with target of EX_tal_e: -0.05759523590708682
+Flux for each source:
+pnto__R_e: -0.033400446741373366
+nh4_e: -0.274554805251535
+uptake exceeds normal bounds: glc__D_e: -0.319696675496175
+xyl__D_e: -1.1368683772161603e-13
+fol_e: -1.3888863320109713e-06
+fe2_e: -1.0597222222222232e-05
+inost_e: -0.0006235138888888893
+nac_e: -2.777586929235443e-06
+o2_e: -0.8392368439505415
+pi_e: -0.10719611877300364
+so4_e: -0.03441014118581782
+thm_e: -1.3888888888888902e-06
+h_e: 0.07931956857701042
+k_e: -0.008368416666666675
+h2o_e: 1.7103322876029288
+ca2_e: -1.7833333333333348e-05
+cu2_e: -1.583333333333335e-06
+mg2_e: -0.0008817916666666676
+mn2_e: -1.3055555555555567e-06
+zn2_e: -2.1847222222222238e-05
+btn_c: -1.38888888888889e-06
+    EX_pnto__R_e: -0.033400446741373366 bounds: (-1000.0, 1000.0)
+    EX_nh4_e: -0.274554805251535 bounds: (-1000.0, 1000.0)
+    EX_co2_e: 0.8659170643413754 bounds: (0.0, 1000.0)
+    EX_glc__D_e: -0.319696675496175 bounds: (-0.319696675496175, 1000)
+    EX_xyl__D_e: -1.1368683772161603e-13 bounds: (-1000, 1000)
+    EX_fol_e: -1.3888863320109713e-06 bounds: (-1000.0, 1000.0)
+    EX_fe2_e: -1.0597222222222232e-05 bounds: (-1000.0, 1000.0)
+    EX_inost_e: -0.0006235138888888893 bounds: (-1000.0, 1000.0)
+    EX_nac_e: -2.777586929235443e-06 bounds: (-1000.0, 1000.0)
+    EX_o2_e: -0.8392368439505415 bounds: (-1000.0, 1000.0)
+    EX_pi_e: -0.10719611877300364 bounds: (-1000.0, 1000.0)
+    EX_so4_e: -0.03441014118581782 bounds: (-1000.0, 1000.0)
+    EX_thm_e: -1.3888888888888902e-06 bounds: (-1000.0, 1000.0)
+    EX_h_e: 0.07931956857701042 bounds: (-1000.0, 1000.0)
+    EX_k_e: -0.008368416666666675 bounds: (-1000.0, 1000.0)
+    EX_h2o_e: 1.7103322876029288 bounds: (-1000.0, 1000.0)
+    EX_ca2_e: -1.7833333333333348e-05 bounds: (-1000.0, 1000.0)
+    EX_cu2_e: -1.583333333333335e-06 bounds: (-1000.0, 1000.0)
+    EX_mg2_e: -0.0008817916666666676 bounds: (-1000.0, 1000.0)
+    EX_mn2_e: -1.3055555555555567e-06 bounds: (-1000.0, 1000.0)
+    EX_zn2_e: -2.1847222222222238e-05 bounds: (-1000.0, 1000.0)
+    EX_btn_c: -1.38888888888889e-06 bounds: (-0.01, 0.0)
+    EX_caro_c: -8.389347072613372e-19 bounds: (0.0, 1000.0)
+    EX_tal_e: 0.011133019284161489 bounds: (0.011133019284161489, 0.012780647900976147)
+EX_tal_e flux: 0.011133019284161489
+EX_tal_e flux / EX_xyl__D_e flux: -97927073241.51997
+EX_tal_e flux / EX_glc__D_e flux: -0.03482369426232801
+Simulated yields for tal: -0.024376764590579306 g/g all C sources
+-21.28794162859176% of LB of experimental yield: 0.11450973051259666
+-20.172416303076034% of UB of experimental yield: 0.1208420658404822
+0.145311170062392
+0.875558740547175
+3.197955060919278
+2.386551525180667
+4.466164917090872
+0.318831091906472
+1.538425699212833
+not found: ./output_max/stalc/report.txt
+1.40266331621251
+1.86484587881448
+1.452879799111036
+0.145311170062323
+1.40266331621251
+1.86484587881448
+0.499681932170668
+0.692587298052833
+0.227470962376065
+not found: ./output_max/pmtalc/report.txt
+0.136346593747123
+0.141999277513898
+not found: ./output_max/odealc/report.txt
+0.038926717720778
+0.22597836638898
+0.287456565202925
+0.142518716162711
+0.041706063626026
+0.147878773026714
+0.23569510193739
+not found: ./output_max/tal/report.txt
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:610: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value 'media:reset;c_sources:EX_sucr_e;EX_sucr_e:(-0.0832311670757478,1000);EX_k_e:(-0.00546507683646639,1000);EX_nh4_e:(-0.0110548891036696,1000);EX_ca2_e:(-0.00284331621656971,1000);EX_mg2_e:(-0.00468875186011578,1000);EX_pi_e:(-0.00224989958698143,1000);EX_no3_e:(-0.00321635673623416,1000);EX_cl_e:(-0.00642934352384282,1000);EX_so4_e:(-0.00118621956864905,1000);EX_h_e:(-1000,1000);EX_h2o_e:(-1000,1000);EX_btn_c:(-0.01,1000);EX_o2_e:(-1000,1000);EX_co2_e:(0,1000);EX_thm_e:(-1000,1000);EX_ribflv_e:(-1000,1000);EX_nac_e:(-1000,1000);EX_pydxn_e:(-1000,1000);EX_fol_e:(-1000,1000);EX_pnto__R_e:(-1000,1000);EX_4abz_e:(-1000,1000);EX_cu2_e:(-1000,1000);EX_fe2_e:(-1000,1000);EX_fe3_e:(-1000,1000);EX_mn2_e:(-1000,1000);EX_na1_e:(-1000,1000);EX_ni2_e:(-1000,1000);EX_zn2_e:(-1000,1000);EX_cobalt2_e:(-1000,1000);EX_inost_e:(-1000,1000);EX_asp__L_e:(-0.000459654553375469,1000);EX_thr__L_e:(-0.000275526731556139,1000);EX_ser__L_e:(-0.000333121015856181,1000);EX_glu__L_e:(-0.00101262301740644,1000);EX_gly_e:(-0.000746915086981108,1000);EX_tyr__L_e:(-9.35890589838902E-05,1000);EX_lys__L_e:(-0.000215539848205249,1000);EX_arg__L_e:(-0.000235713741134984,1000);EX_trp__L_e:(-2.27668921607642E-05,1000);EX_chol_e:(-0.0903185021261926,1000);EX_ala__L_e:(-0.00117882918788667,1000);EX_val__L_e:(-0.000462275186351073,1000);EX_met__L_e:(-0.000131975945610486,1000);EX_ile__L_e:(-0.000252293057850792,1000);EX_leu__L_e:(-0.000708922641894788,1000);EX_phe__L_e:(-0.000228487113278694,1000);EX_his__L_e:(-0.000204483166505037,1000);EX_pro__L_e:(-0.000760192980392569,1000);BIOMASS:(0.0133333333333333,1000)' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[df['product'] == p, k] = v
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:610: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value 'Fed-batch; 2L; 40 g/L after 24 h; pH 5.0; sucrose as substrate' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[df['product'] == p, k] = v
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:610: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4607723/' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[df['product'] == p, k] = v
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:613: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[df['product'] == p, col+k] = v[p][col]
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:613: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[df['product'] == p, col+k] = v[p][col]
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:613: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[df['product'] == p, col+k] = v[p][col]
+/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py:617: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[df['product'] == p, 'rateRBA'] = RBA_result_dict[p]['vprod']

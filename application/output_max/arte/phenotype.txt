@@ -1,6 +1,4 @@
-$include ../../input/phenotype_common.txt
-v.up('RXNADD-ARTE1_FWD-SPONT') = 1e3 * %nscale%;
-v.up('RXNADD-ARTE2_FWD-SPONT') = 1e3 * %nscale%;
-v.up('RXNADD-ARTE3_FWD-SPONT') = 1e3 * %nscale%;
-v.up('RXNADD-ARTE4_FWD-SPONT') = 1e3 * %nscale%;
-v.up('RXNADD-EX_arte_e_FWD-SPONT') = 1e3 * %nscale%;
+* adds phenotype_common.txt, then settings based on FBA yield predictions
+$include RBA_GAMS_defaults_from_FBA.txt
+
+* everything below overrides default settings, including phenotype_common.txt

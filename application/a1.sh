@@ -5,4 +5,4 @@
 #SBATCH --time=10:00:00 
 #SBATCH --partition=open 
 module load gams
-python3 A1_add_pathways_to_FBAmodel.py
+python3 A1_run_yield_predictions.py

@@ -1,0 +1,10 @@
+path_gams = '../../../GAMS/'
+path_pycore = '../../../pycore/'
+path_enz_mw = '../../../input/enz_mw_g_per_mmol.txt'
+path_pro_mw = '../../../input/pro_mw_g_per_mmol.txt'
+biom_id = 'BIOSYN-BIODILAERO-NOGAM'
+biom_id_fba = 'BIOMASS'
+vprod_coreid = 'EX_muco_e'
+vprod = 'RXNADD-EX_muco_e_FWD-SPONT'
+c_sources_list = [{'rxn': 'EX_glc__D_e', 'MW': 180.156, 'v': -2.667621230169241}]
+prod_mw = 140.09

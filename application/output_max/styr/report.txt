@@ -1,4 +1,5 @@
-stat	infeasible
-vglc	0
-vprod	0
-yield	0
+stat	optimal
+vCarbonSources	-1.653933318118206
+carbonSlack	0
+vprod	0.392953528630402
+yield	0.13735160560388948

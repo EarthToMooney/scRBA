@@ -1,0 +1,4 @@
+stat	infeasible
+vglc	0
+vprod	0
+yield	0

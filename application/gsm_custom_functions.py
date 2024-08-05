@@ -1,9 +1,151 @@
 import cobra
 # based on initial file from Hoang Viet Dinh
+# pycore version is the master version; make hardlinks to this file in other projects, but try to only edit here
 # updated to Python 3
 
 def test_import():
     print('Import ok, common custom functions')
+
+def plot_2d_data(data, x=None,y=None,xlabel=None,ylabel=None,scale='linear',xscale=None,yscale=None,output_path=None,input_fig=None,input_ax=None,global_fig_ax=False,show_figure=True,pointsize=6,datacolor='#1f78b4',alpha=0.5,overlapping_points_in_legend=3,fontsize=12,sigfigs=2):
+    """Plot 2D data.
+    Defaults to scatter plot.\n
+    Data is assumed to be in a pandas DataFrame with two columns (x on left) and headings as axis labels. Change as needed by updating x, y, xlabel, or ylabel.\n
+    If global_fig_ax is True, the plot will be made on the global fig and ax objects. Useful for updating settings or adding additional data to the plot.\n
+    overlapping_points_in_legend: number of overlapping points to show, if needed to highlight transparency. Not shown if alpha=1 (i.e., points aren't transparent).\n
+    scale used by default, but setting xscale or yscale will override it for the respective axis.\n
+    """
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from scipy.stats import linregress
+	
+    if x is None:
+        x = data.iloc[:, 0]
+    if y is None: 
+        y = data.iloc[:, 1]
+    if xlabel is None:
+        xlabel = data.columns[0]
+    if ylabel is None:
+        ylabel = data.columns[1]
+    scale = 'linear' if scale is None else scale
+    xscale = scale if xscale is None else xscale
+    yscale = scale if yscale is None else yscale
+
+    xylim_max = max(max(x), max(y))
+
+    if 'log' in [xscale,yscale] and (min(x) <= 0 or min(y) <= 0):
+        xylim_min = min(min(x[x > 0]), min(y[y > 0]))
+        print('xscale and yscale are set to ' + xscale + ' and ' + yscale + ', respectively.')
+        print('Minimum value in x or y is less than or equal to 0. Setting minimum axis limit to lowest non-zero value.')
+    else:
+        xylim_min = min(min(x), min(y))
+    
+    if output_path:
+        print(output_path + ':')
+    # plot data
+    if global_fig_ax:
+        global fig, ax
+    if input_fig is None or input_ax is None:
+        fig, ax = plt.subplots(figsize=(5, 5))
+    else:
+        fig = input_fig
+        ax = input_ax
+    # marker size is allegedly determined by how many 'M' characters can fit (picas/inch?)
+    ax.scatter(x, y, color=datacolor, alpha=alpha, edgecolors=None, zorder=1, s=pointsize, lw=0)
+    ax.set_xlabel(xlabel, fontsize=fontsize)  # Use xlabel as x-axis label
+    ax.set_ylabel(ylabel, fontsize=fontsize)  # Use ylabel as y-axis label
+    ax.set_xscale(xscale)
+    ax.set_yscale(yscale)
+
+    axis_margin = 0.05
+    l2 = 1.1
+
+    for axis in ['top', 'right']:
+        ax.spines[axis].set_linewidth(0)
+
+    n = sum((x > 0) & (y > 0))
+    ax.text(1, axis_margin, 'n = ' + str(n), transform=ax.transAxes, fontsize=fontsize, va='bottom', ha='right')
+
+    ax.plot([xylim_min,xylim_max], [xylim_min,xylim_max], color='gray', ls='--', linewidth=1)
+
+    # set minimium axis limits to lowest non-zero value if using log scale; scale up to ensure points don't get cut off by being right on the border
+    ax.set_xlim([xylim_min, xylim_max*1.5])
+    ax.set_ylim([xylim_min, xylim_max*1.5])
+
+    legend_corner_left = xylim_min * axis_margin
+    legend_corner_top = max(max(x), max(y))
+
+    if alpha != 1 and overlapping_points_in_legend > 0: # no point showing overlapping points when they're opaque
+        ax.text(axis_margin, 1, 'Overlapping Points', transform=ax.transAxes, fontsize=fontsize-2, va='center',ha='left')
+        for i in range(overlapping_points_in_legend):
+            # repeat i times
+            for _ in range(0,i+1):
+                ax.plot(axis_margin, 1 - axis_margin*(i + 1),transform=ax.transAxes, marker='.', color=datacolor, alpha=alpha, linestyle='None', markersize=pointsize)
+            ax.text(1.5*axis_margin, 1 - axis_margin*(i + 1), i + 1, transform=ax.transAxes, fontsize=fontsize - 2, va='center', ha='left')
+        # make gray box around legend
+        ax.plot([axis_margin, axis_margin], [1 - axis_margin*(overlapping_points_in_legend + 1), 1], color='gray', linewidth=1)
+    npx = np.array(list(x))
+    npy = np.array(list(y))
+    try:
+        m, b, r_value, p_value, std_err = linregress(npx, npy)
+        trendline = np.polyfit(npx, npy, 1)
+        r_squared = r_value ** 2
+        m = trendline[0]
+        b = trendline[1]
+        intercept_text = '' if b == 0 else ('+ ' if b > 0 else '- ') + str(abs(round(b, ndigits=sigfigs)))
+        trendline_equation = f"y = {round(m, ndigits=sigfigs)}x {intercept_text}"
+        print(trendline_equation)
+        print(f"R^2 = {r_squared}")
+        print(f"p-value = {p_value}")
+    except ValueError:
+        print(ValueError)
+
+    # make x and y axes equal length
+    ax.set_aspect('equal', adjustable='datalim')
+    if output_path:
+        plt.savefig(output_path, transparent=True, bbox_inches='tight')
+    if show_figure:
+        plt.show()
+    return fig, ax
+
+def multi_plot_2d_data(datasets,rows_cols=None,x=None,y=None,xlabel=None,ylabel=None,scale='linear',xscale=None,yscale=None,output_path=None,input_fig=None,input_ax=None,global_fig_ax=False,show_figure=True,pointsize=6,datacolor='#1f78b4',alpha=0.5,overlapping_points_in_legend=3,fontsize=12,sigfigs=2):
+    """Plot multiple 2D datasets on the same figure. May need some tweaking to update.\n
+    rows_cols: tuple of (rows, columns) for subplots. If None, will default to (1, len(datasets)).\n"""
+    import numpy as np
+    import matplotlib.pyplot as plt
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    # note: currently doesn't support subplots with more than 26 subplots, or cases where 1 row isn't completely used
+    i=0
+    for d in datasets[len(datasets)-1:]: # needed to ensure multi-plot figure is created properly
+        fig, ax = plot_2d_data(d,x=x,y=y,xlabel=xlabel,ylabel=ylabel,scale='log',show_figure=False,global_fig_ax=global_fig_ax,pointsize=pointsize)
+    subplots_wide = rows_cols[0] if rows_cols else 1
+    subplots_high = rows_cols[1] if rows_cols else len(datasets)
+    figs, axes = plt.subplots(subplots_high, subplots_wide, figsize=(subplots_wide*5, subplots_high*5))
+    row,col=0,0
+    for d in datasets:
+        # only use 2D indices if needed
+        if subplots_high > 1: 
+            if subplots_wide > 1:
+                indices = [row,col]
+            else:
+                indices = row
+        else:
+            indices = col
+        # add each plot to the figure as formatted by plot_2d_data
+        fig, axes[indices] = plot_2d_data(d,x=x,y=y,xlabel=xlabel,ylabel=ylabel,scale=scale,show_figure=show_figure,input_ax=axes[indices],input_fig=fig,global_fig_ax=global_fig_ax,pointsize=pointsize)
+        # add letter (a, b, c, etc.) to each subplot
+        axes[indices].text(-0.05, 1.05, letters[i], transform=axes[indices].transAxes, fontsize=12, fontweight='bold', va='top', ha='left')
+        i += 1
+        # add subplots in reading order, looping around to next row if necessary
+        if col+1 >= subplots_wide:
+            row += 1
+            col = 0
+        else:
+            col += 1
+    # add title
+    figs.suptitle('Comparison of SC vs RT', fontsize=16, fontweight='bold')
+    plt.tight_layout()
+    plt.savefig('../combined-SC-vs-RT.svg')
+    plt.show()
 
 def compile_dictionary_from_text(fpath, sep='\t', keypos=0, valuepos=1, skiprows=0):
     """Each dictionary key:value pair is assumed to be on a line. Pairs was separated by newline (backslash n).
@@ -219,6 +361,9 @@ def generate_reaction_in_diff_compartment(modelto, rxnid, compto, modelfrom, rxn
     return modelto
 
 def execute_command(model, model_donor, df_cmds, verbose=False):
+    '''Execute commands (e.g., from a transaction log) to change a model based on a donor model.
+    If commands don't require a new gene/reaction/metabolite, the model_donor can be a copy of the model.
+    df_cmds: a dataframe with columns 'command', 'id', 'object_type'.'''
     attr_dict = {i:i for i in ['id', 'reaction', 'name', 'subsystem', 'lower_bound',
                                'upper_bound', 'compartment', 'notes', 'formula', 'charge']}
     attr_dict['gpr'] = 'gene_reaction_rule'
@@ -233,12 +378,18 @@ def execute_command(model, model_donor, df_cmds, verbose=False):
 
         cmd = df_cmds.command[i]
         objid = df_cmds.id[i]
-        obj = df_cmds.object_type[i]
+        obj = str(df_cmds.object_type[i])
 
         rxns_model = [rxn.id for rxn in model.reactions]
         mets_model = [met.id for met in model.metabolites]
         genes_model = [g.id for g in model.genes]
         
+        # skip if 1st column is a comment (starts with #)
+        if str(objid)[:1] == '#':
+            if verbose:
+                print('id of command ignored:'+objid)
+            continue
+
         if obj.lower() in ['r', 'rxn', 'reaction', 'reactions']:
             if cmd in ['create', 'make', 'generate']:
                 if objid in rxns_model:
@@ -267,7 +418,7 @@ def execute_command(model, model_donor, df_cmds, verbose=False):
                     if objid not in rxns_model:
                         print(objid + ' is not in the model as a reaction, cannot change ' + cmd1)
                     else:
-                        if cmd1 in ['id', 'reaction', 'name', 'subsystem', 'gpr']:
+                        if cmd1 in ['id', 'reaction', 'subsystem', 'name', 'gpr']:
                             setattr(model.reactions.get_by_id(objid), attr_dict[cmd1], cmd2)
                         elif cmd1 in ['lower_bound', 'upper_bound']:
                             setattr(model.reactions.get_by_id(objid), attr_dict[cmd1], float(cmd2))
@@ -605,44 +756,93 @@ def build_reaction_equation_from_metabolites_dict_RBA(met_dict, arrow='<=>', flo
             rhs.append(' '.join([('{:.' + str(floatdecimal) + 'f}').format(v), k]))
     return ' '.join([ ' + '.join(lhs), arrow, ' + '.join(rhs)])
 
-def find_biomass_reactions(model, properties='id'):
+def find_biomass_reactions(model):
     '''Finds biomass reactions in a model (SBO:0000629) and returns the properties you want (by default, ID).'''
     biomass_rxns = []
     for rxn in model.reactions:
         if 'biomass' in rxn.id.lower():
-            biomass_rxns.append(rxn.properties)
+            biomass_rxns.append(rxn)
             break
         elif 'sbo' in rxn.annotation:
             if 'SBO:0000629' in rxn.annotation['sbo']:
-                biomass_rxns.append(rxn.properties)
+                biomass_rxns.append(rxn)
                 break
     return biomass_rxns
 
-def find_pathways(model, reactant_id, product_id,exclude_common_mets=True,stop_at_first=True):
-    """UNFINISHED: find pathways that allow a specified reactant to form a specified product in a model.
-    \nBy default, to reduce time and improve accuracy, excludes water, lone protons, and metabolites commonly used as currency metabolites or cofactors (e.g. ATP, ADP, NADH, NADPH, etc.)."""
-    met_from = model.metabolites.get_by_id(reactant_id)
-    met_to = model.metabolites.get_by_id(product_id)
+def find_pathways(model,product_id,reactant_ids=None,flux_data=None,exclude_common_mets=True,stop_at_first=True,rxns_considered=None,pathways={}):
+    """UNFINISHED: find pathways that form a specified product in a model from a specified reactant (if provided).
+    \nBy default, to reduce time and improve accuracy, excludes water, lone protons, and metabolites commonly used as currency metabolites or cofactors (e.g. ATP, ADP, NADH, NADPH, etc.).
+    \nIf 'flux_data' is provided, only considers reactions with non-zero fluxes.
+    \nCheck for rxns that can make the product from the desired reactant, if provided. 
+    \nIf none found, check all rxns that consume the reactant and produce the product, 
+    \nrepeating with their respective reactants and products until the desired product is found 
+    \nor all rxns are checked."""
+    # pathways represented by nested dicts, 
+    #   starting w/ rxns making the target product and ending w/ rxns consuming the target reactant
+    target_reactants = None if reactant_ids is None else [met in model.metabolites if met.id in reactant_ids else None]
+    target_prod = model.metabolites.get_by_id(product_id)
     if exclude_common_mets:
-        excluded_met_names = ['H2O','H','H+','PROTON','ATP','ADP','AMP','NADH','NADPH','NAD+','NADP+','NAD','NADP','NADH2','NADPH2','NADP(+)','NADP(H)','NAD(H)','NAD(P)H','NAD(P)','FAD','FADH2','FMN','FMNH2']
+        excluded_met_names = ['H2O','WATER','H','H+','PROTON','ATP','ADP','AMP','NADH','NADPH','NAD+','NADP+','NAD','NADP','NADH2','NADPH2','NADP(+)','NADP(H)','NAD(H)','NAD(P)H','NAD(P)','FAD','FADH2','FMN','FMNH2']
         # find all mets with names matching those in the excluded list
-        excluded_mets = [met for met in model.metabolites if met.name in excluded_met_names]
-    pathways = []
-    # find all products for met_to
-    for rxn in met_to.reactions:
-            # check if the rxn can produce met_to
-            if rxn.upper_bound > 0 and met_to in rxn.products:
-                if met_from in rxn.reactants:
+        excluded_mets = [met for met in model.metabolites if met.name in excluded_met_names and met.id not in reactant_ids and met.id != product_id]
+    # if flux_data isn't provided, use stoichiometry for filtering; otherwise, use fluxes
+    if flux_data is None:
+        # take only rxns that can produce target_prod (positive flux possible and target_prod in products or negative flux possible and target_prod in reactants)
+        rxns_considered = model.reactions if rxns_considered is None else rxns_considered
+        rxns_making_target_prod = [rxn for rxn in target_prod.reactions if rxn.upper_bound > 0 and target_prod in rxn.products or rxn.lower_bound < 0 and target_prod in rxn.reactants]
+        rxns_to_check = rxns_making_target_prod
+        if target_reactants is not None:
+            # check first for cases where the target reactant is in the reactants of the rxn
+            for rxn in rxns_making_target_prod:
+                for reactant in target_reactants:
+                    if rxn.upper_bound > 0 and reactant in rxn.reactants or rxn.lower_bound < 0 and reactant in rxn.products:
+                        pathways.append(rxn.id)
+                        # remove from rxns_to_check
+                        rxns_to_check.remove(rxn)
+                        if stop_at_first:
+                            return pathways
+                        continue
+        else: # look for pathways connecting the target product to an extracellular metabolite
+            for rxn in rxns_making_target_prod:
+                # check if an exchange rxn makes the target product
+                if rxn in model.boundary:
                     pathways.append(rxn.id)
+                    # remove from rxns_to_check
+                    rxns_to_check.remove(rxn)
                     if stop_at_first:
-                        break
+                        return pathways
                 # else:
-                    # add the reactants of the rxn to the list of mets to check
-            elif rxn.lower_bound < 0 and met_to in rxn.reactants:
-                if met_from in rxn.products:
-                    pathways.append(rxn.id)
-                    if stop_at_first:
-                        break
+
+
+        if rxns_to_check == []:
+            return pathways
+        # else:
+            # for rxn in rxns_to_check:
+
+    else:
+        rxns_considered = [rxn for rxn in model.reactions if flux_data[rxn.id] != 0] if rxns_considered is None else rxns_considered
+        rxns_making_target_prod = [rxn for rxn in model.reactions if rxn.id in model.metabolites.get_by_id(target_prod).summary().producing_flux['reaction']]
+        rxns_to_check = rxns_making_target_prod
+        # if target_reactants is not None:
+
+    
+    # while a complete pathway is not found, rerun this function
+
+    # find all products for target_prod
+    for rxn in rxns_making_target_prod:
+        # check if the rxn can produce target_prod
+        if rxn.upper_bound > 0 and target_prod in rxn.products:
+            if target_reactants in rxn.reactants:
+                pathways.append(rxn.id)
+                if stop_at_first:
+                    break
+            # else: # add the reactants of the rxn to the list of mets to check
+                # for met in rxn.reactants:
+        elif rxn.lower_bound < 0 and target_prod in rxn.reactants:
+            if target_reactants in rxn.products:
+                pathways.append(rxn.id)
+                if stop_at_first:
+                    break
     return pathways
 
 def build_stoichiometry_string(obj, number_delim=':', metabolite_delim=','):
@@ -751,20 +951,21 @@ def report_mass_balance(model, chargeLim=5, verbose=True):
 def calculate_molecular_weight(formula, verbose=False):
     # Assume MW of generic group (e.g., R) to be zero 
     import sys
-    sys.path.append('/home/hvdinh16/Workspace/workpy2/common/')
-    from .common_params import elements_mw
-    from .custom_functions import compile_elements_from_formula
+    from common_params import elements_mw
+    from gsm_custom_functions import compile_elements_from_formula
     
     elem_dict = compile_elements_from_formula(formula)
     mw = 0
+    unknown_elems = set()
     for elem,coeff in elem_dict.items():
         if elem in elements_mw.keys():
             mw += coeff * elements_mw[elem]
         else:
             if verbose:
+                unknown_elems.add(elem)
                 print(elem + ' is not in the list of elements')
     
-    return mw
+    return mw, unknown_elems
 
 def get_coeff_without_gam(model, biomId, gam_val):
     from collections import OrderedDict 
@@ -792,6 +993,7 @@ def get_coeff_without_gam(model, biomId, gam_val):
     return bMets
 
 def extract_details_from_rxnid(rxn_id):
+    """Identical to utils.py version"""
     idsplit = rxn_id.split('-')
     tag = idsplit[0]
     rxn_base_id = idsplit[1]
@@ -799,3 +1001,113 @@ def extract_details_from_rxnid(rxn_id):
     rxn_dir = rxn_base_id.split('_')[-1]
     rxn_base_id = rxn_base_id[:-len(rxn_dir)-1]
     return(tag,rxn_base_id,rxn_dir,enz_id)
+
+def convert_cobra_to_gams(model, output_path='./',add_slashes=True,fwd_list_filename='RBA_rxns_FWD.txt',rev_list_filename='RBA_rxns_REV.txt',fwd_rxn_list_filename='RBA_rxns_rxnmetabolicnetworkFWD.txt',rev_rxn_list_filename='RBA_rxns_rxnmetabolicnetworkREV.txt',rxntype_filename='rxntype.txt',optstoic_rxntype_filename='rxntype_modified.txt',mets_filename='RBA_species.txt',rxns_filename='RBA_reactions.txt',sij_filename='RBA_sij.txt'):
+    """Converts a COBRA model to a GAMS model, using the same format as the RBA model.
+    \nUseful for working with other models/programs that don't require full RBA functionality (e.g., OptStoic)."""
+    import pandas as pd
+    df_eqn = pd.DataFrame(columns=['id', 'type', 'coupling_type', 'coupling_species', 'reaction'])
+    c = -1
+    met_list = sorted(list(set(['MET-' + i.id for i in model.metabolites if i.id != ''])))
+    sij = []
+    # Using Patrick's FCA code
+    rxn_type_pairings = {'irrev':set(), 'reversible-fwd-half':set(), 'reversible-rev-half':set(), 'pseudoreaction':set(), 'exchange-fwd-half':set(), 'exchange-rev-half':set()} # all rxns and their respective types
+    rxn_types = {'irrev': 0, 'reversible-fwd-half': 1, 'reversible-rev-half': 2, 'pseudoreaction': 3, 'exchange-fwd-half': 4, 'exchange-rev-half': 5}
+    optstoic_rxn_types = {'irrev': 0, 'reversible-fwd-half': 0, 'reversible-rev-half': 0, 'pseudoreaction': 0, 'exchange-fwd-half': 4, 'exchange-rev-half': 5}
+    rxn_list = []; rev_rxn_list = []; rev_list = []; fwd_rxn_list = []; fwd_list = []
+    fca_list = []; optstoic_list = []
+
+    def output_list(list):
+        if add_slashes:
+            return ['/'] + list + ['/']
+        else:
+            return list
+
+    for rxn in model.reactions:
+        # exchange rxns
+        # if rxn.id[:3] == 'EX_':
+        #     fwd_str = 'MET-' + [i for i in rxn.metabolites.keys()][0] + ' -->'
+        #     rev_str = '--> MET-' + [i for i in rxn.metabolites.keys()][0]
+        # else:
+        #     fwd_str = build_stoichiometry_string(met_dict)
+        met_dict = metabolites_dict_from_reaction_equation_RBA(rxn.reaction)
+        met_dict = {k:v for k,v in met_dict.items() if k != ''}
+        met_dict = {'MET-' + k:v for k,v in met_dict.items()}
+        if rxn.upper_bound > 0:
+            c += 1
+            new_id = 'RXN-' + rxn.id + '_FWD-SPONT'
+            # since GAMS is case-insensitive, check if new_id (regardless of case) is already in the list; add "_1", "_2", etc. if it is (check to make sure the updated version isn't in the list either)
+            if new_id.lower() in [i.lower() for i in fwd_list]:
+                i = 1
+                while ('RXN-' + rxn.id + str(i) + '_FWD-SPONT').lower() in [i.lower() for i in fwd_list]:
+                    i += 1
+                print('Rxn ID already in list:', new_id, 'New ID for GAMS files:', 'RXN-' + rxn.id + str(i) + '_FWD-SPONT')
+                new_id = 'RXN-' + rxn.id + str(i) + '_FWD-SPONT'
+            fwd_list.append(new_id)
+            if rxn.id[:3] == 'EX_':
+                rxn_type_pairings['exchange-fwd-half'].add(new_id)
+            else:
+                rxn_type_pairings['reversible-fwd-half'].add(new_id)
+            df_eqn.loc[c, 'id'] = new_id
+            df_eqn.loc[c, 'type'] = 'metabolic'
+            # df_eqn.loc[c, 'reaction'] = '-->' + 'MET-' + met.id
+            for met, coeff in met_dict.items():
+                if met == '':
+                    continue
+                sij.append("'"+met+"'.'"+new_id+"' "+str(coeff))
+        if rxn.lower_bound < 0:
+            c += 1
+            met_dict = {k:-v for k,v in met_dict.items()}
+            new_id = 'RXN-' + rxn.id + '_REV-SPONT'
+            # since GAMS is case-insensitive, check if new_id (regardless of case) is already in the list; add "_1", "_2", etc. if it is (check to make sure the updated version isn't in the list either)
+            if new_id.lower() in [i.lower() for i in rev_list]:
+                i = 1
+                while ('RXN-' + rxn.id + str(i) + '_REV-SPONT').lower() in [i.lower() for i in rev_list]:
+                    i += 1
+                print('Rxn ID already in list:', new_id, 'New ID for GAMS files:', 'RXN-' + rxn.id + str(i) + '_REV-SPONT')
+                new_id = 'RXN-' + rxn.id + str(i) + '_REV-SPONT'
+            rev_list.append(new_id)
+            if rxn.id[:3] == 'EX_':
+                rxn_type_pairings['exchange-rev-half'].add(new_id)
+            else:
+                rxn_type_pairings['reversible-fwd-half'].add(new_id)
+            df_eqn.loc[c, 'id'] = new_id
+            df_eqn.loc[c, 'type'] = 'metabolic'
+            # df_eqn.loc[c, 'reaction'] = '-->' + 'MET-' + met.id
+            for met, coeff in met_dict.items():
+                if met == '':
+                    continue
+                sij.append("'"+met+"'.'"+new_id+"' "+str(coeff))
+    # use rxn_type_pairings to update lists for each rxn type
+    fwd_rxn_list = list(rxn_type_pairings['reversible-fwd-half']) + list(rxn_type_pairings['exchange-fwd-half'])
+    fwd_rxn_list = ["'" + i + "'" for i in fwd_rxn_list if i != '/']
+    with open(output_path + fwd_rxn_list_filename, 'w') as f:
+        f.write('\n'.join(output_list(fwd_rxn_list)))
+    rev_rxn_list = list(rxn_type_pairings['reversible-rev-half']) + list(rxn_type_pairings['exchange-rev-half'])
+    rev_rxn_list = ["'" + i + "'" for i in rev_rxn_list if i != '/']
+    with open(output_path + rev_rxn_list_filename, 'w') as f:
+        f.write('\n'.join(output_list(rev_rxn_list)))
+
+    fwd_list = fwd_rxn_list
+    with open(output_path + fwd_list_filename, 'w') as f:
+        f.write('\n'.join(output_list(fwd_list)))
+    rev_list = rev_rxn_list
+    with open(output_path + rev_list_filename, 'w') as f:
+        f.write('\n'.join(output_list(rev_list)))
+
+    # make FCA list from values in each key in rxn_type_pairings
+    for k,v in rxn_type_pairings.items():
+        fca_list += ["'" + i + "' " + str(rxn_types[k]) for i in v]
+        optstoic_list += ["'" + i + "' " + str(optstoic_rxn_types[k]) for i in v]
+        rxn_list += ["'" + i + "'" for i in v]
+    rxn_list = sorted(list(set(rxn_list)))
+    with open(output_path + rxntype_filename, 'w') as f:
+        f.write('\n'.join(output_list(fca_list)))
+    with open(output_path + optstoic_rxntype_filename, 'w') as f:
+        f.write('\n'.join(output_list(optstoic_list)))
+    with open(output_path + mets_filename, 'w') as f:
+        f.write('\n'.join(output_list(met_list)))
+    with open(output_path + rxns_filename, 'w') as f:
+        f.write('\n'.join(output_list(rxn_list)))
+    with open(output_path + sij_filename, 'w') as f:
+        f.write('\n'.join(output_list(sij)))

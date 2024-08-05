@@ -1,0 +1,10 @@
+/
+'RIBOSYN-rrna5s_c'
+'RIBOSYN-rrna58s_c'
+'RIBOSYN-rrna25s_c'
+'RIBOSYN-rrna28s_c'
+'RIBOSYN-rrnaSSU_c'
+'RIBOSYN-rrna_m'
+'RIBOSYN-ribonuc'
+'RIBOSYN-ribomito'
+/
