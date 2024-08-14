@@ -1,0 +1,16 @@
+/
+'DM-BIO-carb'
+'DM-BIO-cofactor'
+'DM-BIO-dna'
+'DM-BIO-lipid'
+'DM-BIO-metal'
+'DM-BIO-pi_c'
+'DM-BIO-protmodeled'
+'DM-BIO-rna'
+'DM-BIO-so4'
+'DM-MET-atp_c'
+'DM-MET-h2o_c'
+'DM-MET-adp_c'
+'DM-MET-h_c'
+'DM-MET-pi_c'
+/
