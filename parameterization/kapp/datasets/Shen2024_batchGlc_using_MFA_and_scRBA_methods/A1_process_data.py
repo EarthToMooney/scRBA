@@ -22,7 +22,6 @@ model_xlsx_path = path_gams + 'model/RBA_stoichiometry.xlsx'
 ribonuc_path = path_gen + 'input/RIBOSOME_nucleus.xlsx'
 ribomito_path = path_gen + 'input/RIBOSOME_mitochondria.xlsx'
 gsm_rxn_ids_path = path_gams + 'model/GSM_rxn_ids.txt'
-flux_exp_path = path_gen + '../raw_data_files/Rabinowitz-flux.xlsx'
 
 # must match the growth rate in other files
 mu = 0.38
@@ -34,7 +33,7 @@ ptot = 0.47
 col_LB = 'mfaLB'
 col_UB = 'mfaUB'
 try:
-    df_flux = pd.read_excel('../raw_data_files/Rabinowitz-flux.xlsx')
+    df_flux = pd.read_excel('../raw_data_files/SC_MFA_flux_CENPK_batch_Rabinowitz.xlsx')
 except FileNotFoundError:
     # make empty dataframe
     df_flux = pd.DataFrame(columns=['id', col_LB, col_UB])
