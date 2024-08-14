@@ -24,9 +24,9 @@ ribomito_path = path_gen + 'input/RIBOSOME_mitochondria.xlsx'
 gsm_rxn_ids_path = path_gams + 'model/GSM_rxn_ids.txt'
 
 # must match the growth rate in other files
-mu = 0.38
+mu = 0.391
 # protein fraction (disable by uncommenting "ptot = 1" unless composition varies w/ growth rate)
-ptot = 0.47
+ptot = 0.580680092
 
 # flux data (e.g., from MFA) is optional
 # runs only if flux data file exists

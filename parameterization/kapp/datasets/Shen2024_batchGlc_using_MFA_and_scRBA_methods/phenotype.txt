@@ -4,7 +4,7 @@
 * Note: If infeasible, relax constraints and parameters by up to 10%
 
 * Growth rate
-$setGlobal mu 0.4236
+$setGlobal mu 0.391
 v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
 
 * NGAM
@@ -18,28 +18,37 @@ $setGlobal kribomito 10.5*3600 * (13.2 / 10.5)
 $setGlobal nonmodeled_proteome_allocation 0.3645
 
 * Carbohydrate, RNA, and protein fraction constraints
+* No info found for CEN.PK full biomass comp. aside from protein, so I used FY4 batch info since it was similar in protein content
+v.fx('BIOSYN-CARBTOBIO') = %mu% * 0.310;
+v.fx('BIOSYN-PROTTOBIO') = %mu% * 0.580680092;
 * C-lim protein fraction
-v.fx('BIOSYN-PROTTOBIO') = %mu% * (36.94 + 34.22*%mu%) / 100 * %nscale%;
+* v.fx('BIOSYN-PROTTOBIO') = %mu% * (36.94 + 34.22*%mu%) / 100 * %nscale%;
 * N-lim protein fraction
 *v.fx('BIOSYN-PROTTOBIO') = %mu% * (10.57 + 108.56*%mu%) / 100 * %nscale%;
 
 * RNA fraction for both C-lim and N-lim
-v.lo('BIOSYN-RNATOBIO') = %mu% * (3.79 + 13.88*%mu%) / 100 * %nscale%;
-v.up('BIOSYN-RNATOBIO') = %mu% * (3.79 + 13.88*%mu%) / 100 * %nscale%;
+v.fx('BIOSYN-RNATOBIO') = %mu% * 0.086 / 100 * %nscale%;
+* v.fx('BIOSYN-RNATOBIO') = %mu% * (3.79 + 13.88*%mu%) / 100 * %nscale%;
 
 * Substrate and oxygenation
-v.up('RXN-EX_glc__D_e_REV-SPONT') = 13.2 * %nscale%;
-v.lo('RXN-EX_glc__D_e_REV-SPONT') = 13.2 * 0.9 * %nscale%;
+v.up('RXN-EX_glc__D_e_REV-SPONT') = 24.62 * %nscale%;
+v.lo('RXN-EX_glc__D_e_REV-SPONT') = 24.62 * 0.9 * %nscale%;
 v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0 * %nscale%;
 
-v.up('RXN-EX_o2_e_REV-SPONT') = 1e5 * %nscale%;
+v.up('RXN-EX_o2_e_REV-SPONT') = 5.58 * %nscale%;
 v.fx('RXN-EX_o2_e_FWD-SPONT') = 0 * %nscale%;
 
-* Secretions
-v.lo('RXN-EX_etoh_e_FWD-SPONT') = 15.98 * %nscale%;
+* Secretions (exp. measured)
+v.lo('RXN-EX_etoh_e_FWD-SPONT') = 44.30 * %nscale%;
 v.fx('RXN-EX_etoh_e_REV-SPONT') = 0 * %nscale%;
-
 v.fx('RXN-EX_co2_e_REV-SPONT') = 0;
+** acetate
+v.lo('RXN-EX_ac_e_FWD-SPONT') = 0.00;
+** succinate
+v.lo('RXN-EX_succ_e_FWD-SPONT') = 0;
+** glycerol
+v.lo('RXN-EX_glyc_e_FWD-SPONT') = 2.14;
+
 
 * Open FUM_m flux
 v.up('RXN-FUM_m_FWD-YPL262W_m') = 1e3 * %nscale%;
