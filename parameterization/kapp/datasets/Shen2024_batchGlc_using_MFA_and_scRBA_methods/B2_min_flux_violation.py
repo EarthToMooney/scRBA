@@ -1,7 +1,7 @@
 path_gams = '../../../../GAMS/parameterization/min_flux_violation/'
 path_rxns_list = '../../../../GAMS/model/RBA_rxns.txt'
 path_out = './min_flux_violation/'
-path_data = './Rabinowitz2023_batch_glc.xlsx'
+path_data = './Shen2024_batch_glc.xlsx'
 path_enz_level = './enz_from_proteome/enz_flux_calculation.txt'
 
 run_setting_file_from = './GAMS_setting_files/min_flux_violation_GAMS_settings.txt'

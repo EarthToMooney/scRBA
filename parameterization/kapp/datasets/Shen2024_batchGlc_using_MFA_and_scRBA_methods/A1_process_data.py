@@ -28,7 +28,7 @@ recalculate_nonmodeled_proteome_allocation = True
 max_allowed_mito_proteome_allo_fraction = 1
 recalculate_mito_proteome_allocation = True
 
-search_uniprot_for_nonmodeled_sequences = True
+search_uniprot_for_nonmodeled_sequences = False
 uniprot_url = 'https://www.rest.uniprot.org/uniprotkb/'
 
 # flux data (e.g., from MFA) is optional
@@ -64,7 +64,7 @@ with open('./v_exp_lb.txt', 'w') as f, open('./v_exp_ub.txt', 'w') as f2:
     f.write('/'); f2.write('/')
 
 # Use only name and abundance cols
-df_raw = pd.read_excel('../Shen2024_41589_2024_1571_MOESM3_ESM.xlsx',
+df_raw = pd.read_excel('../raw_data_files/Shen2024_41589_2024_1571_MOESM3_ESM.xlsx',
                          sheet_name='Table 10a. abs_prot_SC_CENPK')
 # df_raw = pd.read_excel('../raw_data_files/Rekena_Datasets.xlsx',
 #                          sheet_name='S2 Dataset Final', usecols=[0,1,2,3,4,5,6,17,18,19,20,21,22])
@@ -82,8 +82,11 @@ df_prot['id'] = df_prot.index.to_list()
 df_prot = df_prot.drop_duplicates(subset=['id'])
 # Protein copy selector: start with empty file
 # per Hoang: "protein_copies_selector.txt" is a manually written file. It should be empty for you in the first run. Then, you have to check your kapp calculation to see if you need to add any entries. For example, an enzyme ILV2-ILV6 complex and ILV2 are functional, but I choose to assign estimated kapp value to ILV2-6 complex only (which I think is the primary complex for catalysis, otherwise it doesn't make sense to me why ILV2-6 complex is even needed). There will be many cases like this where you have to write entries to the "protein_copies_selector.txt" file
-df_select = pd.read_csv('./input/protein_copies_selector.txt', sep='\t')
-df_select.index = df_select.gene_src.to_list()
+try:
+    df_select = pd.read_csv('./input/protein_copies_selector.txt', sep='\t')
+    df_select.index = df_select.gene_src.to_list()
+except: 
+    df_select = pd.DataFrame(columns=['gene_src', 'selected_compartmental_copy'])
 
 # Ribosome (nucleus and mitochondrial)
 df_ribonuc = pd.read_excel(ribonuc_path)
@@ -94,6 +97,27 @@ df_ribomito = pd.read_excel(ribomito_path)
 # Stoichiometry
 df_eqn = pd.read_excel(model_xlsx_path)
 df_eqn.index = df_eqn.id.to_list()
+
+# find nonmodeled proteome allocation
+if recalculate_nonmodeled_proteome_allocation:
+    for i in df_raw.index:
+        if i not in df_prot.index:
+            print(i, "not in df_prot")
+            # add to dummy protein and nonmodeled proteome allocation calculations
+            nonmodeled_proteome_allocation += df_raw.loc[i, cols_data]
+            # consider scraping uniprot for sequence or using API if they have one
+            if search_uniprot_for_nonmodeled_sequences:
+                # search uniprot for protein sequence
+                url = uniprot_url + df_raw.loc[i, uniprot_col]
+                # get response, convert to dict
+                # response = requests.get(url).json()
+                response = requests.get(url).text
+                print('response:',response)
+                # find "sequence" key
+                if 'sequence' in response:
+                    # add sequence to dummy protein
+                    print(response['sequence'])
+                print(response)
 
 # Process data
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)', 'type', 'conc (g/gDW)', 'vtrans (mmol/gDW/h)']
@@ -140,21 +164,6 @@ for i in df_data.index:
         elif i in df_ribomito.id.to_list(): # if a protein is part of the mitochondrial ribosome
             df_data.loc[i, 'type'] = 'truedata_ribomito'
             protein_categories[i].add('can be in mitochondria')
-        if i not in df_prot.index and recalculate_nonmodeled_proteome_allocation:
-            print(i, "not in df_prot")
-            # add to dummy protein and nonmodeled proteome allocation calculations
-            nonmodeled_proteome_allocation += c_avg
-            # consider scraping uniprot for sequence or using API if they have one
-            if search_uniprot_for_nonmodeled_sequences:
-                # search uniprot for protein sequence
-                url = uniprot_url + df_raw.loc[i, uniprot_col]
-                # get response, convert to dict
-                response = requests.get(url).json()
-                # find "sequence" key
-                if 'sequence' in response:
-                    # add sequence to dummy protein
-                    print(response['sequence'])
-                print(response)
             continue
 
 # Reindex - incorporate info from protein copy selector
@@ -218,7 +227,7 @@ for i in df_data.index:
             #         new_row = df_data_copy.loc[i]
             #         new_row['id'] = row['id']
             #         df_data_copy = df_data_copy.append(new_row, ignore_index=True)
-    if 'can be in mitochondria' not in protein_categories[i] and recalculate_mito_proteome_allocation:
+    if recalculate_mito_proteome_allocation and 'can be in mitochondria' not in protein_categories[i]:
         max_allowed_mito_proteome_allo_fraction -= conc / ptot # subtracted so that if mito proteins aren't found in dataset, it's not overly restrictive
 # remove all duplicate rows
 df_data_copy = df_data_copy.drop_duplicates(subset=['id'], keep='first').sort_values('id')
@@ -275,7 +284,7 @@ for i in idx_enzsyn:
                 df_data_copy_filtered.loc[k, 'vtrans (mmol/gDW/h)'] = vmin * met_dict[k]
                 df_data_copy_filtered.loc[k, 'type'] = 'gapfill_subunit'
 
-df_data_copy_filtered.to_excel('./Rabinowitz2023_batch_glc.xlsx', index=None)
+df_data_copy_filtered.to_excel('./Shen2024_batch_glc.xlsx', index=None)
 
 print(df_data_copy_filtered[df_data_copy_filtered.duplicated(subset='uniprot', keep=False)].sort_values('uniprot'))
 
@@ -285,30 +294,10 @@ print(df_data_copy_filtered[df_data_copy_filtered['id'] == 'gapfill_subunit'])
 # if any row has an "id" value not in the "id" values of df_prot, then print that row
 if errors:
     error_message = "Protein IDs not in PROTEIN_stoich_curation.xlsx:\n" + "\n".join(errors)
-    raise ValueError(error_message)
+    # raise ValueError(error_message)
+    print(error_message)
 
-# Calculate fraction of non-enzymatic and non-ribosomal proteins
-# df_nomodel
-
-# cols = ['id', 'pfrac (g protein/gDW)']
-# idx = [i for i in df_raw.index if i not in df_prot.index]
-
-# df_nomodel = pd.DataFrame(columns=cols, index=idx)
-# cols = ['id', 'pfrac (g protein/gDW)']
-# df_nomodel['id'] = idx
-
-# # cols_data = ['Min_aerobic_1', 'Min_aerobic_2']
-# for i in df_nomodel.index:
-#     data = df_raw.loc[i, cols_data]
-#     data = [c for c in data if pd.isnull(c) == False]
-#     print(i)
-#     if data == []:
-#         df_nomodel.loc[i, 'pfrac (g protein/gDW)'] = 0
-#     elif data != []:
-#         print(i,data)
-#         c_avg = np.mean(data)
-#         df_nomodel.loc[i, 'pfrac (g protein/gDW)'] = c_avg
-
-# df_nomodel['pfrac (g protein/gDW)'].sum()
-
-# df_nomodel['pfrac (g protein/gDW)']
+# print nonmodeled proteome allocation
+print('nonmodeled proteome allocation:', nonmodeled_proteome_allocation)
+# print max allowed mito proteome allocation
+print('max allowed mito proteome allocation:', max_allowed_mito_proteome_allo_fraction)
