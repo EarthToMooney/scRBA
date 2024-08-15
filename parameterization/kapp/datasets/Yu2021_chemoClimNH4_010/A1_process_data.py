@@ -16,7 +16,7 @@ fout_name = './Yu2021_chemoClimNH4_010.xlsx'
 # Load path
 path_gen = '../../../../build_model/'
 
-prot_path = path_gen + 'input/PROTEIN_stoich_curation_2021-09-28.xlsx'
+prot_path = path_gen + 'input/PROTEIN_stoich_curation.xlsx'
 model_xlsx_path = path_gen + 'model/RBA_stoichiometry.xlsx'
 ribonuc_path = path_gen + 'input/RIBOSOME_nucleus.xlsx'
 ribomito_path = path_gen + 'input/RIBOSOME_mitochondria.xlsx'

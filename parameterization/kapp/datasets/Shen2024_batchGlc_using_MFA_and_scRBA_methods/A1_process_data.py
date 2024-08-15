@@ -63,11 +63,11 @@ with open('./v_exp_lb.txt', 'w') as f, open('./v_exp_ub.txt', 'w') as f2:
 cols_data = ['B_frac_final']
 
 # Use only name and abundance cols
-df_raw = pd.read_excel('../raw_data_files/Rabinowitz-BatchGlc-abridged.xlsx',
-                         sheet_name='for-kapps-v2', usecols=[0,1,2,3])
+df_raw = pd.read_excel('../Shen2024_41589_2024_1571_MOESM3_ESM.xlsx',
+                         sheet_name='Table 10a. abs_prot_SC_CENPK', usecols=[0,1,2,3])
 # df_raw = pd.read_excel('../raw_data_files/Rekena_Datasets.xlsx',
 #                          sheet_name='S2 Dataset Final', usecols=[0,1,2,3,4,5,6,17,18,19,20,21,22])
-df_raw.index = df_raw['TRUE best match'].to_list()
+df_raw.index = df_raw['mean'].to_list()
 
 # Load protein
 df_prot = pd.read_excel(prot_path)
@@ -144,6 +144,20 @@ for i in df_data.index:
             df_data.loc[i, 'type'] = 'truedata_ribonuc'
         elif i in df_ribomito.id.to_list():
             df_data.loc[i, 'type'] = 'truedata_ribomito'
+        # calculate updated dummy protein and mito protein capacities
+        # find each protein's sequence from df_prot
+        if i in df_prot.index:
+            seq = df_prot.loc[i, 'sequence']
+            # find the number of amino acids in the sequence
+            n_aa = len(seq)
+            # find the molecular weight of the protein
+            mw = df_prot.loc[i, 'MW (g/mmol)']
+
+            
+        else:
+            print(i, "not in df_prot")
+            # consider scraping uniprot for sequence or using API if they have one
+            continue
 
 
 
