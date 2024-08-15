@@ -29,7 +29,6 @@ max_allowed_mito_proteome_allo_fraction = 1
 recalculate_mito_proteome_allocation = True
 
 search_uniprot_for_nonmodeled_sequences = True
-# uniprot_url = 'https://www.rest.uniprot.org/uniprotkb?query=%28accession%3AP00925%29'
 uniprot_url = 'https://www.rest.uniprot.org/uniprotkb/'
 
 # flux data (e.g., from MFA) is optional

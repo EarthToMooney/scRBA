@@ -1,0 +1,4 @@
+* file with settings updated by build_model scripts, to help with managing multiple GSM models
+$setGlobal max_allowed_mito_proteome_allo_fraction 0.05
+$setGlobal nonmodeled_proteome_allocation 0.3148
+v.fx('RXN-ATPM_c_FWD-SPONT') = 0.0 * %nscale%;

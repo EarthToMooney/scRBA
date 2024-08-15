@@ -7,7 +7,7 @@ from utils import extract_details_from_rxnid
 
 # %%
 # Load enzyme info
-df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation_2021-10-01.xlsx')
+df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xlsx')
 
 # Load path of set4 (enzyme-reaction many-to-many mapping)
 set4_path = '../kapp_ambiguousLoad_case_resolve_common.txt'
