@@ -25,7 +25,7 @@ ptot = 0.580680092
 nonmodeled_proteome_allocation = 0
 recalculate_nonmodeled_proteome_allocation = True
 # Max mass fraction of modeled proteome that's inside the mitochondria. Set to 1 by default and automatically adjusted if recalculate_mito_proteome_allocation = True.
-max_allowed_mito_proteome_allo_fraction = 1
+max_allowed_mito_proteome_allo_fraction = 0
 recalculate_mito_proteome_allocation = True
 ATP_cost_of_translation = 0 # mmol ATP/(gDW*h); calculated from data if 0
 
@@ -103,7 +103,7 @@ df_eqn.index = df_eqn.id.to_list()
 if recalculate_nonmodeled_proteome_allocation:
     for i in df_raw.index:
         if i not in df_prot.index:
-            print(i, "not in df_prot")
+            # print(i, "not in df_prot")
             # add to dummy protein and nonmodeled proteome allocation calculations
             nonmodeled_proteome_allocation += df_raw.loc[i, cols_data]
             # consider scraping uniprot for sequence or using API if they have one
@@ -119,7 +119,7 @@ if recalculate_nonmodeled_proteome_allocation:
                     # add sequence to dummy protein
                     print(response['sequence'])
                 print(response)
-max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
+# max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
 
 # Process data
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)', 'type', 'conc (g/gDW)', 'vtrans (mmol/gDW/h)']
@@ -233,8 +233,8 @@ for i in df_data.index:
             #         new_row = df_data_copy.loc[i]
             #         new_row['id'] = row['id']
             #         df_data_copy = df_data_copy.append(new_row, ignore_index=True)
-    if recalculate_mito_proteome_allocation and 'can be in mitochondria' not in protein_categories[i]:
-        max_allowed_mito_proteome_allo_fraction -= df_data.loc[i,'c_avg'] # subtracted so that if mito proteins aren't found in dataset, it's not overly restrictive
+    if recalculate_mito_proteome_allocation and 'can be in mitochondria' in protein_categories[i]:
+        max_allowed_mito_proteome_allo_fraction += df_data.loc[i,'c_avg'] # subtracted so that if mito proteins aren't found in dataset, it's not overly restrictive
 # remove all duplicate rows
 df_data_copy = df_data_copy.drop_duplicates(subset=['id'], keep='first').sort_values('id')
 df_data_copy_filtered = df_data_copy.copy()
