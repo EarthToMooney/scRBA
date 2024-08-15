@@ -27,6 +27,7 @@ recalculate_nonmodeled_proteome_allocation = True
 # Max mass fraction of modeled proteome that's inside the mitochondria. Set to 1 by default and automatically adjusted if recalculate_mito_proteome_allocation = True.
 max_allowed_mito_proteome_allo_fraction = 1
 recalculate_mito_proteome_allocation = True
+ATP_cost_of_translation = 0 # mmol ATP/(gDW*h); calculated from data if 0
 
 search_uniprot_for_nonmodeled_sequences = False
 uniprot_url = 'https://www.rest.uniprot.org/uniprotkb/'
@@ -118,6 +119,7 @@ if recalculate_nonmodeled_proteome_allocation:
                     # add sequence to dummy protein
                     print(response['sequence'])
                 print(response)
+max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
 
 # Process data
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)', 'type', 'conc (g/gDW)', 'vtrans (mmol/gDW/h)']
@@ -155,6 +157,7 @@ for i in df_data.index:
         # # print(c_avg)
         # # c_avg = data
         mw = df_prot.loc[i, 'MW (g/mmol)']
+        df_data.loc[i, 'c_avg'] = c_avg
         df_data.loc[i, 'conc (g/gDW)'] = c_avg * ptot
         df_data.loc[i, 'vtrans (mmol/gDW/h)'] = mu * c_avg * ptot / mw
         df_data.loc[i, 'type'] = 'truedata_enz'
@@ -192,7 +195,10 @@ df_data_copy = df_data.copy()
 for i in df_data.index:
     if i in df_select.index:
         df_data_copy.loc[i, 'id'] = df_select.loc[i, 'selected_compartmental_copy']
+        print('selected compartmental copy:',i, df_select.loc[i, 'selected_compartmental_copy'])
     else: 
+        if i.split('_')[0] in ['m','mm']:
+            protein_categories[i].add('can be in mitochondria')
         if i in df_prot['gene_src'].values:
             matches = list(df_prot.loc[df_prot['gene_src'] == i].iterrows())
             #conc = df_data.loc[i, 'conc (g/gDW)'] / len(matches)
@@ -228,7 +234,7 @@ for i in df_data.index:
             #         new_row['id'] = row['id']
             #         df_data_copy = df_data_copy.append(new_row, ignore_index=True)
     if recalculate_mito_proteome_allocation and 'can be in mitochondria' not in protein_categories[i]:
-        max_allowed_mito_proteome_allo_fraction -= conc / ptot # subtracted so that if mito proteins aren't found in dataset, it's not overly restrictive
+        max_allowed_mito_proteome_allo_fraction -= df_data.loc[i,'c_avg'] # subtracted so that if mito proteins aren't found in dataset, it's not overly restrictive
 # remove all duplicate rows
 df_data_copy = df_data_copy.drop_duplicates(subset=['id'], keep='first').sort_values('id')
 df_data_copy_filtered = df_data_copy.copy()
@@ -297,6 +303,7 @@ if errors:
     # raise ValueError(error_message)
     print(error_message)
 
+# write 
 # print nonmodeled proteome allocation
 print('nonmodeled proteome allocation:', nonmodeled_proteome_allocation)
 # print max allowed mito proteome allocation
