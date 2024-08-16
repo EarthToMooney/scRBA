@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import requests
+import json
 
 import sys
 sys.path.append('../../../../pycore/')
@@ -23,14 +24,18 @@ mu = 0.391
 ptot = 0.580680092
 # Mass fraction of proteome that's not explicitly modeled. Set to 0 if recalculate_nonmodeled_proteome_allocation = True.
 nonmodeled_proteome_allocation = 0
+nonmodel_protein_data_path = './nonmodeled_proteins.json'
+with open(nonmodel_protein_data_path, 'w') as f:
+    # load from file
+    nonmodel_proteins = json.load(f)
 recalculate_nonmodeled_proteome_allocation = True
-# Max mass fraction of modeled proteome that's inside the mitochondria. Set to 1 by default and automatically adjusted if recalculate_mito_proteome_allocation = True.
+# Max mass fraction of modeled proteome that's inside the mitochondria. Set to 0 by default and automatically adjusted if recalculate_mito_proteome_allocation = True.
 max_allowed_mito_proteome_allo_fraction = 0
 recalculate_mito_proteome_allocation = True
 ATP_cost_of_translation = 0 # mmol ATP/(gDW*h); calculated from data if 0
 
-search_uniprot_for_nonmodeled_sequences = False
-uniprot_url = 'https://www.rest.uniprot.org/uniprotkb/'
+search_uniprot_for_nonmodeled_sequences = True
+uniprot_url = 'https://rest.uniprot.org/uniprotkb/'
 
 # flux data (e.g., from MFA) is optional
 # runs only if flux data file exists
@@ -99,6 +104,14 @@ df_ribomito = pd.read_excel(ribomito_path)
 df_eqn = pd.read_excel(model_xlsx_path)
 df_eqn.index = df_eqn.id.to_list()
 
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+}
+
+nonmodel_proteins = []
+dummy_protein = {'id':'PROSYN-PROTDUMMY','AA abundances':dict()}
+for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']:
+    dummy_protein['AA abundances'][aa] = 0
 # find nonmodeled proteome allocation
 if recalculate_nonmodeled_proteome_allocation:
     for i in df_raw.index:
@@ -106,20 +119,53 @@ if recalculate_nonmodeled_proteome_allocation:
             # print(i, "not in df_prot")
             # add to dummy protein and nonmodeled proteome allocation calculations
             nonmodeled_proteome_allocation += df_raw.loc[i, cols_data]
+            # check nonmodeled_proteins for sequence, MW, and conc
+            if uniprot_col == '':
+                seq = ''
+                conc = 0
+                mw = 0
+            else:
+                for p in nonmodel_proteins:
+                    if p['id'] == i:
+                        seq = p['sequence']
+                        conc = p['conc (g/gDW)']
+                        mw = p['MW (g/mmol)']
+                        break
             # consider scraping uniprot for sequence or using API if they have one
-            if search_uniprot_for_nonmodeled_sequences:
+            if search_uniprot_for_nonmodeled_sequences and seq == '':
                 # search uniprot for protein sequence
-                url = uniprot_url + df_raw.loc[i, uniprot_col]
+                url = uniprot_url + df_raw.loc[i, uniprot_col] + '?format=json'
                 # get response, convert to dict
                 # response = requests.get(url).json()
-                response = requests.get(url).text
-                print('response:',response)
+                response = requests.get(url,headers=headers).json()
+                # print('response:',response)
                 # find "sequence" key
                 if 'sequence' in response:
                     # add sequence to dummy protein
-                    print(response['sequence'])
-                print(response)
+                    seq = response['sequence']['value']
+                    # convert this excel formula into a method of determining protein mass: =SUMPRODUCT((LEN([@sequence])-LEN(SUBSTITUTE([@sequence],{"A";"C";"D";"E";"F";"G";"H";"I";"K";"L";"M";"N";"P";"Q";"R";"S";"T";"V";"W";"Y"},""))),{72.08;104.14;115.08;129.11;148.17;58.05;138.14;114.16;130.18;114.16;132.2;115.1;98.12;129.13;158.19;88.08;102.1;100.13;187.21;164.17})/1000
+                    mw = sum([len(seq) - len(seq.replace(aa, '')) for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']] * np.array([72.08,104.14,115.08,129.11,148.17,58.05,138.14,114.16,130.18,114.16,132.2,115.1,98.12,129.13,158.19,88.08,102.1,100.13,187.21,164.17])) / 1000
+                    # abundance / wt.
+                    conc = df_raw.loc[i, cols_data[0]]
+                    for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']:
+                        # find fraction of amino acid in sequence, multiply by abundance / MW of protein
+                        dummy_protein['AA abundances'][aa] += (len(seq) - len(seq.replace(aa, '')) / len(seq)) * conc / mw
+                    # with open('./nonmodeled_proteins.json', 'a') as f:
+                    #     f.write(str({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc}))
+                    nonmodel_proteins.append({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc})
+        else:
+            seq = df_prot.loc[i, 'sequence']
+            conc = df_raw.loc[i, cols_data[0]]
+            mw = df_prot.loc[i, 'MW (g/mmol)']
+        if conc and mw and seq:
+            ATP_cost_of_translation += conc * ((len(seq) * 2) + 1) / mw
 # max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
+# save nonmodeled protein info to JSON
+with open(nonmodel_protein_data_path, 'w') as f:
+    json.dump(nonmodel_proteins, f)
+
+# find median length of nonmodeled proteins
+dummy_protein['length'] = np.median([len(p['sequence']['value']) for p in nonmodel_proteins])
 
 # Process data
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)', 'type', 'conc (g/gDW)', 'vtrans (mmol/gDW/h)']
@@ -234,7 +280,7 @@ for i in df_data.index:
             #         new_row['id'] = row['id']
             #         df_data_copy = df_data_copy.append(new_row, ignore_index=True)
     if recalculate_mito_proteome_allocation and 'can be in mitochondria' in protein_categories[i]:
-        max_allowed_mito_proteome_allo_fraction += df_data.loc[i,'c_avg'] # subtracted so that if mito proteins aren't found in dataset, it's not overly restrictive
+        max_allowed_mito_proteome_allo_fraction += df_data.loc[i,'c_avg']
 # remove all duplicate rows
 df_data_copy = df_data_copy.drop_duplicates(subset=['id'], keep='first').sort_values('id')
 df_data_copy_filtered = df_data_copy.copy()
