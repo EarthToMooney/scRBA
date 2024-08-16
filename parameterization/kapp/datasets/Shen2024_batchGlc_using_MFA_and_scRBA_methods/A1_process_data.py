@@ -119,43 +119,41 @@ for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','
 if recalculate_nonmodeled_proteome_allocation:
     for i in df_raw.index:
         if i not in df_prot.index:
+            seq = ''
+            conc = 0
+            mw = 0
             # print(i, "not in df_prot")
             # add to dummy protein and nonmodeled proteome allocation calculations
             nonmodeled_proteome_allocation += df_raw.loc[i, cols_data].sum()
             # check nonmodeled_proteins for sequence, MW, and conc
-        #     if uniprot_col == '':
-        #         seq = ''
-        #         conc = 0
-        #         mw = 0
-        #     else:
-        #         for p in nonmodel_proteins:
-        #             if p['id'] == i:
-        #                 seq = p['sequence'].replace('*','')
-        #                 conc = p['conc (g/gDW)']
-        #                 mw = p['MW (g/mmol)']
-        #                 break
-        #     # consider scraping uniprot for sequence or using API if they have one
-        #     if search_uniprot_for_nonmodeled_sequences and not seq:
-        #         # search uniprot for protein sequence
-        #         url = uniprot_url + df_raw.loc[i, uniprot_col] + '?format=json'
-        #         # get response, convert to dict
-        #         # response = requests.get(url).json()
-        #         response = requests.get(url,headers=headers).json()
-        #         # print('response:',response)
-        #         # find "sequence" key
-        #         if 'sequence' in response:
-        #             # add sequence to dummy protein
-        #             seq = response['sequence']['value'].replace('*','')
-        #             # convert this excel formula into a method of determining protein mass: =SUMPRODUCT((LEN([@sequence])-LEN(SUBSTITUTE([@sequence],{"A";"C";"D";"E";"F";"G";"H";"I";"K";"L";"M";"N";"P";"Q";"R";"S";"T";"V";"W";"Y"},""))),{72.08;104.14;115.08;129.11;148.17;58.05;138.14;114.16;130.18;114.16;132.2;115.1;98.12;129.13;158.19;88.08;102.1;100.13;187.21;164.17})/1000
-        #             mw = sum([len(seq) - len(seq.replace(aa, '')) for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']] * np.array([72.08,104.14,115.08,129.11,148.17,58.05,138.14,114.16,130.18,114.16,132.2,115.1,98.12,129.13,158.19,88.08,102.1,100.13,187.21,164.17])) / 1000
-        #             # abundance / wt.
-        #             conc = df_raw.loc[i, cols_data[0]]
-        #             for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']:
-        #                 # find fraction of amino acid in sequence, multiply by abundance / MW of protein
-        #                 dummy_protein['AA abundances'][aa] += (len(seq) - len(seq.replace(aa, '')) / len(seq)) * conc / mw
-        #             # with open('./nonmodeled_proteins.json', 'a') as f:
-        #             #     f.write(str({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc}))
-        #             nonmodel_proteins.append({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc})
+            for p in nonmodel_proteins:
+                if p['id'] == i:
+                    seq = p['sequence'].replace('*','')
+                    conc = p['conc (g/gDW)']
+                    mw = p['MW (g/mmol)']
+                    break
+            # consider scraping uniprot for sequence or using API if they have one
+            if search_uniprot_for_nonmodeled_sequences and not seq:
+                # search uniprot for protein sequence
+                url = uniprot_url + df_raw.loc[i, uniprot_col] + '?format=json'
+                # get response, convert to dict
+                # response = requests.get(url).json()
+                response = requests.get(url,headers=headers).json()
+                # print('response:',response)
+                # find "sequence" key
+                if 'sequence' in response:
+                    # add sequence to dummy protein
+                    seq = response['sequence']['value'].replace('*','')
+                    # convert this excel formula into a method of determining protein mass: =SUMPRODUCT((LEN([@sequence])-LEN(SUBSTITUTE([@sequence],{"A";"C";"D";"E";"F";"G";"H";"I";"K";"L";"M";"N";"P";"Q";"R";"S";"T";"V";"W";"Y"},""))),{72.08;104.14;115.08;129.11;148.17;58.05;138.14;114.16;130.18;114.16;132.2;115.1;98.12;129.13;158.19;88.08;102.1;100.13;187.21;164.17})/1000
+                    mw = sum([len(seq) - len(seq.replace(aa, '')) for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']] * np.array([72.08,104.14,115.08,129.11,148.17,58.05,138.14,114.16,130.18,114.16,132.2,115.1,98.12,129.13,158.19,88.08,102.1,100.13,187.21,164.17])) / 1000
+                    # abundance / wt.
+                    conc = df_raw.loc[i, cols_data[0]]
+                    for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']:
+                        # find fraction of amino acid in sequence, multiply by abundance / MW of protein
+                        dummy_protein['AA abundances'][aa] += (len(seq) - len(seq.replace(aa, '')) / len(seq)) * conc / mw
+                    # with open('./nonmodeled_proteins.json', 'a') as f:
+                    #     f.write(str({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc}))
+                    nonmodel_proteins.append({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc})
         else:
             seq = df_prot.loc[i, 'sequence']
             conc = df_raw.loc[i, cols_data[0]]
@@ -169,7 +167,7 @@ with open(nonmodel_protein_data_path, 'w') as f:
     json.dump(nonmodel_proteins, f)
 
 # find median length of nonmodeled proteins
-dummy_protein['length'] = np.median([len(p['sequence']['value']) for p in nonmodel_proteins])
+dummy_protein['length'] = np.median([len(p['sequence']['value'].sum()) for p in nonmodel_proteins])
 
 # Process data
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)', 'type', 'conc (g/gDW)', 'vtrans (mmol/gDW/h)']
