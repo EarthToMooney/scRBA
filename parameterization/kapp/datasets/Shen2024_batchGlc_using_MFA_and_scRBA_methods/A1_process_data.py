@@ -158,8 +158,10 @@ if recalculate_nonmodeled_proteome_allocation:
             seq = df_prot.loc[i, 'sequence']
             conc = df_raw.loc[i, cols_data[0]]
             mw = df_prot.loc[i, 'MW (g/mmol)']
+        if seq == '' or conc == 0 or mw == 0:
+            print(i, conc, mw, seq)
         if conc and mw and seq != '':
-            print(i, conc, mw, seq.replace('*',''))
+            # print(i, conc, mw, seq.replace('*',''))
             ATP_cost_of_translation += (conc * ptot * ((len(seq.replace('*','')) * 2) + 1) / mw)
 # max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
 # save nonmodeled protein info to JSON
@@ -167,7 +169,8 @@ with open(nonmodel_protein_data_path, 'w') as f:
     json.dump(nonmodel_proteins, f)
 
 # find median length of nonmodeled proteins
-dummy_protein['length'] = np.median([len(p['sequence']['value'].sum()) for p in nonmodel_proteins])
+dummy_protein['length'] = np.median([len(p['sequence']) for p in nonmodel_proteins])
+# make rxn equation for dummy protein
 
 # Process data
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)', 'type', 'conc (g/gDW)', 'vtrans (mmol/gDW/h)']
