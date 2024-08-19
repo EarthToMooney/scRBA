@@ -202,7 +202,7 @@ if recalculate_nonmodeled_proteome_allocation:
             if line not in ['/','/\n']:
                 lines.append(line)
         for line in f:
-            if ".'"+dummy_protein['id']+"'" not in line and line != '/':
+            if ".'"+dummy_protein['id']+"'" not in line and line not in ['/','/\n']:
                 lines.append(line)
     with open('./RBA_sij_for_kapps.txt', 'w') as f:
         # add slashes as first and last lines
