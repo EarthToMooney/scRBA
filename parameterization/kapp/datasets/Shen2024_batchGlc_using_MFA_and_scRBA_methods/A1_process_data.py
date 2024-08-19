@@ -19,6 +19,7 @@ model_xlsx_path = path_gams + 'model/RBA_stoichiometry.xlsx'
 ribonuc_path = path_gen + 'input/RIBOSOME_nucleus.xlsx'
 ribomito_path = path_gen + 'input/RIBOSOME_mitochondria.xlsx'
 gsm_rxn_ids_path = path_gams + 'model/GSM_rxn_ids.txt'
+sij_path = path_gams + 'model/RBA_sij.txt'
 aa_mapping_path = path_gen + 'input/PROTEIN_amino_acid_map.txt'
 aa_map = pd.read_csv(aa_mapping_path, sep='\t')
 aa_dict = dict(zip(aa_map['aa_abbv'], aa_map['MW']))
@@ -171,29 +172,44 @@ if recalculate_nonmodeled_proteome_allocation:
         if conc and mw and seq != '':
             # print(i, conc, mw, seq.replace('*',''))
             ATP_cost_of_translation += (conc * ptot * ((len(seq.replace('*','')) * 2) + 1) / mw)
-# max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
-# save nonmodeled protein info to JSON
-with open(nonmodel_protein_data_path, 'w') as f:
-    json.dump(nonmodel_proteins, f)
+    # max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
+    # save nonmodeled protein info to JSON
+    with open(nonmodel_protein_data_path, 'w') as f:
+        json.dump(nonmodel_proteins, f)
 
-# find median length of nonmodeled proteins
-dummy_protein['length'] = np.median([len(p['sequence']) for p in nonmodel_proteins])
-# divide all amino acid abundances by total_dummy_abundance_per_mw and multiply by length
-for aa in dummy_protein['AA abundances']:
-    dummy_protein['AA abundances'][aa] /= total_dummy_abundance_per_mw
-    dummy_protein['AA abundances'][aa] *= dummy_protein['length']
+    # find median length of nonmodeled proteins
+    dummy_protein['length'] = np.median([len(p['sequence']) for p in nonmodel_proteins])
+    # divide all amino acid abundances by total_dummy_abundance_per_mw and multiply by length
+    for aa in dummy_protein['AA abundances']:
+        dummy_protein['AA abundances'][aa] /= total_dummy_abundance_per_mw
+        dummy_protein['AA abundances'][aa] *= dummy_protein['length']
 
-dummy_protein['MW (g/mmol)'] = sum([dummy_protein['AA abundances'][aa] * aa_dict[aa] for aa in aa_dict]) / 1000
-# convert into dataframe with 'AA abundances' keys as aa_abbv column, and values as N_AA column
-dummy_protein_df = pd.DataFrame(columns=['aa_abbv', 'N_AA'])
-# aa_abbv column from 'AA abundances' keys
-dummy_protein_df['aa_abbv'] = dummy_protein['AA abundances'].keys()
-# N_AA column from 'AA abundances' values
-dummy_protein_df['N_AA'] = dummy_protein['AA abundances'].values()
-# print(dummy_protein)
-# make rxn equation for dummy protein
-print('dummy protein:',dummy_protein)
-make_dummy_protein_stoich(prot_df=dummy_protein_df, length=dummy_protein['length'], gams_output_file='./dummy_protein_stoich.txt', aa_standards_df=aa_map, mw=dummy_protein['MW (g/mmol)'])
+    dummy_protein['MW (g/mmol)'] = sum([dummy_protein['AA abundances'][aa] * aa_dict[aa] for aa in aa_dict]) / 1000
+    # convert into dataframe with 'AA abundances' keys as aa_abbv column, and values as N_AA column
+    dummy_protein_df = pd.DataFrame(columns=['aa_abbv', 'N_AA'])
+    # aa_abbv column from 'AA abundances' keys
+    dummy_protein_df['aa_abbv'] = dummy_protein['AA abundances'].keys()
+    # N_AA column from 'AA abundances' values
+    dummy_protein_df['N_AA'] = dummy_protein['AA abundances'].values()
+    # print(dummy_protein)
+    # make rxn equation for dummy protein
+    print('dummy protein:',dummy_protein)
+    make_dummy_protein_stoich(prot_df=dummy_protein_df, length=dummy_protein['length'], gams_output_file='./RBA_sij_for_kapps.txt', aa_standards_df=aa_map, mw=dummy_protein['MW (g/mmol)'], rxn_name=dummy_protein['id'])
+    # copy over all lines (except ones with dummy_protein['id'] in them) from sij_path to RBA_sij_for_kapps.txt
+    lines = []
+    with open(sij_path, 'r') as f, open('./RBA_sij_for_kapps.txt', 'r') as f2:
+        for line in f2:
+            if line not in ['/','/\n']:
+                lines.append(line)
+        for line in f:
+            if ".'"+dummy_protein['id']+"'" not in line and line != '/':
+                lines.append(line)
+    with open('./RBA_sij_for_kapps.txt', 'w') as f:
+        # add slashes as first and last lines
+        f.write('/\n')
+        for line in lines:
+            f.write(line)
+        f.write('/')
 
 # Process data
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)', 'type', 'conc (g/gDW)', 'vtrans (mmol/gDW/h)']
