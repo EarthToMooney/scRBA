@@ -31,13 +31,15 @@ if os.path.exists(nonmodel_protein_data_path):
     with open(nonmodel_protein_data_path, 'r') as f:
         # load from file
         nonmodel_proteins = json.load(f)
+else:
+    nonmodel_proteins = []
 recalculate_nonmodeled_proteome_allocation = True
 # Max mass fraction of modeled proteome that's inside the mitochondria. Set to 0 by default and automatically adjusted if recalculate_mito_proteome_allocation = True.
 max_allowed_mito_proteome_allo_fraction = 0
 recalculate_mito_proteome_allocation = True
 ATP_cost_of_translation = 0 # mmol ATP/(gDW*h); calculated from data if 0
 
-search_uniprot_for_nonmodeled_sequences = True
+search_uniprot_for_nonmodeled_sequences = False
 uniprot_url = 'https://rest.uniprot.org/uniprotkb/'
 
 # flux data (e.g., from MFA) is optional
@@ -111,7 +113,6 @@ headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
 }
 
-nonmodel_proteins = []
 dummy_protein = {'id':'PROSYN-PROTDUMMY','AA abundances':dict()}
 for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']:
     dummy_protein['AA abundances'][aa] = 0
@@ -148,12 +149,13 @@ if recalculate_nonmodeled_proteome_allocation:
                     mw = sum([len(seq) - len(seq.replace(aa, '')) for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']] * np.array([72.08,104.14,115.08,129.11,148.17,58.05,138.14,114.16,130.18,114.16,132.2,115.1,98.12,129.13,158.19,88.08,102.1,100.13,187.21,164.17])) / 1000
                     # abundance / wt.
                     conc = df_raw.loc[i, cols_data[0]]
-                    for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']:
-                        # find fraction of amino acid in sequence, multiply by abundance / MW of protein
-                        dummy_protein['AA abundances'][aa] += (len(seq) - len(seq.replace(aa, '')) / len(seq)) * conc / mw
                     # with open('./nonmodeled_proteins.json', 'a') as f:
                     #     f.write(str({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc}))
                     nonmodel_proteins.append({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc})
+            if seq:
+                for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']:
+                    # find fraction of amino acid in sequence, multiply by abundance / MW of protein
+                    dummy_protein['AA abundances'][aa] += (((len(seq) - len(seq.replace(aa, ''))) / len(seq)) * conc / mw)
         else:
             seq = df_prot.loc[i, 'sequence']
             conc = df_raw.loc[i, cols_data[0]]
@@ -171,6 +173,7 @@ with open(nonmodel_protein_data_path, 'w') as f:
 # find median length of nonmodeled proteins
 dummy_protein['length'] = np.median([len(p['sequence']) for p in nonmodel_proteins])
 # make rxn equation for dummy protein
+print('dummy protein:',dummy_protein)
 
 # Process data
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)', 'type', 'conc (g/gDW)', 'vtrans (mmol/gDW/h)']
