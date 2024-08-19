@@ -3,6 +3,7 @@ import numpy as np
 import requests
 import json
 import os
+from gsm_custom_functions import *
 
 import sys
 sys.path.append('../../../../pycore/')
@@ -18,6 +19,9 @@ model_xlsx_path = path_gams + 'model/RBA_stoichiometry.xlsx'
 ribonuc_path = path_gen + 'input/RIBOSOME_nucleus.xlsx'
 ribomito_path = path_gen + 'input/RIBOSOME_mitochondria.xlsx'
 gsm_rxn_ids_path = path_gams + 'model/GSM_rxn_ids.txt'
+aa_mapping_path = path_gen + 'input/PROTEIN_amino_acid_map.txt'
+aa_map = pd.read_csv(aa_mapping_path, sep='\t')
+aa_dict = dict(zip(aa_map['aa_abbv'], aa_map['MW']))
 
 # must match the growth rate in other files
 mu = 0.391
@@ -114,8 +118,9 @@ headers = {
 }
 
 dummy_protein = {'id':'PROSYN-PROTDUMMY','AA abundances':dict()}
-for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']:
+for aa in aa_dict:
     dummy_protein['AA abundances'][aa] = 0
+total_dummy_abundance_per_mw = 0
 # find nonmodeled proteome allocation
 if recalculate_nonmodeled_proteome_allocation:
     for i in df_raw.index:
@@ -146,14 +151,15 @@ if recalculate_nonmodeled_proteome_allocation:
                     # add sequence to dummy protein
                     seq = response['sequence']['value'].replace('*','')
                     # convert this excel formula into a method of determining protein mass: =SUMPRODUCT((LEN([@sequence])-LEN(SUBSTITUTE([@sequence],{"A";"C";"D";"E";"F";"G";"H";"I";"K";"L";"M";"N";"P";"Q";"R";"S";"T";"V";"W";"Y"},""))),{72.08;104.14;115.08;129.11;148.17;58.05;138.14;114.16;130.18;114.16;132.2;115.1;98.12;129.13;158.19;88.08;102.1;100.13;187.21;164.17})/1000
-                    mw = sum([len(seq) - len(seq.replace(aa, '')) for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']] * np.array([72.08,104.14,115.08,129.11,148.17,58.05,138.14,114.16,130.18,114.16,132.2,115.1,98.12,129.13,158.19,88.08,102.1,100.13,187.21,164.17])) / 1000
+                    mw = sum([len(seq) - len(seq.replace(aa, '')) for aa in aa_dict] * np.array(list(aa_dict.values()))) / 1000
                     # abundance / wt.
                     conc = df_raw.loc[i, cols_data[0]]
                     # with open('./nonmodeled_proteins.json', 'a') as f:
                     #     f.write(str({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc}))
                     nonmodel_proteins.append({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc})
             if seq:
-                for aa in ['A','C','D','E','F','G','H','I','K','L','M','N','P','Q','R','S','T','V','W','Y']:
+                total_dummy_abundance_per_mw += conc / mw
+                for aa in aa_dict:
                     # find fraction of amino acid in sequence, multiply by abundance / MW of protein
                     dummy_protein['AA abundances'][aa] += (((len(seq) - len(seq.replace(aa, ''))) / len(seq)) * conc / mw)
         else:
@@ -172,8 +178,22 @@ with open(nonmodel_protein_data_path, 'w') as f:
 
 # find median length of nonmodeled proteins
 dummy_protein['length'] = np.median([len(p['sequence']) for p in nonmodel_proteins])
+# divide all amino acid abundances by total_dummy_abundance_per_mw and multiply by length
+for aa in dummy_protein['AA abundances']:
+    dummy_protein['AA abundances'][aa] /= total_dummy_abundance_per_mw
+    dummy_protein['AA abundances'][aa] *= dummy_protein['length']
+
+dummy_protein['MW (g/mmol)'] = sum([dummy_protein['AA abundances'][aa] * aa_dict[aa] for aa in aa_dict]) / 1000
+# convert into dataframe with 'AA abundances' keys as aa_abbv column, and values as N_AA column
+dummy_protein_df = pd.DataFrame(columns=['aa_abbv', 'N_AA'])
+# aa_abbv column from 'AA abundances' keys
+dummy_protein_df['aa_abbv'] = dummy_protein['AA abundances'].keys()
+# N_AA column from 'AA abundances' values
+dummy_protein_df['N_AA'] = dummy_protein['AA abundances'].values()
+# print(dummy_protein)
 # make rxn equation for dummy protein
 print('dummy protein:',dummy_protein)
+make_dummy_protein_stoich(prot_df=dummy_protein_df, length=dummy_protein['length'], gams_output_file='./dummy_protein_stoich.txt', aa_standards_df=aa_map, mw=dummy_protein['MW (g/mmol)'])
 
 # Process data
 cols = ['id', 'name', 'uniprot', 'MW (g/mmol)', 'type', 'conc (g/gDW)', 'vtrans (mmol/gDW/h)']
