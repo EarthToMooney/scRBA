@@ -14,7 +14,7 @@ $setGlobal nuc_trans_path ../../../../../GAMS/model/RBA_nuc_translation.txt
 $setGlobal mito_trans_path ../../../../../GAMS/model/RBA_mito_translation.txt
 $setGlobal uptake_path ../../../../../GAMS/model/RBA_rxns_EXREV.txt
 $setGlobal media_path ../../../../../GAMS/model/RBA_rxns_EXREV_YNB_RabinowitzVersion.txt
-$setGlobal sij_path ../../../../../GAMS/model/RBA_sij.txt
+$setGlobal sij_path ../RBA_sij_for_kapps.txt
 $setGlobal unique_protein_set_path ../unique_proteins_no_locations.txt
 $setGlobal prolen_path ../../../../../GAMS/model/RBA_proteinLength.txt
 $setGlobal phenotype_path ../phenotype.txt
