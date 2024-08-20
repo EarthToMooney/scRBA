@@ -19,8 +19,8 @@ $setGlobal nonmodeled_proteome_allocation 0.3645
 
 * Carbohydrate, RNA, and protein fraction constraints
 * No info found for CEN.PK full biomass comp. aside from protein, so I used FY4 batch info since it was similar in protein content
-v.fx('BIOSYN-CARBTOBIO') = %mu% * 0.310;
-v.fx('BIOSYN-PROTTOBIO') = %mu% * 0.580680092;
+v.fx('BIOSYN-CARBTOBIO') = %mu% * 0.310 * %nscale%;
+v.fx('BIOSYN-PROTTOBIO') = %mu% * 0.580680092 * %nscale%;
 * C-lim protein fraction
 * v.fx('BIOSYN-PROTTOBIO') = %mu% * (36.94 + 34.22*%mu%) / 100 * %nscale%;
 * N-lim protein fraction
@@ -32,7 +32,7 @@ v.fx('BIOSYN-RNATOBIO') = %mu% * 0.086 / 100 * %nscale%;
 
 * Substrate and oxygenation
 v.up('RXN-EX_glc__D_e_REV-SPONT') = 24.62 * %nscale%;
-v.lo('RXN-EX_glc__D_e_REV-SPONT') = 24.62 * 0.9 * %nscale%;
+*v.lo('RXN-EX_glc__D_e_REV-SPONT') = 24.62 * 0.9 * %nscale%;
 v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0 * %nscale%;
 
 v.up('RXN-EX_o2_e_REV-SPONT') = 5.58 * %nscale%;
