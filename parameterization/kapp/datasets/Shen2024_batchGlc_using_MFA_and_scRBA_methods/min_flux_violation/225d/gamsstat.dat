@@ -1,0 +1,100 @@
+=1
+=2
+=0IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+=1
+--- GAMS/Cplex licensed for continuous and discrete problems.
+=2
+=C
+=1
+=CReading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/cplex.opt"
+=C>>  optcr = 1E-12
+=C>>  optca = 1E-12
+=C>>  eprhs = 1E-9
+=C>> 
+=CFinished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/cplex.opt"
+=2
+=C
+=1
+--- GMO setup time: 0.00s
+=2
+=1
+--- Space for names approximately 0.59 Mb
+=2
+=1
+--- Use option 'names no' to turn use of names off
+=2
+=1
+--- GMO memory 6.67 Mb (peak 6.77 Mb)
+=2
+=1
+--- Dictionary memory 0.00 Mb
+=2
+=1
+--- Cplex 22.1.1.0 link memory 0.31 Mb (peak 2.12 Mb)
+=2
+=1
+--- Starting Cplex
+=2
+=C
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+Tried aggregator 1 time.
+LP Presolve eliminated 3510 rows and 10304 columns.
+Aggregator did 885 substitutions.
+Reduced LP has 1247 rows, 1855 columns, and 13294 nonzeros.
+Presolve time = 0.03 sec. (15.28 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          9814.592101
+Perturbation started.
+Iteration:   101   Dual objective     =          9814.592101
+Iteration:   218   Dual objective     =          9834.107878
+Iteration:   305   Dual objective     =         39791.589728
+Iteration:   387   Dual objective     =         83455.583741
+Iteration:   459   Dual objective     =         92412.940113
+Iteration:   522   Dual objective     =         96515.169350
+Iteration:   590   Dual objective     =        101585.493696
+Iteration:   665   Dual objective     =        107432.753758
+Iteration:   745   Dual objective     =        109223.938399
+Iteration:   808   Dual objective     =        112533.061489
+Iteration:   883   Dual objective     =        114727.593168
+Iteration:   954   Dual objective     =        118946.137152
+Iteration:  1026   Dual objective     =        124387.024560
+Iteration:  1097   Dual objective     =        127044.104276
+Iteration:  1168   Dual objective     =        129777.507310
+Iteration:  1241   Dual objective     =        134387.068591
+Iteration:  1319   Dual objective     =        142899.310628
+Iteration:  1412   Dual objective     =        150246.593465
+Iteration:  1497   Dual objective     =        169932.819105
+Iteration:  1593   Dual objective     =        179450.053494
+Iteration:  1681   Dual objective     =        193463.395058
+Iteration:  1760   Dual objective     =        203403.441035
+Iteration:  1835   Dual objective     =        211563.183222
+Iteration:  1912   Dual objective     =        218803.142700
+Iteration:  1986   Dual objective     =        235943.605614
+Removing perturbation.
+Iteration:  2066   Scaled dual infeas =          1960.309426
+Iteration:  2172   Dual objective     =  -16823255436.717402
+Iteration:  2437   Dual objective     =       -455224.568873
+Iteration:  2648   Dual objective     =        154917.265969
+Iteration:  2872   Dual objective     =        192030.471305
+Iteration:  3106   Dual objective     =        258976.688876
+=C
+=1
+--- LP status (3): infeasible.
+=2
+=1
+--- Cplex Time: 0.60sec (det. 352.81 ticks)
+
+=2
+=C
+=CModel has been proven infeasible
+=C

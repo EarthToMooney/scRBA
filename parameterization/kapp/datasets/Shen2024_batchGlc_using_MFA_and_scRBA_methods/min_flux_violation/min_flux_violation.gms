@@ -7,7 +7,7 @@ $include "./min_flux_violation_GAMS_settings.txt"
 $setGlobal nscale 1000
 $setGlobal venzSlackAllow 0
 * small value needed to ensure sequential problems aren't infeasible due to rounding errors
-$setGlobal epsilon 1e-7
+$setGlobal epsilon 1e-6
 
 options
 	LP = cplex /*Solver selection*/

@@ -1,0 +1,94 @@
+=1
+=2
+=0IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+=1
+--- GAMS/Cplex licensed for continuous and discrete problems.
+=2
+=C
+=1
+=CReading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/cplex.opt"
+=C>>  optcr = 1E-12
+=C>>  optca = 1E-12
+=C>>  eprhs = 1E-9
+=C>> 
+=CFinished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/cplex.opt"
+=2
+=C
+=1
+--- GMO setup time: 0.00s
+=2
+=1
+--- Space for names approximately 0.59 Mb
+=2
+=1
+--- Use option 'names no' to turn use of names off
+=2
+=1
+--- GMO memory 6.67 Mb (peak 6.77 Mb)
+=2
+=1
+--- Dictionary memory 0.00 Mb
+=2
+=1
+--- Cplex 22.1.1.0 link memory 0.31 Mb (peak 2.12 Mb)
+=2
+=1
+--- Starting Cplex
+=2
+=C
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+Tried aggregator 1 time.
+LP Presolve eliminated 3510 rows and 10304 columns.
+Aggregator did 884 substitutions.
+Reduced LP has 1248 rows, 1856 columns, and 13297 nonzeros.
+Presolve time = 0.03 sec. (15.24 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          9814.592101
+Perturbation started.
+Iteration:   101   Dual objective     =          9814.592101
+Iteration:   219   Dual objective     =         39791.096949
+Iteration:   284   Dual objective     =         39791.366221
+Iteration:   351   Dual objective     =         39792.477484
+Iteration:   435   Dual objective     =         92298.239964
+Iteration:   503   Dual objective     =         95599.228862
+Iteration:   570   Dual objective     =        101165.259102
+Iteration:   637   Dual objective     =        106103.995740
+Iteration:   731   Dual objective     =        109181.755450
+Iteration:   796   Dual objective     =        111845.003928
+Iteration:   868   Dual objective     =        113840.259152
+Iteration:   934   Dual objective     =        117062.453817
+Iteration:  1001   Dual objective     =        118849.595115
+Iteration:  1069   Dual objective     =        123004.631211
+Iteration:  1144   Dual objective     =        124961.868784
+Iteration:  1221   Dual objective     =        129092.650229
+Iteration:  1290   Dual objective     =        137867.571604
+Iteration:  1361   Dual objective     =        142015.485095
+Iteration:  1423   Dual objective     =        145160.385051
+Iteration:  1485   Dual objective     =        146491.667442
+Iteration:  1569   Dual objective     =        150025.400307
+Iteration:  1659   Dual objective     =        158193.728607
+Iteration:  1735   Dual objective     =        165318.244056
+Iteration:  1816   Dual objective     =        165390.879493
+Removing perturbation.
+=C
+=1
+--- LP status (1): optimal.
+=2
+=1
+--- Cplex Time: 0.16sec (det. 122.78 ticks)
+
+=2
+=C
+=COptimal solution found
+=CObjective:       165371.111709
+=C
