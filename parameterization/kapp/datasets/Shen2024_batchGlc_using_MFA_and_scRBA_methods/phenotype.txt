@@ -23,8 +23,8 @@ $setGlobal max_allowed_mito_proteome_allo_fraction 0.068275095583055
 *v.fx('BIOSYN-CARBTOBIO') = %mu% * 0.318 * 0.933442277567423 * %nscale%;
 *v.fx('BIOSYN-PROTTOBIO') = %mu% * 0.595 * 0.933442277567423 * %nscale%;
 * setting constant proportions of varbiom parts in relation to one another, to avoid rounding errors
-v.fx('BIOSYN-PROTTOBIO') = 1.87277184 * v.fx('BIOSYN-CARBTOBIO');
-v.fx('BIOSYN-RNATOBIO') = 6.773616788 * v.fx('BIOSYN-CARBTOBIO');
+v.fx('BIOSYN-PROTTOBIO') = 1.87277184 * v.l('BIOSYN-CARBTOBIO');
+v.fx('BIOSYN-RNATOBIO') = 6.773616788 * v.l('BIOSYN-CARBTOBIO');
 * C-lim protein fraction
 * v.fx('BIOSYN-PROTTOBIO') = %mu% * (36.94 + 34.22*%mu%) / 100 * %nscale%;
 * N-lim protein fraction
