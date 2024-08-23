@@ -27,7 +27,7 @@ aa_dict = dict(zip(aa_map['aa_abbv'], aa_map['MW']))
 # must match the growth rate in other files
 mu = 0.391
 # protein fraction (disable by uncommenting "ptot = 1" unless composition varies w/ growth rate)
-ptot = 0.580680092
+ptot = 0.5551
 # Mass fraction of proteome that's not explicitly modeled. Set to 0 if recalculate_nonmodeled_proteome_allocation = True.
 nonmodeled_proteome_allocation = 0
 nonmodel_protein_data_path = './nonmodeled_proteins.json'

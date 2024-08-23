@@ -20,9 +20,11 @@ $setGlobal max_allowed_mito_proteome_allo_fraction 0.068275095583055
 
 * Carbohydrate, RNA, and protein fraction constraints
 * No info found for CEN.PK full biomass comp. aside from protein, so I used FY4 batch info since it was similar in protein content
-v.fx('BIOSYN-CARBTOBIO') = %mu% * 0.2964 * %nscale%;
-v.fx('BIOSYN-PROTTOBIO') = %mu% * 0.5551 * %nscale%;
-v.fx('BIOSYN-RNATOBIO') = %mu% * 0.082 * %nscale%;
+v.up('BIOSYN-CARBTOBIO') = %mu% * 0.31007 * %nscale%;
+v.up('BIOSYN-PROTTOBIO') = %mu% * 0.58069 * %nscale%;
+*v.fx('BIOSYN-PROTTOBIO') = 0.2170441 * %nscale%;
+v.up('BIOSYN-RNATOBIO') = %mu% * 0.08574 * %nscale%;
+*v.fx('BIOSYN-RNATOBIO') = 0.0320229 * %nscale%;
 
 * Substrate and oxygenation
 v.up('RXN-EX_glc__D_e_REV-SPONT') = 24.62 * %nscale%;

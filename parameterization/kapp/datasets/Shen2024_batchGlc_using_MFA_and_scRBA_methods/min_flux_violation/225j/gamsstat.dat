@@ -1,0 +1,104 @@
+=1
+=2
+=0IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+=1
+--- GAMS/Cplex licensed for continuous and discrete problems.
+=2
+=C
+=1
+=CReading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/cplex.opt"
+=C>>  optcr = 1E-12
+=C>>  optca = 1E-12
+=C>>  eprhs = 1E-9
+=C>> 
+=CFinished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/cplex.opt"
+=2
+=C
+=1
+--- GMO setup time: 0.00s
+=2
+=1
+--- Space for names approximately 0.59 Mb
+=2
+=1
+--- Use option 'names no' to turn use of names off
+=2
+=1
+--- GMO memory 6.67 Mb (peak 6.77 Mb)
+=2
+=1
+--- Dictionary memory 0.00 Mb
+=2
+=1
+--- Cplex 22.1.1.0 link memory 0.31 Mb (peak 2.12 Mb)
+=2
+=1
+--- Starting Cplex
+=2
+=C
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+Tried aggregator 1 time.
+LP Presolve eliminated 3513 rows and 10306 columns.
+Aggregator did 882 substitutions.
+Reduced LP has 1247 rows, 1856 columns, and 13300 nonzeros.
+Presolve time = 0.02 sec. (15.24 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =          9814.592090
+Perturbation started.
+Iteration:   101   Dual objective     =          9814.592090
+Iteration:   222   Dual objective     =         39791.361492
+Iteration:   299   Dual objective     =         39791.965996
+Iteration:   372   Dual objective     =         72915.978931
+Iteration:   455   Dual objective     =         86755.887331
+Iteration:   536   Dual objective     =         98549.046580
+Iteration:   606   Dual objective     =        104043.427010
+Iteration:   682   Dual objective     =        107501.765455
+Iteration:   770   Dual objective     =        109062.708642
+Iteration:   835   Dual objective     =        111941.021813
+Iteration:   907   Dual objective     =        113737.117260
+Iteration:   980   Dual objective     =        116554.746816
+Iteration:  1049   Dual objective     =        120194.527200
+Iteration:  1116   Dual objective     =        127083.809549
+Iteration:  1195   Dual objective     =        129801.881716
+Iteration:  1270   Dual objective     =        133923.413834
+Iteration:  1347   Dual objective     =        141207.499261
+Iteration:  1434   Dual objective     =        146444.943687
+Iteration:  1517   Dual objective     =        164902.655823
+Iteration:  1603   Dual objective     =        177885.227665
+Iteration:  1697   Dual objective     =        194250.112189
+Iteration:  1776   Dual objective     =        205222.627662
+Iteration:  1869   Dual objective     =        211801.922149
+Iteration:  1953   Dual objective     =        220479.515351
+Iteration:  2042   Dual objective     =        241600.738338
+Iteration:  2065   Dual objective     =       1242511.279255
+Removing perturbation.
+Iteration:  2066   Scaled dual infeas =          7989.117376
+Iteration:  2142   Dual objective     =    -290781016.151060
+Iteration:  2397   Dual objective     =     -21269039.706127
+Iteration:  2623   Dual objective     =         36451.060029
+Iteration:  2809   Dual objective     =        121285.508757
+Iteration:  3021   Dual objective     =        156678.684214
+Iteration:  3256   Dual objective     =        178154.240670
+Iteration:  3507   Dual objective     =        215668.541417
+Removing shift (9).
+=C
+=1
+--- LP status (3): infeasible.
+=2
+=1
+--- Cplex Time: 0.78sec (det. 492.21 ticks)
+
+=2
+=C
+=CModel has been proven infeasible
+=C
