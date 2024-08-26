@@ -14,8 +14,9 @@ vmax = 1e3 # max flux in either direction
 path_gen = '../../../../build_model/'
 path_gams = '../../../../GAMS/'
 
-# prot_path = path_gen + 'input/PROTEIN_stoich_curation.xlsx'
-prot_path = path_gen + 'input/PROTEIN_stoich_curation.csv'
+prot_path = path_gen + 'input/PROTEIN_stoich_curation.xlsx'
+# prot_path = path_gen + 'input/PROTEIN_stoich_curation.csv'
+unknown_prot_path = path_gen + 'input/PROTEIN_stoich_curation_unknown.xlsx'
 model_xlsx_path = path_gams + 'model/RBA_stoichiometry.xlsx'
 ribonuc_path = path_gen + 'input/RIBOSOME_nucleus.xlsx'
 ribomito_path = path_gen + 'input/RIBOSOME_mitochondria.xlsx'
@@ -199,9 +200,9 @@ if recalculate_nonmodeled_proteome_allocation:
             print(p['id'], "already in df_prot")
     # save file
     if prot_path.endswith('.xlsx'):
-        df_prot_raw.to_excel(prot_path, index=None)
+        df_prot_raw.to_excel(unknown_prot_path, index=None)
     else:
-        df_prot_raw.to_csv(prot_path, index=None)
+        df_prot_raw.to_csv(unknown_prot_path, index=None)
     # max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
 
     # find median length of nonmodeled proteins
