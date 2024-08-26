@@ -14,7 +14,8 @@ vmax = 1e3 # max flux in either direction
 path_gen = '../../../../build_model/'
 path_gams = '../../../../GAMS/'
 
-prot_path = path_gen + 'input/PROTEIN_stoich_curation.xlsx'
+# prot_path = path_gen + 'input/PROTEIN_stoich_curation.xlsx'
+prot_path = path_gen + 'input/PROTEIN_stoich_curation.csv'
 model_xlsx_path = path_gams + 'model/RBA_stoichiometry.xlsx'
 ribonuc_path = path_gen + 'input/RIBOSOME_nucleus.xlsx'
 ribomito_path = path_gen + 'input/RIBOSOME_mitochondria.xlsx'
