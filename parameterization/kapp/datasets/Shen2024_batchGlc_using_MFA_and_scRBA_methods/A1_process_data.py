@@ -157,7 +157,7 @@ if recalculate_nonmodeled_proteome_allocation:
                     conc = df_raw.loc[i, cols_data[0]]
                     # with open('./nonmodeled_proteins.json', 'a') as f:
                     #     f.write(str({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc}))
-                    nonmodel_proteins.append({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc})
+                    nonmodel_proteins.append({'id':i,'gene_src':response['genes']['value'],'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc})
             if seq:
                 total_dummy_abundance_per_mw += conc / mw
                 for aa in aa_dict:
@@ -172,6 +172,11 @@ if recalculate_nonmodeled_proteome_allocation:
         if conc and mw and seq != '':
             # print(i, conc, mw, seq.replace('*',''))
             ATP_cost_of_translation += (conc * ptot * ((len(seq.replace('*','')) * 2) + 1) / mw)
+    for p in nonmodel_proteins:
+        # add to bottom of prot_path file, using "id" value in both "id" and "uniprot" columns
+        df_prot = df_prot.append({'id':p['id'],'gene_src':p['gene_src'],'name':p['id'],'uniprot':p['id'],'subloc_assigned':'unknown','cofactor_comments':'Unknown; protein added automatically to help with fitting translation data','MW (g/mmol)':p['MW (g/mmol)'],'sequence':p['sequence'],'status':'forProteomicsOnly','translation_loc':'unknown'}, ignore_index=True)
+    # save file
+    df_prot.to_excel(prot_path, index=None)
     # max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
     # save nonmodeled protein info to JSON
     with open(nonmodel_protein_data_path, 'w') as f:
