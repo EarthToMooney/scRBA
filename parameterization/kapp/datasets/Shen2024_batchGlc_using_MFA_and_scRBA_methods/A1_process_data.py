@@ -44,7 +44,7 @@ max_allowed_mito_proteome_allo_fraction = 0
 recalculate_mito_proteome_allocation = True
 ATP_cost_of_translation = 0 # mmol ATP/(gDW*h); calculated from data if 0
 
-search_uniprot_for_nonmodeled_sequences = False
+search_uniprot_for_nonmodeled_sequences = True
 uniprot_url = 'https://rest.uniprot.org/uniprotkb/'
 
 # flux data (e.g., from MFA) is optional
@@ -90,7 +90,8 @@ uniprot_col = 'Entry' # set to '' if no column with accession names provided
 data_uses_biomass_mass_fraction = False # True if using units like g protein/gDW, False if using g/g protein
 
 # Load protein
-df_prot = pd.read_excel(prot_path)
+df_prot_raw = pd.read_excel(prot_path)
+df_prot = df_prot_raw.copy()
 df_prot.index = df_prot.id.to_list()
 # Strip compartment
 df_prot.index = [i.split('_')[0] if '_' in i else i for i in df_prot.index]
@@ -151,13 +152,20 @@ if recalculate_nonmodeled_proteome_allocation:
                 if 'sequence' in response:
                     # add sequence to dummy protein
                     seq = response['sequence']['value'].replace('*','')
+                    gene_src = ''
+                    for gene in response['genes']:
+                        # print('gene:',gene)
+                        if 'geneName' in gene.keys():
+                            gene_src = gene['geneName']['value']
+                            # print('gene_src:',gene_src)
+                            break
                     # convert this excel formula into a method of determining protein mass: =SUMPRODUCT((LEN([@sequence])-LEN(SUBSTITUTE([@sequence],{"A";"C";"D";"E";"F";"G";"H";"I";"K";"L";"M";"N";"P";"Q";"R";"S";"T";"V";"W";"Y"},""))),{72.08;104.14;115.08;129.11;148.17;58.05;138.14;114.16;130.18;114.16;132.2;115.1;98.12;129.13;158.19;88.08;102.1;100.13;187.21;164.17})/1000
                     mw = sum([len(seq) - len(seq.replace(aa, '')) for aa in aa_dict] * np.array(list(aa_dict.values()))) / 1000
                     # abundance / wt.
                     conc = df_raw.loc[i, cols_data[0]]
                     # with open('./nonmodeled_proteins.json', 'a') as f:
                     #     f.write(str({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc}))
-                    nonmodel_proteins.append({'id':i,'gene_src':response['genes']['value'],'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc})
+                    nonmodel_proteins.append({'id':i,'gene_src':gene_src,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc})
             if seq:
                 total_dummy_abundance_per_mw += conc / mw
                 for aa in aa_dict:
@@ -172,15 +180,19 @@ if recalculate_nonmodeled_proteome_allocation:
         if conc and mw and seq != '':
             # print(i, conc, mw, seq.replace('*',''))
             ATP_cost_of_translation += (conc * ptot * ((len(seq.replace('*','')) * 2) + 1) / mw)
-    for p in nonmodel_proteins:
-        # add to bottom of prot_path file, using "id" value in both "id" and "uniprot" columns
-        df_prot = df_prot.append({'id':p['id'],'gene_src':p['gene_src'],'name':p['id'],'uniprot':p['id'],'subloc_assigned':'unknown','cofactor_comments':'Unknown; protein added automatically to help with fitting translation data','MW (g/mmol)':p['MW (g/mmol)'],'sequence':p['sequence'],'status':'forProteomicsOnly','translation_loc':'unknown'}, ignore_index=True)
-    # save file
-    df_prot.to_excel(prot_path, index=None)
-    # max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
     # save nonmodeled protein info to JSON
     with open(nonmodel_protein_data_path, 'w') as f:
         json.dump(nonmodel_proteins, f)
+    for p in nonmodel_proteins:
+        # check if p['id'] is in df_prot.index
+        if p['id'] not in df_prot.index:
+            # add to bottom of prot_path file, using "id" value in both "id" and "uniprot" columns
+            df_prot = pd.concat([df_prot, pd.DataFrame({'id': [p['id']], 'gene_src': [p['gene_src']], 'name': [p['id']], 'uniprot': [p['id']], 'subloc_assigned': ['unknown'], 'cofactor_comments': ['Unknown; protein added automatically to help with fitting translation data'], 'MW (g/mmol)': [p['MW (g/mmol)']], 'sequence': [p['sequence']], 'status': ['forProteomicsOnly'], 'translation_loc': ['unknown']})], ignore_index=True)
+        else:
+            print(p['id'], "already in df_prot")
+    # save file
+    df_prot.to_excel(prot_path, index=None)
+    # max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
 
     # find median length of nonmodeled proteins
     dummy_protein['length'] = np.median([len(p['sequence']) for p in nonmodel_proteins])
