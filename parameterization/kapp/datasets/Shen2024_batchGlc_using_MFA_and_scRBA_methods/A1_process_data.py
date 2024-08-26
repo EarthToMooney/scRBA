@@ -14,7 +14,8 @@ vmax = 1e3 # max flux in either direction
 path_gen = '../../../../build_model/'
 path_gams = '../../../../GAMS/'
 
-prot_path = path_gen + 'input/PROTEIN_stoich_curation.xlsx'
+# prot_path = path_gen + 'input/PROTEIN_stoich_curation.xlsx'
+prot_path = path_gen + 'input/PROTEIN_stoich_curation.csv'
 model_xlsx_path = path_gams + 'model/RBA_stoichiometry.xlsx'
 ribonuc_path = path_gen + 'input/RIBOSOME_nucleus.xlsx'
 ribomito_path = path_gen + 'input/RIBOSOME_mitochondria.xlsx'
@@ -89,8 +90,13 @@ cols_data = ['mean'] # where protein abundance data is stored
 uniprot_col = 'Entry' # set to '' if no column with accession names provided
 data_uses_biomass_mass_fraction = False # True if using units like g protein/gDW, False if using g/g protein
 
+def read_spreadsheet(path):
+    if path.endswith('.xlsx'):
+        return pd.read_excel(path)
+    else:
+        return pd.read_csv(path)
 # Load protein
-df_prot_raw = pd.read_excel(prot_path)
+df_prot_raw = read_spreadsheet(prot_path)
 df_prot = df_prot_raw.copy()
 df_prot.index = df_prot.id.to_list()
 # Strip compartment
@@ -106,13 +112,13 @@ except:
     df_select = pd.DataFrame(columns=['gene_src', 'selected_compartmental_copy'])
 
 # Ribosome (nucleus and mitochondrial)
-df_ribonuc = pd.read_excel(ribonuc_path)
-df_ribomito = pd.read_excel(ribomito_path)
+df_ribonuc = read_spreadsheet(ribonuc_path)
+df_ribomito = read_spreadsheet(ribomito_path)
 
 #### HANDLE MISSING MEASUREMENTS FOR SUBUNIT COMPONENT OF HETEROMERIC ENZYMES
 # E.g., missing subunit measurements for ATP synthase complex
 # Stoichiometry
-df_eqn = pd.read_excel(model_xlsx_path)
+df_eqn = read_spreadsheet(model_xlsx_path)
 df_eqn.index = df_eqn.id.to_list()
 
 headers = {
@@ -191,7 +197,10 @@ if recalculate_nonmodeled_proteome_allocation:
         else:
             print(p['id'], "already in df_prot")
     # save file
-    df_prot.to_excel(prot_path, index=None)
+    if prot_path.endswith('.xlsx'):
+        df_prot.to_excel(prot_path, index=None)
+    else:
+        df_prot.to_csv(prot_path, index=None)
     # max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
 
     # find median length of nonmodeled proteins
@@ -286,7 +295,7 @@ df_data = df_data[df_data['conc (g/gDW)'].isnull() == False]
 
 # Gap-fill data
 # Load protein
-df_prot = pd.read_excel(prot_path)
+df_prot = read_spreadsheet(prot_path)
 df_prot.index = df_prot.id.to_list()
 
 # for each row, check if it's in selected_compartmental_copy
