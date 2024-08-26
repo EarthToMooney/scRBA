@@ -14,8 +14,7 @@ vmax = 1e3 # max flux in either direction
 path_gen = '../../../../build_model/'
 path_gams = '../../../../GAMS/'
 
-# prot_path = path_gen + 'input/PROTEIN_stoich_curation.xlsx'
-prot_path = path_gen + 'input/PROTEIN_stoich_curation.csv'
+prot_path = path_gen + 'input/PROTEIN_stoich_curation.xlsx'
 model_xlsx_path = path_gams + 'model/RBA_stoichiometry.xlsx'
 ribonuc_path = path_gen + 'input/RIBOSOME_nucleus.xlsx'
 ribomito_path = path_gen + 'input/RIBOSOME_mitochondria.xlsx'
@@ -191,16 +190,17 @@ if recalculate_nonmodeled_proteome_allocation:
         json.dump(nonmodel_proteins, f)
     for p in nonmodel_proteins:
         # check if p['id'] is in df_prot.index
-        if p['id'] not in df_prot.index:
+        if p['id'] not in df_prot_raw.index:
             # add to bottom of prot_path file, using "id" value in both "id" and "uniprot" columns
+            df_prot_raw = pd.concat([df_prot_raw, pd.DataFrame({'id': [p['id']], 'gene_src': [p['gene_src']], 'name': [p['id']], 'uniprot': [p['id']], 'subloc_assigned': ['unknown'], 'cofactor_comments': ['Unknown; protein added automatically to help with fitting translation data'], 'MW (g/mmol)': [p['MW (g/mmol)']], 'sequence': [p['sequence']], 'status': ['forProteomicsOnly'], 'translation_loc': ['unknown']})], ignore_index=True)
             df_prot = pd.concat([df_prot, pd.DataFrame({'id': [p['id']], 'gene_src': [p['gene_src']], 'name': [p['id']], 'uniprot': [p['id']], 'subloc_assigned': ['unknown'], 'cofactor_comments': ['Unknown; protein added automatically to help with fitting translation data'], 'MW (g/mmol)': [p['MW (g/mmol)']], 'sequence': [p['sequence']], 'status': ['forProteomicsOnly'], 'translation_loc': ['unknown']})], ignore_index=True)
         else:
             print(p['id'], "already in df_prot")
     # save file
     if prot_path.endswith('.xlsx'):
-        df_prot.to_excel(prot_path, index=None)
+        df_prot_raw.to_excel(prot_path, index=None)
     else:
-        df_prot.to_csv(prot_path, index=None)
+        df_prot_raw.to_csv(prot_path, index=None)
     # max_allowed_mito_proteome_allo_fraction = 1 - nonmodeled_proteome_allocation
 
     # find median length of nonmodeled proteins
