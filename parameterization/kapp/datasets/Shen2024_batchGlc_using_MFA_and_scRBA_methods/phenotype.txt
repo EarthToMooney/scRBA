@@ -21,7 +21,7 @@ $setGlobal kribomito 10.5*3600 * (13.2 / 10.5)
 * $setGlobal nonmodeled_proteome_allocation 0.3973029017641598
 * turn dummy protein off; now replaced by the proteins it represents
 $setGlobal nonmodeled_proteome_allocation 0
-$setGlobal max_allowed_mito_proteome_allo_fraction 0.068275095583055
+*$setGlobal max_allowed_mito_proteome_allo_fraction 0.068275095583055
 
 * Carbohydrate, RNA, and protein fraction constraints
 * No info found for CEN.PK full biomass comp. aside from protein, so I used FY4 batch info since it was similar in protein content
