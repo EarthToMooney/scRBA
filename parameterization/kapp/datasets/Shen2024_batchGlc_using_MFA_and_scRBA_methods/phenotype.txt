@@ -4,8 +4,7 @@
 * Note: If infeasible, relax constraints and parameters by up to 10%
 
 * Growth rate
-*$setGlobal mu 0.391
-$setGlobal mu 0.36
+$setGlobal mu 0.391
 v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
 
 * NGAM
