@@ -6,7 +6,7 @@
 * Growth rate
 $setGlobal mu 0.391
 v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
-$setGlobal prosynSlackAllow 1000
+$setGlobal prosynSlackAllow 1e9
 prosynSlackLB.up(pro) = %prosynSlackAllow%;
 prosynSlackUB.up(pro) = %prosynSlackAllow%;
 

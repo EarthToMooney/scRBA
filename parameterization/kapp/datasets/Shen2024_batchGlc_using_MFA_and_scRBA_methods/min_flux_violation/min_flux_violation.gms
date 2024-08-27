@@ -4,7 +4,7 @@
 
 $INLINECOM /*  */
 $include "./min_flux_violation_GAMS_settings.txt"
-$setGlobal nscale 1000
+$setGlobal nscale 1e3
 $setGlobal venzSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * small value needed to ensure sequential problems aren't infeasible due to rounding errors
@@ -78,7 +78,7 @@ s_v_exp_lb.lo(gsm_j) = 0; s_v_exp_lb.up(gsm_j) = 2e3 * %nscale%;
 s_v_exp_ub.lo(gsm_j) = 0; s_v_exp_ub.up(gsm_j) = 2e3 * %nscale%;
 
 *** SET FLUX LOWER AND UPPER BOUNDS ***
-v.lo(j) = 0; v.up(j) = 1e3 * %nscale%;
+v.lo(j) = 0; v.up(j) = 1e4 * %nscale%;
 
 * Disable enzyme synthesis and enzyme load network
 v.fx(j)$rxns_enzsyn(j) = 0;
@@ -86,7 +86,7 @@ v.fx(j)$rxns_enzload(j) = 0;
 
 * Media
 v.up(j)$uptake(j) = 0;
-v.up(j)$media(j) = 1e3 * %nscale%;
+v.up(j)$media(j) = 1e4 * %nscale%;
 
 * Turning off all versions of biomass dilution reaction
 * You need to turn on the respective version corresponding to your growth condition
@@ -122,8 +122,7 @@ Model rba
 rba.optfile = 1;
 * minimize disagreement with proteomics data, while allowing some where needed (e.g., measurement errors)
 Solve rba using lp minimizing prosynSlackSum;
-prosynSlackUB.up(pro) = prosynSlackUB.l(pro);
-prosynSlackLB.up(pro) = prosynSlackLB.l(pro);
+prosynSlackSum.up = prosynSlackSum.l + %epsilon%;
 
 * minimize disagreements with flux data
 Solve rba using lp minimizing fluxSlack;
