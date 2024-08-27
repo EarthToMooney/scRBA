@@ -187,11 +187,11 @@ loop(j$prodata_set(j),
 );
 putclose ff5;
 
-file ff6 /%system.FN%.fluxSlack.txt/;
-ff6.nr = 2; put ff6;
-loop(n,
-    if ( (fluxSlack.l(n) gt 1e-12),
-        put n.tl:0, system.tab, 'fluxSlack', system.tab, fluxSlack.l(n):0:15/;
+file ff6 /%system.FN%.s_v_exp.txt/;
+ff6.nr = 2; ff6.pc=6; put ff6;
+loop(gsm_j,
+    if ( (s_v_exp_lb.l(gsm_j) gt 1e-12) or (s_v_exp_ub.l(gsm_j) gt 1e-12),
+        put gsm_j.tl:0, s_v_exp_lb.l(gsm_j):0:15, s_v_exp_ub.l(gsm_j):0:15/;
     );
 );
 putclose ff6;
