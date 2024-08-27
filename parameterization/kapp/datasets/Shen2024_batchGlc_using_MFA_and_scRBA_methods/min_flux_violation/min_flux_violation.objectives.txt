@@ -1,0 +1,3 @@
+prosynSlackSum	 5.26032814294E+03
+inactiveFluxSum	 4.17721869419E-02
+fluxSlackSum	 2.13232793715E+02

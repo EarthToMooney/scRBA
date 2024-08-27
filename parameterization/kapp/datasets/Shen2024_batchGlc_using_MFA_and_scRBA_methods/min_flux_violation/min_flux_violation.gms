@@ -107,7 +107,8 @@ fluxSlackBounds..			fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_
 Stoic(i)..			sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityMito.. 		v('RIBOSYN-ribomito') * %kribomito% =g= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
 RiboCapacityNuc.. 		v('RIBOSYN-ribonuc') * %kribonuc% =g= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
-UnknownRiboCapacity..	v('RIBOSYN-ribonuc') * %kribonuc% + v('RIBOSYN-ribomito') * %kribomito% =g= %mu% * (sum(j$nuc_translation(j), NAA(j) * v(j)) + sum(j$mito_translation(j), NAA(j) * v(j)) + sum(j$unknown_ribo_translation(j), NAA(j) * v(j)));
+*UnknownRiboCapacity..	v('RIBOSYN-ribonuc') * %kribonuc% + v('RIBOSYN-ribomito') * %kribomito% =g= %mu% * (sum(j$nuc_translation(j), NAA(j) * v(j)) + sum(j$mito_translation(j), NAA(j) * v(j)) + sum(j$unknown_ribo_translation(j), NAA(j) * v(j)));
+UnknownRiboCapacity..	v('RIBOSYN-ribonuc') * %kribonuc% + v('RIBOSYN-ribomito') * %kribomito% =l= %mu% * (sum(j$nuc_translation(j), NAA(j) * v(j)) + sum(j$mito_translation(j), NAA(j) * v(j)) + sum(j$unknown_ribo_translation(j), NAA(j) * v(j)));
 *ProData(j)$prodata_set(j)..	v(j) =e= pro_val(j) * (1 - venzSlack);
 $include "../prosyn_abundance_constraints.txt"
 Nonmodel..			v('BIOSYN-PROTMODELED') =l= (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
@@ -133,6 +134,13 @@ file ff /%system.FN%.modelStat.txt/;
 ff.nr = 2; put ff;
 put rba.modelStat/;
 putclose ff;
+
+file ff2 /%system.FN%.objectives.txt/;
+ff2.nr = 2; put ff2;
+put 'prosynSlackSum',system.tab,prosynSlackSum.l:0:11/;
+put 'inactiveFluxSum',system.tab,(inactiveFluxSum.l/%nscale%):0:11/;
+put 'fluxSlackSum',system.tab,(fluxSlack.l/%nscale%):0:11/;
+putclose ff2;
 
 file ff3 /%system.FN%.flux_gamsscaled.txt/;
 ff3.nr = 2; put ff3;
