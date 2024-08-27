@@ -6,6 +6,7 @@ $INLINECOM /*  */
 $include "./min_flux_violation_GAMS_settings.txt"
 $setGlobal nscale 1000
 $setGlobal venzSlackAllow 0
+$setGlobal prosynSlackAllow 0
 * small value needed to ensure sequential problems aren't infeasible due to rounding errors
 $setGlobal epsilon 1e-6
 
@@ -24,6 +25,8 @@ i
 $include "%species_path%"
 j
 $include "%rxns_path%"
+pro
+$include "%unique_protein_set_path%"
 gsm_j /* list of GSM model rxns */
 $include "%gsm_rxns_path%"
 rxns_enzsyn(j)
@@ -63,10 +66,13 @@ v_exp_ub(gsm_j)
 $include "%v_exp_ub_path%"
 ;
 
+* slacks for allowing fluxes to deviate from measured values when necessary
 Variables
-z, v(j), venzSlack, fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j)
+prosynSlackSum, inactiveFluxSum, fluxSum, v(j), venzSlack(j), fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j), prosynSlackLB(pro), prosynSlackUB(pro)
 ;
-venzSlack.lo = 0; venzSlack.up = %venzSlackAllow%;
+venzSlack.lo(j) = 0; venzSlack.up(j) = %venzSlackAllow%;
+prosynSlackLB.lo(pro) = 0; prosynSlackLB.up(pro) = %prosynSlackAllow%;
+prosynSlackUB.lo(pro) = 0; prosynSlackUB.up(pro) = %prosynSlackAllow%;
 * 2e3 to allow changes in either direction
 s_v_exp_lb.lo(gsm_j) = 0; s_v_exp_lb.up(gsm_j) = 2e3 * %nscale%;
 s_v_exp_ub.lo(gsm_j) = 0; s_v_exp_ub.up(gsm_j) = 2e3 * %nscale%;
@@ -95,7 +101,7 @@ Equations
 Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
 ;
 
-Obj..				z =e= sum(j$rxns_inactive(j), v(j));
+Obj..				inactiveFluxSum =e= sum(j$rxns_inactive(j), v(j));
 fluxSlackBounds..			fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_j));
 *Obj..				z =e= venzSlack;
 Stoic(i)..			sum(j, S(i,j)*v(j)) =e= 0;
@@ -118,7 +124,7 @@ rba.optfile = 1;
 *** SOLVE ***
 Solve rba using lp minimizing fluxSlack;
 fluxSlack.up = fluxSlack.l + %epsilon%;
-Solve rba using lp minimizing z;
+Solve rba using lp minimizing inactiveFluxSum;
 
 file ff /min_flux_violation.modelStat.txt/;
 put ff;
