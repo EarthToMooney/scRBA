@@ -196,3 +196,12 @@ loop(gsm_j,
 );
 putclose ff6;
 
+file ff7 /%system.FN%.prosynSlack.txt/;
+ff7.nr = 2; ff7.pc=6; put ff7;
+put 'index','prosynSlack(% higher/lower than measured value)'/; 
+loop(pro,
+    if ( prosynSlackUB.l(pro) > 1e-12 or prosynSlackLB.l(pro) > 1e-12,
+        put pro.tl:0, (100*prosynSlackUB.l(pro)-100*prosynSlackLB.l(pro)):0:15/;
+    );
+);
+putclose ff7;
