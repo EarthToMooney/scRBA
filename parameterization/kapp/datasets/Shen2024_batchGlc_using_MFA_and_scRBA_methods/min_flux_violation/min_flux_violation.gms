@@ -16,7 +16,7 @@ options
 	limcol = 1000000 /*number of variables listed, 0 is suppresed*/
 	iterlim = 1000000 /*iteration limit of solver, for LP it is number of simplex pivots*/
 	decimals = 8 /*decimal places for display statement*/
-	reslim = 1000000 /*wall-clock time limit for solver in seconds*/
+	reslim = 1000 /*wall-clock time limit for solver in seconds*/
 	sysout = on /*solver status file report option*/
 	solprint = on /*solution printing option*/
         
