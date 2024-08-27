@@ -4,10 +4,10 @@
 * Note: If infeasible, relax constraints and parameters by up to 10%
 
 * Growth rate
-*$setGlobal mu 0.391 - 0.024
 $setGlobal mu 0.367
+$setGlobal vglc 28.24 
 v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
-$setGlobal prosynSlackAllow 1e9
+$setGlobal prosynSlackAllow 1e6
 prosynSlackLB.up(pro) = 0.99;
 prosynSlackUB.up(pro) = %prosynSlackAllow%;
 
@@ -31,7 +31,7 @@ v.up('BIOSYN-PROTTOBIO') = %mu% * 0.58069 * %nscale%;
 v.up('BIOSYN-RNATOBIO') = %mu% * 0.08574 * %nscale%;
 
 * Substrate and oxygenation
-v.up('RXN-EX_glc__D_e_REV-SPONT') = (24.62 + 3.62) * %nscale%;
+v.up('RXN-EX_glc__D_e_REV-SPONT') = %vglc% * %nscale%;
 *v.lo('RXN-EX_glc__D_e_REV-SPONT') = 24.62 * 0.9 * %nscale%;
 v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0 * %nscale%;
 
@@ -58,9 +58,9 @@ v.up('RXN-FUM_m_REV-YPL262W_m') = 1e3 * %nscale%;
 * Disable these pathways that draw massive flux away from the TCA cycle in pFBA.
 * This pathway carrying large flux seems unrealistic
 * Disable formate dehydrogenase (still allow equivalent of 1% glucose uptake by value in case formate balance is required for growth)
-v.up('RXN-FDH_c_FWD-YOR388C') = 0.01 * 13.2 * %nscale%;
+v.up('RXN-FDH_c_FWD-YOR388C') = 0.01 * %vglc% * %nscale%;
 * Disable GABA shunt (still allow equivalent of 1% glucose uptake by value in case succinate balance is required for growth)
-v.up('RXN-ABTA_c_FWD-YGR019W') = 0.01 * 13.2 * %nscale%;
+v.up('RXN-ABTA_c_FWD-YGR019W') = 0.01 * %vglc% * %nscale%;
 * Totally unrelated reactions that form transhydrogenase cycle
 v.fx('RXN-4ABTORy_c_FWD-YMR110C') = 0 * %nscale%;
 v.fx('RXN-4ABTORy_c_REV-YMR110C') = 0 * %nscale%;
@@ -69,12 +69,12 @@ v.fx('RXN-4ABTORx_c_FWD-YMR110C') = 0 * %nscale%;
 * shuttle that enables proton gradient generation
 v.fx('RXN-FADH2t_c_m_FWD-YIL134W') = 0 * %nscale%;
 * Disable ICDHy_c_REV
-v.fx('RXN-ICDHy_c_REV-YLR174W') = 0 * %nscale%;
+* v.fx('RXN-ICDHy_c_REV-YLR174W') = 0 * %nscale%;
 * Disable glyoxylate shunt (still allow equivalent of 1% glucose uptake by value in case succinate balance is required for growth)
-v.up('RXN-ICL_1_c_FWD-YER065C') = 0.01 * 13.2 * %nscale%;
+v.up('RXN-ICL_1_c_FWD-YER065C') = 0.01 * %vglc% * %nscale%;
 * GDH2 is nitrogen-repressed (SGD database)
 v.fx('RXN-GLUDxi_c_FWD-YDL215C') = 0 * %nscale%;
 * Turn off MTHFD2i_c_FWD
-v.fx('RXN-MTHFD2i_c_FWD-YKR080W') = 0 * %nscale%;
+* v.fx('RXN-MTHFD2i_c_FWD-YKR080W') = 0 * %nscale%;
 * Turn off formate overflow
-v.fx('RXN-EX_for_e_FWD-SPONT') = 0 * %nscale%;
+* v.fx('RXN-EX_for_e_FWD-SPONT') = 0 * %nscale%;
