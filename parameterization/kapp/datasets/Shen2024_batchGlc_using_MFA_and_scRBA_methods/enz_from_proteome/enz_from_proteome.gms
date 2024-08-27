@@ -1,12 +1,12 @@
 ******** Approximate enzyme concentration from proteome *********
-*       Author: Hoang Dinh
+*       Authors: (v1) Hoang Dinh, (v2) Eric Mooney
 *****************************************************************
 
 $INLINECOM /*  */
 $include "./enz_from_proteome_GAMS_settings.txt"
 
 options
-	LP = soplex /*Solver selection*/
+	LP = cplex /*Solver selection*/
 	limrow = 0 /*number of equations listed, 0 is suppresed*/
 	limcol = 0 /*number of variables listed, 0 is suppresed*/
 	iterlim = 1000000 /*iteration limit of solver, for LP it is number of simplex pivots*/
@@ -45,20 +45,20 @@ v.up(j)$enzout(j) = 1e4;
 v.up(j)$prodata(j) = vprotexpmt(j)*1e6;
 v.up(j)$pronodata(j) = 0;
 
+* protein abundance limits
+$include "../protein_abundance_constraints.txt"
+
 *** EQUATION DEFINITIONS ***
 Equations
 Obj, Stoic
 ;
 
 Obj..			z =e= v('%enzobj%');
-*Obj..			z =e= v('ENZSYN-ATPSCPLX');
-*Obj..			z =e= v('ENZSYN-SNZ3SNO1');
-*Obj..			z =e= v('ENZSYN-YFR053C');
 Stoic(i)..		sum(j, S(i,j)*v(j)) =e= 0;
 
 *** BUILD OPTIMIZATION MODEL ***
 Model optmodel
-/Obj, Stoic/;
+/all/;
 optmodel.optfile = 1;
 
 *** SOLVE ***

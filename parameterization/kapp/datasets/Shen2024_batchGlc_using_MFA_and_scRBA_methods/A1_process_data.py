@@ -318,13 +318,13 @@ for i in df_data.index:
     else: 
         if i.split('_')[0] in ['m','mm']:
             protein_categories[i].add('can be in mitochondria')
+        # comment out lines below to equally distribute protein abundance among all matches
+        conc = df_data.loc[i, 'conc (g/gDW)']
+        vtrans = df_data.loc[i, 'vtrans (mmol/gDW/h)']
         if i in df_prot['gene_src'].values:
             matches = list(df_prot.loc[df_prot['gene_src'] == i].iterrows())
             #conc = df_data.loc[i, 'conc (g/gDW)'] / len(matches)
             #vtrans = df_data.loc[i, 'vtrans (mmol/gDW/h)'] / len(matches)
-            # comment out lines below to equally distribute protein abundance among all matches
-            conc = df_data.loc[i, 'conc (g/gDW)']
-            vtrans = df_data.loc[i, 'vtrans (mmol/gDW/h)']
             # make list for all names of protein copies
             allcopies = []
             for index, row in df_prot.loc[df_prot['gene_src'] == i].iterrows():
@@ -341,9 +341,6 @@ for i in df_data.index:
                     new_row['vtrans (mmol/gDW/h)'] = vtrans
                     df_data_copy.loc[len(df_data_copy)] = new_row
             iter += 1
-            sumlimits_pro_set.append("'" + i + "'")
-            sumlimits_proin.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROIN-" + copy + "')" for copy in allcopies]) + " =l= " + str(vtrans) + "*1e6;")
-            sumlimits.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROSYN-" + copy + "')" for copy in allcopies]) + " =e= " + str(vtrans) + " * %nscale% * (1 - prosynSlackLB('" + i + "') + prosynSlackUB('" + i + "'));")
             # new_row = df_data.loc[i]
             # new_row['id'] = df_prot.loc[df_prot['gene_src'] == i, 'id'].values[0]
             # df_data_copy = df_data_copy.concat(new_row, ignore_index=True)
@@ -352,6 +349,12 @@ for i in df_data.index:
             #         new_row = df_data_copy.loc[i]
             #         new_row['id'] = row['id']
             #         df_data_copy = df_data_copy.append(new_row, ignore_index=True)
+        else:
+            iter += 1
+            allcopies = [i]
+        sumlimits_pro_set.append("'" + i + "'")
+        sumlimits_proin.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROIN-" + copy + "')" for copy in allcopies]) + " =l= " + str(vtrans) + "*1e6;")
+        sumlimits.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROSYN-" + copy + "')" for copy in allcopies]) + " =e= " + str(vtrans) + " * %nscale% * (1 - prosynSlackLB('" + i + "') + prosynSlackUB('" + i + "'));")
     if recalculate_mito_proteome_allocation and 'can be in mitochondria' in protein_categories[i]:
         max_allowed_mito_proteome_allo_fraction += df_data.loc[i,'c_avg']
 # remove all duplicate rows
