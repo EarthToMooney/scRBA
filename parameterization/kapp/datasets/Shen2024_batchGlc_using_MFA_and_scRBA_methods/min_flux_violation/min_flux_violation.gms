@@ -34,6 +34,8 @@ nuc_translation(j)
 $include "%nuc_trans_path%"
 mito_translation(j)
 $include "%mito_trans_path%"
+unknown_ribo_translation(j)
+$include "%unknown_ribo_trans_path%"
 uptake(j) /*list of uptake so that all of them are properly turned off*/
 $include "%uptake_path%"
 media(j) /*list of allowable uptake based on simulated media conditions*/
@@ -90,7 +92,7 @@ $include "%phenotype_path%"
 *** EQUATION DEFINITIONS ***
 *Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, ProData, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
 Equations
-Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
+Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
 ;
 
 Obj..				z =e= sum(j$rxns_inactive(j), v(j));
@@ -99,6 +101,7 @@ fluxSlackBounds..			fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_
 Stoic(i)..			sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityMito.. 		v('RIBOSYN-ribomito') * %kribomito% =g= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
 RiboCapacityNuc.. 		v('RIBOSYN-ribonuc') * %kribonuc% =g= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
+UnknownRiboCapacity..	v('RIBOSYN-ribonuc') * %kribonuc% + v('RIBOSYN-ribomito') * %kribomito% =g= %mu% * (sum(j$nuc_translation(j), NAA(j) * v(j)) + sum(j$mito_translation(j), NAA(j) * v(j)) + sum(j$unknown_ribo_translation(j), NAA(j) * v(j)));
 *ProData(j)$prodata_set(j)..	v(j) =e= pro_val(j) * (1 - venzSlack);
 Nonmodel..			v('BIOSYN-PROTMODELED') =l= (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
 * GSM upper and lower bounds for fluxes (if data available); slacks included in case necessary

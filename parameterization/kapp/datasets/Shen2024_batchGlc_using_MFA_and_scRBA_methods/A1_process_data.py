@@ -40,7 +40,7 @@ if os.path.exists(nonmodel_protein_data_path):
         nonmodel_proteins = json.load(f)
 else:
     nonmodel_proteins = []
-recalculate_nonmodeled_proteome_allocation = True
+recalculate_nonmodeled_proteome_allocation = False
 # Max mass fraction of modeled proteome that's inside the mitochondria. Set to 0 by default and automatically adjusted if recalculate_mito_proteome_allocation = True.
 max_allowed_mito_proteome_allo_fraction = 0
 recalculate_mito_proteome_allocation = True
@@ -209,7 +209,8 @@ if recalculate_nonmodeled_proteome_allocation:
     dummy_protein['length'] = np.median([len(p['sequence']) for p in nonmodel_proteins])
     # divide all amino acid abundances by total_dummy_abundance_per_mw and multiply by length
     for aa in dummy_protein['AA abundances']:
-        dummy_protein['AA abundances'][aa] /= total_dummy_abundance_per_mw
+        if total_dummy_abundance_per_mw != 0:
+            dummy_protein['AA abundances'][aa] /= total_dummy_abundance_per_mw
         dummy_protein['AA abundances'][aa] *= dummy_protein['length']
 
     dummy_protein['MW (g/mmol)'] = sum([dummy_protein['AA abundances'][aa] * aa_dict[aa] for aa in aa_dict]) / 1000

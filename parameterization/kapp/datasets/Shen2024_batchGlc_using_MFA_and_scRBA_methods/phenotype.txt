@@ -16,7 +16,9 @@ $setGlobal kribonuc 10.5*3600 * (13.2 / 10.5)
 $setGlobal kribomito 10.5*3600 * (13.2 / 10.5)
 
 * Enforce part of proteome allocate to non-modeled protein
-$setGlobal nonmodeled_proteome_allocation 0.3973029017641598
+* $setGlobal nonmodeled_proteome_allocation 0.3973029017641598
+* turn dummy protein off; now replaced by the proteins it represents
+$setGlobal nonmodeled_proteome_allocation 0
 $setGlobal max_allowed_mito_proteome_allo_fraction 0.068275095583055
 
 * Carbohydrate, RNA, and protein fraction constraints
@@ -43,7 +45,6 @@ v.lo('RXN-EX_ac_e_FWD-SPONT') = 0.00;
 v.lo('RXN-EX_succ_e_FWD-SPONT') = 0;
 ** glycerol
 v.lo('RXN-EX_glyc_e_FWD-SPONT') = 2.14;
-
 
 * Open FUM_m flux
 v.up('RXN-FUM_m_FWD-YPL262W_m') = 1e3 * %nscale%;
