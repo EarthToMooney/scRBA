@@ -98,10 +98,10 @@ $include "%phenotype_path%"
 *** EQUATION DEFINITIONS ***
 *Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, ProData, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
 Equations
-Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
+Obj, Obj2, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
 ;
-
-Obj..				inactiveFluxSum =e= sum(j$rxns_inactive(j), v(j));
+Obj..				prosynSlackSum =e= sum(pro, prosynSlackLB(pro) + prosynSlackUB(pro));
+Obj2..				inactiveFluxSum =e= sum(j$rxns_inactive(j), v(j));
 fluxSlackBounds..			fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_j));
 *Obj..				z =e= venzSlack;
 Stoic(i)..			sum(j, S(i,j)*v(j)) =e= 0;
@@ -120,8 +120,12 @@ Model rba
 /all
 /;
 rba.optfile = 1;
+* minimize disagreement with proteomics data, while allowing some where needed (e.g., measurement errors)
+Solve rba using lp minimizing prosynSlackSum;
+prosynSlackUB.up(pro) = prosynSlackUB.l(pro);
+prosynSlackLB.up(pro) = prosynSlackLB.l(pro);
 
-*** SOLVE ***
+* minimize disagreements with flux data
 Solve rba using lp minimizing fluxSlack;
 fluxSlack.up = fluxSlack.l + %epsilon%;
 Solve rba using lp minimizing inactiveFluxSum;
