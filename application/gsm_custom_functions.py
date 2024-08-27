@@ -103,6 +103,7 @@ def plot_2d_data(data, x=None,y=None,xlabel=None,ylabel=None,scale='linear',xsca
     ax.set_aspect('equal', adjustable='datalim')
     if output_path:
         plt.savefig(output_path, transparent=True, bbox_inches='tight')
+        fig.savefig(output_path, transparent=True, bbox_inches='tight')
     if show_figure:
         plt.show()
     return fig, ax
@@ -1111,3 +1112,37 @@ def convert_cobra_to_gams(model, output_path='./',add_slashes=True,fwd_list_file
         f.write('\n'.join(output_list(rxn_list)))
     with open(output_path + sij_filename, 'w') as f:
         f.write('\n'.join(output_list(sij)))
+
+def make_dummy_protein_stoich(length = 100, aa_standards_df = None, prot_df = None, met_dict = {}, gams_output_file = None, rxn_name='PROSYN-PROTDUMMY', dummy_metabolite_name='BIO-protdummy', mw=1):
+    from collections import OrderedDict
+    import pandas as pd
+    if met_dict is not None:
+        for met in met_dict:
+            prot_st[met] = met_dict[met]
+    if aa_standards_df is None:
+        # find PROTEIN_amino_acid_map.txt by going up one directory until you find it in one of the directories below (check recursively)
+        aa_standards_df = pd.read_csv('./build_model/input/PROTEIN_amino_acid_map.txt', sep='\t')
+    prot_st = OrderedDict()
+    for met in ['MET-atp_c', 'MET-h2o_c',
+                'MET-adp_c', 'MET-pi_c', 'MET-h_c', 'MET-gtp_c',
+                'MET-gdp_c']:
+        if met not in prot_st:
+            prot_st[met] = 0
+    for aa in aa_standards_df.index:
+        prot_st[aa_standards_df.tRNA_in[aa]] = -round(prot_df.N_AA[aa], 4)
+        prot_st[aa_standards_df.tRNA_out[aa]] = round(prot_df.N_AA[aa], 4)
+    for met in ['MET-atp_c', 'MET-h2o_c']:
+        prot_st[met] -= 1
+    for met in ['MET-adp_c', 'MET-pi_c', 'MET-h_c']:
+        prot_st[met] += 1
+    for met in ['MET-gtp_c', 'MET-h2o_c']:
+        prot_st[met] -= 2*length
+    for met in ['MET-gdp_c', 'MET-pi_c', 'MET-h_c']:
+        prot_st[met] += 2*length
+    prot_st[dummy_metabolite_name] = mw
+    if gams_output_file:
+        with open(gams_output_file, 'w') as f:
+            # for each line, put the metabolite, the name, then the coefficient
+            for met in prot_st:
+                f.write("'" + met + "'.'" + rxn_name + "' " + str(prot_st[met]) + "\n")
+    return prot_st
