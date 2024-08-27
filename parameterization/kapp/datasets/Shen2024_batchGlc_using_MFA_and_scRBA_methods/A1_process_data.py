@@ -27,7 +27,7 @@ aa_map = pd.read_csv(aa_mapping_path, sep='\t')
 aa_dict = dict(zip(aa_map['aa_abbv'], aa_map['MW']))
 
 # must match the growth rate in other files
-mu = 0.391
+mu = 0.391-0.024
 # protein fraction (disable by uncommenting "ptot = 1" unless composition varies w/ growth rate)
 ptot = 0.5551
 # Mass fraction of proteome that's not explicitly modeled. Set to 0 if recalculate_nonmodeled_proteome_allocation = True.

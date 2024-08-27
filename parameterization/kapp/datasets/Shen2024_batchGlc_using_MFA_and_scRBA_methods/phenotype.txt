@@ -4,7 +4,8 @@
 * Note: If infeasible, relax constraints and parameters by up to 10%
 
 * Growth rate
-$setGlobal mu 0.391
+*$setGlobal mu 0.391 - 0.024
+$setGlobal mu 0.367
 v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
 $setGlobal prosynSlackAllow 1e9
 prosynSlackLB.up(pro) = %prosynSlackAllow%;
@@ -30,23 +31,25 @@ v.up('BIOSYN-PROTTOBIO') = %mu% * 0.58069 * %nscale%;
 v.up('BIOSYN-RNATOBIO') = %mu% * 0.08574 * %nscale%;
 
 * Substrate and oxygenation
-v.up('RXN-EX_glc__D_e_REV-SPONT') = 24.62 * %nscale%;
+v.up('RXN-EX_glc__D_e_REV-SPONT') = (24.62 + 3.62) * %nscale%;
 *v.lo('RXN-EX_glc__D_e_REV-SPONT') = 24.62 * 0.9 * %nscale%;
 v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0 * %nscale%;
 
-v.up('RXN-EX_o2_e_REV-SPONT') = 5.58 * %nscale%;
+v.up('RXN-EX_o2_e_REV-SPONT') = (5.58 + 0.18) * %nscale%;
 v.fx('RXN-EX_o2_e_FWD-SPONT') = 0 * %nscale%;
 
 * Secretions (exp. measured)
-v.lo('RXN-EX_etoh_e_FWD-SPONT') = 44.30 * %nscale%;
+v.lo('RXN-EX_etoh_e_FWD-SPONT') = (44.30 - 4.84) * %nscale%;
 v.fx('RXN-EX_etoh_e_REV-SPONT') = 0 * %nscale%;
 v.fx('RXN-EX_co2_e_REV-SPONT') = 0;
 ** acetate
 v.lo('RXN-EX_ac_e_FWD-SPONT') = 0.00;
+v.up('RXN-EX_ac_e_FWD-SPONT') = 0.01;
 ** succinate
 v.lo('RXN-EX_succ_e_FWD-SPONT') = 0;
+v.up('RXN-EX_succ_e_FWD-SPONT') = 0.01;
 ** glycerol
-v.lo('RXN-EX_glyc_e_FWD-SPONT') = 2.14;
+v.lo('RXN-EX_glyc_e_FWD-SPONT') = (2.14 - 0.34);
 
 * Open FUM_m flux
 v.up('RXN-FUM_m_FWD-YPL262W_m') = 1e3 * %nscale%;
