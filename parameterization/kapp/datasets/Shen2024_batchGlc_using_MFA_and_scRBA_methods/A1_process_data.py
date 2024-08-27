@@ -87,7 +87,7 @@ df_raw = pd.read_excel('../raw_data_files/Shen2024_41589_2024_1571_MOESM3_ESM.xl
 # df_raw = pd.read_excel('../raw_data_files/Rekena_Datasets.xlsx',
 #                          sheet_name='S2 Dataset Final', usecols=[0,1,2,3,4,5,6,17,18,19,20,21,22])
 df_raw.index = df_raw['geneID'].to_list() # name of protein
-cols_data = ['mean'] # where protein abundance data is stored
+cols_data = ['mean_normalized'] # where protein abundance data is stored
 uniprot_col = 'Entry' # set to '' if no column with accession names provided
 data_uses_biomass_mass_fraction = False # True if using units like g protein/gDW, False if using g/g protein
 
