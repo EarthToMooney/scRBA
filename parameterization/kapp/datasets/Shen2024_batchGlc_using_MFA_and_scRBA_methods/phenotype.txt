@@ -6,6 +6,9 @@
 * Growth rate
 $setGlobal mu 0.391
 v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
+$setGlobal prosynSlackAllow 1000
+prosynSlackLB.up(pro) = %prosynSlackAllow%;
+prosynSlackUB.up(pro) = %prosynSlackAllow%;
 
 * NGAM
 v.lo('RXN-ATPM_c_FWD-SPONT') = 1 * %nscale%;
