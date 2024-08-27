@@ -10,8 +10,9 @@ $setGlobal gsm_rxn_pairs_path %model_root_path%GAMS/model/GSM_RBA_rxn_pairs.txt
 $setGlobal rxns_enzsyn_path ../../../../../GAMS/model/RBA_rxns_enzsyn.txt
 $setGlobal rxns_enzload_path ../../../../../GAMS/model/RBA_rxns_enzload.txt
 $setGlobal rxns_enzload_used_path ./min_flux_violation.enzyme_rxns.txt
-$setGlobal nuc_trans_path ../../../../../GAMS/model/RBA_nuc_translation.txt
-$setGlobal mito_trans_path ../../../../../GAMS/model/RBA_mito_translation.txt
+$setGlobal nuc_trans_path %model_root_path%GAMS/model/RBA_nuc_translation.txt
+$setGlobal mito_trans_path %model_root_path%GAMS/model/RBA_mito_translation.txt
+$setGlobal unknown_ribo_trans_path %model_root_path%GAMS/model/RBA_unknown_ribo_translation.txt
 $setGlobal uptake_path ../../../../../GAMS/model/RBA_rxns_EXREV.txt
 $setGlobal media_path ../../../../../GAMS/model/RBA_rxns_EXREV_YNB_RabinowitzVersion.txt
 $setGlobal sij_path ../RBA_sij_for_kapps.txt
