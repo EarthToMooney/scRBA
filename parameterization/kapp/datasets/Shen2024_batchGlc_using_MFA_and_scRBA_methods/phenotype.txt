@@ -8,7 +8,7 @@ $setGlobal mu 0.367
 $setGlobal vglc 28.24 
 v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
 $setGlobal prosynSlackAllow 100 
-prosynSlackLB.up(pro) = 1;
+prosynSlackLB.up(pro) = 0.064;
 prosynSlackUB.up(pro) = %prosynSlackAllow%;
 
 * NGAM
