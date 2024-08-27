@@ -126,31 +126,73 @@ Solve rba using lp minimizing fluxSlack;
 fluxSlack.up = fluxSlack.l + %epsilon%;
 Solve rba using lp minimizing inactiveFluxSum;
 
-file ff /min_flux_violation.modelStat.txt/;
-put ff;
+file ff /%system.FN%.modelStat.txt/;
+ff.nr = 2; put ff;
 put rba.modelStat/;
 putclose ff;
 
-file ff2 /min_flux_violation.flux_gamsscaled.txt/;
-put ff2;
+file ff3 /%system.FN%.flux_gamsscaled.txt/;
+ff3.nr = 2; put ff3;
 loop(j,
-	if ( (v.l(j) gt 1e-12),
-		put j.tl:0, system.tab, 'v', system.tab, v.l(j):0:15/;
-	);
-);
-putclose ff2;
-
-file ff3 /min_flux_violation.flux_essential_inactive_rxns_gamsscaled.txt/;
-put ff3;
-loop(j$rxns_inactive(j),
-	if ( (v.l(j) gt 1e-12),
-		put j.tl:0, system.tab, 'v', system.tab, v.l(j):0:15/;
-	);
+    if ( (v.l(j) gt 1e-12),
+        put j.tl:0, system.tab, 'v', system.tab, v.l(j):0:15/;
+    );
 );
 putclose ff3;
 
-file ff4 /min_flux_violation.venzSlack.txt/;
-put ff4;
-put venzSlack.l:0:11/;
+file ff4 /%system.FN%.flux_essential_inactive_rxns_gamsscaled.txt/;
+ff4.nr = 2; put ff4;
+loop(j$rxns_inactive(j),
+    if ( (v.l(j) gt 1e-12),
+        put j.tl:0, system.tab, 'v', system.tab, v.l(j):0:15/;
+    );
+);
 putclose ff4;
+
+file ff3a /%system.FN%.flux_unscaled.txt/;
+ff3a.nr = 2; put ff3a;
+loop(j,
+    if ( (v.l(j) gt 1e-12),
+        put j.tl:0, system.tab, 'v', system.tab, (v.l(j)/%nscale%):0:15/;
+    );
+);
+putclose ff3a;
+
+file ff4a /%system.FN%.flux_essential_inactive_rxns_unscaled.txt/;
+ff4a.nr = 2; put ff4a;
+loop(j$rxns_inactive(j),
+    if ( (v.l(j) gt 1e-12),
+        put j.tl:0, system.tab, 'v', system.tab, (v.l(j)/%nscale%):0:15/;
+    );
+);
+putclose ff4a;
+
+file ff4b /%system.FN%.nonessential_inactive_rxns.txt/;
+ff4b.nr = 2; put ff4b;
+put '/'/;
+loop(j$(rxns_inactive(j)),
+    if ( (v.l(j) lt 1e-12),
+        put j.tl:0/;
+    );
+);
+put '/'/;
+putclose ff4b;
+
+file ff5 /%system.FN%.venzSlack.txt/;
+ff5.nr = 2; put ff5;
+loop(j$prodata_set(j),
+    if ( (venzSlack.l(j) gt 1e-12),
+        put j.tl:0, system.tab, 'venzSlack', system.tab, venzSlack.l(j):0:15/;
+    );
+);
+putclose ff5;
+
+file ff6 /%system.FN%.fluxSlack.txt/;
+ff6.nr = 2; put ff6;
+loop(n,
+    if ( (fluxSlack.l(n) gt 1e-12),
+        put n.tl:0, system.tab, 'fluxSlack', system.tab, fluxSlack.l(n):0:15/;
+    );
+);
+putclose ff6;
 
