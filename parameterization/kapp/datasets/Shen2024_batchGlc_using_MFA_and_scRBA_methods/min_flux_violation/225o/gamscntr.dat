@@ -1,0 +1,265 @@
+52
+1 31168 0 0 421  0.00000000000000E+0000 5  0.00000000000000E+0000 0 0
+13206 0 0 0 5446 12512 348 346 0 0 0 0
+30104 0 0 0 0 0 0 0
+303902 0
+30104 0 0 0 0 0 0 0 0 30104
+8073 0 0 0 0 0 0
+0 86 0
+0 0 20
+ 1.00000000000000E-0004  0.00000000000000E+0000 0
+0  0.00000000000000E+0000 0  0.00000000000000E+0000
+ 1.00000000000000E+0003 1000000 0
+2011 1
+ 0.00000000000000E+0000 1 0 0  1.00000000000000E+0000 0 1 0 0  1.00000000000000E-0005 0
+1 100
+0 0 0 0 0
+ 0.00000000000000E+0000  0.00000000000000E+0000  0.00000000000000E+0000  0.00000000000000E+0000  0.00000000000000E+0000
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/225o/gamsmatr.dat
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/225o/gamsinst.dat
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/cplex.opt
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/225o/gamsstat.dat
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/225o/gamssolu.dat
+
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/225o/gamsdict.dat
+3
+16:55:05
+08/28/24
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/
+/storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/225o/
+32767 2147483647
+0 0 253 45531 45308 92606
+Single User License                            G231219|0002AO-LNX0
+The Pennsylvania State University, Institute for CyberScience    0
+1194512501M5CODIBACLSBSNPTGEKNGQLI                               0
+1 1 1 0
+225o/gmsprmun.dat
+15 65 16
+LP          16 16
+MIP         16 0
+RMIP        16 0
+NLP         8 0
+MCP         54 0
+MPEC        46 0
+RMPEC       46 0
+CNS         8 0
+DNLP        8 0
+RMINLP      8 0
+MINLP       24 0
+QCP         8 0
+MIQCP       58 0
+RMIQCP      8 0
+EMP         33 0
+ALPHAECP    11 5 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0
+gmsecpus.run
+gmsecpux.out
+ANTIGONE    2011 5 1 0 0 0 1 0 0 0 1 1 1 1 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+BARON       1001 5 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 0
+gmsba_us.run
+gmsba_ux.out
+CBC         2011 5 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+gmsgenus.run
+gmsgenux.out
+COINCBC     2011 5 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+gmsgenus.run optcbc.def
+gmsgenux.out
+COINIPOPT   11 5 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 0
+gmsgenus.run optipopt.def
+gmsgenux.out
+COINSCIP    2001 5 1 0 1 0 1 0 0 0 1 1 1 1 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+CONOPT      1 0 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 0
+gmsgenus.run
+gmsgenux.out
+CONOPT3     1 0 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 0
+gmsgenus.run optconopt.def
+gmsgenux.out
+CONOPT4     1 0 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 0
+gmsgenus.run
+gmsgenux.out
+CONOPTD     1 0 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 0
+gmsgenus.run optconopt.def
+gmsgenux.out
+CONVERT     103011 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+gmsgenus.run optconvert.def
+gmsgenux.out
+CONVERTD    103011 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+gmsgenus.run
+gmsgenux.out
+CONVERTOLD  103011 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0
+gmscv_us.run
+gmscv_ux.out
+COPT        1011 5 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+CPLEX       2011 5 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+CPLEXCLASSIC 1011 5 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 0
+gmsgenus.run optcplex.def
+gmsgenux.out
+CPLEXD      2011 5 1 1 1 1 0 0 0 0 0 0 0 0 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+CPOPTIMIZER 11 5 1 0 1 0 0 0 0 0 0 0 0 1 0 1 0 0
+gmsgenus.run
+gmsgenux.out
+DE          102011 5 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+gmsgenus.run
+gmsgenux.out
+DECIS       2011 5 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+gmsgenus.run
+gmsgenux.out
+DECISC      2011 5 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gmsdecus.run optdecis.def
+DECISM      2011 5 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gmsdemus.run optdecis.def
+DICOPT      1 5 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0
+gmsdi_us.run
+gmsdi_ux.out
+EXAMINER    103011 5 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 0
+gmsex_us.run
+gmsex_ux.out
+EXAMINER2   103011 5 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 0
+gmsgenus.run optexaminer.def
+gmsgenux.out
+GAMSCHK     103011 5 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 0
+gmsck_us.run
+gmsck_ux.out
+GLOMIQO     2011 5 1 0 0 0 1 0 0 0 1 1 1 1 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+GUROBI      11 5 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+HIGHS       11 5 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+gmsgenus.run
+gmsgenux.out
+IPOPT       11 5 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 0
+gmsgenus.run
+gmsgenux.out
+IPOPTH      11 5 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 0
+gmsgenus.run optipopt.def
+gmsgenux.out
+JAMS        101011 5 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+gmsja_us.run
+gmsja_ux.out
+KESTREL     103010 5 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+gmske_us.run
+KNITRO      103011 0 1 1 0 1 1 1 1 1 1 1 1 1 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+LINDO       1 5 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 1
+gmsgenus.run
+gmsgenux.out
+LINDOGLOBAL 1 5 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+LOGMIP      101011 5 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+gmsja_us.run optjams.def
+gmsja_ux.out
+MILES       103001 5 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+gmsmceus.run
+gmsmceux.out
+MILESE      103001 5 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+gmsmceus.run optmiles.def
+gmsmceux.out
+MINOS       1 0 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 0
+gmsgenus.run
+gmsgenux.out
+MINOS5      1 0 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 0
+gmsgenus.run optminos.def
+gmsgenux.out
+MINOS55     1 0 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 0
+gmsgenus.run optminos.def
+gmsgenux.out
+MOSEK       11 5 1 1 1 1 1 0 0 0 0 1 1 1 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+MPSGE       100001 5 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+gmsgewus.run
+gmsgewux.out
+NLPEC       103001 0 1 0 0 0 0 1 1 1 0 0 0 0 0 0 0 0
+gmscvnus.run
+gmscvnux.out
+OCTERACT    1001 0 1 0 0 0 1 0 0 0 0 1 1 1 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+ODHCPLEX    2011 5 1 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0
+gmsgenus.run
+gmsgenux.out
+OSICPLEX    11 5 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+gmsgenus.run
+gmsgenux.out
+OSIGUROBI   11 5 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+gmsgenus.run
+gmsgenux.out
+OSIMOSEK    11 5 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+gmsgenus.run
+gmsgenux.out
+OSISOPLEX   11 5 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+gmsgenus.run
+gmsgenux.out
+OSIXPRESS   11 5 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+gmsgenus.run
+gmsgenux.out
+PATH        103001 5 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0
+gmsgenus.run
+gmsgenux.out
+PATHC       103001 5 1 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0
+gmsgenus.run optpath.def
+gmsgenux.out
+PATHNLP     11 5 1 1 0 1 1 0 0 0 0 1 1 0 1 0 1 0
+gmsptnus.run
+gmsptnux.out
+QUADMINOS   1 0 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+gmsgenus.run optminos.def
+gmsgenux.out
+SBB         11 5 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0
+gmssb_us.run
+gmssb_ux.out
+SCENSOLVER  1001 5 1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+SCIP        2001 5 1 0 1 0 1 0 0 0 1 1 1 1 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+SELKIE      102011 5 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+gmsgenus.run
+gmsgenux.out
+SHOT        1001 5 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0
+gmsgenus.run
+gmsgenux.out
+SNOPT       1 0 1 1 0 1 1 0 0 0 1 1 1 0 1 0 1 0
+gmsgenus.run
+gmsgenux.out
+SOPLEX      11 5 1 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+gmsgenus.run
+gmsgenux.out
+XPRESS      11 5 1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 0
+gmsgenus.run
+gmsgenux.out
+13417828C0C0C0C0C0C0C0C0C0C0C010C0                               0
+DC15032-S17  g 1                               A Perpetual       0
+License Admin: Rob Groner, rug262@psu.edu                        0
+1 /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+1 /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmscmpun.txt
+/dev/null.dat
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0  1.00000000000000E+0000 0 0
+0 0 0
+0 0 0 1 0
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/rba.so
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/225o/sbbinfo.dat
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/225o/gamscntr.dat
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/
+dat
+ 1.00000000000000E+0299
+
+
+/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/min_flux_violation.gms
+ 3.03902000000000E+0005  0.00000000000000E+0000
