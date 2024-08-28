@@ -6,6 +6,7 @@
 * Growth rate
 $setGlobal mu 0.367
 $setGlobal vglc 28.24 
+*v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
 v.fx('BIOSYN-BIODILAERO-NOGAM') = %mu% * %nscale%;
 $setGlobal prosynSlackAllow 1000 
 prosynSlackLB.up(pro) = 0;
@@ -26,9 +27,9 @@ $setGlobal nonmodeled_proteome_allocation 0
 
 * Carbohydrate, RNA, and protein fraction constraints
 * No info found for CEN.PK full biomass comp. aside from protein, so I used FY4 batch info since it was similar in protein content
-v.up('BIOSYN-CARBTOBIO') = %mu% * 0.31007 * %nscale%;
-v.up('BIOSYN-PROTTOBIO') = %mu% * 0.58069 * %nscale%;
-v.up('BIOSYN-RNATOBIO') = %mu% * 0.08574 * %nscale%;
+v.up('BIOSYN-CARBTOBIO') = %mu% * (0.2964 + 0.0001) * %nscale%;
+*v.up('BIOSYN-PROTTOBIO') = %mu% * 0.58069 * %nscale%;
+v.up('BIOSYN-RNATOBIO') = %mu% * (0.0819 + 0.0001) * %nscale%;
 
 * Substrate and oxygenation
 v.up('RXN-EX_glc__D_e_REV-SPONT') = %vglc% * %nscale%;
