@@ -88,7 +88,7 @@ df_raw = pd.read_excel('../raw_data_files/Shen2024_41589_2024_1571_MOESM3_ESM.xl
 #                          sheet_name='S2 Dataset Final', usecols=[0,1,2,3,4,5,6,17,18,19,20,21,22])
 df_raw.index = df_raw['geneID'].to_list() # name of protein
 #cols_data = ['replicate 1','replicate 2','replicate 3','replicate 4'] # where protein abundance data is stored
-cols_data = ['replicate 1'] # where protein abundance data is stored
+cols_data = ['replicate 1 normalized to robustly detected frac (93.6%)'] # where protein abundance data is stored
 uniprot_col = 'Entry' # set to '' if no column with accession names provided
 data_uses_biomass_mass_fraction = False # True if using units like g protein/gDW, False if using g/g protein
 
