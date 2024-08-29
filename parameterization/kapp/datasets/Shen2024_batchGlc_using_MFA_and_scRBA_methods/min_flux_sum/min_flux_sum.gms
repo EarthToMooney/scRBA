@@ -43,8 +43,6 @@ uptake(j) /*list of uptake so that all of them are properly turned off*/
 $include "%uptake_path%"
 media(j) /*list of allowable uptake based on simulated media conditions*/
 $include "%media_path%"
-rxns_biomass(j)
-$include "%biomass_path%"
 rxns_inactive(j)
 $include "%rxns_inactive_path%"
 prodata_set(j)
@@ -71,7 +69,7 @@ $include "%v_exp_ub_path%"
 ;
 
 Variables
-prosynSlackSum, inactiveFluxSum, fluxSum, z, v(j), venzSlack, fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j)
+prosynSlackSum, inactiveFluxSum, fluxSum, z, v(j), venzSlack, fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j), prosynSlackLB(pro), prosynSlackUB(pro)
 ;
 venzSlack.lo = 0; venzSlack.up = %venzSlackAllow%;
 prosynSlackLB.lo(pro) = 0; prosynSlackLB.up(pro) = %prosynSlackAllow%;
@@ -100,10 +98,10 @@ $include "%phenotype_path%"
 
 *** EQUATION DEFINITIONS ***
 Equations
-Obj, Obj2, Obj3, Stoic, RiboCapacityNuc, RiboCapacityMito, ProData, Inactive, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
+PSS, Obj2, Obj3, Stoic, RiboCapacityNuc, RiboCapacityMito, Inactive, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
 ;
 
-Obj..				prosynSlackSum =e= sum(pro, prosynSlackLB(pro) + prosynSlackUB(pro));
+PSS..				prosynSlackSum =e= sum(pro, prosynSlackLB(pro) + prosynSlackUB(pro));
 Obj2..				inactiveFluxSum =e= sum(j$rxns_inactive(j), v(j));
 Obj3..				z =e= sum(j$rxns_metab(j), v(j));
 fluxSlackBounds..			fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_j));
@@ -145,3 +143,4 @@ loop(j,
 	);
 );
 putclose ff2;
+

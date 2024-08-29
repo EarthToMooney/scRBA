@@ -13,7 +13,7 @@ df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xls
 set4_path = '../kapp_ambiguousLoad_case_resolve_common.txt'
 
 # %%
-biom_id = 'BIOSYN-BIODILAERO'
+biom_id = 'BIOSYN-BIODILAERO-NOGAM'
 
 res_metab = RBA_result(biom_id=biom_id)
 res_metab.load_raw_flux('./min_flux_sum/min_flux_sum.flux.txt')
