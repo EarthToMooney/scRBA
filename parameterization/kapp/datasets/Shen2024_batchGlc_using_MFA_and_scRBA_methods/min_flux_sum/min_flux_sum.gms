@@ -5,6 +5,8 @@
 $INLINECOM /*  */
 $include "./min_flux_sum_GAMS_settings.txt"
 $setGlobal nscale 1000
+$setGlobal venzSlackAllow 0
+$setGlobal prosynSlackAllow 0
 * small value needed to ensure sequential problems aren't infeasible due to rounding errors
 $setGlobal epsilon 1e-7
 
@@ -14,7 +16,7 @@ options
 	limcol = 1000000 /*number of variables listed, 0 is suppresed*/
 	iterlim = 1000000 /*iteration limit of solver, for LP it is number of simplex pivots*/
 	decimals = 8 /*decimal places for display statement*/
-	reslim = 1000000 /*wall-clock time limit for solver in seconds*/
+	reslim = 10000 /*wall-clock time limit for solver in seconds*/
 	sysout = on /*solver status file report option*/
 	solprint = on /*solution printing option*/
         
@@ -23,6 +25,8 @@ i
 $include "%species_path%"
 j
 $include "%rxns_path%"
+pro
+$include "%unique_protein_set_path%"
 gsm_j /* list of GSM model rxns */
 $include "%gsm_rxns_path%"
 rxns_enzsyn(j)
@@ -33,10 +37,14 @@ nuc_translation(j)
 $include "%nuc_trans_path%"
 mito_translation(j)
 $include "%mito_trans_path%"
+unknown_ribo_translation(j)
+$include "%unknown_ribo_trans_path%"
 uptake(j) /*list of uptake so that all of them are properly turned off*/
 $include "%uptake_path%"
 media(j) /*list of allowable uptake based on simulated media conditions*/
 $include "%media_path%"
+rxns_biomass(j)
+$include "%biomass_path%"
 rxns_inactive(j)
 $include "%rxns_inactive_path%"
 prodata_set(j)
@@ -63,9 +71,11 @@ $include "%v_exp_ub_path%"
 ;
 
 Variables
-z, v(j), venzSlack, fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j)
+prosynSlackSum, inactiveFluxSum, fluxSum, z, v(j), venzSlack, fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j)
 ;
 venzSlack.lo = 0; venzSlack.up = %venzSlackAllow%;
+prosynSlackLB.lo(pro) = 0; prosynSlackLB.up(pro) = %prosynSlackAllow%;
+prosynSlackUB.lo(pro) = 0; prosynSlackUB.up(pro) = %prosynSlackAllow%;
 * 2e3 to allow changes in either direction
 s_v_exp_lb.lo(gsm_j) = 0; s_v_exp_lb.up(gsm_j) = 2e3 * %nscale%;
 s_v_exp_ub.lo(gsm_j) = 0; s_v_exp_ub.up(gsm_j) = 2e3 * %nscale%;
@@ -90,15 +100,18 @@ $include "%phenotype_path%"
 
 *** EQUATION DEFINITIONS ***
 Equations
-Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, ProData, Inactive, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
+Obj, Obj2, Obj3, Stoic, RiboCapacityNuc, RiboCapacityMito, ProData, Inactive, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
 ;
 
-Obj..				z =e= sum(j$rxns_metab(j), v(j));
+Obj..				prosynSlackSum =e= sum(pro, prosynSlackLB(pro) + prosynSlackUB(pro));
+Obj2..				inactiveFluxSum =e= sum(j$rxns_inactive(j), v(j));
+Obj3..				z =e= sum(j$rxns_metab(j), v(j));
 fluxSlackBounds..			fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_j));
 Stoic(i)..			sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityMito.. 		v('RIBOSYN-ribomito') * %kribomito% =e= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
 RiboCapacityNuc.. 		v('RIBOSYN-ribonuc') * %kribonuc% =e= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
-ProData(j)$prodata_set(j)..	v(j) =e= pro_val(j) * (1 - venzSlack);
+*ProData(j)$prodata_set(j)..	v(j) =e= pro_val(j) * (1 - venzSlack);
+$include "../prosyn_abundance_constraints.txt"
 Inactive(j)$rxns_inactive(j)..	v(j) =e= 0;
 Nonmodel..			v('BIOSYN-PROTMODELED') =l= (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
 * GSM upper and lower bounds for fluxes (if data available); slacks included in case necessary
@@ -110,6 +123,9 @@ Model rba
 /all
 /;
 rba.optfile = 1;
+* minimize disagreement with proteomics data, while allowing some where needed (e.g., measurement errors)
+Solve rba using lp minimizing prosynSlackSum;
+prosynSlackSum.up = prosynSlackSum.l + %epsilon%;
 
 *** SOLVE ***
 Solve rba using lp minimizing fluxSlack;
