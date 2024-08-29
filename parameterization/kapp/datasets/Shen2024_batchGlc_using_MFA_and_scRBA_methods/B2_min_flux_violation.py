@@ -1,22 +1,21 @@
+# update model-specific settings in kapp_options.py
+from kapp_options import *
+
 path_gams = '../../../../GAMS/parameterization/min_flux_violation/'
 path_rxns_list = '../../../../GAMS/model/RBA_rxns.txt'
 path_out = './min_flux_violation/'
-path_data = './Shen2024_batch_glc.xlsx'
 path_enz_level = './enz_from_proteome/enz_flux_calculation.txt'
 
 run_setting_file_from = './GAMS_setting_files/min_flux_violation_GAMS_settings.txt'
 run_setting_file_to = './min_flux_violation/min_flux_violation_GAMS_settings.txt'
-pycore_path = '../../../../pycore/'
 
 #### Create directory and copy run settings
-import os,shutil
 if os.path.isdir(path_out) == False:
     os.makedirs(path_out)
 shutil.copy(run_setting_file_from, run_setting_file_to);
 
 #### Load proteomics data and write protein translation fluxes
 # Load data
-import pandas as pd
 df_data = pd.read_excel(path_data)
 df_data.index = df_data['id'].to_list()
 df_data = df_data[df_data['conc (g/gDW)'] > 0]
@@ -67,7 +66,6 @@ with open(fname, 'w') as f:
     f.write('\n'.join(rxns_inactive))
 
 #### Simulation
-import shutil
 # shutil.copy(os.path.join(path_gams, 'min_flux_violation.gms'),
 #             os.path.join(path_out, 'min_flux_violation.gms'));
 # shutil.copy(os.path.join(path_gams, 'soplex.opt'),

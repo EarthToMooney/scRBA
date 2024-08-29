@@ -1,19 +1,11 @@
-# %%
-import pandas as pd
-import sys
-sys.path.append('../../../../pycore/')
-from simulate import RBA_result
-from utils import extract_details_from_rxnid
+# update model-specific settings in kapp_options.py
+from kapp_options import *
 
-# %%
 # Load enzyme info
 df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xlsx')
 
 # Load path of set4 (enzyme-reaction many-to-many mapping)
 set4_path = '../kapp_ambiguousLoad_case_resolve_common.txt'
-
-# %%
-biom_id = 'BIOSYN-BIODILAERO-NOGAM'
 
 res_metab = RBA_result(biom_id=biom_id)
 res_metab.load_raw_flux('./min_flux_sum/min_flux_sum.flux.txt')
