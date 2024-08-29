@@ -12,8 +12,8 @@ $setGlobal prosynSlackAllow 750
 prosynSlackLB.up(pro) = 0;
 prosynSlackUB.up(pro) = %prosynSlackAllow%;
 
-* NGAM
-v.lo('RXN-ATPM_c_FWD-SPONT') = 1 * %nscale%;
+* NGAM + GAM
+v.lo('RXN-ATPM_c_FWD-SPONT') = (1 + 2.088) * %nscale%;
 
 * Ribosome efficiency
 $setGlobal kribonuc 10.5*3600 * (13.2 / 10.5)
