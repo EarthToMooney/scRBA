@@ -8,10 +8,16 @@ $setGlobal mu 0.367
 $setGlobal vglc 28.24 
 *v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
 v.fx('BIOSYN-BIODILAERO-NOGAM') = %mu% * %nscale%;
-
-$setGlobal prosynSlackAllow 750 
+sets 
+pro_ribonuc(pro)
+$include %model_root_path%GAMS/pro_ribo_subunits_c.txt
+pro_ribomito(pro)
+$include %model_root_path%GAMS/pro_ribo_subunits_m.txt
+;
+$setGlobal prosynSlackAllow 750
 prosynSlackLB.up(pro) = 0;
-prosynSlackUB.up(pro) = %prosynSlackAllow%;
+prosynSlackUB.up(pro$pro_ribonuc(pro)) = %prosynSlackAllow%;
+prosynSlackUB.up(pro$pro_ribomito(pro)) = %prosynSlackAllow%;
 
 * NGAM + GAM
 v.lo('RXN-ATPM_c_FWD-SPONT') = (1 + 2.088) * %nscale%;
