@@ -355,3 +355,4 @@ if len(rxns_essential_inactive) > 0:
     #     f.write('\n'.join(enzsyn_fluxes))
     with open('./kapp_test.txt', 'w') as f:
         f.write('\n'.join(kapp_test_text))
+
