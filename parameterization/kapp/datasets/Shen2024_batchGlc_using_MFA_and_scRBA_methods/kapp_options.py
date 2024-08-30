@@ -58,3 +58,4 @@ hide_output = True
 output_redirect_str = ' o=/dev/null' if hide_output else ''
 
 spont_rxn_suffixes = ['SPONT', 'UNKNOWN']
+rxns_to_ignore_for_kapps = ['YOR348C', 'YMR313C'] # ignored when printing rxns during C1
