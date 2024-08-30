@@ -35,7 +35,6 @@ with open(fname, 'w') as f:
     f.write('\n'.join(rxns_inactive))
 
 #### Simulation
-import shutil
 # shutil.copy(os.path.join(path_gams, 'min_flux_sum.gms'),
 #             os.path.join(path_out, 'min_flux_sum.gms'));
 # shutil.copy(os.path.join(path_gams, 'soplex.opt'),

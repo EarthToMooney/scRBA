@@ -4,14 +4,13 @@ import numpy as np
 import requests
 import json
 import os,shutil
-from gsm_custom_functions import *
 
 pycore_path = '../../../../pycore/'
 import sys
 sys.path.append(pycore_path)
-from utils import metabolites_dict_from_reaction_equation_RBA
-from utils import extract_details_from_rxnid
+from utils import metabolites_dict_from_reaction_equation_RBA, extract_details_from_rxnid
 from simulate import RBA_result
+from gsm_custom_functions import *
 vmax = 1e3 # max flux in either direction
 
 # Load path

@@ -78,7 +78,7 @@ s_v_exp_lb.lo(gsm_j) = 0; s_v_exp_lb.up(gsm_j) = 2e3 * %nscale%;
 s_v_exp_ub.lo(gsm_j) = 0; s_v_exp_ub.up(gsm_j) = 2e3 * %nscale%;
 
 *** SET FLUX LOWER AND UPPER BOUNDS ***
-v.lo(j) = 0; v.up(j) = 1e4 * %nscale%;
+v.lo(j) = 0; v.up(j) = 1e3 * %nscale%;
 
 * Disable enzyme synthesis and enzyme load network
 v.fx(j)$rxns_enzsyn(j) = 0;
@@ -86,7 +86,7 @@ v.fx(j)$rxns_enzload(j) = 0;
 
 * Media
 v.up(j)$uptake(j) = 0;
-v.up(j)$media(j) = 1e4 * %nscale%;
+v.up(j)$media(j) = 1e3 * %nscale%;
 
 * Turning off all versions of biomass dilution reaction
 * You need to turn on the respective version corresponding to your growth condition

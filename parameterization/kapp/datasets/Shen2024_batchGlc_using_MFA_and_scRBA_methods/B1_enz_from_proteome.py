@@ -20,8 +20,6 @@ df_data = df_data[df_data['conc (g/gDW)'] > 0]
 df_data = df_data[(df_data.type == 'truedata_enz') | (df_data.type == 'gapfill_subunit')]
 
 #### Process data
-sys.path.append(pycore_path)
-
 with open(os.path.join(path_gams, 'pro_and_enz.txt')) as f:
     pro_list = f.read().split('\n')
 pro_list = pro_list[1:-1]
@@ -63,15 +61,20 @@ with open(os.path.join(path_gams, 'rxns_enz.txt')) as f:
 enz_list = enz_list[1:-1]
 enz_list = [i[1:-1] for i in enz_list]
 
+cmdlist = [] # added for logging commands and tracking errors
 enzdict = OrderedDict()
 for enz in enz_list:
     #enzid = enz.split('-', maxsplit=1)[1]
     cmds = ['cd ' + path_out,
             'module load gams',
-            'gams enz_from_proteome.gms --enzobj=' + enz + '  o=/dev/null']
-            #'gams enz_from_proteome.gms --enzobj=' + enz]
-    
+            'echo value of enzobj=' + enz,
+            'gams enz_from_proteome.gms --enzobj=' + enz + output_redirect_str]
+    cmdlist.append('\n'.join(cmds))
+    print('Commands used:')
+    print('\n'.join(cmds))
+    print('Results:')
     os.system('\n'.join(cmds))
+    
     fname = os.path.join(path_out, 'enz_from_proteome.modelStat.txt')
     stat = get_GAMS_modelStat(fname)
     
@@ -83,7 +86,6 @@ for enz in enz_list:
     else:
         enzdict[enz] = 0
         
-
 enztext = [k+'\t'+str(v) for k,v in enzdict.items()]
 with open(os.path.join(path_out, 'enz_flux_calculation.txt'), 'w') as f:
     f.write('\n'.join(enztext))
