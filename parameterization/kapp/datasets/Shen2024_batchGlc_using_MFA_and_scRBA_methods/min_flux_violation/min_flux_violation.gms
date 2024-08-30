@@ -100,14 +100,13 @@ v.up(j)$media(j) = %vmax% * %nscale%;
 * You need to turn on the respective version corresponding to your growth condition
 v.fx(j)$rxns_biomass(j) = 0;
 
-* protein abundance limits
-$include "../prosyn_abundance_constraints.txt"
 * Growth rate, substrate and oxygenation, and secretions
 $include "%phenotype_path%"
 
+*Obj, Obj2, Obj3, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds, MitoProtAllo
 *** EQUATION DEFINITIONS ***
 Equations
-Obj, Obj2, Obj3, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds, MitoProtAllo
+Obj, Obj2, Obj3, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
 ;
 Obj..				prosynSlackSum =e= sum(pro, prosynSlackLB(pro) + prosynSlackUB(pro));
 Obj2..				inactiveFluxSum =e= sum(j$rxns_inactive(j), v(j));
@@ -116,13 +115,15 @@ Stoic(i)..			sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityMito..	v('RIBOSYN-ribomito') * %kribomito% =g= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
 RiboCapacityNuc..	v('RIBOSYN-ribonuc') * %kribonuc% =g= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
 UnknownRiboCapacity..	v('RIBOSYN-ribonuc') * %kribonuc% + v('RIBOSYN-ribomito') * %kribomito% =g= %mu% * (sum(j$nuc_translation(j), NAA(j) * v(j)) + sum(j$mito_translation(j), NAA(j) * v(j)) + sum(j$unknown_ribo_translation(j), NAA(j) * v(j)));
-Nonmodel..			v('BIOSYN-PROTMODELED') =e= (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
-MitoProtAllo..		v('BIOSYN-PROTMITO') =l= %max_allowed_mito_proteome_allo_fraction% * v('BIOSYN-PROTMODELED');
+Nonmodel..			v('BIOSYN-PROTMODELED') =l= (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
+*MitoProtAllo..		v('BIOSYN-PROTMITO') =l= %max_allowed_mito_proteome_allo_fraction% * v('BIOSYN-PROTMODELED');
+* protein abundance limits
+$include "../prosyn_abundance_constraints.txt"
 
 * GSM upper and lower bounds for fluxes (if data available); slacks included in case necessary
 GSM_LB(gsm_j)$v_exp_lb(gsm_j).. sum(j,dir(gsm_j,j)*v(j)) =g= (v_exp_lb(gsm_j) * %nscale%) - s_v_exp_lb(gsm_j);
 GSM_UB(gsm_j)$v_exp_ub(gsm_j).. sum(j,dir(gsm_j,j)*v(j)) =l= (v_exp_ub(gsm_j) * %nscale%) + s_v_exp_ub(gsm_j);
-fluxSlackBounds..			fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_j));
+fluxSlackBounds..		fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_j));
 
 * If any inactive essential rxns have kapps predicted from C1_calculate_kapp.py, 
 * 	we will use them to constrain the fluxes so the effects of their protein demands are accounted for

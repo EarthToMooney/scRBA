@@ -64,8 +64,8 @@ v.up('RXN-EX_succ_e_FWD-SPONT') = 0.01;
 v.lo('RXN-EX_glyc_e_FWD-SPONT') = (2.14 - 0.34);
 
 * Open FUM_m flux
-v.up('RXN-FUM_m_FWD-YPL262W_m') = 1e3 * %nscale%;
-v.up('RXN-FUM_m_REV-YPL262W_m') = 1e3 * %nscale%;
+v.up('RXN-FUM_m_FWD-YPL262W_m') = %vmax% * %nscale%;
+v.up('RXN-FUM_m_REV-YPL262W_m') = %vmax% * %nscale%;
 
 * Disable these pathways that draw massive flux away from the TCA cycle in pFBA.
 * This pathway carrying large flux seems unrealistic
