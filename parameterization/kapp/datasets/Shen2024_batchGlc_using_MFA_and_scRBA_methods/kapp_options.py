@@ -1,12 +1,9 @@
 # Model-specific settings for kapp calculations, as well as steps that must be run each time
 import pandas as pd
 import numpy as np
-import requests
-import json
-import os,shutil
+import requests,json,os,shutil,sys
 
 pycore_path = '../../../../pycore/'
-import sys
 sys.path.append(pycore_path)
 from utils import metabolites_dict_from_reaction_equation_RBA, extract_details_from_rxnid
 from simulate import RBA_result
@@ -55,3 +52,9 @@ dummy_protein = {'id':'PROSYN-PROTDUMMY','AA abundances':dict()}
 path_data = './Shen2024_batch_glc.xlsx'
 
 biom_id = 'BIOSYN-BIODILAERO-NOGAM'
+
+# set to True to avoid printing .lst files and other large log files
+hide_output = True
+output_redirect_str = ' o=/dev/null' if hide_output else ''
+
+spont_rxn_suffixes = ['SPONT', 'UNKNOWN']

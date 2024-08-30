@@ -15,6 +15,7 @@ $include "%model_root_path%GAMS/model/pro_ribo_subunits_c.txt"
 pro_ribomito
 $include "%model_root_path%GAMS/model/pro_ribo_subunits_m.txt"
 ;
+* exp. protein abundances enforced for all proteins (except ribosome subunits, which can exceed theirs) as in earlier scRBA versions
 $setGlobal prosynSlackAllow 1e10 
 prosynSlackLB.up(pro) = 0;
 prosynSlackUB.up(pro) = 0;

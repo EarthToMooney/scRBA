@@ -10,11 +10,11 @@ df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xls
 set4_path = '../kapp_ambiguousLoad_case_resolve_common.txt'
 
 res_metab = RBA_result(biom_id=biom_id)
-res_metab.load_raw_flux('./min_flux_sum/pPFBA.flux_unscaled.txt')
+res_metab.load_raw_flux('./min_flux_violation/pPFBA.flux_unscaled.txt')
 res_metab.calculate_metabolic_flux()
 
 res_esyn = RBA_result(biom_id=biom_id, twocol_format=True)
-res_esyn.load_raw_flux('./min_flux_sum/pPFBA.enzsyn.txt')
+res_esyn.load_raw_flux('./min_flux_violation/pPFBA.enzsyn.txt')
 
 with open("../../../../GAMS/model/RBA_rxns_rxnmetabolicnetwork.txt","r") as f: 
     all_rxns = [line.strip().replace("'","") for line in f.readlines() if line.strip() != "/"]
