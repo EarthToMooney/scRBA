@@ -22,7 +22,8 @@ df_data = pd.read_excel(path_data)
 df_data.index = df_data['id'].to_list()
 df_data = df_data[df_data['conc (g/gDW)'] > 0]
 # Excluding ribosome protein subunit (conflicting if fit to both enzymatic and ribosomal protein data)
-df_data = df_data[(df_data.type == 'truedata_enz') | (df_data.type == 'gapfill_subunit')]
+if not use_ribo_data:
+    df_data = df_data[(df_data.type == 'truedata_enz') | (df_data.type == 'gapfill_subunit')]
 
 data_val = []; data_idx = [];
 for i in df_data.index:
