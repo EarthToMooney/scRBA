@@ -373,7 +373,7 @@ for i in idx_enzsyn:
                 df_data_copy_filtered.loc[k, 'vtrans (mmol/gDW/h)'] = vmin * met_dict[k]
                 df_data_copy_filtered.loc[k, 'type'] = 'gapfill_subunit'
 
-df_data_copy_filtered.to_excel('./Shen2024_batch_glc.xlsx', index=None)
+df_data_copy_filtered.to_excel(path_data, index=None)
 
 print(df_data_copy_filtered[df_data_copy_filtered.duplicated(subset='uniprot', keep=False)].sort_values('uniprot'))
 
@@ -382,11 +382,10 @@ print(df_data_copy_filtered[df_data_copy_filtered['id'] == 'gapfill_subunit'])
 
 # if any row has an "id" value not in the "id" values of df_prot, then print that row
 if errors:
-    error_message = "Protein IDs not in PROTEIN_stoich_curation.xlsx:\n" + "\n".join(errors)
+    error_message = "Protein IDs not in "+prot_path+":\n" + "\n".join(errors)
     # raise ValueError(error_message)
     print(error_message)
 
-# write 
 # print nonmodeled proteome allocation
 print('nonmodeled proteome allocation:', nonmodeled_proteome_allocation)
 # print max allowed mito proteome allocation
