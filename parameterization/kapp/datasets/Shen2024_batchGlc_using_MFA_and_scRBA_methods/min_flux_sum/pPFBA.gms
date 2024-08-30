@@ -66,6 +66,8 @@ v_exp_lb(gsm_j)
 $include "%v_exp_lb_path%"
 v_exp_ub(gsm_j)
 $include "%v_exp_ub_path%"
+kapp(j)
+$include "../kapps_per_hr.txt"
 ;
 
 Variables
@@ -94,8 +96,9 @@ $include "%phenotype_path%"
 
 *** EQUATION DEFINITIONS ***
 * Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, Nonmodel, GSM_LB, GSM_UB, fluxSlackBounds
+*$include "%model_root_path%GAMS/model/RBA_enzCapacityConstraints_declares.txt"
 Equations
-Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, Nonmodel
+Obj, Stoic, fluxSlackBounds, RiboCapacityNuc, RiboCapacityMito, Nonmodel
 ;
 
 * PSS..				prosynSlackSum =e= sum(pro, prosynSlackLB(pro) + prosynSlackUB(pro));
@@ -104,8 +107,8 @@ Obj..				z =e= v('BIOSYN-PROTTOBIO');
 * Obj3..				z =e= sum(j$rxns_metab(j), v(j));
 fluxSlackBounds..			fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_j));
 Stoic(i)..			sum(j, S(i,j)*v(j)) =e= 0;
-RiboCapacityMito.. 		v('RIBOSYN-ribomito') * %kribomito% =e= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
-RiboCapacityNuc.. 		v('RIBOSYN-ribonuc') * %kribonuc% =e= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
+RiboCapacityMito.. 		v('RIBOSYN-ribomito') * %kribomito% =g= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
+RiboCapacityNuc.. 		v('RIBOSYN-ribonuc') * %kribonuc% =g= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
 *ProData(j)$prodata_set(j)..	v(j) =e= pro_val(j) * (1 - venzSlack);
 * $include "../prosyn_abundance_constraints.txt"
 * Inactive(j)$rxns_inactive(j)..	v(j) =e= 0;
@@ -115,7 +118,8 @@ Nonmodel..			v('BIOSYN-PROTMODELED') =l= (1 - %nonmodeled_proteome_allocation%) 
 * GSM_UB(gsm_j)$v_exp_ub(gsm_j).. sum(j,dir(gsm_j,j)*v(j)) =l= (v_exp_ub(gsm_j) * %nscale%) + s_v_exp_ub(gsm_j);
 
 * enforce measured kapps
-$include "../kapp_test.txt"
+*$include "../kapp_test.txt"
+$include "%model_root_path%GAMS/model/RBA_enzCapacityConstraints_declares_and_eqns_equality_version.txt"
 
 *** BUILD OPTIMIZATION MODEL ***
 Model rba
@@ -126,9 +130,9 @@ rba.optfile = 1;
 Solve rba using lp minimizing z;
 
 *** SOLVE ***
-Solve rba using lp minimizing fluxSlack;
-fluxSlack.up = fluxSlack.l + %epsilon%;
-Solve rba using lp minimizing z;
+*Solve rba using lp minimizing fluxSlack;
+*fluxSlack.up = fluxSlack.l + %epsilon%;
+*Solve rba using lp minimizing z;
 
 file ff /%system.FN%.modelStat.txt/;
 put ff;
@@ -147,7 +151,7 @@ putclose ff2;
 file ff3 /%system.FN%.enzsyn.txt/;
 ff3.nr = 2; put ff3;
 loop(j,
-	if ( (v.l(j) gt 1e-12) and (j in rxns_enzsyn),
+	if ((rxns_enzsyn(j)),
 		put j.tl:0, system.tab, 'v', system.tab, (v.l(j)/%nscale%):0:15/;
 	);
 );
