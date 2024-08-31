@@ -4,7 +4,7 @@
 
 $INLINECOM /*  */
 $include "./min_flux_violation_GAMS_settings.txt"
-$setGlobal nscale 1e3
+$setGlobal nscale 1e2
 * max fluxes allowed, and min fluxes deemed significant enough to report
 $setGlobal vmax 1e4
 $setGlobal vmin 1e-12

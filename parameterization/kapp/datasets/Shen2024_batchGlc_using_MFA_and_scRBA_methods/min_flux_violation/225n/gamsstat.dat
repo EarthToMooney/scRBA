@@ -1,0 +1,84 @@
+=1
+=2
+=0IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+=1
+--- GAMS/Cplex licensed for continuous and discrete problems.
+=2
+=C
+=1
+=CReading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/cplex.opt"
+=C>>  optcr = 1E-12
+=C>>  optca = 1E-12
+=C>>  eprhs = 1E-9
+=C>> 
+=CFinished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/cplex.opt"
+=2
+=C
+=1
+--- GMO setup time: 0.00s
+=2
+=1
+--- Space for names approximately 1.26 Mb
+=2
+=1
+--- Use option 'names no' to turn use of names off
+=2
+=1
+--- GMO memory 19.52 Mb (peak 19.75 Mb)
+=2
+=1
+--- Dictionary memory 0.00 Mb
+=2
+=1
+--- Cplex 22.1.1.0 link memory 0.73 Mb (peak 6.02 Mb)
+=2
+=1
+--- Starting Cplex
+=2
+=C
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Threads                                 1
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+Tried aggregator 1 time.
+LP Presolve eliminated 9591 rows and 25522 columns.
+Aggregator did 2635 substitutions.
+Reduced LP has 980 rows, 1948 columns, and 15198 nonzeros.
+Presolve time = 0.09 sec. (41.01 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =             0.000000
+Perturbation started.
+Iteration:   101   Dual objective     =             0.000000
+Iteration:   218   Dual objective     =          2246.071285
+Iteration:   285   Dual objective     =          2626.145575
+Iteration:   354   Dual objective     =          2843.251151
+Iteration:   429   Dual objective     =          2998.481034
+Iteration:   493   Dual objective     =          3063.807981
+Iteration:   569   Dual objective     =          3063.926298
+Iteration:   652   Dual objective     =          3064.049570
+Iteration:   731   Dual objective     =          3064.104660
+Iteration:   868   Dual objective     =          3190.263473
+Iteration:   937   Dual objective     =          3242.106167
+Iteration:  1031   Dual objective     =       1530138.773143
+Iteration:  1153   Dual objective     =       7894642.260863
+Markowitz threshold set to 0.1
+Iteration:  1160   Dual objective     =     448308558.678208
+Removing perturbation.
+=C
+=1
+--- LP status (3): infeasible.
+=2
+=1
+--- Cplex Time: 0.13sec (det. 90.20 ticks)
+
+=2
+=C
+=CModel has been proven infeasible
+=C
