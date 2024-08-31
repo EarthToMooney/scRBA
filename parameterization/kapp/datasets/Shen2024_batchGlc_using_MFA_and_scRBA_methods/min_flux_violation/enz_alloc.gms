@@ -203,15 +203,6 @@ loop(j$prodata_set(j),
 );
 putclose ff3;
 
-file ff5 /enz_alloc.fluxSlack.txt/;
-ff5.nr = 2; put ff5;
-loop(n,
-    if ( (fluxSlack.l(n) gt 0),
-        put n.tl:0, system.tab, 'fluxSlack', system.tab, fluxSlack.l(n):0:15/;
-    );
-);
-putclose ff5;
-
 file ff6 /%system.FN%.s_v_exp.txt/;
 ff6.nr = 2; ff6.pc=6; put ff6;
 loop(gsm_j,

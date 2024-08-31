@@ -17,15 +17,15 @@ $include "%model_root_path%GAMS/model/pro_ribo_subunits_m.txt"
 ;
 * exp. protein abundances enforced for all proteins (except ribosome subunits, which can exceed theirs) as in earlier scRBA versions
 $setGlobal prosynSlackAllow 1e10 
-*prosynSlackLB.up(pro) = 0;
-*prosynSlackUB.up(pro) = 0;
+prosynSlackLB.up(pro) = 0;
+prosynSlackUB.up(pro) = 0;
 prosynSlackUB.up(pro)$pro_ribonuc(pro) = %prosynSlackAllow%;
 prosynSlackUB.up(pro)$pro_ribomito(pro) = %prosynSlackAllow%;
 
 * NGAM + GAM
-*v.lo('RXN-ATPM_c_FWD-SPONT') = (1 + 2.088) * %nscale%;
+v.lo('RXN-ATPM_c_FWD-SPONT') = (1 + 2.088) * %nscale%;
 * NGAM
-v.lo('RXN-ATPM_c_FWD-SPONT') = 1 * %nscale%;
+*v.lo('RXN-ATPM_c_FWD-SPONT') = 1 * %nscale%;
 
 * Ribosome efficiency
 $setGlobal kribonuc 10.5*3600 * (13.2 / 10.5)

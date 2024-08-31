@@ -6,8 +6,8 @@ path_rxns_list = '../../../../GAMS/model/RBA_rxns.txt'
 path_out = './min_flux_violation/'
 path_enz_level = './enz_from_proteome/enz_flux_calculation.txt'
 
-nscale=1e4 # will be used as scale when running GAMS
-nscale2=1e4 # 2nd scale, if different one needed; otherwise, set to same as nscale
+nscale=1e3 # will be used as scale when running GAMS
+nscale2=1e3 # 2nd scale, if different one needed; otherwise, set to same as nscale
 run_setting_file_from = './GAMS_setting_files/min_flux_violation_GAMS_settings.txt'
 run_setting_file_to = './min_flux_violation/min_flux_violation_GAMS_settings.txt'
 
