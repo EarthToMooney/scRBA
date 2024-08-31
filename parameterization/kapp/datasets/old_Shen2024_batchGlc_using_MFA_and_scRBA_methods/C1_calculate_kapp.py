@@ -1,11 +1,19 @@
-# update model-specific settings in kapp_options.py
-from kapp_options import *
+# %%
+import pandas as pd
+import sys
+sys.path.append('../../../../pycore/')
+from simulate import RBA_result
+from utils import extract_details_from_rxnid
 
+# %%
 # Load enzyme info
 df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xlsx')
 
 # Load path of set4 (enzyme-reaction many-to-many mapping)
 set4_path = '../kapp_ambiguousLoad_case_resolve_common.txt'
+
+# %%
+biom_id = 'BIOSYN-BIODILAERO-NOGAM'
 
 res_metab = RBA_result(biom_id=biom_id)
 res_metab.load_raw_flux('./min_flux_sum/min_flux_sum.flux.txt')
@@ -271,8 +279,6 @@ for k,v in kapp.items():
 with open('./kapps_in_vivo.txt', 'w') as f:
     f.write('\n'.join(texts))
 
-kapp_max = max(list(kapp.values())) * 3600
-
 # check if any inactive rxns were used in last step
 with open('min_flux_violation/min_flux_violation.flux_essential_inactive_rxns.txt') as f:
     rxns_essential_inactive = f.read().split('\n')
@@ -329,30 +335,3 @@ for rxn in all_rxns:
 
 with open('./kapps_per_hr.txt', 'w') as f:
     f.write('\n'.join(perhr_texts + ['/']))
-
-# if any rxns are inactive, we've predicted their kapps and know their fluxes
-# use these to infer ENZSYN fluxes (ENZSYN=mu*flux/kapp)
-kapp_test_text = []
-if len(rxns_essential_inactive) > 0:
-    # # load fluxes
-    # with open('min_flux_violation/min_flux_violation.flux.txt') as f:
-    #     fluxes = f.read().split('\n')
-    # fluxes = [i.split('\t') for i in fluxes]
-    # fluxes = {i[0]:float(i[1]) for i in fluxes}
-    # # calculate ENZSYN fluxes
-    # enzsyn_fluxes = []
-    c = 0
-    for rxn in rxns_essential_inactive:
-        if rxn in kapp_per_hr.keys():
-            # assume kapp is at its max value, to prevent excessive constraints
-            kapp_per_hr[rxn] = kapp_max 
-            kapp_test_text.append('Equation EnzCap'+str(c)+'; EnzCap'+str(c)+".. v('"+rxn.replace('RXN-','ENZLOAD-')+"')*"+str(kapp_per_hr[rxn])+" =e= %mu% * v('"+rxn+"');")
-            c += 1
-        # add its kapp as a constraint on ENZLOAD and flux
-    #     if rxn in kapps_rba.keys() and rxn in fluxes.keys():
-    #         enzsyn_fluxes.append('ENZSYN-' + rxn + '\t' + str(mu*fluxes[rxn]/kapps_rba[rxn]))
-    # with open('./enzsyn_fluxes.txt', 'w') as f:
-    #     f.write('\n'.join(enzsyn_fluxes))
-    with open('./kapp_test.txt', 'w') as f:
-        f.write('\n'.join(kapp_test_text))
-

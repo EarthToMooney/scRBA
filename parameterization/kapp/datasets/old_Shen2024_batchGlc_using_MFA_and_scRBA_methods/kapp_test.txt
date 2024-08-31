@@ -1,1 +1,0 @@
-Equation EnzCap0; EnzCap0.. v('ENZLOAD-FACOA140tabc_x_FWD-PXA12')*18474363947.1399 =e= %mu% * v('RXN-FACOA140tabc_x_FWD-PXA12');

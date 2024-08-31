@@ -1,18 +1,19 @@
-# update model-specific settings in kapp_options.py
-from kapp_options import *
-
 path_gams = '../../../../GAMS/parameterization/enz_from_proteome/'
 path_out = './enz_from_proteome/'
+path_data = './Shen2024_batch_glc.xlsx'
 
 run_setting_file_from = './GAMS_setting_files/enz_from_proteome_GAMS_settings.txt'
 run_setting_file_to = './enz_from_proteome/enz_from_proteome_GAMS_settings.txt'
+pycore_path = '../../../../pycore/'
 
 #### Create directory and copy run settings
+import os,shutil
 if os.path.isdir(path_out) == False:
     os.makedirs(path_out)
 shutil.copy(run_setting_file_from, run_setting_file_to);
 
 #### Load data
+import pandas as pd
 df_data = pd.read_excel(path_data)
 df_data.index = df_data['id'].to_list()
 df_data = df_data[df_data['conc (g/gDW)'] > 0]
@@ -20,7 +21,9 @@ df_data = df_data[df_data['conc (g/gDW)'] > 0]
 df_data = df_data[(df_data.type == 'truedata_enz') | (df_data.type == 'gapfill_subunit')]
 
 #### Process data
+import sys
 sys.path.append(pycore_path)
+from utils import metabolites_dict_from_reaction_equation_RBA
 
 with open(os.path.join(path_gams, 'pro_and_enz.txt')) as f:
     pro_list = f.read().split('\n')

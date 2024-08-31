@@ -1,6 +1,3 @@
-# update model-specific settings in kapp_options.py
-from kapp_options import *
-
 path_gams = '../../../../GAMS/parameterization/min_flux_sum/'
 path_B2 = './min_flux_violation/'
 path_out = './min_flux_sum/'
@@ -9,6 +6,7 @@ run_setting_file_from = './GAMS_setting_files/min_flux_sum_GAMS_settings.txt'
 run_setting_file_to = './min_flux_sum/min_flux_sum_GAMS_settings.txt'
 
 #### Create directory and copy run settings
+import os,shutil
 if os.path.isdir(path_out) == False:
     os.makedirs(path_out)
 shutil.copy(run_setting_file_from, run_setting_file_to);
