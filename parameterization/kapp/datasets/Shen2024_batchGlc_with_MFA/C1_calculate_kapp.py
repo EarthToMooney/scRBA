@@ -408,3 +408,18 @@ if len(rxns_essential_inactive) > 0:
     #     f.write('\n'.join(enzsyn_fluxes))
     with open('./kapp_test.txt', 'w') as f:
         f.write('\n'.join(kapp_test_text))
+
+# test if kapps work
+from simulate import get_GAMS_modelStat
+run_setting_file_from = './GAMS_setting_files/test_kapp_GAMS_settings.txt'
+run_setting_file_to = './enz_from_proteome/test_kapp_GAMS_settings.txt'
+shutil.copy(run_setting_file_from, run_setting_file_to);
+# shutil.copyfile('../../../../GAMS/runRBA.gms', './runRBA.gms')
+# run RBA
+os.system('gams test_kapp.gms' + output_redirect_str)
+# check if RBA ran successfully
+stat = get_GAMS_modelStat('test_kapp.modelStat.txt')
+if stat == 'optimal':
+    print('kapp test successful')
+else:
+    print('kapp test failed')
