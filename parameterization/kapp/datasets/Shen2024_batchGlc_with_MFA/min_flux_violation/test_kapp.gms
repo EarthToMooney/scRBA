@@ -1,7 +1,6 @@
 * Run RBA model
 
 $INLINECOM /*  */
-$include "./min_flux_violation_GAMS_settings.txt"
 $include "./test_kapp_GAMS_settings.txt"
 * Scale values of all variables by a factor, then when write to file, descale them
 $setGlobal nscale 1e3

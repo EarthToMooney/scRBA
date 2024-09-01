@@ -1,3 +1,5 @@
+* make all other settings identical to prior steps
+$include "./min_flux_violation_GAMS_settings.txt"
 $setGlobal kapp_path %model_root_path%input/kapps_per_hr.txt
 $setGlobal enz_cap_declares_path %model_root_path%GAMS/model/RBA_enzCapacityConstraints_declares.txt
 $setGlobal enz_cap_eqns_path %model_root_path%GAMS/model/RBA_enzCapacityConstraints_eqns_equality_version.txt
