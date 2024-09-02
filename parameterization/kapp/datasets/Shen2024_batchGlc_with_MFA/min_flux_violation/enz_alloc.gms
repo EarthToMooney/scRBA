@@ -11,7 +11,7 @@ $setGlobal venzSlackAllow 0
 $setGlobal fluxSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * update to match solver tolerance
-$setGlobal tol 2e-9
+$setGlobal tol 1e-9
 
 options
     LP = cplex /*Solver selection*/
@@ -164,17 +164,16 @@ Solve m_rxns using lp minimizing fluxSum;
 
 * Solve again, encouraging more equal use of all enzymes
 * force total flux to previous value
-fluxSum.up = fluxSum.l+%tol%;
+*fluxSum.up = fluxSum.l+(90 * %tol%);
+fluxSum.up = fluxSum.l+(1000*%tol%);
 model min_prowaste /all/;
 min_prowaste.optfile = 1;
 Solve min_prowaste using lp minimizing z;
 
-
-* apply enzyme load slacks
-z.up = z.l+%tol%;
+* apply enzyme load slacks; may need to adjust tolerance values to fix precision limits
+z.up = z.l+(750 * %tol%);
 * Uncomment if using enzload values
 $include "./enz_alloc_constraints.txt"
-fluxSum.up = fluxSum.l+%tol%;
 Equation Obj5; Obj5.. slackSum =e= sum(j, EnzLoadSlackNeg(j) + EnzLoadSlackPos(j));
 Model eload /all/;
 eload.optfile = 1;

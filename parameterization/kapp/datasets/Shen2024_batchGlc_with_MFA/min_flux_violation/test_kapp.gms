@@ -1,7 +1,7 @@
 * Run RBA model
 
 $INLINECOM /*  */
-$include "./test_kapp_GAMS_settings.txt"
+$include "../GAMS_setting_files/test_kapp_GAMS_settings.txt"
 * Scale values of all variables by a factor, then when write to file, descale them
 $setGlobal nscale 1e3
 $setGlobal vmax 1e3
@@ -33,8 +33,10 @@ i
 $include "%species_path%"
 j
 $include "%rxns_path%"
-prosyn(j)
-$include "%prosyn_path%"
+pro
+$include "%unique_protein_set_path%"
+*prosyn(j)
+*$include "%prosyn_path%"
 prowaste(j)
 $include "%prowaste_path%"
 nuc_translation(j)
@@ -59,7 +61,7 @@ $include "%kapp_path%"
 ;
 
 Variables
-z, v(j)
+z, prosynSlackSum, nonessentialInactiveFluxSum, inactiveFluxSum, fluxSum, v(j), venzSlack(j), fluxSlack, prosynSlackLB(pro), prosynSlackUB(pro), EnzLoadSlackPos(j), EnzLoadSlackNeg(j), slackSum
 ;
 
 *** SET FLUX LOWER AND UPPER BOUNDS ***

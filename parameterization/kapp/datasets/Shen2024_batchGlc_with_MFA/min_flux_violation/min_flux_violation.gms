@@ -165,10 +165,10 @@ put 'fluxSum',(fluxSum.l/%nscale%):0:11/;
 putclose ff2;
 
 file ff3 /%system.FN%.flux_gamsscaled.txt/;
-ff3.nr = 2; put ff3; ff3.pc=6;
+ff3.nr = 2; put ff3;
 loop(j,
     if ( (v.l(j) gt %vmin%),
-        put j.tl:0, 'v', v.l(j):0:15/;
+        put j.tl:0, system.tab, 'v', system.tab, v.l(j):0:15/;
     );
 );
 putclose ff3;
