@@ -327,7 +327,7 @@ kapp_ma_med = np.median(list(kapp_minimal_assumptions.values()))
 kapp_txt = ['/']
 
 # check if any inactive rxns were used in B2
-with open('min_flux_violation/min_flux_violation.flux_essential_inactive_rxns.txt') as f:
+with open('min_flux_violation/enz_alloc.flux_essential_inactive_rxns.txt') as f:
     rxns_essential_inactive = f.read().split('\n')
 rxns_essential_inactive = [i for i in rxns_essential_inactive if i != '']
 rxns_essential_inactive = [i.split('\t')[0] for i in rxns_essential_inactive]

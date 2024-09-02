@@ -202,6 +202,16 @@ loop(j$prodata_set(j),
 );
 putclose ff3;
 
+
+file ff4a /%system.FN%.flux_essential_inactive_rxns.txt/;
+ff4a.nr = 2; put ff4a;
+loop(j$rxns_inactive(j),
+    if ( (v.l(j) gt %vmin%),
+        put j.tl:0, system.tab, 'v', system.tab, (v.l(j)/%nscale%):0:15/;
+    );
+);
+putclose ff4a;
+
 file ff6 /%system.FN%.s_v_exp.txt/;
 ff6.nr = 2; ff6.pc=6; put ff6;
 loop(gsm_j,

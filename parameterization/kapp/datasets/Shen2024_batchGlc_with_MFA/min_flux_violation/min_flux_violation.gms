@@ -191,7 +191,6 @@ loop(j$rxns_inactive(j),
 );
 putclose ff4;
 
-
 file ff4a /%system.FN%.flux_essential_inactive_rxns_unscaled.txt/;
 ff4a.nr = 2; put ff4a;
 loop(j$rxns_inactive(j),
