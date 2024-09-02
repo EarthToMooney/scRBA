@@ -1,6 +1,6 @@
 # update model-specific settings in kapp_options.py
 from kapp_options import *
-min_flux_cutoff = 0
+min_flux_cutoff = 1e-8
 #min_flux_cutoff = 1e-5
 
 # Load enzyme info
@@ -413,8 +413,8 @@ if len(rxns_essential_inactive) > 0:
 # test if kapps work
 from simulate import get_GAMS_modelStat
 run_setting_file_from = './GAMS_setting_files/test_kapp_GAMS_settings.txt'
-# run_setting_file_to = './enz_from_proteome/test_kapp_GAMS_settings.txt'
-# shutil.copy(run_setting_file_from, run_setting_file_to);
+run_setting_file_to = './enz_from_proteome/test_kapp_GAMS_settings.txt'
+shutil.copy(run_setting_file_from, run_setting_file_to);
 # shutil.copyfile('../../../../GAMS/runRBA.gms', './runRBA.gms')
 # run RBA
 os.system('cd min_flux_violation; gams test_kapp.gms' + output_redirect_str)
