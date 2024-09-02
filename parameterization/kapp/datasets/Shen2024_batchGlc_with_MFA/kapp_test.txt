@@ -1,1 +1,1 @@
-Equation EnzCap0; EnzCap0.. v('ENZLOAD-RIBFLVt_c_e_FWD-YOR306C')*386660.5661249909 =e= %mu% * v('RXN-RIBFLVt_c_e_FWD-YOR306C');
+Equation EnzCap0; EnzCap0.. v('ENZLOAD-GTHOXt_c_e_FWD-YJL212C')*1386660.5661249908 =e= %mu% * v('RXN-GTHOXt_c_e_FWD-YJL212C');

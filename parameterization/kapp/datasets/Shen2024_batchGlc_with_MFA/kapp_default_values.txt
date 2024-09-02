@@ -1712,9 +1712,9 @@ No kapp found for RXN-SRBt_c_e_FWD-YDL245C
 No kapp found for RXN-SRBt_c_e_REV-YDL245C
 No kapp found for RXN-METt_c_m_FWD-YDR508C
 No kapp found for RXN-ACRNt_c_m_FWD-YOR100C
-No kapp found for RXN-GTHOXt_c_e_FWD-YJL212C
 No kapp found for RXN-PIt_c_v_FWD-YNR013C
 No kapp found for RXN-PIt_c_v_REV-YNR013C
+No kapp found for RXN-RIBFLVt_c_e_FWD-YOR306C
 No kapp found for RXN-RIBFLVt_c_e_FWD-YOR306C or enzyme YOR306C
 No kapp found for RXN-RIBt_c_e_FWD-YHR092C
 No kapp found for RXN-RIBt_c_e_FWD-YDR342C

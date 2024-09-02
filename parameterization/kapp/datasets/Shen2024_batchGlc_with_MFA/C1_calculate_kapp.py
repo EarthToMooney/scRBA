@@ -1,6 +1,8 @@
 # update model-specific settings in kapp_options.py
 from kapp_options import *
-min_flux_cutoff = 1e-8
+min_flux_cutoff = 1e-9
+# tolerance value added to assist with rounding kapps, if needed
+tol = 1e6
 #min_flux_cutoff = 1e-5
 
 # Load enzyme info
@@ -186,7 +188,7 @@ for enz in set1:
     enzval = res_esyn.raw_flux['ENZSYN-' + enz]
     try:    
         kapp[rid] = mu * abs(rval) / enzval / 3600
-        kapps_rba[rid] = kapp[rid] * 3600
+        kapps_rba[rid] = kapp[rid] * 3600 + tol
     except:
         print('kapp calc error: mu',type(mu),mu,'rval',type(rval),rval,'enzval',type(enzval),enzval)
     
@@ -209,7 +211,7 @@ for enz in set2:
     
     for rid in rids:
         kapp[rid] = mu * rvalsum / enzval / 3600
-        kapps_rba[rid] = kapp[rid] * 3600
+        kapps_rba[rid] = kapp[rid] * 3600 + tol
         
 ### Set 3: Enzyme-reaction many-to-one
 rxns = set().union(*[enzdict[enz] for enz in set3])
@@ -230,8 +232,7 @@ for rxn in rxns:
         
     for rid in rids:
         kapp[rid] = mu * abs(rval) / enzval / 3600
-        kapps_rba[rid] = kapp[rid] * 3600
-        
+        kapps_rba[rid] = kapp[rid] * 3600 + tol
         
 ### Set 4: Enzyme-reaction many-to-many
 with open(set4_path) as f:
@@ -301,7 +302,7 @@ for enztext,x in mapper.items():
             
     for rid in rids:
         kapp[rid] = mu * rxnval / enzval / 3600
-        kapps_rba[rid] = kapp[rid] * 3600
+        kapps_rba[rid] = kapp[rid] * 3600 + tol
 #Flux is numerically low, near zero
 with open('../exclude_parameterization_list.txt') as f:
     excl = f.read().split('\n')
@@ -321,8 +322,9 @@ for k,v in kapp.items():
 with open('./kapps_in_vivo.txt', 'w') as f:
     f.write('\n'.join(texts))
 kapp_med = np.median(list(kapp.values())) * 3600
-kapp_max = max(list(kapp.values())) * 3600
+kapp_max = max(list(kapps_rba.values())) 
 kapp_ma_med = np.median(list(kapp_minimal_assumptions.values()))
+default_kapp = kapp_max + tol
 # return kapps in a format suitable for use in RBA
 kapp_txt = ['/']
 
@@ -333,7 +335,7 @@ rxns_essential_inactive = [i for i in rxns_essential_inactive if i != '']
 rxns_essential_inactive = [i.split('\t')[0] for i in rxns_essential_inactive]
 for r in rxns_essential_inactive:
     if r not in kapps_rba.keys():
-        kapps_rba[r] = kapp_med
+        kapps_rba[r] = default_kapp + tol
 for k,v in kapps_rba.items():
     perhr_texts_used_only.append("'" + k + "'" + '\t' + str(v))
 
@@ -349,12 +351,12 @@ for rxn in all_rxns:
         if rxn in kapps_rba.keys():
             if kapps_rba[rxn] <= min_flux_cutoff:
                 output_info.append('kapp <= cutoff for ' + rxn)
-                kapps_rba[rxn] = kapp_med
+                kapps_rba[rxn] = default_kapp
         elif rxn in rxns_essential_inactive:
-            kapps_rba[rxn] = kapp_med # to minimize the risk of kapps making growth infeasible 
+            kapps_rba[rxn] = default_kapp # to minimize the risk of kapps making growth infeasible 
         else: 
             output_info.append('No kapp found for ' + rxn)
-            kapps_rba[rxn] = kapp_med
+            kapps_rba[rxn] = default_kapp
         if rxn not in kapp_minimal_assumptions.keys():
             # set kapp to the max value of all kapps for that enzyme (or reaction, if unavailable), to minimize risk of overestimation of enzyme demand
             new_kapp = 0
@@ -412,12 +414,12 @@ if len(rxns_essential_inactive) > 0:
 
 # test if kapps work
 from simulate import get_GAMS_modelStat
-run_setting_file_from = './GAMS_setting_files/test_kapp_GAMS_settings.txt'
-run_setting_file_to = './enz_from_proteome/test_kapp_GAMS_settings.txt'
-shutil.copy(run_setting_file_from, run_setting_file_to);
+#run_setting_file_from = './GAMS_setting_files/test_kapp_GAMS_settings.txt'
+#run_setting_file_to = './min_flux_violation/test_kapp_GAMS_settings.txt'
+#shutil.copy(run_setting_file_from, run_setting_file_to);
 # shutil.copyfile('../../../../GAMS/runRBA.gms', './runRBA.gms')
 # run RBA
-os.system('cd min_flux_violation; gams test_kapp.gms' + output_redirect_str)
+os.system('cd min_flux_violation; module load gams; gams test_kapp.gms' + output_redirect_str)
 # check if RBA ran successfully
 stat = get_GAMS_modelStat('test_kapp.modelStat.txt')
 if stat == 'optimal':
