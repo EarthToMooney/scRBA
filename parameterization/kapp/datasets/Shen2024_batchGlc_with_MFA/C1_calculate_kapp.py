@@ -1,9 +1,8 @@
 # update model-specific settings in kapp_options.py
 from kapp_options import *
 min_flux_cutoff = 1e-9
-# tolerance value added to assist with rounding kapps, if needed
-tol = 1e6
-#min_flux_cutoff = 1e-5
+# tolerance value added to assist with rounding kapps; set to 0 if not needed
+tol = 1e-8
 
 # Load enzyme info
 df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xlsx')
@@ -324,6 +323,8 @@ with open('./kapps_in_vivo.txt', 'w') as f:
 kapp_med = np.median(list(kapp.values())) * 3600
 kapp_max = max(list(kapps_rba.values())) 
 kapp_ma_med = np.median(list(kapp_minimal_assumptions.values()))
+kapp_ma_max = np.max(list(kapp_minimal_assumptions.values()))
+kapp_ma_default = kapp_ma_max
 default_kapp = kapp_max + tol
 # return kapps in a format suitable for use in RBA
 kapp_txt = ['/']
@@ -363,22 +364,22 @@ for rxn in all_rxns:
             for k,v in kapp_minimal_assumptions.items():
                 if enz in k.split('-')[-1]:
                     if v > new_kapp:
-                        new_kapp = v
+                        new_kapp = v + tol
                 # find max kapp for that reaction
                 elif rxn_name_without_enz == k.split('-')[-2]:
                     if v > new_kapp:
-                        new_kapp = v
+                        new_kapp = v + tol
                 # remove location to see if enzyme is identical to another
                 elif enz == k.split('-')[-2].split('_')[-1]:
                     if v > new_kapp:
-                        new_kapp = v
+                        new_kapp = v + tol
             if new_kapp == 0:
                 output_info.append('No kapp found for ' + rxn + ' or enzyme ' + enz)
-                new_kapp = kapp_ma_med
+                new_kapp = kapp_ma_default
             kapp_minimal_assumptions[rxn] = new_kapp
             kapp_ma_text.append("'" + rxn + "'\t" + str(kapp_minimal_assumptions[rxn]))
         elif kapp_minimal_assumptions[rxn] <= kapp_ma_cutoff:
-            kapp_ma_text.append("'" + rxn + "'\t" + str(kapp_ma_med))
+            kapp_ma_text.append("'" + rxn + "'\t" + str(kapp_ma_default))
         kapp_txt.append("'" + rxn + "'\t" + str(kapps_rba[rxn]))
 with open('./kapp_default_values.txt', 'w') as f:
     f.write('\n'.join(output_info))
@@ -421,8 +422,8 @@ from simulate import get_GAMS_modelStat
 # run RBA
 os.system('cd min_flux_violation; module load gams; gams test_kapp.gms' + output_redirect_str)
 # check if RBA ran successfully
-stat = get_GAMS_modelStat('test_kapp.modelStat.txt')
+stat = get_GAMS_modelStat('./min_flux_violation/test_kapp.modelStat.txt')
 if stat == 'optimal':
     print('kapp test successful')
 else:
-    print('kapp test failed')
+    raise ValueError('kapp test failed')
