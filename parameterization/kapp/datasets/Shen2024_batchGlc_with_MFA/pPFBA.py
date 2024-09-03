@@ -63,11 +63,11 @@ for i in df_enz.index:
         
 rxndict = {k:set(v) for k,v in rxndict.items()}
 rxndict_zeroCost = {k:v for k,v in rxndict.items() if v == {'zeroCost'}}
-rxndict = {k:v for k,v in rxndict.items() if v != {'zeroCost'}}
-enzdict = {k:set(v) for k,v in enzdict.items()}
+rxndict = {k:v for k,v in rxndict.items() if v != {'zeroCost'} and 'zeroCost' not in v}
+enzdict = {k:set(v) for k,v in enzdict.items() if 'zeroCost' not in [k,v] and 'zeroCost' not in v}
 # Find enzymes that together carry a total load of reactions
 x = {k:v for k,v in rxndict.items() if len(v) > 1.5}
-enz_share_rxn_load = set().union(*[v for v in x.values()])
+enz_share_rxn_load = set().union(*[v for v in x.values() if v != 'zeroCost'])
 
 # Find enzymes that individually carry loads of multiple reactions
 x = {k:v for k,v in enzdict.items() if len(v) > 1.5}
@@ -117,7 +117,7 @@ for i in set4 - set(enzs):
         print(i)
 # Find enzymes whose together carry a total load of reactions
 x = {k:v for k,v in rxndict.items() if len(v) > 1.5}
-enz_share_rxn_load = set().union(*[v for v in x.values()])
+enz_share_rxn_load = set().union(*[v for v in x.values() if v != 'zeroCost'])
 
 # Find enzymes whose individually carry loads of multiple reactions
 x = {k:v for k,v in enzdict.items() if len(v) > 1.5}
@@ -144,8 +144,8 @@ set4 = set(enzs)
     
 # From manual checking of the sets, some enzymes in set2 and set3 require special treatment in calculation
 # which are recorded in set4. Thus excluded those in set2 and set3
-set2 = set2 - set4
-set3 = set3 - set4
+set2 = set2 - set4 - {'zeroCost'}
+set3 = set3 - set4 - {'zeroCost'}
 
 kapp = dict()
 kapps_rba = dict()
@@ -348,7 +348,17 @@ for k,v in kapps_rba.items():
     perhr_texts_used_only.append("'" + k + "'" + '\t' + str(v))
 
 with open('./pPFBA_kapps_per_hr_without_unused_rxns.txt', 'w') as f:
-    f.write('\n'.join(perhr_texts_used_only + ['/']))
+    old_kapps = dict()
+    new_kapps = dict()
+    # read old version of file (to filter out non-default and irrelevant values) and compare to new version
+    for txt,dict in {f.read().split('\n'):old_kapps,perhr_texts_used_only:new_kapps}.items():
+        for line in txt:
+            if '/' not in line.split('\t'):
+                k,v = line.split('\t')
+                dict[k] = v
+    # old_kapps = {k:v for k,v in f.read().split('\n').split('\t') if '/' not in [k,v]}
+    # new_kapps = {k:v for k,v in perhr_texts_used_only.split('\t') if '/' not in [k,v]}
+    f.write('\n'.join(sorted(perhr_texts_used_only) + ['/']))
 
 output_info = []
 # add all other rxns with default kapp

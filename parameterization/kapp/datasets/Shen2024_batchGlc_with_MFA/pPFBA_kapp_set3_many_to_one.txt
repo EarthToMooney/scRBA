@@ -1,5 +1,2 @@
-CPA12
-zeroCost
 YER152C
-YLL052C_en
-YPR192W_en
+CPA12

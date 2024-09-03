@@ -5,7 +5,10 @@
 $INLINECOM /*  */
 $include "./min_flux_violation_GAMS_settings.txt"
 $setGlobal nscale 1000
+* max fluxes allowed, and min fluxes deemed significant enough to report
 $setGlobal vmax 1000
+$setGlobal vmin 1e-12
+
 $setGlobal venzSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * small value needed to ensure sequential problems aren't infeasible due to rounding errors
@@ -117,7 +120,7 @@ RiboCapacityNuc.. 		v('RIBOSYN-ribonuc') * %kribonuc% =g= %mu% * sum(j$nuc_trans
 *ProData(j)$prodata_set(j)..	v(j) =e= pro_val(j) * (1 - venzSlack);
 * $include "../prosyn_abundance_constraints.txt"
 * Inactive(j)$rxns_inactive(j)..	v(j) =e= 0;
-Nonmodel..			v('BIOSYN-PROTMODELED') =l= (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
+Nonmodel..			v('BIOSYN-PROTMODELED') =e= (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
 * GSM upper and lower bounds for fluxes (if data available); slacks included in case necessary
 * GSM_LB(gsm_j)$v_exp_lb(gsm_j).. sum(j,dir(gsm_j,j)*v(j)) =g= (v_exp_lb(gsm_j) * %nscale%) - s_v_exp_lb(gsm_j);
 * GSM_UB(gsm_j)$v_exp_ub(gsm_j).. sum(j,dir(gsm_j,j)*v(j)) =l= (v_exp_ub(gsm_j) * %nscale%) + s_v_exp_ub(gsm_j);
@@ -147,7 +150,7 @@ putclose ff;
 file ff2 /%system.FN%.flux_gamsscaled.txt/;
 put ff2;
 loop(j,
-	if ( (v.l(j) gt 1e-12),
+	if ( (v.l(j) gt %vmin%),
 		put j.tl:0, system.tab, 'v', system.tab, v.l(j):0:15/;
 	);
 );
@@ -164,7 +167,7 @@ loop(j,
 file ff3a /%system.FN%.flux_unscaled.txt/;
 ff3a.nr = 2; put ff3a;
 loop(j,
-    if ( (v.l(j) gt 1e-12),
+    if ( (v.l(j) gt %vmin%),
         put j.tl:0, system.tab, 'v', system.tab, (v.l(j)/%nscale%):0:15/;
     );
 );
