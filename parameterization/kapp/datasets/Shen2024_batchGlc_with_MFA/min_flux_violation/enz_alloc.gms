@@ -226,7 +226,7 @@ ff7.nr = 2;
 ff7.nr = 2; put ff7;
 loop(j$(rxns_enzsyn(j) or rxns_enzload(j)),
     if ( v.l(j) > 0,
-        put j.tl:0, system.tab, v.l(j):0:15/;
+        put j.tl:0, system.tab, (v.l(j)/%nscale%):0:15/;
     );
 );
 putclose ff7;
