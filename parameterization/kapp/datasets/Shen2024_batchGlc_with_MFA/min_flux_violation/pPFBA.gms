@@ -5,6 +5,7 @@
 $INLINECOM /*  */
 $include "./min_flux_violation_GAMS_settings.txt"
 $setGlobal nscale 1000
+$setGlobal vmax 1000
 $setGlobal venzSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * small value needed to ensure sequential problems aren't infeasible due to rounding errors
@@ -67,7 +68,7 @@ $include "%v_exp_lb_path%"
 v_exp_ub(gsm_j)
 $include "%v_exp_ub_path%"
 kapp(j)
-$include "../kapps_per_hr.txt"
+$include "../kapps_RBA.txt"
 ;
 
 Variables
@@ -77,15 +78,19 @@ venzSlack.lo = 0; venzSlack.up = %venzSlackAllow%;
 prosynSlackLB.lo(pro) = 0; prosynSlackLB.up(pro) = %prosynSlackAllow%;
 prosynSlackUB.lo(pro) = 0; prosynSlackUB.up(pro) = %prosynSlackAllow%;
 * 2e3 to allow changes in either direction
-s_v_exp_lb.lo(gsm_j) = 0; s_v_exp_lb.up(gsm_j) = 2e3 * %nscale%;
-s_v_exp_ub.lo(gsm_j) = 0; s_v_exp_ub.up(gsm_j) = 2e3 * %nscale%;
+s_v_exp_lb.lo(gsm_j) = 0; s_v_exp_lb.up(gsm_j) = 2 * %vmax% * %nscale%;
+s_v_exp_ub.lo(gsm_j) = 0; s_v_exp_ub.up(gsm_j) = 2 * %vmax% * %nscale%;
 
 *** SET FLUX LOWER AND UPPER BOUNDS ***
-v.lo(j) = 0; v.up(j) = 1e3 * %nscale%;
+v.lo(j) = 0; v.up(j) = %vmax% * %nscale%;
+
+* Optional constraint on allowed proteome allocation to mitochondrial proteins (disable by setting to 1)
+$setGlobal max_allowed_mito_proteome_allo_fraction 1
+$setGlobal nonmodeled_proteome_allocation 0
 
 * Media
 v.up(j)$uptake(j) = 0;
-v.up(j)$media(j) = 1e3 * %nscale%;
+v.up(j)$media(j) = %vmax% * %nscale%;
 
 * Turning off all versions of biomass dilution reaction
 * You need to turn on the respective version corresponding to your growth condition
@@ -152,7 +157,7 @@ file ff3 /%system.FN%.enzsyn.txt/;
 ff3.nr = 2; put ff3;
 loop(j,
 	if ((rxns_enzsyn(j)),
-		put j.tl:0, system.tab, 'v', system.tab, (v.l(j)/%nscale%):0:15/;
+		put j.tl:0, system.tab, (v.l(j)/%nscale%):0:15/;
 	);
 );
 

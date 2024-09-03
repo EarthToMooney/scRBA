@@ -2,6 +2,7 @@
 ## recalculating kapps until they change negigibly
 # update model-specific settings in kapp_options.py
 from kapp_options import *
+os.system('cd min_flux_violation; module load gams; gams pPFBA.gms' + output_redirect_str)
 
 # Load enzyme info
 df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xlsx')
