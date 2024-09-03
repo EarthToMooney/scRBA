@@ -68,7 +68,7 @@ $include "%v_exp_lb_path%"
 v_exp_ub(gsm_j)
 $include "%v_exp_ub_path%"
 kapp(j)
-$include "../kapps_RBA.txt"
+$include "../pPFBA_kapps_RBA.txt"
 ;
 
 Variables
