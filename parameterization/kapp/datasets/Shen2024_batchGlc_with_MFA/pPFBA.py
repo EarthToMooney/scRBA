@@ -330,8 +330,8 @@ with open('./pPFBA_kapps_in_vivo.txt', 'w') as f:
 kapp_med = np.median(list(kapp.values())) * 3600
 kapp_max = max(list(kapps_rba.values())) 
 kapp_ma_med = np.median(list(kapp_minimal_assumptions.values()))
-kapp_ma_max = np.max(list(kapp_minimal_assumptions.values()))
-kapp_ma_default = kapp_ma_med
+# kapp_ma_max = np.max(list(kapp_minimal_assumptions.values()))
+# kapp_ma_default = kapp_ma_med
 default_kapp = kapp_med + tol
 # return kapps in a format suitable for use in RBA
 kapp_txt = ['/']
@@ -351,11 +351,19 @@ with open('./pPFBA_kapps_per_hr_without_unused_rxns.txt', 'w') as f:
     old_kapps = dict()
     new_kapps = dict()
     # read old version of file (to filter out non-default and irrelevant values) and compare to new version
-    for txt,dict in {f.read().split('\n'):old_kapps,perhr_texts_used_only:new_kapps}.items():
+    
+    for dict, txt in {old_kapps: f.read().split('\n'), new_kapps: perhr_texts_used_only}.items():
         for line in txt:
             if '/' not in line.split('\t'):
-                k,v = line.split('\t')
+                k, v = line.split('\t')
                 dict[k] = v
+    # print any differences
+    for k,v in old_kapps.items():
+        if k in new_kapps.keys():
+            if v != new_kapps[k]:
+                print('kapp changed:',k,'old:',v,'new:',new_kapps[k])
+        # else:
+        #     print('kapp removed:',k,v)
     # old_kapps = {k:v for k,v in f.read().split('\n').split('\t') if '/' not in [k,v]}
     # new_kapps = {k:v for k,v in perhr_texts_used_only.split('\t') if '/' not in [k,v]}
     f.write('\n'.join(sorted(perhr_texts_used_only) + ['/']))
