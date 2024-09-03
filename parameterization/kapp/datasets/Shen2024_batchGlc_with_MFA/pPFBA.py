@@ -5,6 +5,8 @@ from kapp_options import *
 min_flux_cutoff = 1e-9
 # tolerance value added to assist with rounding kapps; set to 0 if not needed
 tol = 0
+# if kapp_diff_tol <= abs(1 - (new_kapp/old_kapp)), difference is considered significant
+kapp_diff_tol = 0.1
 
 # if './pPFBA_kapps_in_vivo.txt' doesn't exist, make it by copying the kapps file
 if not os.path.exists('./pPFBA_kapps_RBA.txt'):
@@ -330,8 +332,12 @@ with open('./pPFBA_kapps_in_vivo.txt', 'w') as f:
 kapp_med = np.median(list(kapp.values())) * 3600
 kapp_max = max(list(kapps_rba.values())) 
 kapp_ma_med = np.median(list(kapp_minimal_assumptions.values()))
-# kapp_ma_max = np.max(list(kapp_minimal_assumptions.values()))
-# kapp_ma_default = kapp_ma_med
+try:
+    kapp_ma_max = np.max(list(kapp_minimal_assumptions.values()))
+    kapp_ma_default = kapp_ma_med
+except:
+    kapp_ma_max = 0
+    kapp_ma_default = kapp_med
 default_kapp = kapp_med + tol
 # return kapps in a format suitable for use in RBA
 kapp_txt = ['/']
@@ -346,27 +352,34 @@ for r in rxns_essential_inactive:
         kapps_rba[r] = default_kapp + tol
 for k,v in kapps_rba.items():
     perhr_texts_used_only.append("'" + k + "'" + '\t' + str(v))
-
-with open('./pPFBA_kapps_per_hr_without_unused_rxns.txt', 'w') as f:
+path='./pPFBA_kapps_per_hr_without_unused_rxns.txt'
+with open(path, 'r') as f:
     old_kapps = dict()
     new_kapps = dict()
     # read old version of file (to filter out non-default and irrelevant values) and compare to new version
     # if file isn't empty
-    if os.path.getsize('./pPFBA_kapps_per_hr.txt') > 0:
-        for dict, txt in {old_kapps: f.read().split('\n'), new_kapps: perhr_texts_used_only}.items():
+    if os.path.getsize(path) > 0:
+        #for dic, txt in {old_kapps: f.read().split('\n'), new_kapps: perhr_texts_used_only}.items():
+        for i,txt in enumerate([f.read().split('\n'), perhr_texts_used_only]):
+            #print('dic:',str(dic),txt)
             for line in txt:
                 if '/' not in line.split('\t'):
                     k, v = line.split('\t')
-                    dict[k] = v
+                    if i == 0:
+                        old_kapps[k.replace("'","")] = v
+                    else:
+                        new_kapps[k.replace("'","")] = v
+        #print('old kapps:',str(old_kapps))
         # print any differences
         for k,v in old_kapps.items():
             if k in new_kapps.keys():
-                if v != new_kapps[k]:
-                    print('kapp changed:',k,'old:',v,'new:',new_kapps[k])
-            # else:
-            #     print('kapp removed:',k,v)
+                if kapp_diff_tol <= abs(1-(float(new_kapps[k])/float(v))):
+                    print('kapp changed by at least',kapp_diff_tol*100,"% :",k,'old:',v,'new:',new_kapps[k])
+            else:
+                 print('kapp removed:',k,v)
     # old_kapps = {k:v for k,v in f.read().split('\n').split('\t') if '/' not in [k,v]}
     # new_kapps = {k:v for k,v in perhr_texts_used_only.split('\t') if '/' not in [k,v]}
+with open(path, 'w') as f:
     f.write('\n'.join(sorted(perhr_texts_used_only) + ['/']))
 
 output_info = []
@@ -453,4 +466,5 @@ if stat == 'optimal':
     print('kapp test successful')
 else:
     raise ValueError('kapp test failed')
+
 

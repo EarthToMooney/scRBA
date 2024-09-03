@@ -3,6 +3,9 @@ from kapp_options import *
 min_flux_cutoff = 1e-9
 # tolerance value added to assist with rounding kapps; set to 0 if not needed
 tol = 0
+# remove pPFBA_kapps_RBA.txt if it exists, to reset optional testing files
+if True and os.path.exists('./pPFBA_kapps_RBA.txt'):
+    os.remove('./pPFBA_kapps_RBA.txt')
 
 # Load enzyme info
 df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xlsx')

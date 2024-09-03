@@ -1,0 +1,1 @@
+Equation EnzCap0; EnzCap0.. v('ENZLOAD-GTHOXt_c_e_FWD-YJL212C')*386660566.12499076 =e= %mu% * v('RXN-GTHOXt_c_e_FWD-YJL212C');
