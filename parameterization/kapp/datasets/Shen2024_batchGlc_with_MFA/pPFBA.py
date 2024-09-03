@@ -351,19 +351,20 @@ with open('./pPFBA_kapps_per_hr_without_unused_rxns.txt', 'w') as f:
     old_kapps = dict()
     new_kapps = dict()
     # read old version of file (to filter out non-default and irrelevant values) and compare to new version
-    
-    for dict, txt in {old_kapps: f.read().split('\n'), new_kapps: perhr_texts_used_only}.items():
-        for line in txt:
-            if '/' not in line.split('\t'):
-                k, v = line.split('\t')
-                dict[k] = v
-    # print any differences
-    for k,v in old_kapps.items():
-        if k in new_kapps.keys():
-            if v != new_kapps[k]:
-                print('kapp changed:',k,'old:',v,'new:',new_kapps[k])
-        # else:
-        #     print('kapp removed:',k,v)
+    # if file isn't empty
+    if os.path.getsize('./pPFBA_kapps_per_hr.txt') > 0:
+        for dict, txt in {old_kapps: f.read().split('\n'), new_kapps: perhr_texts_used_only}.items():
+            for line in txt:
+                if '/' not in line.split('\t'):
+                    k, v = line.split('\t')
+                    dict[k] = v
+        # print any differences
+        for k,v in old_kapps.items():
+            if k in new_kapps.keys():
+                if v != new_kapps[k]:
+                    print('kapp changed:',k,'old:',v,'new:',new_kapps[k])
+            # else:
+            #     print('kapp removed:',k,v)
     # old_kapps = {k:v for k,v in f.read().split('\n').split('\t') if '/' not in [k,v]}
     # new_kapps = {k:v for k,v in perhr_texts_used_only.split('\t') if '/' not in [k,v]}
     f.write('\n'.join(sorted(perhr_texts_used_only) + ['/']))
