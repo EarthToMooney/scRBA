@@ -2,7 +2,7 @@
 from kapp_options import *
 min_flux_cutoff = 1e-9
 # tolerance value added to assist with rounding kapps; set to 0 if not needed
-tol = 1e-8
+tol = 0
 
 # Load enzyme info
 df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xlsx')
@@ -186,7 +186,7 @@ for enz in set1:
     
     enzval = res_esyn.raw_flux['ENZSYN-' + enz]
     try:    
-        kapp[rid] = mu * abs(rval) / enzval / 3600
+        kapp[rid] = (mu * abs(rval) / enzval) / 3600
         kapps_rba[rid] = kapp[rid] * 3600 + tol
     except:
         print('kapp calc error: mu',type(mu),mu,'rval',type(rval),rval,'enzval',type(enzval),enzval)
@@ -209,7 +209,7 @@ for enz in set2:
     enzval = res_esyn.raw_flux['ENZSYN-' + enz]
     
     for rid in rids:
-        kapp[rid] = mu * rvalsum / enzval / 3600
+        kapp[rid] = (mu * rvalsum / enzval) / 3600
         kapps_rba[rid] = kapp[rid] * 3600 + tol
         
 ### Set 3: Enzyme-reaction many-to-one
@@ -230,7 +230,7 @@ for rxn in rxns:
     enzval = sum(enzvals) # changed to match scRBA suppMat description; originally found the max value, not the sum
         
     for rid in rids:
-        kapp[rid] = mu * abs(rval) / enzval / 3600
+        kapp[rid] = (mu * abs(rval) / enzval) / 3600
         kapps_rba[rid] = kapp[rid] * 3600 + tol
         
 ### Set 4: Enzyme-reaction many-to-many
@@ -300,7 +300,7 @@ for enztext,x in mapper.items():
             rids.append('RXN-' + rxn + '_' + rdir + '-' + enz)
             
     for rid in rids:
-        kapp[rid] = mu * rxnval / enzval / 3600
+        kapp[rid] = (mu * rxnval / enzval) / 3600
         kapps_rba[rid] = kapp[rid] * 3600 + tol
 #Flux is numerically low, near zero
 with open('../exclude_parameterization_list.txt') as f:
@@ -324,8 +324,8 @@ kapp_med = np.median(list(kapp.values())) * 3600
 kapp_max = max(list(kapps_rba.values())) 
 kapp_ma_med = np.median(list(kapp_minimal_assumptions.values()))
 kapp_ma_max = np.max(list(kapp_minimal_assumptions.values()))
-kapp_ma_default = kapp_ma_max
-default_kapp = kapp_max + tol
+kapp_ma_default = kapp_ma_med
+default_kapp = kapp_med + tol
 # return kapps in a format suitable for use in RBA
 kapp_txt = ['/']
 
