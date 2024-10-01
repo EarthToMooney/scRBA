@@ -15,5 +15,4 @@
 'RXN-EX_h_e_REV-SPONT'
 'RXN-EX_o2_e_REV-SPONT'
 'RXN-EX_glc__D_e_REV-SPONT'
-'RXN-EX_btn_c_REV-SPONT'
 /

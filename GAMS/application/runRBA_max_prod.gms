@@ -78,7 +78,7 @@ z, v(j)
 *** SET FLUX LOWER AND UPPER BOUNDS ***
 v.lo(j) = 0; v.up(j) = 1e3 * %nscale%;
 * bounds from GSM model
-$include %model_root_path%GAMS/model/GSM_rxn_bounds.txt
+*$include %model_root_path%GAMS/model/GSM_rxn_bounds.txt
 
 * Simulation top-level settings
 * Enable or disable wasteful protein production, disabled by default (to solve faster)
