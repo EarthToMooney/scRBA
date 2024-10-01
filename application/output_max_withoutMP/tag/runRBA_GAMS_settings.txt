@@ -16,5 +16,5 @@ $setGlobal prolen_path ../../../GAMS/model/RBA_proteinLength.txt
 $setGlobal enz_cap_declares_path ../../../GAMS/model/RBA_enzCapacityConstraints_declares.txt
 $setGlobal enz_cap_eqns_path ../../../GAMS/model/RBA_enzCapacityConstraints_eqns_equality_version.txt
 
-$setGlobal kapp_path %model_root_path%input/kapp_Glc_batch_per_hour.txt
+$setGlobal kapp_path %model_root_path%input/RBA_kapp_chemo_lowC_per_hour.txt
 $setGlobal rxns_add_path ../../input/GAMS_model_application/RBA_rxns_add.txt

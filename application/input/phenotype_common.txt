@@ -31,10 +31,10 @@ $setGlobal prosynSlackAllow 1e4 * %nscale%
 * minProsynSlack = 1 if you want to minimize deviations from the measured proteome before finding the highest yields, 
 ** 0 otherwise
 $setGlobal minProsynSlack 1
-Parameters
-prosyn_for_kapps(j)
+*Parameters
+*prosyn_for_kapps(j)
 *$include "%model_root_path%parameterization/kapp/datasets/Rabinowitz2023_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/test.prosyn_frac_unscaled.txt"
-$include "%model_root_path%parameterization/kapp/datasets/Rabinowitz2023_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/test.prosyn_unscaled.txt"
+*$include "%model_root_path%parameterization/kapp/datasets/Rabinowitz2023_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/test.prosyn_unscaled.txt"
 ;
 Variables prosynSlackSum, prosynSlackUB(j), prosynSlackLB(j)
 ;

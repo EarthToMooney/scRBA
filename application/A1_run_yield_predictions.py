@@ -26,14 +26,14 @@ copy_input_files = True # set to False if you want to customize them
 df_rxns = pd.read_excel('./input/pathways.xlsx')
 df_prod_info = pd.read_excel('./input/prod_mw.xlsx', header=None)
 
-modelname = 'iRhtoBatch-Rabinowitz'
+modelname = 'GSM_iSace1144_rba'
 #modelname = 'iRhtoN'
 model = cobra.io.load_json_model('../build_model/input/'+modelname+'.json')
 model = deepcopy(model)
 model.solver = 'glpk'
 no_gam = False # WIP: add way for FBA to be affected by this
 RBA_biomass_rxn = 'BIOSYN-BIODILAERO-NOGAM' if no_gam else 'BIOSYN-BIODILAERO'
-FBA_biomass_rxn = 'BIOMASS_MFA_NO_GAM' if no_gam else 'BIOMASS'
+FBA_biomass_rxn = 'BIOMASS_MFA_NO_GAM' if no_gam else 'BIOMASS_AERO_SC_hvd'
 newmodel_path = './input/'+modelname+'_pathwayadd.json'
 vmax = 1000 # highest absolute value of any flux in GSM model
 

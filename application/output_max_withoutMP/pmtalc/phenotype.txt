@@ -6,5 +6,3 @@ $include RBA_GAMS_defaults_from_FBA.txt
 * removes mitochondrial capacity limits
 $setGlobal max_allowed_mito_proteome_allo_fraction 1
 *$include ../../input/prosyn_constraints.txt
-v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0;
-v.fx('RXN-EX_glc__D_e_REV-SPONT') = 0;
