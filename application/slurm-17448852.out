@@ -1,3 +1,0 @@
-  File "/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py", line 622
-    df.to_excel('./compiled_results.xlsx', index=False)
-SyntaxError: expected 'except' or 'finally' block

@@ -1,0 +1,2 @@
+"prod"	"method"	"growth rate"	"yield"
+"RXNADD-EX_odealc_e_FWD-SPONT"	"fba"	0.013333333333333	"UNDF"

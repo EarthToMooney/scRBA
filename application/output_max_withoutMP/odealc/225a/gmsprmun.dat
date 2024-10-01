@@ -1,0 +1,7 @@
+Input=runRBA_max_prod.gms
+Output=/dev/null
+ScrDir=225a
+SysDir=/storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx
+ScriptNext=225a/gamsnext.sh
+--carbonSlack=0
+--adjust_constraints_if_infeas=1

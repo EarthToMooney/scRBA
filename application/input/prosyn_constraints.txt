@@ -1,0 +1,3 @@
+$setGlobal PSKslack 10
+Equations proSynKappUB(j); proSynKappUB(j)$(prosyn_for_kapps(j) > 0).. v(j) =l= (1 + %PSKslack%) * %nscale% * %mu% * prosyn_for_kapps(j) / .38;
+Equations proSynKappLB(j); proSynKappLB(j)$(prosyn_for_kapps(j) > 0).. v(j) =g= (1 - %PSKslack%) * %nscale% * %mu% * prosyn_for_kapps(j) / .38;

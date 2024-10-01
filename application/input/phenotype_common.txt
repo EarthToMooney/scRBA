@@ -9,16 +9,45 @@ $include ../../../pycore/binary_search/model-version-settings.txt
 
 * file with settings updated by build_model scripts, to help with managing multiple GSM models
 
-$setGlobal kribonuc 6.6*3600
-$setGlobal kribomito 6.6*3600
+$setGlobal kribonuc (6.6+7.6)*3600
+$setGlobal kribomito (6.6+5.6)*3600
 
 * extra dummy protein for 0.3% of proteome not identified in measurements
-Equation dummyUnidentified; dummyUnidentified.. v('PROSYN-PROTDUMMYUNIDENTIFIED') =e= 0.003 * v('BIOSYN-PROTTOBIO');
+*Equation dummyUnidentified; dummyUnidentified.. v('PROSYN-PROTDUMMYUNIDENTIFIED') =e= 0.003 * v('BIOSYN-PROTTOBIO');
 
 * Substrate and oxygenation
 v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0 * %nscale%;
-v.up('RXN-EX_o2_e_REV-SPONT') = 1e3 * %nscale%;
+* MFA o2 uptake (mu=0.38) = ~15; o2 uptake at glc uptake of 10, maximizing growth (mu=0.8 for GSM model) = ~26
+*v.up('RXN-EX_o2_e_REV-SPONT') = (15.9684414) * %nscale%;
+v.up('RXN-EX_o2_e_REV-SPONT') = (26.25403530509562) * %nscale%;
 v.fx('RXN-EX_o2_e_FWD-SPONT') = 0 * %nscale%;
 
 * Turn off forming incomplete functional enzyme (to prevent cheap incomplete complex from being formed)
 *$include ./incomplete_enzyme_complex_off.txt
+
+* force relative abundances of proteins to match kapp calculations
+* If needed, could also try forcing PROWASTE to match, since it's off by default
+$setGlobal prosynSlackAllow 1e4 * %nscale%
+* minProsynSlack = 1 if you want to minimize deviations from the measured proteome before finding the highest yields, 
+** 0 otherwise
+$setGlobal minProsynSlack 1
+Parameters
+prosyn_for_kapps(j)
+*$include "%model_root_path%parameterization/kapp/datasets/Rabinowitz2023_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/test.prosyn_frac_unscaled.txt"
+$include "%model_root_path%parameterization/kapp/datasets/Rabinowitz2023_batchGlc_using_MFA_and_scRBA_methods/min_flux_violation/test.prosyn_unscaled.txt"
+;
+Variables prosynSlackSum, prosynSlackUB(j), prosynSlackLB(j)
+;
+prosynSlackLB.lo(j) = 0; prosynSlackLB.up(j) = inf;
+prosynSlackUB.lo(j) = 0; prosynSlackUB.up(j) = inf;
+
+$setGlobal biom_id_default 'BIOSYN-BIODILAERO'
+$setGlobal mu_0 0.38
+* force relative abundances of proteins to match kapp calculations
+*Equations proSynKapp(j); proSynKapp(j)$(prosyn_for_kapps(j) > 0).. v(j) - prosynSlackLB(j) + prosynSlackUB(j) =e= v('%biom_id_default%') * prosyn_for_kapps(j) / (%mu_0%);
+*Equations proSynKapp(j); proSynKapp(j)$(prosyn_for_kapps(j) > 0).. v(j) - prosynSlackLB(j) + prosynSlackUB(j) =e= v('%biom_id_default%') * prosyn_for_kapps(j) / (%mu_0% * %nscale%);
+*Equations proSynKappUB(j); proSynKappUB(j)$(prosyn_for_kapps(j) > 0).. v(j) - prosynSlackUB(j) =l= v('%biom_id_default%') * prosyn_for_kapps(j) / %mu_0%;
+*Equations proSynKappLB(j); proSynKappLB(j)$(prosyn_for_kapps(j) > 0).. v(j) + prosynSlackLB(j) =g= v('%biom_id_default%') * prosyn_for_kapps(j) / %mu_0%;
+*Equations proSynKappUB(j); proSynKappUB(j)$(prosyn_for_kapps(j) > 0).. v(j) - prosynSlackUB(j) =l= v('BIOSYN-PROTTOBIO') * prosyn_for_kapps(j);
+*Equations proSynKappLB(j); proSynKappLB(j)$(prosyn_for_kapps(j) > 0).. v(j) + prosynSlackLB(j) =g= v('BIOSYN-PROTTOBIO') * prosyn_for_kapps(j);
+Equation PSS; PSS.. prosynSlackSum =e= sum(j, prosynSlackLB(j) + prosynSlackUB(j));

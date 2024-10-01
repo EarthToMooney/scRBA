@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/scratch/ejm6426/rtRBA-main/application/A1_run_yield_predictions.py", line 4, in <module>
-    import cobra
-ModuleNotFoundError: No module named 'cobra'

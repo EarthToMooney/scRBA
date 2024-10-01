@@ -1,0 +1,8 @@
+* adds phenotype_common.txt, then settings based on FBA yield predictions
+$include RBA_GAMS_defaults_from_FBA.txt
+
+* everything below overrides default settings, including phenotype_common.txt
+
+* revert to original FBA settings, to prevent overreliance on amino acids instead of sucrose
+$include RBA_GAMS_defaults_from_FBA_initial.txt
+v.up('RXN-EX_glc__D_e_REV-SPONT') = 0;
