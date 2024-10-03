@@ -27,7 +27,6 @@ df_rxns = pd.read_excel('./input/pathways.xlsx')
 df_prod_info = pd.read_excel('./input/prod_mw.xlsx', header=None)
 
 modelname = 'GSM_iSace1144_rba'
-#modelname = 'iRhtoN'
 model = cobra.io.load_json_model('../build_model/input/'+modelname+'.json')
 model = deepcopy(model)
 model.solver = 'glpk'
