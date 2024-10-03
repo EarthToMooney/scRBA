@@ -736,7 +736,9 @@ if rerun_RBA:
                 os.system('\n'.join(cmds))
     # read RBA results
     RBA_result_dict = dict()
-    for prodname in prods:
+    # make df to store results; index is rxn name
+    df_fluxes = pd.DataFrame(columns=['Rxn'])
+    for prodname in sorted(prods):
         if prodname == '3hpp':
             plist = ['3hppa', '3hppb']
         else:
@@ -750,6 +752,25 @@ if rerun_RBA:
                 for k in ['vprod','vCarbonSources','yield']:
                     RBA_result_dict[p][k] = ''
                 continue
+            # check if flux_escher.csv exists; add fluxes to fluxes dataframe
+            flux_path = outputFolder + p + '/flux.escher.csv'
+            if os.path.exists(flux_path):
+                with open(flux_path) as f:
+                    # convert to dataframe (1st row is header)
+                    df_flux = pd.read_csv(f)
+                    # add fluxes to df_fluxes
+                    # make new column in df_fluxes for this file
+                    df_fluxes[p] = ''
+                    # for each flux in df_flux, add to df_fluxes (row is rxn name, column is product)
+                    for i in df_flux.index:
+                        # check if rxn is already in df_fluxes
+                        if df_flux.loc[i, 'Rxn'] not in df_fluxes['Rxn'].values:
+                            # add row to df_fluxes
+                            df_fluxes.loc[df_fluxes.shape[0]] = ''
+                            # add rxn name to the index
+                            df_fluxes.loc[df_fluxes.shape[0] - 1, 'Rxn'] = df_flux.loc[i, 'Rxn']
+                        # add flux to df_fluxes
+                        df_fluxes.loc[df_fluxes['Rxn'] == df_flux.loc[i, 'Rxn'], p] = df_flux.loc[i, 'Flux']
             with open(outputFolder + p + '/report.txt') as f:
                 text = f.read().split('\n')
             # also read runRBA.yields.txt, if it exists
@@ -778,6 +799,8 @@ if rerun_RBA:
                     RBA_result_dict[p][k] = v
                 
             print(RBA_result_dict[p]['vprod'])
+    df_fluxes_sorted = df_fluxes.sort_values(by='Rxn')
+    df_fluxes_sorted.to_csv(outputFolder + 'fluxes.csv', index=False)
 
 # copy compiled_results_template.xlsx to compiled_results.xlsx
 # don't put file extension; copy sheet into outputFolder
