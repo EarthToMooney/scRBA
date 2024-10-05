@@ -3,7 +3,7 @@
 $INLINECOM /*  */
 $include "../GAMS_setting_files/test_kapp_GAMS_settings.txt"
 * Scale values of all variables by a factor, then when write to file, descale them
-$setGlobal nscale 1e3
+$setGlobal nscale 1e5
 $setGlobal vmax 1e3
 
 * Optional constraint on allowed proteome allocation to mitochondrial proteins 
@@ -43,6 +43,8 @@ nuc_translation(j)
 $include "%nuc_trans_path%"
 mito_translation(j)
 $include "%mito_trans_path%"
+unknown_ribo_translation(j)
+$include "%unknown_ribo_trans_path%"
 uptake(j) /*list of uptake so that all of them are properly turned off*/
 $include "%uptake_path%"
 media(j) /*list of allowable uptake based on simulated media conditions*/
@@ -65,21 +67,23 @@ z, prosynSlackSum, nonessentialInactiveFluxSum, inactiveFluxSum, fluxSum, v(j), 
 kapp_slack_ub(j),kapp_slack_lb(j)
 ;
 kapp_slack_ub.lo(j) = 0;
-kapp_slack_ub.up(j) = 1e10;
+kapp_slack_ub.up(j) = inf;
 kapp_slack_lb.lo(j) = 0;
-kapp_slack_lb.up(j) = 1e10;
+kapp_slack_lb.up(j) = inf;
 kapp_slack_ub.fx(j)$(prosyn(j) or prowaste(j) or nuc_translation(j) or mito_translation(j) or uptake(j) or media(j)) = 0;
 kapp_slack_lb.fx(j)$(prosyn(j) or prowaste(j) or nuc_translation(j) or mito_translation(j) or uptake(j) or media(j)) = 0;
 
 *** SET FLUX LOWER AND UPPER BOUNDS ***
 v.lo(j) = 0; v.up(j) = %vmax% * %nscale%;
+* bounds from GSM model
+$include %gms_path%GSM_rxn_bounds.txt
 
 * Simulation top-level settings
 * Enable or disable wasteful protein production, disabled by default (to solve faster)
 * Note in solving: Enable protein waste flux might cause error for solver
 * This is because enabling protein waste introduces several thousands more free variable to the system
 * Thus, protein waste should only be implemented with actual data to constrain the free variable
-v.fx(j)$prowaste(j) = 0;
+*v.fx(j)$prowaste(j) = 0; v.up('PROWASTE-TOTALPROTEIN') = inf; v.up('PROWASTE-PROTCYT') = inf;
 
 * Disable all biomass reactions
 * Condition-specific biomass reaction activation has to be done in phenotype.txt file
@@ -94,18 +98,19 @@ $include "%phenotype_path%"
 
 *** EQUATION DEFINITIONS ***
 Equations
-Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo
+Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo, UnknownRiboCapacity
 $include %enz_cap_declares_path%
 ;
 
 * Obj..			z =e= v('BIOSYN-PROTMODELED');
 Obj..			z =e= sum(j, kapp_slack_lb(j) + kapp_slack_ub(j));
 Stoic(i)..		sum(j, S(i,j)*v(j)) =e= 0;
-RiboCapacityMito.. 	v('RIBOSYN-ribomito') * %kribomito% =e= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
-RiboCapacityNuc.. 	v('RIBOSYN-ribonuc') * %kribonuc% =e= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
+RiboCapacityMito.. 	v('RIBOSYN-ribomito') * %kribomito% =g= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
+RiboCapacityNuc.. 	v('RIBOSYN-ribonuc') * %kribonuc% =g= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
+UnknownRiboCapacity..	v('RIBOSYN-ribonuc') * %kribonuc% + v('RIBOSYN-ribomito') * %kribomito% =g= %mu% * (sum(j$nuc_translation(j), NAA(j) * v(j)) + sum(j$mito_translation(j), NAA(j) * v(j)) + sum(j$unknown_ribo_translation(j), NAA(j) * v(j)));
 NonModelProtAllo..	v('BIOSYN-PROTMODELED') =e= (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
 MitoProtAllo..		v('BIOSYN-PROTMITO') =l= %max_allowed_mito_proteome_allo_fraction% * v('BIOSYN-PROTMODELED');
-$include "%model_root_path%GAMS/model/kapp-slack-RBA_enzCapacityConstraints_equality_version.txt" 
+$include "%gms_path%kapp-slack-RBA_enzCapacityConstraints_equality_version.txt" 
 
 *** BUILD OPTIMIZATION MODEL ***
 Model rba
@@ -148,3 +153,4 @@ loop(j,
 	);
 );
 putclose ff4;
+

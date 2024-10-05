@@ -5,7 +5,6 @@ aa_map = pd.read_csv(aa_mapping_path, sep='\t')
 aa_dict = dict(zip(aa_map['aa_abbv'], aa_map['MW']))
 
 # Mass fraction of proteome that's not explicitly modeled. Set to 0 if recalculate_nonmodeled_proteome_allocation = True.
-nonmodeled_proteome_allocation = 0
 nonmodel_protein_data_path = './nonmodeled_proteins.json'
 # if path exists
 if os.path.exists(nonmodel_protein_data_path): 
@@ -20,7 +19,7 @@ max_allowed_mito_proteome_allo_fraction = 0
 recalculate_mito_proteome_allocation = True
 ATP_cost_of_translation = 0 # mmol ATP/(gDW*h); calculated from data if 0
 
-search_uniprot_for_nonmodeled_sequences = True
+search_uniprot_for_nonmodeled_sequences = False
 uniprot_url = 'https://rest.uniprot.org/uniprotkb/'
 
 # flux data (e.g., from MFA) is optional
@@ -110,6 +109,7 @@ if recalculate_nonmodeled_proteome_allocation:
                     break
             # consider scraping uniprot for sequence or using API if they have one
             if search_uniprot_for_nonmodeled_sequences and not seq:
+                print('searching uniprot for', df_raw.loc[i, uniprot_col])
                 # search uniprot for protein sequence
                 url = uniprot_url + df_raw.loc[i, uniprot_col] + '?format=json'
                 # get response, convert to dict
@@ -212,7 +212,12 @@ df_data.loc[idx, cols] = df_prot.loc[idx, cols]
 protein_categories = dict() # key: protein id, value: set of categories to track (e.g., mitochondrial, modeled)
 for i in df_data.index:
     protein_categories[i] = set()
-    data = df_raw.loc[i, cols_data]
+    data = df_raw.loc[i, cols_data].values.tolist()
+    # remove rows containing the column name; print out which were removed
+    # for d in data:
+    #     if type(d) == str:
+    #         print(i, 'dropped from data due to being a string:', d)
+    #         data = data.drop(d)
     # for d in data:
     #     if type(d) != ('int' or 'float'): 
     
@@ -314,8 +319,12 @@ for i in df_data.index:
             iter += 1
             allcopies = [i]
         sumlimits_pro_set.append("'" + i + "'")
-        sumlimits_proin.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROIN-" + copy + "')" for copy in allcopies]) + " =l= " + str(vtrans) + "*1e6;")
-        sumlimits.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROSYN-" + copy + "')" for copy in allcopies]) + " =e= " + str(vtrans) + " * %nscale% * (1 - prosynSlackLB('" + i + "') + prosynSlackUB('" + i + "'));")
+        if vtrans == 0 and allow_trans_when_measurement_is_0:
+            sumlimits_proin.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROIN-" + copy + "')" for copy in allcopies]) + " =l= " + str(vtrans) + "*1e6;")
+            sumlimits.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROSYN-" + copy + "')" for copy in allcopies]) + " =e= prosynSlackUB('" + i + "');")
+        else:
+            sumlimits_proin.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROIN-" + copy + "')" for copy in allcopies]) + " =l= " + str(vtrans) + "*1e6;")
+            sumlimits.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROSYN-" + copy + "')" for copy in allcopies]) + " =e= " + str(vtrans) + " * %nscale% * (1 - prosynSlackLB('" + i + "') + prosynSlackUB('" + i + "'));")
     if recalculate_mito_proteome_allocation and 'can be in mitochondria' in protein_categories[i]:
         max_allowed_mito_proteome_allo_fraction += df_data.loc[i,'c_avg']
 # remove all duplicate rows
