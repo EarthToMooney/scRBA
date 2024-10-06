@@ -12,4 +12,4 @@ simdisplay = 0
 siftdisplay = 0
 tuningdisplay = 0
 *writeannotation = /dev/null
-multobjdisplay = 0
+multobjdisplay = 0netdisplay = 0

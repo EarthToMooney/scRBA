@@ -2,24 +2,19 @@
 *       Authors: (v1) Hoang Dinh, (v2) Eric Mooney
 ***********************************************************************************
 
-* define current gms file for use in other files
-$setGlobal gms %system.FN%
-* ignore constraints requiring production of measured but unused proteins from kapp calculations
-$setGlobal ignore_measured_unused_constraints 1
-
 $INLINECOM /*  */
 $include "./min_flux_violation_GAMS_settings.txt"
 $setGlobal nscale 1e5
 * max fluxes allowed, and min fluxes deemed significant enough to report
 $setGlobal vmax 1e3
-$setGlobal vmin 0 
+$setGlobal vmin 1e-12
 * slacks turned off by default, 
 * 	but included to account for measurement errors when needed
 $setGlobal venzSlackAllow 0
 $setGlobal fluxSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * small value needed to ensure sequential problems aren't infeasible due to rounding errors
-$setGlobal epsilon 1e-6 
+$setGlobal epsilon 1e-6
 
 options
     LP = cplex /*Solver selection*/
@@ -31,9 +26,6 @@ options
     sysout = on /*solver status file report option*/
     solprint = on /*solution printing option*/
         
-* remove existing modelStat file to avoid issues w/ model status detection       
-file ff /%system.FN%.modelStat.txt/; putclose ff '';
-
 Sets
 i
 $include "%species_path%"
@@ -59,8 +51,8 @@ media(j) /*list of allowable uptake based on simulated media conditions*/
 $include "%media_path%"
 rxns_biomass(j)
 $include "%biomass_path%"
-rxns_with_no_prodata(j) /*enzymatic rxns without proteomics data for all their enz subunits*/
-$include "%rxns_with_no_prodata_path%"
+rxns_inactive(j)
+$include "%rxns_inactive_path%"
 prodata_set(j)
 $include "%proteome_data_set_path%"
 rxns_metab(j)
@@ -84,7 +76,7 @@ $include "%v_exp_ub_path%"
 
 * slacks for allowing fluxes to deviate from measured values when necessary
 Variables
-prosynSlackSum, fluxSum_j_NP, fluxSum, v(j), venzSlack(j), fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j), prosynSlackLB(pro), prosynSlackUB(pro)
+prosynSlackSum, inactiveFluxSum, fluxSum, v(j), venzSlack(j), fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j), prosynSlackLB(pro), prosynSlackUB(pro)
 ;
 venzSlack.lo(j) = 0; venzSlack.up(j) = %venzSlackAllow%;
 prosynSlackLB.lo(pro) = 0; prosynSlackLB.up(pro) = %prosynSlackAllow%;
@@ -120,7 +112,7 @@ Equations
 Obj, Obj2, Obj3, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB_exp, GSM_UB_exp, fluxSlackBounds, MitoProtAllo
 ;
 Obj..				prosynSlackSum =e= sum(pro, prosynSlackLB(pro) + prosynSlackUB(pro));
-Obj2..				fluxSum_j_NP =e= sum(j$rxns_with_no_prodata(j), v(j));
+Obj2..				inactiveFluxSum =e= sum(j$rxns_inactive(j), v(j));
 Obj3..				fluxSum =e= sum(j$rxns_metab(j), v(j));
 Stoic(i)..			sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityNuc..	v('RIBOSYN-ribonuc') * %kribonuc% =g= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
@@ -134,44 +126,28 @@ GSM_LB_exp(gsm_j)$v_exp_lb(gsm_j).. sum(j,dir(gsm_j,j)*v(j)) =g= (v_exp_lb(gsm_j
 GSM_UB_exp(gsm_j)$v_exp_ub(gsm_j).. sum(j,dir(gsm_j,j)*v(j)) =l= (v_exp_ub(gsm_j) * %nscale%) + s_v_exp_ub(gsm_j);
 fluxSlackBounds..		fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_j));
 
+* If any inactive essential rxns have kapps predicted from C1_calculate_kapp.py, 
+* 	we will use them to constrain the fluxes so the effects of their protein demands are accounted for
+*$include "../kapp_test.txt"
+*$include "%fluxcap_path%"
+
 * minimize disagreement with proteomics data, while allowing some where needed (e.g., measurement errors)
-Model minProSlack /all/;
-minProSlack.optfile = 1;
-Solve minProSlack using lp minimizing prosynSlackSum;
-if (minProSlack.modelStat ne 1, abort.noError "no optimal solution found";);
+Model prosyn /all/;
+prosyn.optfile = 1;
+Solve prosyn using lp minimizing prosynSlackSum;
 
 prosynSlackSum.up = prosynSlackSum.l + %epsilon%;
-* minimize disagreements with flux data
-Model minFluxDeviations /all/;
-minFluxDeviations.optfile = 1;
-Solve minFluxDeviations using lp minimizing fluxSlack;
-if (minFluxDeviations.modelStat ne 1, abort.noError "no optimal solution found";);
-fluxSlack.up = fluxSlack.l + (1e-7 + %epsilon%);
 
-* minimize fluxes w/o proteomics data, to reduce reliance on rxns whose proteins aren't made
-Model min_j_NP /all/;
-min_j_NP.optfile = 1;
-Solve min_j_NP using lp minimizing fluxSum_j_NP;
-if (min_j_NP.modelStat ne 1, abort.noError "no optimal solution found";);
-* force rxns that were turned off to stay off
-v.fx(j)$(rxns_with_no_prodata(j) and (v.l(j) eq 0)) = 0;
-
-fluxSum_j_NP.up = fluxSum_j_NP.l + (1e-4);
-
-* minimize total flux sum, to satisfy parsimony assumption
-Model minFlux /all/;
-minFlux.optfile = 1;
-Solve minFlux using lp minimizing fluxSum;
-
+file ff /%system.FN%.modelStat.txt/;
 ff.nr = 2; put ff; ff.pc=6;
-put minFlux.modelStat/;
+put prosyn.modelStat/;
 putclose ff;
 
 file ff2 /%system.FN%.objectives.txt/;
 ff2.nr = 2; put ff2; ff2.pc=6;
 put 'prosynSlackSum',prosynSlackSum.l:0:11/;
 put 'fluxSlackSum',(fluxSlack.l/%nscale%):0:11/;
-put 'fluxSum_j_NP',(fluxSum_j_NP.l/%nscale%):0:11/;
+put 'inactiveFluxSum',(inactiveFluxSum.l/%nscale%):0:11/;
 put 'fluxSum',(fluxSum.l/%nscale%):0:11/;
 putclose ff2;
 
@@ -193,33 +169,29 @@ loop(j,
 );
 putclose ff3a;
 
-file ff4 /%system.FN%.flux_essential_with_no_prodata_gamsscaled.txt/;
-file ff4c /%system.FN%.rxns_essential_with_no_prodata_gamsscaled.txt/;
+file ff4 /%system.FN%.flux_essential_inactive_rxns_gamsscaled.txt/;
 ff4.nr = 2; put ff4;
-ff4c.nr = 2; put ff4c;
-put ff4c '/'/;
-loop(j$rxns_with_no_prodata(j),
+loop(j$rxns_inactive(j),
     if ( (v.l(j) gt %vmin%),
-        put ff4 j.tl:0, system.tab, 'v', system.tab, v.l(j):0:15/ ff4c "'" j.tl:0 "'" system.tab v.l(j):0:15/;
+        put j.tl:0, system.tab, 'v', system.tab, v.l(j):0:15/;
     );
 );
-put ff4c '/';
-putclose ff4 ff4c;
+putclose ff4;
 
-file ff4a /%system.FN%.flux_essential_with_no_prodata_unscaled.txt/;
+file ff4a /%system.FN%.flux_essential_inactive_rxns_unscaled.txt/;
 ff4a.nr = 2; put ff4a;
-loop(j$rxns_with_no_prodata(j),
+loop(j$rxns_inactive(j),
     if ( (v.l(j) gt %vmin%),
         put j.tl:0, system.tab, 'v', system.tab, (v.l(j)/%nscale%):0:15/;
     );
 );
 putclose ff4a;
 
-file ff4b /%system.FN%.rxns_nonessential_with_no_prodata.txt/;
+file ff4b /%system.FN%.nonessential_inactive_rxns.txt/;
 ff4b.nr = 2; put ff4b;
 put '/'/;
-loop(j$(rxns_with_no_prodata(j)),
-    if ( (v.l(j) le %vmin%),
+loop(j$(rxns_inactive(j)),
+    if ( (v.l(j) lt %vmin%),
         put j.tl:0/;
     );
 );
@@ -238,7 +210,7 @@ putclose ff5;
 file ff6 /%system.FN%.s_v_exp.txt/;
 ff6.nr = 2; ff6.pc=6; put ff6;
 loop(gsm_j,
-    if ( (s_v_exp_lb.l(gsm_j) gt %vmin%) or (s_v_exp_ub.l(gsm_j) gt %vmin%),
+    if ( (s_v_exp_lb.l(gsm_j) gt 1e-12) or (s_v_exp_ub.l(gsm_j) gt 1e-12),
         put gsm_j.tl:0, s_v_exp_lb.l(gsm_j):0:15, s_v_exp_ub.l(gsm_j):0:15/;
     );
 );

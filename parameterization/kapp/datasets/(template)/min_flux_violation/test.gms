@@ -11,8 +11,6 @@ $setGlobal nscale 1e5
 * max fluxes allowed, and min fluxes deemed significant enough to report
 $setGlobal vmax 1e3
 $setGlobal vmin 1e-9 
-* max predicted kapp, for use in approximating enzyme levels
-$setGlobal kapp_max 1e30
 *$setGlobal vmin 0 
 * slacks turned off by default, 
 * 	but included to account for measurement errors when needed
@@ -20,7 +18,7 @@ $setGlobal venzSlackAllow 0
 $setGlobal fluxSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * update to match solver tolerance
-$setGlobal tol 2e-2
+$setGlobal tol 1e-2
 
 options
     LP = cplex /*Solver selection*/
@@ -32,9 +30,6 @@ options
     sysout = on /*solver status file report option*/
     solprint = on /*solution printing option*/
         
-* remove existing modelStat file to avoid issues w/ model status detection       
-file ff /%system.FN%.modelStat.txt/; putclose ff '';
-
 Sets
 i
 $include "%species_path%"
@@ -117,7 +112,7 @@ v.lo(j) = 0; v.up(j) = %vmax% * %nscale%;
 $include %gms_path%GSM_rxn_bounds.txt
 
 ** Disable enzyme load network for reactions that can't be used
-*v.fx(j)$rxns_enzload(j) = 0;
+v.fx(j)$rxns_enzload(j) = 0;
 * force production of all enzymes involved in used rxns
 v.lo(j)$rxns_enzload_used(j) = %vmin% * (1+1e-8); 
 v.up(j)$rxns_enzload_used(j) = %vmax% * %nscale%;
@@ -140,7 +135,7 @@ $include "%phenotype_path%"
 
 *** EQUATION DEFINITIONS ***
 Equations
-Obj, PSS, kappEstSlack, Obj2, Obj3, Obj4, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB_exp, GSM_UB_exp, fluxSlackBounds, MitoProtAllo 
+Obj, PSS, kappEstSlack, Obj2, Obj3, Obj4, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB_exp, GSM_UB_exp, fluxSlackBounds, MitoProtAllo
 ;
 *$include "%fluxcap_declares_path%"
 
@@ -163,59 +158,41 @@ fluxSlackBounds..		fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_j
 *$include "%fluxcap_path%"
 $include "./enz_alloc_constraints_with_kapp_estimates.txt"
 
-$include "./enz_alloc_constraints.txt"
-Equation Obj5; Obj5.. slackSum =e= sum(j, EnzLoadSlackNeg(j) + EnzLoadSlackPos(j));
-
-file log /''/; 
 * minimize disagreement with proteomics data, while allowing some where needed (e.g., measurement errors)
-Model rba /all/;
-rba.optfile = 1;
-Solve rba using lp minimizing prosynSlackSum;
-put log; put 'minimized prosynSlackSum'/; putclose;
-if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-prosynSlackSum.up = prosynSlackSum.l*(1+(%tol%));
+Model m /all/;
+m.optfile = 1;
+Solve m using lp minimizing prosynSlackSum;
+prosynSlackSum.up = prosynSlackSum.l*(1+%tol%);
+display 'minimized prosynSlackSum';
 
-Solve rba using lp minimizing z;
-put log; put 'minimized prowaste mass'/; putclose;
-if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-z.up = z.l*(1+(%tol%));
+Solve m using lp minimizing kappEstSlackSum;
+kappEstSlackSum.up = kappEstSlackSum.l*(1+%tol%);
 
-Solve rba using lp minimizing kappEstSlackSum;
-put log; put 'minimized kappEstSlackSum'/; putclose;
-if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-kappEstSlackSum.up = kappEstSlackSum.l*(1+(1*%tol%));
+Solve m using lp minimizing fluxSlack;
+fluxSlack.up = fluxSlack.l*(1+%tol%);
 
-Solve rba using lp minimizing fluxSlack;
-put log; put 'minimized fluxSlack'/; putclose;
-if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-fluxSlack.up = fluxSlack.l*(1+(10*%tol%));
+Solve m using lp minimizing fluxSum_j_NP;
+fluxSum_j_NP.up = fluxSum_j_NP.l*(1+%tol%);
 
-Solve rba using lp minimizing fluxSum_j_NP;
-put log; put 'minimized fluxSum_j_NP'/; putclose;
-if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-* force rxns that were turned off to stay off
-v.fx(j)$(rxns_with_no_prodata(j) and (v.l(j) eq 0)) = 0;
-fluxSum_j_NP.up = fluxSum_j_NP.l*(1+(10*%tol%));
-
-*loop(enzload_rxn_coupling(j1,j),
-*	if (v.l(j) eq 0, 
-*			v.fx(j1) = 0;
-*		);
-*);
-
-Solve rba using lp minimizing fluxSum;
-put log; put 'minimized fluxSum'/; putclose;
-if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-* force total flux to previous value
-fluxSum.up = fluxSum.l*(1+%tol%);
+Solve m using lp minimizing fluxSum;
 
 * Solve again, encouraging more equal use of all enzymes
-* NOTE: disabled this step since it can lead to arbitrary reductions in ENZLOAD fluxes, even when other ones aren't being used. This can increase kapps by reducing the denominator; how to fix this is unclear.
-*Solve rba using lp minimizing slackSum;
-*put log; put 'minimized uneven enzload distribution'/; putclose;
+* force total flux to previous value
+fluxSum.up = fluxSum.l*(1+%tol%);
+Solve m using lp minimizing z;
 
+* apply enzyme load slacks; may need to adjust tolerance values to fix precision limits
+z.up = z.l*(1+%tol%);
+* Uncomment if using enzload values
+$include "./enz_alloc_constraints.txt"
+Equation Obj5; Obj5.. slackSum =e= sum(j, EnzLoadSlackNeg(j) + EnzLoadSlackPos(j));
+Model eload /all/;
+eload.optfile = 1;
+Solve eload using lp minimizing slackSum;
+
+file ff /%system.FN%.modelStat.txt/;
 ff.nr = 2; put ff;
-put rba.modelStat/;
+put eload.modelStat/;
 putclose;
 
 file ff2 /%system.FN%.flux_gamsscaled.txt/;
@@ -316,18 +293,6 @@ ff11.nr=2; ff11.nz=1e-30; put ff11;
 put '/'/;
 loop(j$prosyn(j),
     put "'" j.tl:0 "' " (v.l(j)/v.l('BIOSYN-PROTTOBIO')):0:15/;
-);
-put '/'/;
-putclose;
-
-* output protein levels for enforcing kapp calculation levels when needed
-file ff12 /%system.FN%.prosyn_nonzero_gamsscaled.txt/;
-ff12.nr=2; ff12.nz=1e-30; put ff12;
-put '/'/;
-loop(j$prosyn(j),
-	if ( (v.l(j) ge %vmin%),	
-		put "'" j.tl:0 "' " v.l(j):0:15/;
-	);
 );
 put '/'/;
 putclose;
