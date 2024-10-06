@@ -1,0 +1,14 @@
+* Growth rate
+$setGlobal mu 0.407
+v.fx('BIOSYN-BIODIL') = %mu%;
+
+* Substrate and oxygenation
+v.fx('RXN-EX_glc__D_e_REV-SPONT') = 13.2;
+v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0;
+
+v.up('RXN-EX_o2_e_REV-SPONT') = 1e5;
+v.fx('RXN-EX_o2_e_FWD-SPONT') = 0;
+
+* Secretions
+v.fx('RXN-EX_etoh_e_FWD-SPONT') = 15.98;
+v.fx('RXN-EX_etoh_e_REV-SPONT') = 0;
