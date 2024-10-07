@@ -116,13 +116,15 @@ for i in df_enz.index:
 rxndict = {k:set(v) for k,v in rxndict.items()}
 #print('rxndict',rxndict)
 rxndict_zeroCost = {k:v for k,v in rxndict.items() if v == {'zeroCost'}}
-rxndict = {k:v for k,v in rxndict.items() if v != {'zeroCost'}}
-enzdict = {k:set(v) for k,v in enzdict.items()}
+rxndict = {k:v for k,v in rxndict.items() if 'zeroCost' not in [k,v]}
+enzdict = {k:set(v) for k,v in enzdict.items() if 'zeroCost' not in [k,v]}
 #print('enzdict',enzdict)
 
 # Find enzymes that together carry a total load of reactions
 x = {k:v for k,v in rxndict.items() if len(v) > 1.5}
 enz_share_rxn_load = set().union(*[v for v in x.values()])
+if 'zeroCost' in enz_share_rxn_load:
+    enz_share_rxn_load.remove('zeroCost')
 
 # Find enzymes that individually carry loads of multiple reactions
 x = {k:v for k,v in enzdict.items() if len(v) > 1.5}
@@ -170,23 +172,6 @@ for i in text:
 for i in set4 - set(enzs):
     if i not in rxns_to_ignore_for_kapps:
         print(i)
-# Find enzymes whose together carry a total load of reactions
-x = {k:v for k,v in rxndict.items() if len(v) > 1.5}
-enz_share_rxn_load = set().union(*[v for v in x.values()])
-
-# Find enzymes whose individually carry loads of multiple reactions
-x = {k:v for k,v in enzdict.items() if len(v) > 1.5}
-enz_multiload = set(x.keys())
-
-# Set 1: Enzyme-reaction one-to-one load mapping
-set1 = set(enzdict.keys()) - enz_share_rxn_load - enz_multiload
-set1 = set([i for i in set1 if len(enzdict[i]) > 0.5])
-
-# Set 2: Enzyme-reaction one-to-many *(see note below)
-set2 = enz_multiload - enz_share_rxn_load
-
-# Set 3: Enzyme-reaction many-to-one *(see note below)
-set3 = enz_share_rxn_load - enz_multiload
 
 # Set 4: Enzyme-reaction many-to-many
 with open(set4_path) as f:
@@ -287,8 +272,9 @@ for rxn in rxns:
         
     rids = []; enzvals = [];
     for enz in rxndict[rxn]:
-        rids.append('RXN-' + rxn + '_' + rdir + '-' + enz)
-        enzvals.append(res_esyn.raw_flux['ENZSYN-' + enz])
+        if enz != 'zeroCost':
+            rids.append('RXN-' + rxn + '_' + rdir + '-' + enz)
+            enzvals.append(res_esyn.raw_flux['ENZSYN-' + enz])
     enzval = sum(enzvals) # changed to match scRBA suppMat description; originally found the max value, not the sum
         
     for rid in rids:
