@@ -1,0 +1,46 @@
+* settings used for all kapp calculations
+* highest-level directory for model (i.e., where 'pycore' and 'GAMS' are)
+$setGlobal model_root_path ../../../../../
+$setGlobal gms_path %model_root_path%GAMS/model/
+$setGlobal biomass_path %gms_path%RBA_rxns_whole_biomass.txt
+
+$setGlobal proteome_data_path ./proteome_data.txt
+
+$setGlobal pro_and_enz_path %model_root_path%GAMS/parameterization/enz_from_proteome/pro_and_enz.txt
+$setGlobal rxns_pro_and_enz_path %model_root_path%GAMS/parameterization/enz_from_proteome/rxns_pro_and_enz.txt
+$setGlobal rxns_enz_path %model_root_path%GAMS/parameterization/enz_from_proteome/rxns_enz.txt
+$setGlobal sij_pro_and_enz_path %model_root_path%GAMS/parameterization/enz_from_proteome/sij_pro_and_enz.txt
+$setGlobal rxns_pro_data_path ./rxns_pro_data.txt
+$setGlobal rxns_pro_nodata_path ./rxns_pro_nodata.txt
+$setGlobal prowaste_path %gms_path%RBA_rxns_prowaste.txt
+
+$setGlobal media_path %gms_path%RBA_rxns_EXREV_YNB_RabinowitzVersion.txt
+$setGlobal species_path %gms_path%RBA_species.txt
+$setGlobal rxns_path %gms_path%RBA_rxns.txt
+$setGlobal gsm_rxns_path %gms_path%GSM_rxn_ids.txt
+$setGlobal gsm_rxn_pairs_path %gms_path%GSM_RBA_rxn_pairs.txt
+$setGlobal prosyn_path %gms_path%RBA_rxns_prosyn.txt
+$setGlobal rxns_enzsyn_path %gms_path%RBA_rxns_enzsyn.txt
+$setGlobal rxns_enzload_path %gms_path%RBA_rxns_enzload.txt
+$setGlobal rxns_enzload_used_path ./min_flux_violation.enzyme_rxns.txt
+$setGlobal nuc_trans_path %gms_path%RBA_nuc_translation.txt
+$setGlobal mito_trans_path %gms_path%RBA_mito_translation.txt
+$setGlobal unknown_ribo_trans_path %gms_path%RBA_unknown_ribo_translation.txt
+$setGlobal uptake_path %gms_path%RBA_rxns_EXREV.txt
+$setGlobal sij_path %gms_path%RBA_sij.txt
+$setGlobal unique_protein_set_path ../unique_proteins_no_locations.txt
+$setGlobal prolen_path %gms_path%RBA_proteinLength.txt
+$setGlobal phenotype_path ../phenotype.txt
+$setGlobal fluxcap_declares_path ../GAMS_setting_files/fluxCaps_declares.txt
+$setGlobal fluxcap_path ../GAMS_setting_files/fluxCaps.txt
+
+$setGlobal rxns_metab_path %gms_path%RBA_rxns_rxnmetabolicnetwork.txt
+$setGlobal proteome_data_set_path ./proteome_data_set.txt
+$setGlobal rxns_with_no_prodata_path ./rxns_enz_with_no_prodata.txt
+$setGlobal v_exp_path ../v_exp_bounds.txt
+$setGlobal v_exp_lb_path ../v_exp_lb.txt
+$setGlobal v_exp_ub_path ../v_exp_ub.txt
+
+$setGlobal kapp_path ../kapps_RBA.txt
+$setGlobal enz_cap_declares_path %gms_path%RBA_enzCapacityConstraints_declares.txt
+$setGlobal enz_cap_eqns_path %gms_path%RBA_enzCapacityConstraints_eqns_equality_version.txt

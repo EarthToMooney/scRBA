@@ -1,8 +1,3 @@
-* make all other settings identical to prior steps
-$include "./min_flux_violation_GAMS_settings.txt"
-$setGlobal prowaste_path %gms_path%RBA_rxns_prowaste.txt
-$setGlobal kapp_path ../kapps_RBA.txt
-*$setGlobal kapp_path ../kapps_minimal_assumptions.txt
-*$setGlobal kapp_path ../kapps_increased_for_testing_only.txt
-$setGlobal enz_cap_declares_path %gms_path%RBA_enzCapacityConstraints_declares.txt
-$setGlobal enz_cap_eqns_path %gms_path%RBA_enzCapacityConstraints_eqns_equality_version.txt
+* include default settings
+$include "../GAMS_setting_files/kapp_settings.txt"
+* below, only put settings that differ for this procedure (NOT new variables), to reduce confusion/clutter

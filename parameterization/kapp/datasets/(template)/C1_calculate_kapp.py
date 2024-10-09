@@ -8,7 +8,7 @@ tol = 0
 df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xlsx')
 
 # Load path of set4 (enzyme-reaction many-to-many mapping)
-set4_path = '../kapp_ambiguousLoad_case_resolve_common.txt'
+set4_path = './kapp_ambiguousLoad_case_resolve_common.txt'
 # set4 handles cases of multiple enzymes corresponding to multiple rxns (many-to-many)
 # columns: 
 #   enzyme (for all enz that correspond to a rxn)
@@ -59,8 +59,19 @@ for i in rxns_used:
 ## if os.path.exists(pro_measured_unused_default_path):
 
 pro_measured_unused_path = '../../../../prosyn_constraints_measured_but_unused_'+dir_name+'.txt'
+pro_predicted_unused_path = '../../../../prosyn_constraints_predicted_but_unused_'+dir_name+'.txt'
 c = 0
-with open(pro_measured_unused_path,'w') as f:
+
+df_data = pd.read_excel(path_data)
+df_data.index = df_data['id'].to_list()
+df_data = df_data[df_data['conc (g/gDW)'] > 0]
+# Excluding ribosome protein subunit (conflicting if fit to both enzymatic and ribosomal protein data)
+if not use_ribo_data:
+    df_data = df_data[(df_data.type == 'truedata_enz') | (df_data.type == 'gapfill_subunit')]
+
+with open(pro_measured_unused_path,'w') as f, open(pro_predicted_unused_path,'w') as f2:
+    for file in [f,f2]:
+        file.write('$setGlobal pro_mbu_multiplier 1\n')
     # for each protein in PROWASTE-used, allow flux through PROWASTE-PROT to be as high as infinity (to avoid scaling issues)
     # Also, make the proteome mass fraction comprised of each protein at least equal to the mass fraction comprised of unused copies of it 
     ## (i.e., PROSYN * MW >= ptot * PROWASTE_0 * MW / ptot_0)
@@ -69,7 +80,11 @@ with open(pro_measured_unused_path,'w') as f:
         prot_id = prot.replace('PROWASTE-','')
         prosyn_id = 'PROSYN-'+prot_id
         if prosyn_id in prosyn_used.keys():
-            f.write("v.up('"+prosyn_id+"') = inf; v.up('"+prot+"') = inf;\nEquation minProt"+str(c)+"; minProt"+str(c)+".. v('"+prosyn_id+"') =g= (v('BIOSYN-PROTTOBIO') * "+str(prowaste_used[prot])+" / "+str(v_prot_to_bio)+");\n")
+            constraint = "v.up('"+prosyn_id+"') = inf; v.up('"+prot+"') = inf;\nEquation minProt"+str(c)+"; minProt"+str(c)+".. v('"+prosyn_id+"') =g= %pro_mbu_multiplier% * (v('BIOSYN-PROTTOBIO') * "+str(prowaste_used[prot])+" / "+str(v_prot_to_bio)+");\n"
+            # if protein is in the proteome data (path_data), add to f2
+            if prot_id in df_data.index:
+                f.write(constraint)
+            f2.write(constraint)
             c += 1
 # write to new file
 kapp_input_enzsyn_path = './kapp_input_enzsyn.txt'
@@ -123,8 +138,7 @@ enzdict = {k:set(v) for k,v in enzdict.items() if 'zeroCost' not in [k,v]}
 # Find enzymes that together carry a total load of reactions
 x = {k:v for k,v in rxndict.items() if len(v) > 1.5}
 enz_share_rxn_load = set().union(*[v for v in x.values()])
-if 'zeroCost' in enz_share_rxn_load:
-    enz_share_rxn_load.remove('zeroCost')
+enz_share_rxn_load.discard('zeroCost')
 
 # Find enzymes that individually carry loads of multiple reactions
 x = {k:v for k,v in enzdict.items() if len(v) > 1.5}
@@ -155,12 +169,12 @@ set4 = enz_share_rxn_load & enz_multiload
 with open('./kapp_set4_many_to_many.txt', 'w') as f:
     f.write('\n'.join(sorted(set4)))
 # if set4_path doesn't exist or is only 1 line long, create it with the header
-if not os.path.exists(set4_path) or len(open(set4_path).readlines()) < 2:
-    with open(set4_path, 'w') as f:
-        f.write('Enzyme\tReaction\tRule\n')
-        # add enzymes from set4 to set4_path, and all rxns they catalyze
-        for enz in set4:
-            f.write(enz + '\t' + ','.join(list(enzdict[enz])) + '\t\n')
+# if not os.path.exists(set4_path) or len(open(set4_path).readlines()) < 2:
+with open(set4_path, 'w') as f:
+    f.write('Enzyme\tReaction\tRule\n')
+    # add enzymes from set4 to set4_path, and all rxns they catalyze
+    for enz in set4:
+        f.write(enz + '\t' + ','.join(list(enzdict[enz])) + '\t\n')
 
 # Check manual resolve of ambiguous load case covers set4
 with open(set4_path) as f:
@@ -169,18 +183,12 @@ text = [i for i in text if i != '']
 enzs = []
 for i in text:
     enzs += i.split('\t')[0].split(',')
-for i in set4 - set(enzs):
-    if i not in rxns_to_ignore_for_kapps:
+set4_to_print = set4 - set(enzs) - set(rxns_to_ignore_for_kapps)
+if len(set4_to_print) > 0:
+    print('set4 enzymes not in set4 file and not ignored:')
+    for i in set4_to_print:
         print(i)
-
-# Set 4: Enzyme-reaction many-to-many
-with open(set4_path) as f:
-    text = f.read().split('\n')[1:]
-text = [i for i in text if i != '']
-enzs = []
-for i in text:
-    enzs += i.split('\t')[0].split(',')
-set4 = set(enzs)
+#set4 = set(enzs)
     
 # From manual checking of the sets, some enzymes in set2 and set3 require special treatment in calculation
 # which are recorded in set4. Thus excluded those in set2 and set3
@@ -193,7 +201,6 @@ kapps_rba = dict()
 kapp_minimal_assumptions = dict()
 kapp_ma_cutoff = 1e-1
 kapp_ma_text = []
-# print(enzdict)
 for enz in enzdict:
     for rxn in enzdict[enz]:
 # for enz,rxn in enzdict.items():
@@ -364,6 +371,7 @@ excl += []
 
 texts = []
 gsm_kapps = dict()
+gsm_kapps_per_hr = dict()
 gsm_kapps_with_prodata = dict()
 perhr_texts_used_only = []
 for k,v in kapp.items():
@@ -382,7 +390,11 @@ for k,v in kapp.items():
             if gsm_rxn_no_dir not in gsm_rxns_listed or gsm_rxn_no_dir not in gsm_kapps_with_prodata.keys():
                 gsm_kapps_with_prodata[gsm_rxn_no_dir] = list()
             gsm_kapps_with_prodata[gsm_rxn_no_dir].append(v)
-    
+
+# make RBA versions of gsm_kapps (in 1/h)
+for k,v in gsm_kapps.items():
+    gsm_kapps_per_hr[k] = [i * 3600 for i in v]
+
 with open('./kapps_in_vivo.txt', 'w') as f:
     f.write('\n'.join(['rxnid\tkapp (1/s)'] + sorted(texts)))
 with open('./gsm_kapps.csv', 'w') as f:
@@ -404,7 +416,8 @@ with open('./gsm_kapps_with_prodata.csv', 'w') as f:
         # cols = [k.rsplit('_',1)[-2],str(k.rsplit('_',1)[1]),str(min(v)),str(max(v)),str(np.median(v)),str(v)]
         f.write(','.join(cols) + '\n')
 kapp_med = np.median(list(kapp.values())) * 3600
-kapp_max = max(list(kapps_rba.values())) 
+kapp_max = max(list(v for v in kapps_rba.values() if v>0)) 
+kapp_min = min(list(v for v in kapps_rba.values() if v>0)) 
 kapp_ma_med = np.median(list(kapp_minimal_assumptions.values()))
 #kapp_ma_max = np.max(list(kapp_minimal_assumptions.values()))
 kapp_ma_default = kapp_ma_med
@@ -415,6 +428,7 @@ kapp_txt = []
 for r in rxns_essential_NP:
     if r not in kapps_rba.keys():
         kapps_rba[r] = default_kapp + tol
+        print('No kapp found for ' + r + ', setting to default')
 for k,v in kapps_rba.items():
     perhr_texts_used_only.append("'" + k + "'" + '\t' + str(v))
 
@@ -422,9 +436,10 @@ with open('./kapps_per_hr_without_unused_rxns.txt', 'w') as f:
     f.write('\n'.join(['/'] + sorted(perhr_texts_used_only) + ['/']))
 
 output_info = []
+
 # add all other rxns with default kapp
 for rxn in all_rxns: 
-    enz = rxn.split('-')[-1]
+    tag,rxn_base_id,dir,enz = extract_details_from_rxnid(rxn)
     rxn_name_without_enz = rxn.split('-')[-2]
     if enz not in spont_rxn_suffixes:
         if rxn in kapps_rba.keys():
@@ -433,6 +448,22 @@ for rxn in all_rxns:
                 kapps_rba[rxn] = default_kapp
         elif rxn in rxns_essential_NP:
             kapps_rba[rxn] = default_kapp # to minimize the risk of kapps making growth infeasible 
+        # check if rxn carries flux
+        elif rxn_base_id in res_metab.metabolic_flux.keys():
+            kapp_found = False
+            # check if any isozymes have kapp values in gsm_kapps
+            for r in gsm_kapps_per_hr.keys():
+                if r == rxn_base_id:
+                    kapp_found = True
+                    # set to the minimum kapp value for that rxn or the default - whichever is lower.
+                    # this reduces the risk of the default kapp being too high and creating unrealistically efficient enzymes
+                    output_info.append('Setting kapp of ' + rxn + ' to min kapp of all isozymes')
+                    kapps_rba[rxn] = min(min(gsm_kapps_per_hr[r]),default_kapp)
+                    # kapps_rba[rxn] = min(gsm_kapps_per_hr[r])
+                    break
+            if not kapp_found:
+                output_info.append('No kapp found for ' + rxn + ' or isozymes of it; setting to default')
+                kapps_rba[rxn] = default_kapp
         else: 
             output_info.append('No kapp found for ' + rxn)
             kapps_rba[rxn] = default_kapp

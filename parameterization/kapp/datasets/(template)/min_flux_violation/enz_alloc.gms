@@ -13,10 +13,8 @@ $setGlobal vmax 1e3
 $setGlobal vmin 1e-9 
 * max predicted kapp, for use in approximating enzyme levels
 $setGlobal kapp_max 1e30
-*$setGlobal vmin 0 
 * slacks turned off by default, 
 * 	but included to account for measurement errors when needed
-$setGlobal venzSlackAllow 0
 $setGlobal fluxSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * update to match solver tolerance
@@ -96,9 +94,8 @@ $include "%v_exp_ub_path%"
 
 * slacks for allowing fluxes to deviate from measured values when necessary
 Variables
-z, prosynSlackSum, kappEstSlackSum, fluxSum_j_NP_nonEss, fluxSum_j_NP, fluxSum, v(j), venzSlack(j), fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j), prosynSlackLB(pro), prosynSlackUB(pro), EnzLoadSlackPos(j), EnzLoadSlackNeg(j), kappEstSlackPos(j), kappEstSlackNeg(j), slackSum
+z, prosynSlackSum, kappEstSlackSum, fluxSum_j_NP_nonEss, fluxSum_j_NP, fluxSum, v(j), fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j), prosynSlackLB(pro), prosynSlackUB(pro), EnzLoadSlackPos(j), EnzLoadSlackNeg(j), kappEstSlackPos(j), kappEstSlackNeg(j), slackSum
 ;
-venzSlack.lo(j) = 0; venzSlack.up(j) = %venzSlackAllow%;
 prosynSlackLB.lo(pro) = 0; prosynSlackLB.up(pro) = %prosynSlackAllow%;
 prosynSlackUB.lo(pro) = 0; prosynSlackUB.up(pro) = %prosynSlackAllow%;
 * 2e3 to allow changes in either direction
@@ -142,7 +139,6 @@ $include "%phenotype_path%"
 Equations
 Obj, PSS, kappEstSlack, Obj2, Obj3, Obj4, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB_exp, GSM_UB_exp, fluxSlackBounds, MitoProtAllo 
 ;
-*$include "%fluxcap_declares_path%"
 
 Obj..               z =e= v('PROWASTE-TOTALPROTEIN');
 PSS..               prosynSlackSum =e= sum(pro, prosynSlackLB(pro) + prosynSlackUB(pro));
@@ -160,7 +156,6 @@ MitoProtAllo..      v('BIOSYN-PROTMITO') =l= %max_allowed_mito_proteome_allo_fra
 GSM_LB_exp(gsm_j)$v_exp_lb(gsm_j).. sum(j,dir(gsm_j,j)*v(j)) =g= (v_exp_lb(gsm_j) * %nscale%) - s_v_exp_lb(gsm_j);
 GSM_UB_exp(gsm_j)$v_exp_ub(gsm_j).. sum(j,dir(gsm_j,j)*v(j)) =l= (v_exp_ub(gsm_j) * %nscale%) + s_v_exp_ub(gsm_j);
 fluxSlackBounds..		fluxSlack =e= sum(gsm_j, s_v_exp_lb(gsm_j) + s_v_exp_ub(gsm_j));
-*$include "%fluxcap_path%"
 $include "./enz_alloc_constraints_with_kapp_estimates.txt"
 
 $include "./enz_alloc_constraints.txt"
@@ -235,16 +230,6 @@ loop(j,
     );
 );
 putclose;
-
-file ff3 /%system.FN%.venzSlack.txt/;
-ff3.nr = 2; put ff3;
-loop(j$prodata_set(j),
-    if ( (venzSlack.l(j) gt 0),
-        put j.tl:0, system.tab, 'venzSlack', system.tab, venzSlack.l(j):0:15/;
-    );
-);
-putclose;
-
 
 file ff4a /%system.FN%.flux_essential_with_no_prodata_unscaled.txt/;
 ff4a.nr = 2; put ff4a;

@@ -1,75 +1,17 @@
-* Parameters defined in this file will overwrite ones define in GAMS runRBA.gms file
+* Parameters defined in this file will overwrite ones define in .gms files
 
 * include automatically generated medium
-$include %model_root_path%GAMS/model/gsm-medium-auto.txt
+$include %gms_path%gsm-medium-auto.txt
 
-* unless specified otherwise (e.g., in test_kapp.gms), include prosyn constraints to reflect production of unused proteins; comment out if using dummy protein instead
-
-* included in model-version-settings:
-* NGAM (N-lim and C-lim chemostats using glucose)
-* max_allowed_mito_proteome_allo_fraction
-* nonmodeled_proteome_allocation
-$include %gms_path%model-version-settings.txt
-$setGlobal nonmodeled_proteome_allocation 0
-$setGlobal max_allowed_mito_proteome_allo_fraction 1
-
+* model-version-settings:
 * file with settings updated by build_model scripts, to help with managing multiple GSM models
+$include %gms_path%model-version-settings.txt
 
-** FOR PROTEOMICS ONLY
-$setGlobal vglc 0
-
-* adjust slack for deviations from measured enzyme production (0 to allow none, 1 to allow no enzyme production)
-*venzSlack.up(j) = 0; 
-*fluxSlack.up(n) = 1e10;
-* proteins that must be produced at their measured value or no more than x times that value. ONLY turned these on to account for suspected ribo subunits with unusually low abundances (otherwise, would need kribo of 11.73) 
-* exp. protein abundances enforced for all proteins (except ribosome subunits, which can exceed theirs) as in earlier scRBA versions
-sets 
-pro_ribonuc
-$include "%model_root_path%GAMS/model/pro_ribo_subunits_c.txt"
-pro_ribomito
-$include "%model_root_path%GAMS/model/pro_ribo_subunits_m.txt"
-;
-$setGlobal prosynSlackAllow 1e20 
-*prosynSlackLB.up(pro) = %prosynSlackAllow%;
-*prosynSlackUB.up(pro) = %prosynSlackAllow%;
-prosynSlackLB.up(pro) = 1e-2;
-prosynSlackUB.up(pro) = 1e-2;
-prosynSlackLB.up(pro)$pro_ribonuc(pro) = %prosynSlackAllow%;
-prosynSlackLB.up(pro)$pro_ribomito(pro) = %prosynSlackAllow%;
-prosynSlackUB.up(pro)$pro_ribonuc(pro) = %prosynSlackAllow%;
-prosynSlackUB.up(pro)$pro_ribomito(pro) = %prosynSlackAllow%;
-
-* from MFA and proteomics data
-$setGlobal prosynSlackAllow 0
-
-*$setGlobal mu 0.060 - 0.001
-$setGlobal mu 0.0563 
+* growth rate and biomass rxn name
+$setGlobal mu 0.0563
 $setGlobal biom 'BIOSYN-BIOXYL-PINHEIRO'
 v.fx('%biom%') = %mu% * %nscale%;
-
-* Ribosome efficiency (comment out if using only default values)
-$setGlobal kribonuc (6.6+7.6)*3600
-$setGlobal kribomito (6.6+5.6)*3600
 
 * PROWASTE allowed for TOTALPROTEIN, PROTCYT to ensure other PROWASTE settings work as intended
 v.up('PROWASTE-TOTALPROTEIN') = inf;
 v.up('PROWASTE-PROTCYT') = inf;
-* extra dummy protein for 0.3% of proteome not identified in measurements
-*Equation dummyUnidentified; dummyUnidentified.. v('PROSYN-PROTDUMMYUNIDENTIFIED') =l= 0.004 * v('BIOSYN-PROTTOBIO');
-
-* From scRBA: Disable FADH2 transport across mitochondrial membrane. Enable this creating fumarate-succinate shuttle that enables proton gradient generation
-v.fx('RXN-FADH2t_c_m_FWD-rt5791') = 0 * %nscale%;
-
-* Substrate and oxygenation
-v.up('RXN-EX_glc__D_e_REV-SPONT') = %vglc% * %nscale%;
-v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0 * %nscale%;
-
-v.up('RXN-EX_o2_e_REV-SPONT') = (2.77 + 0.12) * %nscale%;
-v.lo('RXN-EX_o2_e_REV-SPONT') = (2.77 - 0.12) * %nscale%;
-v.fx('RXN-EX_o2_e_FWD-SPONT') = 0 * %nscale%;
-
-v.lo('RXN-EX_co2_e_FWD-SPONT') = (2.88 - 0.25) * %nscale%;
-v.up('RXN-EX_co2_e_FWD-SPONT') = (2.88 + 0.25) * %nscale%;
-
-* Turn off forming incomplete functional enzyme (to prevent cheap incomplete complex from being formed)
-*$include ./incomplete_enzyme_complex_off.txt

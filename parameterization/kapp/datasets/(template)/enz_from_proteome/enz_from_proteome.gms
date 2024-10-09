@@ -89,9 +89,4 @@ loop(j1$(enzout(j1)),
 
 put ff;
 put optmodel.modelStat/;
-putclose ff;
-
-file ff2 /enz_from_proteome.objval.txt/;
-put ff2;
-put z.l:0:11;
-putclose ff2;
+putclose;

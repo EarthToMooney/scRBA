@@ -41,8 +41,6 @@ j
 $include "%rxns_path%"
 pro
 $include "%unique_protein_set_path%"
-*prosyn(j)
-*$include "%prosyn_path%"
 prowaste(j)
 $include "%prowaste_path%"
 nuc_translation(j)
@@ -69,7 +67,7 @@ $include "%kapp_path%"
 ;
 
 Variables
-z, prosynSlackSum, fluxSum, v(j), venzSlack(j), fluxSlack, prosynSlackLB(pro), prosynSlackUB(pro), EnzLoadSlackPos(j), EnzLoadSlackNeg(j), slackSum
+z, prosynSlackSum, fluxSum, v(j), fluxSlack, prosynSlackLB(pro), prosynSlackUB(pro), EnzLoadSlackPos(j), EnzLoadSlackNeg(j), slackSum
 ;
 
 *** SET FLUX LOWER AND UPPER BOUNDS ***
@@ -83,7 +81,6 @@ $include %gms_path%GSM_rxn_bounds.txt
 * This is because enabling protein waste introduces several thousands more free variable to the system
 * Thus, protein waste should only be implemented with actual data to constrain the free variable
 v.fx(j)$prowaste(j) = 0; v.up('PROWASTE-TOTALPROTEIN') = inf; v.up('PROWASTE-PROTCYT') = inf;
-
 
 * Disable all biomass reactions
 * Condition-specific biomass reaction activation has to be done in phenotype.txt file
@@ -112,8 +109,6 @@ MitoProtAllo..		v('BIOSYN-PROTMITO') =l= %max_allowed_mito_proteome_allo_fractio
 $include %enz_cap_eqns_path%
 
 *** BUILD OPTIMIZATION MODEL ***
-*/Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, NonModelProtAllo, MitoProtAllo
-*$include %enz_cap_declares_path%
 Model rba
 /all
 /;

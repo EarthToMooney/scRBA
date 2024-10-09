@@ -137,6 +137,7 @@ putclose ff2;
 
 file ff3 /%system.FN%.kapp_info.txt/;
 put ff3;
+ff3.nr=2; ff3.nz=1e-30;
 put 'rxn', system.tab, 'kapp_old', system.tab, 'kapp_slack_ub', system.tab, 'kapp_slack_lb'/;
 loop(j,
 	if ( (kapp_slack_ub.l(j) gt 0) or (kapp_slack_lb.l(j) gt 0),

@@ -15,7 +15,6 @@ $setGlobal vmax 1e3
 $setGlobal vmin 0 
 * slacks turned off by default, 
 * 	but included to account for measurement errors when needed
-$setGlobal venzSlackAllow 0
 $setGlobal fluxSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * small value needed to ensure sequential problems aren't infeasible due to rounding errors
@@ -84,9 +83,8 @@ $include "%v_exp_ub_path%"
 
 * slacks for allowing fluxes to deviate from measured values when necessary
 Variables
-prosynSlackSum, fluxSum_j_NP, fluxSum, v(j), venzSlack(j), fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j), prosynSlackLB(pro), prosynSlackUB(pro)
+prosynSlackSum, fluxSum_j_NP, fluxSum, v(j), fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j), prosynSlackLB(pro), prosynSlackUB(pro)
 ;
-venzSlack.lo(j) = 0; venzSlack.up(j) = %venzSlackAllow%;
 prosynSlackLB.lo(pro) = 0; prosynSlackLB.up(pro) = %prosynSlackAllow%;
 prosynSlackUB.lo(pro) = 0; prosynSlackUB.up(pro) = %prosynSlackAllow%;
 * 2e3 to allow changes in either direction
@@ -165,7 +163,7 @@ Solve minFlux using lp minimizing fluxSum;
 
 ff.nr = 2; put ff; ff.pc=6;
 put minFlux.modelStat/;
-putclose ff;
+putclose;
 
 file ff2 /%system.FN%.objectives.txt/;
 ff2.nr = 2; put ff2; ff2.pc=6;
@@ -173,7 +171,7 @@ put 'prosynSlackSum',prosynSlackSum.l:0:11/;
 put 'fluxSlackSum',(fluxSlack.l/%nscale%):0:11/;
 put 'fluxSum_j_NP',(fluxSum_j_NP.l/%nscale%):0:11/;
 put 'fluxSum',(fluxSum.l/%nscale%):0:11/;
-putclose ff2;
+putclose;
 
 file ff3 /%system.FN%.flux_gamsscaled.txt/;
 ff3.nr = 2; put ff3;
@@ -182,7 +180,7 @@ loop(j,
         put j.tl:0, system.tab, 'v', system.tab, v.l(j):0:15/;
     );
 );
-putclose ff3;
+putclose;
 
 file ff3a /%system.FN%.flux_unscaled.txt/;
 ff3a.nr = 2; put ff3a;
@@ -191,7 +189,7 @@ loop(j,
         put j.tl:0, system.tab, 'v', system.tab, (v.l(j)/%nscale%):0:15/;
     );
 );
-putclose ff3a;
+putclose;
 
 file ff4 /%system.FN%.flux_essential_with_no_prodata_gamsscaled.txt/;
 file ff4c /%system.FN%.rxns_essential_with_no_prodata_gamsscaled.txt/;
@@ -213,7 +211,7 @@ loop(j$rxns_with_no_prodata(j),
         put j.tl:0, system.tab, 'v', system.tab, (v.l(j)/%nscale%):0:15/;
     );
 );
-putclose ff4a;
+putclose;
 
 file ff4b /%system.FN%.rxns_nonessential_with_no_prodata.txt/;
 ff4b.nr = 2; put ff4b;
@@ -224,16 +222,7 @@ loop(j$(rxns_with_no_prodata(j)),
     );
 );
 put '/'/;
-putclose ff4b;
-
-file ff5 /%system.FN%.venzSlack.txt/;
-ff5.nr = 2; put ff5;
-loop(j$prodata_set(j),
-    if ( (venzSlack.l(j) gt %vmin%),
-        put j.tl:0, system.tab, 'venzSlack', system.tab, venzSlack.l(j):0:15/;
-    );
-);
-putclose ff5;
+putclose;
 
 file ff6 /%system.FN%.s_v_exp.txt/;
 ff6.nr = 2; ff6.pc=6; put ff6;
@@ -242,7 +231,7 @@ loop(gsm_j,
         put gsm_j.tl:0, s_v_exp_lb.l(gsm_j):0:15, s_v_exp_ub.l(gsm_j):0:15/;
     );
 );
-putclose ff6;
+putclose;
 
 file ff7 /%system.FN%.prosynSlack.txt/;
 ff7.nr = 2; put ff7;
@@ -252,4 +241,4 @@ loop(pro,
         put pro.tl:0, system.tab, (100*prosynSlackUB.l(pro)-100*prosynSlackLB.l(pro)):0:15/;
     );
 );
-putclose ff7;
+putclose;
