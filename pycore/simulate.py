@@ -17,6 +17,12 @@ def get_GAMS_modelStat(filepath='./runRBA.modelStat.txt'):
         
     return stat
 
+# check if model ran successfully; if not, stop
+def stop_if_run_failed(filepath='./runRBA.modelStat.txt'):
+    stat = get_GAMS_modelStat(filepath)
+    if stat != 'optimal':
+        raise ValueError('optimal solution not found')
+
 class RBA_result:
     def __init__(self, biom_id, growth_rate='', raw_flux='', metabolic_flux='',
                  ribo_capacity_usage=0, proteome_capacity_usage=0,
@@ -52,8 +58,9 @@ class RBA_result:
             self.growth_rate = fluxdict[self.biom_id]
         except:
             if self.warning:
+                print('Is 2-column format used? ' + str(self.twocol_format))
                 print(self.biom_id + ' is not found in raw flux. No growth rate assigned')
-        
+    
     def calculate_metabolic_flux(self):
         from utils import extract_details_from_rxnid
         metfluxdict = dict()
@@ -73,7 +80,7 @@ class RBA_result:
         
     def calculate_ribo_capacity_usage(self):
         try:
-            rrna_cap = 0.8 * self.raw_flux['BIOSYN-RNA']
+            rrna_cap = 0.8 * self.raw_flux['BIOSYN-RNA'] # Multiply max of total RNA production by fraction of RNA that's rRNA
             try:
                 rrna_unused = self.raw_flux['BIOSYN-RNA7']
             except:
@@ -103,7 +110,7 @@ class RBA_result:
             
         protfluxdict = dict()
         for k,v in self.raw_flux.items():
-            if k[:7] == 'PROSYN-':
+            if k[:7] == 'PROSYN-': # If the string begins with PROSYN-...
                 prot_id = k[7:]
                 mw = self.protein_mw[prot_id]
                 if '_' in prot_id:

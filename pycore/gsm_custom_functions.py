@@ -1,6 +1,5 @@
 import cobra
 # based on initial file from Hoang Viet Dinh
-# pycore version is the master version; make hardlinks to this file in other projects, but try to only edit here
 # updated to Python 3
 
 def test_import():
@@ -953,7 +952,6 @@ def calculate_molecular_weight(formula, verbose=False):
     # Assume MW of generic group (e.g., R) to be zero 
     import sys
     from common_params import elements_mw
-    from gsm_custom_functions import compile_elements_from_formula
     
     elem_dict = compile_elements_from_formula(formula)
     mw = 0
@@ -1146,3 +1144,10 @@ def make_dummy_protein_stoich(length = 100, aa_standards_df = None, prot_df = No
             for met in prot_st:
                 f.write("'" + met + "'.'" + rxn_name + "' " + str(prot_st[met]) + "\n")
     return prot_st
+
+def read_spreadsheet(path):
+    import pandas as pd
+    if path.endswith('.xlsx'):
+        return pd.read_excel(path)
+    else:
+        return pd.read_csv(path)
