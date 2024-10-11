@@ -16,8 +16,9 @@ $setGlobal kapp_max 1e30
 * slacks turned off by default, 
 * 	but included to account for measurement errors when needed
 $setGlobal prosynSlackAllow 0
-* update to match solver tolerance
-$setGlobal tol 1e-2
+* tolerance to account for rounding between 'solve' statements
+* solution objective can be (tol/100)% higher than optimal value
+$setGlobal tol 1e-5
 
 options
     LP = cplex /*Solver selection*/
