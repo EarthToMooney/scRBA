@@ -10,7 +10,7 @@ $include "./min_flux_violation_GAMS_settings.txt"
 $setGlobal nscale 1e5
 * max fluxes allowed, and min fluxes deemed significant enough to report
 $setGlobal vmax 1e3
-$setGlobal vmin 0 
+$setGlobal vmin 1e-9 
 * max predicted kapp, for use in approximating enzyme levels
 $setGlobal kapp_max 1e30
 * slacks turned off by default, 
@@ -18,7 +18,7 @@ $setGlobal kapp_max 1e30
 $setGlobal fluxSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * update to match solver tolerance
-$setGlobal tol 3e-2
+$setGlobal tol 1e-3 
 
 options
     LP = cplex /*Solver selection*/
@@ -116,7 +116,7 @@ $include %gms_path%GSM_rxn_bounds.txt
 ** Disable enzyme load network for reactions that can't be used
 *v.fx(j)$rxns_enzload(j) = 0;
 * force production of all enzymes involved in used rxns
-v.lo(j)$rxns_enzload_used(j) = %vmin% * (1+1e-8); 
+v.lo(j)$rxns_enzload_used(j) = %vmin%; 
 v.up(j)$rxns_enzload_used(j) = %vmax% * %nscale%;
 
 * Optional constraint on allowed proteome allocation to mitochondrial proteins (disable by setting to 1)
@@ -165,32 +165,33 @@ file log /''/;
 * minimize disagreement with proteomics data, while allowing some where needed (e.g., measurement errors)
 Model rba /all/;
 rba.optfile = 1;
-Solve rba using lp minimizing prosynSlackSum;
-put log; put 'minimized prosynSlackSum'/; putclose;
-if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-prosynSlackSum.up = prosynSlackSum.l*(1+(%tol%));
+prosynSlackSum.up = 186.080767 + 1e-6;
+*Solve rba using lp minimizing prosynSlackSum;
+*put log; put 'minimized prosynSlackSum'/; putclose;
+*if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
+*prosynSlackSum.up = (prosynSlackSum.l*(1+(%tol%)))+%vmin%;
 
 Solve rba using lp minimizing z;
 put log; put 'minimized prowaste mass'/; putclose;
 if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-z.up = z.l*(1+(%tol%));
+z.up = (z.l*(1+(%tol%)))+%vmin%;
 
 Solve rba using lp minimizing kappEstSlackSum;
 put log; put 'minimized kappEstSlackSum'/; putclose;
 if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-kappEstSlackSum.up = kappEstSlackSum.l*(1+(1*%tol%));
+kappEstSlackSum.up = (kappEstSlackSum.l*(1+(1*%tol%)))+%vmin%;
 
 Solve rba using lp minimizing fluxSlack;
 put log; put 'minimized fluxSlack'/; putclose;
 if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-fluxSlack.up = fluxSlack.l*(1+(1*%tol%));
+fluxSlack.up = (fluxSlack.l*(1+(1*%tol%)))+%vmin%;
 
 Solve rba using lp minimizing fluxSum_j_NP;
 put log; put 'minimized fluxSum_j_NP'/; putclose;
 if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
 * force rxns that were turned off to stay off
-v.fx(j)$(rxns_with_no_prodata(j) and (v.l(j) eq 0)) = 0;
-fluxSum_j_NP.up = fluxSum_j_NP.l*(1+(1*%tol%));
+*v.fx(j)$(rxns_with_no_prodata(j) and (v.l(j) eq 0)) = 0;
+fluxSum_j_NP.up = (fluxSum_j_NP.l*(1+(1*%tol%)))+%vmin%;
 
 *loop(enzload_rxn_coupling(j1,j),
 *	if (v.l(j) eq 0, 
@@ -202,7 +203,7 @@ Solve rba using lp minimizing fluxSum;
 put log; put 'minimized fluxSum'/; putclose;
 if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
 * force total flux to previous value
-fluxSum.up = fluxSum.l*(1+%tol%);
+fluxSum.up = (fluxSum.l*(1+%tol%))+%vmin%;
 
 * Solve again, encouraging more equal use of all enzymes
 * NOTE: disabled this step since it can lead to arbitrary reductions in ENZLOAD fluxes, even when other ones aren't being used. This can increase kapps by reducing the denominator; how to fix this is unclear.
