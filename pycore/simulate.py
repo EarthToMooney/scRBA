@@ -173,3 +173,4 @@ class RBA_result:
             fcsv.writerow(['Rxn', 'Flux'])
             for rxn,val in self.metabolic_flux.items():
                 fcsv.writerow([rxn, val])
+
