@@ -1,0 +1,904 @@
+--- Job min_flux_violation.gms Start 10/11/24 13:00:46 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/min_flux_violation.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/225b/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --nscale 100000.0
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- min_flux_violation.gms(11) 2 Mb
+--- . min_flux_violation_GAMS_settings.txt(2) 2 Mb
+--- .. kapp_settings.txt(46) 2 Mb
+--- . min_flux_violation_GAMS_settings.txt(3) 2 Mb
+--- min_flux_violation.gms(38) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- min_flux_violation.gms(40) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- min_flux_violation.gms(42) 5 Mb
+--- . unique_proteins_no_locations.txt(4779) 6 Mb
+--- min_flux_violation.gms(44) 6 Mb
+--- . GSM_rxn_ids.txt(1891) 6 Mb
+--- min_flux_violation.gms(46) 6 Mb
+--- . RBA_rxns_enzsyn.txt(932) 6 Mb
+--- min_flux_violation.gms(48) 6 Mb
+--- . RBA_rxns_enzload.txt(2228) 6 Mb
+--- min_flux_violation.gms(50) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- min_flux_violation.gms(52) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- min_flux_violation.gms(54) 6 Mb
+--- . RBA_unknown_ribo_translation.txt(2) 6 Mb
+--- min_flux_violation.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- min_flux_violation.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- min_flux_violation.gms(60) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- min_flux_violation.gms(62) 6 Mb
+--- . rxns_enz_with_no_prodata.txt(396) 6 Mb
+--- min_flux_violation.gms(64) 6 Mb
+--- . proteome_data_set.txt(4627) 6 Mb
+--- min_flux_violation.gms(66) 6 Mb
+--- . RBA_rxns_rxnmetabolicnetwork.txt(3400) 7 Mb
+--- min_flux_violation.gms(71) 7 Mb
+--- . RBA_sij.txt(12068) 7 Mb--- . RBA_sij.txt(29562) 7 Mb--- . RBA_sij.txt(98848) 9 Mb--- . RBA_sij.txt(115337) 10 Mb--- . RBA_sij.txt(184142) 12 Mb--- . RBA_sij.txt(200239) 12 Mb--- . RBA_sij.txt(267467) 15 Mb--- . RBA_sij.txt(267837) 16 Mb
+--- min_flux_violation.gms(73) 16 Mb
+--- . RBA_proteinLength.txt(4964) 16 Mb
+--- min_flux_violation.gms(75) 16 Mb
+--- . proteome_data.txt(4627) 16 Mb
+--- min_flux_violation.gms(77) 16 Mb
+--- . GSM_RBA_rxn_pairs.txt(3204) 16 Mb--- . GSM_RBA_rxn_pairs.txt(3400) 16 Mb
+--- min_flux_violation.gms(79) 16 Mb
+--- . v_exp_lb.txt(347) 16 Mb
+--- min_flux_violation.gms(81) 16 Mb
+--- . v_exp_ub.txt(347) 16 Mb
+--- min_flux_violation.gms(101) 16 Mb
+--- . GSM_rxn_bounds.txt(6627) 16 Mb
+--- min_flux_violation.gms(111) 16 Mb
+--- . prosyn_abundance_constraints.txt(4777) 18 Mb
+--- min_flux_violation.gms(114) 18 Mb
+--- . phenotype.txt(14) 18 Mb
+--- .. pro_ribo_subunits_c.txt(137) 18 Mb
+--- . phenotype.txt(16) 18 Mb
+--- .. pro_ribo_subunits_m.txt(76) 18 Mb
+--- . phenotype.txt(92) 18 Mb
+--- min_flux_violation.gms(244) 18 Mb
+--- Starting execution: elapsed 0:00:01.128
+--- min_flux_violation.gms(341341) 21 Mb
+--- Generating LP model minProSlack
+--- min_flux_violation.gms(336291) 21 Mb--- min_flux_violation.gms(337216) 21 Mb--- min_flux_violation.gms(339767) 22 Mb--- min_flux_violation.gms(340247) 22 Mb--- min_flux_violation.gms(341324) 23 Mb--- min_flux_violation.gms(341326) 24 Mb--- min_flux_violation.gms(341327) 28 Mb--- min_flux_violation.gms(341327) 42 Mb--- min_flux_violation.gms(341327) 42 Mb  3 secs--- min_flux_violation.gms(341327) 42 Mb  4 secs--- min_flux_violation.gms(341327) 42 Mb  5 secs--- min_flux_violation.gms(341327) 42 Mb  6 secs--- min_flux_violation.gms(341327) 42 Mb  7 secs--- min_flux_violation.gms(341327) 42 Mb  8 secs--- min_flux_violation.gms(341327) 42 Mb  9 secs--- min_flux_violation.gms(341327) 42 Mb  10 secs--- min_flux_violation.gms(341327) 42 Mb  11 secs
+--- min_flux_violation.gms(341328) 42 Mb--- min_flux_violation.gms(341330) 42 Mb--- min_flux_violation.gms(341332) 43 Mb--- min_flux_violation.gms(341342) 43 Mb
+---   13,208 rows  30,106 columns  311,105 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.191E-06, 1.000E+13] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E-02, 1.000E+20] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.251E-06, 4.896E+04]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:17.427
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 1.26 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 19.52 Mb (peak 19.75 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.73 Mb (peak 6.03 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MultiObjective_Display                  0
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.12sec (det. 108.64 ticks)
+
+
+Optimal solution found
+Objective:          186.080767
+
+--- Reading solution for model minProSlack
+--- Executing after solve: elapsed 0:00:17.932
+--- min_flux_violation.gms(341348) 43 Mb
+--- Generating LP model minFluxDeviations
+--- min_flux_violation.gms(336702) 43 Mb--- min_flux_violation.gms(337552) 43 Mb--- min_flux_violation.gms(339974) 43 Mb--- min_flux_violation.gms(340438) 43 Mb--- min_flux_violation.gms(341324) 43 Mb--- min_flux_violation.gms(341327) 43 Mb--- min_flux_violation.gms(341327) 43 Mb  3 secs--- min_flux_violation.gms(341327) 43 Mb  4 secs--- min_flux_violation.gms(341327) 43 Mb  5 secs--- min_flux_violation.gms(341327) 43 Mb  6 secs--- min_flux_violation.gms(341327) 43 Mb  7 secs--- min_flux_violation.gms(341327) 43 Mb  8 secs--- min_flux_violation.gms(341327) 43 Mb  9 secs--- min_flux_violation.gms(341327) 43 Mb  10 secs--- min_flux_violation.gms(341327) 43 Mb  11 secs--- min_flux_violation.gms(341327) 43 Mb  12 secs
+--- min_flux_violation.gms(341328) 43 Mb--- min_flux_violation.gms(341328) 43 Mb--- min_flux_violation.gms(341330) 43 Mb--- min_flux_violation.gms(341332) 43 Mb--- min_flux_violation.gms(341332) 43 Mb--- min_flux_violation.gms(341349) 43 Mb
+---   13,208 rows  30,106 columns  311,105 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.191E-06, 1.000E+13] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E-02, 1.000E+20] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.251E-06, 4.896E+04]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:34.526
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 1.26 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 19.52 Mb (peak 19.75 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.73 Mb (peak 6.09 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 2
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MultiObjective_Display                  0
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.14sec (det. 118.55 ticks)
+
+
+Optimal solution found
+Objective:      9323190.909214
+
+--- Reading solution for model minFluxDeviations
+--- Executing after solve: elapsed 0:00:35.061
+--- min_flux_violation.gms(341355) 43 Mb
+--- Generating LP model min_j_NP
+--- min_flux_violation.gms(338599) 43 Mb--- min_flux_violation.gms(339184) 43 Mb--- min_flux_violation.gms(341324) 43 Mb--- min_flux_violation.gms(341326) 43 Mb--- min_flux_violation.gms(341327) 43 Mb--- min_flux_violation.gms(341327) 43 Mb  3 secs--- min_flux_violation.gms(341327) 43 Mb  4 secs--- min_flux_violation.gms(341327) 43 Mb  5 secs--- min_flux_violation.gms(341327) 43 Mb  6 secs--- min_flux_violation.gms(341327) 43 Mb  7 secs--- min_flux_violation.gms(341327) 43 Mb  8 secs--- min_flux_violation.gms(341327) 43 Mb  9 secs--- min_flux_violation.gms(341327) 43 Mb  10 secs--- min_flux_violation.gms(341327) 43 Mb  11 secs
+--- min_flux_violation.gms(341328) 43 Mb--- min_flux_violation.gms(341328) 43 Mb--- min_flux_violation.gms(341330) 43 Mb--- min_flux_violation.gms(341331) 43 Mb--- min_flux_violation.gms(341337) 43 Mb--- min_flux_violation.gms(341332) 43 Mb--- min_flux_violation.gms(341356) 43 Mb
+---   13,208 rows  30,106 columns  311,105 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.191E-06, 1.000E+13] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E-02, 1.000E+20] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.251E-06, 4.896E+04]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:51.806
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 1.26 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 19.52 Mb (peak 19.75 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.73 Mb (peak 6.13 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 2
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MultiObjective_Display                  0
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.15sec (det. 128.43 ticks)
+
+
+Optimal solution found
+Objective:       653215.478840
+
+--- Reading solution for model min_j_NP
+--- Executing after solve: elapsed 0:00:52.328
+--- min_flux_violation.gms(341365) 43 Mb
+--- Generating LP model minFlux
+--- min_flux_violation.gms(338436) 43 Mb--- min_flux_violation.gms(339034) 43 Mb--- min_flux_violation.gms(340983) 43 Mb--- min_flux_violation.gms(341324) 43 Mb--- min_flux_violation.gms(341326) 43 Mb--- min_flux_violation.gms(341327) 43 Mb--- min_flux_violation.gms(341327) 43 Mb  3 secs--- min_flux_violation.gms(341327) 43 Mb  4 secs--- min_flux_violation.gms(341327) 43 Mb  5 secs--- min_flux_violation.gms(341327) 43 Mb  6 secs--- min_flux_violation.gms(341327) 43 Mb  7 secs--- min_flux_violation.gms(341327) 43 Mb  8 secs--- min_flux_violation.gms(341327) 43 Mb  9 secs--- min_flux_violation.gms(341327) 43 Mb  10 secs--- min_flux_violation.gms(341327) 43 Mb  11 secs
+--- min_flux_violation.gms(341328) 43 Mb--- min_flux_violation.gms(341328) 43 Mb--- min_flux_violation.gms(341330) 43 Mb--- min_flux_violation.gms(341337) 43 Mb--- min_flux_violation.gms(341332) 43 Mb--- min_flux_violation.gms(341366) 43 Mb
+---   13,208 rows  30,106 columns  311,105 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.191E-06, 1.000E+13] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E-02, 1.000E+20] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.251E-06, 4.896E+04]
+--- Executing CPLEX (Solvelink=2): elapsed 0:01:09.119
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 1.26 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 19.52 Mb (peak 19.75 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.73 Mb (peak 6.10 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 2
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MultiObjective_Display                  0
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.13sec (det. 102.48 ticks)
+
+
+Optimal solution found
+Objective:    106585963.714054
+
+--- Reading solution for model minFlux
+--- Executing after solve: elapsed 0:01:09.623
+--- min_flux_violation.gms(341428) 43 Mb--- min_flux_violation.gms(341448) 43 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/min_flux_violation.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/min_flux_violation.objectives.txt
+--- Putfile ff3 /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/min_flux_violation.flux_gamsscaled.txt
+--- Putfile ff3a /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/min_flux_violation.flux_unscaled.txt
+--- Putfile ff4 /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/min_flux_violation.flux_essential_with_no_prodata_gamsscaled.txt
+--- Putfile ff4c /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/min_flux_violation.rxns_essential_with_no_prodata_gamsscaled.txt
+--- Putfile ff4a /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/min_flux_violation.flux_essential_with_no_prodata_unscaled.txt
+--- Putfile ff4b /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/min_flux_violation.rxns_nonessential_with_no_prodata.txt
+--- Putfile ff6 /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/min_flux_violation.s_v_exp.txt
+--- Putfile ff7 /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/min_flux_violation.prosynSlack.txt
+*** Status: Normal completion
+--- Job min_flux_violation.gms Stop 10/11/24 13:01:56 elapsed 0:01:09.741
+--- Job enz_alloc.gms Start 10/11/24 13:01:57 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/enz_alloc.gms
+    ScrDir /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/225b/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --nscale 100000.0
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- enz_alloc.gms(9) 2 Mb
+--- . min_flux_violation_GAMS_settings.txt(2) 2 Mb
+--- .. kapp_settings.txt(46) 2 Mb
+--- . min_flux_violation_GAMS_settings.txt(3) 2 Mb
+--- enz_alloc.gms(38) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- enz_alloc.gms(40) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- enz_alloc.gms(42) 5 Mb
+--- . unique_proteins_no_locations.txt(4779) 6 Mb
+--- enz_alloc.gms(44) 6 Mb
+--- . RBA_rxns_prosyn.txt(4964) 6 Mb
+--- enz_alloc.gms(46) 6 Mb
+--- . GSM_rxn_ids.txt(1891) 6 Mb
+--- enz_alloc.gms(48) 6 Mb
+--- . RBA_rxns_enzsyn.txt(932) 6 Mb
+--- enz_alloc.gms(50) 6 Mb
+--- . RBA_rxns_enzload.txt(2228) 6 Mb
+--- enz_alloc.gms(52) 6 Mb
+--- . RBA_rxn_enzload_coupling.txt(2228) 6 Mb
+--- enz_alloc.gms(54) 6 Mb
+--- . min_flux_violation.enzyme_rxns.txt(519) 6 Mb
+--- enz_alloc.gms(56) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 7 Mb
+--- enz_alloc.gms(58) 7 Mb
+--- . RBA_mito_translation.txt(15) 7 Mb
+--- enz_alloc.gms(60) 7 Mb
+--- . RBA_unknown_ribo_translation.txt(2) 7 Mb
+--- enz_alloc.gms(62) 7 Mb
+--- . RBA_rxns_EXREV.txt(159) 7 Mb
+--- enz_alloc.gms(64) 7 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 7 Mb
+--- enz_alloc.gms(66) 7 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 7 Mb
+--- enz_alloc.gms(68) 7 Mb
+--- . rxns_enz_with_no_prodata.txt(396) 7 Mb
+--- enz_alloc.gms(70) 7 Mb
+--- . enzload_enz_with_no_prodata.txt(396) 7 Mb
+--- enz_alloc.gms(72) 7 Mb
+--- . min_flux_violation.rxns_nonessential_with_no_prodata.txt(386) 7 Mb
+--- enz_alloc.gms(74) 7 Mb
+--- . proteome_data_set.txt(4627) 7 Mb
+--- enz_alloc.gms(76) 7 Mb
+--- . RBA_rxns_rxnmetabolicnetwork.txt(3400) 7 Mb
+--- enz_alloc.gms(82) 7 Mb
+--- . RBA_sij.txt(6368) 7 Mb--- . RBA_sij.txt(22890) 7 Mb--- . RBA_sij.txt(90797) 9 Mb--- . RBA_sij.txt(106832) 10 Mb--- . RBA_sij.txt(174606) 12 Mb--- . RBA_sij.txt(191572) 12 Mb--- . RBA_sij.txt(257971) 15 Mb--- . RBA_sij.txt(267837) 16 Mb
+--- enz_alloc.gms(84) 16 Mb
+--- . RBA_proteinLength.txt(4964) 16 Mb
+--- enz_alloc.gms(86) 16 Mb
+--- . proteome_data.txt(982) 16 Mb--- . proteome_data.txt(4627) 16 Mb
+--- enz_alloc.gms(88) 16 Mb
+--- . GSM_RBA_rxn_pairs.txt(3400) 16 Mb
+--- enz_alloc.gms(90) 16 Mb
+--- . v_exp_lb.txt(347) 16 Mb
+--- enz_alloc.gms(92) 16 Mb
+--- . v_exp_ub.txt(347) 16 Mb
+--- enz_alloc.gms(114) 16 Mb
+--- . GSM_rxn_bounds.txt(6627) 17 Mb
+--- enz_alloc.gms(134) 17 Mb
+--- . prosyn_abundance_constraints.txt(4777) 18 Mb
+--- enz_alloc.gms(136) 18 Mb
+--- . phenotype.txt(14) 18 Mb
+--- .. pro_ribo_subunits_c.txt(137) 18 Mb
+--- . phenotype.txt(16) 18 Mb
+--- .. pro_ribo_subunits_m.txt(76) 18 Mb
+--- . phenotype.txt(92) 18 Mb
+--- enz_alloc.gms(159) 18 Mb
+--- . enz_alloc_constraints_with_kapp_estimates.txt(4452) 19 Mb
+--- enz_alloc.gms(161) 19 Mb
+--- . enz_alloc_constraints.txt(2009) 20 Mb--- . enz_alloc_constraints.txt(2226) 20 Mb
+--- enz_alloc.gms(202) 20 Mb--- enz_alloc.gms(319) 21 Mb
+--- Starting execution: elapsed 0:00:01.257
+--- enz_alloc.gms(356542) 29 Mb
+--- Generating LP model rba
+--- enz_alloc.gms(346587) 29 Mb--- enz_alloc.gms(347230) 29 Mb--- enz_alloc.gms(349258) 30 Mb--- enz_alloc.gms(349841) 31 Mb--- enz_alloc.gms(349842) 33 Mb--- enz_alloc.gms(349842) 33 Mb--- enz_alloc.gms(349845) 35 Mb--- enz_alloc.gms(349846) 53 Mb--- enz_alloc.gms(349846) 53 Mb  3 secs--- enz_alloc.gms(349846) 53 Mb  4 secs--- enz_alloc.gms(349846) 53 Mb  5 secs--- enz_alloc.gms(349846) 53 Mb  6 secs--- enz_alloc.gms(349846) 53 Mb  7 secs--- enz_alloc.gms(349846) 53 Mb  8 secs--- enz_alloc.gms(349846) 53 Mb  9 secs--- enz_alloc.gms(349846) 53 Mb  10 secs--- enz_alloc.gms(349846) 53 Mb  11 secs--- enz_alloc.gms(349846) 53 Mb  11 secs
+--- enz_alloc.gms(349847) 53 Mb--- enz_alloc.gms(349848) 53 Mb--- enz_alloc.gms(349849) 53 Mb--- enz_alloc.gms(349850) 53 Mb--- enz_alloc.gms(349853) 53 Mb--- enz_alloc.gms(350367) 54 Mb--- enz_alloc.gms(351484) 54 Mb--- enz_alloc.gms(355117) 56 Mb--- enz_alloc.gms(355979) 56 Mb--- enz_alloc.gms(356537) 58 Mb--- enz_alloc.gms(356537) 58 Mb--- enz_alloc.gms(356537) 58 Mb--- enz_alloc.gms(356537) 58 Mb  3 secs--- enz_alloc.gms(356537) 58 Mb  4 secs--- enz_alloc.gms(356537) 58 Mb  5 secs
+--- enz_alloc.gms(356544) 58 Mb
+---   19,890 rows  97,190 columns  400,834 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.191E-06, 1.000E+13] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E-09, 1.000E+20] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.251E-06, 1.000E+30]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:23.265
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 4.42 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 32.19 Mb (peak 32.94 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 2.08 Mb (peak 12.85 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MultiObjective_Display                  0
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.21sec (det. 186.57 ticks)
+
+
+Optimal solution found
+Objective:          186.080767
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:24.345
+--- enz_alloc.gms(356545) 58 Mb
+minimized prosynSlackSum
+--- enz_alloc.gms(356547) 58 Mb
+--- Generating LP model rba
+--- enz_alloc.gms(346644) 58 Mb--- enz_alloc.gms(347272) 58 Mb--- enz_alloc.gms(349288) 58 Mb--- enz_alloc.gms(349841) 58 Mb--- enz_alloc.gms(349842) 58 Mb--- enz_alloc.gms(349845) 58 Mb--- enz_alloc.gms(349846) 58 Mb--- enz_alloc.gms(349846) 58 Mb  3 secs--- enz_alloc.gms(349846) 58 Mb  4 secs--- enz_alloc.gms(349846) 58 Mb  5 secs--- enz_alloc.gms(349846) 58 Mb  6 secs--- enz_alloc.gms(349846) 58 Mb  7 secs--- enz_alloc.gms(349846) 58 Mb  8 secs--- enz_alloc.gms(349846) 58 Mb  9 secs--- enz_alloc.gms(349846) 58 Mb  10 secs--- enz_alloc.gms(349846) 58 Mb  11 secs--- enz_alloc.gms(349846) 58 Mb  12 secs
+--- enz_alloc.gms(349847) 58 Mb--- enz_alloc.gms(349847) 58 Mb--- enz_alloc.gms(349849) 58 Mb--- enz_alloc.gms(349855) 58 Mb--- enz_alloc.gms(353038) 58 Mb--- enz_alloc.gms(353834) 58 Mb--- enz_alloc.gms(356537) 59 Mb--- enz_alloc.gms(356537) 59 Mb--- enz_alloc.gms(356537) 59 Mb  3 secs--- enz_alloc.gms(356537) 59 Mb  4 secs--- enz_alloc.gms(356537) 59 Mb  5 secs
+--- enz_alloc.gms(356549) 59 Mb
+---   19,890 rows  97,190 columns  400,834 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.191E-06, 1.000E+13] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E-09, 1.000E+20] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.251E-06, 1.000E+30]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:46.522
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 4.42 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 32.19 Mb (peak 32.94 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 2.08 Mb (peak 12.96 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 2
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MultiObjective_Display                  0
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (5): optimal with unscaled infeasibilities.
+--- Cplex Time: 0.32sec (det. 288.60 ticks)
+
+
+Optimal solution found, but with infeasibilities after unscaling
+Objective:         9620.515521
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:47.698
+--- enz_alloc.gms(356550) 59 Mb
+minimized prowaste mass
+--- enz_alloc.gms(356552) 59 Mb
+--- Generating LP model rba
+--- enz_alloc.gms(345077) 59 Mb--- enz_alloc.gms(345964) 59 Mb--- enz_alloc.gms(348405) 59 Mb--- enz_alloc.gms(348874) 59 Mb--- enz_alloc.gms(349841) 59 Mb--- enz_alloc.gms(349842) 59 Mb--- enz_alloc.gms(349845) 59 Mb--- enz_alloc.gms(349846) 59 Mb--- enz_alloc.gms(349846) 59 Mb  3 secs--- enz_alloc.gms(349846) 59 Mb  4 secs--- enz_alloc.gms(349846) 59 Mb  5 secs--- enz_alloc.gms(349846) 59 Mb  6 secs--- enz_alloc.gms(349846) 59 Mb  7 secs--- enz_alloc.gms(349846) 59 Mb  8 secs--- enz_alloc.gms(349846) 59 Mb  9 secs--- enz_alloc.gms(349846) 59 Mb  10 secs--- enz_alloc.gms(349846) 59 Mb  11 secs--- enz_alloc.gms(349846) 59 Mb  12 secs
+--- enz_alloc.gms(349847) 59 Mb--- enz_alloc.gms(349849) 59 Mb--- enz_alloc.gms(349855) 59 Mb--- enz_alloc.gms(352686) 59 Mb--- enz_alloc.gms(353528) 59 Mb--- enz_alloc.gms(356537) 59 Mb--- enz_alloc.gms(356537) 59 Mb--- enz_alloc.gms(356537) 59 Mb  3 secs--- enz_alloc.gms(356537) 59 Mb  4 secs--- enz_alloc.gms(356537) 59 Mb  5 secs--- enz_alloc.gms(356537) 59 Mb  6 secs
+--- enz_alloc.gms(356554) 59 Mb
+---   19,890 rows  97,190 columns  400,834 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.191E-06, 1.000E+13] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E-09, 1.000E+20] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.251E-06, 1.000E+30]
+--- Executing CPLEX (Solvelink=2): elapsed 0:01:10.394
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 4.42 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 32.19 Mb (peak 32.94 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 2.08 Mb (peak 12.57 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 2
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MultiObjective_Display                  0
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (5): optimal with unscaled infeasibilities.
+--- Cplex Time: 0.42sec (det. 293.27 ticks)
+
+
+Optimal solution found, but with infeasibilities after unscaling
+Objective:      2717631.743101
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:01:12.266
+--- enz_alloc.gms(356555) 59 Mb
+minimized kappEstSlackSum
+--- enz_alloc.gms(356557) 59 Mb
+--- Generating LP model rba
+--- enz_alloc.gms(344832) 59 Mb--- enz_alloc.gms(347077) 59 Mb--- enz_alloc.gms(347520) 59 Mb--- enz_alloc.gms(349242) 59 Mb--- enz_alloc.gms(349841) 59 Mb--- enz_alloc.gms(349842) 59 Mb--- enz_alloc.gms(349845) 59 Mb--- enz_alloc.gms(349846) 59 Mb--- enz_alloc.gms(349846) 59 Mb  3 secs--- enz_alloc.gms(349846) 59 Mb  4 secs--- enz_alloc.gms(349846) 59 Mb  5 secs--- enz_alloc.gms(349846) 59 Mb  6 secs--- enz_alloc.gms(349846) 59 Mb  7 secs--- enz_alloc.gms(349846) 59 Mb  8 secs--- enz_alloc.gms(349846) 59 Mb  9 secs--- enz_alloc.gms(349846) 59 Mb  10 secs--- enz_alloc.gms(349846) 59 Mb  11 secs--- enz_alloc.gms(349846) 59 Mb  12 secs
+--- enz_alloc.gms(349847) 59 Mb--- enz_alloc.gms(349849) 59 Mb--- enz_alloc.gms(349855) 59 Mb--- enz_alloc.gms(351058) 59 Mb--- enz_alloc.gms(351940) 59 Mb--- enz_alloc.gms(354492) 59 Mb--- enz_alloc.gms(355201) 59 Mb--- enz_alloc.gms(356537) 59 Mb--- enz_alloc.gms(356537) 59 Mb--- enz_alloc.gms(356537) 59 Mb  3 secs--- enz_alloc.gms(356537) 59 Mb  4 secs--- enz_alloc.gms(356537) 59 Mb  5 secs--- enz_alloc.gms(356537) 59 Mb  6 secs
+--- enz_alloc.gms(356559) 59 Mb
+---   19,890 rows  97,190 columns  400,834 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.191E-06, 1.000E+13] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E-09, 1.000E+20] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.251E-06, 1.000E+30]
+--- Executing CPLEX (Solvelink=2): elapsed 0:01:36.362
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 4.42 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 32.19 Mb (peak 32.94 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 2.08 Mb (peak 12.91 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 2
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MultiObjective_Display                  0
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (5): optimal with unscaled infeasibilities.
+--- Cplex Time: 285.17sec (det. 215698.92 ticks)
+
+
+Optimal solution found, but with infeasibilities after unscaling
+Objective:     12240677.833250
+
+--- Reading solution for model rba
+--- enz_alloc.gms(356559) 59 Mb  285 secs
+--- Executing after solve: elapsed 0:06:22.459
+--- enz_alloc.gms(356560) 59 Mb
+minimized fluxSlack
+--- enz_alloc.gms(356562) 59 Mb
+--- Generating LP model rba
+--- enz_alloc.gms(346317) 59 Mb--- enz_alloc.gms(346971) 59 Mb--- enz_alloc.gms(349016) 59 Mb--- enz_alloc.gms(349430) 59 Mb--- enz_alloc.gms(349841) 59 Mb--- enz_alloc.gms(349842) 59 Mb--- enz_alloc.gms(349845) 59 Mb--- enz_alloc.gms(349846) 59 Mb--- enz_alloc.gms(349846) 59 Mb  3 secs--- enz_alloc.gms(349846) 59 Mb  4 secs--- enz_alloc.gms(349846) 59 Mb  5 secs--- enz_alloc.gms(349846) 59 Mb  6 secs--- enz_alloc.gms(349846) 59 Mb  7 secs--- enz_alloc.gms(349846) 59 Mb  8 secs--- enz_alloc.gms(349846) 59 Mb  9 secs--- enz_alloc.gms(349846) 59 Mb  10 secs--- enz_alloc.gms(349846) 59 Mb  11 secs--- enz_alloc.gms(349846) 59 Mb  12 secs
+--- enz_alloc.gms(349847) 59 Mb--- enz_alloc.gms(349849) 59 Mb--- enz_alloc.gms(349855) 59 Mb--- enz_alloc.gms(353428) 59 Mb--- enz_alloc.gms(354131) 59 Mb--- enz_alloc.gms(356537) 59 Mb--- enz_alloc.gms(356537) 59 Mb--- enz_alloc.gms(356537) 59 Mb  3 secs--- enz_alloc.gms(356537) 59 Mb  4 secs--- enz_alloc.gms(356537) 59 Mb  5 secs--- enz_alloc.gms(356537) 59 Mb  6 secs
+--- enz_alloc.gms(356564) 59 Mb
+---   19,890 rows  97,190 columns  400,834 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.191E-06, 1.000E+13] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E-09, 1.000E+20] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.251E-06, 1.000E+30]
+--- Executing CPLEX (Solvelink=2): elapsed 0:06:46.057
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 4.42 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 32.19 Mb (peak 32.94 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 2.08 Mb (peak 12.95 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 2
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MultiObjective_Display                  0
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (5): optimal with unscaled infeasibilities.
+--- Cplex Time: 256.77sec (det. 199974.62 ticks)
+
+
+Optimal solution found, but with infeasibilities after unscaling
+Objective:       358129.808297
+
+--- Reading solution for model rba
+--- enz_alloc.gms(356564) 59 Mb  257 secs
+--- Executing after solve: elapsed 0:11:03.789
+--- enz_alloc.gms(356565) 59 Mb
+minimized fluxSum_j_NP
+--- enz_alloc.gms(356569) 59 Mb
+--- Generating LP model rba
+--- enz_alloc.gms(346222) 59 Mb--- enz_alloc.gms(346880) 59 Mb--- enz_alloc.gms(348952) 59 Mb--- enz_alloc.gms(349365) 59 Mb--- enz_alloc.gms(349841) 59 Mb--- enz_alloc.gms(349842) 59 Mb--- enz_alloc.gms(349846) 59 Mb--- enz_alloc.gms(349846) 59 Mb  3 secs--- enz_alloc.gms(349846) 59 Mb  4 secs--- enz_alloc.gms(349846) 59 Mb  5 secs--- enz_alloc.gms(349846) 59 Mb  6 secs--- enz_alloc.gms(349846) 59 Mb  7 secs--- enz_alloc.gms(349846) 59 Mb  8 secs--- enz_alloc.gms(349846) 59 Mb  9 secs--- enz_alloc.gms(349846) 59 Mb  10 secs--- enz_alloc.gms(349846) 59 Mb  11 secs--- enz_alloc.gms(349846) 59 Mb  12 secs
+--- enz_alloc.gms(349847) 59 Mb--- enz_alloc.gms(349849) 59 Mb--- enz_alloc.gms(349855) 59 Mb--- enz_alloc.gms(353026) 59 Mb--- enz_alloc.gms(353815) 59 Mb--- enz_alloc.gms(356537) 59 Mb--- enz_alloc.gms(356537) 59 Mb--- enz_alloc.gms(356537) 59 Mb  3 secs--- enz_alloc.gms(356537) 59 Mb  4 secs--- enz_alloc.gms(356537) 59 Mb  5 secs
+--- enz_alloc.gms(356577) 59 Mb
+---   19,890 rows  97,190 columns  400,834 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.191E-06, 1.000E+13] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E-09, 1.000E+20] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.251E-06, 1.000E+30]
+--- Executing CPLEX (Solvelink=2): elapsed 0:11:26.395
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 4.42 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 32.19 Mb (peak 32.94 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 2.08 Mb (peak 12.92 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 2
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MultiObjective_Display                  0
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (3): infeasible.
+--- Cplex Time: 49.83sec (det. 40178.53 ticks)
+
+
+Model has been proven infeasible
+
+--- Reading solution for model rba
+--- enz_alloc.gms(356577) 59 Mb  50 secs
+--- Executing after solve: elapsed 0:12:17.159
+--- enz_alloc.gms(356578) 59 Mb
+minimized fluxSum
+--- enz_alloc.gms(356579) 59 Mb
+---
+--- Execution halted from line 356579: abort.noerror 'no optimal solution found'
+---
+--- enz_alloc.gms(356579) 58 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/min_flux_violation/enz_alloc.modelStat.txt
+*** Status: Normal completion
+--- Job enz_alloc.gms Stop 10/11/24 13:14:14 elapsed 0:12:17.160
+max predicted kapp 8093763424.448388
+benchmark kapp 18568.452286400647
+Traceback (most recent call last):
+  File "/scratch/ejm6426/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/B2_min_flux_violation.py", line 246, in <module>
+    stop_if_run_failed('./min_flux_violation/enz_alloc.modelStat.txt')
+  File "/scratch/ejm6426/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/../../../../pycore/simulate.py", line 22, in stop_if_run_failed
+    stat = get_GAMS_modelStat(filepath)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/ejm6426/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/../../../../pycore/simulate.py", line 6, in get_GAMS_modelStat
+    modelStat = int(float(modelStat))
+                    ^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: ''
