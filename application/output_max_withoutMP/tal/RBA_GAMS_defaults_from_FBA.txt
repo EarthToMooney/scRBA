@@ -356,7 +356,7 @@ v.up('RXN-EX_ca2_e_REV-SPONT') = 1000.0 * %nscale%;
 v.lo('RXN-EX_ca2_e_REV-SPONT') = 0;
 v.up('RXN-EX_ca2_e_FWD-SPONT') = 1000.0 * %nscale%;
 v.lo('RXN-EX_ca2_e_FWD-SPONT') = 0;
-$setGlobal mu 0.00012818595981128845
+$setGlobal mu 0.00012818595793873334
 $setGlobal biom_id 'BIOSYN-BIODILAERO'
 v.fx('%biom_id%') = %mu% * %nscale%;
 v.up('RXN-EX_cobalt2_e_REV-SPONT') = 1000.0 * %nscale%;

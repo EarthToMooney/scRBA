@@ -1,0 +1,3526 @@
+unknown metabolite 'hxdcal_c' created
+unknown metabolite 'hxdcol_c' created
+unknown metabolite '2etmal_m' created
+unknown metabolite '2etmal_c' created
+unknown metabolite '3etmal_c' created
+unknown metabolite '2oxptn_c' created
+unknown metabolite 'btal_c' created
+unknown metabolite 'btoh_c' created
+unknown metabolite 'citm_m' created
+unknown metabolite 'citac_m' created
+unknown metabolite '3mmal_m' created
+unknown metabolite 'btoh_e' created
+unknown metabolite 'tag_e' created
+unknown metabolite 'cou_c' created
+unknown metabolite 'coucoa_c' created
+unknown metabolite 'nrgnch_c' created
+unknown metabolite 'nrgn_c' created
+unknown metabolite 'nrgn_e' created
+unknown metabolite 'cou_e' created
+unknown metabolite 'citm_c' created
+unknown metabolite 'citm_e' created
+unknown metabolite '3hbcoa__R_c' created
+unknown metabolite 'polyhb_c' created
+unknown metabolite 'polyhb_e' created
+unknown metabolite 'amorph_c' created
+unknown metabolite 'nhemrd_c' created
+unknown metabolite 'arte_c' created
+unknown metabolite 'nhemox_c' created
+unknown metabolite 'arte_e' created
+unknown metabolite 'sesqt_c' created
+unknown metabolite 'sesqt_e' created
+unknown metabolite 'alac_c' created
+unknown metabolite 'actn_c' created
+unknown metabolite '3oxpp_c' created
+unknown metabolite '3hpp_c' created
+unknown metabolite '3hpp_e' created
+unknown metabolite '34dhbz_c' created
+unknown metabolite 'catechol_c' created
+unknown metabolite 'muco_c' created
+unknown metabolite 'muco_e' created
+unknown metabolite '4hbz_e' created
+unknown metabolite 'rsvtol_c' created
+unknown metabolite 'rsvtol_e' created
+unknown metabolite 'cinnm_c' created
+unknown metabolite 'styr_c' created
+unknown metabolite 'styr_e' created
+unknown metabolite 'hphpyr_c' created
+unknown metabolite 'hpacald_c' created
+unknown metabolite 'thptdn_c' created
+unknown metabolite '34dopa_c' created
+unknown metabolite 'hthbp_c' created
+unknown metabolite 'dhptdn_c' created
+unknown metabolite 'dopa_c' created
+unknown metabolite 'nrco_c' created
+unknown metabolite 'cocl_c' created
+unknown metabolite 'mcocl_c' created
+unknown metabolite '3hmcocl_c' created
+unknown metabolite 'retcln_c' created
+unknown metabolite 'retcln_e' created
+unknown metabolite '3hppnl_c' created
+unknown metabolite '13ppd_c' created
+unknown metabolite '13ppd_e' created
+unknown metabolite 'skm_e' created
+unknown metabolite 'tal_c' created
+unknown metabolite 'tal_e' created
+unknown metabolite 'btn_m' created
+unknown metabolite 'ergstest_rm' created
+unknown metabolite 'fe3_c' created
+unknown metabolite 'q9_m' created
+unknown metabolite 'zymstest_RT_rm' created
+unknown metabolite 'odealc_r' created
+unknown metabolite 'odealc_e' created
+unknown metabolite 'odealc_rm' created
+unknown metabolite 'stalc_r' created
+unknown metabolite 'stalc_e' created
+unknown metabolite 'stalc_rm' created
+unknown metabolite 'pmtalc_r' created
+unknown metabolite 'pmtalc_e' created
+unknown metabolite 'pmtalc_rm' created
+['ibutoh', '3hppb', 'retcln', 'rsvtol', 'citm', 'stalc', '13ppd', 'polyhb', 'tal', 'sesqt', 'pmtalc', 'odealc', 'lac__L', 'btd', 'tag', 'muco', '3hppa', 'skm', '3hpp', '2phetoh', 'cou', 'hdca', '4hbz', 'styr', 'hxdcol', 'arte', 'btoh', 'nrgn']
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+old bounds: EX_mg2_e: (-1000.0, 1000.0)
+bound changed: EX_mg2_e: (-1000.0, 1000.0)
+EX_ibutoh_e flux: 12.523853802600126
+EX_ibutoh_e flux / EX_glc__D_e flux: -0.9480585770325606
+Simulated yields for ibutoh: 0.39005140949873107 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_3hpp_e flux: 22.340892547184453
+EX_3hpp_e flux / EX_glc__D_e flux: -1.6912106394537814
+Simulated yields for 3hppb: 0.845624094684588 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nac_e: (-1000, 1000)
+bound changed: EX_nac_e: (-1000, 1000)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_zn2_e: (-1000.0, 1000.0)
+bound changed: EX_zn2_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+old bounds: EX_mg2_e: (-1000.0, 1000.0)
+bound changed: EX_mg2_e: (-1000.0, 1000.0)
+EX_retcln_e flux: 2.5111438786205924
+EX_retcln_e flux / EX_glc__D_e flux: -0.19009416189406453
+Simulated yields for retcln: 0.3475710879898802 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_rsvtol_e flux: 3.969093041860342
+EX_rsvtol_e flux / EX_glc__D_e flux: -0.3004612446525618
+Simulated yields for rsvtol: 0.3806549572564928 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_citm_e flux: 12.489371088802148
+EX_citm_e flux / EX_glc__D_e flux: -0.9454482277670059
+Simulated yields for citm: 0.7667243171293743 g/g all C sources
+EX_stalc_e flux: 0.1013955795418379
+EX_stalc_e flux / EX_sucr_e flux: -0.3045598244104164
+Simulated yields for stalc: 0.24067858513478618 g/g all C sources
+4011.3097522464363% of LB of experimental yield: 0.006
+2616.071577552024% of UB of experimental yield: 0.0092
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_13ppd_e flux: 17.81382215950258
+EX_13ppd_e flux / EX_glc__D_e flux: -1.348510383005494
+Simulated yields for 13ppd: 0.5695516943254072 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_polyhb_e flux: 12.489371088803386
+EX_polyhb_e flux / EX_glc__D_e flux: -0.9454482277670996
+Simulated yields for polyhb: 0.541062813799085 g/g all C sources
+EX_tal_e flux: 0.0071056120265354655
+EX_tal_e flux / EX_xyl__D_e flux: -0.26660177635928345
+EX_tal_e flux / EX_glc__D_e flux: -0.13710948498477463
+Simulated yields for tal: 0.06718413989633046 g/g all C sources
+58.67111868623239% of LB of experimental yield: 0.11450973051259666
+55.59664958477043% of UB of experimental yield: 0.1208420658404822
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+old bounds: EX_mg2_e: (-1000.0, 1000.0)
+bound changed: EX_mg2_e: (-1000.0, 1000.0)
+EX_sesqt_e flux: 2.957467003324429
+EX_sesqt_e flux / EX_glc__D_e flux: -0.22388092379443064
+Simulated yields for sesqt: 0.3060784627243515 g/g all C sources
+EX_pmtalc_e flux: 0.11416737297107094
+EX_pmtalc_e flux / EX_sucr_e flux: -0.34292219860650575
+Simulated yields for pmtalc: 0.24288318077405077 g/g all C sources
+6746.75502150141% of LB of experimental yield: 0.0036
+4048.0530129008466% of UB of experimental yield: 0.006
+EX_odealc_e flux: 0.09996363120937148
+EX_odealc_e flux / EX_sucr_e flux: -0.30025871054853637
+Simulated yields for odealc: 0.235525249287641 g/g all C sources
+865.9016517927977% of LB of experimental yield: 0.027200000000000002
+841.1616045987179% of UB of experimental yield: 0.027999999999999997
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_lac__L_e flux: 24.246591272656257
+EX_lac__L_e flux / EX_glc__D_e flux: -1.835472465757476
+Simulated yields for lac__L: 0.9074664875164765 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_btd_e flux: 12.894437850115356
+EX_btd_e flux / EX_glc__D_e flux: -0.9761118735893531
+Simulated yields for btd: 0.4882834990112597 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_tag_e flux: 0.1308423262369841
+EX_tag_e flux / EX_glc__D_e flux: -0.05944315178248943
+Simulated yields for tag: 0.27198107557913753 g/g all C sources
+210.21229485804852% of LB of experimental yield: 0.129384
+185.2732122473689% of UB of experimental yield: 0.1468
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_muco_e flux: 10.422415347961222
+EX_muco_e flux / EX_glc__D_e flux: -0.7889792087782908
+Simulated yields for muco: 0.6135132738168629 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_3hpp_e flux: 20.06614449176462
+EX_3hpp_e flux / EX_glc__D_e flux: -1.519011695061667
+Simulated yields for 3hppa: 0.7595227108237026 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_skm_e flux: 9.725652204922111
+EX_skm_e flux / EX_glc__D_e flux: -0.7362340806148456
+Simulated yields for skm: 0.7116896752762905 g/g all C sources
+EX_3hpp_e flux: 0.0
+EX_3hpp_e flux / EX_glc__D_e flux: -0.0
+Simulated yields for 3hpp: 0.0 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_2phetoh_e flux: 6.941370062757493
+EX_2phetoh_e flux / EX_glc__D_e flux: -0.5254632901406125
+Simulated yields for 2phetoh: 0.3563056213702415 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_cou_e flux: 7.096204238756343
+EX_cou_e flux / EX_glc__D_e flux: -0.5371842724266724
+Simulated yields for cou: 0.48647624306940435 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_hdca_e flux: 2.761960143974907
+EX_hdca_e flux / EX_glc__D_e flux: -0.20908101014193087
+Simulated yields for hdca: 0.29756639246203886 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_4hbz_e flux: 9.055951948867929
+EX_4hbz_e flux / EX_glc__D_e flux: -0.6855376191421596
+Simulated yields for 4hbz: 0.5217370665455578 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_styr_e flux: 6.766253892867831
+EX_styr_e flux / EX_glc__D_e flux: -0.5122069563109637
+Simulated yields for styr: 0.29611200570498275 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_hxdcol_e flux: 2.6771774231078522
+EX_hxdcol_e flux / EX_glc__D_e flux: -0.20266293891808115
+Simulated yields for hxdcol: 0.27272809626823197 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+old bounds: EX_mg2_e: (-1000.0, 1000.0)
+bound changed: EX_mg2_e: (-1000.0, 1000.0)
+EX_arte_e flux: 2.8446976583554235
+EX_arte_e flux / EX_glc__D_e flux: -0.21534425877028185
+Simulated yields for arte: 0.2800995812387051 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+EX_btoh_e flux: 11.197872974677985
+EX_btoh_e flux / EX_glc__D_e flux: -0.8476815272277051
+Simulated yields for btoh: 0.34875416193808423 g/g all C sources
+Applying RBA uptakes and growth rate to FBA
+old bounds: EX_k_e: (-1000.0, 1000.0)
+bound changed: EX_k_e: (-1000.0, 1000.0)
+old bounds: EX_nh4_e: (-1000.0, 1000.0)
+bound changed: EX_nh4_e: (-1000.0, 1000.0)
+old bounds: EX_so4_e: (-1000.0, 1000.0)
+bound changed: EX_so4_e: (-1000.0, 1000.0)
+old bounds: EX_o2_e: (-26.25403530509562, 1000)
+bound changed: EX_o2_e: (-26.25403530509562, 1000)
+old bounds: EX_pi_e: (-1000.0, 1000.0)
+bound changed: EX_pi_e: (-1000.0, 1000.0)
+EX_nrgn_e flux: 3.9690930413395407
+EX_nrgn_e flux / EX_glc__D_e flux: -0.30046124461313706
+Simulated yields for nrgn: 0.45405411890764985 g/g all C sources
+Running RBA...
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:01 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(26605) 6 Mb--- . RBA_sij.txt(42211) 6 Mb--- . RBA_sij.txt(100081) 8 Mb--- . RBA_sij.txt(113154) 9 Mb--- . RBA_sij.txt(171032) 11 Mb--- . RBA_sij.txt(185667) 11 Mb--- . RBA_sij.txt(243041) 13 Mb--- . RBA_sij.txt(255685) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(490) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/ibutoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:03 elapsed 0:00:01.136
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061447607061252
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925037999999915 vs -1.986826026642267
+FBA and RBA fluxes differ for EX_so4_e: -0.0079940999999984 vs -0.04004647365131
+FBA and RBA fluxes differ for EX_o2_e: -0.0626170844239999 vs -0.598749304058982
+FBA and RBA fluxes differ for EX_pi_e: -0.0375327999999571 vs -0.03502569752141
+FBA and RBA fluxes differ for EX_mg2_e: -0.0063606999999999 vs -0.007578802651376
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:04 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(26624) 6 Mb--- . RBA_sij.txt(42373) 6 Mb--- . RBA_sij.txt(100250) 9 Mb--- . RBA_sij.txt(115322) 10 Mb--- . RBA_sij.txt(174215) 11 Mb--- . RBA_sij.txt(188983) 11 Mb--- . RBA_sij.txt(248871) 13 Mb--- . RBA_sij.txt(262180) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(494) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:05 elapsed 0:00:01.101
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061441632785901
+FBA and RBA fluxes differ for EX_nh4_e: -0.592503799999991 vs -1.885263452358454
+FBA and RBA fluxes differ for EX_so4_e: -0.0079940999999999 vs -0.039367318999303
+FBA and RBA fluxes differ for EX_o2_e: -8.183062258471487 vs -10.459255486430273
+FBA and RBA fluxes differ for EX_pi_e: -0.0375327999999483 vs -0.033969749586246
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:06 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(29474) 6 Mb--- . RBA_sij.txt(45718) 6 Mb--- . RBA_sij.txt(105277) 9 Mb--- . RBA_sij.txt(120609) 10 Mb--- . RBA_sij.txt(180676) 11 Mb--- . RBA_sij.txt(195712) 11 Mb--- . RBA_sij.txt(253521) 14 Mb--- . RBA_sij.txt(268302) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(503) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/retcln/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:07 elapsed 0:00:01.079
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.063144584795045
+FBA and RBA fluxes differ for EX_nac_e: -0.000607000000005 vs -0.002798673484875
+FBA and RBA fluxes differ for EX_nh4_e: -3.1036476786207228 vs -9.492332595294826
+FBA and RBA fluxes differ for EX_so4_e: -0.0079940999999987 vs -0.14063236563674
+FBA and RBA fluxes differ for EX_zn2_e: -0.0001576 vs -0.00138371112637
+FBA and RBA fluxes differ for EX_o2_e: -19.96057457037194 vs -18.99700300513644
+FBA and RBA fluxes differ for EX_pi_e: -0.0375328000002383 vs -0.074389510321767
+FBA and RBA fluxes differ for EX_mg2_e: -0.0063606999999999 vs -0.010270439620913
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:09 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(31687) 6 Mb--- . RBA_sij.txt(47710) 6 Mb--- . RBA_sij.txt(105744) 9 Mb--- . RBA_sij.txt(121246) 10 Mb--- . RBA_sij.txt(181191) 11 Mb--- . RBA_sij.txt(196355) 11 Mb--- . RBA_sij.txt(253644) 14 Mb--- . RBA_sij.txt(268302) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(494) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/rsvtol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:10 elapsed 0:00:01.080
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061427231362579
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925038000001761 vs -3.248654195415923
+FBA and RBA fluxes differ for EX_so4_e: -0.007994099999997 vs -0.074725798749646
+FBA and RBA fluxes differ for EX_o2_e: -13.684797751189176 vs -17.35702407907377
+FBA and RBA fluxes differ for EX_pi_e: -0.0375328000003326 vs -0.048387565211911
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:11 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(26334) 6 Mb--- . RBA_sij.txt(41661) 6 Mb--- . RBA_sij.txt(98916) 8 Mb--- . RBA_sij.txt(111621) 9 Mb--- . RBA_sij.txt(168524) 11 Mb--- . RBA_sij.txt(182936) 11 Mb--- . RBA_sij.txt(240238) 13 Mb--- . RBA_sij.txt(252741) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(492) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/citm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:12 elapsed 0:00:01.139
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061447512335499
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925037999998577 vs -3.243657596792755
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941 vs -0.074594127378804
+FBA and RBA fluxes differ for EX_o2_e: -19.003570000415174 vs -14.956603722430563
+FBA and RBA fluxes differ for EX_pi_e: -0.0375327999999938 vs -0.048269033772936
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:13 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(28443) 6 Mb--- . RBA_sij.txt(44559) 6 Mb--- . RBA_sij.txt(103924) 9 Mb--- . RBA_sij.txt(118984) 10 Mb--- . RBA_sij.txt(178537) 11 Mb--- . RBA_sij.txt(193748) 11 Mb--- . RBA_sij.txt(251961) 14 Mb--- . RBA_sij.txt(267271) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(530) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/stalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:15 elapsed 0:00:01.083
+Traceback (most recent call last):
+  File "/scratch/ejm6426/scRBA/application/output_max_withoutMP/stalc/runRBA.py", line 96, in <module>
+    report['yield'] = pflux * prod_mw / abs(total_carbon_mass_flux(res, c_sources_list))
+                      ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: float division by zero
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:16 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(26074) 6 Mb--- . RBA_sij.txt(41685) 6 Mb--- . RBA_sij.txt(98791) 8 Mb--- . RBA_sij.txt(111743) 9 Mb--- . RBA_sij.txt(168684) 11 Mb--- . RBA_sij.txt(183165) 11 Mb--- . RBA_sij.txt(241563) 13 Mb--- . RBA_sij.txt(254406) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(493) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/13ppd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:17 elapsed 0:00:01.129
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061413154194838
+FBA and RBA fluxes differ for EX_nh4_e: -0.592503799999995 vs -1.391504530223526
+FBA and RBA fluxes differ for EX_so4_e: -0.0079940999999999 vs -0.028519759429746
+FBA and RBA fluxes differ for EX_o2_e: -3.950451262014575 vs -5.713750490131448
+FBA and RBA fluxes differ for EX_pi_e: -0.0375327999999351 vs -0.028605456030246
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:18 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(33396) 6 Mb--- . RBA_sij.txt(49477) 6 Mb--- . RBA_sij.txt(107547) 9 Mb--- . RBA_sij.txt(122608) 10 Mb--- . RBA_sij.txt(180963) 11 Mb--- . RBA_sij.txt(195725) 11 Mb--- . RBA_sij.txt(250956) 14 Mb--- . RBA_sij.txt(265525) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(493) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/polyhb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:19 elapsed 0:00:01.096
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061447395256266
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925038000027261 vs -3.504628830725522
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941000000016 vs -0.079882899037584
+FBA and RBA fluxes differ for EX_o2_e: -19.00357000041754 vs -14.482070903549484
+FBA and RBA fluxes differ for EX_pi_e: -0.0375327999878155 vs -0.051315559871728
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:20 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(27807) 6 Mb--- . RBA_sij.txt(44134) 6 Mb--- . RBA_sij.txt(101816) 9 Mb--- . RBA_sij.txt(116790) 10 Mb--- . RBA_sij.txt(175545) 11 Mb--- . RBA_sij.txt(190899) 11 Mb--- . RBA_sij.txt(250081) 13 Mb--- . RBA_sij.txt(264233) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(2) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(7) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(488) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tal/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:21 elapsed 0:00:01.096
+Traceback (most recent call last):
+  File "/scratch/ejm6426/scRBA/application/output_max_withoutMP/tal/runRBA.py", line 97, in <module>
+    report['vCarbonSources'] = sum([res.metabolic_flux[c['rxn']] for c in c_sources_list])
+                                    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'EX_xyl__D_e'
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:23 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(27489) 6 Mb--- . RBA_sij.txt(43106) 6 Mb--- . RBA_sij.txt(100081) 9 Mb--- . RBA_sij.txt(114203) 10 Mb--- . RBA_sij.txt(172071) 11 Mb--- . RBA_sij.txt(186503) 11 Mb--- . RBA_sij.txt(243930) 13 Mb--- . RBA_sij.txt(256606) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(492) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/sesqt/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:24 elapsed 0:00:01.123
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061441008494926
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925037729961493 vs -3.025840916984292
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941013402159 vs -0.068602795374166
+FBA and RBA fluxes differ for EX_o2_e: -13.09893283049102 vs -15.184949551673954
+FBA and RBA fluxes differ for EX_pi_e: -0.0375328006745601 vs -0.04537270164039
+FBA and RBA fluxes differ for EX_mg2_e: -0.0063606999999999 vs -0.007715575690013
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:25 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(28963) 6 Mb--- . RBA_sij.txt(44783) 6 Mb--- . RBA_sij.txt(102342) 9 Mb--- . RBA_sij.txt(117437) 10 Mb--- . RBA_sij.txt(175478) 11 Mb--- . RBA_sij.txt(190323) 11 Mb--- . RBA_sij.txt(249229) 13 Mb--- . RBA_sij.txt(262025) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(530) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/pmtalc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:26 elapsed 0:00:01.101
+Traceback (most recent call last):
+  File "/scratch/ejm6426/scRBA/application/output_max_withoutMP/pmtalc/runRBA.py", line 96, in <module>
+    report['yield'] = pflux * prod_mw / abs(total_carbon_mass_flux(res, c_sources_list))
+                      ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: float division by zero
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:27 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(30917) 6 Mb--- . RBA_sij.txt(47127) 6 Mb--- . RBA_sij.txt(106714) 9 Mb--- . RBA_sij.txt(122088) 10 Mb--- . RBA_sij.txt(182145) 11 Mb--- . RBA_sij.txt(197652) 11 Mb--- . RBA_sij.txt(256449) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(3433) 15 Mb--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(530) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/odealc/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:28 elapsed 0:00:01.070
+Traceback (most recent call last):
+  File "/scratch/ejm6426/scRBA/application/output_max_withoutMP/odealc/runRBA.py", line 96, in <module>
+    report['yield'] = pflux * prod_mw / abs(total_carbon_mass_flux(res, c_sources_list))
+                      ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: float division by zero
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:29 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(27730) 6 Mb--- . RBA_sij.txt(44075) 6 Mb--- . RBA_sij.txt(101427) 9 Mb--- . RBA_sij.txt(116680) 10 Mb--- . RBA_sij.txt(176265) 11 Mb--- . RBA_sij.txt(191514) 11 Mb--- . RBA_sij.txt(250081) 14 Mb--- . RBA_sij.txt(264174) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(491) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/lac__L/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:30 elapsed 0:00:01.091
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061447322960762
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925037999999632 vs -1.557464686006433
+FBA and RBA fluxes differ for EX_so4_e: -0.0079940999999999 vs -0.029934433871427
+FBA and RBA fluxes differ for EX_o2_e: -2.465966082056091 vs -3.716447267033804
+FBA and RBA fluxes differ for EX_pi_e: -0.0375328000001361 vs -0.030271500705132
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:32 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(25930) 6 Mb--- . RBA_sij.txt(40641) 6 Mb--- . RBA_sij.txt(96021) 8 Mb--- . RBA_sij.txt(108344) 9 Mb--- . RBA_sij.txt(163250) 11 Mb--- . RBA_sij.txt(176973) 11 Mb--- . RBA_sij.txt(231727) 13 Mb--- . RBA_sij.txt(245633) 13 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(492) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btd/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:33 elapsed 0:00:01.172
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061439012091007
+FBA and RBA fluxes differ for EX_nh4_e: -0.592503799999897 vs -1.54630370782897
+FBA and RBA fluxes differ for EX_so4_e: -0.0079940999999998 vs -0.030754711352818
+FBA and RBA fluxes differ for EX_o2_e: -4.286331724390778 vs -5.521046545920696
+FBA and RBA fluxes differ for EX_pi_e: -0.0375328999999587 vs -0.030162060768928
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:34 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(26347) 6 Mb--- . RBA_sij.txt(41471) 6 Mb--- . RBA_sij.txt(97500) 8 Mb--- . RBA_sij.txt(109729) 9 Mb--- . RBA_sij.txt(164936) 11 Mb--- . RBA_sij.txt(178994) 11 Mb--- . RBA_sij.txt(234417) 13 Mb--- . RBA_sij.txt(248609) 13 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(491) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/tag/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:35 elapsed 0:00:01.161
+FBA and RBA fluxes differ for EX_so4_e: -0.0024531926963874 vs -0.004315485386588
+FBA and RBA fluxes differ for EX_o2_e: -2.323377906290998 vs -2.456106340505316
+FBA and RBA fluxes differ for EX_pi_e: -0.011517923988206 vs -0.005162071857697
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:37 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(27906) 6 Mb--- . RBA_sij.txt(43279) 6 Mb--- . RBA_sij.txt(100081) 8 Mb--- . RBA_sij.txt(113323) 9 Mb--- . RBA_sij.txt(170292) 11 Mb--- . RBA_sij.txt(184940) 11 Mb--- . RBA_sij.txt(242183) 13 Mb--- . RBA_sij.txt(255284) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(494) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/muco/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:38 elapsed 0:00:01.127
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061405877465128
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925038000000313 vs -1.891728517964255
+FBA and RBA fluxes differ for EX_so4_e: -0.0079940999999999 vs -0.037946370180224
+FBA and RBA fluxes differ for EX_o2_e: -17.88245548623804 vs -18.98571363647563
+FBA and RBA fluxes differ for EX_pi_e: -0.0375329000000466 vs -0.033637992370148
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:39 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(28149) 6 Mb--- . RBA_sij.txt(44049) 6 Mb--- . RBA_sij.txt(101586) 9 Mb--- . RBA_sij.txt(116787) 10 Mb--- . RBA_sij.txt(176433) 11 Mb--- . RBA_sij.txt(191690) 11 Mb--- . RBA_sij.txt(250081) 14 Mb--- . RBA_sij.txt(264321) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(493) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:40 elapsed 0:00:01.092
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061437922824736
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925038000000313 vs -3.594918425136795
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941000000053 vs -0.081258905222482
+FBA and RBA fluxes differ for EX_o2_e: -15.007306424731452 vs -19.659824434141818
+FBA and RBA fluxes differ for EX_pi_e: -0.037532900000007 vs -0.052203094725247
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:41 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(26199) 6 Mb--- . RBA_sij.txt(41986) 6 Mb--- . RBA_sij.txt(100081) 9 Mb--- . RBA_sij.txt(114273) 10 Mb--- . RBA_sij.txt(172454) 11 Mb--- . RBA_sij.txt(187186) 11 Mb--- . RBA_sij.txt(244874) 13 Mb--- . RBA_sij.txt(257656) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(491) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/skm/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:42 elapsed 0:00:01.119
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061405733525467
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925037999995766 vs -1.831273608355261
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941 vs -0.036829822440328
+FBA and RBA fluxes differ for EX_o2_e: -7.126174465570345 vs -8.97456925345008
+FBA and RBA fluxes differ for EX_pi_e: -0.0375328999998005 vs -0.033034001338807
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:44 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(22951) 6 Mb--- . RBA_sij.txt(37383) 6 Mb--- . RBA_sij.txt(91299) 8 Mb--- . RBA_sij.txt(103119) 9 Mb--- . RBA_sij.txt(156114) 11 Mb--- . RBA_sij.txt(169680) 11 Mb--- . RBA_sij.txt(222788) 13 Mb--- . RBA_sij.txt(236473) 13 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(493) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(1738) 15 Mb--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppa/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:45 elapsed 0:00:01.210
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061437922824736
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925038000000313 vs -3.594918425136795
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941000000053 vs -0.081258905222482
+FBA and RBA fluxes differ for EX_o2_e: -15.007306424731452 vs -19.659824434141818
+FBA and RBA fluxes differ for EX_pi_e: -0.037532900000007 vs -0.052203094725247
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:46 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(28191) 6 Mb--- . RBA_sij.txt(44320) 6 Mb--- . RBA_sij.txt(101248) 9 Mb--- . RBA_sij.txt(116668) 10 Mb--- . RBA_sij.txt(175898) 11 Mb--- . RBA_sij.txt(191322) 11 Mb--- . RBA_sij.txt(250081) 14 Mb--- . RBA_sij.txt(264600) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(494) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/3hppb/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:47 elapsed 0:00:01.089
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061441632785901
+FBA and RBA fluxes differ for EX_nh4_e: -0.592503799999991 vs -1.885263452358454
+FBA and RBA fluxes differ for EX_so4_e: -0.0079940999999999 vs -0.039367318999303
+FBA and RBA fluxes differ for EX_o2_e: -8.183062258471487 vs -10.459255486430273
+FBA and RBA fluxes differ for EX_pi_e: -0.0375327999999483 vs -0.033969749586246
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:49 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(27273) 6 Mb--- . RBA_sij.txt(43067) 6 Mb--- . RBA_sij.txt(100082) 9 Mb--- . RBA_sij.txt(114562) 10 Mb--- . RBA_sij.txt(172368) 11 Mb--- . RBA_sij.txt(187119) 11 Mb--- . RBA_sij.txt(244715) 13 Mb--- . RBA_sij.txt(257480) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(492) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/2phetoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:50 elapsed 0:00:01.118
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061405408713272
+FBA and RBA fluxes differ for EX_nh4_e: -0.592503799999804 vs -1.735379220254179
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941000000031 vs -0.034348438199049
+FBA and RBA fluxes differ for EX_o2_e: -5.792039272449928 vs -7.487431516077622
+FBA and RBA fluxes differ for EX_pi_e: -0.0375328999999504 vs -0.032084577163991
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:51 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(29870) 6 Mb--- . RBA_sij.txt(46282) 6 Mb--- . RBA_sij.txt(105361) 9 Mb--- . RBA_sij.txt(120591) 10 Mb--- . RBA_sij.txt(181227) 11 Mb--- . RBA_sij.txt(196765) 11 Mb--- . RBA_sij.txt(253972) 14 Mb--- . RBA_sij.txt(268302) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(492) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/cou/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:52 elapsed 0:00:01.081
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061405439835562
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925037999995766 vs -2.106638782057945
+FBA and RBA fluxes differ for EX_so4_e: -0.0079940999999999 vs -0.041981862304383
+FBA and RBA fluxes differ for EX_o2_e: -7.791799631840024 vs -9.779080411473128
+FBA and RBA fluxes differ for EX_pi_e: -0.0375328999999411 vs -0.035944003668012
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:54 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(29491) 6 Mb--- . RBA_sij.txt(45257) 6 Mb--- . RBA_sij.txt(102815) 9 Mb--- . RBA_sij.txt(117871) 10 Mb--- . RBA_sij.txt(175831) 11 Mb--- . RBA_sij.txt(190807) 11 Mb--- . RBA_sij.txt(249520) 13 Mb--- . RBA_sij.txt(262678) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(490) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hdca/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:55 elapsed 0:00:01.099
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061440989809995
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925038000000313 vs -3.832613075984065
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941000000071 vs -0.085910830139676
+FBA and RBA fluxes differ for EX_o2_e: -11.680656588601874 vs -15.513237183010592
+FBA and RBA fluxes differ for EX_pi_e: -0.0375328999999916 vs -0.054207093402071
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:56 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(29029) 6 Mb--- . RBA_sij.txt(44889) 6 Mb--- . RBA_sij.txt(103673) 9 Mb--- . RBA_sij.txt(118704) 10 Mb--- . RBA_sij.txt(178136) 11 Mb--- . RBA_sij.txt(193383) 11 Mb--- . RBA_sij.txt(250562) 14 Mb--- . RBA_sij.txt(265670) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(493) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/4hbz/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:57 elapsed 0:00:01.088
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061400478329559
+FBA and RBA fluxes differ for EX_nh4_e: -0.592503799999804 vs -2.362082190022357
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941 vs -0.053015583058305
+FBA and RBA fluxes differ for EX_o2_e: -11.81407625794894 vs -14.429494859336327
+FBA and RBA fluxes differ for EX_pi_e: -0.0375328999999455 vs -0.038849696994057
+--- Job runRBA_max_prod.gms Start 10/11/24 19:08:58 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(28011) 6 Mb--- . RBA_sij.txt(44218) 6 Mb--- . RBA_sij.txt(101529) 9 Mb--- . RBA_sij.txt(116563) 10 Mb--- . RBA_sij.txt(176392) 11 Mb--- . RBA_sij.txt(191712) 11 Mb--- . RBA_sij.txt(250081) 13 Mb--- . RBA_sij.txt(263699) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(493) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/styr/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:08:59 elapsed 0:00:01.095
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061405327749049
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925038000000313 vs -2.049173712010144
+FBA and RBA fluxes differ for EX_so4_e: -0.0079940999999999 vs -0.040727176900965
+FBA and RBA fluxes differ for EX_o2_e: -7.543200971346471 vs -9.443611428653233
+FBA and RBA fluxes differ for EX_pi_e: -0.0375329000000378 vs -0.035334439371613
+--- Job runRBA_max_prod.gms Start 10/11/24 19:09:01 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(29903) 6 Mb--- . RBA_sij.txt(46108) 6 Mb--- . RBA_sij.txt(104925) 9 Mb--- . RBA_sij.txt(120052) 10 Mb--- . RBA_sij.txt(179711) 11 Mb--- . RBA_sij.txt(194512) 11 Mb--- . RBA_sij.txt(250796) 14 Mb--- . RBA_sij.txt(265541) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(492) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/hxdcol/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:09:02 elapsed 0:00:01.090
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061439927720752
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925038000000313 vs -3.701741895993685
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941000000061 vs -0.082098003697262
+FBA and RBA fluxes differ for EX_o2_e: -10.953481745438165 vs -14.543759622699442
+FBA and RBA fluxes differ for EX_pi_e: -0.037532900000396 vs -0.052794485655575
+--- Job runRBA_max_prod.gms Start 10/11/24 19:09:03 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(28726) 6 Mb--- . RBA_sij.txt(45286) 6 Mb--- . RBA_sij.txt(104136) 9 Mb--- . RBA_sij.txt(119473) 10 Mb--- . RBA_sij.txt(178736) 11 Mb--- . RBA_sij.txt(194344) 11 Mb--- . RBA_sij.txt(252349) 14 Mb--- . RBA_sij.txt(267611) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(494) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/arte/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:09:04 elapsed 0:00:01.084
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061446085311857
+FBA and RBA fluxes differ for EX_nh4_e: -0.592503800000145 vs -3.137033203000073
+FBA and RBA fluxes differ for EX_so4_e: -0.0079940999999936 vs -0.069572959092756
+FBA and RBA fluxes differ for EX_o2_e: -19.734135562093357 vs -20.30106520369127
+FBA and RBA fluxes differ for EX_pi_e: -0.0375329000000114 vs -0.046334863451218
+FBA and RBA fluxes differ for EX_mg2_e: -0.0063606999999999 vs -0.007727794771358
+--- Job runRBA_max_prod.gms Start 10/11/24 19:09:06 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(28677) 6 Mb--- . RBA_sij.txt(44158) 6 Mb--- . RBA_sij.txt(100807) 9 Mb--- . RBA_sij.txt(115708) 10 Mb--- . RBA_sij.txt(173594) 11 Mb--- . RBA_sij.txt(188594) 11 Mb--- . RBA_sij.txt(247090) 13 Mb--- . RBA_sij.txt(259753) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(501) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/btoh/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:09:07 elapsed 0:00:01.111
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061441950584086
+FBA and RBA fluxes differ for EX_nh4_e: -0.592503800000145 vs -2.292464473144301
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941 vs -0.043010568715308
+FBA and RBA fluxes differ for EX_o2_e: -8.018502051956887 vs -9.949849211646674
+--- Job runRBA_max_prod.gms Start 10/11/24 19:09:08 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --carbonSlack 0
+    --adjust_constraints_if_infeas 1
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA_max_prod.gms(6) 2 Mb
+--- . runRBA_GAMS_settings.txt(20) 2 Mb
+--- runRBA_max_prod.gms(37) 2 Mb
+--- . RBA_species.txt(7813) 3 Mb
+--- runRBA_max_prod.gms(39) 3 Mb
+--- . RBA_rxns.txt(16888) 5 Mb
+--- runRBA_max_prod.gms(41) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA_max_prod.gms(43) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA_max_prod.gms(45) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA_max_prod.gms(47) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA_max_prod.gms(49) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA_max_prod.gms(51) 6 Mb
+--- . RBA_rxns_EXREV_YNB_RabinowitzVersion.txt(28) 6 Mb
+--- runRBA_max_prod.gms(53) 6 Mb
+--- . RBA_rxns_whole_biomass.txt(10) 6 Mb
+--- runRBA_max_prod.gms(55) 6 Mb
+--- . RBA_rxns_add.txt(118) 6 Mb
+--- runRBA_max_prod.gms(57) 6 Mb
+--- . RBA_rxns_EXREV_minimal.txt(18) 6 Mb
+--- runRBA_max_prod.gms(62) 6 Mb
+--- . RBA_sij.txt(27803) 6 Mb--- . RBA_sij.txt(43558) 6 Mb--- . RBA_sij.txt(100809) 9 Mb--- . RBA_sij.txt(115511) 10 Mb--- . RBA_sij.txt(174320) 11 Mb--- . RBA_sij.txt(188773) 11 Mb--- . RBA_sij.txt(247152) 13 Mb--- . RBA_sij.txt(260268) 14 Mb--- . RBA_sij.txt(268302) 15 Mb
+--- runRBA_max_prod.gms(64) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA_max_prod.gms(66) 15 Mb 1 Error
+*** Error 282 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Unable to open include file
+       Hint: Does the filename need to be quoted?
+--- runRBA_max_prod.gms(68) 15 Mb
+--- . yield_denominators.txt(3) 15 Mb
+--- runRBA_max_prod.gms(70) 15 Mb
+--- . yield_denominators_expanded.txt(9) 15 Mb
+--- runRBA_max_prod.gms(81) 15 Mb
+--- . GSM_rxn_bounds.txt(6627) 15 Mb
+--- runRBA_max_prod.gms(101) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(1) 15 Mb
+--- ... phenotype_common.txt(8) 15 Mb
+--- .... model-version-settings.txt(4) 15 Mb
+--- ... phenotype_common.txt(53) 15 Mb
+--- .. RBA_GAMS_defaults_from_FBA.txt(495) 15 Mb
+--- . phenotype.txt(8) 15 Mb
+--- runRBA_max_prod.gms(112) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(122) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA_max_prod.gms(130) 15 Mb 2 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(173) 15 Mb 3 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(181) 15 Mb 4 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(189) 15 Mb 5 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(192) 15 Mb 6 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(239) 15 Mb 7 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(248) 15 Mb 8 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(276) 15 Mb 9 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(289) 15 Mb 10 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(296) 15 Mb 11 Errors
+*** Error 257 in /storage/home/ejm6426/scratch/scRBA/application/output_max_withoutMP/nrgn/runRBA_max_prod.gms
+    Solve statement not checked because of previous errors
+--- runRBA_max_prod.gms(317) 15 Mb 11 Errors
+*** Status: Compilation error(s)
+--- Job runRBA_max_prod.gms Stop 10/11/24 19:09:09 elapsed 0:00:01.108
+FBA and RBA fluxes differ for EX_k_e: -0.0603649999999999 vs -0.061427231362579
+FBA and RBA fluxes differ for EX_nh4_e: -0.5925038000000313 vs -3.248654195042731
+FBA and RBA fluxes differ for EX_so4_e: -0.0079941 vs -0.074725798738747
+FBA and RBA fluxes differ for EX_o2_e: -13.684797759262048 vs -17.357024078989344
+FBA and RBA fluxes differ for EX_pi_e: -0.0375329000000334 vs -0.048387565208064
+17.030053938199035
+6.503098170437087
+15.223781663569984
+20.493594129949905
+15.223781663569984
+20.493594129949905
+7.956152383411257
+2.398459109383042
+12.310908784077567
+10.06059178759377
+11.495083719101395
+6.448760769918064
+2.125096075944671
+2.097690532032536
+11.830219259561096
+23.158000900483984
+9.619565848243479
+3.183054426087371
+not found: ./output_max_withoutMP/odealc/report.txt
+not found: ./output_max_withoutMP/pmtalc/report.txt
+11.378220431936683
+1.612900652995342
+3.183054425983536
+2.49126643275709
+9.02122674939933
+not found: ./output_max_withoutMP/stalc/report.txt
+6.182032002992508
+0.125037675289547
+not found: ./output_max_withoutMP/tal/report.txt
+/scratch/ejm6426/scRBA/application/A1_run_yield_predictions.py:824: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value 'media:reset;c_sources:EX_sucr_e;media:reset;c_sources:EX_sucr_e;EX_sucr_e:(-0.332925,1000);EX_k_e:(-0.1,1000);EX_nh4_e:(-0.09,1000);EX_ca2_e:(-0.002844,1000);EX_mg2_e:(-0.004689,1000);EX_pi_e:(-0.01,1000);EX_no3_e:(-0.003217,1000);EX_cl_e:(-0.00643,1000);EX_so4_e:(-0.002,1000);EX_h_e:(-1000,1000);EX_h2o_e:(-1000,1000);EX_btn_c:(-0.01,1000);EX_o2_e:(-26.25403530509562,1000);EX_co2_e:(0,1000);EX_thm_e:(-1000,1000);EX_ribflv_e:(-1000,1000);EX_nac_e:(-1000,1000);EX_pydxn_e:(-1000,1000);EX_fol_e:(-1000,1000);EX_pnto__R_e:(-1000,1000);EX_4abz_e:(-1000,1000);EX_cu2_e:(-1000,1000);EX_fe2_e:(-1000,1000);EX_fe3_e:(-1000,1000);EX_mn2_e:(-1000,1000);EX_na1_e:(-1000,1000);EX_ni2_e:(-1000,1000);EX_zn2_e:(-1000,1000);EX_cobalt2_e:(-1000,1000);EX_inost_e:(-1000,1000);EX_asp__L_e:(-0.00046,1000);EX_thr__L_e:(-0.000276,1000);EX_ser__L_e:(-0.000334,1000);EX_glu__L_e:(-0.001013,1000);EX_gly_e:(-0.000747,1000);EX_tyr__L_e:(-0.000094,1000);EX_lys__L_e:(-0.000216,1000);EX_arg__L_e:(-0.000236,1000);EX_trp__L_e:(-0.000023,1000);EX_chol_e:(-0.090319,1000);EX_ala__L_e:(-0.001179,1000);EX_val__L_e:(-0.000463,1000);EX_met__L_e:(-0.000132,1000);EX_ile__L_e:(-0.000253,1000);EX_leu__L_e:(-0.000709,1000);EX_phe__L_e:(-0.000229,1000);EX_his__L_e:(-0.000205,1000);EX_pro__L_e:(-0.000761,1000);BIOMASS_AERO_SC_hvd:(0.0133333333333333,1000)' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[c, k] = v
+/scratch/ejm6426/scRBA/application/A1_run_yield_predictions.py:824: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value 'Fed-batch; 2L; 40 g/L after 24 h; pH 5.0; sucrose as substrate' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[c, k] = v
+/scratch/ejm6426/scRBA/application/A1_run_yield_predictions.py:824: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4607723/' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[c, k] = v
+/scratch/ejm6426/scRBA/application/A1_run_yield_predictions.py:824: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value 'Rounded up trace element uptakes to account for contributions from seed cultures, until yields could be replicated' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[c, k] = v
+/scratch/ejm6426/scRBA/application/A1_run_yield_predictions.py:834: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[c, 'RBA: '+k] = v
+/scratch/ejm6426/scRBA/application/A1_run_yield_predictions.py:834: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[c, 'RBA: '+k] = v
+/scratch/ejm6426/scRBA/application/A1_run_yield_predictions.py:834: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '' has dtype incompatible with float64, please explicitly cast to a compatible dtype first.
+  df.loc[c, 'RBA: '+k] = v
