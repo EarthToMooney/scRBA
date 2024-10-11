@@ -10,7 +10,7 @@ $include "./min_flux_violation_GAMS_settings.txt"
 $setGlobal nscale 1e5
 * max fluxes allowed, and min fluxes deemed significant enough to report
 $setGlobal vmax 1e3
-$setGlobal vmin 1e-9 
+$setGlobal vmin 0 
 * max predicted kapp, for use in approximating enzyme levels
 $setGlobal kapp_max 1e30
 * slacks turned off by default, 
@@ -18,7 +18,7 @@ $setGlobal kapp_max 1e30
 $setGlobal fluxSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * update to match solver tolerance
-$setGlobal tol 2e-2
+$setGlobal tol 3e-2
 
 options
     LP = cplex /*Solver selection*/
@@ -183,14 +183,14 @@ kappEstSlackSum.up = kappEstSlackSum.l*(1+(1*%tol%));
 Solve rba using lp minimizing fluxSlack;
 put log; put 'minimized fluxSlack'/; putclose;
 if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-fluxSlack.up = fluxSlack.l*(1+(10*%tol%));
+fluxSlack.up = fluxSlack.l*(1+(1*%tol%));
 
 Solve rba using lp minimizing fluxSum_j_NP;
 put log; put 'minimized fluxSum_j_NP'/; putclose;
 if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
 * force rxns that were turned off to stay off
 v.fx(j)$(rxns_with_no_prodata(j) and (v.l(j) eq 0)) = 0;
-fluxSum_j_NP.up = fluxSum_j_NP.l*(1+(10*%tol%));
+fluxSum_j_NP.up = fluxSum_j_NP.l*(1+(1*%tol%));
 
 *loop(enzload_rxn_coupling(j1,j),
 *	if (v.l(j) eq 0, 
