@@ -1,6 +1,6 @@
 $include ../../input/phenotype_common.txt
 $setGlobal vprod 'RXNADD-EX_tal_e_FWD-SPONT'
-parameter minProductYield /0.11450973051259666/;
+parameter minProductYield /0/;
 $setGlobal prod_mw 126.11004
 v.up('RXN-EX_13BDglucan_e_FWD-SPONT') = 1000.0 * %nscale%;
 v.lo('RXN-EX_13BDglucan_e_FWD-SPONT') = 0.0 * %nscale%;
@@ -356,7 +356,7 @@ v.up('RXN-EX_ca2_e_REV-SPONT') = 1000.0 * %nscale%;
 v.lo('RXN-EX_ca2_e_REV-SPONT') = 0;
 v.up('RXN-EX_ca2_e_FWD-SPONT') = 1000.0 * %nscale%;
 v.lo('RXN-EX_ca2_e_FWD-SPONT') = 0;
-$setGlobal mu 0.00012818595793873334
+$setGlobal mu 0.00012818704623267547
 $setGlobal biom_id 'BIOSYN-BIODILAERO'
 v.fx('%biom_id%') = %mu% * %nscale%;
 v.up('RXN-EX_cobalt2_e_REV-SPONT') = 1000.0 * %nscale%;

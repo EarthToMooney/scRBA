@@ -1,6 +1,6 @@
 $include ../../input/phenotype_common.txt
 $setGlobal vprod 'RXNADD-EX_rsvtol_e_FWD-SPONT'
-parameter minProductYield /0/;
+parameter minProductYield /0.0002/;
 $setGlobal prod_mw 228.24
 v.up('RXN-EX_13BDglucan_e_FWD-SPONT') = 1000.0 * %nscale%;
 v.lo('RXN-EX_13BDglucan_e_FWD-SPONT') = 0.0 * %nscale%;

@@ -6,5 +6,5 @@ biom_id = 'BIOSYN-BIODILAERO'
 biom_id_fba = 'BIOMASS_AERO_SC_hvd'
 vprod_coreid = 'EX_btoh_e'
 vprod = 'RXNADD-EX_btoh_e_FWD-SPONT'
-c_sources_list = [{'rxn': 'EX_glc__D_e', 'MW': 180.156, 'v': -13.21}]
+c_sources_list = [{'rxn': 'EX_glc__D_e', 'MW': 180.156, 'v': -5.549820853803196}]
 prod_mw = 74.12
