@@ -1,0 +1,15 @@
+optcr = 1E-12
+optca = 1E-12
+eprhs = 1E-9
+
+* reduce info displayed, for faster run times
+conflictdisplay = 0
+bardisplay = 0
+clonelog = -1
+mipdisplay = 1
+netdisplay = 0
+simdisplay = 0
+siftdisplay = 0
+tuningdisplay = 0
+*writeannotation = /dev/null
+multobjdisplay = 0
