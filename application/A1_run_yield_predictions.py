@@ -5,8 +5,7 @@ from copy import deepcopy
 import json
 from cobra.io import load_model
 
-import sys
-import os,shutil
+import sys,os,shutil
 sys.path.append('../pycore/')
 from gsm_custom_functions import *
 
@@ -282,14 +281,14 @@ if rerun_FBA:
                 # store uptake bounds in case they change later
                 uptake_bounds_initial = {x.id:x.lower_bound for x in m.reactions if x.id.startswith('EX_') and x.lower_bound < 0}
                 if fba.status != 'optimal':
+                    msg = 'FBA for ' + p + ' failed'
+                    print(msg)
+                    # fba_results[p]['disclaimers'].append(msg)
                     if not adjust_constraints_if_infeas:
                         break
                     biomass_bounds = biomassRxn.bounds
                     uptake_bounds = {x.id:x.lower_bound for x in m.reactions if x.id.startswith('EX_') and x.lower_bound < 0}
                     uptake_mets = {x:x.replace('EX_','') for x in uptake_bounds.keys()}
-                    msg = 'FBA for ' + p + ' failed'
-                    # fba_results[p]['disclaimers'].append(msg)
-                    print(msg)
                     
                     # find minimum total mass of carbon sources to support growth
                     if c_sources == []:
