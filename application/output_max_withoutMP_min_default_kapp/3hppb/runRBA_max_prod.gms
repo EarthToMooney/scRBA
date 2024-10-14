@@ -141,7 +141,9 @@ v_up(j), vprod_max
 v_up(j) = v.up(j);
 vprod_max = v.l('%vprod%');
 v.lo('%vprod%') = vprod_max;
-Solve rba using lp minimizing mv_sub_sum;
+if((rba.modelstat eq 1),
+	Solve rba using lp minimizing mv_sub_sum;
+);
 
 * If not optimal, try again with bounds on vprod relaxed in case it's demanding too much.
 * This isn't done initially in case setting specific bounds is important for replicating experimental results (e.g., for making multiple products).
@@ -161,7 +163,7 @@ slack(j), slacksum
 * default
 slack.fx(j) = 0;
 * allow slack for uptakes
-slack.up(j)$(uptake(j) and v.up(j) gt 0) = 1e10 * %nscale%;
+slack.up(j)$(uptake(j) and v.up(j) gt 0) = inf;
 slack.lo(j)$(uptake(j) and v.up(j) gt 0) = 0 * %nscale%;
 * use initial uptake bounds as slack for other reactions
 *$include "RBA_GAMS_defaults_from_FBA_initial.txt"
