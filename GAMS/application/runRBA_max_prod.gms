@@ -141,7 +141,7 @@ v_up(j), vprod_max
 v_up(j) = v.up(j);
 vprod_max = v.l('%vprod%');
 v.lo('%vprod%') = vprod_max;
-while((rba.modelstat eq 1),
+if((rba.modelstat eq 1),
 	Solve rba using lp minimizing mv_sub_sum;
 );
 
