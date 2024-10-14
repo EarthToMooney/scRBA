@@ -2,6 +2,12 @@ from RBA_defaults_from_FBA import *
 
 import sys
 sys.path.append(path_pycore)
+
+adjust_constraints_if_infeas = False # default
+if len(sys.argv) > 1:
+    # There are additional arguments
+    adjust_constraints_if_infeas = bool(int(sys.argv[1]))
+
 import json
 from simulate import get_GAMS_modelStat, RBA_result
 
@@ -29,6 +35,7 @@ report = {k:None for k in ['stat', 'vCarbonSources', 'carbonSlack', 'vprod', 'yi
 # Execute GAMS
 os.system('module load gams\n' + 'gams runRBA_max_prod.gms' + \
           ' --carbonSlack=' + str(carbonSlack) + \
+          ' --adjust_constraints_if_infeas=' + str(int(adjust_constraints_if_infeas)) + \
           output_redirect_str)
 stat = get_GAMS_modelStat('./runRBA.modelStat.txt')
 

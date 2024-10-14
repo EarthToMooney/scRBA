@@ -6,7 +6,7 @@ sys.path.append(path_pycore)
 adjust_constraints_if_infeas = False # default
 if len(sys.argv) > 1:
     # There are additional arguments
-    adjust_constraints_if_infeas = bool(sys.argv[1])
+    adjust_constraints_if_infeas = bool(int(sys.argv[1]))
 
 import json
 from simulate import get_GAMS_modelStat, RBA_result
@@ -16,6 +16,10 @@ shutil.copy(path_gams + 'application/runRBA_max_prod.gms', './runRBA_max_prod.gm
 shutil.copy(path_gams + 'application/soplex.opt', './soplex.opt');
 
 import os
+# remove report file if it exists, to avoid accidentally reporting old results
+report_path = 'report.txt'
+if os.path.exists(report_path):
+    os.remove(report_path)
 import pandas as pd
 
 # Set growth and glucose uptake rates
@@ -100,7 +104,7 @@ if optimal:
     text = []
     for k in report.keys():
         text.append(k + '\t' + str(report[k]))
-    with open('report.txt', 'w') as f:
+    with open(report_path, 'w') as f:
         f.write('\n'.join(text))
 
     # Write JSON results

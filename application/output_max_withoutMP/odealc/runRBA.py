@@ -17,7 +17,7 @@ shutil.copy(path_gams + 'application/soplex.opt', './soplex.opt');
 
 import os
 # remove report file if it exists, to avoid accidentally reporting old results
-report_path = './report.txt'
+report_path = 'report.txt'
 if os.path.exists(report_path):
     os.remove(report_path)
 import pandas as pd

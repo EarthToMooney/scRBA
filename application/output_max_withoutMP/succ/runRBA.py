@@ -1,7 +1,13 @@
-from runRBA_options import *
+from RBA_defaults_from_FBA import *
 
 import sys
 sys.path.append(path_pycore)
+
+adjust_constraints_if_infeas = False # default
+if len(sys.argv) > 1:
+    # There are additional arguments
+    adjust_constraints_if_infeas = bool(int(sys.argv[1]))
+
 import json
 from simulate import get_GAMS_modelStat, RBA_result
 
@@ -10,111 +16,145 @@ shutil.copy(path_gams + 'application/runRBA_max_prod.gms', './runRBA_max_prod.gm
 shutil.copy(path_gams + 'application/soplex.opt', './soplex.opt');
 
 import os
+# remove report file if it exists, to avoid accidentally reporting old results
+report_path = 'report.txt'
+if os.path.exists(report_path):
+    os.remove(report_path)
 import pandas as pd
 
 # Set growth and glucose uptake rates
-mu = 0.1
-vglc0 = 13.2
+carbonSlack = 0 # in case the model needs a rerun, helps test if it can grow
+
+# can hide output (e.g., .lst files) by redirecting to o=/dev/null
+hide_output = True
+output_redirect_str = ' o=/dev/null' if hide_output else ''
 
 # Initiate report
-report = {k:None for k in ['stat', 'vglc', 'vprod', 'yield']}
+report = {k:None for k in ['stat', 'vCarbonSources', 'carbonSlack', 'vprod', 'yield']}
 
 # Execute GAMS
-vglc = vglc0
 os.system('module load gams\n' + 'gams runRBA_max_prod.gms' + \
-          ' --mu=' + str(mu) + \
-          ' --vglc=' + str(vglc) + \
-          ' --vprod="' + vprod + '"' + ' o=/dev/null')
-    #     ' --vprod="' + vprod + '"')
+          ' --carbonSlack=' + str(carbonSlack) + \
+          ' --adjust_constraints_if_infeas=' + str(int(adjust_constraints_if_infeas)) + \
+          output_redirect_str)
 stat = get_GAMS_modelStat('./runRBA.modelStat.txt')
-    
+
+def total_carbon_mass_flux(RBA_results, carbon_source_list):
+    # in g*mmol/(mol*gDW*h)
+    # for each c source, multiply its flux by its MW
+    # c_source_list: list of dicts with keys: "rxn" and "MW"
+    total_mass_flux = 0
+    for c_source in carbon_source_list:
+        if c_source['rxn'] in RBA_results.metabolic_flux.keys():
+            total_mass_flux += RBA_results.metabolic_flux[c_source['rxn']] * c_source['MW']
+    return total_mass_flux
+
+optimal = False
 if stat == 'infeasible':
     report['stat'] = stat
-    report['vglc'] = 0
     report['vprod'] = 0
     report['yield'] = 0
         
 elif stat == 'optimal':
+    optimal = True
     res = RBA_result(biom_id=biom_id)
     res.load_raw_flux(filepath='./runRBA.flux.txt')
     res.calculate_metabolic_flux()
     if vprod.split('-')[0] == 'RXNADD':
         res.metabolic_flux[vprod_coreid] = res.raw_flux[vprod]
     pflux = res.metabolic_flux[vprod_coreid]
-    vglc_sim = - res.metabolic_flux['EX_glc__D_e']
-        
-    report['stat'] = stat
-    report['vglc'] = vglc_sim
-    report['vprod'] = pflux
-    report['yield'] = pflux * prod_mw / vglc_sim / 180.156
         
 elif stat == 'need_rerun':
     itermax = 100; iternum = 0;
     while stat == 'need_rerun' and iternum < itermax:
         iternum += 1
-        vglc += 1e-3
+        carbonSlack += 1e-3 # test if it grows with extra substrate
         os.system('module load gams\n' + 'gams runRBA_max_prod.gms' + \
-                  ' --mu=' + str(mu) + \
-                  ' --vglc=' + str(vglc) + \
-                  ' --vprod="' + vprod + '"' + ' o=/dev/null')
+                  ' --carbonSlack=' + str(carbonSlack) + \
+                  output_redirect_str)
         stat = get_GAMS_modelStat('./runRBA.modelStat.txt')
             
         if stat == 'infeasible':
             report['stat'] = stat
-            report['vglc'] = 0
             report['vprod'] = 0
             report['yield'] = 0
             
         elif stat == 'optimal':
+            optimal = True
             res = RBA_result(biom_id=biom_id)
             res.load_raw_flux(filepath='./runRBA.flux.txt')
             res.calculate_metabolic_flux()
             if vprod.split('-')[0] == 'RXNADD':
                 res.metabolic_flux[vprod_coreid] = res.raw_flux[vprod]
             pflux = res.metabolic_flux[vprod_coreid]
-            vglc_sim = - res.metabolic_flux['EX_glc__D_e']
-            
-            report['stat'] = stat
-            report['vglc'] = vglc_sim
-            report['vprod'] = pflux
-            report['yield'] = pflux * prod_mw / vglc_sim / 180.156
-        
         elif stat == 'need_rerun':
             report['stat'] = stat
         
         else:
             print('wtf')
+
+report['carbonSlack'] = carbonSlack
+if optimal:
+    report['stat'] = stat
+    report['vprod'] = pflux
+    report['yield'] = pflux * prod_mw / abs(total_carbon_mass_flux(res, c_sources_list))
+    report['vCarbonSources'] = sum([res.metabolic_flux[c['rxn']] for c in c_sources_list])
+
+    # Write report text file
+    text = []
+    for k in report.keys():
+        text.append(k + '\t' + str(report[k]))
+    with open(report_path, 'w') as f:
+        f.write('\n'.join(text))
+
+    # Write JSON results
+    with open(path_enz_mw) as f:
+        text = f.read().split('\n')
+    text = [i for i in text if i != '']
+    enz_mw = dict()
+    for i in text:
+        k,v = i.split('\t')
+        enz_mw[k] = float(v)
         
-# Write report text file
-text = []
-for k in ['stat', 'vglc', 'vprod', 'yield']:
-    text.append(k + '\t' + str(report[k]))
-with open('report.txt', 'w') as f:
-    f.write('\n'.join(text))
+    with open(path_pro_mw) as f:
+        text = f.read().split('\n')
+    text = [i for i in text if i != '']
+    pro_mw = dict()
+    for i in text:
+        k,v = i.split('\t')
+        pro_mw[k] = float(v)
+        
+    res.enzyme_mw = enz_mw
+    res.protein_mw = pro_mw
 
-# Write JSON results
-with open(path_enz_mw) as f:
-    text = f.read().split('\n')
-text = [i for i in text if i != '']
-enz_mw = dict()
-for i in text:
-    k,v = i.split('\t')
-    enz_mw[k] = float(v)
+    res.calculate_all()
+    res.enzyme_mw = ''
+    res.protein_mw = ''
+
+    res.save_to_json('./RBA_result.json')
+    res.make_escher_csv('./flux.escher.csv')
+    # find FBA fluxes from fba_fluxes.csv
+    fba_fluxes = pd.read_csv('fba_fluxes.csv')
     
-with open(path_pro_mw) as f:
-    text = f.read().split('\n')
-text = [i for i in text if i != '']
-pro_mw = dict()
-for i in text:
-    k,v = i.split('\t')
-    pro_mw[k] = float(v)
-    
-res.enzyme_mw = enz_mw
-res.protein_mw = pro_mw
-
-res.calculate_all()
-res.enzyme_mw = ''
-res.protein_mw = ''
-
-res.save_to_json('./RBA_result.json')
-res.make_escher_csv('./flux.escher.csv')
+    fba_and_rba_identical_uptakes_and_biomass = True
+    # if new_FBA_constraints.csv exists, remove it (in case it's from a prior run)
+    new_FBA_constraints_name = 'new_FBA_constraints.csv'
+    if os.path.exists(new_FBA_constraints_name):
+        os.remove(new_FBA_constraints_name)
+    # compare FBA and RBA fluxes, to rerun FBA with RBA constraints if needed
+    for rxn in res.metabolic_flux.keys():
+        if rxn in fba_fluxes['rxn'].values:
+            fba_flux = fba_fluxes[fba_fluxes['rxn'] == rxn]['flux'].values[0]
+            rba_flux = res.metabolic_flux[rxn]
+            # if rxn is uptake or biomass, compare fluxes
+            if (rxn[:2] == 'EX' and fba_flux < 0) or rxn == res.biom_id:
+                # replace biomass name with biom_id_fba
+                rxn_name = rxn
+                if rxn == res.biom_id:
+                    rxn_name = biom_id_fba
+                if abs(fba_flux - rba_flux) > 1e-3:
+                    fba_and_rba_identical_uptakes_and_biomass = False
+                    print('FBA and RBA fluxes differ for ' + rxn + ': ' + str(fba_flux) + ' vs ' + str(rba_flux))
+                    # write new FBA constraints, for use in A1
+                    with open(new_FBA_constraints_name, 'a') as f:
+                        f.write(rxn_name + ',' + str(rba_flux) + '\n')

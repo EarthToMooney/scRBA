@@ -14,10 +14,6 @@ from simulate import get_GAMS_modelStat, RBA_result
 import shutil
 shutil.copy(path_gams + 'application/runRBA_max_prod.gms', './runRBA_max_prod.gms');
 shutil.copy(path_gams + 'application/soplex.opt', './soplex.opt');
-# remove report.txt if it exists
-report_path = 'report.txt'
-if os.path.exists(report_path):
-    os.remove(report_path)
 
 import os
 # remove report file if it exists, to avoid accidentally reporting old results
