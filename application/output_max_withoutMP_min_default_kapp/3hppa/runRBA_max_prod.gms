@@ -132,7 +132,8 @@ rba.optfile = 1;
 *** SOLVE ***
 Solve rba using lp minimizing z;
 
-* solve again, minimizing mv_sub_sum to find a better yield (get rid of this if linear fractional programming version is developed)
+* solve again, minimizing mv_sub_sum to find a better yield by discouraging wasteful substrate use 
+* NOTE: (get rid of this if linear fractional programming version is developed)
 * save current uptake bounds as parameters
 Parameters
 v_up(j), vprod_max

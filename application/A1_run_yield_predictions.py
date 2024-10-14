@@ -806,10 +806,10 @@ if rerun_RBA:
 # don't put file extension; copy sheet into outputFolder
 output_sheet_path = outputFolder + 'compiled_results'
 shutil.copy(os.path.join('./compiled_results_template.xlsx'),
-            os.path.join(output_sheet_path))
+            os.path.join(output_sheet_path+'.xlsx'))
 # write FBA yields to rateFBA column (2nd how has headers)
 # read headers only
-df = pd.read_excel(output_sheet_path, header=1, nrows=0)
+df = pd.read_excel(output_sheet_path+'.xlsx', header=1, nrows=0)
 c = 0
 for prodname in sorted(prods):
     if prodname == '3hpp':
