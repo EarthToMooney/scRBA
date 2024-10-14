@@ -5,6 +5,8 @@
 * NGAM (N-lim and C-lim chemostats using glucose)
 * max_allowed_mito_proteome_allo_fraction
 * nonmodeled_proteome_allocation
+$setGlobal gms_path ../../input/GAMS_model_application/
+*$include %gms_path%model-version-settings.txt
 $include ../../../pycore/binary_search/model-version-settings.txt
 
 * file with settings updated by build_model scripts, to help with managing multiple GSM models

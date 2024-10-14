@@ -8,4 +8,3 @@ module load gams
 outputFolder=\""./$(basename $(pwd))/\""
 cd ../
 python A1_run_yield_predictions.py outputFolder=$outputFolder
-

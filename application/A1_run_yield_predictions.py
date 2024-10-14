@@ -37,8 +37,6 @@ newmodel_path = './input/'+modelname+'_pathwayadd.json'
 vmax = 1000 # highest absolute value of any flux in GSM model
 
 outputFolder = './output_max_withoutMP/'
-fba_results_path = outputFolder+'all_fba_results.json'
-rba_results_path = outputFolder+'all_RBA_results.json'
 try:
     # fba_results,RBA_result_dict = dict(),dict()
     fba_results = json.load(open(fba_results_path))
@@ -75,6 +73,8 @@ if len(sys.argv) > 1:
         # update the variable
         exec(k + ' = ' + str(v))
         print('variable',k,'set to',str(v))
+fba_results_path = outputFolder+'all_fba_results.json'
+rba_results_path = outputFolder+'all_RBA_results.json'
 
 # add rxns to both models
 for i in df_rxns.index:
