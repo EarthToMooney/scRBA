@@ -23,7 +23,7 @@ prosynSlackUB.up(pro)$pro_ribonuc(pro) = %prosynSlackAllow%;
 prosynSlackUB.up(pro)$pro_ribomito(pro) = %prosynSlackAllow%;
 
 * NGAM + GAM
-v.lo('RXN-ATPM_c_FWD-SPONT') = (1 + 2.088) * %nscale%;
+v.lo('RXN-ATPM_c_FWD-SPONT') = (1 + (%mu% * 2.088)) * %nscale%;
 * NGAM
 *v.lo('RXN-ATPM_c_FWD-SPONT') = 1 * %nscale%;
 

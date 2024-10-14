@@ -20,7 +20,7 @@ set4_path = './kapp_ambiguousLoad_case_resolve_common.txt'
 
 res_metab = RBA_result(biom_id=biom_id)
 #res_metab.load_raw_flux('./min_flux_violation/enz_alloc.flux.txt')
-flux_path = './min_flux_violation/enz_alloc.flux.txt'
+flux_path = './min_flux_violation/enz_alloc.flux_unscaled.txt'
 # check if any enzymatic rxns witho no proteomics data were used
 with open('min_flux_violation/enz_alloc.flux_essential_with_no_prodata_unscaled.txt') as f:
     rxns_essential_NP = f.read().split('\n')
@@ -129,7 +129,7 @@ for i in df_enz.index:
         enzdict[enz].append(rxn)
         
 rxndict = {k:set(v) for k,v in rxndict.items()}
-#print('rxndict',rxndict)
+# print('rxndict',rxndict)
 rxndict_zeroCost = {k:v for k,v in rxndict.items() if v == {'zeroCost'}}
 rxndict = {k:v for k,v in rxndict.items() if 'zeroCost' not in [k,v]}
 enzdict = {k:set(v) for k,v in enzdict.items() if 'zeroCost' not in [k,v]}

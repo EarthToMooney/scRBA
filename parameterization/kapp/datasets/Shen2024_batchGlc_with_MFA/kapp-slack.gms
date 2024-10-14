@@ -2,7 +2,7 @@
 
 $INLINECOM /*  */
 $include "../GAMS_setting_files/test_kapp_GAMS_settings.txt"
-$setGlobal kapp_path ../kapps_per_hr_without_unused_rxns.txt
+$setGlobal kapp_path ../kapps_without_unused_rxns
 * Scale values of all variables by a factor, then when write to file, descale them
 $setGlobal nscale 1e5
 $setGlobal vmax 1e3
