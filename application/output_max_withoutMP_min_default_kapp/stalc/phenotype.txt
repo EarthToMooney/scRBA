@@ -8,3 +8,8 @@ $setGlobal max_allowed_mito_proteome_allo_fraction 1
 *$include ../../input/prosyn_constraints.txt
 v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0;
 v.fx('RXN-EX_glc__D_e_REV-SPONT') = 0;
+*v.up('RXN-EX_fru_e_FWD-SPONT') = 1e3 * %nscale%;
+v.lo('%biom_id%') = 0 * %nscale%;
+*v.up('RXN-EX_h2o_e_FWD-SPONT') = 1e3 * %nscale%;
+*v.up('RXN-EX_h2o_e_REV-SPONT') = 1e3 * %nscale%;
+$setGlobal carbonSlack 0.4

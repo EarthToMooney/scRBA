@@ -115,8 +115,7 @@ $include %enz_cap_declares_path%
 ;
 
 mvSubSum.. mv_sub_sum =e= sum(j$mw(j),v(j)*mw(j));
-*minYield.. minProductYield * mv_sub_sum * %percent_min_exp_yield% / 100 =l= %prod_mw% * v('%vprod%');
-minYield.. 0 =l= %prod_mw% * v('%vprod%');
+minYield.. minProductYield * mv_sub_sum * %percent_min_exp_yield% / 100 =l= %prod_mw% * v('%vprod%');
 Obj..			z =e= -v('%vprod%');
 Stoic(i)..		sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityMito.. 	v('RIBOSYN-ribomito') * %kribomito% =e= mu_current * sum(j$mito_translation(j), NAA(j) * v(j));
@@ -142,7 +141,7 @@ v_up(j), vprod_max
 v_up(j) = v.up(j);
 vprod_max = v.l('%vprod%');
 v.lo('%vprod%') = vprod_max;
-while((rba.modelstat eq 1),
+if((rba.modelstat eq 1),
 	Solve rba using lp minimizing mv_sub_sum;
 );
 
