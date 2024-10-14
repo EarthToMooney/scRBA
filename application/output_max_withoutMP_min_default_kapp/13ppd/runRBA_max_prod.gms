@@ -106,13 +106,12 @@ mu_current = %mu%;
 * Set your biomass composition in phenotype.txt since biomass composition depends on growth-condition
 
 *** EQUATION DEFINITIONS ***
-*Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo, minYield
 Equations
-Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo
+Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo, minYield
 $include %enz_cap_declares_path%
 ;
 
-*minYield.. minProductYield * sum(j$mw(j),v(j)*mw(j)) =l= %prod_mw% * v('%vprod%');
+minYield.. minProductYield * sum(j$mw(j),v(j)*mw(j)) =l= %prod_mw% * v('%vprod%');
 Obj..			z =e= -v('%vprod%');
 Stoic(i)..		sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityMito.. 	v('RIBOSYN-ribomito') * %kribomito% =e= mu_current * sum(j$mito_translation(j), NAA(j) * v(j));
@@ -162,12 +161,11 @@ slackobj.. slacksum =e= sum(j, slack(j));
 Model rba_slack /all/;
 
 * added in case infeasibilities occur, and FBA predictions should be adjusted to match
-*Obj, Stoic, minYield, slackcons, slackobj
 Model fba /
-Obj, Stoic, slackcons, slackobj
+Obj, Stoic, minYield, slackcons, slackobj
 /;
 
-while((rba.modelstat ne 1 and %adjust_constraints_if_infeas%),
+while((rba.modelstat ne 1 and (%adjust_constraints_if_infeas% ne 0)),
 	rba_slack.optfile = 1;
 	display 'UPDATE: find lowest uptakes that still allow optimal growth and exp. yields';
 	Solve rba_slack using lp minimizing slacksum;
@@ -225,7 +223,7 @@ putclose ff3;
 if(rba.modelstat eq 1,
 	abort.noError 'Optimal solution found';
 );
-if(not %adjust_constraints_if_infeas%,
+if((%adjust_constraints_if_infeas% eq 0),
 	abort.noError 'no optimal solution; set adjust_constraints_if_infeas to 1 to try tweaks'
 );
 * find smallest uptakes on minimal media
@@ -313,5 +311,4 @@ loop(j,
 	);
 );
 putclose frba2;
-
 
