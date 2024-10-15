@@ -1,0 +1,30 @@
+Chen2021 kcat data curation for yeast RBA model
+Literature kcat entries check
+r_0366_fwd	x
+r_0450_fwd	x
+r_0467_fwd	x
+r_0486_fwd	x
+r_0892_fwd	x
+r_0892_fwd	x
+r_0893_fwd	x
+r_1049_fwd	x
+r_1050_fwd	x
+r_1054_fwd	x
+r_0703_fwd	x
+r_0704_fwd	x
+
+SA kcat entries check
+r_0208_fwd	x
+r_0451_fwd	x
+r_0452_fwd	x
+r_0713_rvs	x
+r_0820_rvs	x
+r_1000_fwd	x
+r_4196_fwd	x
+r_4197_fwd	x
+r_1048_rvs	x
+r_1070_rvs	x
+
+SABIO-RK kcat entries check
+
+

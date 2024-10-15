@@ -1,0 +1,89 @@
+* Guidance: Carefully check how carbon is balanced (excess or deficit in uptake)
+* because experimental data contains measurement errors and not all in and out fluxes
+* are measured
+* Note: Fitting to the phenotype data, carbon balance indicates secretions of some biosynthetic intermediate metabolites under the objective of mimizing the sum of fluxes. The secretions, however, are very minor some we assume the phenotype fit is ok.
+
+* Growth rate
+$setGlobal mu 0.448
+v.fx('BIOSYN-BIODIL') = %mu% * %nscale%;
+
+* Substrate and oxygenation
+v.fx('RXN-EX_glc__D_e_REV-SPONT') = 12.97 * %nscale%;
+v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0 * %nscale%;
+
+v.up('RXN-EX_o2_e_REV-SPONT') = 1e5 * %nscale%;
+v.fx('RXN-EX_o2_e_FWD-SPONT') = 0 * %nscale%;
+
+* Secretions
+v.lo('RXN-EX_etoh_e_FWD-SPONT') = 17.64 * %nscale%;
+v.fx('RXN-EX_etoh_e_REV-SPONT') = 0 * %nscale%;
+
+* Amino acid uptake for YNB+Amino acids growth conditions
+v.fx('RXN-EX_glu__L_e_REV-SPONT') = 0.1487 * %nscale%;
+v.fx('RXN-EX_glu__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_thr__L_e_REV-SPONT') = 0.1336 * %nscale%;
+v.fx('RXN-EX_thr__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_lys__L_e_REV-SPONT') = 0.0968 * %nscale%;
+v.fx('RXN-EX_lys__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_leu__L_e_REV-SPONT') = 0.1080 * %nscale%;
+v.fx('RXN-EX_leu__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_arg__L_e_REV-SPONT') = 0.1016 * %nscale%;
+v.fx('RXN-EX_arg__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_ile__L_e_REV-SPONT') = 0.0595 * %nscale%;
+v.fx('RXN-EX_ile__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_met__L_e_REV-SPONT') = 0.0625 * %nscale%;
+v.fx('RXN-EX_met__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_phe__L_e_REV-SPONT') = 0.0575 * %nscale%;
+v.fx('RXN-EX_phe__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_val__L_e_REV-SPONT') = 0.0274 * %nscale%;
+v.fx('RXN-EX_val__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_his__L_e_REV-SPONT') = 0.0289 * %nscale%;
+v.fx('RXN-EX_his__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_trp__L_e_REV-SPONT') = 0.0334 * %nscale%;
+v.fx('RXN-EX_trp__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_tyr__L_e_REV-SPONT') = 0.0161 * %nscale%;
+v.fx('RXN-EX_tyr__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_asp__L_e_REV-SPONT') = 0.0105 * %nscale%;
+v.fx('RXN-EX_asp__L_e_FWD-SPONT') = 0 * %nscale%;
+
+v.fx('RXN-EX_gly_e_REV-SPONT') = 0.0073 * %nscale%;
+v.fx('RXN-EX_gly_e_FWD-SPONT') = 0 * %nscale%;
+
+* Byproduct secretion blockage because these secretions are not recorded in data (currently not used)
+$ontext
+v.fx('RXN-EX_pyr_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_btd_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_tre_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_acald_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_glyc_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_lac__D_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_mev__R_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_etac_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_g3pi_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_2phetoh_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_gly_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_leu__L_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_pacald_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_3c3hmp_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_ibutoh_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_ac_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_ser__L_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_tyr__L_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_ibtald_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_phe__L_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_val__L_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_id3acald_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_pacald_e_FWD-SPONT') = 0;
+$offtext

@@ -1,0 +1,5 @@
+feasibility tolerance 1e-10
+optimality tolerance 1e-10
+expand frequency 100000
+scale option 0
+solution YES

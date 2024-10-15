@@ -1,0 +1,46 @@
+* Guidance: Carefully check how carbon is balanced (excess or deficit in uptake)
+* because experimental data contains measurement errors and not all in and out fluxes
+* are measured
+* There are various ways to adjust the balance of data
+* For yeast, I will assume growth rate and glucose uptake rate measurements are reliable
+* and I will tune up the ethanol secretion rate
+
+* Growth rate
+$setGlobal mu 0.407
+v.fx('BIOSYN-BIODIL') = %mu% * %nscale%;
+
+* Substrate and oxygenation
+v.fx('RXN-EX_glc__D_e_REV-SPONT') = 13.2 * %nscale%; /*min glucose uptake calculation: 11.5*/
+v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0 * %nscale%;
+
+v.up('RXN-EX_o2_e_REV-SPONT') = 1e5 * %nscale%;
+v.fx('RXN-EX_o2_e_FWD-SPONT') = 0 * %nscale%;
+
+* Secretions
+v.lo('RXN-EX_etoh_e_FWD-SPONT') = (15.98 + 1.8*2) * %nscale%;
+v.fx('RXN-EX_etoh_e_REV-SPONT') = 0 * %nscale%;
+
+* Byproduct secretion blockage because these secretions are not recorded in data (currently not used)
+$ontext
+v.fx('RXN-EX_pyr_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_btd_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_tre_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_acald_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_glyc_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_lac__D_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_mev__R_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_etac_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_g3pi_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_2phetoh_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_gly_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_leu__L_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_pacald_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_3c3hmp_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_ibutoh_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_ac_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_ser__L_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_tyr__L_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_ibtald_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_phe__L_e_FWD-SPONT') = 0;
+v.fx('RXN-EX_val__L_e_FWD-SPONT') = 0;
+$offtext

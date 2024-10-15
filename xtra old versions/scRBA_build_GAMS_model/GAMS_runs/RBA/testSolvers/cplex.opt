@@ -1,0 +1,4 @@
+epopt 1.0000001e-9
+epint 1.0000001e-9
+workmem 2500
+threads 4

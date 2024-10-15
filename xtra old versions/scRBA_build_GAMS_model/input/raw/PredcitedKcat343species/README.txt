@@ -1,0 +1,1 @@
+This folder contains deep learning predicted kcat profiles for 343 yeast/fungi species in txt format. The kcat are splited by ',' for the substrate and ';' for the subunit in a complex in each column. This is for the paper "Deep learning based kcat prediction enables improved enzyme constrained model reconstruction"
