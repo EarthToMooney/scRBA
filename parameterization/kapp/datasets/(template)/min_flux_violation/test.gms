@@ -15,7 +15,6 @@ $setGlobal vmin 1e-9
 * slacks turned off by default, 
 * 	but included to account for measurement errors when needed
 $setGlobal venzSlackAllow 0
-$setGlobal fluxSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * update to match solver tolerance
 $setGlobal tol 1e-2
