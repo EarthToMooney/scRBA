@@ -1,4 +1,0 @@
-real:feastol = 1e-15
-real:fpfeastol = 1e-15
-real:fpopttol = 1e-15
-real:opttol = 1e-15
