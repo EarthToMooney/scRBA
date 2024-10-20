@@ -38,6 +38,7 @@ col_UB = 'mfaUB'
 
 # must match the growth rate in other files
 mu = 0.391-0.024
+# mu = 0.3909
 # protein fraction (disable by uncommenting "ptot = 1" unless composition varies w/ growth rate)
 ptot = 0.5551
 

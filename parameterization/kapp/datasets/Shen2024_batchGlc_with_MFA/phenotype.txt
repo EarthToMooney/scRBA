@@ -5,10 +5,10 @@
 
 * Growth rate
 $setGlobal mu 0.367
-*$setGlobal mu 0.391
+*$setGlobal mu 0.3909
 $setGlobal vglc 28.24 
-*v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
-v.fx('BIOSYN-BIODILAERO-NOGAM') = %mu% * %nscale%;
+$setGlobal biom 'BIOSYN-BIODILAERO-NOGAM'
+v.fx('%biom%') = %mu% * %nscale%;
 
 sets 
 pro_ribonuc
