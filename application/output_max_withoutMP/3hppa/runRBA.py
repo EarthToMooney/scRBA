@@ -58,7 +58,18 @@ if stat == 'infeasible':
 elif stat == 'optimal':
     optimal = True
     res = RBA_result(biom_id=biom_id)
-    res.load_raw_flux(filepath='./runRBA.flux.txt')
+    # convert all RXNADD rxns in runRBA.flux.txt to RXN-XXX
+    flux_file = './runRBA.flux.txt'
+    new_flux_file = './runRBA.fluxes_rxnadd_as_rxn.txt'
+    with open(flux_file) as f:
+        text = f.read().split('\n')
+    text = [i for i in text if i != '']
+    for i in range(len(text)):
+        if text[i].split('\t')[0].split('-')[0] == 'RXNADD':
+            text[i] = text[i].replace('RXNADD-', 'RXN-')
+    with open(new_flux_file, 'w') as f:
+        f.write('\n'.join(text))
+    res.load_raw_flux(filepath=new_flux_file)
     res.calculate_metabolic_flux()
     if vprod.split('-')[0] == 'RXNADD':
         res.metabolic_flux[vprod_coreid] = res.raw_flux[vprod]
