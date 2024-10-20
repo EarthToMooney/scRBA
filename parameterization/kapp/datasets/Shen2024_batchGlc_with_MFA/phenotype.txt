@@ -5,6 +5,7 @@
 
 * Growth rate
 $setGlobal mu 0.367
+*$setGlobal mu 0.391
 $setGlobal vglc 28.24 
 *v.fx('BIOSYN-BIODILAERO') = %mu% * %nscale%;
 v.fx('BIOSYN-BIODILAERO-NOGAM') = %mu% * %nscale%;
@@ -25,7 +26,9 @@ prosynSlackUB.up(pro)$pro_ribomito(pro) = %prosynSlackAllow%;
 * NGAM + GAM
 v.lo('RXN-ATPM_c_FWD-SPONT') = (1 + (%mu% * 2.088)) * %nscale%;
 * NGAM
+*v.lo('RXN-ATPM_c_FWD-SPONT') = 0 * %nscale%;
 *v.lo('RXN-ATPM_c_FWD-SPONT') = 1 * %nscale%;
+*v.lo('RXN-ATPM_c_FWD-SPONT') = 3.088 * %nscale%;
 
 * Ribosome efficiency
 $setGlobal kribonuc 10.5*3600 * (13.6 / 10.5)
