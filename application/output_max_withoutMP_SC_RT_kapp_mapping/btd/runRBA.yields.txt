@@ -1,0 +1,2 @@
+"prod"	"method"	"growth rate"	"yield"
+"RXN-EX_btd_e_FWD-SPONT"	"fba"	0.100000000000000	"UNDF"
