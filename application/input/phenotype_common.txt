@@ -55,19 +55,19 @@ $setGlobal mu_0 0.38
 Equation PSS; PSS.. prosynSlackSum =e= sum(j, prosynSlackLB(j) + prosynSlackUB(j));
 
 * kapp set to RT maximum, rounded down
-kapp('RXN-FRUtps_e_FWD-YOL156W') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YEL069C') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YDR342C') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YNR072W') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YDR343C') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YJR158W') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YHR092C') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YDR345C') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YJL214W') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YMR011W') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YHR094C') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YHR096C') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YFL011W') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YJL219W') = 5611787.457;
-kapp('RXN-FRUtps_e_FWD-YDL245C') = 5611787.457;
-
+*kapp('RXN-FRUtps_e_FWD-YOL156W') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YEL069C') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YDR342C') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YNR072W') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YDR343C') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YJR158W') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YHR092C') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YDR345C') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YJL214W') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YMR011W') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YHR094C') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YHR096C') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YFL011W') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YJL219W') = 5611787.457;
+*kapp('RXN-FRUtps_e_FWD-YDL245C') = 5611787.457;
+*
