@@ -71,8 +71,7 @@ elif stat == 'optimal':
         f.write('\n'.join(text))
     res.load_raw_flux(filepath=new_flux_file)
     res.calculate_metabolic_flux()
-    if vprod.split('-')[0] == 'RXNADD':
-        res.metabolic_flux[vprod_coreid] = res.raw_flux[vprod]
+    res.metabolic_flux[vprod_coreid] = res.raw_flux[vprod.replace('RXNADD-', 'RXN-')]
     pflux = res.metabolic_flux[vprod_coreid]
         
 elif stat == 'need_rerun':
