@@ -16,6 +16,8 @@ $setGlobal kribomito 13.2*3600
 
 * if initial solve is infeasible, try adjustments (e.g., changing growth rate)
 $setGlobal adjust_constraints_if_infeas 0 
+* % of min experimental yield model must at least match
+$setGlobal percent_min_exp_yield 0
 
 * Enforce part of proteome allocate to non-modeled protein
 $setGlobal nonmodeled_proteome_allocation 0
@@ -72,7 +74,8 @@ mu_current
 ;
 
 Variables
-z, v(j)
+z, v(j), 
+mv_sub_sum "sum of (substrate flux * MW) for all substrates"
 ;
 
 *** SET FLUX LOWER AND UPPER BOUNDS ***
@@ -106,13 +109,13 @@ mu_current = %mu%;
 * Set your biomass composition in phenotype.txt since biomass composition depends on growth-condition
 
 *** EQUATION DEFINITIONS ***
-*Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo, minYield
 Equations
-Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo
+Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo, mvSubSum, minYield
 $include %enz_cap_declares_path%
 ;
 
-*minYield.. minProductYield * sum(j$mw(j),v(j)*mw(j)) =l= %prod_mw% * v('%vprod%');
+mvSubSum.. mv_sub_sum =e= sum(j$mw(j),v(j)*mw(j));
+minYield.. minProductYield * mv_sub_sum * %percent_min_exp_yield% / 100 =l= %prod_mw% * v('%vprod%');
 Obj..			z =e= -v('%vprod%');
 Stoic(i)..		sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityMito.. 	v('RIBOSYN-ribomito') * %kribomito% =e= mu_current * sum(j$mito_translation(j), NAA(j) * v(j));
@@ -129,6 +132,19 @@ rba.optfile = 1;
 *** SOLVE ***
 Solve rba using lp minimizing z;
 
+* solve again, minimizing mv_sub_sum to find a better yield by discouraging wasteful substrate use 
+* NOTE: (get rid of this if linear fractional programming version is developed)
+* save current uptake bounds as parameters
+Parameters
+v_up(j), vprod_max
+;
+v_up(j) = v.up(j);
+vprod_max = v.l('%vprod%');
+v.lo('%vprod%') = vprod_max;
+if((rba.modelstat eq 1),
+	Solve rba using lp minimizing mv_sub_sum;
+);
+
 * If not optimal, try again with bounds on vprod relaxed in case it's demanding too much.
 * This isn't done initially in case setting specific bounds is important for replicating experimental results (e.g., for making multiple products).
 v.up('%vprod%') = 1e3 * %nscale%;
@@ -138,11 +154,6 @@ v.lo('%vprod%') = 0 * %nscale%;
 * Retry while relaxing uptake upper bounds via slack variables, then minimize their sum
 * Included in case uptake rate estimates are inaccurate.
 
-* save current uptake bounds as parameters
-Parameter 
-v_up(j)
-;
-v_up(j) = v.up(j);
 * allow all possible uptakes in medium to reach max flux
 v.up(j)$(uptake(j) and v_up(j) gt 0) = 1e3 * %nscale%;
 
@@ -152,7 +163,7 @@ slack(j), slacksum
 * default
 slack.fx(j) = 0;
 * allow slack for uptakes
-slack.up(j)$(uptake(j) and v.up(j) gt 0) = 1e10 * %nscale%;
+slack.up(j)$(uptake(j) and v.up(j) gt 0) = inf;
 slack.lo(j)$(uptake(j) and v.up(j) gt 0) = 0 * %nscale%;
 * use initial uptake bounds as slack for other reactions
 *$include "RBA_GAMS_defaults_from_FBA_initial.txt"
@@ -162,12 +173,11 @@ slackobj.. slacksum =e= sum(j, slack(j));
 Model rba_slack /all/;
 
 * added in case infeasibilities occur, and FBA predictions should be adjusted to match
-*Obj, Stoic, minYield, slackcons, slackobj
 Model fba /
-Obj, Stoic, slackcons, slackobj
+Obj, Stoic, mvSubSum, minYield, slackcons, slackobj
 /;
 
-while((rba.modelstat ne 1 and %adjust_constraints_if_infeas%),
+while((rba.modelstat ne 1 and (%adjust_constraints_if_infeas% ne 0)),
 	rba_slack.optfile = 1;
 	display 'UPDATE: find lowest uptakes that still allow optimal growth and exp. yields';
 	Solve rba_slack using lp minimizing slacksum;
@@ -225,7 +235,7 @@ putclose ff3;
 if(rba.modelstat eq 1,
 	abort.noError 'Optimal solution found';
 );
-if(not %adjust_constraints_if_infeas%,
+if((%adjust_constraints_if_infeas% eq 0),
 	abort.noError 'no optimal solution; set adjust_constraints_if_infeas to 1 to try tweaks'
 );
 * find smallest uptakes on minimal media
@@ -313,5 +323,4 @@ loop(j,
 	);
 );
 putclose frba2;
-
 
