@@ -70,4 +70,7 @@ Equation PSS; PSS.. prosynSlackSum =e= sum(j, prosynSlackLB(j) + prosynSlackUB(j
 *kapp('RXN-FRUtps_e_FWD-YFL011W') = 5611787.457;
 *kapp('RXN-FRUtps_e_FWD-YJL219W') = 5611787.457;
 *kapp('RXN-FRUtps_e_FWD-YDL245C') = 5611787.457;
-*
+
+* kapp for RT counterpart
+*kapp('RXN-FECRq6_m_FWD-FECRq6CPLX') = 13576753.42;
+*kapp('RXN-FECRq6_m_FWD-FECRq6CPLX') = 21272.833346276668;

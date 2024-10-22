@@ -1,5 +1,6 @@
 * highest-level directory for model (i.e., where 'pycore' and 'GAMS' are)
 $setGlobal model_root_path ../../../
+$setGlobal gms_path %model_root_path%GAMS/model/
 
 $setGlobal biomass_path %model_root_path%GAMS/model/RBA_rxns_whole_biomass.txt
 

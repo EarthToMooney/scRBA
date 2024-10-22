@@ -41,7 +41,7 @@ class RBA_result:
         self.biom_id = biom_id
         self.warning = warning
         
-    def load_raw_flux(self, filepath='./runRBA.flux.txt'):
+    def load_raw_flux(self, filepath='./runRBA.flux.txt',nscale=1):
         with open(filepath) as f:
             text = f.read().split('\n')
         text = [i for i in text if i != '']
@@ -52,7 +52,7 @@ class RBA_result:
                 r,v = i.split('\t')
             else:
                 r,_,v = i.split('\t')
-            fluxdict[r] = float(v)
+            fluxdict[r] = float(v)/nscale
         self.raw_flux = fluxdict
         try:
             self.growth_rate = fluxdict[self.biom_id]
@@ -173,4 +173,3 @@ class RBA_result:
             fcsv.writerow(['Rxn', 'Flux'])
             for rxn,val in self.metabolic_flux.items():
                 fcsv.writerow([rxn, val])
-

@@ -19,8 +19,7 @@ set4_path = './kapp_ambiguousLoad_case_resolve_common.txt'
 #       divmaxenz for cases where I want to treat the [enzyme] as equaling its maximum value
 
 res_metab = RBA_result(biom_id=biom_id)
-#res_metab.load_raw_flux('./min_flux_violation/enz_alloc.flux.txt')
-flux_path = './min_flux_violation/enz_alloc.flux_unscaled.txt'
+flux_path = './min_flux_violation/enz_alloc.flux_gamsscaled.txt'
 # check if any enzymatic rxns witho no proteomics data were used
 with open('min_flux_violation/enz_alloc.flux_essential_with_no_prodata_unscaled.txt') as f:
     rxns_essential_NP = f.read().split('\n')
@@ -35,6 +34,7 @@ with open('./min_flux_violation/enz_alloc.flux_gamsscaled.txt') as f:
 prowaste_used = dict()
 prosyn_used = dict()
 enzsyn_used = []
+enz_rxns_without_enzload = dict()
 for i in rxns_used:
     i_twocol = i.replace('	v	 ','\t').replace('\tv\t','\t')
     if len(i_twocol.split('\t')) < 2:
@@ -42,15 +42,18 @@ for i in rxns_used:
         continue
     rxn,v = i_twocol.split('\t')[:2]
     v = float(v)/nscale2
+    tag,rxn_base_id,direc,enz = extract_details_from_rxnid(rxn)
     i_twocol = rxn+'\t'+str(v)
-    if i_twocol[:8] == 'PROWASTE' and i_twocol.split('\t')[0] != 'PROWASTE-TOTALPROTEIN':
+    if tag == 'PROWASTE' and rxn != 'PROWASTE-TOTALPROTEIN':
         prowaste_used[rxn] = v 
-    elif i_twocol[:7] == 'PROSYN-':
+    elif tag == 'PROSYN':
         prosyn_used[rxn] = v 
-    elif i_twocol[:7] == 'ENZSYN-':
+    elif tag == 'ENZSYN':
         enzsyn_used.append(i_twocol)
-    elif i_twocol.split('\t')[0] == 'BIOSYN-PROTTOBIO':
+    elif rxn == 'BIOSYN-PROTTOBIO':
         v_prot_to_bio = float(i_twocol.split('\t')[1])
+    elif tag == 'RXN' and enz not in spont_rxn_suffixes:
+        enz_rxns_without_enzload[rxn] = v
 
 # Add new set of constraints to reflect unused but observed protein production, similar to dummy protein (for every prot, v('PROSYN-prot') >= prowaste_used('PROWASTE-prot') / v_prot_to_bio * %nscale%)
 
@@ -90,7 +93,7 @@ with open(pro_measured_unused_path,'w') as f, open(pro_predicted_unused_path,'w'
 kapp_input_enzsyn_path = './kapp_input_enzsyn.txt'
 with open(kapp_input_enzsyn_path, 'w') as f:
     f.write('\n'.join(enzsyn_used))
-res_metab.load_raw_flux(flux_path)
+res_metab.load_raw_flux(flux_path,nscale=nscale2)
 res_metab.calculate_metabolic_flux()
 res_metab.make_escher_csv('./flux_metab.escher.csv')
 
@@ -129,7 +132,7 @@ for i in df_enz.index:
         enzdict[enz].append(rxn)
         
 rxndict = {k:set(v) for k,v in rxndict.items()}
-# print('rxndict',rxndict)
+#print('rxndict',rxndict)
 rxndict_zeroCost = {k:v for k,v in rxndict.items() if v == {'zeroCost'}}
 rxndict = {k:v for k,v in rxndict.items() if 'zeroCost' not in [k,v]}
 enzdict = {k:set(v) for k,v in enzdict.items() if 'zeroCost' not in [k,v]}
@@ -432,6 +435,15 @@ for r in rxns_essential_NP:
 for k,v in kapps_rba.items():
     perhr_texts_used_only.append("'" + k + "'" + '\t' + str(v))
 
+with open('./kapps_per_hr_without_unused_rxns_and_default_kapps.txt', 'w') as f:
+    f.write('\n'.join(['/'] + sorted(perhr_texts_used_only) + ['/']))
+
+for k in enz_rxns_without_enzload.keys():
+    if k not in kapps_rba.keys():
+        kapps_rba[k] = default_kapp + tol
+        print('No kapp found for ' + k + ', setting to default')
+        perhr_texts_used_only.append("'" + k + "'" + '\t' + str(kapps_rba[k]))
+
 with open('./kapps_per_hr_without_unused_rxns.txt', 'w') as f:
     f.write('\n'.join(['/'] + sorted(perhr_texts_used_only) + ['/']))
 
@@ -439,7 +451,7 @@ output_info = []
 
 # add all other rxns with default kapp
 for rxn in all_rxns: 
-    tag,rxn_base_id,dir,enz = extract_details_from_rxnid(rxn)
+    tag,rxn_base_id,direc,enz = extract_details_from_rxnid(rxn)
     rxn_name_without_enz = rxn.split('-')[-2]
     if enz not in spont_rxn_suffixes:
         if rxn in kapps_rba.keys():

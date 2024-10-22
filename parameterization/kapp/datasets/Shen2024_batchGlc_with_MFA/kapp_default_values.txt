@@ -13,7 +13,6 @@ No kapp found for RXN-DHPPDA2_c_FWD-YOL066C
 No kapp found for RXN-DHPPDA2_c_FWD-YOL066C or enzyme YOL066C
 No kapp found for RXN-DRAPPRy_c_FWD-YBR153W
 No kapp found for RXN-DRAPPRy_c_FWD-YBR153W or enzyme YBR153W
-No kapp found for RXN-HPPK2_m_FWD-YNL256W or isozymes of it; setting to default
 No kapp found for RXN-HPPK2_m_FWD-YNL256W or enzyme YNL256W
 No kapp found for RXN-AATA_c_FWD-YJL060W or enzyme YJL060W
 Setting kapp of RXN-AATA_c_REV-YJL060W to min kapp of all isozymes
@@ -132,7 +131,6 @@ No kapp found for RXN-PGL_c_FWD-YHR163W or enzyme YHR163W
 Setting kapp of RXN-6DPMIPPH_c_FWD-YLR410W to min kapp of all isozymes
 No kapp found for RXN-6DPMIPPH_c_FWD-YLR410W or enzyme YLR410W
 No kapp found for RXN-6DPMIPPH_c_REV-YLR410W or enzyme YLR410W
-Setting kapp of RXN-6DPMIPPH_c_FWD-YOR163W to min kapp of all isozymes
 No kapp found for RXN-6DPMIPPH_c_FWD-YOR163W or enzyme YOR163W
 No kapp found for RXN-6DPMIPPH_c_REV-YOR163W or enzyme YOR163W
 No kapp found for RXN-IPPYP4_c_FWD-YDR017C or enzyme YDR017C
@@ -158,9 +156,7 @@ No kapp found for RXN-ACACT160i_x_FWD-YIL160C or enzyme YIL160C
 No kapp found for RXN-ACACT40ir_c_FWD-YPL028W or enzyme YPL028W
 Setting kapp of RXN-ACACT40ir_c_REV-YPL028W to min kapp of all isozymes
 No kapp found for RXN-ACACT40ir_c_REV-YPL028W or enzyme YPL028W
-No kapp found for RXN-ACACT40ir_m_FWD-YPL028W or isozymes of it; setting to default
 No kapp found for RXN-ACACT40ir_m_FWD-YPL028W or enzyme YPL028W
-No kapp found for RXN-ACACT40ir_m_REV-YPL028W or isozymes of it; setting to default
 No kapp found for RXN-ACACT40ir_m_REV-YPL028W or enzyme YPL028W
 No kapp found for RXN-ACACT140i_x_FWD-YIL160C or enzyme YIL160C
 No kapp found for RXN-ACACT100i_x_FWD-YIL160C or enzyme YIL160C
@@ -178,9 +174,7 @@ No kapp found for RXN-ACP1_e_FWD-YBR093C
 No kapp found for RXN-ACP1_e_FWD-YBR093C or enzyme YBR093C
 No kapp found for RXN-ACP1_e_FWD-YAR071W
 No kapp found for RXN-ACP1_e_FWD-YAR071W or enzyme YAR071W
-No kapp found for RXN-ACONT2_m_FWD-YPR002W or isozymes of it; setting to default
 No kapp found for RXN-ACONT2_m_FWD-YPR002W or enzyme YPR002W
-No kapp found for RXN-ACONT2_m_REV-YPR002W or isozymes of it; setting to default
 No kapp found for RXN-ACONT2_m_REV-YPR002W or enzyme YPR002W
 No kapp found for RXN-ACOTAi_m_FWD-YOL140W or enzyme YOL140W
 No kapp found for RXN-COAHL_m_FWD-YPL148C
@@ -236,9 +230,7 @@ No kapp found for RXN-STATz161_rm_FWD-YCR048W
 No kapp found for RXN-STATz161_rm_FWD-YCR048W or enzyme YCR048W
 No kapp found for RXN-STATz161_rm_REV-YCR048W
 No kapp found for RXN-STATz161_rm_REV-YCR048W or enzyme YCR048W
-No kapp found for RXN-GPIA3_r_FWD-YJL091C or isozymes of it; setting to default
 No kapp found for RXN-GPIA3_r_FWD-YJL091C or enzyme YJL091C
-No kapp found for RXN-GPIA3_r_REV-YJL091C or isozymes of it; setting to default
 No kapp found for RXN-GPIA3_r_REV-YJL091C or enzyme YJL091C
 No kapp found for RXN-ADD_c_FWD-YNL141W
 No kapp found for RXN-ADD_c_FWD-YNL141W or enzyme YNL141W
@@ -251,7 +243,6 @@ No kapp found for RXN-AMPDA_c_FWD-YML035C or enzyme YML035C
 No kapp found for RXN-AHCi_c_FWD-YER043C or enzyme YER043C
 No kapp found for RXN-ADMDC_c_FWD-YOL052C or enzyme YOL052C
 No kapp found for RXN-AMAOTr_c_FWD-YNR058W or enzyme YNR058W
-Setting kapp of RXN-AMAOTr_c_REV-YNR058W to min kapp of all isozymes
 No kapp found for RXN-AMAOTr_c_REV-YNR058W or enzyme YNR058W
 No kapp found for RXN-ADNCYC_c_FWD-YJL005W or enzyme YJL005W
 No kapp found for RXN-ADK1_c_FWD-YDR226W or enzyme YDR226W
@@ -391,12 +382,9 @@ No kapp found for RXN-ALCD26xi_m_FWD-YMR083W or enzyme YMR083W
 No kapp found for RXN-ALCD26xi_m_FWD-YGL256W
 No kapp found for RXN-ALCD26xi_m_FWD-YGL256W or enzyme YGL256W
 No kapp found for RXN-AKP1_c_FWD-YDR481C or enzyme YDR481C
-No kapp found for RXN-ATAH_c_FWD-YIR029W or isozymes of it; setting to default
 No kapp found for RXN-ATAH_c_FWD-YIR029W or enzyme YIR029W
-No kapp found for RXN-ATAH_c_REV-YIR029W or isozymes of it; setting to default
 No kapp found for RXN-ATAH_c_REV-YIR029W or enzyme YIR029W
 No kapp found for RXN-ALLTN_c_FWD-YIR027C or enzyme YIR027C
-Setting kapp of RXN-ALLTN_c_REV-YIR027C to min kapp of all isozymes
 No kapp found for RXN-ALLTN_c_REV-YIR027C or enzyme YIR027C
 No kapp found for RXN-ALPHNH_c_FWD-YBR208C or enzyme YBR208C
 No kapp found for RXN-12AMANTF_g_FWD-YKR061W
@@ -438,16 +426,13 @@ No kapp found for RXN-AMID_c_FWD-HER2PET112GTF1 or enzyme HER2PET112GTF1
 No kapp found for RXN-ABUTD_m_FWD-YOR374W or enzyme YOR374W
 No kapp found for RXN-ANPRT_c_FWD-YDR354W or enzyme YDR354W
 No kapp found for RXN-AP4AH_c_FWD-YDR305C or enzyme YDR305C
-Setting kapp of RXN-AP4AH_c_REV-YDR305C to min kapp of all isozymes
 No kapp found for RXN-AP4AH_c_REV-YDR305C or enzyme YDR305C
 No kapp found for RXN-ARABR_c_FWD-YHR104W
 No kapp found for RXN-ARABR_c_FWD-YHR104W or enzyme YHR104W
 No kapp found for RXN-ARGN_c_FWD-YPL111W or enzyme YPL111W
 No kapp found for RXN-ARGSL_c_FWD-YHR018C or enzyme YHR018C
-Setting kapp of RXN-ARGSL_c_REV-YHR018C to min kapp of all isozymes
 No kapp found for RXN-ARGSL_c_REV-YHR018C or enzyme YHR018C
 No kapp found for RXN-ARGSS_c_FWD-YOL058W or enzyme YOL058W
-Setting kapp of RXN-ARGSS_c_REV-YOL058W to min kapp of all isozymes
 No kapp found for RXN-ARGSS_c_REV-YOL058W or enzyme YOL058W
 No kapp found for RXN-ARGTRS_c_FWD-YDR341C or enzyme YDR341C
 No kapp found for RXN-ARGTRS_m_FWD-YHR091C or enzyme YHR091C
@@ -472,7 +457,6 @@ No kapp found for RXN-ATPATF3_c_FWD-YCL050C or enzyme YCL050C
 No kapp found for RXN-ATPPRT_c_FWD-YER055C or enzyme YER055C
 No kapp found for RXN-14BMANTF_c_FWD-YBR110W
 No kapp found for RXN-14BMANTF_c_FWD-YBR110W or enzyme YBR110W
-Setting kapp of RXN-BTS1_c_FWD-YGR286C to min kapp of all isozymes
 No kapp found for RXN-BTS1_c_FWD-YGR286C or enzyme YGR286C
 No kapp found for RXN-BTS1_c_REV-YGR286C or enzyme YGR286C
 No kapp found for RXN-C14STR_c_FWD-YNL280C
@@ -551,9 +535,7 @@ No kapp found for RXN-PRENT14_l_FWD-SRT1NUS1
 No kapp found for RXN-PRENT14_l_FWD-SRT1NUS1 or enzyme SRT1NUS1
 No kapp found for RXN-PRENT15_l_FWD-SRT1NUS1
 No kapp found for RXN-PRENT15_l_FWD-SRT1NUS1 or enzyme SRT1NUS1
-No kapp found for RXN-PRENT16_l_FWD-SRT1NUS1 or isozymes of it; setting to default
 No kapp found for RXN-PRENT16_l_FWD-SRT1NUS1 or enzyme SRT1NUS1
-No kapp found for RXN-PRENT16_l_REV-SRT1NUS1 or isozymes of it; setting to default
 No kapp found for RXN-PRENT16_l_REV-SRT1NUS1 or enzyme SRT1NUS1
 No kapp found for RXN-PRENT17_l_FWD-SRT1NUS1
 No kapp found for RXN-PRENT17_l_FWD-SRT1NUS1 or enzyme SRT1NUS1
@@ -639,11 +621,9 @@ No kapp found for RXN-DHFS_1_c_FWD-YMR113W or enzyme YMR113W
 No kapp found for RXN-DHNPA2i_m_FWD-YNL256W or enzyme YNL256W
 No kapp found for RXN-DNMPPA_c_FWD-YDL100C
 No kapp found for RXN-DNMPPA_c_FWD-YDL100C or enzyme YDL100C
-Setting kapp of RXN-DHORTS_c_FWD-YLR420W to min kapp of all isozymes
 No kapp found for RXN-DHORTS_c_FWD-YLR420W or enzyme YLR420W
 No kapp found for RXN-DHORTS_c_REV-YLR420W or enzyme YLR420W
 No kapp found for RXN-DHPTS_m_FWD-YNL256W or enzyme YNL256W
-No kapp found for RXN-FOLD3_m_FWD-YNL256W or isozymes of it; setting to default
 No kapp found for RXN-FOLD3_m_FWD-YNL256W or enzyme YNL256W
 No kapp found for RXN-DHAD1_m_FWD-YJR016C or enzyme YJR016C
 No kapp found for RXN-DHAD2_m_FWD-YJR016C or enzyme YJR016C
@@ -667,7 +647,6 @@ No kapp found for RXN-DUTPDP_c_FWD-YJR069C or enzyme YJR069C
 No kapp found for RXN-EPGALURS_e_FWD-YJR153W
 No kapp found for RXN-EPGALURS_e_FWD-YJR153W or enzyme YJR153W
 No kapp found for RXN-ENO_c_FWD-YPL281C or enzyme YPL281C
-Setting kapp of RXN-ENO_c_REV-YPL281C to min kapp of all isozymes
 No kapp found for RXN-ENO_c_REV-YPL281C or enzyme YPL281C
 Setting kapp of RXN-ENO_c_FWD-YOR393W to min kapp of all isozymes
 No kapp found for RXN-ENO_c_FWD-YOR393W or enzyme YOR393W
@@ -768,17 +747,13 @@ No kapp found for RXN-GLNTRS_c_FWD-YOR168W or enzyme YOR168W
 No kapp found for RXN-GLUTRS_c_FWD-GUS1ARC1 or enzyme GUS1ARC1
 No kapp found for RXN-GLUTRS_m_FWD-YOL033W
 No kapp found for RXN-GLUTRS_m_FWD-YOL033W or enzyme YOL033W
-No kapp found for RXN-GTHP_c_FWD-YPL091W or isozymes of it; setting to default
 No kapp found for RXN-GTHP_c_FWD-YPL091W or enzyme YPL091W
 No kapp found for RXN-GTHP_c_REV-YPL091W or isozymes of it; setting to default
 No kapp found for RXN-GTHP_c_REV-YPL091W or enzyme YPL091W
-No kapp found for RXN-GTHP_m_FWD-YBL064C or isozymes of it; setting to default
 No kapp found for RXN-GTHP_m_FWD-YBL064C or enzyme YBL064C
-No kapp found for RXN-GTHP_m_REV-YBL064C or isozymes of it; setting to default
 No kapp found for RXN-GTHP_m_REV-YBL064C or enzyme YBL064C
 No kapp found for RXN-GTHS_c_FWD-YOL049W or enzyme YOL049W
 No kapp found for RXN-GAPD_c_FWD-YJR009C or enzyme YJR009C
-Setting kapp of RXN-GAPD_c_REV-YJR009C to min kapp of all isozymes
 No kapp found for RXN-GAPD_c_REV-YJR009C or enzyme YJR009C
 No kapp found for RXN-GAPD_c_FWD-YGR192C or enzyme YGR192C
 Setting kapp of RXN-GAPD_c_REV-YGR192C to min kapp of all isozymes
@@ -797,7 +772,6 @@ No kapp found for RXN-GPDDA1pp_c_FWD-YPL110C
 No kapp found for RXN-GPDDA1pp_c_FWD-YPL110C or enzyme YPL110C
 No kapp found for RXN-GARFT_c_FWD-YDR408C or enzyme YDR408C
 No kapp found for RXN-GHMT2r_c_FWD-YLR058C or enzyme YLR058C
-Setting kapp of RXN-GHMT2r_c_REV-YLR058C to min kapp of all isozymes
 No kapp found for RXN-GHMT2r_c_REV-YLR058C or enzyme YLR058C
 No kapp found for RXN-GHMT2r_m_FWD-YBR263W
 No kapp found for RXN-GHMT2r_m_FWD-YBR263W or enzyme YBR263W
@@ -809,9 +783,7 @@ No kapp found for RXN-GLYTRS_c_FWD-YPR081C or enzyme YPR081C
 No kapp found for RXN-GLYTRS_c_FWD-YBR121C or enzyme YBR121C
 No kapp found for RXN-GMPS2_c_FWD-YMR217W
 No kapp found for RXN-GMPS2_c_FWD-YMR217W or enzyme YMR217W
-No kapp found for RXN-GPIA2_r_FWD-YMR281W or isozymes of it; setting to default
 No kapp found for RXN-GPIA2_r_FWD-YMR281W or enzyme YMR281W
-No kapp found for RXN-GPIA2_r_REV-YMR281W or isozymes of it; setting to default
 No kapp found for RXN-GPIA2_r_REV-YMR281W or enzyme YMR281W
 No kapp found for RXN-GPIA6_r_FWD-YKL165C
 No kapp found for RXN-GPIA6_r_FWD-YKL165C or enzyme YKL165C
@@ -821,11 +793,8 @@ No kapp found for RXN-GPIA7_r_FWD-GPI18PGA1
 No kapp found for RXN-GPIA7_r_FWD-GPI18PGA1 or enzyme GPI18PGA1
 No kapp found for RXN-GPIA7_r_REV-GPI18PGA1
 No kapp found for RXN-GPIA7_r_REV-GPI18PGA1 or enzyme GPI18PGA1
-No kapp found for RXN-GPIA8_r_FWD-YGL142C or isozymes of it; setting to default
 No kapp found for RXN-GPIA8_r_FWD-YGL142C or enzyme YGL142C
-No kapp found for RXN-GPIA8_r_REV-YGL142C or isozymes of it; setting to default
 No kapp found for RXN-GPIA8_r_REV-YGL142C or enzyme YGL142C
-Setting kapp of RXN-GPIA9_r_FWD-YLL031C to min kapp of all isozymes
 No kapp found for RXN-GPIA9_r_FWD-YLL031C or enzyme YLL031C
 No kapp found for RXN-GPIA9_r_REV-YLL031C or enzyme YLL031C
 Setting kapp of RXN-GPIA9_r_FWD-YDR302W to min kapp of all isozymes
@@ -867,10 +836,8 @@ No kapp found for RXN-HSTPT_c_FWD-YIL116W or enzyme YIL116W
 No kapp found for RXN-ARMT_c_FWD-YBR034C
 No kapp found for RXN-ARMT_c_FWD-YBR034C or enzyme YBR034C
 No kapp found for RXN-HACNH_m_FWD-YDR234W or enzyme YDR234W
-Setting kapp of RXN-HACNH_m_REV-YDR234W to min kapp of all isozymes
 No kapp found for RXN-HACNH_m_REV-YDR234W or enzyme YDR234W
 No kapp found for RXN-HACNH_m_FWD-YJL200C or enzyme YJL200C
-Setting kapp of RXN-HACNH_m_REV-YJL200C to min kapp of all isozymes
 No kapp found for RXN-HACNH_m_REV-YJL200C or enzyme YJL200C
 No kapp found for RXN-HCYSMT_c_FWD-YLL062C or enzyme YLL062C
 No kapp found for RXN-HCYSMT_c_FWD-YPL273W or enzyme YPL273W
@@ -913,7 +880,6 @@ No kapp found for RXN-INDPYRD_c_FWD-YLR134W or enzyme YLR134W
 No kapp found for RXN-PPA_c_FWD-YBR011C or enzyme YBR011C
 No kapp found for RXN-PPA_m_FWD-YMR267W or enzyme YMR267W
 No kapp found for RXN-IMPC_c_FWD-YMR120C or enzyme YMR120C
-Setting kapp of RXN-IMPC_c_REV-YMR120C to min kapp of all isozymes
 No kapp found for RXN-IMPC_c_REV-YMR120C or enzyme YMR120C
 No kapp found for RXN-IMPC_c_FWD-YLR028C or enzyme YLR028C
 Setting kapp of RXN-IMPC_c_REV-YLR028C to min kapp of all isozymes
@@ -947,7 +913,6 @@ No kapp found for RXN-ILETRS_c_FWD-YBL076C or enzyme YBL076C
 No kapp found for RXN-ILETRS_m_FWD-YPL040C
 No kapp found for RXN-ILETRS_m_FWD-YPL040C or enzyme YPL040C
 No kapp found for RXN-IPDDI_c_FWD-YPL117C or enzyme YPL117C
-Setting kapp of RXN-IPDDI_c_REV-YPL117C to min kapp of all isozymes
 No kapp found for RXN-IPDDI_c_REV-YPL117C or enzyme YPL117C
 No kapp found for RXN-KARA2i_m_FWD-YLR355C or enzyme YLR355C
 No kapp found for RXN-KYN_c_FWD-YLR231C or enzyme YLR231C
@@ -961,14 +926,11 @@ No kapp found for RXN-4HGLSD_m_FWD-YHR037W
 No kapp found for RXN-4HGLSD_m_FWD-YHR037W or enzyme YHR037W
 No kapp found for RXN-4HGLSD_m_REV-YHR037W
 No kapp found for RXN-4HGLSD_m_REV-YHR037W or enzyme YHR037W
-No kapp found for RXN-ALATA_L_m_FWD-YLR089C or isozymes of it; setting to default
 No kapp found for RXN-ALATA_L_m_FWD-YLR089C or enzyme YLR089C
-No kapp found for RXN-ALATA_L_m_REV-YLR089C or isozymes of it; setting to default
 No kapp found for RXN-ALATA_L_m_REV-YLR089C or enzyme YLR089C
 No kapp found for RXN-THRA2_c_FWD-YEL046C
 No kapp found for RXN-THRA2_c_FWD-YEL046C or enzyme YEL046C
 No kapp found for RXN-ATHRDHr_c_FWD-YMR226C or enzyme YMR226C
-Setting kapp of RXN-ATHRDHr_c_REV-YMR226C to min kapp of all isozymes
 No kapp found for RXN-ATHRDHr_c_REV-YMR226C or enzyme YMR226C
 No kapp found for RXN-ASNN_c_FWD-YDR321W or enzyme YDR321W
 No kapp found for RXN-ASNN_e_FWD-YLR157C
@@ -1154,9 +1116,8 @@ No kapp found for RXN-NDPK10_c_FWD-YKL067W
 No kapp found for RXN-NDPK10_c_FWD-YKL067W or enzyme YKL067W
 No kapp found for RXN-NDPK10_c_REV-YKL067W
 No kapp found for RXN-NDPK10_c_REV-YKL067W or enzyme YKL067W
-No kapp found for RXN-NDPK6_c_FWD-YKL067W or isozymes of it; setting to default
 No kapp found for RXN-NDPK6_c_FWD-YKL067W or enzyme YKL067W
-No kapp found for RXN-NDPK6_c_REV-YKL067W or isozymes of it; setting to default
+Setting kapp of RXN-NDPK6_c_REV-YKL067W to min kapp of all isozymes
 No kapp found for RXN-NDPK6_c_REV-YKL067W or enzyme YKL067W
 No kapp found for RXN-NTP3_c_FWD-YAL035W
 No kapp found for RXN-NTP3_c_FWD-YAL035W or enzyme YAL035W
@@ -1176,10 +1137,8 @@ No kapp found for RXN-AHSERL2_c_FWD-YLR303W or enzyme YLR303W
 Setting kapp of RXN-SHSL1_c_FWD-YAL012W to min kapp of all isozymes
 No kapp found for RXN-SHSL1_c_FWD-YAL012W or enzyme YAL012W
 No kapp found for RXN-SHSL1_c_REV-YAL012W or enzyme YAL012W
-Setting kapp of RXN-SHSL1_c_FWD-YML082W to min kapp of all isozymes
 No kapp found for RXN-SHSL1_c_FWD-YML082W or enzyme YML082W
 No kapp found for RXN-SHSL1_c_REV-YML082W or enzyme YML082W
-Setting kapp of RXN-SHSL1_c_FWD-YLL058W to min kapp of all isozymes
 No kapp found for RXN-SHSL1_c_FWD-YLL058W or enzyme YLL058W
 No kapp found for RXN-SHSL1_c_REV-YLL058W or enzyme YLL058W
 No kapp found for RXN-OCBT_c_FWD-YJL088W or enzyme YJL088W
@@ -1190,7 +1149,6 @@ No kapp found for RXN-ORNTA_c_FWD-YLR438W or enzyme YLR438W
 Setting kapp of RXN-ORPT_c_FWD-YML106W to min kapp of all isozymes
 No kapp found for RXN-ORPT_c_FWD-YML106W or enzyme YML106W
 No kapp found for RXN-ORPT_c_REV-YML106W or enzyme YML106W
-Setting kapp of RXN-ORPT_c_FWD-YMR271C to min kapp of all isozymes
 No kapp found for RXN-ORPT_c_FWD-YMR271C or enzyme YMR271C
 No kapp found for RXN-ORPT_c_REV-YMR271C or enzyme YMR271C
 No kapp found for RXN-OMPDC_c_FWD-YEL021W or enzyme YEL021W
@@ -1209,7 +1167,6 @@ No kapp found for RXN-FACOAE180_x_FWD-YJR019C
 No kapp found for RXN-FACOAE180_x_FWD-YJR019C or enzyme YJR019C
 No kapp found for RXN-FACOAE80_x_FWD-YJR019C
 No kapp found for RXN-FACOAE80_x_FWD-YJR019C or enzyme YJR019C
-Setting kapp of RXN-PHETA1_c_FWD-YHR137W to min kapp of all isozymes
 No kapp found for RXN-PHETA1_c_FWD-YHR137W or enzyme YHR137W
 No kapp found for RXN-PHETA1_c_REV-YHR137W or enzyme YHR137W
 Setting kapp of RXN-PHETA1_c_FWD-YGL202W to min kapp of all isozymes
@@ -1274,10 +1231,8 @@ No kapp found for RXN-PRAMPC_c_FWD-YCL030C or enzyme YCL030C
 No kapp found for RXN-PRATPP_c_FWD-YCL030C or enzyme YCL030C
 No kapp found for RXN-AIRC1_c_FWD-YOR128C or enzyme YOR128C
 No kapp found for RXN-AICART_c_FWD-YMR120C or enzyme YMR120C
-Setting kapp of RXN-AICART_c_REV-YMR120C to min kapp of all isozymes
 No kapp found for RXN-AICART_c_REV-YMR120C or enzyme YMR120C
 No kapp found for RXN-AICART_c_FWD-YLR028C or enzyme YLR028C
-Setting kapp of RXN-AICART_c_REV-YLR028C to min kapp of all isozymes
 No kapp found for RXN-AICART_c_REV-YLR028C or enzyme YLR028C
 No kapp found for RXN-PRAIi_c_FWD-YDR007W or enzyme YDR007W
 No kapp found for RXN-PRAGSi_c_FWD-YGL234W or enzyme YGL234W
@@ -1359,12 +1314,9 @@ No kapp found for RXN-RPI_c_REV-YOR095C or enzyme YOR095C
 No kapp found for RXN-RNMK_c_FWD-YNL129W
 No kapp found for RXN-RNMK_c_FWD-YNL129W or enzyme YNL129W
 No kapp found for RXN-RPE_c_FWD-YJL121C or enzyme YJL121C
-Setting kapp of RXN-RPE_c_REV-YJL121C to min kapp of all isozymes
 No kapp found for RXN-RPE_c_REV-YJL121C or enzyme YJL121C
 No kapp found for RXN-SAM24MT_c_FWD-YML008C or enzyme YML008C
-No kapp found for RXN-SFGTHi_c_FWD-YJL068C or isozymes of it; setting to default
 No kapp found for RXN-SFGTHi_c_FWD-YJL068C or enzyme YJL068C
-No kapp found for RXN-SFGTHi_c_REV-YJL068C or isozymes of it; setting to default
 No kapp found for RXN-SFGTHi_c_REV-YJL068C or enzyme YJL068C
 No kapp found for RXN-SACCD2_c_FWD-YIR034C or enzyme YIR034C
 No kapp found for RXN-SACCD1_c_FWD-YNR050C or enzyme YNR050C
@@ -1430,7 +1382,6 @@ No kapp found for RXN-TALA_c_FWD-YLR354C or enzyme YLR354C
 Setting kapp of RXN-TALA_c_REV-YLR354C to min kapp of all isozymes
 No kapp found for RXN-TALA_c_REV-YLR354C or enzyme YLR354C
 No kapp found for RXN-TALA_c_FWD-YGR043C or enzyme YGR043C
-Setting kapp of RXN-TALA_c_REV-YGR043C to min kapp of all isozymes
 No kapp found for RXN-TALA_c_REV-YGR043C or enzyme YGR043C
 No kapp found for RXN-TKT1_c_FWD-YBR117C or enzyme YBR117C
 Setting kapp of RXN-TKT1_c_REV-YBR117C to min kapp of all isozymes
@@ -1510,24 +1461,18 @@ No kapp found for RXN-XYLR_c_FWD-YHR104W
 No kapp found for RXN-XYLR_c_FWD-YHR104W or enzyme YHR104W
 No kapp found for RXN-XYLK_c_FWD-YGR194C or enzyme YGR194C
 No kapp found for RXN-YUMPS_c_FWD-YPL212C or enzyme YPL212C
-Setting kapp of RXN-YUMPS_c_REV-YPL212C to min kapp of all isozymes
 No kapp found for RXN-YUMPS_c_REV-YPL212C or enzyme YPL212C
 No kapp found for RXN-YUMPS_c_FWD-YNL292W or enzyme YNL292W
-Setting kapp of RXN-YUMPS_c_REV-YNL292W to min kapp of all isozymes
 No kapp found for RXN-YUMPS_c_REV-YNL292W or enzyme YNL292W
 No kapp found for RXN-YUMPS_c_FWD-YGL063W or enzyme YGL063W
-Setting kapp of RXN-YUMPS_c_REV-YGL063W to min kapp of all isozymes
 No kapp found for RXN-YUMPS_c_REV-YGL063W or enzyme YGL063W
 No kapp found for RXN-YUMPS_c_FWD-YFL001W or enzyme YFL001W
-Setting kapp of RXN-YUMPS_c_REV-YFL001W to min kapp of all isozymes
 No kapp found for RXN-YUMPS_c_REV-YFL001W or enzyme YFL001W
 No kapp found for RXN-NTD9_c_FWD-YER037W
 No kapp found for RXN-NTD9_c_FWD-YER037W or enzyme YER037W
 No kapp found for RXN-HCITS_m_FWD-YDL131W or enzyme YDL131W
 No kapp found for RXN-PYDXNK_c_FWD-YEL029C or enzyme YEL029C
-No kapp found for RXN-KYNAT2_c_FWD-YJL060W or isozymes of it; setting to default
 No kapp found for RXN-KYNAT2_c_FWD-YJL060W or enzyme YJL060W
-No kapp found for RXN-KYNAT2_c_REV-YJL060W or isozymes of it; setting to default
 No kapp found for RXN-KYNAT2_c_REV-YJL060W or enzyme YJL060W
 No kapp found for RXN-ALCD2i2_c_FWD-YBR145W or enzyme YBR145W
 No kapp found for RXN-ALCD2i2_c_FWD-YOL086C or enzyme YOL086C
@@ -1546,17 +1491,11 @@ No kapp found for RXN-3OAR60_m_FWD-YKL055C
 No kapp found for RXN-3OAR60_m_FWD-YKL055C or enzyme YKL055C
 No kapp found for RXN-3OAR80_m_FWD-YKL055C
 No kapp found for RXN-3OAR80_m_FWD-YKL055C or enzyme YKL055C
-No kapp found for RXN-3HAD40_m_FWD-YHR067W or isozymes of it; setting to default
 No kapp found for RXN-3HAD40_m_FWD-YHR067W or enzyme YHR067W
-No kapp found for RXN-3HAD40_m_REV-YHR067W or isozymes of it; setting to default
 No kapp found for RXN-3HAD40_m_REV-YHR067W or enzyme YHR067W
-No kapp found for RXN-3HAD60_m_FWD-YHR067W or isozymes of it; setting to default
 No kapp found for RXN-3HAD60_m_FWD-YHR067W or enzyme YHR067W
-No kapp found for RXN-3HAD60_m_REV-YHR067W or isozymes of it; setting to default
 No kapp found for RXN-3HAD60_m_REV-YHR067W or enzyme YHR067W
-No kapp found for RXN-3HAD80_m_FWD-YHR067W or isozymes of it; setting to default
 No kapp found for RXN-3HAD80_m_FWD-YHR067W or enzyme YHR067W
-No kapp found for RXN-3HAD80_m_REV-YHR067W or isozymes of it; setting to default
 No kapp found for RXN-3HAD80_m_REV-YHR067W or enzyme YHR067W
 No kapp found for RXN-EAR40y_m_FWD-YBR026C
 No kapp found for RXN-EAR40y_m_FWD-YBR026C or enzyme YBR026C
@@ -1856,7 +1795,6 @@ No kapp found for RXN-ADPATPt_c_m_FWD-YBR085W or enzyme YBR085W
 Setting kapp of RXN-ADPATPt_c_m_REV-YBR085W to min kapp of all isozymes
 No kapp found for RXN-ADPATPt_c_m_REV-YBR085W or enzyme YBR085W
 No kapp found for RXN-ADPATPt_c_m_FWD-YBL030C or enzyme YBL030C
-Setting kapp of RXN-ADPATPt_c_m_REV-YBL030C to min kapp of all isozymes
 No kapp found for RXN-ADPATPt_c_m_REV-YBL030C or enzyme YBL030C
 No kapp found for RXN-ADPATPt_c_x_FWD-YPR128C
 No kapp found for RXN-ADPATPt_c_x_FWD-YPR128C or enzyme YPR128C
@@ -1999,9 +1937,7 @@ No kapp found for RXN-EPISTt_c_e_FWD-YOR011W
 No kapp found for RXN-EPISTt_c_e_FWD-YOR011W or enzyme YOR011W
 No kapp found for RXN-EPISTt_c_e_REV-YOR011W
 No kapp found for RXN-EPISTt_c_e_REV-YOR011W or enzyme YOR011W
-No kapp found for RXN-ETHAt_c_e_FWD-YGL077C or isozymes of it; setting to default
 No kapp found for RXN-ETHAt_c_e_FWD-YGL077C or enzyme YGL077C
-No kapp found for RXN-ETHAt_c_e_REV-YGL077C or isozymes of it; setting to default
 No kapp found for RXN-ETHAt_c_e_REV-YGL077C or enzyme YGL077C
 No kapp found for RXN-FADH2t_c_m_FWD-YIL134W or enzyme YIL134W
 No kapp found for RXN-FECOSTt_e_FWD-YIL013C
@@ -2059,10 +1995,8 @@ Setting kapp of RXN-GLCt_c_e_FWD-YLR081W to min kapp of all isozymes
 No kapp found for RXN-GLCt_c_e_FWD-YLR081W or enzyme YLR081W
 No kapp found for RXN-GTHRDt_c_e_FWD-YJL212C
 No kapp found for RXN-GTHRDt_c_e_FWD-YJL212C or enzyme YJL212C
-Setting kapp of RXN-GTHRDt_c_v_FWD-YDR135C to min kapp of all isozymes
 No kapp found for RXN-GTHRDt_c_v_FWD-YDR135C or enzyme YDR135C
 No kapp found for RXN-GTHRDt_c_v_REV-YDR135C or enzyme YDR135C
-Setting kapp of RXN-GTHRDt_c_v_FWD-YLL015W to min kapp of all isozymes
 No kapp found for RXN-GTHRDt_c_v_FWD-YLL015W or enzyme YLL015W
 No kapp found for RXN-GTHRDt_c_v_REV-YLL015W or enzyme YLL015W
 Setting kapp of RXN-G3PIt_c_e_FWD-YCR098C to min kapp of all isozymes
@@ -2105,11 +2039,8 @@ No kapp found for RXN-GUAtps_e_FWD-YER060W-A or isozymes of it; setting to defau
 No kapp found for RXN-GUAtps_e_FWD-YER060W-A or enzyme YER060W-A
 No kapp found for RXN-GUAtps_e_REV-YER060W-A or isozymes of it; setting to default
 No kapp found for RXN-GUAtps_e_REV-YER060W-A or enzyme YER060W-A
-No kapp found for RXN-GUAtps_e_FWD-YER056C or isozymes of it; setting to default
 No kapp found for RXN-GUAtps_e_FWD-YER056C or enzyme YER056C
-No kapp found for RXN-GUAtps_e_REV-YER056C or isozymes of it; setting to default
 No kapp found for RXN-GUAtps_e_REV-YER056C or enzyme YER056C
-Setting kapp of RXN-INOSTtps_e_FWD-YOL103W to min kapp of all isozymes
 No kapp found for RXN-INOSTtps_e_FWD-YOL103W or enzyme YOL103W
 No kapp found for RXN-INOSTtps_e_FWD-YDR497C or enzyme YDR497C
 No kapp found for RXN-FE2t_c_e_FWD-YMR319C or enzyme YMR319C
@@ -2177,9 +2108,7 @@ No kapp found for RXN-CRNt_e_FWD-YBR132C
 No kapp found for RXN-CRNt_e_FWD-YBR132C or enzyme YBR132C
 No kapp found for RXN-CRNt_e_REV-YBR132C
 No kapp found for RXN-CRNt_e_REV-YBR132C or enzyme YBR132C
-No kapp found for RXN-CYStps_e_FWD-YBR068C or isozymes of it; setting to default
 No kapp found for RXN-CYStps_e_FWD-YBR068C or enzyme YBR068C
-No kapp found for RXN-CYStps_e_REV-YBR068C or isozymes of it; setting to default
 No kapp found for RXN-CYStps_e_REV-YBR068C or enzyme YBR068C
 No kapp found for RXN-CYStps_e_FWD-YOL020W or isozymes of it; setting to default
 No kapp found for RXN-CYStps_e_FWD-YOL020W or enzyme YOL020W
@@ -2260,9 +2189,7 @@ No kapp found for RXN-ILEtps_v_FWD-YNL101W
 No kapp found for RXN-ILEtps_v_FWD-YNL101W or enzyme YNL101W
 No kapp found for RXN-ILEtps_v_FWD-YKL146W
 No kapp found for RXN-ILEtps_v_FWD-YKL146W or enzyme YKL146W
-No kapp found for RXN-ILEtps_e_FWD-YBR068C or isozymes of it; setting to default
 No kapp found for RXN-ILEtps_e_FWD-YBR068C or enzyme YBR068C
-No kapp found for RXN-ILEtps_e_REV-YBR068C or isozymes of it; setting to default
 No kapp found for RXN-ILEtps_e_REV-YBR068C or enzyme YBR068C
 No kapp found for RXN-ILEtps_e_FWD-YDR046C or isozymes of it; setting to default
 No kapp found for RXN-ILEtps_e_FWD-YDR046C or enzyme YDR046C
@@ -2289,9 +2216,7 @@ No kapp found for RXN-LEUt_c_v_REV-YCL038C or enzyme YCL038C
 No kapp found for RXN-LEUtpa_v_FWD-YJR001W or enzyme YJR001W
 No kapp found for RXN-LEUtps_v_FWD-YNL101W or enzyme YNL101W
 No kapp found for RXN-LEUtps_v_FWD-YKL146W or enzyme YKL146W
-No kapp found for RXN-LEUtps_e_FWD-YBR068C or isozymes of it; setting to default
 No kapp found for RXN-LEUtps_e_FWD-YBR068C or enzyme YBR068C
-No kapp found for RXN-LEUtps_e_REV-YBR068C or isozymes of it; setting to default
 No kapp found for RXN-LEUtps_e_REV-YBR068C or enzyme YBR068C
 No kapp found for RXN-LEUtps_e_FWD-YDR046C or isozymes of it; setting to default
 No kapp found for RXN-LEUtps_e_FWD-YDR046C or enzyme YDR046C
@@ -2317,37 +2242,29 @@ No kapp found for RXN-LYStpa_v_FWD-YMR088C
 No kapp found for RXN-LYStpa_v_FWD-YMR088C or enzyme YMR088C
 No kapp found for RXN-LYStpa_v_FWD-YOL092W
 No kapp found for RXN-LYStpa_v_FWD-YOL092W or enzyme YOL092W
-No kapp found for RXN-LYStps_e_FWD-YNL268W or isozymes of it; setting to default
 No kapp found for RXN-LYStps_e_FWD-YNL268W or enzyme YNL268W
-No kapp found for RXN-LYStps_e_REV-YNL268W or isozymes of it; setting to default
 No kapp found for RXN-LYStps_e_REV-YNL268W or enzyme YNL268W
-No kapp found for RXN-METtps_e_FWD-YBR068C or isozymes of it; setting to default
+Setting kapp of RXN-METtps_e_FWD-YBR068C to min kapp of all isozymes
 No kapp found for RXN-METtps_e_FWD-YBR068C or enzyme YBR068C
-No kapp found for RXN-METtps_e_REV-YBR068C or isozymes of it; setting to default
 No kapp found for RXN-METtps_e_REV-YBR068C or enzyme YBR068C
-No kapp found for RXN-METtps_e_FWD-YDR046C or isozymes of it; setting to default
+Setting kapp of RXN-METtps_e_FWD-YDR046C to min kapp of all isozymes
 No kapp found for RXN-METtps_e_FWD-YDR046C or enzyme YDR046C
-No kapp found for RXN-METtps_e_REV-YDR046C or isozymes of it; setting to default
+Setting kapp of RXN-METtps_e_REV-YDR046C to min kapp of all isozymes
 No kapp found for RXN-METtps_e_REV-YDR046C or enzyme YDR046C
-No kapp found for RXN-METtps_e_FWD-YGR055W or isozymes of it; setting to default
 No kapp found for RXN-METtps_e_FWD-YGR055W or enzyme YGR055W
-No kapp found for RXN-METtps_e_REV-YGR055W or isozymes of it; setting to default
 No kapp found for RXN-METtps_e_REV-YGR055W or enzyme YGR055W
-No kapp found for RXN-METtps_e_FWD-YHL036W or isozymes of it; setting to default
+Setting kapp of RXN-METtps_e_FWD-YHL036W to min kapp of all isozymes
 No kapp found for RXN-METtps_e_FWD-YHL036W or enzyme YHL036W
-No kapp found for RXN-METtps_e_REV-YHL036W or isozymes of it; setting to default
+Setting kapp of RXN-METtps_e_REV-YHL036W to min kapp of all isozymes
 No kapp found for RXN-METtps_e_REV-YHL036W or enzyme YHL036W
-No kapp found for RXN-METtps_e_FWD-YCL025C or isozymes of it; setting to default
+Setting kapp of RXN-METtps_e_FWD-YCL025C to min kapp of all isozymes
 No kapp found for RXN-METtps_e_FWD-YCL025C or enzyme YCL025C
-No kapp found for RXN-METtps_e_REV-YCL025C or isozymes of it; setting to default
+Setting kapp of RXN-METtps_e_REV-YCL025C to min kapp of all isozymes
 No kapp found for RXN-METtps_e_REV-YCL025C or enzyme YCL025C
-No kapp found for RXN-METtps_e_FWD-YDR508C or isozymes of it; setting to default
+Setting kapp of RXN-METtps_e_FWD-YDR508C to min kapp of all isozymes
 No kapp found for RXN-METtps_e_FWD-YDR508C or enzyme YDR508C
-No kapp found for RXN-METtps_e_REV-YDR508C or isozymes of it; setting to default
 No kapp found for RXN-METtps_e_REV-YDR508C or enzyme YDR508C
-No kapp found for RXN-PHEtps_e_FWD-YBR068C or isozymes of it; setting to default
 No kapp found for RXN-PHEtps_e_FWD-YBR068C or enzyme YBR068C
-No kapp found for RXN-PHEtps_e_REV-YBR068C or isozymes of it; setting to default
 No kapp found for RXN-PHEtps_e_REV-YBR068C or enzyme YBR068C
 No kapp found for RXN-PHEtps_e_FWD-YDR046C or isozymes of it; setting to default
 No kapp found for RXN-PHEtps_e_FWD-YDR046C or enzyme YDR046C
@@ -2401,9 +2318,7 @@ No kapp found for RXN-THRtps_e_FWD-YCL025C
 No kapp found for RXN-THRtps_e_FWD-YCL025C or enzyme YCL025C
 No kapp found for RXN-THRtps_e_REV-YCL025C
 No kapp found for RXN-THRtps_e_REV-YCL025C or enzyme YCL025C
-No kapp found for RXN-TRPtps_e_FWD-YBR068C or isozymes of it; setting to default
 No kapp found for RXN-TRPtps_e_FWD-YBR068C or enzyme YBR068C
-No kapp found for RXN-TRPtps_e_REV-YBR068C or isozymes of it; setting to default
 No kapp found for RXN-TRPtps_e_REV-YBR068C or enzyme YBR068C
 No kapp found for RXN-TRPtps_e_FWD-YDR046C or isozymes of it; setting to default
 No kapp found for RXN-TRPtps_e_FWD-YDR046C or enzyme YDR046C
@@ -2469,7 +2384,6 @@ No kapp found for RXN-LANOSTt_c_e_FWD-YOR011W
 No kapp found for RXN-LANOSTt_c_e_FWD-YOR011W or enzyme YOR011W
 No kapp found for RXN-LANOSTt_c_e_REV-YOR011W
 No kapp found for RXN-LANOSTt_c_e_REV-YOR011W or enzyme YOR011W
-No kapp found for RXN-MALt2_m_FWD-YLR348C or isozymes of it; setting to default
 No kapp found for RXN-MALt2_m_FWD-YLR348C or enzyme YLR348C
 No kapp found for RXN-MALTtps_e_FWD-YBR298C
 No kapp found for RXN-MALTtps_e_FWD-YBR298C or enzyme YBR298C
@@ -2495,7 +2409,6 @@ No kapp found for RXN-NACt_c_e_FWD-YGR260W or enzyme YGR260W
 Setting kapp of RXN-NACt_c_e_REV-YGR260W to min kapp of all isozymes
 No kapp found for RXN-NACt_c_e_REV-YGR260W or enzyme YGR260W
 No kapp found for RXN-ORNtpa_m_FWD-YOR130C or enzyme YOR130C
-Setting kapp of RXN-ORNtps_e_FWD-YEL063C to min kapp of all isozymes
 No kapp found for RXN-ORNtps_e_FWD-YEL063C or enzyme YEL063C
 No kapp found for RXN-ORNtps_e_REV-YEL063C or enzyme YEL063C
 No kapp found for RXN-OAAtps_m_FWD-YKL120W or enzyme YKL120W
@@ -2531,17 +2444,13 @@ No kapp found for RXN-PTRCtpa_e_FWD-YOR273C or isozymes of it; setting to defaul
 No kapp found for RXN-PTRCtpa_e_FWD-YOR273C or enzyme YOR273C
 No kapp found for RXN-PTRCtpa_e_REV-YOR273C or isozymes of it; setting to default
 No kapp found for RXN-PTRCtpa_e_REV-YOR273C or enzyme YOR273C
-No kapp found for RXN-PTRCtpa_e_FWD-YLL028W or isozymes of it; setting to default
 No kapp found for RXN-PTRCtpa_e_FWD-YLL028W or enzyme YLL028W
-No kapp found for RXN-PTRCtpa_e_REV-YLL028W or isozymes of it; setting to default
 No kapp found for RXN-PTRCtpa_e_REV-YLL028W or enzyme YLL028W
 No kapp found for RXN-PTRCtpa_v_FWD-YLL028W or isozymes of it; setting to default
 No kapp found for RXN-PTRCtpa_v_FWD-YLL028W or enzyme YLL028W
 No kapp found for RXN-PTRCtpa_v_REV-YLL028W or isozymes of it; setting to default
 No kapp found for RXN-PTRCtpa_v_REV-YLL028W or enzyme YLL028W
-No kapp found for RXN-PTRCtpa_v_FWD-YOR273C or isozymes of it; setting to default
 No kapp found for RXN-PTRCtpa_v_FWD-YOR273C or enzyme YOR273C
-No kapp found for RXN-PTRCtpa_v_REV-YOR273C or isozymes of it; setting to default
 No kapp found for RXN-PTRCtpa_v_REV-YOR273C or enzyme YOR273C
 No kapp found for RXN-PYDXNtps_e_FWD-YGL186C or enzyme YGL186C
 Setting kapp of RXN-PYDXNtps_e_REV-YGL186C to min kapp of all isozymes
@@ -2552,16 +2461,13 @@ No kapp found for RXN-PYRtps_e_REV-YKL217W
 No kapp found for RXN-PYRtps_e_REV-YKL217W or enzyme YKL217W
 No kapp found for RXN-AMETtps_e_FWD-YPL274W
 No kapp found for RXN-AMETtps_e_FWD-YPL274W or enzyme YPL274W
-Setting kapp of RXN-AMETt_c_m_FWD-YNL003C to min kapp of all isozymes
 No kapp found for RXN-AMETt_c_m_FWD-YNL003C or enzyme YNL003C
 No kapp found for RXN-AMETt_c_m_REV-YNL003C or enzyme YNL003C
 No kapp found for RXN-MMETtps_e_FWD-YLL061W
 No kapp found for RXN-MMETtps_e_FWD-YLL061W or enzyme YLL061W
 No kapp found for RXN-NAtpa_e_FWD-YLR138W or enzyme YLR138W
-Setting kapp of RXN-NAtpa_e_REV-YLR138W to min kapp of all isozymes
 No kapp found for RXN-NAtpa_e_REV-YLR138W or enzyme YLR138W
 No kapp found for RXN-NAtpa_e_FWD-YDR456W or enzyme YDR456W
-Setting kapp of RXN-NAtpa_e_REV-YDR456W to min kapp of all isozymes
 No kapp found for RXN-NAtpa_e_REV-YDR456W or enzyme YDR456W
 No kapp found for RXN-SPMDtpa_e_FWD-YOR273C or isozymes of it; setting to default
 No kapp found for RXN-SPMDtpa_e_FWD-YOR273C or enzyme YOR273C
@@ -2579,9 +2485,7 @@ No kapp found for RXN-SPMDtpa_e_FWD-YLL028W or isozymes of it; setting to defaul
 No kapp found for RXN-SPMDtpa_e_FWD-YLL028W or enzyme YLL028W
 No kapp found for RXN-SPMDtpa_e_REV-YLL028W or isozymes of it; setting to default
 No kapp found for RXN-SPMDtpa_e_REV-YLL028W or enzyme YLL028W
-No kapp found for RXN-SPMDtpa_e_FWD-YPL274W or isozymes of it; setting to default
 No kapp found for RXN-SPMDtpa_e_FWD-YPL274W or enzyme YPL274W
-No kapp found for RXN-SPMDtpa_e_REV-YPL274W or isozymes of it; setting to default
 No kapp found for RXN-SPMDtpa_e_REV-YPL274W or enzyme YPL274W
 No kapp found for RXN-SPMDtpa_v_FWD-YLL028W
 No kapp found for RXN-SPMDtpa_v_FWD-YLL028W or enzyme YLL028W
@@ -2597,13 +2501,11 @@ No kapp found for RXN-SPRMtpa_e_REV-YLL028W or isozymes of it; setting to defaul
 No kapp found for RXN-SPRMtpa_e_REV-YLL028W or enzyme YLL028W
 No kapp found for RXN-SPRMtpa_e_FWD-YGR138C or isozymes of it; setting to default
 No kapp found for RXN-SPRMtpa_e_FWD-YGR138C or enzyme YGR138C
-No kapp found for RXN-SPRMtpa_e_REV-YGR138C or isozymes of it; setting to default
 No kapp found for RXN-SPRMtpa_e_REV-YGR138C or enzyme YGR138C
 No kapp found for RXN-SPRMtpa_e_FWD-YOR273C or isozymes of it; setting to default
 No kapp found for RXN-SPRMtpa_e_FWD-YOR273C or enzyme YOR273C
 No kapp found for RXN-SPRMtpa_e_REV-YOR273C or isozymes of it; setting to default
 No kapp found for RXN-SPRMtpa_e_REV-YOR273C or enzyme YOR273C
-No kapp found for RXN-SPRMtpa_e_FWD-YPR156C or isozymes of it; setting to default
 No kapp found for RXN-SPRMtpa_e_FWD-YPR156C or enzyme YPR156C
 No kapp found for RXN-SPRMtpa_e_REV-YPR156C or isozymes of it; setting to default
 No kapp found for RXN-SPRMtpa_e_REV-YPR156C or enzyme YPR156C
@@ -2619,9 +2521,7 @@ No kapp found for RXN-SPRMtpa_v_FWD-YOR273C or isozymes of it; setting to defaul
 No kapp found for RXN-SPRMtpa_v_FWD-YOR273C or enzyme YOR273C
 No kapp found for RXN-SPRMtpa_v_REV-YOR273C or isozymes of it; setting to default
 No kapp found for RXN-SPRMtpa_v_REV-YOR273C or enzyme YOR273C
-No kapp found for RXN-SPRMtpa_v_FWD-YPR156C or isozymes of it; setting to default
 No kapp found for RXN-SPRMtpa_v_FWD-YPR156C or enzyme YPR156C
-No kapp found for RXN-SPRMtpa_v_REV-YPR156C or isozymes of it; setting to default
 No kapp found for RXN-SPRMtpa_v_REV-YPR156C or enzyme YPR156C
 No kapp found for RXN-SUCCt2_m_FWD-YLR348C or enzyme YLR348C
 No kapp found for RXN-SUCFUMt_c_m_FWD-YJR095W
@@ -2671,9 +2571,7 @@ No kapp found for RXN-AHMMPS4_c_FWD-YFL058W
 No kapp found for RXN-AHMMPS4_c_FWD-YFL058W or enzyme YFL058W
 No kapp found for RXN-FTHFCL_m_FWD-YER183C
 No kapp found for RXN-FTHFCL_m_FWD-YER183C or enzyme YER183C
-No kapp found for RXN-PAPt_c_m_FWD-YPR011C or isozymes of it; setting to default
 No kapp found for RXN-PAPt_c_m_FWD-YPR011C or enzyme YPR011C
-No kapp found for RXN-PAPt_c_m_REV-YPR011C or isozymes of it; setting to default
 No kapp found for RXN-PAPt_c_m_REV-YPR011C or enzyme YPR011C
 No kapp found for RXN-ASNt_c_m_FWD-YDR508C
 No kapp found for RXN-ASNt_c_m_FWD-YDR508C or enzyme YDR508C
@@ -2687,9 +2585,7 @@ No kapp found for RXN-CHOLt_c_en_REV-YOR161C or enzyme YOR161C
 Setting kapp of RXN-CHOLt_c_en_FWD-YGL077C to min kapp of all isozymes
 No kapp found for RXN-CHOLt_c_en_FWD-YGL077C or enzyme YGL077C
 No kapp found for RXN-CHOLt_c_en_REV-YGL077C or enzyme YGL077C
-No kapp found for RXN-ARABDt_c_FWD-YDR342C or isozymes of it; setting to default
 No kapp found for RXN-ARABDt_c_FWD-YDR342C or enzyme YDR342C
-No kapp found for RXN-ARABDt_c_REV-YDR342C or isozymes of it; setting to default
 No kapp found for RXN-ARABDt_c_REV-YDR342C or enzyme YDR342C
 No kapp found for RXN-ARABDt_c_FWD-YHR092C or isozymes of it; setting to default
 No kapp found for RXN-ARABDt_c_FWD-YHR092C or enzyme YHR092C
@@ -2715,9 +2611,7 @@ No kapp found for RXN-XYLt_c_e_FWD-YHR092C
 No kapp found for RXN-XYLt_c_e_FWD-YHR092C or enzyme YHR092C
 No kapp found for RXN-XYLt_c_e_REV-YHR092C
 No kapp found for RXN-XYLt_c_e_REV-YHR092C or enzyme YHR092C
-No kapp found for RXN-DADK_c_FWD-YDL166C or isozymes of it; setting to default
 No kapp found for RXN-DADK_c_FWD-YDL166C or enzyme YDL166C
-No kapp found for RXN-DADK_c_REV-YDL166C or isozymes of it; setting to default
 No kapp found for RXN-DADK_c_REV-YDL166C or enzyme YDL166C
 No kapp found for RXN-DURIt_c_e_FWD-YBL042C
 No kapp found for RXN-DURIt_c_e_FWD-YBL042C or enzyme YBL042C
@@ -2729,9 +2623,7 @@ No kapp found for RXN-FORt_c_e_FWD-YNL065W
 No kapp found for RXN-FORt_c_e_FWD-YNL065W or enzyme YNL065W
 No kapp found for RXN-FORt_c_e_REV-YNL065W
 No kapp found for RXN-FORt_c_e_REV-YNL065W or enzyme YNL065W
-No kapp found for RXN-GDPMANNt_c_g_FWD-YGL225W or isozymes of it; setting to default
 No kapp found for RXN-GDPMANNt_c_g_FWD-YGL225W or enzyme YGL225W
-No kapp found for RXN-GDPMANNt_c_g_REV-YGL225W or isozymes of it; setting to default
 No kapp found for RXN-GDPMANNt_c_g_REV-YGL225W or enzyme YGL225W
 No kapp found for RXN-GLCt_c_v_FWD-YGL104C
 No kapp found for RXN-GLCt_c_v_FWD-YGL104C or enzyme YGL104C
@@ -2742,18 +2634,13 @@ No kapp found for RXN-GLCt_c_v_FWD-YBR241C or enzyme YBR241C
 No kapp found for RXN-GLCt_c_v_REV-YBR241C
 No kapp found for RXN-GLCt_c_v_REV-YBR241C or enzyme YBR241C
 No kapp found for RXN-GLYt_c_m_FWD-YDL119C or enzyme YDL119C
-Setting kapp of RXN-GLYt_c_m_REV-YDL119C to min kapp of all isozymes
 No kapp found for RXN-GLYt_c_m_REV-YDL119C or enzyme YDL119C
 No kapp found for RXN-GLYt_c_m_FWD-YPR058W or enzyme YPR058W
 Setting kapp of RXN-GLYt_c_m_REV-YPR058W to min kapp of all isozymes
 No kapp found for RXN-GLYt_c_m_REV-YPR058W or enzyme YPR058W
-No kapp found for RXN-GLXt_c_e_FWD-YNL065W or isozymes of it; setting to default
 No kapp found for RXN-GLXt_c_e_FWD-YNL065W or enzyme YNL065W
-No kapp found for RXN-GLXt_c_e_REV-YNL065W or isozymes of it; setting to default
 No kapp found for RXN-GLXt_c_e_REV-YNL065W or enzyme YNL065W
-No kapp found for RXN-ARABLt_c_FWD-YDR342C or isozymes of it; setting to default
 No kapp found for RXN-ARABLt_c_FWD-YDR342C or enzyme YDR342C
-No kapp found for RXN-ARABLt_c_REV-YDR342C or isozymes of it; setting to default
 No kapp found for RXN-ARABLt_c_REV-YDR342C or enzyme YDR342C
 No kapp found for RXN-ARABLt_c_FWD-YHR092C or isozymes of it; setting to default
 No kapp found for RXN-ARABLt_c_FWD-YHR092C or enzyme YHR092C
@@ -2904,11 +2791,8 @@ No kapp found for RXN-G3PIt_c_en_REV-YCR098C or enzyme YCR098C
 Setting kapp of RXN-PIt_c_vm_FWD-YNR013C to min kapp of all isozymes
 No kapp found for RXN-PIt_c_vm_FWD-YNR013C or enzyme YNR013C
 No kapp found for RXN-PIt_c_vm_REV-YNR013C or enzyme YNR013C
-No kapp found for RXN-COAt_c_mm_FWD-YHR002W or isozymes of it; setting to default
 No kapp found for RXN-COAt_c_mm_FWD-YHR002W or enzyme YHR002W
-No kapp found for RXN-COAt_c_mm_REV-YHR002W or isozymes of it; setting to default
 No kapp found for RXN-COAt_c_mm_REV-YHR002W or enzyme YHR002W
-Setting kapp of RXN-CMPt_m_mm_FWD-YBR192W to min kapp of all isozymes
 No kapp found for RXN-CMPt_m_mm_FWD-YBR192W or enzyme YBR192W
 No kapp found for RXN-CMPt_m_mm_REV-YBR192W or enzyme YBR192W
 No kapp found for RXN-CTPt_m_mm_FWD-YBR192W
@@ -2923,23 +2807,16 @@ No kapp found for RXN-PIt_m_mm_FWD-YLR348C or isozymes of it; setting to default
 No kapp found for RXN-PIt_m_mm_FWD-YLR348C or enzyme YLR348C
 No kapp found for RXN-PIt_m_mm_REV-YLR348C or isozymes of it; setting to default
 No kapp found for RXN-PIt_m_mm_REV-YLR348C or enzyme YLR348C
-No kapp found for RXN-PIt_m_mm_FWD-YER053C or isozymes of it; setting to default
 No kapp found for RXN-PIt_m_mm_FWD-YER053C or enzyme YER053C
-No kapp found for RXN-PIt_m_mm_REV-YER053C or isozymes of it; setting to default
 No kapp found for RXN-PIt_m_mm_REV-YER053C or enzyme YER053C
 No kapp found for RXN-CYCCL_m_FWD-YKL087C or enzyme YKL087C
-Setting kapp of RXN-CYCCL_m_REV-YKL087C to min kapp of all isozymes
 No kapp found for RXN-CYCCL_m_REV-YKL087C or enzyme YKL087C
 No kapp found for RXN-CYCCL_m_FWD-YAL039C or enzyme YAL039C
-Setting kapp of RXN-CYCCL_m_REV-YAL039C to min kapp of all isozymes
 No kapp found for RXN-CYCCL_m_REV-YAL039C or enzyme YAL039C
 No kapp found for RXN-PADPRGH_c_FWD-YBR022W or enzyme YBR022W
-Setting kapp of RXN-PADPRGH_c_REV-YBR022W to min kapp of all isozymes
 No kapp found for RXN-PADPRGH_c_REV-YBR022W or enzyme YBR022W
 No kapp found for RXN-PADPRGH_c_FWD-YMR087W or enzyme YMR087W
-Setting kapp of RXN-PADPRGH_c_REV-YMR087W to min kapp of all isozymes
 No kapp found for RXN-PADPRGH_c_REV-YMR087W or enzyme YMR087W
-Setting kapp of RXN-ADPRIB1P_c_FWD-YBR046C to min kapp of all isozymes
 No kapp found for RXN-ADPRIB1P_c_FWD-YBR046C or enzyme YBR046C
 No kapp found for RXN-ADPRIB1P_c_REV-YBR046C or enzyme YBR046C
 No kapp found for RXN-ARGt_c_v_FWD-YDR352W or enzyme YDR352W
@@ -2954,11 +2831,8 @@ No kapp found for RXN-LYSt_c_v_FWD-YDR352W or enzyme YDR352W
 No kapp found for RXN-LYSt_c_v_REV-YDR352W
 No kapp found for RXN-LYSt_c_v_REV-YDR352W or enzyme YDR352W
 No kapp found for RXN-NA1CLKt_c_v_FWD-YBR235W or enzyme YBR235W
-Setting kapp of RXN-NA1CLKt_c_v_REV-YBR235W to min kapp of all isozymes
 No kapp found for RXN-NA1CLKt_c_v_REV-YBR235W or enzyme YBR235W
-No kapp found for RXN-MN2tabc_c_r_FWD-YEL031W or isozymes of it; setting to default
 No kapp found for RXN-MN2tabc_c_r_FWD-YEL031W or enzyme YEL031W
-No kapp found for RXN-MN2tabc_c_r_REV-YEL031W or isozymes of it; setting to default
 No kapp found for RXN-MN2tabc_c_r_REV-YEL031W or enzyme YEL031W
 No kapp found for RXN-OAADC_c_FWD-YER010C or enzyme YER010C
 No kapp found for RXN-GTHCT_c_FWD-YER163C or enzyme YER163C
@@ -2985,14 +2859,10 @@ No kapp found for RXN-DNTPPY1_c_FWD-YJR069C or enzyme YJR069C
 No kapp found for RXN-DNTPPY2_c_FWD-YJR069C
 No kapp found for RXN-DNTPPY2_c_FWD-YJR069C or enzyme YJR069C
 No kapp found for RXN-DNTPPY3_c_FWD-YJR069C or enzyme YJR069C
-Setting kapp of RXN-APOOCT_m_FWD-YLR239C to min kapp of all isozymes
 No kapp found for RXN-APOOCT_m_FWD-YLR239C or enzyme YLR239C
 No kapp found for RXN-APOOCT_m_REV-YLR239C or enzyme YLR239C
-No kapp found for RXN-APOLIPT_m_FWD-YLR239C or isozymes of it; setting to default
 No kapp found for RXN-APOLIPT_m_FWD-YLR239C or enzyme YLR239C
-No kapp found for RXN-APOLIPT_m_REV-YLR239C or isozymes of it; setting to default
 No kapp found for RXN-APOLIPT_m_REV-YLR239C or enzyme YLR239C
-Setting kapp of RXN-4ABTORy_c_FWD-YMR110C to min kapp of all isozymes
 No kapp found for RXN-4ABTORy_c_FWD-YMR110C or enzyme YMR110C
 No kapp found for RXN-4ABTORy_c_REV-YMR110C or enzyme YMR110C
 No kapp found for RXN-4ABTORx_c_FWD-YMR110C
@@ -3002,12 +2872,9 @@ No kapp found for RXN-r_4323_m_FWD-YOR196C or enzyme YOR196C
 No kapp found for RXN-r_4324_m_FWD-YOR196C
 No kapp found for RXN-r_4324_m_FWD-YOR196C or enzyme YOR196C
 No kapp found for RXN-MG2t_c_m_FWD-YPL060W or enzyme YPL060W
-Setting kapp of RXN-MG2t_c_m_REV-YPL060W to min kapp of all isozymes
 No kapp found for RXN-MG2t_c_m_REV-YPL060W or enzyme YPL060W
 No kapp found for RXN-MG2t_c_m_FWD-YOR334W or enzyme YOR334W
-Setting kapp of RXN-MG2t_c_m_REV-YOR334W to min kapp of all isozymes
 No kapp found for RXN-MG2t_c_m_REV-YOR334W or enzyme YOR334W
-Setting kapp of RXN-PYDXR_c_FWD-YPR127W to min kapp of all isozymes
 No kapp found for RXN-PYDXR_c_FWD-YPR127W or enzyme YPR127W
 No kapp found for RXN-PYDXR_c_REV-YPR127W or enzyme YPR127W
 No kapp found for RXN-CHOLt_c_e_FWD-YOR161C
@@ -3061,13 +2928,9 @@ No kapp found for RXN-PGPP_mm_FWD-YHR100C
 No kapp found for RXN-PGPP_mm_FWD-YHR100C or enzyme YHR100C
 No kapp found for RXN-CLPNS_mm_FWD-YDL142C
 No kapp found for RXN-CLPNS_mm_FWD-YDL142C or enzyme YDL142C
-No kapp found for RXN-1MLCLAT_mm_FWD-YPR140W or isozymes of it; setting to default
 No kapp found for RXN-1MLCLAT_mm_FWD-YPR140W or enzyme YPR140W
-No kapp found for RXN-1MLCLAT_mm_REV-YPR140W or isozymes of it; setting to default
 No kapp found for RXN-1MLCLAT_mm_REV-YPR140W or enzyme YPR140W
-No kapp found for RXN-3MLCLAT_mm_FWD-YPR140W or isozymes of it; setting to default
 No kapp found for RXN-3MLCLAT_mm_FWD-YPR140W or enzyme YPR140W
-No kapp found for RXN-3MLCLAT_mm_REV-YPR140W or isozymes of it; setting to default
 No kapp found for RXN-3MLCLAT_mm_REV-YPR140W or enzyme YPR140W
 No kapp found for RXN-PAP_rm_FWD-YMR165C or enzyme YMR165C
 No kapp found for RXN-PAP_vm_FWD-YDR284C
@@ -3097,7 +2960,6 @@ No kapp found for RXN-PDAGATpe_rm_FWD-YNR008W or enzyme YNR008W
 No kapp found for RXN-PDAGATpe_rm_REV-YNR008W
 No kapp found for RXN-PDAGATpe_rm_REV-YNR008W or enzyme YNR008W
 No kapp found for RXN-PDAGATpc_rm_FWD-YNR008W or enzyme YNR008W
-Setting kapp of RXN-PDAGATpc_rm_REV-YNR008W to min kapp of all isozymes
 No kapp found for RXN-PDAGATpc_rm_REV-YNR008W or enzyme YNR008W
 No kapp found for RXN-PSD_mm_FWD-YNL169C or enzyme YNL169C
 No kapp found for RXN-PSD_gm_FWD-YGR170W
@@ -3186,15 +3048,11 @@ No kapp found for RXN-PI35P5P_c_FWD-YOR109W
 No kapp found for RXN-PI35P5P_c_FWD-YOR109W or enzyme YOR109W
 No kapp found for RXN-IPT_g_FWD-YDR072C
 No kapp found for RXN-IPT_g_FWD-YDR072C or enzyme YDR072C
-Setting kapp of RXN-PSt_gm_rm_FWD-YIL048W to min kapp of all isozymes
 No kapp found for RXN-PSt_gm_rm_FWD-YIL048W or enzyme YIL048W
 No kapp found for RXN-PSt_gm_rm_REV-YIL048W or enzyme YIL048W
-Setting kapp of RXN-PSt_gm_rm_FWD-YMR162C to min kapp of all isozymes
 No kapp found for RXN-PSt_gm_rm_FWD-YMR162C or enzyme YMR162C
 No kapp found for RXN-PSt_gm_rm_REV-YMR162C or enzyme YMR162C
-No kapp found for RXN-PEt_gm_rm_FWD-YAL026C or isozymes of it; setting to default
 No kapp found for RXN-PEt_gm_rm_FWD-YAL026C or enzyme YAL026C
-No kapp found for RXN-PEt_gm_rm_REV-YAL026C or isozymes of it; setting to default
 No kapp found for RXN-PEt_gm_rm_REV-YAL026C or enzyme YAL026C
 No kapp found for RXN-FADt_c_m_FWD-YIL134W or enzyme YIL134W
 Setting kapp of RXN-FADt_c_m_REV-YIL134W to min kapp of all isozymes
@@ -3273,16 +3131,13 @@ No kapp found for RXN-ANS_c_FWD-TRP23 or enzyme TRP23
 Setting kapp of RXN-ASPTA_c_FWD-YLR027C_c to min kapp of all isozymes
 No kapp found for RXN-ASPTA_c_FWD-YLR027C_c or enzyme YLR027C_c
 No kapp found for RXN-ASPTA_c_REV-YLR027C_c or enzyme YLR027C_c
-No kapp found for RXN-ASPTA_x_FWD-YLR027C_x or isozymes of it; setting to default
 No kapp found for RXN-ASPTA_x_FWD-YLR027C_x or enzyme YLR027C_x
 No kapp found for RXN-ASPTA_x_REV-YLR027C_x or isozymes of it; setting to default
 No kapp found for RXN-ASPTA_x_REV-YLR027C_x or enzyme YLR027C_x
 No kapp found for RXN-ATPS_m_FWD-ATPSCPLX or enzyme ATPSCPLX
 No kapp found for RXN-ATPASEP2e_c_FWD-YGL008C or enzyme YGL008C
 No kapp found for RXN-ATPASEP2e_c_FWD-YPL036W or enzyme YPL036W
-No kapp found for RXN-FRTT4HBZ_c_FWD-RAM12 or isozymes of it; setting to default
 No kapp found for RXN-FRTT4HBZ_c_FWD-RAM12 or enzyme RAM12
-No kapp found for RXN-FRTT4HBZ_c_REV-RAM12 or isozymes of it; setting to default
 No kapp found for RXN-FRTT4HBZ_c_REV-RAM12 or enzyme RAM12
 No kapp found for RXN-CBPS_c_FWD-CPA12 or enzyme CPA12
 No kapp found for RXN-CBPS_c_FWD-YJL130C or enzyme YJL130C
@@ -3321,9 +3176,7 @@ No kapp found for RXN-FECPOR_m_FWD-CCP1CYC1
 No kapp found for RXN-FECPOR_m_FWD-CCP1CYC1 or enzyme CCP1CYC1
 No kapp found for RXN-FECOOR_m_FWD-FECOORCPLX1 or isozymes of it; setting to default
 No kapp found for RXN-FECOOR_m_FWD-FECOORCPLX1 or enzyme FECOORCPLX1
-No kapp found for RXN-FECOOR_m_FWD-FECOORCPLX2 or isozymes of it; setting to default
 No kapp found for RXN-FECOOR_m_FWD-FECOORCPLX2 or enzyme FECOORCPLX2
-No kapp found for RXN-FECRq6_m_FWD-FECRq6CPLX or isozymes of it; setting to default
 No kapp found for RXN-FECRq6_m_FWD-FECRq6CPLX or enzyme FECRq6CPLX
 No kapp found for RXN-FUM_m_FWD-YPL262W_m or enzyme YPL262W_m
 Setting kapp of RXN-FUM_m_REV-YPL262W_m to min kapp of all isozymes
@@ -3369,25 +3222,19 @@ No kapp found for RXN-EGHLAT_c_FWD-YLR027C_c
 No kapp found for RXN-EGHLAT_c_FWD-YLR027C_c or enzyme YLR027C_c
 No kapp found for RXN-EGHLAT_x_FWD-YLR027C_x
 No kapp found for RXN-EGHLAT_x_FWD-YLR027C_x or enzyme YLR027C_x
-No kapp found for RXN-LTA4H_c_FWD-YNL045W_c or isozymes of it; setting to default
 No kapp found for RXN-LTA4H_c_FWD-YNL045W_c or enzyme YNL045W_c
-No kapp found for RXN-LTA4H_c_REV-YNL045W_c or isozymes of it; setting to default
 No kapp found for RXN-LTA4H_c_REV-YNL045W_c or enzyme YNL045W_c
 No kapp found for RXN-LTA4H_n_FWD-YNL045W_n
 No kapp found for RXN-LTA4H_n_FWD-YNL045W_n or enzyme YNL045W_n
 No kapp found for RXN-LTA4H_n_REV-YNL045W_n
 No kapp found for RXN-LTA4H_n_REV-YNL045W_n or enzyme YNL045W_n
-No kapp found for RXN-LTA4H2_c_FWD-YNL045W_c or isozymes of it; setting to default
 No kapp found for RXN-LTA4H2_c_FWD-YNL045W_c or enzyme YNL045W_c
-No kapp found for RXN-LTA4H2_c_REV-YNL045W_c or isozymes of it; setting to default
 No kapp found for RXN-LTA4H2_c_REV-YNL045W_c or enzyme YNL045W_c
 No kapp found for RXN-LTA4H2_n_FWD-YNL045W_n
 No kapp found for RXN-LTA4H2_n_FWD-YNL045W_n or enzyme YNL045W_n
 No kapp found for RXN-LTA4H2_n_REV-YNL045W_n
 No kapp found for RXN-LTA4H2_n_REV-YNL045W_n or enzyme YNL045W_n
-No kapp found for RXN-LTA4H3_c_FWD-YNL045W_c or isozymes of it; setting to default
 No kapp found for RXN-LTA4H3_c_FWD-YNL045W_c or enzyme YNL045W_c
-No kapp found for RXN-LTA4H3_c_REV-YNL045W_c or isozymes of it; setting to default
 No kapp found for RXN-LTA4H3_c_REV-YNL045W_c or enzyme YNL045W_c
 No kapp found for RXN-LTA4H3_n_FWD-YNL045W_n
 No kapp found for RXN-LTA4H3_n_FWD-YNL045W_n or enzyme YNL045W_n
@@ -3524,9 +3371,8 @@ No kapp found for RXN-LYStps_e_FWD-YKR039W_en or isozymes of it; setting to defa
 No kapp found for RXN-LYStps_e_FWD-YKR039W_en or enzyme YKR039W_en
 No kapp found for RXN-LYStps_e_REV-YKR039W_en or isozymes of it; setting to default
 No kapp found for RXN-LYStps_e_REV-YKR039W_en or enzyme YKR039W_en
-No kapp found for RXN-METtps_e_FWD-YKR039W_en or isozymes of it; setting to default
+Setting kapp of RXN-METtps_e_FWD-YKR039W_en to min kapp of all isozymes
 No kapp found for RXN-METtps_e_FWD-YKR039W_en or enzyme YKR039W_en
-No kapp found for RXN-METtps_e_REV-YKR039W_en or isozymes of it; setting to default
 No kapp found for RXN-METtps_e_REV-YKR039W_en or enzyme YKR039W_en
 No kapp found for RXN-PHEtps_e_FWD-YKR039W_en or isozymes of it; setting to default
 No kapp found for RXN-PHEtps_e_FWD-YKR039W_en or enzyme YKR039W_en
@@ -3595,7 +3441,6 @@ No kapp found for RXN-FACOA240tabc_x_FWD-PXA12 or enzyme PXA12
 No kapp found for RXN-FACOA260tabc_x_FWD-PXA12 or enzyme PXA12
 No kapp found for RXN-HISt_c_m_FWD-YBR147W_mm
 No kapp found for RXN-HISt_c_m_FWD-YBR147W_mm or enzyme YBR147W_mm
-No kapp found for RXN-SERt_c_r_FWD-YKR039W_rm or isozymes of it; setting to default
 No kapp found for RXN-SERt_c_r_FWD-YKR039W_rm or enzyme YKR039W_rm
 No kapp found for RXN-SERt_c_r_REV-YKR039W_rm or isozymes of it; setting to default
 No kapp found for RXN-SERt_c_r_REV-YKR039W_rm or enzyme YKR039W_rm
@@ -3617,7 +3462,6 @@ No kapp found for RXN-H2Ot_c_rm_FWD-YPR192W_rm or isozymes of it; setting to def
 No kapp found for RXN-H2Ot_c_rm_FWD-YPR192W_rm or enzyme YPR192W_rm
 No kapp found for RXN-H2Ot_c_rm_REV-YPR192W_rm or isozymes of it; setting to default
 No kapp found for RXN-H2Ot_c_rm_REV-YPR192W_rm or enzyme YPR192W_rm
-No kapp found for RXN-SERt_c_rm_FWD-YKR039W_rm or isozymes of it; setting to default
 No kapp found for RXN-SERt_c_rm_FWD-YKR039W_rm or enzyme YKR039W_rm
 No kapp found for RXN-SERt_c_rm_REV-YKR039W_rm or isozymes of it; setting to default
 No kapp found for RXN-SERt_c_rm_REV-YKR039W_rm or enzyme YKR039W_rm
@@ -3637,9 +3481,7 @@ No kapp found for RXN-ACTNOR_n_FWD-YAL061W_n
 No kapp found for RXN-ACTNOR_n_FWD-YAL061W_n or enzyme YAL061W_n
 No kapp found for RXN-ACTNOR_n_REV-YAL061W_n
 No kapp found for RXN-ACTNOR_n_REV-YAL061W_n or enzyme YAL061W_n
-No kapp found for RXN-ALG14RXN_r_FWD-ALG1314 or isozymes of it; setting to default
 No kapp found for RXN-ALG14RXN_r_FWD-ALG1314 or enzyme ALG1314
-No kapp found for RXN-ALG14RXN_r_REV-ALG1314 or isozymes of it; setting to default
 No kapp found for RXN-ALG14RXN_r_REV-ALG1314 or enzyme ALG1314
 Setting kapp of RXN-ARGt_c_v_FWD-YBR147W_vm to min kapp of all isozymes
 No kapp found for RXN-ARGt_c_v_FWD-YBR147W_vm or enzyme YBR147W_vm
