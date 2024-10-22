@@ -141,9 +141,9 @@ v_up(j), vprod_max
 v_up(j) = v.up(j);
 vprod_max = v.l('%vprod%');
 v.lo('%vprod%') = vprod_max;
-if((rba.modelstat eq 1),
-	Solve rba using lp minimizing mv_sub_sum;
-);
+*if((rba.modelstat eq 1),
+*	Solve rba using lp minimizing mv_sub_sum;
+*);
 
 * If not optimal, try again with bounds on vprod relaxed in case it's demanding too much.
 * This isn't done initially in case setting specific bounds is important for replicating experimental results (e.g., for making multiple products).
