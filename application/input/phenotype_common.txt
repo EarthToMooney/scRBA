@@ -54,6 +54,12 @@ $setGlobal mu_0 0.38
 *Equations proSynKappLB(j); proSynKappLB(j)$(prosyn_for_kapps(j) > 0).. v(j) + prosynSlackLB(j) =g= v('BIOSYN-PROTTOBIO') * prosyn_for_kapps(j);
 Equation PSS; PSS.. prosynSlackSum =e= sum(j, prosynSlackLB(j) + prosynSlackUB(j));
 
+* kapp updates
+$setGlobal default_kapp 35984.09696387159 
+parameters kapp_backup(j)
+$include %model_root_path%parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/kapps_RBA.txt
+;
+
 * kapp(j)$(kapp(j) eq 0) = 339;
 * kapp(j)$(kapp(j) eq 0) = 0;
 * kapp(j)$(kapp(j) eq 0) = 1e11;
@@ -75,39 +81,52 @@ Equation PSS; PSS.. prosynSlackSum =e= sum(j, prosynSlackLB(j) + prosynSlackUB(j
 *kapp('RXN-FRUtps_e_FWD-YJL219W') = 5611787.457;
 *kapp('RXN-FRUtps_e_FWD-YDL245C') = 5611787.457;
 
-* kapp for RT counterpart
-kapp('RXN-FECRq6_m_FWD-FECRq6CPLX') = 13576753.42;
-*kapp('RXN-FECRq6_m_FWD-FECRq6CPLX') = 21272.833346276668;
-
 * set kapps of rxns if needed
-$setGlobal default_kapp 44294.70139072111
-if ( kapp('RXN-ARGtps_e_FWD-YNL270C') eq 0, kapp('RXN-ARGtps_e_FWD-YNL270C') = %default_kapp%; );
-if ( kapp('RXN-SUCR_e_FWD-YIL162W') eq 0, kapp('RXN-SUCR_e_FWD-YIL162W') = %default_kapp%; );
-if ( kapp('RXN-lumpFACS180_c_FWD-FAS12') eq 0, kapp('RXN-lumpFACS180_c_FWD-FAS12') = %default_kapp%; );
-if ( kapp('RXN-C4STMO2_c_FWD-YGR060W') eq 0, kapp('RXN-C4STMO2_c_FWD-YGR060W') = %default_kapp%; );
-if ( kapp('RXN-ACOADS160_rm_FWD-YGL055W') eq 0, kapp('RXN-ACOADS160_rm_FWD-YGL055W') = %default_kapp%; );
-if ( kapp('RXN-SQLEy_r_FWD-YGR175C') eq 0, kapp('RXN-SQLEy_r_FWD-YGR175C') = %default_kapp%; );
-if ( kapp('RXN-3OACE220_rm_FWD-YCR034W') eq 0, kapp('RXN-3OACE220_rm_FWD-YCR034W') = %default_kapp%; );
-if ( kapp('RXN-3HACD220_rm_FWD-YJL097W') eq 0, kapp('RXN-3HACD220_rm_FWD-YJL097W') = %default_kapp%; );
-if ( kapp('RXN-C3STDH2_c_FWD-YGL001C') eq 0, kapp('RXN-C3STDH2_c_FWD-YGL001C') = %default_kapp%; );
-if ( kapp('RXN-3OACR200_rm_FWD-YBR159W') eq 0, kapp('RXN-3OACR200_rm_FWD-YBR159W') = %default_kapp%; );
-if ( kapp('RXN-3OACR220_rm_FWD-YBR159W') eq 0, kapp('RXN-3OACR220_rm_FWD-YBR159W') = %default_kapp%; );
-if ( kapp('RXN-C3STKR1_c_FWD-YLR100W') eq 0, kapp('RXN-C3STKR1_c_FWD-YLR100W') = %default_kapp%; );
-if ( kapp('RXN-LNSTLS_c_FWD-YHR072W') eq 0, kapp('RXN-LNSTLS_c_FWD-YHR072W') = %default_kapp%; );
-if ( kapp('RXN-SQLS_c_FWD-YHR190W') eq 0, kapp('RXN-SQLS_c_FWD-YHR190W') = %default_kapp%; );
-if ( kapp('RXN-3HACD200_rm_FWD-YJL097W') eq 0, kapp('RXN-3HACD200_rm_FWD-YJL097W') = %default_kapp%; );
-if ( kapp('RXN-C4STMO3_c_FWD-YGR060W') eq 0, kapp('RXN-C4STMO3_c_FWD-YGR060W') = %default_kapp%; );
-if ( kapp('RXN-GMPS2_c_FWD-YMR217W') eq 0, kapp('RXN-GMPS2_c_FWD-YMR217W') = %default_kapp%; );
-if ( kapp('RXN-NDPK8_c_FWD-YKL067W') eq 0, kapp('RXN-NDPK8_c_FWD-YKL067W') = %default_kapp%; );
-if ( kapp('RXN-C4STMO1_c_FWD-YGR060W') eq 0, kapp('RXN-C4STMO1_c_FWD-YGR060W') = %default_kapp%; );
-if ( kapp('RXN-3OACE200_rm_FWD-YLR372W') eq 0, kapp('RXN-3OACE200_rm_FWD-YLR372W') = %default_kapp%; );
-if ( kapp('RXN-C3STDH1_c_FWD-YGL001C') eq 0, kapp('RXN-C3STDH1_c_FWD-YGL001C') = %default_kapp%; );
-if ( kapp('RXN-3HACD240_rm_FWD-YJL097W') eq 0, kapp('RXN-3HACD240_rm_FWD-YJL097W') = %default_kapp%; );
-if ( kapp('RXN-C3STKR2_c_FWD-YLR100W') eq 0, kapp('RXN-C3STKR2_c_FWD-YLR100W') = %default_kapp%; );
-if ( kapp('RXN-C4STMO4_c_FWD-YGR060W') eq 0, kapp('RXN-C4STMO4_c_FWD-YGR060W') = %default_kapp%; );
-if ( kapp('RXN-ECOAR220_rm_FWD-YDL015C') eq 0, kapp('RXN-ECOAR220_rm_FWD-YDL015C') = %default_kapp%; );
-if ( kapp('RXN-C14STR_c_FWD-YNL280C') eq 0, kapp('RXN-C14STR_c_FWD-YNL280C') = %default_kapp%; );
-if ( kapp('RXN-ECOAR200_rm_FWD-YDL015C') eq 0, kapp('RXN-ECOAR200_rm_FWD-YDL015C') = %default_kapp%; );
-if ( kapp('RXN-3OACR240_rm_FWD-YBR159W') eq 0, kapp('RXN-3OACR240_rm_FWD-YBR159W') = %default_kapp%; );
-if ( kapp('RXN-ECOAR240_rm_FWD-YDL015C') eq 0, kapp('RXN-ECOAR240_rm_FWD-YDL015C') = %default_kapp%; );
-if ( kapp('RXN-LNS14DMy_c_FWD-ERG11NCP1') eq 0, kapp('RXN-LNS14DMy_c_FWD-ERG11NCP1') = %default_kapp%; );
+set kapps_to_update(j)
+/
+'RXN-FECRq6_m_FWD-FECRq6CPLX'
+'RXN-SUCR_e_FWD-YIL162W'
+'RXN-lumpFACS180_c_FWD-FAS12'
+'RXN-C4STMO2_c_FWD-YGR060W'
+'RXN-ACOADS160_rm_FWD-YGL055W'
+'RXN-SQLEy_r_FWD-YGR175C'
+'RXN-3OACE220_rm_FWD-YCR034W'
+'RXN-3HACD220_rm_FWD-YJL097W'
+'RXN-C3STDH2_c_FWD-YGL001C'
+'RXN-3OACR200_rm_FWD-YBR159W'
+'RXN-3OACR220_rm_FWD-YBR159W'
+'RXN-C3STKR1_c_FWD-YLR100W'
+'RXN-LNSTLS_c_FWD-YHR072W'
+'RXN-SQLS_c_FWD-YHR190W'
+'RXN-3HACD200_rm_FWD-YJL097W'
+'RXN-C4STMO3_c_FWD-YGR060W'
+'RXN-GMPS2_c_FWD-YMR217W'
+'RXN-NDPK8_c_FWD-YKL067W'
+'RXN-C4STMO1_c_FWD-YGR060W'
+'RXN-3OACE200_rm_FWD-YLR372W'
+'RXN-C3STDH1_c_FWD-YGL001C'
+'RXN-3HACD240_rm_FWD-YJL097W'
+'RXN-C3STKR2_c_FWD-YLR100W'
+'RXN-C4STMO4_c_FWD-YGR060W'
+'RXN-ECOAR220_rm_FWD-YDL015C'
+'RXN-C14STR_c_FWD-YNL280C'
+'RXN-ECOAR200_rm_FWD-YDL015C'
+'RXN-3OACR240_rm_FWD-YBR159W'
+'RXN-ECOAR240_rm_FWD-YDL015C'
+'RXN-LNS14DMy_c_FWD-ERG11NCP1'
+/
+;
+
+file log /''/;
+
+* set kapp to default if not found, and to value from end of kapp calculations (i.e., min (isozyme kapps, default kapp)) otherwise
+loop(kapps_to_update(j),
+	if (kapp(j) eq 0,
+		if (kapp_backup(j) eq 0,
+			kapp(j) = %default_kapp%;
+		else
+			kapp(j) = kapp_backup(j);
+			put log; put j.tl/; putclose;
+			);
+		);
+	);
