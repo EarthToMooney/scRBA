@@ -124,7 +124,6 @@ set kapps_to_update(j)
 'RXN-HEX7_c_FWD-YFR053C'
 /
 ;
-*'RXN-PGI_c_REV-YBR196C'
 
 file log /''/;
 
