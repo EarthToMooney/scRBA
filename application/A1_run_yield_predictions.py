@@ -277,6 +277,15 @@ if rerun_FBA:
                     m.add_cons_vars(minYield)
                 # if pd.notnull(prod_info[p_for_mw]['fluxExp_LB_(mmol product/(gDW*h))']) and pd.notnull(prod_info[p_for_mw]['fluxExp_UB_(mmol product/(gDW*h))']) and prod_info[p_for_mw]['fluxExp_LB_(mmol product/(gDW*h))'] != prod_info[p_for_mw]['fluxExp_UB_(mmol product/(gDW*h))']:
                 #     m.reactions.get_by_id(objrxns).bounds = (prod_info[p_for_mw]['fluxExp_LB_(mmol product/(gDW*h))'],prod_info[p_for_mw]['fluxExp_UB_(mmol product/(gDW*h))'])
+                # biomassRxn.bounds = (0,1000)
+                # m.reactions.ATPM_c.bounds = (0,1000)
+                # adp = model.metabolites.adp_c
+                # gam = biomassRxn.metabolites[adp]
+                # # remove gam from biomass
+                # for met in ['atp_c','h2o_c']:
+                #     biomassRxn.add_metabolites({m.metabolites.get_by_id(met):gam})
+                # for met in ['adp_c','h_c','pi_c']:
+                #     biomassRxn.add_metabolites({m.metabolites.get_by_id(met):-gam})
                 fba = m.optimize()
                 # store uptake bounds in case they change later
                 uptake_bounds_initial = {x.id:x.lower_bound for x in m.reactions if x.id.startswith('EX_') and x.lower_bound < 0}
