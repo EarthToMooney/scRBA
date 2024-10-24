@@ -151,11 +151,14 @@ if optimal:
     new_FBA_constraints_name = 'new_FBA_constraints.csv'
     if os.path.exists(new_FBA_constraints_name):
         os.remove(new_FBA_constraints_name)
+    output_str = 'rxn,flux,lb,ub\n'
     # compare FBA and RBA fluxes, to rerun FBA with RBA constraints if needed
     for rxn in res.metabolic_flux.keys():
         if rxn in fba_fluxes['rxn'].values:
             fba_flux = fba_fluxes[fba_fluxes['rxn'] == rxn]['flux'].values[0]
             rba_flux = res.metabolic_flux[rxn]
+            # make string with rxn name, flux, lower bound, and upper bound
+            output_str += '\n'+','.join([rxn, str(fba_flux), str(res.model.reactions.get_by_id(rxn).lower_bound), str(res.model.reactions.get_by_id(rxn).upper_bound)])
             # if rxn is uptake or biomass, compare fluxes
             if (rxn[:2] == 'EX' and fba_flux < 0) or rxn == res.biom_id:
                 # replace biomass name with biom_id_fba
@@ -168,3 +171,6 @@ if optimal:
                     # write new FBA constraints, for use in A1
                     with open(new_FBA_constraints_name, 'a') as f:
                         f.write(rxn_name + ',' + str(rba_flux) + '\n')
+    # write output_str to new_FBA_constraints.csv
+    with open('rba_fluxes.csv', 'w') as f:
+        f.write(output_str)
