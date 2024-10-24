@@ -214,6 +214,7 @@ if rerun_FBA:
                 m.reactions.EX_pnto__R_e.bounds = (-1000,1000)
                 m.reactions.EX_4abz_e.bounds = (-1000,1000)
                 m.reactions.EX_inost_e.bounds = (-1000,1000)
+                m.reactions.EX_cobalt2_e.bounds = (-1000,1000)
                 # implement simulation settings if they're not empty
                 if prod_info[p_for_mw]['SimulationSettings'] not in ['','None','NaN'] and type(prod_info[p_for_mw]['SimulationSettings']) == str:
                     simulation_settings = prod_info[p_for_mw]['SimulationSettings']
