@@ -334,4 +334,3 @@ loop(j,
 	);
 );
 putclose frba2;
-
