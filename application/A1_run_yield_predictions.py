@@ -36,6 +36,7 @@ newmodel_path = './input/'+modelname+'_pathwayadd.json'
 vmax = 1000 # highest absolute value of any flux in GSM model
 
 outputFolder = './output_max_withoutMP/'
+outputFolder = './output_max_withoutMP_kapps_only_for_rxns_used_in_kapp_calc/'
 try:
     # fba_results,RBA_result_dict = dict(),dict()
     fba_results = json.load(open(fba_results_path))
@@ -272,10 +273,10 @@ if rerun_FBA:
 
                 # if exp. yields are provided, set bounds to them
                 # add constraint enforcing minimum yields: flux(objrxns)*(product MW) ≥ flux(c_source1)*(c_source1 MW) + flux(c_source2)*(c_source2 MW) + ...
-                if pd.notnull(prod_info[p_for_mw]['yieldExp_LB_(g/g_substrate)']):
-                    # minYield = m.problem.Constraint(prod_info[p_for_mw]*m.reactions.get_by_id(objrxns).flux_expression - sum([prod_info[p_for_mw]['yieldExp_LB_(g/g_substrate)']*m.reactions.get_by_id(x['rxn']).flux_expression*x['MW'] for x in c_sources]),lb=0,ub=vmax)
-                    minYield = m.problem.Constraint(prod_info[p_for_mw]['yieldExp_LB_(g/g_substrate)']*m.reactions.get_by_id(objrxns).flux_expression - sum([x['MW']*m.reactions.get_by_id(x['rxn']).flux_expression for x in c_sources]), lb=0, ub=vmax)
-                    m.add_cons_vars(minYield)
+                # if pd.notnull(prod_info[p_for_mw]['yieldExp_LB_(g/g_substrate)']):
+                #     # minYield = m.problem.Constraint(prod_info[p_for_mw]*m.reactions.get_by_id(objrxns).flux_expression - sum([prod_info[p_for_mw]['yieldExp_LB_(g/g_substrate)']*m.reactions.get_by_id(x['rxn']).flux_expression*x['MW'] for x in c_sources]),lb=0,ub=vmax)
+                #     minYield = m.problem.Constraint(prod_info[p_for_mw]['yieldExp_LB_(g/g_substrate)']*m.reactions.get_by_id(objrxns).flux_expression - sum([x['MW']*m.reactions.get_by_id(x['rxn']).flux_expression for x in c_sources]), lb=0, ub=vmax)
+                #     m.add_cons_vars(minYield)
                 # if pd.notnull(prod_info[p_for_mw]['fluxExp_LB_(mmol product/(gDW*h))']) and pd.notnull(prod_info[p_for_mw]['fluxExp_UB_(mmol product/(gDW*h))']) and prod_info[p_for_mw]['fluxExp_LB_(mmol product/(gDW*h))'] != prod_info[p_for_mw]['fluxExp_UB_(mmol product/(gDW*h))']:
                 #     m.reactions.get_by_id(objrxns).bounds = (prod_info[p_for_mw]['fluxExp_LB_(mmol product/(gDW*h))'],prod_info[p_for_mw]['fluxExp_UB_(mmol product/(gDW*h))'])
                 # biomassRxn.bounds = (0,1000)
