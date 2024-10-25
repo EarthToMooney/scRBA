@@ -232,6 +232,16 @@ loop(j$(uptake(j) and v.up(j) gt 0),
 );
 putclose ff3;
 
+file rba_flux /runRBA.RBA_fluxes.csv/;
+put rba_flux;
+rba_flux.pc=5;
+put 'rxn','flux','lb','ub'/;
+loop(j,
+	if ( (v.l(j) gt 0),
+		put j.tl:0, (v.l(j) / %nscale%):0:15, (v.lo(j) / %nscale%):0:15, (v.up(j) / %nscale%):0:15/;
+	);
+);
+
 if(rba.modelstat eq 1,
 	abort.noError 'Optimal solution found';
 );
