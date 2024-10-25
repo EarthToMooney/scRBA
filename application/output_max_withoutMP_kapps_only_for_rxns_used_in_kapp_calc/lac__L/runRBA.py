@@ -152,10 +152,6 @@ if optimal:
     if os.path.exists(new_FBA_constraints_name):
         os.remove(new_FBA_constraints_name)
     output_str = 'rxn,flux,lb,ub\n'
-    # read runRBA.RBA_fluxes.csv
-    rba_fluxes = pd.read_csv('runRBA.RBA_fluxes.csv')
-    # compare FBA and RBA bounds
-    
     # compare FBA and RBA fluxes, to rerun FBA with RBA constraints if needed
     for rxn in res.metabolic_flux.keys():
         if rxn in fba_fluxes['rxn'].values:

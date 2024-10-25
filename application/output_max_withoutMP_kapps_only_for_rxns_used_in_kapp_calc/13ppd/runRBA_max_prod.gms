@@ -132,6 +132,17 @@ rba.optfile = 1;
 *** SOLVE ***
 Solve rba using lp minimizing z;
 
+file rba_flux /runRBA.RBA_fluxes.csv/;
+put rba_flux;
+rba_flux.pc=5;
+put 'rxn','flux','lb','ub'/;
+loop(j,
+	if ( (v.l(j) gt 0),
+		put j.tl:0, (v.l(j) / %nscale%):0:15, (v.lo(j) / %nscale%):0:15, (v.up(j) / %nscale%):0:15/;
+	);
+);
+putclose;
+
 * solve again, minimizing mv_sub_sum to find a better yield by discouraging wasteful substrate use 
 * NOTE: (get rid of this if linear fractional programming version is developed)
 * save current uptake bounds as parameters
@@ -323,4 +334,5 @@ loop(j,
 	);
 );
 putclose frba2;
+
 

@@ -670,8 +670,8 @@ if rerun_FBA:
                 f.write('rxn,flux,lb,ub\n')
                 # write rxn name, flux, and lower and upper bounds
                 for rxn in fba.fluxes.index:
-                    if fba[rxn] != 0:
-                        f.write(rxn + ',' + str(fba[rxn]) + ',' + str(m.reactions.get_by_id(rxn).lower_bound) + ',' + str(m.reactions.get_by_id(rxn).upper_bound) + '\n')
+                    #if fba[rxn] != 0:
+                    f.write(rxn + ',' + str(fba[rxn]) + ',' + str(m.reactions.get_by_id(rxn).lower_bound) + ',' + str(m.reactions.get_by_id(rxn).upper_bound) + '\n')
             # print simulated and experimental yields
             if not pd.isnull(prod_info[p_for_mw]['yieldExp_LB_(g/g_substrate)']):
                 print(str(fba_results[p]['yield']/prod_info[p_for_mw]['yieldExp_LB_(g/g_substrate)']*100)+'% of LB of experimental yield: '+str(prod_info[p_for_mw]['yieldExp_LB_(g/g_substrate)']))

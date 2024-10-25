@@ -2,7 +2,7 @@
 #SBATCH --nodes=1 
 #SBATCH --ntasks=1 
 #SBATCH --mem=1GB 
-#SBATCH --time=10:00:00 
+#SBATCH --time=1:00:00 
 #SBATCH --partition=open 
 module load gams
 outputFolder=\""./$(basename $(pwd))/\""
