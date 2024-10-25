@@ -37,7 +37,6 @@ vmax = 1000 # highest absolute value of any flux in GSM model
 vmin = -vmax # lowest absolute value of any flux in GSM model
 
 outputFolder = './output_max_withoutMP/'
-outputFolder = './output_max_withoutMP_kapps_only_for_rxns_used_in_kapp_calc/'
 try:
     # fba_results,RBA_result_dict = dict(),dict()
     fba_results = json.load(open(fba_results_path))
