@@ -166,10 +166,41 @@ class RBA_result:
         for k,v in resdict.items():
             self.__setattr__(k,v)
             
-    def make_escher_csv(self, filepath):
+    def make_escher_csv(self, filepath, RBA_rxns_to_include=[],RBA_regex_to_include=[]):
+        """Make a CSV file that can be read by Escher for visualization.
+
+        To include RBA rxns, either add their IDs to RBA_rxns_to_include or add a regular expression to RBA_regex_to_include."""
         import csv
+        from utils import extract_details_from_rxnid
+        raw_fluxes_not_checked = set(self.raw_flux.keys())
+        GSM_RBA_rxn_pairs = dict()
+        # in the future, convert the portion below to a JSON file made upon building the model, and load it here
+        for rxn in self.raw_flux.keys():
+            if '-' in rxn:
+                tag,rxn_base_id,rxn_dir,rxn_id = extract_details_from_rxnid(rxn)
+                if tag in ['RXN','RXNADD']:
+                    if rxn_base_id in GSM_RBA_rxn_pairs.keys():
+                        GSM_RBA_rxn_pairs[rxn_base_id].append(rxn)
+                    else:
+                        GSM_RBA_rxn_pairs[rxn_base_id] = [rxn]
         with open(filepath, 'w') as f:
             fcsv = csv.writer(f, delimiter=',')
             fcsv.writerow(['Rxn', 'Flux'])
             for rxn,val in self.metabolic_flux.items():
                 fcsv.writerow([rxn, val])
+                # Remove the rxn from the raw_fluxes_not_checked list
+                for r in GSM_RBA_rxn_pairs[rxn]:
+                    raw_fluxes_not_checked.discard(r)
+            for rxn in RBA_rxns_to_include:
+                if rxn in raw_fluxes_not_checked:
+                    fcsv.writerow([rxn, self.raw_flux[rxn]])
+                    raw_fluxes_not_checked.discard(rxn)
+            # Add all RBA rxns that match the regex
+            if len(RBA_regex_to_include) > 0:
+                import re
+                # filter out the  RBA rxns that match the regex
+                for rxn in raw_fluxes_not_checked:
+                    for regex in RBA_regex_to_include:
+                        if re.match(regex, rxn):
+                            fcsv.writerow([rxn, self.raw_flux[rxn]])
+            

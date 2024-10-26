@@ -1,5 +1,5 @@
 {
-    "biom_id": "BIOSYN-BIODILAERO",
+    "biom_id": "BIOMASS_AERO_SC_hvd",
     "enzyme_mw": "",
     "growth_rate": 0.1,
     "metabolic_flux": {
@@ -1328,7 +1328,7 @@
     },
     "proteome_capacity_usage": 1.0,
     "raw_flux": {
-        "BIOSYN-BIODILAERO": 0.1,
+        "BIOMASS_AERO_SC_hvd": 0.1,
         "BIOSYN-COFACTOR": 0.0004915119,
         "BIOSYN-COFACTOR1": 1.932502564e-05,
         "BIOSYN-COFACTOR10": 1.01260826e-07,
