@@ -287,6 +287,8 @@ if rerun_FBA:
                 #     biomassRxn.add_metabolites({m.metabolites.get_by_id(met):gam})
                 # for met in ['adp_c','h_c','pi_c']:
                 #     biomassRxn.add_metabolites({m.metabolites.get_by_id(met):-gam})
+                # print(biomassRxn.reaction)
+                # Initial FBA run
                 fba = m.optimize()
                 # store uptake bounds in case they change later
                 uptake_bounds_initial = {x.id:x.lower_bound for x in m.reactions if x.id.startswith('EX_') and x.lower_bound < 0}
@@ -487,6 +489,7 @@ if rerun_FBA:
                                         m.reactions.EX_pnto__R_e.bounds = (-1000,1000)
                                         m.reactions.EX_4abz_e.bounds = (-1000,1000)
                                         m.reactions.EX_inost_e.bounds = (-1000,1000)
+                                        m.reactions.EX_cobalt2_e.bounds = (-1000,1000)
                                         # maximize growth
                                         m.objective = biomassRxn
                                         fba = m.optimize()
