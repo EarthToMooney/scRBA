@@ -16,6 +16,7 @@ print = partial(print, flush=True)
 # Unless you force all uptake fluxes to specific values, or somehow make yields into an objective function or constraint (i.e., linear fractional programming), they may vary.
 # The minYield constraint addresses this, so keep it in.
 rerun_FBA = True # make False only when testing other parts.
+run_pfba = True # set to True if you want to use pFBA after FBA
 rerun_RBA = True # make False only when testing other parts. Don't need to turn off on your system if you can't run it, since it'll automatically avoid running RBA in that case.
 find_min_media_yields = False # turned off since I use RBA for minimal media where needed
 adjust_constraints_if_infeas = False # allow adjustment of constraints (e.g., growth rate, substrate uptake) if production is infeasible.
@@ -531,6 +532,12 @@ if rerun_FBA:
                                 if fba[rxn] != 0 and rxn.startswith('EX_'):
                                     print('    '+rxn + ': ' + str(fba[rxn]) + ' bounds: ' + str(m.reactions.get_by_id(rxn).bounds))
                     break
+                solution = fba
+                # add constraint forcing product fluxes to at least their prior levels
+                m.add_cons_vars(m.problem.Constraint(m.reactions.get_by_id(objrxns).flux_expression - fba[objrxns], lb=0,))
+                # minimize sum of all fluxes, to make a less cluttered solution
+                if run_pfba:
+                    solution = cobra.flux_analysis.pfba(m)
                 # print all active exchange reactions and their fluxes
                 # for rxn in fba.fluxes.index:
                 #     if fba[rxn] != 0 and rxn.startswith('EX_'):
