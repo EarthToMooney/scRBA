@@ -14,7 +14,7 @@ from simulate import get_GAMS_modelStat, RBA_result
 
 import shutil
 shutil.copy(path_gams + 'runRBA.gms', './runRBA.gms');
-shutil.copy(path_gams + 'soplex.opt', './soplex.opt');
+shutil.copy(path_gams + 'soplex.opt', './soplex.opt'); shutil.copy(path_gams + 'cplex.opt', './cplex.opt');
 
 import os
 # Test evaluation at zero
