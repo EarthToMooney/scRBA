@@ -1,6 +1,4 @@
 ************************* Run RBA model ********************
-*       Author: Hoang Dinh
-************************************************************
 
 $INLINECOM /*  */
 $include "./runRBA_GAMS_settings.txt"
