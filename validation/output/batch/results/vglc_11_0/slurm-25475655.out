@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/scratch/ejm6426/scRBA/validation/output/batch/results/vglc_11_0/binary_search.py", line 17, in <module>
+    shutil.copy(path_gams + 'soplex.opt', './soplex.opt'); shutil.copy(path_gams + 'cplex.opt', './cplex.opt');
+                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/ejm6426/.conda/envs/rba/lib/python3.12/shutil.py", line 435, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/storage/home/ejm6426/.conda/envs/rba/lib/python3.12/shutil.py", line 260, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../../../../../GAMS/cplex.opt'

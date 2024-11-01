@@ -1,0 +1,2462 @@
+--- Job runRBA.gms Start 10/31/24 04:46:32 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(36803) 6 Mb--- . RBA_sij.txt(53476) 7 Mb--- . RBA_sij.txt(120433) 10 Mb--- . RBA_sij.txt(137088) 10 Mb--- . RBA_sij.txt(202587) 12 Mb--- . RBA_sij.txt(219249) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(130) 15 Mb--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.954
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 25 Mb--- runRBA.gms(321553) 36 Mb
+---   9,962 rows  16,771 columns  270,069 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.000E+01, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.174
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 15.59 Mb (peak 15.71 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.64 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.10sec (det. 50.95 ticks)
+
+
+Optimal solution found
+Objective:            0.000000
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:01.686
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:46:34 elapsed 0:00:01.693
+--- Job runRBA.gms Start 10/31/24 04:46:34 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(37599) 6 Mb--- . RBA_sij.txt(54064) 7 Mb--- . RBA_sij.txt(120714) 10 Mb--- . RBA_sij.txt(137483) 10 Mb--- . RBA_sij.txt(202804) 12 Mb--- . RBA_sij.txt(219659) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.951
+--- runRBA.gms(143) 16 Mb--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 26 Mb--- runRBA.gms(321553) 36 Mb
+---   9,962 rows  16,771 columns  270,069 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.000E+01, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.159
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 15.59 Mb (peak 15.71 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.64 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.06sec (det. 50.95 ticks)
+
+
+Optimal solution found
+Objective:            0.000000
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:01.490
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:46:35 elapsed 0:00:01.494
+--- Job runRBA.gms Start 10/31/24 04:46:35 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.5
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(37393) 6 Mb--- . RBA_sij.txt(54073) 7 Mb--- . RBA_sij.txt(121002) 10 Mb--- . RBA_sij.txt(137703) 10 Mb--- . RBA_sij.txt(203199) 12 Mb--- . RBA_sij.txt(219946) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.952
+--- runRBA.gms(143) 16 Mb--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 26 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.651E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.162
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (3): infeasible.
+--- Cplex Time: 4.25sec (det. 4235.94 ticks)
+
+
+Model has been proven infeasible
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:05.686
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:46:41 elapsed 0:00:05.692
+--- Job runRBA.gms Start 10/31/24 04:46:41 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.25
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(33719) 6 Mb--- . RBA_sij.txt(50964) 7 Mb--- . RBA_sij.txt(119130) 10 Mb--- . RBA_sij.txt(136022) 10 Mb--- . RBA_sij.txt(202809) 12 Mb--- . RBA_sij.txt(219697) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.951
+--- runRBA.gms(314705) 17 Mb--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 26 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 4.325E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.159
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.27sec (det. 381.67 ticks)
+
+
+Optimal solution found
+Objective:           62.555625
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:01.699
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:46:43 elapsed 0:00:01.706
+--- Job runRBA.gms Start 10/31/24 04:46:43 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.375
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(37116) 6 Mb--- . RBA_sij.txt(53754) 7 Mb--- . RBA_sij.txt(120417) 10 Mb--- . RBA_sij.txt(137087) 10 Mb--- . RBA_sij.txt(202398) 12 Mb--- . RBA_sij.txt(219135) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(55) 15 Mb--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.958
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 25 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 6.488E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.166
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.29sec (det. 441.52 ticks)
+
+
+Optimal solution found
+Objective:          102.655781
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:01.730
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:46:45 elapsed 0:00:01.738
+--- Job runRBA.gms Start 10/31/24 04:46:45 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.4375
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(38209) 6 Mb--- . RBA_sij.txt(55025) 7 Mb--- . RBA_sij.txt(122758) 10 Mb--- . RBA_sij.txt(139592) 10 Mb--- . RBA_sij.txt(206049) 13 Mb--- . RBA_sij.txt(222863) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.943
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 18 Mb--- runRBA.gms(317085) 27 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 7.569E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.164
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.97sec (det. 1082.66 ticks)
+
+
+Optimal solution found
+Objective:          124.911445
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:02.405
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:46:48 elapsed 0:00:02.411
+--- Job runRBA.gms Start 10/31/24 04:46:48 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.46875
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(37906) 6 Mb--- . RBA_sij.txt(54822) 7 Mb--- . RBA_sij.txt(122342) 10 Mb--- . RBA_sij.txt(139272) 10 Mb--- . RBA_sij.txt(205476) 13 Mb--- . RBA_sij.txt(222440) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.943
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 18 Mb--- runRBA.gms(317085) 27 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.110E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.149
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (3): infeasible.
+--- Cplex Time: 7.58sec (det. 8277.83 ticks)
+
+
+Model has been proven infeasible
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:09.001
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321562) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:46:57 elapsed 0:00:09.008
+--- Job runRBA.gms Start 10/31/24 04:46:57 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.453125
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(33584) 6 Mb--- . RBA_sij.txt(50639) 7 Mb--- . RBA_sij.txt(118293) 10 Mb--- . RBA_sij.txt(135372) 10 Mb--- . RBA_sij.txt(201727) 12 Mb--- . RBA_sij.txt(218835) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(1254) 15 Mb--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.955
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 25 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 7.840E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.162
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.28sec (det. 393.53 ticks)
+
+
+Optimal solution found
+Objective:          130.705110
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:01.713
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:46:59 elapsed 0:00:01.719
+--- Job runRBA.gms Start 10/31/24 04:46:59 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.4609375
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(37771) 6 Mb--- . RBA_sij.txt(54530) 7 Mb--- . RBA_sij.txt(121646) 10 Mb--- . RBA_sij.txt(138507) 10 Mb--- . RBA_sij.txt(204774) 13 Mb--- . RBA_sij.txt(221663) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.946
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 17 Mb--- runRBA.gms(317085) 27 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 7.975E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.157
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 10.16sec (det. 10516.34 ticks)
+
+
+Optimal solution found
+Objective:          133.636404
+
+--- Reading solution for model rba
+--- runRBA.gms(321553) 36 Mb  10 secs
+--- Executing after solve: elapsed 0:00:11.586
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:47:11 elapsed 0:00:11.594
+--- Job runRBA.gms Start 10/31/24 04:47:11 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.46484375
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(36834) 6 Mb--- . RBA_sij.txt(53850) 7 Mb--- . RBA_sij.txt(121102) 10 Mb--- . RBA_sij.txt(138079) 10 Mb--- . RBA_sij.txt(204004) 12 Mb--- . RBA_sij.txt(220806) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.951
+--- runRBA.gms(143) 16 Mb--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 26 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.042E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.157
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (3): infeasible.
+--- Cplex Time: 7.72sec (det. 9070.92 ticks)
+
+
+Model has been proven infeasible
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:09.150
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:47:20 elapsed 0:00:09.156
+--- Job runRBA.gms Start 10/31/24 04:47:20 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.462890625
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(37969) 6 Mb--- . RBA_sij.txt(54916) 7 Mb--- . RBA_sij.txt(122425) 10 Mb--- . RBA_sij.txt(139397) 10 Mb--- . RBA_sij.txt(205638) 13 Mb--- . RBA_sij.txt(222685) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.942
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 18 Mb--- runRBA.gms(317085) 27 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.009E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.146
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.50sec (det. 756.19 ticks)
+
+
+Optimal solution found
+Objective:          134.372818
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:01.913
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:47:22 elapsed 0:00:01.919
+--- Job runRBA.gms Start 10/31/24 04:47:22 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.4638671875
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(37952) 6 Mb--- . RBA_sij.txt(54938) 7 Mb--- . RBA_sij.txt(122466) 10 Mb--- . RBA_sij.txt(139463) 10 Mb--- . RBA_sij.txt(205985) 13 Mb--- . RBA_sij.txt(223006) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.941
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 19 Mb--- runRBA.gms(317085) 28 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.025E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.145
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (3): infeasible.
+--- Cplex Time: 6.49sec (det. 7285.47 ticks)
+
+
+Model has been proven infeasible
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:07.902
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:47:30 elapsed 0:00:07.910
+--- Job runRBA.gms Start 10/31/24 04:47:30 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.46337890625
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(36302) 6 Mb--- . RBA_sij.txt(53011) 7 Mb--- . RBA_sij.txt(119560) 10 Mb--- . RBA_sij.txt(136392) 10 Mb--- . RBA_sij.txt(201744) 12 Mb--- . RBA_sij.txt(218613) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(117) 15 Mb--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.957
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 25 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.017E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.165
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 8.00sec (det. 8950.88 ticks)
+
+
+Optimal solution found
+Objective:          134.557146
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:09.438
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:47:40 elapsed 0:00:09.446
+--- Job runRBA.gms Start 10/31/24 04:47:40 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.463623046875
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(38013) 6 Mb--- . RBA_sij.txt(54973) 7 Mb--- . RBA_sij.txt(122724) 10 Mb--- . RBA_sij.txt(139694) 10 Mb--- . RBA_sij.txt(205968) 13 Mb--- . RBA_sij.txt(222997) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.942
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 18 Mb--- runRBA.gms(317085) 27 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.021E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.150
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (5): optimal with unscaled infeasibilities.
+--- Cplex Time: 6.78sec (det. 7414.12 ticks)
+
+
+Optimal solution found, but with infeasibilities after unscaling
+Objective:          134.649343
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:08.206
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:47:48 elapsed 0:00:08.213
+--- Job runRBA.gms Start 10/31/24 04:47:48 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.4637451171875
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(37319) 6 Mb--- . RBA_sij.txt(54300) 7 Mb--- . RBA_sij.txt(121486) 10 Mb--- . RBA_sij.txt(138457) 10 Mb--- . RBA_sij.txt(204357) 12 Mb--- . RBA_sij.txt(221294) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.948
+--- runRBA.gms(314712) 17 Mb--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 26 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.023E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.153
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (5): optimal with unscaled infeasibilities.
+--- Cplex Time: 6.25sec (det. 6878.15 ticks)
+
+
+Optimal solution found, but with infeasibilities after unscaling
+Objective:          134.695450
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:07.679
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:47:56 elapsed 0:00:07.687
+--- Job runRBA.gms Start 10/31/24 04:47:56 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.46380615234375
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(37565) 6 Mb--- . RBA_sij.txt(54458) 7 Mb--- . RBA_sij.txt(121013) 10 Mb--- . RBA_sij.txt(137636) 10 Mb--- . RBA_sij.txt(202736) 12 Mb--- . RBA_sij.txt(219622) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2200) 15 Mb--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.954
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 25 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.024E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.165
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (1): optimal.
+--- Cplex Time: 7.41sec (det. 8059.36 ticks)
+
+
+Optimal solution found
+Objective:          134.718506
+
+--- Reading solution for model rba
+--- runRBA.gms(321553) 36 Mb  7 secs
+--- Executing after solve: elapsed 0:00:08.847
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:48:05 elapsed 0:00:08.855
+--- Job runRBA.gms Start 10/31/24 04:48:05 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.463836669921875
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(33254) 6 Mb--- . RBA_sij.txt(50559) 7 Mb--- . RBA_sij.txt(119813) 10 Mb--- . RBA_sij.txt(137300) 10 Mb--- . RBA_sij.txt(205968) 13 Mb--- . RBA_sij.txt(223619) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.934
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 20 Mb--- runRBA.gms(317085) 30 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.025E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.126
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (3): infeasible.
+--- Cplex Time: 14.27sec (det. 11861.47 ticks)
+
+
+Model has been proven infeasible
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:15.665
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:48:21 elapsed 0:00:15.673
+--- Job runRBA.gms Start 10/31/24 04:48:21 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.4638214111328125
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(35577) 6 Mb--- . RBA_sij.txt(52701) 7 Mb--- . RBA_sij.txt(120954) 10 Mb--- . RBA_sij.txt(137980) 10 Mb--- . RBA_sij.txt(204865) 13 Mb--- . RBA_sij.txt(221941) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.944
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 18 Mb--- runRBA.gms(317085) 28 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.025E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.136
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (3): infeasible.
+--- Cplex Time: 3.03sec (det. 3611.61 ticks)
+
+
+Model has been proven infeasible
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:04.426
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:48:26 elapsed 0:00:04.432
+--- Job runRBA.gms Start 10/31/24 04:48:26 42.1.0 cb854401 LEX-LEG x86 64bit/Linux
+--- Applying:
+    /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.gms
+    Output /dev/null
+    ScrDir /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/225a/
+    SysDir /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/
+    --mu 0.46381378173828125
+Licensee: Single User License                            G231219|0002AO-LNX
+          The Pennsylvania State University, Institute for CyberDC15032-S17
+          /storage/icds/RISE/sw8/gams/gams42.1_linux_x64_64_sfx/gamslice.txt
+          License Admin: Rob Groner, rug262@psu.edu                        
+Processor information: 2 socket(s), 24 core(s), and 24 thread(s) available
+GAMS 42.1.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+--- Starting compilation
+--- runRBA.gms(4) 2 Mb
+--- . runRBA_GAMS_settings.txt(13) 2 Mb
+--- runRBA.gms(44) 2 Mb
+--- . RBA_species.txt(7734) 3 Mb
+--- runRBA.gms(46) 3 Mb
+--- . RBA_rxns.txt(16772) 5 Mb
+--- runRBA.gms(48) 5 Mb
+--- . RBA_rxns_prosyn.txt(4964) 5 Mb
+--- runRBA.gms(50) 5 Mb
+--- . RBA_rxns_prowaste.txt(4968) 6 Mb
+--- runRBA.gms(52) 6 Mb
+--- . RBA_nuc_translation.txt(4951) 6 Mb
+--- runRBA.gms(54) 6 Mb
+--- . RBA_mito_translation.txt(15) 6 Mb
+--- runRBA.gms(56) 6 Mb
+--- . RBA_rxns_EXREV.txt(159) 6 Mb
+--- runRBA.gms(58) 6 Mb
+--- . RBA_rxns_EXREV_YNB.txt(27) 6 Mb
+--- runRBA.gms(63) 6 Mb
+--- . RBA_sij.txt(39182) 6 Mb--- . RBA_sij.txt(56221) 7 Mb--- . RBA_sij.txt(124143) 10 Mb--- . RBA_sij.txt(140799) 10 Mb--- . RBA_sij.txt(207312) 13 Mb--- . RBA_sij.txt(224168) 13 Mb--- . RBA_sij.txt(267837) 15 Mb
+--- runRBA.gms(65) 15 Mb
+--- . RBA_proteinLength.txt(4964) 15 Mb
+--- runRBA.gms(67) 15 Mb
+--- . RBA_kapp_batch_per_hour.txt(2226) 15 Mb
+--- runRBA.gms(95) 15 Mb
+--- . phenotype.txt(2) 15 Mb
+--- .. phenotype_common.txt(28) 15 Mb
+--- ... incomplete_enzyme_complex_off.txt(20) 15 Mb
+--- .. phenotype_common.txt(90) 15 Mb
+--- . phenotype.txt(6) 15 Mb
+--- runRBA.gms(109) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(119) 15 Mb
+--- . RBA_enzCapacityConstraints_eqns_equality_version.txt(2226) 15 Mb
+--- runRBA.gms(124) 15 Mb
+--- . RBA_enzCapacityConstraints_declares.txt(2226) 15 Mb
+--- runRBA.gms(143) 15 Mb
+--- Starting execution: elapsed 0:00:00.938
+--- runRBA.gms(321550) 17 Mb
+--- Generating LP model rba
+--- runRBA.gms(317085) 19 Mb--- runRBA.gms(317085) 28 Mb--- runRBA.gms(321553) 36 Mb
+---   9,964 rows  16,771 columns  277,257 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [        NA,        NA] - Zero values observed as well
+--- Bound     [min, max] : [ 8.025E-04, 1.000E+06] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.700E-05, 3.259E+07]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:01.132
+
+IBM ILOG CPLEX   42.1.0 cb854401 Feb 1, 2023           LEG x86 64bit/Linux    
+
+--- GAMS/Cplex licensed for continuous and discrete problems.
+
+Reading parameter(s) from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+>>  optcr = 1E-12
+>>  optca = 1E-12
+>>  eprhs = 1E-9
+>> 
+>>  * reduce info displayed, for faster run times
+>>  conflictdisplay = 0
+>>  bardisplay = 0
+>>  clonelog = -1
+>>  mipdisplay = 1
+>>  netdisplay = 0
+>>  simdisplay = 0
+>>  siftdisplay = 0
+>>  tuningdisplay = 0
+>>  *writeannotation = /dev/null
+>>  multobjdisplay = 0netdisplay = 0
+*** Value Error line 15: Integer expected, for option "multobjdisplay" saw "0netdisplay = 0"
+*** Value Error line 15:    Option ignored
+>> 
+Finished reading from "/storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/cplex.opt"
+
+--- GMO setup time: 0.00s
+--- Space for names approximately 0.78 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 16.09 Mb (peak 16.21 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.43 Mb (peak 4.72 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         0
+CPXPARAM_Threads                                 1
+CPXPARAM_Conflict_Display                        0
+CPXPARAM_Sifting_Display                         0
+CPXPARAM_Tune_Display                            0
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_MIP_Display                             1
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_Barrier_Display                         0
+CPXPARAM_Network_Display                         0
+CPXPARAM_Simplex_Limits_Iterations               1000000
+CPXPARAM_Simplex_Tolerances_Feasibility          1.0000000000000001e-09
+CPXPARAM_TimeLimit                               1000000
+CPXPARAM_MIP_Tolerances_AbsMIPGap                9.9999999999999998e-13
+CPXPARAM_MIP_Tolerances_MIPGap                   9.9999999999999998e-13
+
+--- LP status (3): infeasible.
+--- Cplex Time: 2.53sec (det. 2965.83 ticks)
+
+
+Model has been proven infeasible
+
+--- Reading solution for model rba
+--- Executing after solve: elapsed 0:00:03.930
+--- runRBA.gms(321556) 36 Mb--- runRBA.gms(321567) 36 Mb
+--- Putfile ff /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.modelStat.txt
+--- Putfile ff2 /storage/home/ejm6426/scratch/scRBA/validation/output/batch/results_capacitycorrected/vglc_8_0/runRBA.flux.txt
+*** Status: Normal completion
+--- Job runRBA.gms Stop 10/31/24 04:48:30 elapsed 0:00:03.936
+[92mmu = 0.2500000, status = optimal[0m
+[92mmu = 0.3750000, status = optimal[0m
+[92mmu = 0.4375000, status = optimal[0m
+[91mmu = 0.4687500, status = infeasible[0m
+[92mmu = 0.4531250, status = optimal[0m
+[92mmu = 0.4609375, status = optimal[0m
+[91mmu = 0.4648438, status = infeasible[0m
+[92mmu = 0.4628906, status = optimal[0m
+[91mmu = 0.4638672, status = infeasible[0m
+[92mmu = 0.4633789, status = optimal[0m
+[92mmu = 0.4636230, status = optimal[0m
+[92mmu = 0.4637451, status = optimal[0m
+[92mmu = 0.4638062, status = optimal[0m
+[91mmu = 0.4638367, status = infeasible[0m
+[91mmu = 0.4638214, status = infeasible[0m
+[91mmu = 0.4638138, status = infeasible[0m

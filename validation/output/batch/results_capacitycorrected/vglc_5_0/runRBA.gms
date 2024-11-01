@@ -1,6 +1,4 @@
 ************************* Run RBA model ********************
-*       Author: Hoang Dinh
-************************************************************
 
 $INLINECOM /*  */
 $include "./runRBA_GAMS_settings.txt"
@@ -32,7 +30,7 @@ $setGlobal kribomito 13.2*3600
 $setGlobal nonmodeled_proteome_allocation 0.45
 
 options
-	LP = soplex /*Solver selection*/
+	LP = cplex /*Solver selection*/
 	limrow = 0 /*number of equations listed, 0 is suppresed*/
 	limcol = 0 /*number of variables listed, 0 is suppresed*/
 	iterlim = 1000000 /*iteration limit of solver, for LP it is number of simplex pivots*/

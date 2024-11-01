@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/scratch/ejm6426/scRBA/validation/output/batch_mitono_ribono/results/vglc_6_0/binary_search.py", line 4, in <module>
+    from binary_search_options import *
+  File "/scratch/ejm6426/scRBA/validation/output/batch_mitono_ribono/results/vglc_6_0/binary_search_options.py", line 9
+    mu_min0 = 0; mu_max0 = 1s; # User-set initial upper and lower bounds of mu
+                           ^
+SyntaxError: invalid decimal literal
