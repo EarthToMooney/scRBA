@@ -48531,6 +48531,56 @@
 }
 },
 {
+"id":"RNDR4_c",
+"name":"ribonucleotide reductase",
+"metabolites":{
+"udp_c":-1,
+"dudp_c":1,
+"h2o_c":1,
+"trdox_c":1,
+"trdrd_c":-1
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"(YER070W and YJL026W and YGR180C) or (YER070W and YIL066C and YJL026W and YGR180C)",
+"subsystem":"Purine metabolism",
+"notes":{
+"Confidence Level":"2",
+"NOTES":"RNR binds UDP (doi:10.1073/pnas.0600443103) and is purported to reduce UDP to dUDP (https://res.slu.se/id/publ/60167) as it does in E. coli (doi:10.1016/S0076-6879(78)51032-X) and mammals (doi:10.1242/dmm.050775)."
+},
+"annotation":{
+"ec-code":"1.17.4.1",
+"kegg.reaction":"R02018",
+"metanetx.reaction":"MNXR146333",
+"sbo":"SBO:0000649"
+}
+},
+{
+"id":"RNDR4_n",
+"name":"ribonucleotide reductase",
+"metabolites":{
+"udp_n":-1,
+"dudp_n":1,
+"h2o_n":1,
+"trdox_n":1,
+"trdrd_n":-1
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"(YER070W and YJL026W and YGR180C) or (YER070W and YIL066C and YJL026W and YGR180C)",
+"subsystem":"Purine metabolism",
+"notes":{
+"Confidence Level":"2",
+"NOTES":"RNR binds UDP (doi:10.1073/pnas.0600443103) and is purported to reduce UDP to dUDP (https://res.slu.se/id/publ/60167) as it does in E. coli (doi:10.1016/S0076-6879(78)51032-X) and mammals (doi:10.1242/dmm.050775)."
+},
+"annotation":{
+"ec-code":"1.17.4.1",
+"kegg.reaction":"R02018",
+"metanetx.reaction":"MNXR146333",
+"sbo":"SBO:0000649"
+}
+},
+{
 "id":"RNDR2_c",
 "name":"ribonucleotide reductase",
 "metabolites":{
