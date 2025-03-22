@@ -31511,7 +31511,7 @@
 {
 "id":"prefmn_c",
 "name":"prenyl-FMN (cofactor)",
-"compartment":"",
+"compartment":"c",
 "charge":-2,
 "formula":"C22H29N4O9P",
 "annotation":{
@@ -31683,7 +31683,7 @@
 {
 "id":"dicat_c",
 "name":"Generic divalent cation",
-"compartment":"",
+"compartment":"c",
 "charge":2.0,
 "annotation":{
 "chebi":"CHEBI:60240"
@@ -31732,7 +31732,7 @@
 {
 "id":"hemegen_c",
 "name":"Generic heme",
-"compartment":"",
+"compartment":"c",
 "annotation":{
 "chebi":"CHEBI:30413"
 }
@@ -31740,7 +31740,7 @@
 {
 "id":"lipoate_m",
 "name":"Lipoate",
-"compartment":"",
+"compartment":"m",
 "charge":-1.0,
 "formula":"C8H13O2S2",
 "annotation":{
@@ -31751,7 +31751,7 @@
 {
 "id":"moncat_c",
 "name":"Generic monovalent cation",
-"compartment":"",
+"compartment":"c",
 "charge":1.0,
 "annotation":{
 "chebi":"CHEBI:60242"
