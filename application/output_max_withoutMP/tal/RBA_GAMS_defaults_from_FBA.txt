@@ -356,7 +356,7 @@ v.up('RXN-EX_ca2_e_REV-SPONT') = 1000.0 * %nscale%;
 v.lo('RXN-EX_ca2_e_REV-SPONT') = 0;
 v.up('RXN-EX_ca2_e_FWD-SPONT') = 1000.0 * %nscale%;
 v.lo('RXN-EX_ca2_e_FWD-SPONT') = 0;
-$setGlobal mu 0.00012818704623267547
+$setGlobal mu 0.0138888888888888
 $setGlobal biom_id 'BIOSYN-BIODILAERO'
 v.fx('%biom_id%') = %mu% * %nscale%;
 v.up('RXN-EX_cobalt2_e_REV-SPONT') = 1000.0 * %nscale%;
@@ -470,7 +470,8 @@ v.up('RXNADD-taltps_e_FWD-SPONT') = 1000 * %nscale%;
 v.lo('RXNADD-taltps_e_FWD-SPONT') = 0 * %nscale%;
 v.up('RXNADD-EX_tal_e_FWD-SPONT') = 1000 * %nscale%;
 v.lo('RXNADD-EX_tal_e_FWD-SPONT') = 0 * %nscale%;
-v.fx('RXNADD-BiomassKim_e_FWD-SPONT') = 0.0 * %nscale%;
+v.up('RXNADD-BiomassKim_e_FWD-SPONT') = 1000 * %nscale%;
+v.lo('RXNADD-BiomassKim_e_FWD-SPONT') = 0 * %nscale%;
 v.fx('RXNADD-FARodealc_r_FWD-maqu2200') = 0 * %nscale%;
 v.fx('RXNADD-TPS_odealc_r_FWD-SPONT') = 0 * %nscale%;
 v.fx('RXNADD-FARodealc_rm_FWD-maqu2200') = 0 * %nscale%;

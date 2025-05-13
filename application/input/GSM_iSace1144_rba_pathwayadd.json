@@ -31511,7 +31511,7 @@
 {
 "id":"prefmn_c",
 "name":"prenyl-FMN (cofactor)",
-"compartment":"",
+"compartment":"c",
 "charge":-2,
 "formula":"C22H29N4O9P",
 "annotation":{
@@ -31683,7 +31683,7 @@
 {
 "id":"dicat_c",
 "name":"Generic divalent cation",
-"compartment":"",
+"compartment":"c",
 "charge":2.0,
 "annotation":{
 "chebi":"CHEBI:60240"
@@ -31732,7 +31732,7 @@
 {
 "id":"hemegen_c",
 "name":"Generic heme",
-"compartment":"",
+"compartment":"c",
 "annotation":{
 "chebi":"CHEBI:30413"
 }
@@ -31740,7 +31740,7 @@
 {
 "id":"lipoate_m",
 "name":"Lipoate",
-"compartment":"",
+"compartment":"m",
 "charge":-1.0,
 "formula":"C8H13O2S2",
 "annotation":{
@@ -31751,7 +31751,7 @@
 {
 "id":"moncat_c",
 "name":"Generic monovalent cation",
-"compartment":"",
+"compartment":"c",
 "charge":1.0,
 "annotation":{
 "chebi":"CHEBI:60242"
@@ -48922,6 +48922,56 @@
 "ec-code":"1.17.4.1",
 "kegg.reaction":"R02024",
 "metanetx.reaction":"MNXR104064",
+"sbo":"SBO:0000649"
+}
+},
+{
+"id":"RNDR4_c",
+"name":"ribonucleotide reductase",
+"metabolites":{
+"dudp_c":1,
+"h2o_c":1,
+"trdox_c":1,
+"trdrd_c":-1,
+"udp_c":-1
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"(YER070W and YJL026W and YGR180C) or (YER070W and YIL066C and YJL026W and YGR180C)",
+"subsystem":"Purine metabolism",
+"notes":{
+"Confidence Level":"2",
+"NOTES":"RNR binds UDP (doi:10.1073/pnas.0600443103) and is purported to reduce UDP to dUDP (https://res.slu.se/id/publ/60167) as it does in E. coli (doi:10.1016/S0076-6879(78)51032-X) and mammals (doi:10.1242/dmm.050775)."
+},
+"annotation":{
+"ec-code":"1.17.4.1",
+"kegg.reaction":"R02018",
+"metanetx.reaction":"MNXR146333",
+"sbo":"SBO:0000649"
+}
+},
+{
+"id":"RNDR4_n",
+"name":"ribonucleotide reductase",
+"metabolites":{
+"dudp_n":1,
+"h2o_n":1,
+"trdox_n":1,
+"trdrd_n":-1,
+"udp_n":-1
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"(YER070W and YJL026W and YGR180C) or (YER070W and YIL066C and YJL026W and YGR180C)",
+"subsystem":"Purine metabolism",
+"notes":{
+"Confidence Level":"2",
+"NOTES":"RNR binds UDP (doi:10.1073/pnas.0600443103) and is purported to reduce UDP to dUDP (https://res.slu.se/id/publ/60167) as it does in E. coli (doi:10.1016/S0076-6879(78)51032-X) and mammals (doi:10.1242/dmm.050775)."
+},
+"annotation":{
+"ec-code":"1.17.4.1",
+"kegg.reaction":"R02018",
+"metanetx.reaction":"MNXR146333",
 "sbo":"SBO:0000649"
 }
 },
@@ -74013,6 +74063,107 @@
 "subsystem":"Pseudoreaction"
 },
 {
+"id":"BIOMASS_AERO_SC_RBA",
+"name":"Biomass reaction (batch and chemostats, aerobic), adjusted to match RBA model",
+"metabolites":{
+"13BDglucan_en":-0.740000460729238,
+"16BDglucan_en":-0.19473692312345,
+"adp_c":92,
+"alatrna_c":-0.495049166480429,
+"argtrna_c":-0.19558750285563,
+"asntrna_c":-0.23511049769957,
+"asptrna_c":-0.23511049769957,
+"atp_c":-92.0600214062688,
+"ca2_c":-0.00130801635427904,
+"chtn_c":-0.017495605838585,
+"coa_c":-0.000193252805064555,
+"ctp_c":-0.0583241024520015,
+"cu2_c":-0.000115951683038733,
+"cystrna_c":-0.0070941450233881,
+"datp_c":-0.00236679811799446,
+"dctp_c":-0.00159774083749446,
+"dgtp_c":-0.00159774083749446,
+"dttp_c":-0.00236679811799446,
+"ergst161_rm":-0.00163820600737148,
+"ergst181_rm":-0.000600986054369585,
+"ergst_c":-0.0087459706583634,
+"fad_c":-1.01712002665556e-05,
+"fe2_c":-0.000675367697699289,
+"glntrna_c":-0.39218807314301,
+"glutrna_c":-0.39218807314301,
+"glycogen_c":-0.356764836266206,
+"glytrna_c":-0.45045949797717,
+"gtp_c":-0.0600214062687954,
+"h2o_c":-92,
+"h_c":92,
+"hdca_c":-9.20908657271374e-05,
+"hdcea_c":-0.000270150950037701,
+"hemeA_c":-1.01712002665555e-06,
+"histrna_c":-0.0977930831775303,
+"iletrna_c":-0.298448596193049,
+"ipc_g":-0.00126531784874801,
+"k_c":-0.613984504090626,
+"leutrna_c":-0.405868492973342,
+"lystrna_c":-0.3329035808771,
+"mannan_c":-0.476870095271867,
+"mettrna_c":-0.0577635546177155,
+"mg2_c":-0.0646959535354799,
+"mn2_c":-9.56092825056222e-05,
+"nad_c":-0.00269536807063722,
+"nadh_c":-0.000152568003998333,
+"nadp_c":-0.000579758415193666,
+"nadph_c":-0.00274622407197,
+"ocdca_c":-2.55512228607087e-05,
+"ocdcea_c":-9.9010988585246e-05,
+"pail_c":-0.00227352651746014,
+"pc_c":-0.00848273983118381,
+"pe_c":-0.00227964816460385,
+"phetrna_c":-0.190520829196311,
+"pi_c":91.8925361835837,
+"ppi_c":0.264813826117498,
+"protrna_c":-0.213828062629406,
+"ps_c":-0.0019578624517018,
+"ribflv_c":-0.001006948826389,
+"sertrna_c":-0.270073352600066,
+"so4_c":-0.0317575385922664,
+"tag_c":-0.0022559600517434,
+"thf_c":-6.40785616793e-05,
+"thmpp_c":-1.01712002665555e-06,
+"thrtrna_c":-0.282234171282773,
+"tre_c":-0.017883106260592,
+"trnaala_c":0.495049166480429,
+"trnaarg_c":0.19558750285563,
+"trnaasn_c":0.23511049769957,
+"trnaasp_c":0.23511049769957,
+"trnacys_c":0.0070941450233881,
+"trnagln_c":0.39218807314301,
+"trnaglu_c":0.39218807314301,
+"trnagly_c":0.45045949797717,
+"trnahis_c":0.0977930831775303,
+"trnaile_c":0.298448596193049,
+"trnaleu_c":0.405868492973342,
+"trnalys_c":0.3329035808771,
+"trnamet_c":0.0577635546177155,
+"trnaphe_c":0.190520829196311,
+"trnapro_c":0.213828062629406,
+"trnaser_c":0.270073352600066,
+"trnathr_c":0.282234171282773,
+"trnatrp_c":0.0329353835364267,
+"trnatyr_c":0.0993140208257246,
+"trnaval_c":0.37141350828929,
+"trptrna_c":-0.0329353835364267,
+"tyrtrna_c":-0.0993140208257246,
+"utp_c":-0.07815741186676,
+"valtrna_c":-0.37141350828929,
+"zn2_c":-0.00160298116200915
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":"SPONT",
+"objective_coefficient":1.0,
+"subsystem":"Pseudoreaction"
+},
+{
 "id":"AKGDH_m",
 "name":"2-oxoglutarate dehydrogenase",
 "metabolites":{
@@ -81384,7 +81535,6 @@
 "id":"yeastGEM_hvd",
 "name":"yeastGEM v8.3.4 HVD edit",
 "compartments":{
-"":"",
 "c":"cytoplasm",
 "e":"extracellular",
 "en":"cell envelope",

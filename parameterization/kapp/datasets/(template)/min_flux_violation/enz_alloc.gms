@@ -93,7 +93,7 @@ $include "%v_exp_ub_path%"
 
 * slacks for allowing fluxes to deviate from measured values when necessary
 Variables
-z, prosynSlackSum, kappEstSlackSum, fluxSum_j_NP_nonEss, fluxSum_j_NP, fluxSum, v(j), fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j), prosynSlackLB(pro), prosynSlackUB(pro), EnzLoadSlackPos(j), EnzLoadSlackNeg(j), kappEstSlackPos(j), kappEstSlackNeg(j), slackSum
+w_prowaste, prosynSlackSum, kappEstSlackSum, fluxSum_j_NP_nonEss, fluxSum_j_NP, fluxSum, v(j), fluxSlack, s_v_exp_lb(gsm_j), s_v_exp_ub(gsm_j), prosynSlackLB(pro), prosynSlackUB(pro), EnzLoadSlackPos(j), EnzLoadSlackNeg(j), kappEstSlackPos(j), kappEstSlackNeg(j), slackSum
 ;
 prosynSlackLB.lo(pro) = 0; prosynSlackLB.up(pro) = %prosynSlackAllow%;
 prosynSlackUB.lo(pro) = 0; prosynSlackUB.up(pro) = %prosynSlackAllow%;
@@ -139,7 +139,7 @@ Equations
 Obj, PSS, kappEstSlack, Obj2, Obj3, Obj4, Stoic, RiboCapacityNuc, RiboCapacityMito, UnknownRiboCapacity, Nonmodel, GSM_LB_exp, GSM_UB_exp, fluxSlackBounds, MitoProtAllo 
 ;
 
-Obj..               z =e= v('PROWASTE-TOTALPROTEIN');
+Obj..               w_prowaste =e= v('PROWASTE-TOTALPROTEIN');
 PSS..               prosynSlackSum =e= sum(pro, prosynSlackLB(pro) + prosynSlackUB(pro));
 kappEstSlack..		kappEstSlackSum =e= sum(j, kappEstSlackPos(j) + kappEstSlackNeg(j));
 Obj2..				fluxSum_j_NP_nonEss =e= sum(j$rxns_NP_nonessential(j), v(j));
@@ -169,10 +169,10 @@ put log; put 'minimized prosynSlackSum'/; putclose;
 if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
 prosynSlackSum.up = prosynSlackSum.l*(1+(%tol%));
 
-Solve rba using lp minimizing z;
+Solve rba using lp minimizing w_prowaste;
 put log; put 'minimized prowaste mass'/; putclose;
 if (rba.modelStat ne 1, abort.noError "no optimal solution found";);
-z.up = z.l*(1+(%tol%));
+w_prowaste.up = w_prowaste.l*(1+(%tol%));
 
 Solve rba using lp minimizing kappEstSlackSum;
 put log; put 'minimized kappEstSlackSum'/; putclose;
