@@ -37,7 +37,7 @@ os.system('module load gams\n' + 'gams runRBA_max_prod.gms' + \
           ' --carbonSlack=' + str(carbonSlack) + \
           ' --adjust_constraints_if_infeas=' + str(int(adjust_constraints_if_infeas)) + \
           output_redirect_str)
-stat = get_GAMS_modelStat('./runRBA.modelStat.txt')
+stat = get_GAMS_modelStat('./runRBA_max_prod.modelStat.txt')
 
 def total_carbon_mass_flux(RBA_results, carbon_source_list):
     # in g*mmol/(mol*gDW*h)
@@ -58,9 +58,9 @@ if stat == 'infeasible':
 elif stat == 'optimal':
     optimal = True
     res = RBA_result(biom_id=biom_id_fba)
-    # convert all RXNADD rxns in runRBA.flux.txt to RXN-XXX
-    flux_file = './runRBA.flux.txt'
-    new_flux_file = './runRBA.fluxes_rxnadd_as_rxn.txt'
+    # convert all RXNADD rxns in runRBA_max_prod.flux.txt to RXN-XXX
+    flux_file = './runRBA_max_prod.flux.txt'
+    new_flux_file = './runRBA_max_prod.fluxes_rxnadd_as_rxn.txt'
     with open(flux_file) as f:
         text = f.read().split('\n')
     text = [i for i in text if i != '']
@@ -85,7 +85,7 @@ elif stat == 'need_rerun':
         os.system('module load gams\n' + 'gams runRBA_max_prod.gms' + \
                   ' --carbonSlack=' + str(carbonSlack) + \
                   output_redirect_str)
-        stat = get_GAMS_modelStat('./runRBA.modelStat.txt')
+        stat = get_GAMS_modelStat('./runRBA_max_prod.modelStat.txt')
             
         if stat == 'infeasible':
             report['stat'] = stat
@@ -95,7 +95,7 @@ elif stat == 'need_rerun':
         elif stat == 'optimal':
             optimal = True
             res = RBA_result(biom_id=biom_id)
-            res.load_raw_flux(filepath='./runRBA.flux.txt')
+            res.load_raw_flux(filepath='./runRBA_max_prod.flux.txt')
             res.calculate_metabolic_flux()
             if vprod.split('-')[0] == 'RXNADD':
                 res.metabolic_flux[vprod_coreid] = res.raw_flux[vprod]

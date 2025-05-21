@@ -55,10 +55,10 @@ if copy_input_files:
 prod_rxns = dict()
 prods = set()
 
-sij_add = set()
-added_rxns = set()
+sij_add = []
+added_rxns = []
 added_rxns_dict = dict()
-new_species = set()
+new_species = []
 
 # if run with command line arguments, use them to update variables
 if len(sys.argv) > 1:
@@ -96,8 +96,8 @@ for i in df_rxns.index:
     met_dict = metabolites_dict_from_reaction_equation_RBA(rxn.reaction)
     for k,v in met_dict.items():
         if v != '' and k != '':
-            sij_add.add("'MET-" + k + "'.'" + df_rxns.id[i] + "' " + str(v))
-            new_species.add("'MET-" + k + "'")
+            sij_add.append("'MET-" + k + "'.'" + df_rxns.id[i] + "' " + str(v))
+            new_species.append("'MET-" + k + "'")
 
     ## Example of how you might count 2 related products together
     if p == '3hpp':
@@ -109,7 +109,7 @@ for i in df_rxns.index:
     else:
         prod_rxns[p] = dict()
         prod_rxns[p][df_rxns.id[i]] = rxnid
-    added_rxns.add(df_rxns.id[i])
+    added_rxns.append(df_rxns.id[i])
     added_rxns_dict[df_rxns.id[i]] = rxnid
 prods = list(prods)
 print(prods)
@@ -139,19 +139,21 @@ def process_GAMS_file(f):
     lines = [x.replace('\n','') for x in lines if x.strip() != '/' and x.strip() != '']
     return lines
 sij = process_GAMS_file('./input/GAMS_model_application/RBA_sij.txt')
-# add new lines
-sij += list(sij_add)
-# remove duplicates
-sij = list(set(sij))
+sij_add = list(dict.fromkeys(sij_add))
+# add new lines (no duplicates)
+sij += sij_add
+# remove duplicates while preserving order
+sij = list(dict.fromkeys(sij))
 with open('./input/GAMS_model_application/RBA_sij.txt', 'w') as f:
     f.write('\n'.join(['/'] + sij + ['/']))
 
 # add rxns
+added_rxns = list(dict.fromkeys(added_rxns))
 with open('./input/GAMS_model_application/RBA_rxns_add.txt', 'w') as f:
-    f.write('\n'.join(['/'] + list(added_rxns) + ['/']))
+    f.write('\n'.join(['/'] + added_rxns + ['/']))
 allrxns = process_GAMS_file('./input/GAMS_model_application/RBA_rxns.txt')
 allrxns += ["'" + x + "'" for x in added_rxns]
-allrxns = list(set(allrxns))
+allrxns = list(dict.fromkeys(allrxns))
 with open('./input/GAMS_model_application/RBA_rxns.txt', 'w') as f:
     f.write('\n'.join(['/'] + allrxns + ['/']))
 
@@ -159,14 +161,11 @@ with open('./input/GAMS_model_application/RBA_rxns.txt', 'w') as f:
 species = process_GAMS_file('./input/GAMS_model_application/RBA_species.txt')
 # add 'MET-' to products
 species += [x for x in new_species]
-species = list(set(species))
+species = list(dict.fromkeys(species))
 with open('./input/GAMS_model_application/RBA_species.txt', 'w') as f:
     f.write('\n'.join(['/'] + species + ['/']))
 
 cobra.io.save_json_model(model, newmodel_path)
-
-# %% [markdown]
-#  # Run FBA
 
 if rerun_FBA:
     fba_results = {p:dict() for p in prods}
@@ -618,7 +617,7 @@ if rerun_FBA:
                     f.write("$setGlobal vprod '" + fba_settings['vprod'] + "'\n")
                     f.write("parameter minProductYield /"+str(prod_info[p_for_mw]['yieldExp_LB_(g/g_substrate)'] if pd.notnull(prod_info[p_for_mw]['yieldExp_LB_(g/g_substrate)']) else 0)+"/;\n")
                     f.write("$setGlobal prod_mw "+str(prod_info[p_for_mw]['MW (g/mol)'])+"\n")
-                    for rxn in m.reactions:
+                    for rxn in sorted(m.reactions, key=lambda x: x.id):
                         add_to_RBA_bounds = False
                         if rxn.id in added_rxns_dict.values():
                             add_to_RBA_bounds = True
@@ -638,10 +637,10 @@ if rerun_FBA:
                         elif rxn.id == biomassRxn.id:
                             add_to_RBA_bounds = True
                             rba_names = {'fwd':RBA_biomass_rxn,'rev':RBA_biomass_rxn}
-                            f.write("$setGlobal mu " + str(fba[biomassRxn.id]) + "\n")
-                            f.write("$setGlobal biom_id '" + RBA_biomass_rxn + "'\n")
-                            f.write("v.fx('%biom_id%') = %mu% * %nscale%;\n")
-                            fba_settings['biom_id'] = RBA_biomass_rxn
+                            f.write("mu=" + str(fba[biomassRxn.id]) + ";\n")
+                            f.write("$setGlobal bio '" + RBA_biomass_rxn + "'\n")
+                            f.write("v.fx('%bio%') = mu * %nscale%;\n")
+                            fba_settings['bio'] = RBA_biomass_rxn
                             continue
                         # include bounds in file
                         if add_to_RBA_bounds:
@@ -649,9 +648,30 @@ if rerun_FBA:
                             if rxn.id in uptake_bounds_initial:
                                 file_LB_dict[f2] = uptake_bounds_initial[rxn.id]
                             for file,v_LB in file_LB_dict.items():
-                                if rxn.lower_bound == rxn.upper_bound:
-                                    file.write("v.fx('" + rba_names['fwd'] + "') = " + str(v_LB) + " * %nscale%;\n")
+                                
+                                if rxn.id.startswith('RXNADD-') or rxn.id in added_rxns_dict.values():
+                                    if v_LB == rxn.upper_bound:
+                                        file.write("v.fx('" + rba_names['fwd'] + "') = " + str(v_LB) + " * %nscale%;\n")
+                                    else:
+                                        if v_LB != 0: # by default, all rxns have lower bounds of 0
+                                            file.write(f"v.lo('{rba_names['fwd']}') = {v_LB} * %nscale%;\n")
+                                        file.write(f"v.up('{rba_names['fwd']}') = {rxn.upper_bound} * %nscale%;\n")
                                 else:
+                                    if v_LB == rxn.upper_bound:
+                                        file.write(f'v_sm.fx("{rxn.id}") = {v_LB} * %nscale%;\n')
+                                    else:
+                                        file.write(f'v_sm.lo("{rxn.id}") = {v_LB} * %nscale%;\n')
+                                        file.write(f'v_sm.up("{rxn.id}") = {rxn.upper_bound} * %nscale%;\n')
+                                    # set reverse of intended direction to 0, to prevent futile flux in that direction creating the illusion of a higher yield
+                                    if rxn.id == objrxns:
+                                        if fba[objrxns] > 0:
+                                            # block reverse flux
+                                            file.write(f'v.up("{rba_names["rev"]}") = 0;\n')
+                                        elif fba[objrxns] < 0:
+                                            # block forward flux
+                                            file.write(f'v.lo("{rba_names["fwd"]}") = 0;\n')
+                                
+                                if rxn.lower_bound != rxn.upper_bound:
                                     if rxn.lower_bound < 0:
                                         vUptakeRBA = str(-v_LB) # default uptake flux; add carbon slack variable if it's a C source, to use only when RBA is infeasible
                                         for c in c_sources:
@@ -659,21 +679,8 @@ if rerun_FBA:
                                                 vUptakeRBA = "(" + str(-v_LB) + " + %carbonSlack%)"
                                                 yieldfile_set.add("'"+rba_names['rev']+"' "+str(c['MW'])) # create set of compounds to use for yield calculations
                                                 expanded_yieldfile_set.add("'"+rba_names['rev']+"' "+str(c['MW']))
-                                        if rba_names['rev'] != rba_names['fwd']:
-                                            file.write("v.up('" + rba_names['rev'] + "') = " + vUptakeRBA + " * %nscale%;\n")
-                                            if rxn.upper_bound < 0:
-                                                file.write("v.lo('" + rba_names['rev'] + "') = " + str(-rxn.upper_bound) + " * %nscale%;\n")
-                                            else:
-                                                file.write("v.lo('" + rba_names['rev'] + "') = 0;\n")
-                                            # if rxn is reversible, set bounds for fwd too
-                                            if rxn.upper_bound > 0:
-                                                file.write("v.up('" + rba_names['fwd'] + "') = " + str(rxn.upper_bound) + " * %nscale%;\n")
-                                                file.write("v.lo('" + rba_names['fwd'] + "') = 0;\n")
-                                    else:
-                                        file.write("v.up('" + rba_names['fwd'] + "') = " + str(rxn.upper_bound) + " * %nscale%;\n")
-                                        file.write("v.lo('" + rba_names['fwd'] + "') = " + str(v_LB) + " * %nscale%;\n")
-                    yieldfile.write('\n'.join(['/'] + list(yieldfile_set) + ['/']))
-                    expanded_yieldfile.write('\n'.join(['/'] + list(expanded_yieldfile_set) + ['/']))
+                    yieldfile.write('\n'.join(['/'] + sorted(list(yieldfile_set)) + ['/']))
+                    expanded_yieldfile.write('\n'.join(['/'] + sorted(list(expanded_yieldfile_set)) + ['/']))
             # store fluxes in CSV file
             with open(outputFolder + p + '/fba_fluxes.csv', 'w') as f:
                 # add header

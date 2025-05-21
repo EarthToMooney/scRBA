@@ -30,22 +30,21 @@ v_sm.fx('FADH2t_c_m') = 0;
 v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0;
 v_sm.lo('EX_glc__D_e') = -%vglc%;
 
-v.up('RXN-EX_o2_e_REV-SPONT') = (5.58 + 0.18);
+v_sm.lo('RXN-EX_o2_e_REV-SPONT') = -(5.58 + 0.18);
 v.fx('RXN-EX_o2_e_FWD-SPONT') = 0;
 
 v.fx('RXN-EX_co2_e_REV-SPONT') = 0;
 
 * Secretions (exp. measured)
 ** ethanol
-v.lo('RXN-EX_etoh_e_FWD-SPONT') = (44.30 - 4.84);
+v_sm.lo('EX_etoh_e') = (44.30 - 4.84);
 v.fx('RXN-EX_etoh_e_REV-SPONT') = 0;
 ** acetate
-v.up('RXN-EX_ac_e_FWD-SPONT') = 0.01;
+v_sm.up('EX_ac_e') = 0.01;
 ** succinate
-v.lo('RXN-EX_succ_e_FWD-SPONT') = 0;
-v.up('RXN-EX_succ_e_FWD-SPONT') = 0.01;
+v_sm.up('EX_succ_e') = 0.01;
 ** glycerol
-v.lo('RXN-EX_glyc_e_FWD-SPONT') = (2.14 - 0.34);
+v_sm.lo('EX_glyc_e') = (2.14 - 0.34);
 
 * Ribosome efficiency
 * old versions
