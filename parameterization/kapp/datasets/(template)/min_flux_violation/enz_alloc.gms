@@ -16,6 +16,16 @@ $include "./min_flux_violation.rxns_nonessential_with_no_prodata.txt"
 Parameters
 kapp(j)
 $include "./kapp_init.txt"
+prosynSlackSum_opt "optimal value of prosynSlackSum"
+w_prowaste_opt
+kappEstSlackSum_opt
+fluxSlack_opt
+fluxSum_j_NP_opt
+fluxSum_opt
+;
+
+Variables
+fluxSum_j_NP_nonEss
 ;
 
 ** Disable enzyme load network for reactions that can't be used
@@ -39,30 +49,37 @@ kapp_calc.optfile = 1;
 Solve kapp_calc using lp minimizing prosynSlackSum;
 put log; put 'minimized prosynSlackSum'/; putclose;
 if (kapp_calc.modelStat ne 1, abort.noError "no optimal solution found";);
-prosynSlackSum.up = prosynSlackSum.l + %epsilon%;
+prosynSlackSum_opt = prosynSlackSum.l;
+prosynSlackSum.up = prosynSlackSum_opt;
 
 Solve kapp_calc using lp minimizing w_prowaste;
 put log; put 'minimized prowaste mass'/; putclose;
 if (kapp_calc.modelStat ne 1, abort.noError "no optimal solution found";);
-w_prowaste.up = w_prowaste.l + %epsilon%;
+w_prowaste_opt = w_prowaste.l;
+w_prowaste.up = w_prowaste_opt;
 
 Solve kapp_calc using lp minimizing kappEstSlackSum;
 put log; put 'minimized kappEstSlackSum'/; putclose;
 if (kapp_calc.modelStat ne 1, abort.noError "no optimal solution found";);
-kappEstSlackSum.up = kappEstSlackSum.l + %epsilon%;
+kappEstSlackSum_opt = kappEstSlackSum.l;
+kappEstSlackSum.up = kappEstSlackSum_opt;
 
-Solve kapp_calc using lp minimizing fluxSlack;
+Model kapp_calc2 /all-EnzCap-minPro-ProwasteLim/;
+kapp_calc2.optfile = 1;
+Solve kapp_calc2 using lp minimizing fluxSlack;
 put log; put 'minimized fluxSlack'/; putclose;
-if (kapp_calc.modelStat ne 1, abort.noError "no optimal solution found";);
-fluxSlack.up = fluxSlack.l + %epsilon%;
+if (kapp_calc2.modelStat ne 1, abort.noError "no optimal solution found";);
+fluxSlack_opt = fluxSlack.l;
+fluxSlack.up = fluxSlack_opt*(1+%tol%+.09);
 
-Solve kapp_calc using lp minimizing fluxSum_j_NP;
+Solve kapp_calc2 using lp minimizing fluxSum_j_NP;
 put log; put 'minimized fluxSum_j_NP'/; putclose;
-if (kapp_calc.modelStat ne 1, abort.noError "no optimal solution found";);
+if (kapp_calc2.modelStat ne 1, abort.noError "no optimal solution found";);
+fluxSum_j_NP_opt = fluxSum_j_NP.l;
 * force rxns that were turned off to stay off
-v.fx(j)$(rxns_with_no_prodata(j) and (v.l(j) eq 0)) = 0;
+*v.fx(j)$(rxns_with_no_prodata(j) and (v.l(j) eq 0)) = 0;
 
-fluxSum_j_NP.up = fluxSum_j_NP.l + %epsilon%;
+fluxSum_j_NP.up = fluxSum_j_NP_opt*(1+%tol%);
 
 *loop(enzload_rxn_coupling(j1,j),
 *	if (v.l(j) eq 0, 
@@ -70,19 +87,19 @@ fluxSum_j_NP.up = fluxSum_j_NP.l + %epsilon%;
 *		);
 *);
 
-Solve kapp_calc using lp minimizing fluxSum;
+Solve kapp_calc2 using lp minimizing fluxSum;
 put log; put 'minimized fluxSum'/; putclose;
-if (kapp_calc.modelStat ne 1, abort.noError "no optimal solution found";);
+if (kapp_calc2.modelStat ne 1, abort.noError "no optimal solution found";);
 * force total flux to previous value
 fluxSum.up = fluxSum.l*(1+%tol%);
 
 * Solve again, encouraging more equal use of all enzymes
 * NOTE: disabled this step since it can lead to arbitrary reductions in ENZLOAD fluxes, even when other ones aren't being used. This can increase kapps by reducing the denominator; how to fix this is unclear.
-*Solve kapp_calc using lp minimizing slackSum;
+*Solve kapp_calc2 using lp minimizing slackSum;
 *put log; put 'minimized uneven enzload distribution'/; putclose;
 
 ff.nr = 2; put ff;
-put kapp_calc.modelStat/;
+put kapp_calc2.modelStat/;
 putclose;
 
 file ff2 /%system.FN%.objectives.txt/;
@@ -231,3 +248,4 @@ loop(j$prosyn(j),
 );
 put '/'/;
 putclose;
+
