@@ -3,18 +3,9 @@
 *****************************************************************
 
 $INLINECOM /*  */
+$include ../paths.txt
 $include "./enz_from_proteome_GAMS_settings.txt"
 $setGlobal nscale 1e6
-
-options
-	LP = cplex /*Solver selection*/
-	limrow = 0 /*number of equations listed, 0 is suppresed*/
-	limcol = 0 /*number of variables listed, 0 is suppresed*/
-	iterlim = 1000000 /*iteration limit of solver, for LP it is number of simplex pivots*/
-	decimals = 8 /*decimal places for display statement*/
-	reslim = 1000000 /*wall-clock time limit for solver in seconds*/
-	sysout = on /*solver status file report option*/
-	solprint = on /*solution printing option*/
 
 * remove existing modelStat file to avoid issues w/ model status detection       
 file ff /%system.FN%.modelStat.txt/; putclose ff '';

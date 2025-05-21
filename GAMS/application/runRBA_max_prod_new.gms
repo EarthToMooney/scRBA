@@ -1,8 +1,6 @@
 * run RBA without bisection, using default settings and outputs
 $setGlobal gms %system.FN%
 
-$setGlobal settings_path "./runRBA_GAMS_settings.txt"
-
 $include %model_root_path%GAMS/defaults.gms
 
 * if initial solve is infeasible, try adjustments (e.g., changing growth rate)
@@ -24,7 +22,7 @@ mw(j)
 $include "yield_denominators.txt"
 mw_other_possible_substrates(j)
 $include "yield_denominators_expanded.txt"
-mu_current
+mu
 ;
 
 variables
@@ -197,7 +195,7 @@ put '%vprod%','rba',(v.l('%biom_id%') / %nscale%):0:15,(%prod_mw% * v.l('%vprod%
 v.up(j)$prowaste(j) = 1e3 * %nscale%;
 
 loop(n,
-	mu_current = mu * n.val/100;
+	mu_current = %mu% * n.val/100;
 	v.fx('%biom_id%') = mu_current * %nscale%;
 	solve fba using lp minimizing z;
 	yield_denominator = sum(j$mw(j),v.l(j)*mw(j));
