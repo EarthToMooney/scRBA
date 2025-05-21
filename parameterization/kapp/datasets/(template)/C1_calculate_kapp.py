@@ -5,7 +5,7 @@ min_flux_cutoff = 0
 tol = 0 
 
 # Load enzyme info
-df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xlsx')
+df_enz = read_spreadsheet('../../../../build_model/model/ENZYME_stoich_curation.tsv')
 
 # Load path of set4 (enzyme-reaction many-to-many mapping)
 set4_path = './kapp_ambiguousLoad_case_resolve_common.txt'
@@ -61,20 +61,12 @@ for i in rxns_used:
 ## pro_measured_unused_default_path = '../../../../prosyn_constraints_measured_but_unused_default.txt'
 ## if os.path.exists(pro_measured_unused_default_path):
 
-pro_measured_unused_path = '../../../../prosyn_constraints_measured_but_unused_'+dir_name+'.txt'
-pro_predicted_unused_path = '../../../../prosyn_constraints_predicted_but_unused_'+dir_name+'.txt'
+pro_measured_unused_path = 'prowaste_from_pro_with_data.txt'
+pro_predicted_unused_path = 'prowaste_from_pro_without_data.txt'
 c = 0
 
-df_data = pd.read_excel(path_data)
-df_data.index = df_data['id'].to_list()
-df_data = df_data[df_data['conc (g/gDW)'] > 0]
-# Excluding ribosome protein subunit (conflicting if fit to both enzymatic and ribosomal protein data)
-if not use_ribo_data:
-    df_data = df_data[(df_data.type == 'truedata_enz') | (df_data.type == 'gapfill_subunit')]
-
-with open(pro_measured_unused_path,'w') as f, open(pro_predicted_unused_path,'w') as f2:
-    for file in [f,f2]:
-        file.write('$setGlobal pro_mbu_multiplier 1\n')
+with open(pro_measured_unused_path,'w') as f, open(pro_predicted_unused_path,'w') as f2, open('prot_mass_flux.txt','w') as f3:
+    f3.write('/'+str(v_prot_to_bio)+'/')
     # for each protein in PROWASTE-used, allow flux through PROWASTE-PROT to be as high as infinity (to avoid scaling issues)
     # Also, make the proteome mass fraction comprised of each protein at least equal to the mass fraction comprised of unused copies of it 
     ## (i.e., PROSYN * MW >= ptot * PROWASTE_0 * MW / ptot_0)
@@ -83,11 +75,12 @@ with open(pro_measured_unused_path,'w') as f, open(pro_predicted_unused_path,'w'
         prot_id = prot.replace('PROWASTE-','')
         prosyn_id = 'PROSYN-'+prot_id
         if prosyn_id in prosyn_used.keys():
-            constraint = "v.up('"+prosyn_id+"') = inf; v.up('"+prot+"') = inf;\nEquation minProt"+str(c)+"; minProt"+str(c)+".. v('"+prosyn_id+"') =g= %pro_mbu_multiplier% * (v('BIOSYN-PROTTOBIO') * "+str(prowaste_used[prot])+" / "+str(v_prot_to_bio)+");\n"
+            constraint = "'"+prosyn_id+"' "+str(prowaste_used[prot])+"\n"
             # if protein is in the proteome data (path_data), add to f2
-            if prot_id in df_data.index:
+            if prot_id in df_data_full.index:
                 f.write(constraint)
-            f2.write(constraint)
+            else:
+                f2.write(constraint)
             c += 1
 # write to new file
 kapp_input_enzsyn_path = './kapp_input_enzsyn.txt'
@@ -104,7 +97,7 @@ res_esyn = RBA_result(biom_id=biom_id, twocol_format=True)
 res_esyn.load_raw_flux(kapp_input_enzsyn_path)
 with open(metab_rxns_path,"r") as f: 
     all_rxns = [line.strip().replace("'","") for line in f.readlines() if line.strip() != "/"]
-with open("../../../../GAMS/model/GSM_rxn_ids.txt","r") as f: 
+with open(path_model+"SM_rxn_ids.txt","r") as f:  
     all_GSM_rxns = [line.strip().replace("'","") for line in f.readlines() if line.strip() != "/"]
 
 mu = res_metab.growth_rate
@@ -363,8 +356,12 @@ for enztext,x in mapper.items():
         kapp[rid] = (mu * rxnval / enzval) / 3600
         kapps_rba[rid] = kapp[rid] * 3600 + tol
 #Flux is numerically low, near zero
-with open('../exclude_parameterization_list.txt') as f:
-    excl = f.read().split('\n')
+path='../exclude_parameterization_list.txt'
+if os.path.exists(path):
+    with open(path) as f:
+        excl = f.read().split('\n')
+else:
+    excl = []
 # # TEST: add all rxns with fluxes below min_flux_cutoff to excl
 # for k,v in res_metab.metabolic_flux.items():
 #    if abs(v) < min_flux_cutoff:

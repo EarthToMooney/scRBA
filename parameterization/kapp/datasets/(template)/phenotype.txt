@@ -9,8 +9,8 @@ $include %gms_path%model-version-settings.txt
 
 * growth rate and biomass rxn name
 $setGlobal mu 0.0563
-$setGlobal biom 'BIOSYN-BIOXYL-PINHEIRO'
-v.fx('%biom%') = %mu% * %nscale%;
+$setGlobal bio 'BIOSYN-BIOXYL-PINHEIRO'
+v.fx('%bio%') = %mu% * %nscale%;
 
 * PROWASTE allowed for TOTALPROTEIN, PROTCYT to ensure other PROWASTE settings work as intended
 v.up('PROWASTE-TOTALPROTEIN') = inf;

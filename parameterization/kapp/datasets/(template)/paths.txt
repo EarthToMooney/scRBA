@@ -1,0 +1,2 @@
+$setGlobal model_root_path ../../../../../
+$include %model_root_path%GAMS/default_solver.gms

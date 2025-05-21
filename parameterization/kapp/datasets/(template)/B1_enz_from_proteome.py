@@ -1,3 +1,4 @@
+# runs kribo minimization (if user chooses to), then finds max ENZSYN fluxes for all enzymes
 # update model-specific settings in kapp_options.py
 from kapp_options import *
 
@@ -12,20 +13,12 @@ if os.path.isdir(path_out) == False:
     os.makedirs(path_out)
 shutil.copy(run_setting_file_from, run_setting_file_to);
 
-#### Load data
-df_data = pd.read_excel(path_data)
-df_data.index = df_data['id'].to_list()
-df_data = df_data[df_data['conc (g/gDW)'] > 0]
-# Excluding ribosome protein subunit (conflicting if fit to both enzymatic and ribosomal protein data)
-if not use_ribo_data:
-    df_data = df_data[(df_data.type == 'truedata_enz') | (df_data.type == 'gapfill_subunit')]
-
 #### Process data
 with open(os.path.join(path_gams, 'pro_and_enz.txt')) as f:
     pro_list = f.read().split('\n')
 pro_list = pro_list[1:-1]
 pro_list = [i[1:-1] for i in pro_list]
-pro_list = [i for i in pro_list if i.split('-')[0] == 'PRO']
+pro_list = [i for i in pro_list if i.split('-')[0] == 'PTMPRO']
 
 data = []; pro_data = []; pro_nodata = []
 for met in pro_list:
@@ -53,6 +46,8 @@ shutil.copy(os.path.join(path_gams, 'enz_from_proteome.gms'),
             os.path.join(path_out, 'enz_from_proteome.gms'));
 shutil.copy(os.path.join(path_gams, 'soplex.opt'),
             os.path.join(path_out, 'soplex.opt'));
+
+# if find_kribo:
 
 cmds = ['cd ' + path_out,
         'module load gams',

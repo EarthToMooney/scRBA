@@ -4,14 +4,18 @@ import numpy as np
 import requests,json,os,shutil,sys
 
 model_root_path = '../../../../'
+path_model = model_root_path+'GAMS/model/'
 pycore_path = model_root_path+'pycore/'
-sys.path.append(pycore_path)
+for path in [model_root_path, pycore_path]:
+    if path not in sys.path:
+        sys.path.append(path)
 # retrieve name of the directory containing the options file
 dir_name = os.path.basename(os.path.dirname(os.path.abspath(__file__)))
 
-from utils import metabolites_dict_from_reaction_equation_RBA, extract_details_from_rxnid
-from simulate import * 
-from gsm_custom_functions import *
+from pycore.utils import metabolites_dict_from_reaction_equation_RBA, extract_details_from_rxnid
+from pycore.simulate import * 
+from pycore.gsm_custom_functions import *
+
 vmax = 1e3 # max flux in either direction, before applying nscale
 nscale=1e5 # will be used as scale when running GAMS
 nscale2=1e5 # 2nd scale, if different one needed; otherwise, set to same as nscale
@@ -20,14 +24,12 @@ nscale2=1e5 # 2nd scale, if different one needed; otherwise, set to same as nsca
 path_gen = model_root_path+'build_model/'
 path_gams = model_root_path+'GAMS/'
 
-prot_path = path_gen + 'input/PROTEIN_stoich_curation.xlsx'
+prot_path = path_gen + 'model/PROTEIN_stoich_curation.tsv'
 unknown_prot_path = path_gen + 'input/PROTEIN_stoich_curation_unknown.xlsx'
-model_xlsx_path = path_gams + 'model/RBA_stoichiometry.xlsx'
-ribonuc_path = path_gen + 'input/RIBOSOME_nucleus.xlsx'
-ribomito_path = path_gen + 'input/RIBOSOME_mitochondria.xlsx'
-metab_rxns_path = path_gams + 'model/RBA_rxns_rxnmetabolicnetwork.txt'
-gsm_rxn_ids_path = path_gams + 'model/GSM_rxn_ids.txt'
-sij_path = path_gams + 'model/RBA_sij.txt'
+model_xlsx_path = path_model + 'RBA_stoichiometry.tsv'
+metab_rxns_path = path_model + 'RBA_rxns_rxnmetabolicnetwork.txt'
+gsm_rxn_ids_path = path_model + 'SM_rxn_ids.txt'
+sij_path = path_model + 'RBA_sij.txt'
 aa_mapping_path = path_gen + 'input/PROTEIN_amino_acid_map.txt'
 aa_map = pd.read_csv(aa_mapping_path, sep='\t')
 aa_dict = dict(zip(aa_map['aa_abbv'], aa_map['MW']))
@@ -37,7 +39,8 @@ flux_path = ''
 col_LB = 'mfaLB'
 col_UB = 'mfaUB'
 
-# must match the growth rate in other files
+# must match the growth rate in other files 
+# 	may help to add or subtract measurement error in the value itself, for future reference (e.g., mu = 0.060 - 0.001, not mu = 0.059)
 mu = 0.060 - 0.001
 # protein fraction (disable by uncommenting "ptot = 1" unless composition varies w/ growth rate)
 ptot = 0.201
@@ -50,7 +53,8 @@ df_raw.index = df_raw['IDs in model, or uniprot IDs if not found'].to_list() # n
 cols_data = ['REF_P1_g_per_g_prot'] # where protein abundance data is stored
 uniprot_col = 'all uniprot matches' # set to '' if no column with accession names provided
 data_uses_biomass_mass_fraction = False # True if using units like g protein/gDW, False if using g/g protein
-use_ribo_data = False # False to ignore ribosome subunit abundance data
+use_ribo_data = False # False to ignore ribosome subunit abundance data # False to ignore ribosome subunit abundance data (still used for MPFS constraints)
+find_kribo = True # if true, runs kribo bisection
 
 # if True, proteins with measured translation rates of 0 can be made at a flux equal to prosynSlackUB, thus discouraging their use where possible. If you want such proteins to be made, you thus may have to specify them in the phenotype.txt file as having fixed values for prosynSlackUB. 
 # if False, proteins with measured translation rates of 0 can't be made. This may cause issues if no isozymes exist for such proteins but their rxns are essential, and such proteins may still be present but unmeasured due to measurement errors.
@@ -60,7 +64,16 @@ nonmodeled_proteome_allocation = 0
 # nonmodeled_proteome_allocation = 0.503973558
 dummy_protein = {'id':'PROSYN-PROTDUMMY','AA abundances':dict()}
 
-path_data = './PinheiroEtAl2020_batchXyl.xlsx'
+path_data = './protein_data.tsv'
+if os.path.exists(path_data):
+    df_data = read_spreadsheet(path_data)
+    df_data.index = df_data['id'].to_list()
+    df_data = df_data[df_data['conc (g/gDW)'] > 0]
+    # Excluding ribosome protein subunit (conflicting if fit to both enzymatic and ribosomal protein data)
+    # make perfect copy of df_data
+    df_data_full = df_data.copy()
+    if not use_ribo_data:
+        df_data = df_data[(df_data.type == 'truedata_enz') | (df_data.type == 'gapfill_subunit')]
 
 biom_id = 'BIOSYN-BIOXYL-PINHEIRO'
 

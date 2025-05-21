@@ -32,12 +32,14 @@ except FileNotFoundError:
 df_flux.index = df_flux['id'].to_list()
 # make GAMS file for flux data
 # write ID, then lower bound (-vmax if none) and upper bound (vmax if none)
-with open('./v_exp_lb.txt', 'w') as f, open('./v_exp_ub.txt', 'w') as f2:
-    f.write('/\n'); f2.write('/\n')
+with open('./v_exp_lb.txt', 'w') as f, open('./v_exp_ub.txt', 'w') as f2, open('./sm_j_lumped.txt', 'w') as f3, open('./sm_j_lumped_mappings.txt', 'w') as f4:
+    f.write('/\n'); f2.write('/\n'); f3.write('/\n'); f4.write('/\n')
     for i in df_flux.index:
         # check if rxn in GSM_rxn_ids.txt
         if "'"+i+"'" not in open(gsm_rxn_ids_path).read():
-            print(i, "not in", gsm_rxn_ids_path)
+            print(f"'{i}' not in {gsm_rxn_ids_path}; adding to sm_j_lumped.txt")
+            f3.write(f"'{i}'\n")
+            f4.write(f"'{i}'.() {col_LB}\n") # if needed in the future, add support for upper bounds too
             continue
         else:
             if pd.isnull(df_flux.loc[i, col_LB]):
@@ -50,13 +52,8 @@ with open('./v_exp_lb.txt', 'w') as f, open('./v_exp_ub.txt', 'w') as f2:
                 ub = df_flux.loc[i, col_UB]
             f.write("'"+i+"'" + ' ' + str(lb) + '\n')
             f2.write("'"+i+"'" + ' ' + str(ub) + '\n')
-    f.write('/'); f2.write('/')
+    f.write('/'); f2.write('/'); f3.write('/\n'); f4.write('/\n')
 
-def read_spreadsheet(path):
-    if path.endswith('.xlsx'):
-        return pd.read_excel(path)
-    else:
-        return pd.read_csv(path)
 # Load protein
 df_prot_raw = read_spreadsheet(prot_path)
 df_prot = df_prot_raw.copy()
@@ -73,9 +70,9 @@ try:
 except: 
     df_select = pd.DataFrame(columns=['gene_src', 'selected_compartmental_copy'])
 
-# Ribosome (nucleus and mitochondrial)
-df_ribonuc = read_spreadsheet(ribonuc_path)
-df_ribomito = read_spreadsheet(ribomito_path)
+# Find all ribosomal proteins
+with open(path_gams + 'model/ribo_subunits.json', 'r') as f:
+    ribo_dict = json.load(f)
 
 #### HANDLE MISSING MEASUREMENTS FOR SUBUNIT COMPONENT OF HETEROMERIC ENZYMES
 # E.g., missing subunit measurements for ATP synthase complex
@@ -247,12 +244,10 @@ for i in df_data.index:
         df_data.loc[i, 'vtrans (mmol/gDW/h)'] = mu * c_avg * ptot / mw
         df_data.loc[i, 'type'] = 'truedata_enz'
         
-        if i in df_ribonuc.id.to_list():
-            df_data.loc[i, 'type'] = 'truedata_ribonuc'
-        elif i in df_ribomito.id.to_list(): # if a protein is part of the mitochondrial ribosome
-            df_data.loc[i, 'type'] = 'truedata_ribomito'
-            protein_categories[i].add('can be in mitochondria')
-            continue
+        if i in ribo_dict.keys():
+            df_data.loc[i, 'type'] = 'truedata_ribo'
+            if 'm' in ribo_dict[i]:
+                protein_categories[i].add('can be in mitochondria')
 
 # Reindex - incorporate info from protein copy selector
 idx = [df_select.selected_compartmental_copy[i] if i in df_select.index        else i for i in df_data.index]
@@ -276,6 +271,7 @@ iter = 0
 sumlimits_proin = []
 sumlimits = []
 sumlimits_pro_set = []
+pro_data = []
 df_data_copy = df_data.copy()
 for i in df_data.index:
     if i in df_select.index:
@@ -319,6 +315,7 @@ for i in df_data.index:
             iter += 1
             allcopies = [i]
         sumlimits_pro_set.append("'" + i + "'")
+        pro_data.append(f"'{i}' {vtrans}")
         if vtrans == 0 and allow_trans_when_measurement_is_0:
             sumlimits_proin.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROIN-" + copy + "')" for copy in allcopies]) + " =l= " + str(vtrans) + "*1e6;")
             sumlimits.append("Equation prosum" + str(iter) + "; prosum" + str(iter) + ".. " + " + ".join(["v('PROSYN-" + copy + "')" for copy in allcopies]) + " =e= prosynSlackUB('" + i + "');")
@@ -340,6 +337,8 @@ with open('./protein_abundance_constraints.txt', 'w') as f:
 with open('./prosyn_abundance_constraints.txt', 'w') as f:
     for limit in sumlimits:
         f.write(limit + '\n')
+with open('./v_exp_pro.txt','w') as f:
+    f.write('\n'.join(['/'] + sorted(pro_data) + ['/']))
 
 # if any row has an "id" value not in the "id" values of df_prot, then print that row
 errors = []
@@ -382,7 +381,7 @@ for i in idx_enzsyn:
                 df_data_copy_filtered.loc[k, 'vtrans (mmol/gDW/h)'] = vmin * met_dict[k]
                 df_data_copy_filtered.loc[k, 'type'] = 'gapfill_subunit'
 
-df_data_copy_filtered.to_excel(path_data, index=None)
+df_data_copy_filtered.to_csv(path_data, index=None, sep='\t')
 
 print(df_data_copy_filtered[df_data_copy_filtered.duplicated(subset='uniprot', keep=False)].sort_values('uniprot'))
 
