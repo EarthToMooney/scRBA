@@ -4,9 +4,13 @@ $setGlobal vglc 5.3317693
 * biomass rxn
 $setGlobal bio 'BIOSYN-BIODILAERO'
 * growth rate
+* mu from atom mapping model (slightly higher than stated value from exp. data): $setGlobal mu 0.3865768
 $setGlobal mu 0.38
 v.fx('%bio%') = %mu%;
 
+* included in model-version-settings:
+* max_allowed_mito_proteome_allo_fraction
+* nonmodeled_proteome_allocation
 $include %gms_path%model-version-settings.txt
 
 * From scRBA: Disable FADH2 transport across mitochondrial membrane. Enable this creates fumarate-succinate shuttle that enables proton gradient generation
@@ -20,5 +24,17 @@ v_sm.lo('EX_glc__D_e') = -%vglc%;
 
 v_sm.lo('EX_o2_e') = -15.9690437;
 v_sm.up('EX_o2_e') = -15.9678423;
+
+* Ban secretions that weren't detected: ethanol, acetate, succinate, glycerol
+v_sm.up('EX_etoh_e') = 0;
+v_sm.up('EX_ac_e') = 0;
+v_sm.up('EX_succ_e') = 0;
+v_sm.up('EX_glyc_e') = 0;
+
+kribo('c') = (6.6+7.6+.02)*3600;
+kribo('m') = (6.6+5.6)*3600;
+
+* (disable since I now try to fill unmeasured proteome during kapp calculations) extra dummy protein for 0.3% of proteome not identified in measurements
+*Equation dummyUnidentified; dummyUnidentified.. v('PROSYN-PROTDUMMYUNIDENTIFIED') =e= 0.003 * v('BIOSYN-PROTTOBIO');
 
 $include %pheno_path%

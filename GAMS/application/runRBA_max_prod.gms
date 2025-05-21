@@ -1,9 +1,7 @@
-* run RBA without bisection, using default settings and outputs
+* run rba without bisection, using default settings and outputs
 $setGlobal gms %system.FN%
 
-$setGlobal settings_path "./runRBA_GAMS_settings.txt"
-
-$include %model_root_path%GAMS/defaults.gms
+$include "./runRBA_GAMS_settings.txt"
 
 * if initial solve is infeasible, try adjustments (e.g., changing growth rate)
 $setGlobal adjust_constraints_if_infeas 0 
@@ -12,8 +10,10 @@ $setGlobal percent_min_exp_yield 0
 * default carbon slack (disabled by default)
 $setGlobal carbonSlack 0
 
+$include %model_root_path%GAMS/defaults.gms
+
 sets
-rxns_add(j) /*list of heterologous rxns added for RBA model application*/
+rxns_add(j) "list of heterologous rxns added for model application"
 $include "%rxns_add_path%"
 min_media(j)
 $include "%gms_path%RBA_rxns_EXREV_minimal.txt"
@@ -36,6 +36,9 @@ mv_sub_sum "sum of (substrate flux * MW) for all substrates"
 * Corresponding rxns for specific product will be turned on in phenotype.txt file
 v.up(j)$rxns_add(j) = 0;
 
+$onMultiR
+$include phenotype.txt
+
 equations
 mvSubSum, minYield, maxProd
 ;
@@ -46,9 +49,9 @@ maxProd..			v_prod =e= -v('%vprod%');
 Model rba
 /all/;
 rba.optfile = 1;
+$offMulti
 
 solve rba using lp minimizing v_prod;
-
 
 * solve again, minimizing mv_sub_sum to find a better yield by discouraging wasteful substrate use 
 * NOTE: (get rid of this if linear fractional programming version is developed)
@@ -91,6 +94,7 @@ slackobj.. slacksum =e= sum(j, slack(j));
 Model rba_slack /all/;
 
 * added in case infeasibilities occur, and FBA predictions should be adjusted to match
+$onMulti
 Model fba /
 Obj, Stoic, mvSubSum, minYield, slackcons, slackobj
 /;
@@ -123,7 +127,7 @@ while((rba.modelstat ne 1 and (%adjust_constraints_if_infeas% ne 0)),
 );
 
 $include %model_root_path%GAMS/default_outputs.gms
-
+$include %model_root_path%GAMS/extra_outputs.gms
 
 * write slacks and uptakes to file
 file ff3 /runRBA.slack.txt/;
@@ -145,17 +149,15 @@ if((%adjust_constraints_if_infeas% eq 0),
 * set all other uptakes to 0
 v.up(j)$uptake(j) = 0;
 v.up(j)$(uptake(j) and min_media(j)) = 1e3 * %nscale%;
-* set arbitrary uptake for glucose
-*v.up('RXN-EX_glc__D_e_REV-SPONT') = 10 * %nscale%;
 
 display 'UPDATE: find smallest uptakes needed for min exp. growth+yields on minimal media';
 Solve rba_slack using lp minimizing slacksum;
 
 v.lo('%vprod%') = 0;
 v.up('%vprod%') = 1e3 * %nscale%;
-* force slacks to not exceed RBA levels
+* force slacks to not exceed rba levels
 slack.up(j) = slack.l(j);
-* force uptakes to not exceed RBA levels
+* force uptakes to not exceed rba levels
 v.up(j)$uptake(j) = v.l(j);
 display 'UPDATE: find FBA fluxes on minimal media using prior uptakes';
 solve fba using lp minimizing z;
@@ -184,35 +186,35 @@ yield_denominator = sum(j$mw(j),v.l(j)*mw(j));
 if(yield_denominator eq 0,
 	yield_denominator = sum(j$mw_other_possible_substrates(j),v.l(j)*mw_other_possible_substrates(j));
 );
-put '%vprod%','fba',(v.l('%biom_id%') / %nscale%):0:15,(%prod_mw% * v.l('%vprod%') / yield_denominator):0:15/;
-* find RBA yield under these conditions
+put '%vprod%','fba',(v.l('%bio%') / %nscale%):0:15,(%prod_mw% * v.l('%vprod%') / yield_denominator):0:15/;
+* find rba yield under these conditions
 solve rba using lp minimizing z;
 yield_denominator = sum(j$mw(j),v.l(j)*mw(j));
 * if original substrates are unused, assume glucose was used
 if(yield_denominator eq 0,
 	yield_denominator = sum(j$mw_other_possible_substrates(j),v.l(j)*mw_other_possible_substrates(j));
 );
-put '%vprod%','rba',(v.l('%biom_id%') / %nscale%):0:15,(%prod_mw% * v.l('%vprod%') / yield_denominator):0:15/;
+put '%vprod%','rba',(v.l('%bio%') / %nscale%):0:15,(%prod_mw% * v.l('%vprod%') / yield_denominator):0:15/;
 * allow PROWASTE rxns since without growth, there's no protein sink
 v.up(j)$prowaste(j) = 1e3 * %nscale%;
 
 loop(n,
 	mu_current = mu * n.val/100;
-	v.fx('%biom_id%') = mu_current * %nscale%;
+	v.fx('%bio%') = mu_current * %nscale%;
 	solve fba using lp minimizing z;
 	yield_denominator = sum(j$mw(j),v.l(j)*mw(j));
 * if original substrates are unused, assume glucose was used
 	if(yield_denominator eq 0,
 		yield_denominator = sum(j$mw_other_possible_substrates(j),v.l(j)*mw_other_possible_substrates(j));
 	);
-	put '%vprod%','fba',(v.l('%biom_id%') / %nscale%):0:15,(%prod_mw% * v.l('%vprod%') / yield_denominator):0:15/;
+	put '%vprod%','fba',(v.l('%bio%') / %nscale%):0:15,(%prod_mw% * v.l('%vprod%') / yield_denominator):0:15/;
 	solve rba using lp minimizing z;
 	yield_denominator = sum(j$mw(j),v.l(j)*mw(j));
 * if original substrates are unused, assume glucose was used
 	if(yield_denominator eq 0,
 		yield_denominator = sum(j$mw_other_possible_substrates(j),v.l(j)*mw_other_possible_substrates(j));
 	);
-	put '%vprod%','rba',(v.l('%biom_id%') / %nscale%):0:15,(%prod_mw% * v.l('%vprod%') / yield_denominator):0:15/;
+	put '%vprod%','rba',(v.l('%bio%') / %nscale%):0:15,(%prod_mw% * v.l('%vprod%') / yield_denominator):0:15/;
 );
 
 putclose yields;
