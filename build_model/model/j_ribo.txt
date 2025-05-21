@@ -1,0 +1,4 @@
+/
+'c'.'RIBOSYN-ribonuc'
+'m'.'RIBOSYN-ribomito'
+/

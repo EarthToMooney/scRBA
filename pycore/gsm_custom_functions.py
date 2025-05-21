@@ -606,8 +606,10 @@ def execute_command(model, model_donor, df_cmds, verbose=False):
 def compile_elements_from_formula(formula):
     import re
     from collections import OrderedDict
-    elems = re.findall('[A-Z][a-z]*', formula)
     elem_dict = OrderedDict()
+    if formula in ['',None]:
+        return elem_dict
+    elems = re.findall('[A-Z][a-z]*', formula)
     for elem in elems:
         # handles positive and negative coefficients (negative for adjust_formula function)
         elemval = re.search('(?<=' + elem + ')[-\d.]*', formula).group()
@@ -678,7 +680,7 @@ def check_mass_balance_cobra(reaction, model):
             
     imbal['charge'] = 0
     for met in rxn.metabolites.keys():
-        imbal['charge']  += coeffs[met.id] * met.charge
+        imbal['charge'] += coeffs[met.id] * met.charge if met.charge else 0
         
     return imbal
 
@@ -1222,7 +1224,7 @@ def report_mass_balance(model, chargeLim=5, verbose=True):
             print(rxnid)
             print(rxn.reaction)
             for met in rxn.metabolites:
-                print_list = [met.id, met.formula, str(met.charge)]
+                print_list = [met.id, str(met.formula), str(met.charge)]
                 if 'kegg.compound' in met.annotation.keys():
                     kegg = met.annotation['kegg.compound']
                 else:
@@ -1232,7 +1234,7 @@ def report_mass_balance(model, chargeLim=5, verbose=True):
                     fc = met.notes['formula_charge_source']
                 else:
                     fc = '      '
-                print('\t'.join(print_list  + [kegg, met.name, fc]))
+                print('\t'.join(print_list + [kegg, met.name, fc]))
             print(imbal_strs[rxnid])
             print()
             

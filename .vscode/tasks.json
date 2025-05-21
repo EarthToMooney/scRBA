@@ -1,0 +1,77 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+		"label": "Commit Changes",
+		"type": "shell",
+		"command": "git commit -a -m 'Automatic commit' && git push",
+		"problemMatcher": [],
+		// "runOptions": { "runOn": "folderOpen" }
+		},
+		{
+            "label": "Get Last Commit Version",
+            "type": "shell",
+            "command": "cd ${fileDirname}; sh -c \"git show HEAD:'./${fileBasename}' > '${fileDirname}/.temp_last_commit_${fileBasename}'\"",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent"
+            },
+            "options": {
+                "cwd": "${fileDirname}"
+            }
+        },
+		{
+			"label": "Test Git Status",
+			"type": "shell",
+			"command": "git status",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Print Working Directory",
+			"type": "shell",
+			"command": "pwd", // For macOS/Linux
+			"windows": {
+				"command": "cd" // For Windows (prints the current directory)
+			},
+			"problemMatcher": []
+		},
+        {
+            "label": "Sort Current File (make .temp)",
+            "type": "shell",
+            "command": "sort",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileDirname}/.temp_sorted_${fileBasename}"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Sort Last Commit Version (make .temp)",
+            "type": "shell",
+            "command": "sort",
+            "args": [
+                "${fileDirname}/.temp_last_commit_${fileBasename}",
+                "-o",
+                "${fileDirname}/.temp_sorted_last_commit_${fileBasename}"
+            ],
+            "dependsOn": [
+                "Get Last Commit Version"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Compare Sorted with Last Commit",
+            "type": "shell",
+            "command": "'${execPath}' --diff '${fileDirname}/.temp_sorted_last_commit_${fileBasename}' '${fileDirname}/.temp_sorted_${fileBasename}'; rm '${fileDirname}/.temp_sorted_last_commit_${fileBasename}' '${fileDirname}/.temp_sorted_${fileBasename}' '${fileDirname}/.temp_last_commit_${fileBasename}'",
+            "dependsOn": [
+                "Sort Current File (make .temp)",
+                "Sort Last Commit Version (make .temp)"
+            ],
+            "problemMatcher": []
+        }
+	]
+}	  
