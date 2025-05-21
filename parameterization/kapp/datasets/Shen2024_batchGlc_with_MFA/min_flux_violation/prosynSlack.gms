@@ -11,7 +11,6 @@ $setGlobal vmin 1e-12
 * slacks turned off by default, 
 * 	but included to account for measurement errors when needed
 $setGlobal venzSlackAllow 0
-$setGlobal fluxSlackAllow 0
 $setGlobal prosynSlackAllow 0
 * small value needed to ensure sequential problems aren't infeasible due to rounding errors
 $setGlobal epsilon 1e-6

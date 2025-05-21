@@ -4,6 +4,7 @@ $setGlobal model_root_path ../../../../../
 $setGlobal gms_path %model_root_path%GAMS/model/
 $setGlobal biomass_path %gms_path%RBA_rxns_whole_biomass.txt
 
+$setGlobal v_exp_pro_path ../v_exp_pro.txt
 $setGlobal proteome_data_path ./proteome_data.txt
 
 $setGlobal pro_and_enz_path %model_root_path%GAMS/parameterization/enz_from_proteome/pro_and_enz.txt
@@ -17,8 +18,8 @@ $setGlobal prowaste_path %gms_path%RBA_rxns_prowaste.txt
 $setGlobal media_path %gms_path%RBA_rxns_EXREV_YNB_RabinowitzVersion.txt
 $setGlobal species_path %gms_path%RBA_species.txt
 $setGlobal rxns_path %gms_path%RBA_rxns.txt
-$setGlobal gsm_rxns_path %gms_path%GSM_rxn_ids.txt
-$setGlobal gsm_rxn_pairs_path %gms_path%GSM_RBA_rxn_pairs.txt
+$setGlobal gsm_rxns_path %gms_path%SM_rxn_ids.txt
+$setGlobal gsm_rxn_pairs_path %gms_path%SM_RBA_rxn_pairs.txt
 $setGlobal prosyn_path %gms_path%RBA_rxns_prosyn.txt
 $setGlobal rxns_enzsyn_path %gms_path%RBA_rxns_enzsyn.txt
 $setGlobal rxns_enzload_path %gms_path%RBA_rxns_enzload.txt

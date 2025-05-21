@@ -101,7 +101,7 @@ Equation prosum100; prosum100.. v('PROIN-YPL203W') =l= 8.669718311936219e-08*1e6
 Equation prosum101; prosum101.. v('PROIN-YKL166C') =l= 1.1327126976954728e-07*1e6;
 Equation prosum102; prosum102.. v('PROIN-YJL164C') =l= 8.420178039611072e-08*1e6;
 Equation prosum103; prosum103.. v('PROIN-YNL232W') =l= 4.317181111505116e-07*1e6;
-Equation prosum104; prosum104.. v('PROIN-YMR031C') =l= 4.181259143724468e-07*1e6;
+Equation prosum104; prosum104.. v('PROIN-YMR031C') =l= 4.1812591437244674e-07*1e6;
 Equation prosum105; prosum105.. v('PROIN-YHR102W') =l= 4.226821532715167e-08*1e6;
 Equation prosum106; prosum106.. v('PROIN-YNL262W') =l= 4.67821202428392e-08*1e6;
 Equation prosum107; prosum107.. v('PROIN-YPL270W') =l= 1.639078167294583e-07*1e6;
@@ -110,7 +110,7 @@ Equation prosum109; prosum109.. v('PROIN-YHL027W') =l= 1.7733437380399616e-08*1e
 Equation prosum110; prosum110.. v('PROIN-YNL242W') =l= 5.484984855032382e-09*1e6;
 Equation prosum111; prosum111.. v('PROIN-YDR348C') =l= 3.486702378753683e-07*1e6;
 Equation prosum112; prosum112.. v('PROIN-YBL104C') =l= 6.59414807719988e-08*1e6;
-Equation prosum113; prosum113.. v('PROIN-YER144C') =l= 1.9492989981876898e-08*1e6;
+Equation prosum113; prosum113.. v('PROIN-YER144C') =l= 1.9492989981876894e-08*1e6;
 Equation prosum114; prosum114.. v('PROIN-YKR019C') =l= 1.0206081408621093e-08*1e6;
 Equation prosum115; prosum115.. v('PROIN-YGR116W') =l= 3.3777859013390825e-07*1e6;
 Equation prosum116; prosum116.. v('PROIN-YKL210W') =l= 1.7555718632200493e-06*1e6;
@@ -173,7 +173,7 @@ Equation prosum172; prosum172.. v('PROIN-YCL014W') =l= 5.03782644356527e-08*1e6;
 Equation prosum173; prosum173.. v('PROIN-YJR066W') =l= 3.9837971834153576e-08*1e6;
 Equation prosum174; prosum174.. v('PROIN-YKL203C') =l= 3.242629447971025e-08*1e6;
 Equation prosum175; prosum175.. v('PROIN-YER017C') =l= 1.154013543957695e-07*1e6;
-Equation prosum176; prosum176.. v('PROIN-YMR089C') =l= 1.70591697786569e-07*1e6;
+Equation prosum176; prosum176.. v('PROIN-YMR089C') =l= 1.7059169778656902e-07*1e6;
 Equation prosum177; prosum177.. v('PROIN-YDR109C') =l= 3.668719237631297e-08*1e6;
 Equation prosum178; prosum178.. v('PROIN-YOR204W') =l= 3.6167740503948473e-06*1e6;
 Equation prosum179; prosum179.. v('PROIN-YNL112W') =l= 2.6108102166813184e-06*1e6;
@@ -198,7 +198,7 @@ Equation prosum197; prosum197.. v('PROIN-YDR119W') =l= 9.397036542231508e-08*1e6
 Equation prosum198; prosum198.. v('PROIN-YPL226W') =l= 1.2121644060976422e-06*1e6;
 Equation prosum199; prosum199.. v('PROIN-YLR248W') =l= 2.3518415105121208e-07*1e6;
 Equation prosum200; prosum200.. v('PROIN-YKL157W') =l= 1.24116403800537e-06*1e6;
-Equation prosum201; prosum201.. v('PROIN-YHR047C') =l= 4.119729363806206e-07*1e6;
+Equation prosum201; prosum201.. v('PROIN-YHR047C') =l= 4.119729363806207e-07*1e6;
 Equation prosum202; prosum202.. v('PROIN-YEL066W') =l= 3.6216974492043385e-07*1e6;
 Equation prosum203; prosum203.. v('PROIN-YDR361C') =l= 5.514921180399674e-07*1e6;
 Equation prosum204; prosum204.. v('PROIN-YOR254C') =l= 7.049284078225864e-07*1e6;
@@ -221,8 +221,8 @@ Equation prosum220; prosum220.. v('PROIN-YFL034W') =l= 8.590393346517967e-09*1e6
 Equation prosum221; prosum221.. v('PROIN-YNL250W') =l= 7.859450130319988e-08*1e6;
 Equation prosum222; prosum222.. v('PROIN-YIR006C') =l= 4.491750204178243e-07*1e6;
 Equation prosum223; prosum223.. v('PROIN-YHR108W') =l= 7.788120421398745e-07*1e6;
-Equation prosum224; prosum224.. v('PROIN-YDR385W') =l= 9.257050055261075e-06*1e6;
-Equation prosum225; prosum225.. v('PROIN-YOR133W') =l= 9.257050055261075e-06*1e6;
+Equation prosum224; prosum224.. v('PROIN-YDR385W') =l= 9.257050055261073e-06*1e6;
+Equation prosum225; prosum225.. v('PROIN-YOR133W') =l= 9.257050055261073e-06*1e6;
 Equation prosum226; prosum226.. v('PROIN-YMR167W') =l= 5.9026896449961004e-08*1e6;
 Equation prosum227; prosum227.. v('PROIN-YPL049C') =l= 2.735519353531957e-07*1e6;
 Equation prosum228; prosum228.. v('PROIN-YNL096C') =l= 1.9997420365269478e-05*1e6;
@@ -272,7 +272,7 @@ Equation prosum271; prosum271.. v('PROIN-YEL022W') =l= 1.3920752499759782e-07*1e
 Equation prosum272; prosum272.. v('PROIN-YJR031C') =l= 5.907674940734908e-08*1e6;
 Equation prosum273; prosum273.. v('PROIN-YHR107C') =l= 6.965262209183615e-07*1e6;
 Equation prosum274; prosum274.. v('PROIN-YKR063C') =l= 4.9914765059007434e-08*1e6;
-Equation prosum275; prosum275.. v('PROIN-YCL054W') =l= 1.7830110837466273e-07*1e6;
+Equation prosum275; prosum275.. v('PROIN-YCL054W') =l= 1.783011083746627e-07*1e6;
 Equation prosum276; prosum276.. v('PROIN-YJL102W') =l= 3.8988574694836594e-08*1e6;
 Equation prosum277; prosum277.. v('PROIN-YCL011C') =l= 5.578037278983218e-07*1e6;
 Equation prosum278; prosum278.. v('PROIN-YJR007W') =l= 2.3271618258806473e-06*1e6;
@@ -337,7 +337,7 @@ Equation prosum336; prosum336.. v('PROIN-YGR271W') =l= 4.493038638242049e-08*1e6
 Equation prosum337; prosum337.. v('PROIN-YBR028C') =l= 6.814804918591461e-08*1e6;
 Equation prosum338; prosum338.. v('PROIN-YBR223C') =l= 1.3924394883325183e-08*1e6;
 Equation prosum339; prosum339.. v('PROIN-YER093C') =l= 6.909990680866127e-09*1e6;
-Equation prosum340; prosum340.. v('PROIN-YOR144C') =l= 1.759086428178119e-08*1e6;
+Equation prosum340; prosum340.. v('PROIN-YOR144C') =l= 1.7590864281781188e-08*1e6;
 Equation prosum341; prosum341.. v('PROIN-YDL074C') =l= 1.8248034441072718e-07*1e6;
 Equation prosum342; prosum342.. v('PROIN-YAL032C') =l= 4.2258962044932e-08*1e6;
 Equation prosum343; prosum343.. v('PROIN-YLL004W') =l= 5.4393061562380146e-08*1e6;
@@ -430,7 +430,7 @@ Equation prosum429; prosum429.. v('PROIN-YOR206W') =l= 4.233237710980791e-07*1e6
 Equation prosum430; prosum430.. v('PROIN-YML085C') =l= 3.07572426958987e-06*1e6;
 Equation prosum431; prosum431.. v('PROIN-YML124C') =l= 3.323756698809345e-07*1e6;
 Equation prosum432; prosum432.. v('PROIN-YDR171W') =l= 3.5218659184236797e-07*1e6;
-Equation prosum433; prosum433.. v('PROIN-YNL068C') =l= 7.81636847005379e-08*1e6;
+Equation prosum433; prosum433.. v('PROIN-YNL068C') =l= 7.816368470053789e-08*1e6;
 Equation prosum434; prosum434.. v('PROIN-YPL215W') =l= 2.965791490102693e-07*1e6;
 Equation prosum435; prosum435.. v('PROIN-YPL208W') =l= 1.7422896393357376e-07*1e6;
 Equation prosum436; prosum436.. v('PROIN-YGR129W') =l= 4.4211048054183864e-08*1e6;
@@ -522,7 +522,7 @@ Equation prosum521; prosum521.. v('PROIN-YGL091C') =l= 2.2276342393751647e-07*1e
 Equation prosum522; prosum522.. v('PROIN-YBR202W') =l= 1.531791899735875e-07*1e6;
 Equation prosum523; prosum523.. v('PROIN-YNL157W') =l= 5.025403443433771e-07*1e6;
 Equation prosum524; prosum524.. v('PROIN-YLR274W') =l= 1.516932324885195e-07*1e6;
-Equation prosum525; prosum525.. v('PROIN-YBL023C') =l= 1.8078258597648194e-07*1e6;
+Equation prosum525; prosum525.. v('PROIN-YBL023C') =l= 1.8078258597648196e-07*1e6;
 Equation prosum526; prosum526.. v('PROIN-YBR025C') =l= 3.738854249519764e-06*1e6;
 Equation prosum527; prosum527.. v('PROIN-YGR090W') =l= 3.6613936949609037e-07*1e6;
 Equation prosum528; prosum528.. v('PROIN-YPL237W') =l= 1.2691507085761382e-06*1e6;
@@ -635,7 +635,7 @@ Equation prosum634; prosum634.. v('PROIN-YOL087C') =l= 5.457134376218475e-08*1e6
 Equation prosum635; prosum635.. v('PROIN-YLR095C') =l= 9.539834501958913e-08*1e6;
 Equation prosum636; prosum636.. v('PROIN-YHR008C') =l= 1.2438345692986558e-06*1e6;
 Equation prosum637; prosum637.. v('PROIN-YLL027W') =l= 7.257305595293365e-08*1e6;
-Equation prosum638; prosum638.. v('PROIN-YDR258C') =l= 4.889215571540848e-07*1e6;
+Equation prosum638; prosum638.. v('PROIN-YDR258C') =l= 4.889215571540847e-07*1e6;
 Equation prosum639; prosum639.. v('PROIN-YHR030C') =l= 3.718357329818523e-07*1e6;
 Equation prosum640; prosum640.. v('PROIN-YLR113W') =l= 1.0821587265278965e-06*1e6;
 Equation prosum641; prosum641.. v('PROIN-YOR238W') =l= 1.6646319143114438e-07*1e6;
@@ -647,7 +647,7 @@ Equation prosum646; prosum646.. v('PROIN-YPL195W') =l= 2.9484323868877856e-07*1e
 Equation prosum647; prosum647.. v('PROIN-YOR124C') =l= 1.36195756580455e-07*1e6;
 Equation prosum648; prosum648.. v('PROIN-YGL027C') =l= 3.7052644965766164e-07*1e6;
 Equation prosum649; prosum649.. v('PROIN-YOR281C') =l= 2.6632280581708194e-07*1e6;
-Equation prosum650; prosum650.. v('PROIN-YLL013C') =l= 1.6264895808115197e-07*1e6;
+Equation prosum650; prosum650.. v('PROIN-YLL013C') =l= 1.62648958081152e-07*1e6;
 Equation prosum651; prosum651.. v('PROIN-YJR070C') =l= 3.411801579865482e-06*1e6;
 Equation prosum652; prosum652.. v('PROIN-YOL108C') =l= 2.0283683342226457e-08*1e6;
 Equation prosum653; prosum653.. v('PROIN-YNL273W') =l= 2.8600354422932125e-08*1e6;
@@ -669,7 +669,7 @@ Equation prosum668; prosum668.. v('PROIN-YGR238C') =l= 2.1362792853008183e-08*1e
 Equation prosum669; prosum669.. v('PROIN-YJL013C') =l= 1.1086049677579855e-08*1e6;
 Equation prosum670; prosum670.. v('PROIN-YLR360W') =l= 8.958556711410492e-09*1e6;
 Equation prosum671; prosum671.. v('PROIN-YDR180W') =l= 2.963004053316607e-08*1e6;
-Equation prosum672; prosum672.. v('PROIN-YBR049C') =l= 2.1145257153798007e-07*1e6;
+Equation prosum672; prosum672.. v('PROIN-YBR049C') =l= 2.1145257153798013e-07*1e6;
 Equation prosum673; prosum673.. v('PROIN-YPL176C') =l= 2.7365697640208364e-08*1e6;
 Equation prosum674; prosum674.. v('PROIN-YHR197W') =l= 3.499992256085493e-07*1e6;
 Equation prosum675; prosum675.. v('PROIN-YNR020C') =l= 3.128772216443185e-08*1e6;
@@ -741,7 +741,7 @@ Equation prosum740; prosum740.. v('PROIN-YMR091C') =l= 6.021270411160449e-07*1e6
 Equation prosum741; prosum741.. v('PROIN-YMR322C') =l= 1.0113706418439111e-07*1e6;
 Equation prosum742; prosum742.. v('PROIN-YOR391C') =l= 5.670379711308658e-09*1e6;
 Equation prosum743; prosum743.. v('PROIN-YCR032W') =l= 9.643305793125494e-10*1e6;
-Equation prosum744; prosum744.. v('PROIN-YBR276C') =l= 1.9436788626957587e-08*1e6;
+Equation prosum744; prosum744.. v('PROIN-YBR276C') =l= 1.943678862695759e-08*1e6;
 Equation prosum745; prosum745.. v('PROIN-YMR185W') =l= 2.795088724015143e-08*1e6;
 Equation prosum746; prosum746.. v('PROIN-YGR140W') =l= 4.817200929473407e-08*1e6;
 Equation prosum747; prosum747.. v('PROIN-YEL060C') =l= 6.257791760822099e-07*1e6;
@@ -804,7 +804,7 @@ Equation prosum803; prosum803.. v('PROIN-YHR171W') =l= 3.0107118652167814e-08*1e
 Equation prosum804; prosum804.. v('PROIN-YNL193W') =l= 1.1699012195476934e-07*1e6;
 Equation prosum805; prosum805.. v('PROIN-YPL109C') =l= 2.7409030274539902e-08*1e6;
 Equation prosum806; prosum806.. v('PROIN-YNL121C') =l= 1.5127176102152172e-06*1e6;
-Equation prosum807; prosum807.. v('PROIN-YDL060W') =l= 3.2167470635736015e-07*1e6;
+Equation prosum807; prosum807.. v('PROIN-YDL060W') =l= 3.216747063573602e-07*1e6;
 Equation prosum808; prosum808.. v('PROIN-YKL159C') =l= 2.6306472095789304e-08*1e6;
 Equation prosum809; prosum809.. v('PROIN-YBR111W-A') =l= 2.3020575422219162e-07*1e6;
 Equation prosum810; prosum810.. v('PROIN-YLR417W') =l= 7.331702587008658e-08*1e6;
@@ -835,7 +835,7 @@ Equation prosum834; prosum834.. v('PROIN-YGR002C') =l= 7.768711517583777e-08*1e6
 Equation prosum835; prosum835.. v('PROIN-YER048C') =l= 6.058183202312786e-07*1e6;
 Equation prosum836; prosum836.. v('PROIN-YMR288W') =l= 4.928039894630017e-08*1e6;
 Equation prosum837; prosum837.. v('PROIN-YOR057W') =l= 2.061884789922363e-07*1e6;
-Equation prosum838; prosum838.. v('PROIN-YER157W') =l= 9.431146425539592e-08*1e6;
+Equation prosum838; prosum838.. v('PROIN-YER157W') =l= 9.431146425539591e-08*1e6;
 Equation prosum839; prosum839.. v('PROIN-YGL169W') =l= 2.1166406957115698e-07*1e6;
 Equation prosum840; prosum840.. v('PROIN-YOR090C') =l= 1.221941931496712e-07*1e6;
 Equation prosum841; prosum841.. v('PROIN-YNL123W') =l= 2.102691410504227e-07*1e6;
@@ -861,13 +861,13 @@ Equation prosum860; prosum860.. v('PROIN-YHR206W') =l= 1.7350187349881453e-07*1e
 Equation prosum861; prosum861.. v('PROIN-YGL073W') =l= 7.745068757606986e-08*1e6;
 Equation prosum862; prosum862.. v('PROIN-YDL164C') =l= 9.860971665750439e-08*1e6;
 Equation prosum863; prosum863.. v('PROIN-YNL133C') =l= 6.063812805065013e-08*1e6;
-Equation prosum864; prosum864.. v('PROIN-YIL143C') =l= 5.634663681601342e-08*1e6;
+Equation prosum864; prosum864.. v('PROIN-YIL143C') =l= 5.634663681601343e-08*1e6;
 Equation prosum865; prosum865.. v('PROIN-YBR081C') =l= 5.0604631833136466e-08*1e6;
 Equation prosum866; prosum866.. v('PROIN-YLR006C') =l= 1.2467936755505522e-08*1e6;
 Equation prosum867; prosum867.. v('PROIN-YLR127C') =l= 2.4707552948764847e-09*1e6;
 Equation prosum868; prosum868.. v('PROIN-YHR133C') =l= 3.4499352852855137e-07*1e6;
 Equation prosum869; prosum869.. v('PROIN-YJR033C') =l= 4.120927467986575e-08*1e6;
-Equation prosum870; prosum870.. v('PROIN-YDR186C') =l= 3.533980793380039e-08*1e6;
+Equation prosum870; prosum870.. v('PROIN-YDR186C') =l= 3.533980793380038e-08*1e6;
 Equation prosum871; prosum871.. v('PROIN-YBR014C') =l= 3.460343697153383e-07*1e6;
 Equation prosum872; prosum872.. v('PROIN-YJR040W') =l= 4.245115441833268e-08*1e6;
 Equation prosum873; prosum873.. v('PROIN-YGR031W') =l= 1.0250044950539548e-07*1e6;
@@ -888,7 +888,7 @@ Equation prosum887; prosum887.. v('PROIN-YNL063W') =l= 1.6199280723376896e-09*1e
 Equation prosum888; prosum888.. v('PROIN-YOR307C') =l= 3.0516578395750044e-08*1e6;
 Equation prosum889; prosum889.. v('PROIN-YLR071C') =l= 4.074435522122383e-08*1e6;
 Equation prosum890; prosum890.. v('PROIN-YIL109C') =l= 1.0813317995050353e-06*1e6;
-Equation prosum891; prosum891.. v('PROIN-YNL049C') =l= 2.338566640595285e-07*1e6;
+Equation prosum891; prosum891.. v('PROIN-YNL049C') =l= 2.3385666405952847e-07*1e6;
 Equation prosum892; prosum892.. v('PROIN-YLR186W') =l= 1.2844711580787734e-06*1e6;
 Equation prosum893; prosum893.. v('PROIN-YGR126W') =l= 6.079842091738686e-08*1e6;
 Equation prosum894; prosum894.. v('PROIN-YGR091W') =l= 6.602706983465975e-08*1e6;
@@ -912,7 +912,7 @@ Equation prosum911; prosum911.. v('PROIN-YOR275C') =l= 1.3203703565013543e-07*1e
 Equation prosum912; prosum912.. v('PROIN-YKR035W-A') =l= 6.379828299891748e-07*1e6;
 Equation prosum913; prosum913.. v('PROIN-YAL025C') =l= 1.6266504224978425e-07*1e6;
 Equation prosum914; prosum914.. v('PROIN-YLR099C') =l= 6.7966904331361234e-09*1e6;
-Equation prosum915; prosum915.. v('PROIN-YDR251W') =l= 2.2039119109403218e-07*1e6;
+Equation prosum915; prosum915.. v('PROIN-YDR251W') =l= 2.203911910940322e-07*1e6;
 Equation prosum916; prosum916.. v('PROIN-YIL144W') =l= 4.6957138966254766e-08*1e6;
 Equation prosum917; prosum917.. v('PROIN-YML103C') =l= 1.062030654608374e-07*1e6;
 Equation prosum918; prosum918.. v('PROIN-YKR079C') =l= 9.668838359120763e-08*1e6;
@@ -926,7 +926,7 @@ Equation prosum925; prosum925.. v('PROIN-YDR093W') =l= 6.530155866289204e-08*1e6
 Equation prosum926; prosum926.. v('PROIN-YOL038W') =l= 3.157655336744811e-06*1e6;
 Equation prosum927; prosum927.. v('PROIN-YPL228W') =l= 1.7877994606516056e-07*1e6;
 Equation prosum928; prosum928.. v('PROIN-YGL107C') =l= 3.0695494753652526e-07*1e6;
-Equation prosum929; prosum929.. v('PROIN-YDR475C') =l= 4.105122747817841e-08*1e6;
+Equation prosum929; prosum929.. v('PROIN-YDR475C') =l= 4.105122747817842e-08*1e6;
 Equation prosum930; prosum930.. v('PROIN-YNL167C') =l= 7.335411147141991e-08*1e6;
 Equation prosum931; prosum931.. v('PROIN-YAR014C') =l= 9.598139459467645e-08*1e6;
 Equation prosum932; prosum932.. v('PROIN-YDR217C') =l= 1.1932857387366298e-08*1e6;
@@ -997,7 +997,7 @@ Equation prosum996; prosum996.. v('PROIN-YBR059C') =l= 1.5270379167107892e-07*1e
 Equation prosum997; prosum997.. v('PROIN-YNL020C') =l= 4.637218783815133e-08*1e6;
 Equation prosum998; prosum998.. v('PROIN-YNL165W') =l= 4.440099065960675e-08*1e6;
 Equation prosum999; prosum999.. v('PROIN-YJR096W') =l= 5.286715836495222e-07*1e6;
-Equation prosum1000; prosum1000.. v('PROIN-YGL032C') =l= 1.6735497679982552e-07*1e6;
+Equation prosum1000; prosum1000.. v('PROIN-YGL032C') =l= 1.6735497679982547e-07*1e6;
 Equation prosum1001; prosum1001.. v('PROIN-YPL222W') =l= 6.807753464461431e-08*1e6;
 Equation prosum1002; prosum1002.. v('PROIN-YKL151C') =l= 1.8737683940275135e-07*1e6;
 Equation prosum1003; prosum1003.. v('PROIN-YNL221C') =l= 4.707770035549442e-08*1e6;
@@ -1177,7 +1177,7 @@ Equation prosum1176; prosum1176.. v('PROIN-YDR176W') =l= 6.92426160469148e-08*1e
 Equation prosum1177; prosum1177.. v('PROIN-YJL128C') =l= 1.5560502309593373e-07*1e6;
 Equation prosum1178; prosum1178.. v('PROIN-YGR068C') =l= 3.74713385301826e-08*1e6;
 Equation prosum1179; prosum1179.. v('PROIN-YKL002W') =l= 1.7715126591788347e-07*1e6;
-Equation prosum1180; prosum1180.. v('PROIN-YJL029C') =l= 1.0046765413907654e-07*1e6;
+Equation prosum1180; prosum1180.. v('PROIN-YJL029C') =l= 1.0046765413907652e-07*1e6;
 Equation prosum1181; prosum1181.. v('PROIN-YDR054C') =l= 1.0280280854367997e-07*1e6;
 Equation prosum1182; prosum1182.. v('PROIN-YML050W') =l= 5.0949423837700247e-08*1e6;
 Equation prosum1183; prosum1183.. v('PROIN-YIL030C') =l= 1.047719419210193e-07*1e6;
@@ -1291,7 +1291,7 @@ Equation prosum1290; prosum1290.. v('PROIN-YDR383C') =l= 6.939369342294875e-08*1
 Equation prosum1291; prosum1291.. v('PROIN-YGR233C') =l= 1.1451011067823647e-07*1e6;
 Equation prosum1292; prosum1292.. v('PROIN-YNR049C') =l= 1.193666774822027e-07*1e6;
 Equation prosum1293; prosum1293.. v('PROIN-YLR225C') =l= 2.138018203304851e-07*1e6;
-Equation prosum1294; prosum1294.. v('PROIN-YDR207C') =l= 5.825235113827793e-08*1e6;
+Equation prosum1294; prosum1294.. v('PROIN-YDR207C') =l= 5.825235113827792e-08*1e6;
 Equation prosum1295; prosum1295.. v('PROIN-YMR204C') =l= 1.3992630073662388e-08*1e6;
 Equation prosum1296; prosum1296.. v('PROIN-YDR422C') =l= 3.02531716752529e-08*1e6;
 Equation prosum1297; prosum1297.. v('PROIN-YCR008W') =l= 1.80930821889785e-08*1e6;
@@ -1304,7 +1304,7 @@ Equation prosum1303; prosum1303.. v('PROIN-YDR378C') =l= 2.1068272242334736e-06*
 Equation prosum1304; prosum1304.. v('PROIN-YCL005W') =l= 2.4905956233787817e-08*1e6;
 Equation prosum1305; prosum1305.. v('PROIN-YPL115C') =l= 5.493950124854619e-08*1e6;
 Equation prosum1306; prosum1306.. v('PROIN-YCR094W') =l= 1.9403923439505025e-07*1e6;
-Equation prosum1307; prosum1307.. v('PROIN-YPL084W') =l= 2.0588132749808527e-07*1e6;
+Equation prosum1307; prosum1307.. v('PROIN-YPL084W') =l= 2.058813274980853e-07*1e6;
 Equation prosum1308; prosum1308.. v('PROIN-YLR208W') =l= 2.2644277852567587e-06*1e6;
 Equation prosum1309; prosum1309.. v('PROIN-YMR010W') =l= 2.1737174336127794e-08*1e6;
 Equation prosum1310; prosum1310.. v('PROIN-YMR247C') =l= 7.530339458725862e-08*1e6;
@@ -1327,7 +1327,7 @@ Equation prosum1326; prosum1326.. v('PROIN-YGR275W') =l= 4.834847287421997e-07*1
 Equation prosum1327; prosum1327.. v('PROIN-YHR135C') =l= 1.758898517840623e-07*1e6;
 Equation prosum1328; prosum1328.. v('PROIN-YNL154C') =l= 7.002055607709521e-07*1e6;
 Equation prosum1329; prosum1329.. v('PROIN-YJR142W') =l= 1.8487933164993905e-07*1e6;
-Equation prosum1330; prosum1330.. v('PROIN-YPL032C') =l= 4.886279726244502e-07*1e6;
+Equation prosum1330; prosum1330.. v('PROIN-YPL032C') =l= 4.886279726244501e-07*1e6;
 Equation prosum1331; prosum1331.. v('PROIN-YOL012C') =l= 2.495935252836142e-07*1e6;
 Equation prosum1332; prosum1332.. v('PROIN-YOR179C') =l= 1.155460461174533e-07*1e6;
 Equation prosum1333; prosum1333.. v('PROIN-YOR021C') =l= 1.496887779248607e-06*1e6;
@@ -1336,7 +1336,7 @@ Equation prosum1335; prosum1335.. v('PROIN-R0020C') =l= 2.91403743314215e-07*1e6
 Equation prosum1336; prosum1336.. v('PROIN-YKR077W') =l= 2.210040024890265e-08*1e6;
 Equation prosum1337; prosum1337.. v('PROIN-YHL038C') =l= 1.1113941824805504e-07*1e6;
 Equation prosum1338; prosum1338.. v('PROIN-YGL167C') =l= 4.026751330943927e-07*1e6;
-Equation prosum1339; prosum1339.. v('PROIN-YOR233W') =l= 4.710644602568502e-08*1e6;
+Equation prosum1339; prosum1339.. v('PROIN-YOR233W') =l= 4.710644602568501e-08*1e6;
 Equation prosum1340; prosum1340.. v('PROIN-YJL081C') =l= 2.6229071695294087e-07*1e6;
 Equation prosum1341; prosum1341.. v('PROIN-YFL047W') =l= 1.5095393268905422e-07*1e6;
 Equation prosum1342; prosum1342.. v('PROIN-YGL010W') =l= 1.558809050569911e-08*1e6;
@@ -1442,7 +1442,7 @@ Equation prosum1441; prosum1441.. v('PROIN-YKL006C-A') =l= 2.2700662500731644e-0
 Equation prosum1442; prosum1442.. v('PROIN-YDR286C') =l= 3.77470608177838e-08*1e6;
 Equation prosum1443; prosum1443.. v('PROIN-YIL137C') =l= 3.060597685925448e-07*1e6;
 Equation prosum1444; prosum1444.. v('PROIN-YDR407C') =l= 6.373835625072847e-08*1e6;
-Equation prosum1445; prosum1445.. v('PROIN-YGR200C') =l= 3.0676574988122483e-07*1e6;
+Equation prosum1445; prosum1445.. v('PROIN-YGR200C') =l= 3.067657498812248e-07*1e6;
 Equation prosum1446; prosum1446.. v('PROIN-YCR009C') =l= 1.0407618350248018e-06*1e6;
 Equation prosum1447; prosum1447.. v('PROIN-YLR409C') =l= 1.9534462052711546e-07*1e6;
 Equation prosum1448; prosum1448.. v('PROIN-YLR116W') =l= 4.287282071166912e-08*1e6;
@@ -1454,7 +1454,7 @@ Equation prosum1453; prosum1453.. v('PROIN-YFR028C') =l= 1.9134386784745436e-07*
 Equation prosum1454; prosum1454.. v('PROIN-YJL162C') =l= 6.959460220433965e-09*1e6;
 Equation prosum1455; prosum1455.. v('PROIN-YDL207W') =l= 5.764033454564482e-08*1e6;
 Equation prosum1456; prosum1456.. v('PROIN-YMR212C') =l= 8.852752490252613e-08*1e6;
-Equation prosum1457; prosum1457.. v('PROIN-YHR204W') =l= 1.6263500024003046e-08*1e6;
+Equation prosum1457; prosum1457.. v('PROIN-YHR204W') =l= 1.626350002400305e-08*1e6;
 Equation prosum1458; prosum1458.. v('PROIN-YDL153C') =l= 2.303401757351333e-07*1e6;
 Equation prosum1459; prosum1459.. v('PROIN-YDR081C') =l= 7.176000456316683e-08*1e6;
 Equation prosum1460; prosum1460.. v('PROIN-YHR172W') =l= 5.773961412427209e-08*1e6;
@@ -1463,7 +1463,7 @@ Equation prosum1462; prosum1462.. v('PROIN-YML130C') =l= 4.4441476513355065e-07*
 Equation prosum1463; prosum1463.. v('PROIN-YGL231C') =l= 6.995313949656504e-07*1e6;
 Equation prosum1464; prosum1464.. v('PROIN-YML121W') =l= 1.1709231307625888e-07*1e6;
 Equation prosum1465; prosum1465.. v('PROIN-YNR035C') =l= 9.295198280872923e-07*1e6;
-Equation prosum1466; prosum1466.. v('PROIN-YGL178W') =l= 4.409626587667422e-08*1e6;
+Equation prosum1466; prosum1466.. v('PROIN-YGL178W') =l= 4.4096265876674225e-08*1e6;
 Equation prosum1467; prosum1467.. v('PROIN-YIL077C') =l= 1.7408492615911866e-08*1e6;
 Equation prosum1468; prosum1468.. v('PROIN-YGL092W') =l= 3.805253072259875e-07*1e6;
 Equation prosum1469; prosum1469.. v('PROIN-YGR122W') =l= 1.0268512417341881e-07*1e6;
@@ -1485,7 +1485,7 @@ Equation prosum1484; prosum1484.. v('PROIN-YPL024W') =l= 2.5809907350067793e-08*
 Equation prosum1485; prosum1485.. v('PROIN-YDL076C') =l= 1.3821254426404464e-07*1e6;
 Equation prosum1486; prosum1486.. v('PROIN-YKL072W') =l= 2.954668053961905e-10*1e6;
 Equation prosum1487; prosum1487.. v('PROIN-YBR108W') =l= 5.3292500879610886e-08*1e6;
-Equation prosum1488; prosum1488.. v('PROIN-YFL023W') =l= 1.0700923896382215e-07*1e6;
+Equation prosum1488; prosum1488.. v('PROIN-YFL023W') =l= 1.0700923896382216e-07*1e6;
 Equation prosum1489; prosum1489.. v('PROIN-YGL087C') =l= 3.5613407097386776e-07*1e6;
 Equation prosum1490; prosum1490.. v('PROIN-YCR069W') =l= 4.3328934232782543e-08*1e6;
 Equation prosum1491; prosum1491.. v('PROIN-YDR233C') =l= 5.230959591103592e-06*1e6;
@@ -1594,7 +1594,7 @@ Equation prosum1593; prosum1593.. v('PROIN-YPL112C') =l= 2.582368622003156e-07*1
 Equation prosum1594; prosum1594.. v('PROIN-YEL019C') =l= 3.967400149247043e-08*1e6;
 Equation prosum1595; prosum1595.. v('PROIN-YLR314C') =l= 7.908012867943974e-07*1e6;
 Equation prosum1596; prosum1596.. v('PROIN-YPR131C') =l= 1.6736240668053896e-07*1e6;
-Equation prosum1597; prosum1597.. v('PROIN-YPR182W') =l= 4.687732365094401e-08*1e6;
+Equation prosum1597; prosum1597.. v('PROIN-YPR182W') =l= 4.6877323650944016e-08*1e6;
 Equation prosum1598; prosum1598.. v('PROIN-YDR339C') =l= 8.972275020884215e-08*1e6;
 Equation prosum1599; prosum1599.. v('PROIN-YFL044C') =l= 3.6876561804138087e-07*1e6;
 Equation prosum1600; prosum1600.. v('PROIN-YPR056W') =l= 4.169235912454859e-08*1e6;
@@ -1694,7 +1694,7 @@ Equation prosum1693; prosum1693.. v('PROIN-YJL069C') =l= 4.139215947996085e-07*1
 Equation prosum1694; prosum1694.. v('PROIN-YGL117W') =l= 4.050029985237555e-08*1e6;
 Equation prosum1695; prosum1695.. v('PROIN-YLR045C') =l= 7.306278125578748e-08*1e6;
 Equation prosum1696; prosum1696.. v('PROIN-YLR425W') =l= 6.875486689419303e-09*1e6;
-Equation prosum1697; prosum1697.. v('PROIN-YOL006C') =l= 6.487793494298454e-08*1e6;
+Equation prosum1697; prosum1697.. v('PROIN-YOL006C') =l= 6.487793494298455e-08*1e6;
 Equation prosum1698; prosum1698.. v('PROIN-YDR121W') =l= 1.8320810942911055e-07*1e6;
 Equation prosum1699; prosum1699.. v('PROIN-YPR175W') =l= 4.539561669707946e-08*1e6;
 Equation prosum1700; prosum1700.. v('PROIN-YLR399C') =l= 1.252175361406282e-07*1e6;
@@ -1774,7 +1774,7 @@ Equation prosum1773; prosum1773.. v('PROIN-YJL010C') =l= 1.7703062420948467e-07*
 Equation prosum1774; prosum1774.. v('PROIN-YGR266W') =l= 1.9487855401401792e-07*1e6;
 Equation prosum1775; prosum1775.. v('PROIN-YNL131W') =l= 2.1647933636362685e-06*1e6;
 Equation prosum1776; prosum1776.. v('PROIN-YER111C') =l= 5.57122415232776e-08*1e6;
-Equation prosum1777; prosum1777.. v('PROIN-YDL056W') =l= 5.6028571918031094e-08*1e6;
+Equation prosum1777; prosum1777.. v('PROIN-YDL056W') =l= 5.60285719180311e-08*1e6;
 Equation prosum1778; prosum1778.. v('PROIN-YDR266C') =l= 1.7347789344077985e-07*1e6;
 Equation prosum1779; prosum1779.. v('PROIN-YPR180W') =l= 2.2130230488531507e-07*1e6;
 Equation prosum1780; prosum1780.. v('PROIN-YKL092C') =l= 4.342764631870431e-08*1e6;
@@ -1819,7 +1819,7 @@ Equation prosum1818; prosum1818.. v('PROIN-YDR265W') =l= 2.0641292897806464e-08*
 Equation prosum1819; prosum1819.. v('PROIN-YDR356W') =l= 5.6117656068186976e-08*1e6;
 Equation prosum1820; prosum1820.. v('PROIN-YMR295C') =l= 1.5371055843725903e-07*1e6;
 Equation prosum1821; prosum1821.. v('PROIN-YBL014C') =l= 2.526114316010813e-09*1e6;
-Equation prosum1822; prosum1822.. v('PROIN-YNL041C') =l= 1.2942312777242903e-07*1e6;
+Equation prosum1822; prosum1822.. v('PROIN-YNL041C') =l= 1.29423127772429e-07*1e6;
 Equation prosum1823; prosum1823.. v('PROIN-YCL061C') =l= 2.5732824269182405e-08*1e6;
 Equation prosum1824; prosum1824.. v('PROIN-YJL112W') =l= 1.3509147931215556e-07*1e6;
 Equation prosum1825; prosum1825.. v('PROIN-YKL074C') =l= 7.354096369652986e-08*1e6;
@@ -1840,13 +1840,13 @@ Equation prosum1839; prosum1839.. v('PROIN-YDL203C') =l= 4.973387746345099e-08*1
 Equation prosum1840; prosum1840.. v('PROIN-YFR038W') =l= 1.8075392357603447e-08*1e6;
 Equation prosum1841; prosum1841.. v('PROIN-YGL124C') =l= 5.3538796843807256e-08*1e6;
 Equation prosum1842; prosum1842.. v('PROIN-YKL124W') =l= 1.622260806711605e-08*1e6;
-Equation prosum1843; prosum1843.. v('PROIN-YGL229C') =l= 5.860731448807037e-10*1e6;
+Equation prosum1843; prosum1843.. v('PROIN-YGL229C') =l= 5.860731448807038e-10*1e6;
 Equation prosum1844; prosum1844.. v('PROIN-YCL055W') =l= 2.7075935130831216e-08*1e6;
 Equation prosum1845; prosum1845.. v('PROIN-YMR297W') =l= 6.477062994892169e-07*1e6;
 Equation prosum1846; prosum1846.. v('PROIN-YDR391C') =l= 1.1781883860367757e-07*1e6;
 Equation prosum1847; prosum1847.. v('PROIN-YGL013C') =l= 6.050830281086673e-08*1e6;
 Equation prosum1848; prosum1848.. v('PROIN-YDL234C') =l= 9.047726926654103e-08*1e6;
-Equation prosum1849; prosum1849.. v('PROIN-YBR114W') =l= 1.0250153642375421e-09*1e6;
+Equation prosum1849; prosum1849.. v('PROIN-YBR114W') =l= 1.0250153642375423e-09*1e6;
 Equation prosum1850; prosum1850.. v('PROIN-YGR134W') =l= 8.060375649265462e-09*1e6;
 Equation prosum1851; prosum1851.. v('PROIN-YPL006W') =l= 5.6332124984898304e-08*1e6;
 Equation prosum1852; prosum1852.. v('PROIN-YKL150W') =l= 1.1315102736835333e-06*1e6;
@@ -1857,8 +1857,8 @@ Equation prosum1856; prosum1856.. v('PROIN-YMR265C') =l= 2.5200475797108508e-08*
 Equation prosum1857; prosum1857.. v('PROIN-YDR243C') =l= 3.2805124115505974e-08*1e6;
 Equation prosum1858; prosum1858.. v('PROIN-YJL204C') =l= 9.352843132941623e-08*1e6;
 Equation prosum1859; prosum1859.. v('PROIN-YDR533C') =l= 1.0659936389024736e-06*1e6;
-Equation prosum1860; prosum1860.. v('PROIN-YMR160W') =l= 2.0938361864646545e-08*1e6;
-Equation prosum1861; prosum1861.. v('PROIN-YOR195W') =l= 1.618219812307271e-07*1e6;
+Equation prosum1860; prosum1860.. v('PROIN-YMR160W') =l= 2.0938361864646542e-08*1e6;
+Equation prosum1861; prosum1861.. v('PROIN-YOR195W') =l= 1.6182198123072708e-07*1e6;
 Equation prosum1862; prosum1862.. v('PROIN-YDR485C') =l= 2.1597381938439893e-08*1e6;
 Equation prosum1863; prosum1863.. v('PROIN-YJR140C') =l= 2.3452686044258855e-08*1e6;
 Equation prosum1864; prosum1864.. v('PROIN-YPL094C') =l= 3.6711410736952313e-07*1e6;
@@ -1869,7 +1869,7 @@ Equation prosum1868; prosum1868.. v('PROIN-YMR260C') =l= 2.0140145685324407e-06*
 Equation prosum1869; prosum1869.. v('PROIN-YOR070C') =l= 8.759602250184187e-08*1e6;
 Equation prosum1870; prosum1870.. v('PROIN-YER046W') =l= 8.21595124743832e-09*1e6;
 Equation prosum1871; prosum1871.. v('PROIN-YOR361C') =l= 1.5090946041294127e-06*1e6;
-Equation prosum1872; prosum1872.. v('PROIN-YPL153C') =l= 3.952732151588272e-08*1e6;
+Equation prosum1872; prosum1872.. v('PROIN-YPL153C') =l= 3.9527321515882723e-08*1e6;
 Equation prosum1873; prosum1873.. v('PROIN-YDR443C') =l= 1.2599346036340473e-08*1e6;
 Equation prosum1874; prosum1874.. v('PROIN-YDR262W') =l= 1.2086019863689955e-07*1e6;
 Equation prosum1875; prosum1875.. v('PROIN-YMR209C') =l= 1.3339358574783204e-07*1e6;
@@ -1890,7 +1890,7 @@ Equation prosum1889; prosum1889.. v('PROIN-YLR025W') =l= 5.300271705069095e-07*1
 Equation prosum1890; prosum1890.. v('PROIN-YOR127W') =l= 6.727454372576965e-08*1e6;
 Equation prosum1891; prosum1891.. v('PROIN-YML131W') =l= 2.989546811774056e-07*1e6;
 Equation prosum1892; prosum1892.. v('PROIN-YMR166C') =l= 2.8561154852061983e-08*1e6;
-Equation prosum1893; prosum1893.. v('PROIN-YBR085C-A') =l= 1.0779559887167052e-06*1e6;
+Equation prosum1893; prosum1893.. v('PROIN-YBR085C-A') =l= 1.077955988716705e-06*1e6;
 Equation prosum1894; prosum1894.. v('PROIN-YCL037C') =l= 8.766139419317062e-07*1e6;
 Equation prosum1895; prosum1895.. v('PROIN-YBR215W') =l= 5.243139359325455e-08*1e6;
 Equation prosum1896; prosum1896.. v('PROIN-YKL190W') =l= 5.797642855370465e-07*1e6;
@@ -1900,7 +1900,7 @@ Equation prosum1899; prosum1899.. v('PROIN-YDR381C-A') =l= 5.6653298957545585e-0
 Equation prosum1900; prosum1900.. v('PROIN-YJR085C') =l= 5.244013613428302e-09*1e6;
 Equation prosum1901; prosum1901.. v('PROIN-YMR224C') =l= 1.5290322559153683e-08*1e6;
 Equation prosum1902; prosum1902.. v('PROIN-YPL096W') =l= 2.3869295918200194e-08*1e6;
-Equation prosum1903; prosum1903.. v('PROIN-YHR182W') =l= 2.1142735173656502e-08*1e6;
+Equation prosum1903; prosum1903.. v('PROIN-YHR182W') =l= 2.11427351736565e-08*1e6;
 Equation prosum1904; prosum1904.. v('PROIN-YDR192C') =l= 2.434618516994616e-07*1e6;
 Equation prosum1905; prosum1905.. v('PROIN-YGL094C') =l= 7.137928911396107e-08*1e6;
 Equation prosum1906; prosum1906.. v('PROIN-YBR111C') =l= 7.449450326555441e-07*1e6;
@@ -1916,7 +1916,7 @@ Equation prosum1915; prosum1915.. v('PROIN-YOR330C') =l= 2.5768264241528183e-08*
 Equation prosum1916; prosum1916.. v('PROIN-YMR135C') =l= 1.0440477502798004e-07*1e6;
 Equation prosum1917; prosum1917.. v('PROIN-YNL151C') =l= 1.6555698894116273e-07*1e6;
 Equation prosum1918; prosum1918.. v('PROIN-YLR181C') =l= 1.4952177140119443e-07*1e6;
-Equation prosum1919; prosum1919.. v('PROIN-YKR099W') =l= 2.5894980446791058e-08*1e6;
+Equation prosum1919; prosum1919.. v('PROIN-YKR099W') =l= 2.5894980446791055e-08*1e6;
 Equation prosum1920; prosum1920.. v('PROIN-YDL030W') =l= 3.87730459326297e-08*1e6;
 Equation prosum1921; prosum1921.. v('PROIN-YCR028C-A') =l= 6.581446127183878e-07*1e6;
 Equation prosum1922; prosum1922.. v('PROIN-YBR118W') =l= 3.3628784163435e-05*1e6;
@@ -2136,13 +2136,13 @@ Equation prosum2135; prosum2135.. v('PROIN-YJL148W') =l= 3.889018991731015e-07*1
 Equation prosum2136; prosum2136.. v('PROIN-YER142C') =l= 1.6164475406268883e-07*1e6;
 Equation prosum2137; prosum2137.. v('PROIN-YJL062W-A') =l= 6.003985619574898e-08*1e6;
 Equation prosum2138; prosum2138.. v('PROIN-YNR031C') =l= 2.3219137481941334e-08*1e6;
-Equation prosum2139; prosum2139.. v('PROIN-YMR257C') =l= 5.424480710790444e-10*1e6;
+Equation prosum2139; prosum2139.. v('PROIN-YMR257C') =l= 5.424480710790443e-10*1e6;
 Equation prosum2140; prosum2140.. v('PROIN-YCL024W') =l= 4.849728540358899e-08*1e6;
 Equation prosum2141; prosum2141.. v('PROIN-YKR017C') =l= 2.1402474413778824e-09*1e6;
 Equation prosum2142; prosum2142.. v('PROIN-YPR086W') =l= 2.547510545758322e-07*1e6;
 Equation prosum2143; prosum2143.. v('PROIN-YDR107C') =l= 1.1537553583373557e-07*1e6;
 Equation prosum2144; prosum2144.. v('PROIN-YLR083C') =l= 3.862976412070427e-07*1e6;
-Equation prosum2145; prosum2145.. v('PROIN-YNL238W') =l= 8.553676379795237e-08*1e6;
+Equation prosum2145; prosum2145.. v('PROIN-YNL238W') =l= 8.553676379795236e-08*1e6;
 Equation prosum2146; prosum2146.. v('PROIN-YDR332W') =l= 2.6192552909187113e-09*1e6;
 Equation prosum2147; prosum2147.. v('PROIN-YDR440W') =l= 3.0393670739734904e-08*1e6;
 Equation prosum2148; prosum2148.. v('PROIN-YNL084C') =l= 4.5126970184347024e-07*1e6;
@@ -2312,12 +2312,12 @@ Equation prosum2311; prosum2311.. v('PROIN-YMR291W') =l= 2.506408301171779e-08*1
 Equation prosum2312; prosum2312.. v('PROIN-YEL012W') =l= 1.804607094377334e-07*1e6;
 Equation prosum2313; prosum2313.. v('PROIN-YFL025C') =l= 6.9353380844439405e-09*1e6;
 Equation prosum2314; prosum2314.. v('PROIN-YLR283W') =l= 1.3231105678097455e-08*1e6;
-Equation prosum2315; prosum2315.. v('PROIN-YML029W') =l= 2.790939229576483e-08*1e6;
+Equation prosum2315; prosum2315.. v('PROIN-YML029W') =l= 2.7909392295764835e-08*1e6;
 Equation prosum2316; prosum2316.. v('PROIN-YIR042C') =l= 9.731088614039142e-09*1e6;
 Equation prosum2317; prosum2317.. v('PROIN-YDL160C') =l= 1.2064208057825462e-06*1e6;
 Equation prosum2318; prosum2318.. v('PROIN-YER148W') =l= 3.2614976870455856e-07*1e6;
 Equation prosum2319; prosum2319.. v('PROIN-YKL112W') =l= 2.9683585002196567e-07*1e6;
-Equation prosum2320; prosum2320.. v('PROIN-YOR017W') =l= 4.225175756292283e-08*1e6;
+Equation prosum2320; prosum2320.. v('PROIN-YOR017W') =l= 4.2251757562922836e-08*1e6;
 Equation prosum2321; prosum2321.. v('PROIN-YGL250W') =l= 5.632530542974467e-08*1e6;
 Equation prosum2322; prosum2322.. v('PROIN-YIL079C') =l= 7.470118248959134e-08*1e6;
 Equation prosum2323; prosum2323.. v('PROIN-YGL093W') =l= 2.460497844940618e-08*1e6;
@@ -2397,7 +2397,7 @@ Equation prosum2396; prosum2396.. v('PROIN-YPL008W') =l= 5.99927196217443e-09*1e
 Equation prosum2397; prosum2397.. v('PROIN-YLR008C') =l= 8.461454784745949e-07*1e6;
 Equation prosum2398; prosum2398.. v('PROIN-YMR039C') =l= 4.054949480791639e-07*1e6;
 Equation prosum2399; prosum2399.. v('PROIN-YDL219W') =l= 3.169891792374321e-07*1e6;
-Equation prosum2400; prosum2400.. v('PROIN-YHR103W') =l= 5.735259182646414e-08*1e6;
+Equation prosum2400; prosum2400.. v('PROIN-YHR103W') =l= 5.735259182646413e-08*1e6;
 Equation prosum2401; prosum2401.. v('PROIN-YBL009W') =l= 8.455146489864454e-09*1e6;
 Equation prosum2402; prosum2402.. v('PROIN-YDR104C') =l= 2.202345023520777e-09*1e6;
 Equation prosum2403; prosum2403.. v('PROIN-YOR297C') =l= 1.1023209487373946e-07*1e6;
@@ -2637,8 +2637,8 @@ Equation prosum2636; prosum2636.. v('PROIN-YJL173C') =l= 1.4750920125576864e-06*
 Equation prosum2637; prosum2637.. v('PROIN-YMR190C') =l= 1.5555252075884898e-09*1e6;
 Equation prosum2638; prosum2638.. v('PROIN-YOR111W') =l= 1.4542793205391644e-07*1e6;
 Equation prosum2639; prosum2639.. v('PROIN-YJL062W') =l= 2.998508521174424e-08*1e6;
-Equation prosum2640; prosum2640.. v('PROIN-YLR057W') =l= 6.657197710919281e-08*1e6;
-Equation prosum2641; prosum2641.. v('PROIN-YCR020W-B') =l= 2.456901875137761e-07*1e6;
+Equation prosum2640; prosum2640.. v('PROIN-YLR057W') =l= 6.65719771091928e-08*1e6;
+Equation prosum2641; prosum2641.. v('PROIN-YCR020W-B') =l= 2.4569018751377616e-07*1e6;
 Equation prosum2642; prosum2642.. v('PROIN-YKR055W') =l= 1.4282537650638962e-07*1e6;
 Equation prosum2643; prosum2643.. v('PROIN-YHR152W') =l= 1.1619862654137581e-08*1e6;
 Equation prosum2644; prosum2644.. v('PROIN-YHR156C') =l= 3.1311427277104965e-08*1e6;
@@ -2685,7 +2685,7 @@ Equation prosum2684; prosum2684.. v('PROIN-YHL013C') =l= 1.3463088715216182e-07*
 Equation prosum2685; prosum2685.. v('PROIN-YDR013W') =l= 2.8273118561165477e-08*1e6;
 Equation prosum2686; prosum2686.. v('PROIN-YOL053W') =l= 6.521699903743611e-08*1e6;
 Equation prosum2687; prosum2687.. v('PROIN-YIL103W') =l= 3.02797097211989e-07*1e6;
-Equation prosum2688; prosum2688.. v('PROIN-YDL181W') =l= 4.198737222201827e-07*1e6;
+Equation prosum2688; prosum2688.. v('PROIN-YDL181W') =l= 4.198737222201826e-07*1e6;
 Equation prosum2689; prosum2689.. v('PROIN-YGL018C') =l= 8.522251321230855e-08*1e6;
 Equation prosum2690; prosum2690.. v('PROIN-YIR025W') =l= 4.047733723718112e-09*1e6;
 Equation prosum2691; prosum2691.. v('PROIN-YOR301W') =l= 8.234732515467125e-08*1e6;
@@ -2722,7 +2722,7 @@ Equation prosum2721; prosum2721.. v('PROIN-YDL027C') =l= 2.6648080854425487e-08*
 Equation prosum2722; prosum2722.. v('PROIN-YER139C') =l= 1.5533876060409806e-07*1e6;
 Equation prosum2723; prosum2723.. v('PROIN-YJL177W') =l= 1.5567544004490765e-05*1e6;
 Equation prosum2724; prosum2724.. v('PROIN-YJL065C') =l= 3.6789567103536184e-08*1e6;
-Equation prosum2725; prosum2725.. v('PROIN-YDR461C-A') =l= 1.3272531554296205e-09*1e6;
+Equation prosum2725; prosum2725.. v('PROIN-YDR461C-A') =l= 1.3272531554296207e-09*1e6;
 Equation prosum2726; prosum2726.. v('PROIN-YMR263W') =l= 5.855196309157272e-08*1e6;
 Equation prosum2727; prosum2727.. v('PROIN-YHR040W') =l= 4.194921082102815e-08*1e6;
 Equation prosum2728; prosum2728.. v('PROIN-YML079W') =l= 4.7388510468178835e-07*1e6;
@@ -2887,7 +2887,7 @@ Equation prosum2886; prosum2886.. v('PROIN-YER016W') =l= 1.7217085807921336e-07*
 Equation prosum2887; prosum2887.. v('PROIN-YIR007W') =l= 1.9467808578963835e-08*1e6;
 Equation prosum2888; prosum2888.. v('PROIN-YJR119C') =l= 9.306687430923967e-09*1e6;
 Equation prosum2889; prosum2889.. v('PROIN-YGL219C') =l= 5.231929974502076e-09*1e6;
-Equation prosum2890; prosum2890.. v('PROIN-YLR352W') =l= 2.079668288617248e-08*1e6;
+Equation prosum2890; prosum2890.. v('PROIN-YLR352W') =l= 2.0796682886172476e-08*1e6;
 Equation prosum2891; prosum2891.. v('PROIN-YPL164C') =l= 1.051837397626662e-09*1e6;
 Equation prosum2892; prosum2892.. v('PROIN-YEL017W') =l= 3.0513415943102974e-07*1e6;
 Equation prosum2893; prosum2893.. v('PROIN-YGR257C') =l= 3.163187162498043e-08*1e6;
@@ -2899,15 +2899,15 @@ Equation prosum2898; prosum2898.. v('PROIN-YJR083C') =l= 1.1866415948649137e-07*
 Equation prosum2899; prosum2899.. v('PROIN-YGR081C') =l= 1.7271259948110534e-07*1e6;
 Equation prosum2900; prosum2900.. v('PROIN-YML119W') =l= 2.6894844331357774e-08*1e6;
 Equation prosum2901; prosum2901.. v('PROIN-YPR095C') =l= 5.054332289036664e-09*1e6;
-Equation prosum2902; prosum2902.. v('PROIN-YPL141C') =l= 9.713674245433832e-09*1e6;
+Equation prosum2902; prosum2902.. v('PROIN-YPL141C') =l= 9.713674245433834e-09*1e6;
 Equation prosum2903; prosum2903.. v('PROIN-YMR239C') =l= 1.0029891753065504e-07*1e6;
 Equation prosum2904; prosum2904.. v('PROIN-YGR149W') =l= 2.8585275225960064e-08*1e6;
 Equation prosum2905; prosum2905.. v('PROIN-YDR222W') =l= 9.155816922439068e-08*1e6;
 Equation prosum2906; prosum2906.. v('PROIN-YOR250C') =l= 1.05211649980708e-07*1e6;
-Equation prosum2907; prosum2907.. v('PROIN-YLL054C') =l= 1.3438914780266832e-08*1e6;
+Equation prosum2907; prosum2907.. v('PROIN-YLL054C') =l= 1.3438914780266834e-08*1e6;
 Equation prosum2908; prosum2908.. v('PROIN-YPL158C') =l= 2.7986697891563175e-09*1e6;
 Equation prosum2909; prosum2909.. v('PROIN-YNL053W') =l= 1.7829203802555878e-08*1e6;
-Equation prosum2910; prosum2910.. v('PROIN-YER032W') =l= 1.0084803238041246e-08*1e6;
+Equation prosum2910; prosum2910.. v('PROIN-YER032W') =l= 1.0084803238041245e-08*1e6;
 Equation prosum2911; prosum2911.. v('PROIN-YKL105C') =l= 3.1299484228139566e-08*1e6;
 Equation prosum2912; prosum2912.. v('PROIN-YLR014C') =l= 9.584673745055717e-10*1e6;
 Equation prosum2913; prosum2913.. v('PROIN-YLR361C-A') =l= 6.980092059432099e-07*1e6;
@@ -3465,7 +3465,7 @@ Equation prosum3464; prosum3464.. v('PROIN-YOR152C') =l= 4.3184988324365545e-08*
 Equation prosum3465; prosum3465.. v('PROIN-YPR010C-A') =l= 4.05567266236451e-06*1e6;
 Equation prosum3466; prosum3466.. v('PROIN-YKR011C') =l= 4.59389744952567e-09*1e6;
 Equation prosum3467; prosum3467.. v('PROIN-YGR004W') =l= 3.955355963470474e-08*1e6;
-Equation prosum3468; prosum3468.. v('PROIN-YCR020C-A') =l= 3.346008629378942e-08*1e6;
+Equation prosum3468; prosum3468.. v('PROIN-YCR020C-A') =l= 3.346008629378941e-08*1e6;
 Equation prosum3469; prosum3469.. v('PROIN-YHR116W') =l= 2.5873134086562048e-08*1e6;
 Equation prosum3470; prosum3470.. v('PROIN-YKR065C') =l= 5.575196612407079e-07*1e6;
 Equation prosum3471; prosum3471.. v('PROIN-YGL222C') =l= 5.660563961036895e-09*1e6;
@@ -3535,7 +3535,7 @@ Equation prosum3534; prosum3534.. v('PROIN-YGR016W') =l= 1.4035519611564227e-09*
 Equation prosum3535; prosum3535.. v('PROIN-YDL028C') =l= 2.1736233848278095e-10*1e6;
 Equation prosum3536; prosum3536.. v('PROIN-YJR056C') =l= 8.843230290824158e-10*1e6;
 Equation prosum3537; prosum3537.. v('PROIN-YJR054W') =l= 1.3187380750842717e-08*1e6;
-Equation prosum3538; prosum3538.. v('PROIN-YDR351W') =l= 5.5568933377645814e-09*1e6;
+Equation prosum3538; prosum3538.. v('PROIN-YDR351W') =l= 5.556893337764582e-09*1e6;
 Equation prosum3539; prosum3539.. v('PROIN-YLR065C') =l= 2.6534980598582718e-08*1e6;
 Equation prosum3540; prosum3540.. v('PROIN-YDR506C') =l= 1.0835280808918823e-08*1e6;
 Equation prosum3541; prosum3541.. v('PROIN-YMR040W') =l= 1.5251121123875145e-08*1e6;
@@ -3574,7 +3574,7 @@ Equation prosum3573; prosum3573.. v('PROIN-YHR194W') =l= 9.070316750974607e-10*1
 Equation prosum3574; prosum3574.. v('PROIN-YCR082W') =l= 9.706589865413712e-08*1e6;
 Equation prosum3575; prosum3575.. v('PROIN-YIL154C') =l= 5.966934481095901e-08*1e6;
 Equation prosum3576; prosum3576.. v('PROIN-YGR038W') =l= 1.7634579690459782e-07*1e6;
-Equation prosum3577; prosum3577.. v('PROIN-YAL056W') =l= 3.1584297205182756e-09*1e6;
+Equation prosum3577; prosum3577.. v('PROIN-YAL056W') =l= 3.158429720518275e-09*1e6;
 Equation prosum3578; prosum3578.. v('PROIN-YGR101W') =l= 2.853607923471871e-08*1e6;
 Equation prosum3579; prosum3579.. v('PROIN-YDL079C') =l= 1.940100119270483e-09*1e6;
 Equation prosum3580; prosum3580.. v('PROIN-YGL116W') =l= 3.0761517823700924e-08*1e6;
@@ -3667,12 +3667,12 @@ Equation prosum3666; prosum3666.. v('PROIN-YNR068C') =l= 5.242961457460318e-10*1
 Equation prosum3667; prosum3667.. v('PROIN-YGR295C') =l= 1.4539849328570755e-08*1e6;
 Equation prosum3668; prosum3668.. v('PROIN-YDL248W') =l= 2.287475176266717e-09*1e6;
 Equation prosum3669; prosum3669.. v('PROIN-YMR034C') =l= 4.5452949045976894e-10*1e6;
-Equation prosum3670; prosum3670.. v('PROIN-YDR500C') =l= 3.118999908410797e-07*1e6;
+Equation prosum3670; prosum3670.. v('PROIN-YDR500C') =l= 3.1189999084107973e-07*1e6;
 Equation prosum3671; prosum3671.. v('PROIN-YLR023C') =l= 5.733058250407073e-09*1e6;
 Equation prosum3672; prosum3672.. v('PROIN-YBR210W') =l= 5.0277034968215746e-08*1e6;
 Equation prosum3673; prosum3673.. v('PROIN-YIL088C') =l= 3.0638094666151605e-08*1e6;
 Equation prosum3674; prosum3674.. v('PROIN-YBR167C') =l= 3.1303525448940395e-09*1e6;
-Equation prosum3675; prosum3675.. v('PROIN-YER180C-A') =l= 8.015099640820445e-09*1e6;
+Equation prosum3675; prosum3675.. v('PROIN-YER180C-A') =l= 8.015099640820443e-09*1e6;
 Equation prosum3676; prosum3676.. v('PROIN-YOR083W') =l= 3.0332481794841074e-08*1e6;
 Equation prosum3677; prosum3677.. v('PROIN-YOR084W') =l= 1.1438964838279381e-09*1e6;
 Equation prosum3678; prosum3678.. v('PROIN-YAL007C') =l= 1.1858628879801381e-07*1e6;

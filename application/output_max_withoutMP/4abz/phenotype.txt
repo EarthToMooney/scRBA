@@ -1,2 +1,9 @@
-$include ../../input/phenotype_common.txt
+* adds phenotype_common.txt, then settings based on FBA yield predictions
+$include RBA_GAMS_defaults_from_FBA.txt
+
+* everything below overrides default settings, including phenotype_common.txt
+
+* removes mitochondrial capacity limits
+$setGlobal max_allowed_mito_proteome_allo_fraction 1
+*$include ../../input/prosyn_constraints.txt
 v.up('RXN-EX_4abz_e_REV-SPONT') = 0;

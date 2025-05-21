@@ -1,0 +1,116 @@
+/scratch/ejm6426/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/../../../../pycore/gsm_custom_functions.py:615: SyntaxWarning: invalid escape sequence '\d'
+  elemval = re.search('(?<=' + elem + ')[-\d.]*', formula).group()
+/scratch/ejm6426/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/../../../../pycore/gsm_custom_functions.py:742: SyntaxWarning: invalid escape sequence '\+'
+  rs = re.split(' \+ | \+|\+ |\+', rStr)
+/scratch/ejm6426/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/../../../../pycore/gsm_custom_functions.py:743: SyntaxWarning: invalid escape sequence '\+'
+  ps = re.split(' \+ | \+|\+ |\+', pStr)
+/scratch/ejm6426/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/../../../../pycore/gsm_custom_functions.py:748: SyntaxWarning: invalid escape sequence '\s'
+  val, met = re.split('\s+', r)
+/scratch/ejm6426/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/../../../../pycore/gsm_custom_functions.py:756: SyntaxWarning: invalid escape sequence '\s'
+  val, met = re.split('\s+', p)
+                    id   name  ... vtrans (mmol/gDW/h)     c_avg
+YNL104C_m    YNL104C_m   LEU4  ...            0.000002  0.000759
+YNL104C_c    YNL104C_c   LEU4  ...            0.000002  0.000759
+YPR033C_m    YPR033C_m   HTS1  ...            0.000002  0.000560
+YPR033C_c    YPR033C_c   HTS1  ...            0.000002  0.000560
+YGR094W_c    YGR094W_c   VAS1  ...            0.000003  0.001610
+YGR094W_m    YGR094W_m   VAS1  ...            0.000003  0.001610
+YOR236W_m    YOR236W_m   DFR1  ...                 0.0  0.000010
+YOR236W_c    YOR236W_c   DFR1  ...                 0.0  0.000010
+YPL262W_m    YPL262W_m   FUM1  ...            0.000002  0.000519
+YPL262W_c    YPL262W_c   FUM1  ...            0.000002  0.000519
+YKL024C_n    YKL024C_n   URA6  ...            0.000001  0.000137
+YKL024C_c    YKL024C_c   URA6  ...            0.000001  0.000137
+YKR039W_rm  YKR039W_rm   GAP1  ...                 0.0  0.000049
+YKR039W_en  YKR039W_en   GAP1  ...                 0.0  0.000049
+YLR304C_m    YLR304C_m   ACO1  ...            0.000005  0.002105
+YLR304C_c    YLR304C_c   ACO1  ...            0.000005  0.002105
+YLR027C_c    YLR027C_c   AAT2  ...            0.000004  0.001000
+YLR027C_x    YLR027C_x   AAT2  ...            0.000004  0.001000
+YHR026W_gm  YHR026W_gm  VMA16  ...                 0.0  0.000006
+YHR026W_vm  YHR026W_vm  VMA16  ...                 0.0  0.000006
+YKL080W_vm  YKL080W_vm   VMA5  ...            0.000002  0.000364
+YKL080W_gm  YKL080W_gm   VMA5  ...            0.000002  0.000364
+YLR447C_vm  YLR447C_vm   VMA6  ...            0.000001  0.000256
+YLR447C_gm  YLR447C_gm   VMA6  ...            0.000001  0.000256
+YKL212W_gm  YKL212W_gm   SAC1  ...            0.000001  0.000497
+YKL212W_rm  YKL212W_rm   SAC1  ...            0.000001  0.000497
+YBL013W_m    YBL013W_m   FMT1  ...                 0.0  0.000004
+YBL013W_c    YBL013W_c   FMT1  ...                 0.0  0.000004
+YML042W_mm  YML042W_mm   CAT2  ...                 0.0  0.000012
+YML042W_x    YML042W_x   CAT2  ...                 0.0  0.000012
+YKR067W_l    YKR067W_l   GPT2  ...                 0.0  0.000025
+YKR067W_rm  YKR067W_rm   GPT2  ...                 0.0  0.000025
+YHR074W_c    YHR074W_c   QNS1  ...            0.000001  0.000210
+YHR074W_n    YHR074W_n   QNS1  ...            0.000001  0.000210
+YDR208W_n    YDR208W_n   MSS4  ...                 0.0  0.000014
+YDR208W_en  YDR208W_en   MSS4  ...                 0.0  0.000014
+YER019W_mm  YER019W_mm   ISC1  ...                 0.0  0.000052
+YER019W_rm  YER019W_rm   ISC1  ...                 0.0  0.000052
+YIL124W_l    YIL124W_l   AYR1  ...                 0.0  0.000065
+YIL124W_r    YIL124W_r   AYR1  ...                 0.0  0.000065
+YOL059W_m    YOL059W_m   GPD2  ...            0.000001  0.000358
+YOL059W_c    YOL059W_c   GPD2  ...            0.000001  0.000358
+YJL100W_vm  YJL100W_vm   LSB6  ...                 0.0  0.000009
+YJL100W_en  YJL100W_en   LSB6  ...                 0.0  0.000009
+YAL054C_m    YAL054C_m   ACS1  ...                 0.0  0.000096
+YAL054C_c    YAL054C_c   ACS1  ...                 0.0  0.000096
+YDR236C_r    YDR236C_r   FMN1  ...            0.000001  0.000071
+YDR236C_mm  YDR236C_mm   FMN1  ...            0.000001  0.000071
+YLR328W_n    YLR328W_n   NMA1  ...                 0.0  0.000072
+YLR328W_c    YLR328W_c   NMA1  ...                 0.0  0.000072
+YOR245C_l    YOR245C_l   DGA1  ...                 0.0  0.000008
+YOR245C_rm  YOR245C_rm   DGA1  ...                 0.0  0.000008
+YNL045W_n    YNL045W_n   LAP2  ...                 0.0  0.000100
+YNL045W_c    YNL045W_c   LAP2  ...                 0.0  0.000100
+
+[54 rows x 8 columns]
+Empty DataFrame
+Columns: [id, name, uniprot, MW (g/mmol), type, conc (g/gDW), vtrans (mmol/gDW/h), c_avg]
+Index: []
+Protein IDs not in ../../../../build_model/model/PROTEIN_stoich_curation.tsv:
+YAL054C
+YBL013W
+YDR208W
+YDR236C
+YER019W
+YGR094W
+YHR026W
+YHR074W
+YIL124W
+YJL100W
+YKL024C
+YKL080W
+YKL212W
+YKR039W
+YKR067W
+YLR027C
+YLR304C
+YLR328W
+YLR447C
+YML042W
+YNL045W
+YNL104C
+YOL059W
+YOR236W
+YOR245C
+YPL262W
+YPR033C
+nonmodeled proteome allocation: 0
+max allowed mito proteome allocation: 0.07159554505389779
+ATP costs of translation: 0
+Traceback (most recent call last):
+  File "/scratch/ejm6426/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/B1_enz_from_proteome.py", line 3, in <module>
+    from kapp_options import *
+  File "/scratch/ejm6426/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/kapp_options.py", line 73, in <module>
+    df_data = read_spreadsheet(path_data)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/ejm6426/scRBA/parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/../../../../pycore/gsm_custom_functions.py", line 1445, in read_spreadsheet
+    return pd.read_excel(path,*args,**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/storage/home/ejm6426/.conda/envs/rba/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 495, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "/storage/home/ejm6426/.conda/envs/rba/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1554, in __init__
+    raise ValueError(
+ValueError: Excel file format cannot be determined, you must specify an engine manually.

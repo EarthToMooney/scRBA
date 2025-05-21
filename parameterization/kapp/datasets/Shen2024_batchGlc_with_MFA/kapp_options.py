@@ -68,7 +68,7 @@ nonmodeled_proteome_allocation = 0
 # nonmodeled_proteome_allocation = 0.503973558
 dummy_protein = {'id':'PROSYN-PROTDUMMY','AA abundances':dict()}
 
-path_data = './Shen2024_batch_glc.xlsx'
+path_data = './Shen2024_batch_glc.tsv'
 if os.path.exists(path_data):
     df_data = read_spreadsheet(path_data)
     df_data.index = df_data['id'].to_list()

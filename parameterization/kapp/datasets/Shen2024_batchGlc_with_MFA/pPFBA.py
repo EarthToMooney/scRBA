@@ -18,7 +18,7 @@ if True:
 attempt=0
 significant_kapp_change = True
 # Load enzyme info
-df_enz = pd.read_excel('../../../../build_model/input/ENZYME_stoich_curation.xlsx')
+df_enz = pd.read_excel('../../../../build_model/model/ENZYME_stoich_curation.tsv')
 
 # Load path of set4 (enzyme-reaction many-to-many mapping)
 set4_path = '../kapp_ambiguousLoad_case_resolve_common.txt'

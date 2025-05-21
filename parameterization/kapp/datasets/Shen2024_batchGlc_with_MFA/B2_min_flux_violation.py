@@ -18,15 +18,6 @@ if os.path.isdir(path_out) == False:
     os.makedirs(path_out)
 shutil.copy(run_setting_file_from, run_setting_file_to);
 
-#### Load proteomics data and write protein translation fluxes
-# Load data
-df_data = pd.read_excel(path_data)
-df_data.index = df_data['id'].to_list()
-df_data = df_data[df_data['conc (g/gDW)'] > 0]
-# Excluding ribosome protein subunit (conflicting if fit to both enzymatic and ribosomal protein data)
-if not use_ribo_data:
-    df_data = df_data[(df_data.type == 'truedata_enz') | (df_data.type == 'gapfill_subunit')]
-
 data_val = []; data_idx = [];
 for i in df_data.index:
     data_idx.append("'PROSYN-" + df_data.id[i] + "'")
@@ -154,7 +145,7 @@ print('max predicted kapp',str(kapp_max))
 print('benchmark kapp',str(kapp_benchmark))
 
 enzload_constraints = [] # determining enzyme allocation for next problem
-enzload_constraints_with_kapps = []
+kapp_init = []
 c = 0
 
 # find kapps for all rxns that don't have any
@@ -193,7 +184,7 @@ for enz in enz_rxn_pairs.keys():
         enzsyn = 'ENZSYN-' + enz
         enzload = 'ENZLOAD-'+rxn.split('-',1)[1]
         enzload_constraints.append("Equation EnzLoadConstraint" + str(c) + "; EnzLoadConstraint" + str(c) + ".. " + "EnzLoadSlackPos('" + rxn + "') - EnzLoadSlackNeg('" + rxn + "') + v('" + rxn + "') =e= v('" + enzsyn + "') / " + str(len(enz_rxn_pairs[enz].keys())) + ";")
-        enzload_constraints_with_kapps += ["Equation kappEst" + str(c) + "; kappEst" + str(c) + ".. (kappEstSlackPos('" + rxn + "') - kappEstSlackNeg('" + rxn + "') + v('" + rxn + "')) * %mu% =e= v('" + enzload + "') * (" + str(enz_rxn_pairs[enz][rxn]['kapp_proto']) + ");","Equation kappMaxEst" + str(c) + "; kappMaxEst" + str(c) + ".. v('" + rxn + "') * %mu% =l= v('" + enzload + "') * %kapp_max%;"]
+        kapp_init += [f"'{rxn}' {str(enz_rxn_pairs[enz][rxn]['kapp_proto'])}"]
 
 # for enz,rxns in enz_rxn_dict.items():
 #     enzsyn = 'ENZSYN-' + enz
@@ -203,14 +194,14 @@ for enz in enz_rxn_pairs.keys():
 #         eload = rxn.replace('RXN-','ENZLOAD-',1)
 #         j = rxn.replace('ENZLOAD-','RXN-',1)
 #         if j in rxns_enz_with_no_prodata_essential.keys():
-#             enzload_constraints_with_kapps.append("Equation kappEst" + str(c1) + "; kappEst" + str(c1) + ".. kappEstSlackPos('" + j + "') - kappEstSlackNeg('" + j + "') + v('" + eload + "') =e= v('" + j + "') / (%mu% * " + str(kapp_benchmark) + ");") 
+#             kapp_init.append("Equation kappEst" + str(c1) + "; kappEst" + str(c1) + ".. kappEstSlackPos('" + j + "') - kappEstSlackNeg('" + j + "') + v('" + eload + "') =e= v('" + j + "') / (%mu% * " + str(kapp_benchmark) + ");") 
 #         elif rxns_enz_active[j]['v'] > 0:
-#             enzload_constraints_with_kapps.append("Equation kappEst" + str(c1) + "; kappEst" + str(c1) + ".. kappEstSlackPos('" + j + "') - kappEstSlackNeg('" + j + "') + v('" + eload + "') =e= v('" + j + "') / (%mu% * " + str(min_kapps[j]) + ");") 
+#             kapp_init.append("Equation kappEst" + str(c1) + "; kappEst" + str(c1) + ".. kappEstSlackPos('" + j + "') - kappEstSlackNeg('" + j + "') + v('" + eload + "') =e= v('" + j + "') / (%mu% * " + str(min_kapps[j]) + ");") 
 #         # constraint to encourage equal distribution of enzload amongst all used rxns
 #         enzload_constraints.append("Equation EnzLoadConstraint" + str(c) + "; EnzLoadConstraint" + str(c) + ".. " + "EnzLoadSlackPos('" + rxn + "') - EnzLoadSlackNeg('" + rxn + "') + v('" + rxn + "') =e= v('" + enzsyn + "') / " + str(len(rxns)) + ";")
-fname = os.path.join(path_out, 'enz_alloc_constraints_with_kapp_estimates.txt')
+fname = os.path.join(path_out, 'kapp_init.txt')
 with open(fname, 'w') as f:
-    f.write('\n'.join(enzload_constraints_with_kapps))
+    f.write('\n'.join(['/'] + kapp_init + ['/']))
 fname = os.path.join(path_out, 'enz_alloc_constraints.txt')
 with open(fname, 'w') as f:
     f.write('\n'.join(enzload_constraints))
