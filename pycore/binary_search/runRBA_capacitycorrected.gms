@@ -1,14 +1,13 @@
-******** Find max flux range constrained by RBA model ********
+************************* Run RBA model ********************
 *       Authors: (v1) Hoang Dinh, (v2) Eric Mooney
-**************************************************************
+************************************************************
 
 $INLINECOM /*  */
 $include "./runRBA_GAMS_settings.txt"
-* Scale values of all variables by a factor, then when write to file, descale them
 $setGlobal nscale 1e5
 
 * Optional constraint on allowed proteome allocation to mitochondrial proteins (disable by setting to 1)
-$setGlobal max_allowed_mito_proteome_allo_fraction 0.065
+$setGlobal max_allowed_mito_proteome_allo_fraction 1
 
 * Ribosome efficiency
 $setGlobal kribonuc 13.2*3600
@@ -18,12 +17,12 @@ $setGlobal kribomito 13.2*3600
 $setGlobal nonmodeled_proteome_allocation 0.45
 
 options
-	LP = soplex /*Solver selection*/
+	LP = cplex /*Solver selection*/
 	limrow = 0 /*number of equations listed, 0 is suppresed*/
 	limcol = 0 /*number of variables listed, 0 is suppresed*/
 	iterlim = 1000000 /*iteration limit of solver, for LP it is number of simplex pivots*/
 	decimals = 8 /*decimal places for display statement*/
-	reslim = 1000000 /*wall-clock time limit for solver in seconds*/
+	reslim = 600 /*wall-clock time limit for solver in seconds*/
 	sysout = on /*solver status file report option*/
 	solprint = on /*solution printing option*/
         
@@ -80,9 +79,8 @@ v.fx(j)$rxns_biomass(j) = 0;
 v.up(j)$uptake(j) = 0;
 v.up(j)$media(j) = 1e3 * %nscale%;
 
-* Set your NGAM in phenotype.txt since NGAM value depends on growth-condition
-* Set your biomass composition in phenotype.txt since biomass composition depends on growth-condition
-$include "phenotype.txt"
+$include "%phenotype_path%"
+* Set all organism-specific and/or condition-specific parameters in phenotype.txt (e.g., NGAM and biomass composition)
 
 *** EQUATION DEFINITIONS ***
 Equations
@@ -90,11 +88,12 @@ Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo, M
 $include %enz_cap_declares_path%
 ;
 
-$include obj.txt
+Obj..			z =e= v('BIOSYN-PROTMODELED');
 Stoic(i)..		sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityMito.. 	v('RIBOSYN-ribomito') * %kribomito% =e= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
 RiboCapacityNuc.. 	v('RIBOSYN-ribonuc') * %kribonuc% =e= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
-NonModelProtAllo..	v('BIOSYN-PROTMODELED') =e= (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
+NonModelProtAllo..	v('BIOSYN-PROTMODELED') + v('BIOSYN-PROTDUMMY2') =l= (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
+ModelProtAlloCorrection..	v('BIOSYN-PROTMODELED') =l= %corrected_protein_capacity_percentage% * (1 - %nonmodeled_proteome_allocation%) * v('BIOSYN-PROTTOBIO');
 MitoProtAllo..		v('BIOSYN-PROTMITO') =l= %max_allowed_mito_proteome_allo_fraction% * v('BIOSYN-PROTMODELED');
 $include %enz_cap_eqns_path%
 
@@ -106,23 +105,19 @@ $include %enz_cap_declares_path%
 rba.optfile = 1;
 
 *** SOLVE ***
-Solve rba using lp maximizing z;
+Solve rba using lp minimizing z;
 
 file ff /runRBA.modelStat.txt/;
 put ff;
 put rba.modelStat/;
 putclose ff;
 
-file ff2 /objval.txt/;
+file ff2 /runRBA.flux.txt/;
 put ff2;
-put (z.l / %nscale%):0:8/;
-putclose ff2;
-
-file ff3 /runRBA.flux.txt/;
-put ff3;
 loop(j,
 	if ( (v.l(j) gt 0),
 		put j.tl:0, system.tab, 'v', system.tab, (v.l(j) / %nscale%):0:15/;
 	);
 );
-putclose ff3;
+putclose ff2;
+

@@ -1,0 +1,3 @@
+$setGlobal base_path %base_path%../
+$set p %system.FP%../paths.txt
+$if exist %p% $include %p%

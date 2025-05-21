@@ -1,0 +1,5 @@
+'MET-caro_c'.'DM_caro_c' -1
+'MET-gcaro_c'.'DM_gcaro_c' -1
+'MET-caroz_c'.'DM_caroz_c' -1
+'MET-toruln_c'.'DM_toruln_c' -1
+'MET-torularho_c'.'DM_torularho_c' -1

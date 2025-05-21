@@ -1,0 +1,24 @@
+* all default settings (except paths run at start) specific to your model and preferred phenotype
+* if different values needed for specific tasks, make a separate phenotype.txt file for them
+$setGlobal vglc 5.3317693
+* biomass rxn
+$setGlobal bio 'BIOSYN-BIODILAERO'
+* growth rate
+$setGlobal mu 0.38
+v.fx('%bio%') = %mu%;
+
+$include %gms_path%model-version-settings.txt
+
+* From scRBA: Disable FADH2 transport across mitochondrial membrane. Enable this creates fumarate-succinate shuttle that enables proton gradient generation
+v_sm.fx('FADH2t_c_m') = 0; 
+
+v_sm.lo('EX_fe3_e') = -%vmax%;
+
+* Substrate and oxygenation
+v_sm.up('EX_glc__D_e') = 0;
+v_sm.lo('EX_glc__D_e') = -%vglc%;
+
+v_sm.lo('EX_o2_e') = -15.9690437;
+v_sm.up('EX_o2_e') = -15.9678423;
+
+$include %pheno_path%

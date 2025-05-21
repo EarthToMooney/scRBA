@@ -3,7 +3,16 @@ import cobra
 # updated to Python 3
 
 def test_import():
+    """Test if the module imports correctly."""
     print('Import ok, common custom functions')
+
+def secretion_rxns(model):
+    """Get the list of secretions in a model (i.e., non-blocked exchanges with upper bounds ≥ 0)."""
+    return [r for r in model.exchanges if r.upper_bound > 0]
+
+def secretion_metabolites(model):
+    """Get the list of secreted metabolites in a model (i.e., metabolites from rxns in 'secretion_rxns' function)."""
+    return list(dict.fromkeys([m for r in secretion_rxns(model) for m in r.metabolites]))
 
 def plot_2d_data(data, x=None,y=None,xlabel=None,ylabel=None,scale='linear',xscale=None,yscale=None,output_path=None,input_fig=None,input_ax=None,global_fig_ax=False,show_figure=True,pointsize=6,datacolor='#1f78b4',alpha=0.5,overlapping_points_in_legend=3,fontsize=12,sigfigs=2):
     """Plot 2D data.
@@ -149,9 +158,13 @@ def multi_plot_2d_data(datasets,rows_cols=None,x=None,y=None,xlabel=None,ylabel=
 
 def compile_dictionary_from_text(fpath, sep='\t', keypos=0, valuepos=1, skiprows=0):
     """Each dictionary key:value pair is assumed to be on a line. Pairs was separated by newline (backslash n).
+
     fpath: directory to text file
+    
     sep: delimiter used in text file
+    
     keypos: position (start from 0) for dictionary key
+    
     valuepos: position (start from 0) for dictionary value"""
     from collections import OrderedDict
 
@@ -382,6 +395,8 @@ def execute_command(model, model_donor, df_cmds, verbose=False):
     comps_model = list(model.compartments.keys())
     rxns_model_donor = [rxn.id for rxn in model_donor.reactions]
     mets_model_donor = [met.id for met in model_donor.metabolites]
+    # allow duplicate entries in index, so multiple commands can be executed on the same object
+    df_cmds = df_cmds.reset_index(drop=True)
     
     for i in df_cmds.index:
         rxns = model.reactions
@@ -390,6 +405,8 @@ def execute_command(model, model_donor, df_cmds, verbose=False):
         cmd = df_cmds.command[i]
         objid = df_cmds.id[i]
         obj = str(df_cmds.object_type[i])
+        # if verbose:
+        #     print(f'Processing command: {str(cmd)} {str(objid)} {str(obj)}')
 
         rxns_model = [rxn.id for rxn in model.reactions]
         mets_model = [met.id for met in model.metabolites]
@@ -429,10 +446,10 @@ def execute_command(model, model_donor, df_cmds, verbose=False):
                     if objid not in rxns_model:
                         print(objid + ' is not in the model as a reaction, cannot change ' + cmd1)
                     else:
-                        if cmd1 in ['id', 'reaction', 'subsystem', 'name', 'gpr']:
-                            setattr(model.reactions.get_by_id(objid), attr_dict[cmd1], cmd2)
-                        elif cmd1 in ['lower_bound', 'upper_bound']:
+                        if cmd1 in ['lower_bound', 'upper_bound']:
                             setattr(model.reactions.get_by_id(objid), attr_dict[cmd1], float(cmd2))
+                        else:
+                            setattr(model.reactions.get_by_id(objid), attr_dict[cmd1], cmd2)
                         
                 elif cmd1 == 'annotation':
                     if objid not in rxns_model:
@@ -600,7 +617,7 @@ def compile_elements_from_formula(formula):
             elem_dict[elem] = float(elemval)
     return elem_dict
 
-def compile_formula_from_elements(elem_dict):
+def compile_formula_from_elements(elem_dict:dict) -> str:
     from collections import OrderedDict
     formula = ''
     for k,v in elem_dict.items():
@@ -709,7 +726,7 @@ def is_number(s):
         return True
     except ValueError:
         return False
-    
+
 def merge_two_dicts(x, y):
     z = x.copy()   # start with x's keys and values
     z.update(y)    # modifies z with y's keys and values & returns None
@@ -780,14 +797,29 @@ def find_biomass_reactions(model):
                 break
     return biomass_rxns
 
-def find_pathways(model,target_products,flux_dict={},flux_reporting_decimals=-2,target_reactants=None,exclude_common_mets=True,paths_to_find='all_shortest_weighted'):
-    """Find pathways that form a specified product in a model from a specified reactant (if provided).
+# check all nodes and remove any that have no path to target products
+def remove_unconnected_nodes(G,nodes_to_check_connections_to):
+    import networkx as nx
+    continue_search = True
+    while continue_search:
+        nodes_removed = 0
+        for node in list(G.nodes):
+            if not any(nx.has_path(G,node,required_node) for required_node in nodes_to_check_connections_to):
+                G.remove_node(node)
+                nodes_removed += 1
+        if nodes_removed == 0:
+            continue_search = False
+    return G
+
+def find_pathways(model,target_products=None,flux_dict={},flux_reporting_decimals=-2,target_reactants=None,exclude_common_mets=True,paths_to_find='all_shortest_weighted',
+                  node_font_size=10,edge_font_size=8,output_path=None,multigraph_mode=True):
+    """Find pathways that form specified products in a model (if provided; otherwise, use all secreted metabolites) from specified reactants (if provided).
 
     ### Parameters
     - model : cobra.Model
-    - target_products : list of str
 
     #### Optional Parameters
+    - target_products : list of str, default None (converted to list of all secreted metabolites if None)
     - flux_dict : dict, default {}
         - Dict of reaction IDs as keys and fluxes as values, to help filter out irrelevant pathways. If not provided, stoichiometry is used for filtering.
         - In future versions, should ideally incorporate bounds, too.
@@ -800,20 +832,33 @@ def find_pathways(model,target_products,flux_dict={},flux_reporting_decimals=-2,
     - paths_to_find : str, default 'all_shortest'
         - 'all_shortest' : Find all shortest paths from target reactants to target products.
         - 'all_simple' : Find all simple paths from target reactants to target products.
+    - output_path : str, default None
+        - Path to save the output files to. If None, saves in current working directory.
+    - multigraph_mode : bool, default True
+        - If True, uses a multigraph (multiple edges allowed between the same pair of nodes in the same direction) to allow multiple edges between nodes. If False, uses a simple graph. Included only if needed for running older code from rtRBA. As of 2025-05-20, the multigraph mode makes pathway simplification less effective, so fix this.
     """
-    import numpy as np, pandas as pd, networkx as nx, sys, random
+    import numpy as np, pandas as pd, networkx as nx, sys, os, random
     from networkx import Graph
     from copy import deepcopy
+
     medium_mets = list(i.replace('EX_','') for i in model.medium.keys() if 'EX_' in i and model.medium[i] != 0)
     # don't have specific compounds in mind, just want to see what can make the product(s)
-    filename_base = "pathways-making-"+str(target_products[0])+'-in-'+model.id
+    output_path = output_path if output_path is not None else os.getcwd() + '/'
+    # check if output_path exists; if not, create it
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+    
     # force graph to use the same random seed, for easier comparisons between simulations/reruns
     seed = 1
     np.random.seed(seed)
     # Create a directed graph
     G = []
     # make new digraph
-    G.append(nx.DiGraph())
+    if multigraph_mode:
+        blank_graph = nx.MultiDiGraph()
+    else:
+        blank_graph = nx.DiGraph()
+    G.append(blank_graph)
 
     fluxdata = pd.DataFrame(flux_dict.items(), columns=['rxn','flux'])
     rxns_used = fluxdata[fluxdata.flux != 0].rxn.values
@@ -823,15 +868,16 @@ def find_pathways(model,target_products,flux_dict={},flux_reporting_decimals=-2,
     # only show rxns used
     # TO DO: update to use common_mets_to_exclude_from_pathway_diagrams.xlsx for common metabolites to exclude. Allow default list as well as user-provided list.
     rxns_to_consider = [r for r in model.reactions if r.id in rxns_used]
-    if exclude_common_mets:
-        excluded_mets = ['diphosphate','phosphate','phosphate [cytoplasm]','H2O','WATER','H','H+','PROTON','ATP','ADP','AMP','NADH','NADPH','NAD+','NADP+','NAD','NADP','NADH2','NADPH2','NADP(+)','NADP(H)','NAD(H)','NAD(P)H','NAD(P)','FAD','FADH2','FMN','FMNH2']
-        # Follows same order as excluded_mets
-        excluded_ids = {
-            'chebi':['CHEBI:33019','CHEBI:43474','CHEBI:15377','CHEBI:24636','CHEBI:30616',"CHEBI:456216","CHEBI:456215","CHEBI:57945","CHEBI:57783","CHEBI:57540","CHEBI:58349","CHEBI:57692","CHEBI:58307","CHEBI:58210","CHEBI:57618"]
-        }
-    else:
+    excluded_mets = ['diphosphate','phosphate','phosphate [cytoplasm]','H2O','WATER','H','H+','PROTON','ATP','ADP','AMP','NADH','NADPH','NAD+','NADP+','NAD','NADP','NADH2','NADPH2','NADP(+)','NADP(H)','NAD(H)','NAD(P)H','NAD(P)','FAD','FADH2','FMN','FMNH2']
+    # Follows same order as excluded_mets
+    excluded_ids = {
+        'chebi':['CHEBI:33019','CHEBI:43474','CHEBI:15377','CHEBI:24636','CHEBI:30616',"CHEBI:456216","CHEBI:456215","CHEBI:57945","CHEBI:57783","CHEBI:57540","CHEBI:58349","CHEBI:57692","CHEBI:58307","CHEBI:58210","CHEBI:57618"]
+    }
+    if not exclude_common_mets:
         excluded_mets = []
-        excluded_ids = {}
+        # set all values in excluded_ids to empty list
+        for k in excluded_ids:
+            excluded_ids[k] = []
 
     def met_is_excluded(met):
         if met.id in excluded_mets or met.name in excluded_mets:
@@ -845,40 +891,42 @@ def find_pathways(model,target_products,flux_dict={},flux_reporting_decimals=-2,
         else:
             return False
 
-    if target_reactants == []:
-        target_reactants = [i for i in medium_mets if not(met_is_excluded(model.metabolites.get_by_id(i)))]
-        print("No reactants provided as stopping points; using medium metabolites")
+    # if target_products aren't provided, make a list of all excreted metabolites, excluding common metabolites if exclude_common_mets is True
+    if target_products in [[], None, '']:
+        target_product_rxns = secretion_rxns(model)
+        if flux_dict != {}:
+            # use flux_dict to narrow the list of secreted metabolites
+            target_product_rxns = [i for i in target_product_rxns if i.id in flux_dict.keys() and flux_dict[i.id] > 0]
+        target_products = list(dict.fromkeys([m.id for r in target_product_rxns for m in r.metabolites]))
+        if exclude_common_mets:
+            target_products = [i for i in target_products if not(met_is_excluded(model.metabolites.get_by_id(i)) or i in excluded_mets)]
+        print("No target products provided; using all secreted metabolites:",target_products)
+    filename_base = output_path + "pathways-making-"+str(target_products[0])+'-in-'+model.id
 
-    for r in rxns_to_consider:
+    if target_reactants in [[], None, '']:
+        target_reactants = [i for i in medium_mets if not(met_is_excluded(model.metabolites.get_by_id(i)) or i in target_products)]
+        print("No reactants provided as stopping points; using medium metabolites")
+    elif type(target_reactants) == str:
+        target_reactants = [target_reactants]
+
+    for r in sorted(rxns_to_consider, key=lambda x: x.id):
         reactants,products = [r.reactants,r.products] if fluxdata[fluxdata.rxn == r.id].flux.values[0] > 0 else [r.products,r.reactants]
         for product in products:
             for reactant in reactants:
                 if not(met_is_excluded(reactant)) and not(met_is_excluded(product)):
                     # uncomment line below to account for stoichiometry in the graph
-                    # flux = fluxdata[fluxdata.rxn == r.id].flux.values[0]*abs(r.get_coefficient(reactant))
                     flux = fluxdata[fluxdata.rxn == r.id].flux.values[0]*abs(r.get_coefficient(reactant))
                     label = r.id
                     if flux_reporting_decimals != -1:
                         flux_on_label = flux if flux_reporting_decimals == -2 else round(flux,flux_reporting_decimals)
-                        label = r.id + ' (' + str(flux_on_label) + ')'
+                        label = r.id + '\n(' + str(flux_on_label) + ')'
                     # add fluxes as weights to edges; weight decreases with increasing abs(flux) to emphasize higher fluxes
                     # width is set to abs(flux) for visualization
-                    G[0].add_edge(reactant.id,product.id,id=r.id,label=label,flux=flux,width=abs(flux),weight=max_flux/abs(flux))
-    # check all nodes and remove any that have no path to target products
-    def remove_unconnected_nodes(G,target_products):
-        continue_search = True
-        while continue_search:
-            nodes_removed = 0
-            for node in list(G.nodes):
-                if not nx.has_path(G,node,target_products[0]):
-                    G.remove_node(node)
-                    nodes_removed += 1
-            if nodes_removed == 0:
-                continue_search = False
-        return G
+                    G[0].add_edge(reactant.id,product.id,id=r.id,label=label,rounded_flux=flux_on_label,flux=flux,width=abs(flux),weight=max_flux/abs(flux))
 
     # set node color
     for node in G[0].nodes:
+        G[0].nodes[node]['LabelGraphics'] = {'fontSize': node_font_size}
         if node in target_reactants:
             # orange
             G[0].nodes[node]['graphics'] = {'fill': '#FFA500'}
@@ -893,12 +941,13 @@ def find_pathways(model,target_products,flux_dict={},flux_reporting_decimals=-2,
             G[0].nodes[node]['graphics'] = {'fill': '#D3D3D3'}
     # show pathways that lead to product from mets in medium
     paths = set()
-    # make new version that includes only nodes that have a path to target products
-    G.append(remove_unconnected_nodes(deepcopy(G[0]),target_products))
     # remove all self-loops
+    G.append(deepcopy(G[0]))
     G[1].remove_edges_from(nx.selfloop_edges(G[1]))
+    # make new version that includes only nodes that have a path to target products
+    G.append(remove_unconnected_nodes(deepcopy(G[1]),target_products))
     # make a new digraph with all nodes from G for the shortest pathways between target reactants and target products
-    G.append(nx.DiGraph())
+    G.append(blank_graph)
 
     global mets_checked
     mets_checked = set()
@@ -923,24 +972,56 @@ def find_pathways(model,target_products,flux_dict={},flux_reporting_decimals=-2,
                     # print("Paths from ",reactant," to ",product)
                     for path in newpaths:
                         for i in range(len(path)-1):
-                            # check if new_graph already has the edge
-                            if path[i] in new_graph.nodes and path[i+1] in new_graph.nodes:
-                                if path[i+1] in new_graph[path[i]]:
-                                    if old_graph[path[i]][path[i+1]]['label'] in new_graph[path[i]][path[i+1]]['label']:
-                                        continue
+                            if old_graph.is_multigraph():
+                                # Use the first available key for the edge between path[i] and path[i+1]
+                                keys = list(old_graph[path[i]][path[i+1]].keys())
+                                if not keys:
+                                    continue  # No edge exists
+                                key = keys[0]
                             else:
-                                # add node attributes from old_graph
-                                for new_node in [path[i],path[i+1]]:
-                                    if new_node not in new_graph.nodes:
-                                        new_graph.add_node(new_node,**old_graph.nodes[new_node])
-                            edgepath.append(old_graph[path[i]][path[i+1]]['label'])
-                            # find all edge attributes in old_graph
-                            edge_attrs = old_graph.get_edge_data(path[i],path[i+1])
+                                key = None  # for non-multigraphs
+
+                            # check if new_graph already has the edge with the same label
+                            already_present = False
+                            if path[i] in new_graph.nodes and path[i+1] in new_graph[path[i]]:
+                                if old_graph.is_multigraph():
+                                    for k2 in new_graph[path[i]][path[i+1]]:
+                                        # Compare labels to avoid duplicate edges
+                                        if old_graph[path[i]][path[i+1]][key]['label'] == new_graph[path[i]][path[i+1]][k2]['label']:
+                                            already_present = True
+                                            break
+                                else:
+                                    if old_graph[path[i]][path[i+1]]['label'] == new_graph[path[i]][path[i+1]]['label']:
+                                        already_present = True
+                            if already_present:
+                                continue
+                            # add node attributes from old_graph if not present
+                            for new_node in [path[i], path[i+1]]:
+                                if new_node not in new_graph.nodes:
+                                    new_graph.add_node(new_node, **old_graph.nodes[new_node])
+                            # Append label to edgepath
+                            if old_graph.is_multigraph():
+                                edge_label = old_graph[path[i]][path[i+1]][key]['label']
+                                edge_attrs = old_graph[path[i]][path[i+1]][key]
+                            else:
+                                edge_label = old_graph[path[i]][path[i+1]]['label']
+                                edge_attrs = old_graph[path[i]][path[i+1]]
+                            edgepath.append(edge_label)
                             # add edge to new_graph
-                            new_graph.add_edge(path[i],path[i+1])
-                            nx.set_edge_attributes(new_graph,{(path[i],path[i+1]):edge_attrs})
+                            if old_graph.is_multigraph():
+                                # Let networkx assign the key automatically
+                                new_edge_key = new_graph.add_edge(path[i], path[i+1])
+                                # Find the last added key
+                                new_keys = list(new_graph[path[i]][path[i+1]].keys())
+                                new_key = new_keys[-1]
+                                nx.set_edge_attributes(new_graph, {(path[i], path[i+1], new_key): edge_attrs})
+                                rxn_id = edge_attrs['id']
+                            else:
+                                new_graph.add_edge(path[i], path[i+1])
+                                nx.set_edge_attributes(new_graph, {(path[i], path[i+1]): edge_attrs})
+                                rxn_id = edge_attrs['id']
                             # find all reactants in each rxn on the path
-                            r = model.reactions.get_by_id(old_graph[path[i]][path[i+1]]['id'])
+                            r = model.reactions.get_by_id(rxn_id)
                             reactants,products = [r.reactants,r.products] if fluxdata[fluxdata.rxn == r.id].flux.values[0] > 0 else [r.products,r.reactants]
                             # for reactant in reactants:
                             #     if not(met_is_excluded(reactant)) and reactant.id not in possible_reactants and reactant.id not in mets_checked:
@@ -954,26 +1035,28 @@ def find_pathways(model,target_products,flux_dict={},flux_reporting_decimals=-2,
         return new_graph
 
     sys.setrecursionlimit(len(model.metabolites))
-    G[2] = simplest_pathway(G[1],G[2],target_products,target_reactants,ptf=paths_to_find)
-    G[2] = remove_unconnected_nodes(G[2],target_products)
+    G[3] = simplest_pathway(G[2],G[3],target_products,target_reactants,ptf=paths_to_find)
+    G[3] = remove_unconnected_nodes(G[3],target_products)
     # export as gml
-    filename=filename_base
+    file_path=filename_base
     for i,graph in enumerate(G):
-        nx.write_gml(graph, filename+'-G'+str(i)+".gml",stringizer=lambda x: str(x))
-    # filename=filename_base+"-simplified"
-    # nx.write_gml(G3, filename+".gml",stringizer=lambda x: str(x))
+        nx.write_gml(graph, file_path+'-G'+str(i)+".gml",stringizer=lambda x: str(x))
     for graph in [G[-1]]:
         pos=nx.spring_layout(graph)
         # nx.draw(graph, with_labels=True, node_color='yellow', edge_color='red',node_size=150)
         node_colors = [nx.get_node_attributes(graph, 'graphics')[node]['fill'] for node in graph.nodes]
         nx.draw_networkx(graph, pos, node_color=node_colors, with_labels=True, node_size=150)
-        edge_labels = nx.get_edge_attributes(graph,'label')
-        nx.draw_networkx_edge_labels(graph, pos, edge_labels=edge_labels, label_pos=0.5,font_size=6,verticalalignment='top',rotate=False,font_color='red')
+        # Only draw edge labels if not a multigraph
+        if not graph.is_multigraph():
+            edge_labels = nx.get_edge_attributes(graph,'label')
+            nx.draw_networkx_edge_labels(graph, pos, edge_labels=edge_labels, label_pos=0.5,font_size=edge_font_size,verticalalignment='top',rotate=False,font_color='red')
+        else:
+            print("Skipping edge labels: draw_networkx_edge_labels does not support multiedges.")
         # nx.draw_networkx(graph, pos=nx.spring_layout(graph), node_color=nx.get_node_attributes(graph,'graphics'), with_labels=True,node_size=150)
         # draw edge labels
         print("Nodes: ",graph.number_of_nodes())
         print("Edges: ",graph.number_of_edges())
-    # nx.write_gexf(G, filename+".gexf")
+    # nx.write_gexf(G, file_path+".gexf")
     return G
 
 def find_pathways_without_graph(model,product_id,reactant_ids=None,flux_data=None,exclude_common_mets=True,stop_at_first=True,rxns_considered=None,pathways={}):
@@ -1352,9 +1435,11 @@ def make_dummy_protein_stoich(length = 100, aa_standards_df = None, prot_df = No
                 f.write("'" + met + "'.'" + rxn_name + "' " + str(prot_st[met]) + "\n")
     return prot_st
 
-def read_spreadsheet(path):
+def read_spreadsheet(path,*args,**kwargs):
+    """Make Pandas DataFrame from spreadsheet/table, automatically detecting the right file format.
+    \nUnlike read_table, allows arguments found only in read_excel."""
     import pandas as pd
     if path.endswith('.xlsx'):
-        return pd.read_excel(path)
+        return pd.read_excel(path,*args,**kwargs)
     else:
-        return pd.read_csv(path)
+        return pd.read_table(path,*args,**kwargs)

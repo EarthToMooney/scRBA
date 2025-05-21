@@ -1,6 +1,6 @@
-******** Find max flux range constrained by RBA model ********
+************************* Run RBA model ********************
 *       Authors: (v1) Hoang Dinh, (v2) Eric Mooney
-**************************************************************
+************************************************************
 
 $INLINECOM /*  */
 $include "./runRBA_GAMS_settings.txt"
@@ -8,22 +8,24 @@ $include "./runRBA_GAMS_settings.txt"
 $setGlobal nscale 1e5
 
 * Optional constraint on allowed proteome allocation to mitochondrial proteins (disable by setting to 1)
-$setGlobal max_allowed_mito_proteome_allo_fraction 0.065
+$setGlobal max_allowed_mito_proteome_allo_fraction 1
 
 * Ribosome efficiency
 $setGlobal kribonuc 13.2*3600
 $setGlobal kribomito 13.2*3600
 
 * Enforce part of proteome allocate to non-modeled protein
-$setGlobal nonmodeled_proteome_allocation 0.45
+$setGlobal nonmodeled_proteome_allocation 0
+* default carbon slack (disabled by default)
+$setGlobal carbonSlack 0
 
 options
-	LP = soplex /*Solver selection*/
+	LP = cplex /*Solver selection*/
 	limrow = 0 /*number of equations listed, 0 is suppresed*/
 	limcol = 0 /*number of variables listed, 0 is suppresed*/
 	iterlim = 1000000 /*iteration limit of solver, for LP it is number of simplex pivots*/
 	decimals = 8 /*decimal places for display statement*/
-	reslim = 1000000 /*wall-clock time limit for solver in seconds*/
+	reslim = 600 /*wall-clock time limit for solver in seconds*/
 	sysout = on /*solver status file report option*/
 	solprint = on /*solution printing option*/
         
@@ -46,6 +48,8 @@ media(j) /*list of allowable uptake based on simulated media conditions*/
 $include "%media_path%"
 rxns_biomass(j)
 $include "%biomass_path%"
+rxns_add(j) /*list of heterologous rxns added for RBA model application*/
+$include "%rxns_add_path%"
 ;
 
 Parameters
@@ -76,21 +80,26 @@ v.fx(j)$prowaste(j) = 0; v.up('PROWASTE-TOTALPROTEIN') = inf; v.up('PROWASTE-PRO
 * Disable all biomass reactions
 * Condition-specific biomass reaction activation has to be done in phenotype.txt file
 v.fx(j)$rxns_biomass(j) = 0;
+* Turn off all heterologous rxns rxns_add
+* Corresponding rxns for specific product will be turned on in phenotype.txt file
+v.up(j)$rxns_add(j) = 0;
+
 * Media
 v.up(j)$uptake(j) = 0;
 v.up(j)$media(j) = 1e3 * %nscale%;
 
+$include "phenotype.txt"
+
 * Set your NGAM in phenotype.txt since NGAM value depends on growth-condition
 * Set your biomass composition in phenotype.txt since biomass composition depends on growth-condition
-$include "phenotype.txt"
 
 *** EQUATION DEFINITIONS ***
 Equations
-Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo, ModelProtAlloCorrection
+Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo
 $include %enz_cap_declares_path%
 ;
 
-$include obj.txt
+Obj..			z =e= -v('%vprod%');
 Stoic(i)..		sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityMito.. 	v('RIBOSYN-ribomito') * %kribomito% =e= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
 RiboCapacityNuc.. 	v('RIBOSYN-ribonuc') * %kribonuc% =e= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
@@ -100,29 +109,59 @@ $include %enz_cap_eqns_path%
 
 *** BUILD OPTIMIZATION MODEL ***
 Model rba
-/Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo, ModelProtAlloCorrection
-$include %enz_cap_declares_path%
-/;
+/all/;
 rba.optfile = 1;
 
 *** SOLVE ***
-Solve rba using lp maximizing z;
+*Solve rba using lp minimizing z;
 
-file ff /runRBA.modelStat.txt/;
+* If not optimal, find lowest uptakes that still allow optimal growth and exp. yields
+* Retry while relaxing uptake upper bounds via slack variables, then minimize their sum
+* Included in case uptake rate estimates are inaccurate.
+
+* save current uptake bounds as parameters
+Parameter 
+v_up(j)
+;
+v_up(j) = v.up(j);
+* allow all possible uptakes in medium to reach max flux
+v.up(j)$(uptake(j)) = 1e10 * %nscale%;
+
+Variables 
+slack(j), slacksum
+;
+* default
+slack.fx(j) = 0;
+* allow slack for uptakes
+slack.up(j)$(uptake(j)) = 1e10 * %nscale%;
+*slack.lo(j)$(uptake(j) and v.up(j) gt 0) = 0 * %nscale%;
+* use initial uptake bounds as slack for other reactions
+*$include "RBA_GAMS_defaults_from_FBA_initial.txt"
+Equations slackcons, slackobj;
+slackcons(j)$(slack.up(j) ne 0).. v(j) =l= v_up(j) + slack(j);
+slackobj.. slacksum =e= sum(j, slack(j));
+Model rba_slack /all/;
+
+rba_slack.optfile = 1;
+Solve rba_slack using lp minimizing slacksum;
+
+file ff /%system.FN%.modelStat.txt/;
 put ff;
 put rba.modelStat/;
 putclose ff;
 
-file ff2 /objval.txt/;
+file ff2 /%system.FN%.flux.txt/;
 put ff2;
-put (z.l / %nscale%):0:8/;
-putclose ff2;
-
-file ff3 /runRBA.flux.txt/;
-put ff3;
 loop(j,
 	if ( (v.l(j) gt 0),
 		put j.tl:0, system.tab, 'v', system.tab, (v.l(j) / %nscale%):0:15/;
 	);
 );
-putclose ff3;
+putclose ff2;
+
+* write slacks and uptakes to file
+file ff3 /%system.FN%.slack.txt/;
+put ff3;
+loop(j$(uptake(j) and v.up(j) gt 0),
+	put j.tl:0, system.tab, (v.l(j) / %nscale%):0:15, system.tab, 'slack', system.tab, slack.l(j):0:15/;
+);

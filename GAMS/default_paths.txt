@@ -1,0 +1,47 @@
+$if not setGlobal model_root_path $setGlobal model_root_path ../../
+$if not setGlobal gms_path $setGlobal gms_path %model_root_path%GAMS/model/
+$setGlobal empty_path %model_root_path%empty_file_for_paths.txt
+* null set '//' for more compact set definitions
+$setGlobal null_path %model_root_path%null_set.txt
+
+$setGlobal biomass_path %gms_path%RBA_rxns_whole_biomass.txt
+
+$setGlobal species_path %gms_path%RBA_species.txt
+$setGlobal pro_path %gms_path%proteins.txt
+$setGlobal aa_path %gms_path%aa.txt
+$setGlobal tRNA_path %gms_path%tRNAs.txt
+$setGlobal rxns_path %gms_path%RBA_rxns.txt
+$setGlobal genes_path %gms_path%genes.txt
+$setGlobal expression_path %gms_path%genes_expression.txt
+$setGlobal prosyn_path %gms_path%RBA_rxns_prosyn.txt
+$setGlobal proteins_and_locations_path %gms_path%proteins_and_locations.txt
+$setGlobal sm_rxns_path %gms_path%SM_rxn_ids.txt
+$setGlobal sm_rxn_pairs_path %gms_path%SM_RBA_rxn_pairs.txt
+$setGlobal sm_rxn_bounds_path %gms_path%SM_rxn_bounds.txt
+$setGlobal prot_mass_flux_path %null_path%
+$setGlobal prowaste_from_pro_with_data_path %empty_path%
+$setGlobal prowaste_from_pro_without_data_path %empty_path%
+$setGlobal prowaste_path %gms_path%RBA_rxns_prowaste.txt
+$setGlobal ribosomes_path %gms_path%ribosomes.txt
+$setGlobal kribo_path %gms_path%kribo.txt
+$setGlobal j_ribo_path %gms_path%j_ribo.txt
+$setGlobal translation_path %gms_path%translation.txt
+$setGlobal trans_by_any_ribo_path %gms_path%translated_by_any_ribo.txt
+$setGlobal uptake_path %gms_path%RBA_rxns_EXREV.txt
+$setGlobal media_path %gms_path%RBA_rxns_EXREV_YNB_RabinowitzVersion.txt
+$setGlobal sij_path %gms_path%RBA_sij.txt
+$setGlobal prolen_path %gms_path%RBA_proteinLength.txt
+$setGlobal kapp_path %gms_path%kapp_placeholders.txt
+$setGlobal enz_cap_declares_path %gms_path%RBA_enzCapacityConstraints_declares.txt
+$setGlobal enz_cap_eqns_path %gms_path%RBA_enzCapacityConstraints_eqns_equality_version.txt
+$setGlobal kapp_slack_enz_cap_eqns_path %gms_path%kapp-slack-RBA_enzCapacityConstraints_eqns_equality_version.txt
+$setGlobal phenotype_default_paths_path %model_root_path%GAMS/phenotype_default_paths.txt
+$setGlobal phenotype_default_path %model_root_path%GAMS/phenotype_default.txt
+$setGlobal phenotype_path phenotype.txt
+$setGlobal metabolism_path %gms_path%RBA_rxns_rxnmetabolicnetwork.txt
+$setGlobal enzsyn_path %gms_path%RBA_rxns_enzsyn.txt
+$setGlobal enzload_path %gms_path%RBA_rxns_enzload.txt
+$setGlobal enzload_rxn_coupling_path %gms_path%RBA_rxn_enzload_coupling.txt
+$setGlobal ribosyn_path %gms_path%RBA_rxns_ribosyn.txt
+$setGlobal biosyn_path %gms_path%RBA_rxns_biosyn.txt
+

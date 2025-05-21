@@ -1,0 +1,16 @@
+* all default paths specific to your model and preferred phenotype
+* all other phenotype-specific settings go in phenotype_default.txt
+$setGlobal pheno_root_path %model_root_path%parameterization/kapp/datasets/Shen2024_batchGlc_with_MFA/
+$setGlobal pheno_path %pheno_root_path%phenotype.txt
+$setGlobal kapp_path %pheno_root_path%kapps_RBA.txt
+
+$set path %pheno_root_path%kribo.txt
+$if exist path $setGlobal kribo_path %path%
+* PROWASTE fluxes used during kapp calculations
+* unless specified otherwise (e.g., in test_kapp.gms), include prosyn constraints to reflect production of unused proteins; comment out if using dummy protein instead
+$ifThen not %ignore_measured_unused_constraints%==1
+$set path %pheno_root_path%prowaste_from_pro_with_data.txt
+$if exist path $setGlobal prowaste_from_pro_with_data_path %path%
+$set path %pheno_root_path%prowaste_from_pro_without_data.txt
+$if exist path $setGlobal prowaste_from_pro_without_data_path %path%
+$endif

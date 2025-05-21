@@ -1,15 +1,19 @@
-* Run RBA model
+************************* Run RBA model ********************
+*       Authors: (v1) Hoang Dinh, (v2) Eric Mooney
+************************************************************
 
 $INLINECOM /*  */
 $include "./runRBA_GAMS_settings.txt"
 * Scale values of all variables by a factor, then when write to file, descale them
 $setGlobal nscale 1e5
 
+
+
 * Optional constraint on allowed proteome allocation to mitochondrial proteins 
 ** (disable by setting to 1, enable in phenotype.txt file to ensure consistent behavior in subsequent models)
 $setGlobal max_allowed_mito_proteome_allo_fraction 1
 
-* Default value for ribosome efficiency
+* Ribosome efficiency
 $setGlobal kribonuc 13.2*3600
 $setGlobal kribomito 13.2*3600
 
@@ -46,6 +50,8 @@ media(j) /*list of allowable uptake based on simulated media conditions*/
 $include "%media_path%"
 rxns_biomass(j)
 $include "%biomass_path%"
+rxns_add(j) /*list of heterologous rxns added for RBA model application*/
+$include "%rxns_add_path%"
 ;
 
 Parameters
@@ -81,16 +87,21 @@ v.fx(j)$rxns_biomass(j) = 0;
 v.up(j)$uptake(j) = 0;
 v.up(j)$media(j) = 1e3 * %nscale%;
 
+* Turn off all heterologous rxns rxns_add
+* Corresponding rxns for specific product will be turned on in phenotype.txt file
+v.up(j)$rxns_add(j) = 0;
+v.up('%vprod%') = 1e3 * %nscale%;
+
 $include "%phenotype_path%"
 * Set all organism-specific and/or condition-specific parameters in phenotype.txt (e.g., NGAM and biomass composition)
 
 *** EQUATION DEFINITIONS ***
 Equations
-Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo
+Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo, ModelProtAlloCorrection
 $include %enz_cap_declares_path%
 ;
 
-Obj..			z =e= v('BIOSYN-PROTMODELED');
+Obj..			z =e= -v('%vprod%');
 Stoic(i)..		sum(j, S(i,j)*v(j)) =e= 0;
 RiboCapacityMito.. 	v('RIBOSYN-ribomito') * %kribomito% =e= %mu% * sum(j$mito_translation(j), NAA(j) * v(j));
 RiboCapacityNuc.. 	v('RIBOSYN-ribonuc') * %kribonuc% =e= %mu% * sum(j$nuc_translation(j), NAA(j) * v(j));
@@ -100,7 +111,7 @@ $include %enz_cap_eqns_path%
 
 *** BUILD OPTIMIZATION MODEL ***
 Model rba
-/Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo
+/Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo, ModelProtAlloCorrection
 $include %enz_cap_declares_path%
 /;
 rba.optfile = 1;

@@ -1,15 +1,18 @@
-* Run RBA model
+************************* Run RBA model ********************
+*       Authors: (v1) Hoang Dinh, (v2) Eric Mooney
+************************************************************
 
 $INLINECOM /*  */
 $include "./runRBA_GAMS_settings.txt"
 * Scale values of all variables by a factor, then when write to file, descale them
 $setGlobal nscale 1e5
+$setGlobal mu 0.1
 
 * Optional constraint on allowed proteome allocation to mitochondrial proteins 
 ** (disable by setting to 1, enable in phenotype.txt file to ensure consistent behavior in subsequent models)
 $setGlobal max_allowed_mito_proteome_allo_fraction 1
 
-* Default value for ribosome efficiency
+* Ribosome efficiency
 $setGlobal kribonuc 13.2*3600
 $setGlobal kribomito 13.2*3600
 
@@ -43,7 +46,7 @@ $include "%mito_trans_path%"
 uptake(j) /*list of uptake so that all of them are properly turned off*/
 $include "%uptake_path%"
 media(j) /*list of allowable uptake based on simulated media conditions*/
-$include "%media_path%"
+$include "../../build_model/model/RBA_rxns_EXREV_minimal.txt"
 rxns_biomass(j)
 $include "%biomass_path%"
 ;
@@ -77,12 +80,12 @@ v.fx(j)$prowaste(j) = 0; v.up('PROWASTE-TOTALPROTEIN') = inf; v.up('PROWASTE-PRO
 * Condition-specific biomass reaction activation has to be done in phenotype.txt file
 v.fx(j)$rxns_biomass(j) = 0;
 
+$include "%phenotype_path%"
+* Set all organism-specific and/or condition-specific parameters in phenotype.txt (e.g., NGAM and biomass composition)
+
 * Media
 v.up(j)$uptake(j) = 0;
 v.up(j)$media(j) = 1e3 * %nscale%;
-
-$include "%phenotype_path%"
-* Set all organism-specific and/or condition-specific parameters in phenotype.txt (e.g., NGAM and biomass composition)
 
 *** EQUATION DEFINITIONS ***
 Equations
@@ -100,20 +103,18 @@ $include %enz_cap_eqns_path%
 
 *** BUILD OPTIMIZATION MODEL ***
 Model rba
-/Obj, Stoic, RiboCapacityNuc, RiboCapacityMito, NonModelProtAllo, MitoProtAllo
-$include %enz_cap_declares_path%
-/;
+/all/;
 rba.optfile = 1;
 
 *** SOLVE ***
 Solve rba using lp minimizing z;
 
-file ff /%system.FN%.modelStat.txt/;
+file ff /runRBA.modelStat.txt/;
 put ff;
 put rba.modelStat/;
 putclose ff;
 
-file ff2 /%system.FN%.flux.txt/;
+file ff2 /runRBA.flux.txt/;
 put ff2;
 loop(j,
 	if ( (v.l(j) gt 0),
