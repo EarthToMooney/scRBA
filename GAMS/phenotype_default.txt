@@ -1,12 +1,22 @@
 * all default settings (except paths run at start) specific to your model and preferred phenotype
 * if different values needed for specific tasks, make a separate phenotype.txt file for them
-$setGlobal vglc 5.3317693
+* mmol/gDCW/h
+$setGlobal vglc 28.24 
+
 * biomass rxn
-$setGlobal bio 'BIOSYN-BIODILAERO'
+$setGlobal bio 'BIOSYN-BIODILAERO-NOGAM'
 * growth rate
-* mu from atom mapping model (slightly higher than stated value from exp. data): $setGlobal mu 0.3865768
-$setGlobal mu 0.38
+$setGlobal mu 0.367
+*$setGlobal mu 0.3909
 v.fx('%bio%') = %mu%;
+* Carbohydrate, RNA, and protein fraction constraints
+* No info found for CEN.PK full biomass comp. aside from protein, so I used FY4 batch info since it was similar in protein content
+v.up('BIOSYN-CARBTOBIO') = %mu% * (0.2964 + 0.0001);
+*v.up('BIOSYN-PROTTOBIO') = %mu% * 0.58069;
+v.up('BIOSYN-RNATOBIO') = %mu% * (0.0819 + 0.0001);
+
+* NGAM + GAM
+v_sm.lo('ATPM_c') = (1 + (%mu% * 2.088));
 
 * included in model-version-settings:
 * max_allowed_mito_proteome_allo_fraction
@@ -16,23 +26,38 @@ $include %gms_path%model-version-settings.txt
 * From scRBA: Disable FADH2 transport across mitochondrial membrane. Enable this creates fumarate-succinate shuttle that enables proton gradient generation
 v_sm.fx('FADH2t_c_m') = 0; 
 
-v_sm.lo('EX_fe3_e') = -%vmax%;
-
 * Substrate and oxygenation
-v_sm.up('EX_glc__D_e') = 0;
+v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0;
 v_sm.lo('EX_glc__D_e') = -%vglc%;
 
-v_sm.lo('EX_o2_e') = -15.9690437;
-v_sm.up('EX_o2_e') = -15.9678423;
+v.up('RXN-EX_o2_e_REV-SPONT') = (5.58 + 0.18);
+v.fx('RXN-EX_o2_e_FWD-SPONT') = 0;
 
-* Ban secretions that weren't detected: ethanol, acetate, succinate, glycerol
-v_sm.up('EX_etoh_e') = 0;
-v_sm.up('EX_ac_e') = 0;
-v_sm.up('EX_succ_e') = 0;
-v_sm.up('EX_glyc_e') = 0;
+v.fx('RXN-EX_co2_e_REV-SPONT') = 0;
 
-kribo('c') = (6.6+7.6+.02)*3600;
-kribo('m') = (6.6+5.6)*3600;
+* Secretions (exp. measured)
+** ethanol
+v.lo('RXN-EX_etoh_e_FWD-SPONT') = (44.30 - 4.84);
+v.fx('RXN-EX_etoh_e_REV-SPONT') = 0;
+** acetate
+v.up('RXN-EX_ac_e_FWD-SPONT') = 0.01;
+** succinate
+v.lo('RXN-EX_succ_e_FWD-SPONT') = 0;
+v.up('RXN-EX_succ_e_FWD-SPONT') = 0.01;
+** glycerol
+v.lo('RXN-EX_glyc_e_FWD-SPONT') = (2.14 - 0.34);
+
+* Ribosome efficiency
+* old versions
+$setGlobal kribonuc 10.5*3600 * (13.6 / 10.5)
+$setGlobal kribomito 10.5*3600 * (13.2 / 10.5)
+* new versions
+kribo('c') = 10.5*(13.6 / 10.5)*3600;
+kribo('m') = 10.5*(13.2 / 10.5)*3600;
+
+* Open FUM_m flux
+v.up('RXN-FUM_m_FWD-YPL262W_m') = %vmax%;
+v.up('RXN-FUM_m_REV-YPL262W_m') = %vmax%;
 
 * (disable since I now try to fill unmeasured proteome during kapp calculations) extra dummy protein for 0.3% of proteome not identified in measurements
 *Equation dummyUnidentified; dummyUnidentified.. v('PROSYN-PROTDUMMYUNIDENTIFIED') =e= 0.003 * v('BIOSYN-PROTTOBIO');

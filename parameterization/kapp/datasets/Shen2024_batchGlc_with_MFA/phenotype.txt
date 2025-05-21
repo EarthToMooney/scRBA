@@ -3,77 +3,16 @@
 * are measured
 * Note: If infeasible, relax constraints and parameters by up to 10%
 
-* Growth rate
-$setGlobal mu 0.367
-*$setGlobal mu 0.3909
-$setGlobal vglc 28.24 
-$setGlobal biom 'BIOSYN-BIODILAERO-NOGAM'
-v.fx('%biom%') = %mu% * %nscale%;
-
-sets 
-pro_ribonuc
-$include "%model_root_path%GAMS/model/pro_ribo_subunits_c.txt"
-pro_ribomito
-$include "%model_root_path%GAMS/model/pro_ribo_subunits_m.txt"
-;
-* exp. protein abundances enforced for all proteins (except ribosome subunits, which can exceed theirs) as in earlier scRBA versions
-$setGlobal prosynSlackAllow 1e20 
-prosynSlackLB.up(pro) = 0;
-prosynSlackUB.up(pro) = 0;
-prosynSlackUB.up(pro)$pro_ribonuc(pro) = %prosynSlackAllow%;
-prosynSlackUB.up(pro)$pro_ribomito(pro) = %prosynSlackAllow%;
-
-* NGAM + GAM
-v.lo('RXN-ATPM_c_FWD-SPONT') = (1 + (%mu% * 2.088)) * %nscale%;
-* NGAM
-*v.lo('RXN-ATPM_c_FWD-SPONT') = 0 * %nscale%;
-*v.lo('RXN-ATPM_c_FWD-SPONT') = 1 * %nscale%;
-*v.lo('RXN-ATPM_c_FWD-SPONT') = 3.088 * %nscale%;
-
-* Ribosome efficiency
-$setGlobal kribonuc 10.5*3600 * (13.6 / 10.5)
-$setGlobal kribomito 10.5*3600 * (13.2 / 10.5)
-
 * Enforce part of proteome allocate to non-modeled protein
 * $setGlobal nonmodeled_proteome_allocation 0.3973029017641598
 * turn dummy protein off; now replaced by the proteins it represents
-*$setGlobal nonmodeled_proteome_allocation 0
-*$setGlobal max_allowed_mito_proteome_allo_fraction 0.068275095583055
-
-* Carbohydrate, RNA, and protein fraction constraints
-* No info found for CEN.PK full biomass comp. aside from protein, so I used FY4 batch info since it was similar in protein content
-v.up('BIOSYN-CARBTOBIO') = %mu% * (0.2964 + 0.0001) * %nscale%;
-*v.up('BIOSYN-PROTTOBIO') = %mu% * 0.58069 * %nscale%;
-v.up('BIOSYN-RNATOBIO') = %mu% * (0.0819 + 0.0001) * %nscale%;
-
-* Substrate and oxygenation
-v.up('RXN-EX_glc__D_e_REV-SPONT') = %vglc% * %nscale%;
-v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0 * %nscale%;
-
-v.up('RXN-EX_o2_e_REV-SPONT') = (5.58 + 0.18) * %nscale%;
-v.fx('RXN-EX_o2_e_FWD-SPONT') = 0 * %nscale%;
-
-* Secretions (exp. measured)
-v.lo('RXN-EX_etoh_e_FWD-SPONT') = (44.30 - 4.84) * %nscale%;
-v.fx('RXN-EX_etoh_e_REV-SPONT') = 0 * %nscale%;
-v.fx('RXN-EX_co2_e_REV-SPONT') = 0;
-** acetate
-v.lo('RXN-EX_ac_e_FWD-SPONT') = 0.00;
-v.up('RXN-EX_ac_e_FWD-SPONT') = 0.01;
-** succinate
-v.lo('RXN-EX_succ_e_FWD-SPONT') = 0;
-v.up('RXN-EX_succ_e_FWD-SPONT') = 0.01;
-** glycerol
-v.lo('RXN-EX_glyc_e_FWD-SPONT') = (2.14 - 0.34);
-
-* Open FUM_m flux
-v.up('RXN-FUM_m_FWD-YPL262W_m') = %vmax% * %nscale%;
-v.up('RXN-FUM_m_REV-YPL262W_m') = %vmax% * %nscale%;
+* $setGlobal nonmodeled_proteome_allocation 0
+* $setGlobal max_allowed_mito_proteome_allo_fraction 0.068275095583055
 
 * Disable these pathways that draw massive flux away from the TCA cycle in pFBA.
 * This pathway carrying large flux seems unrealistic
 * Disable formate dehydrogenase (still allow equivalent of 1% glucose uptake by value in case formate balance is required for growth)
-*v.up('RXN-FDH_c_FWD-YOR388C') = 0.01 * %vglc% * %nscale%;
+* v.up('RXN-FDH_c_FWD-YOR388C') = 0.01 * %vglc% * %nscale%;
 * Disable GABA shunt (still allow equivalent of 1% glucose uptake by value in case succinate balance is required for growth)
 * v.up('RXN-ABTA_c_FWD-YGR019W') = 0.01 * %vglc% * %nscale%;
 * Totally unrelated reactions that form transhydrogenase cycle
