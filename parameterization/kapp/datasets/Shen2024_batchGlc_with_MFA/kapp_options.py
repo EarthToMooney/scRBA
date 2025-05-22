@@ -56,7 +56,7 @@ df_raw.index = df_raw['geneID'].to_list() # name of protein
 # If encountering issues with averaging multiple replicates, could try using only one column in case the average results in an infeasible AA composition
 cols_data = ['replicate 1 normalized to robustly detected frac (93.6%)'] # where protein abundance data is stored
 uniprot_col = 'Entry' # set to '' if no column with accession names provided
-data_uses_biomass_mass_fraction = False # True if using units like g protein/gDW, False if using g/g protein
+proteomics_units = 'g/g protein' # supported options: 'g/g protein' (originally built with this in mind), 'g/gDW'
 use_ribo_data = False # False to ignore ribosome subunit abundance data (still used for MPFS constraints)
 find_kribo = False # if true, runs kribo bisection
 

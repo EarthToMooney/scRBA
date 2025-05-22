@@ -1,6 +1,16 @@
 # update model-specific settings in kapp_options.py
 from kapp_options import *
 
+def convert_protein_abundance(abundance, output_units):
+    if proteomics_units == output_units:
+        return abundance
+    elif proteomics_units == 'g/g protein' and output_units == 'g/gDW':
+        return abundance * ptot
+    elif proteomics_units == 'g/gDW' and output_units == 'g/g protein':
+        return abundance / ptot
+    else:
+        raise ValueError("Invalid units specified. Use 'g/g protein' or 'g/gDW'.")
+
 aa_map = pd.read_csv(aa_mapping_path, sep='\t')
 aa_dict = dict(zip(aa_map['aa_abbv'], aa_map['MW']))
 
@@ -96,7 +106,9 @@ if recalculate_nonmodeled_proteome_allocation:
             mw = 0
             # print(i, "not in df_prot")
             # add to dummy protein and nonmodeled proteome allocation calculations
-            nonmodeled_proteome_allocation += df_raw.loc[i, cols_data].sum()
+            c_avg = np.mean(df_raw.loc[i, cols_data])
+            avg_abundance = convert_protein_abundance(c_avg, 'g/g protein')
+            nonmodeled_proteome_allocation += avg_abundance
             # check nonmodeled_proteins for sequence, MW, and conc
             for p in nonmodel_proteins:
                 if p['id'] == i:
@@ -127,7 +139,7 @@ if recalculate_nonmodeled_proteome_allocation:
                     # convert this excel formula into a method of determining protein mass: =SUMPRODUCT((LEN([@sequence])-LEN(SUBSTITUTE([@sequence],{"A";"C";"D";"E";"F";"G";"H";"I";"K";"L";"M";"N";"P";"Q";"R";"S";"T";"V";"W";"Y"},""))),{72.08;104.14;115.08;129.11;148.17;58.05;138.14;114.16;130.18;114.16;132.2;115.1;98.12;129.13;158.19;88.08;102.1;100.13;187.21;164.17})/1000
                     mw = sum([len(seq) - len(seq.replace(aa, '')) for aa in aa_dict] * np.array(list(aa_dict.values()))) / 1000
                     # abundance / wt.
-                    conc = df_raw.loc[i, cols_data[0]]
+                    conc = convert_protein_abundance(c_avg, 'g/gDW')
                     # with open('./nonmodeled_proteins.json', 'a') as f:
                     #     f.write(str({'id':i,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc}))
                     nonmodel_proteins.append({'id':i,'gene_src':gene_src,'URL':url,'sequence':seq,'MW (g/mmol)':mw,'conc (g/gDW)':conc})
@@ -138,7 +150,7 @@ if recalculate_nonmodeled_proteome_allocation:
                     dummy_protein['AA abundances'][aa] += (((len(seq) - len(seq.replace(aa, ''))) / len(seq)) * conc / mw)
         else:
             seq = df_prot.loc[i, 'sequence']
-            conc = df_raw.loc[i, cols_data[0]]
+            conc = convert_protein_abundance(c_avg, 'g/gDW')
             mw = df_prot.loc[i, 'MW (g/mmol)']
         if seq == '' or conc == 0 or mw == 0:
             print(i, conc, mw, seq)
@@ -240,8 +252,8 @@ for i in df_data.index:
         # # c_avg = data
         mw = df_prot.loc[i, 'MW (g/mmol)']
         df_data.loc[i, 'c_avg'] = c_avg
-        df_data.loc[i, 'conc (g/gDW)'] = c_avg * ptot
-        df_data.loc[i, 'vtrans (mmol/gDW/h)'] = mu * c_avg * ptot / mw
+        df_data.loc[i, 'conc (g/gDW)'] = convert_protein_abundance(c_avg, 'g/gDW')
+        df_data.loc[i, 'vtrans (mmol/gDW/h)'] = mu * df_data.loc[i, 'conc (g/gDW)'] / mw
         df_data.loc[i, 'type'] = 'truedata_enz'
         
         if i in ribo_dict.keys():

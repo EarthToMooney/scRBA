@@ -23,7 +23,7 @@ Solve kapp_calc using lp minimizing fluxSum_j_NP;
 put log; put 'minimized fluxSum_j_NP'/; putclose;
 if (kapp_calc.modelStat ne 1, abort.noError "no optimal solution found";);
 * force rxns that were turned off to stay off
-v.fx(j)$(rxns_with_no_prodata(j) and (v.l(j) eq 0)) = 0;
+*v.fx(j)$(rxns_with_no_prodata(j) and (v.l(j) eq 0)) = 0;
 
 fluxSum_j_NP.up = fluxSum_j_NP.l + %epsilon%;
 

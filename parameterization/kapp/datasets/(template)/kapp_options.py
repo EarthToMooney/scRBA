@@ -52,7 +52,7 @@ df_raw.index = df_raw['IDs in model, or uniprot IDs if not found'].to_list() # n
 # df_raw.columns = df_raw.iloc[0]
 cols_data = ['REF_P1_g_per_g_prot'] # where protein abundance data is stored
 uniprot_col = 'all uniprot matches' # set to '' if no column with accession names provided
-data_uses_biomass_mass_fraction = False # True if using units like g protein/gDW, False if using g/g protein
+proteomics_units = 'g/g protein' # supported options: 'g/g protein' (originally built with this in mind), 'g/gDW'
 use_ribo_data = False # False to ignore ribosome subunit abundance data # False to ignore ribosome subunit abundance data (still used for MPFS constraints)
 find_kribo = True # if true, runs kribo bisection
 
