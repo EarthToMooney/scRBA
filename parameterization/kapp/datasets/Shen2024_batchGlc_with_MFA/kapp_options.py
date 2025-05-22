@@ -35,9 +35,9 @@ aa_map = pd.read_csv(aa_mapping_path, sep='\t')
 aa_dict = dict(zip(aa_map['aa_abbv'], aa_map['MW']))
 
 # for flux data; keep path blank if none provided
-flux_path = ''
-col_LB = 'mfaLB'
-col_UB = 'mfaUB'
+flux_path = '../raw_data_files/SC_MFA_flux_CENPK_batch_Rabinowitz.xlsx'
+col_LB = 'pfba'
+col_UB = 'pfba'
 
 # must match the growth rate in other files 
 # 	may help to add or subtract measurement error in the value itself, for future reference (e.g., mu = 0.060 - 0.001, not mu = 0.059)

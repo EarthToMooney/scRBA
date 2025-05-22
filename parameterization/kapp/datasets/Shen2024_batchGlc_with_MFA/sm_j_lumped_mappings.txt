@@ -1,2 +1,25 @@
 /
+*Uncomment lines to use them (e.g., if v=0 for 'DGAT', which represents 'DGAT_c' and 'DGAT_m', line should be "'DGAT'.('DGAT_c','DGAT_m') 0")
+*'ACt_c_m'.('','') -1e-07
+'AGPAT_c'.('AGPAT_l','AGPAT_rm') 0.02041779613600235
+'CA2t_c_e'.('CA2tps_c_e') 0.0005028493753164491
+'CU2t_c_e'.('CUtps_c_e') 4.46e-05
+'DGAT_c'.('DGAT_l','DGAT_rm') 0.002670263129110444
+'G3PAT_c'.('G3PAT_l','G3PAT_rm') 0.02041779613600235
+'MG2t_c_e'.('MG2tps_c_e') 0.02487149316932611
+'MN2t_c_e'.('MN2tps_c_e') 3.67557086156658e-05
+'PAP_c'.('PAP_rm','PAP_vm','PAP_gm') 0.001172663512110444
+'PSD_c'.('PSD_vm','PSD_mm','PSD_gm') 0.0127389811807423
+'STATg_c'.('STATg161_rm','STATg181_rm') 0.002650321202095561
+'ZN2t_c_e'.('ZN2tps_c_e') 0.0006162446465775457
+*'lumpFACOA160_c'.('','') 0.0497277366297585
+*'lumpFACOA180_c'.('','') 0.01348187843691789
+*'lumpFACOA200_c'.('','') 0.001497599617
+*'lumpFACOA220_c'.('','') 0.001497599617
+*'lumpFACOA240_c'.('','') 0.001497599617
+*'lumpFACOA260_c'.('','') 0.0007487998085
+*'lumpIPC_c'.('','') 0.00037439990425
+*'lumpFREEFA_c'.('','') 0.0005763607925477807
+*'G5SADr_m'.('','') 1e-07
+*'P5CD2_m'.('','') 1e-07
 /
