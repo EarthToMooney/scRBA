@@ -1657,6 +1657,8 @@
 'RNDR2_n'
 'RNDR3_c'
 'RNDR3_n'
+'RNDR4_c'
+'RNDR4_n'
 'RNMK_c'
 'RPE_c'
 'RPI_c'
