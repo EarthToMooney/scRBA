@@ -33,13 +33,13 @@ df_flux.index = df_flux['id'].to_list()
 # make GAMS file for flux data
 # write ID, then lower bound (-vmax if none) and upper bound (vmax if none)
 with open('./v_exp_lb.txt', 'w') as f, open('./v_exp_ub.txt', 'w') as f2, open('./sm_j_lumped.txt', 'w') as f3, open('./sm_j_lumped_mappings.txt', 'w') as f4:
-    f.write('/\n'); f2.write('/\n'); f3.write('/\n'); f4.write('/\n')
+    f.write('/\n'); f2.write('/\n'); f3.write("/\n'placeholder'\n"); f4.write('/\n*Uncomment lines to use them (e.g., if v=0 for \'DGAT\', which represents \'DGAT_c\' and \'DGAT_m\', line should be "\'DGAT\'.(\'DGAT_c\',\'DGAT_m\') 0")\n')
     for i in df_flux.index:
         # check if rxn in GSM_rxn_ids.txt
         if "'"+i+"'" not in open(gsm_rxn_ids_path).read():
-            print(f"'{i}' not in {gsm_rxn_ids_path}; adding to sm_j_lumped.txt")
+            print(f"'{i}' not in {gsm_rxn_ids_path}; adding to sm_j_lumped_mappings.txt")
             f3.write(f"'{i}'\n")
-            f4.write(f"'{i}'.() {col_LB}\n") # if needed in the future, add support for upper bounds too
+            f4.write(f"*'{i}'.('','') {df_flux.loc[i, col_LB]}\n") # if needed in the future, add support for upper bounds too
             continue
         else:
             if pd.isnull(df_flux.loc[i, col_LB]):
@@ -383,14 +383,16 @@ for i in idx_enzsyn:
 
 df_data_copy_filtered.to_csv(path_data, index=None, sep='\t')
 
-print(df_data_copy_filtered[df_data_copy_filtered.duplicated(subset='uniprot', keep=False)].sort_values('uniprot'))
+# print(df_data_copy_filtered[df_data_copy_filtered.duplicated(subset='uniprot', keep=False)].sort_values('uniprot'))
 
 # show all gapfill_subunit rows
-print(df_data_copy_filtered[df_data_copy_filtered['id'] == 'gapfill_subunit'])
+if df_data_copy_filtered[df_data_copy_filtered['id'] == 'gapfill_subunit'].shape[0] > 0:
+    print('gapfill_subunit rows:')
+    print(df_data_copy_filtered[df_data_copy_filtered['id'] == 'gapfill_subunit'])
 
 # if any row has an "id" value not in the "id" values of df_prot, then print that row
 if errors:
-    error_message = "Protein IDs not in "+prot_path+":\n" + "\n".join(errors)
+    error_message = "Protein IDs not in "+prot_path+":\n" + ", ".join(errors)
     # raise ValueError(error_message)
     print(error_message)
 

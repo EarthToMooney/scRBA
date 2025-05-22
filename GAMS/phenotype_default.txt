@@ -30,7 +30,7 @@ v_sm.fx('FADH2t_c_m') = 0;
 v.fx('RXN-EX_glc__D_e_FWD-SPONT') = 0;
 v_sm.lo('EX_glc__D_e') = -%vglc%;
 
-v_sm.lo('RXN-EX_o2_e_REV-SPONT') = -(5.58 + 0.18);
+v_sm.lo('EX_o2_e') = -(5.58 + 0.18);
 v.fx('RXN-EX_o2_e_FWD-SPONT') = 0;
 
 v.fx('RXN-EX_co2_e_REV-SPONT') = 0;

@@ -58,8 +58,8 @@ bi_LB "lower bound for bisection" /0/
 max_iter /%max_iter%/
 mu
 prowaste_predicted(j)/
-$include %prowaste_from_pro_with_data_path%
-$include %prowaste_from_pro_without_data_path%
+$if exist %prowaste_from_pro_with_data_path% $include %prowaste_from_pro_with_data_path%
+$if exist %prowaste_from_pro_without_data_path% $include %prowaste_from_pro_without_data_path%
 /
 ;
 
