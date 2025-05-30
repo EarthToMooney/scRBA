@@ -15,6 +15,7 @@ dir_name = os.path.basename(os.path.dirname(os.path.abspath(__file__)))
 from pycore.utils import metabolites_dict_from_reaction_equation_RBA, extract_details_from_rxnid
 from pycore.simulate import * 
 from pycore.gsm_custom_functions import *
+from pycore.cobrapy_custom_extras import *
 
 vmax = 1e3 # max flux in either direction, before applying nscale
 nscale=1e5 # will be used as scale when running GAMS
@@ -23,6 +24,8 @@ nscale2=1e5 # 2nd scale, if different one needed; otherwise, set to same as nsca
 # Load path
 path_gen = model_root_path+'build_model/'
 path_gams = model_root_path+'GAMS/'
+
+sm_path = path_gen + 'input/GSM_iSace1144_rba.json'
 
 prot_path = path_gen + 'model/PROTEIN_stoich_curation.tsv'
 unknown_prot_path = path_gen + 'input/PROTEIN_stoich_curation_unknown.xlsx'

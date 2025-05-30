@@ -9,6 +9,8 @@
 * $setGlobal nonmodeled_proteome_allocation 0
 * $setGlobal max_allowed_mito_proteome_allo_fraction 0.068275095583055
 
+$setGlobal prosynSlackAllow 0.4
+
 * Disable these pathways that draw massive flux away from the TCA cycle in pFBA.
 * This pathway carrying large flux seems unrealistic
 * Disable formate dehydrogenase (still allow equivalent of 1% glucose uptake by value in case formate balance is required for growth)
