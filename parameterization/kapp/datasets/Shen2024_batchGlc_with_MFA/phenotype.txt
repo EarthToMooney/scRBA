@@ -9,6 +9,7 @@
 * $setGlobal nonmodeled_proteome_allocation 0
 * $setGlobal max_allowed_mito_proteome_allo_fraction 0.068275095583055
 
+* FRD_m has proton on different side of stoich. in atom mapping model than in GSM model, but it's fine. GSM version is mass balanced despite a proton being lost. Presumably it's b/c FADH2 loses 2 protons and 2 go to fumarate. However, FADH2 has 3 more protons in mitochondria than FAD, so extra proton release is to account for that. 
 $setGlobal prosynSlackAllow 0.4
 
 * Disable these pathways that draw massive flux away from the TCA cycle in pFBA.

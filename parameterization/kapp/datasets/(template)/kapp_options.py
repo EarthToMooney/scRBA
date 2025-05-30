@@ -2,6 +2,7 @@
 import pandas as pd
 import numpy as np
 import requests,json,os,shutil,sys
+from pycore.cobrapy_custom_extras import *
 
 model_root_path = '../../../../'
 path_model = model_root_path+'GAMS/model/'
@@ -23,6 +24,8 @@ nscale2=1e5 # 2nd scale, if different one needed; otherwise, set to same as nsca
 # Load path
 path_gen = model_root_path+'build_model/'
 path_gams = model_root_path+'GAMS/'
+
+sm_path = path_gen + 'input/GSM_iSace1144_rba.json'
 
 prot_path = path_gen + 'model/PROTEIN_stoich_curation.tsv'
 unknown_prot_path = path_gen + 'input/PROTEIN_stoich_curation_unknown.xlsx'

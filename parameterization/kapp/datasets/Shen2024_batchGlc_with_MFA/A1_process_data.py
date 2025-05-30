@@ -119,7 +119,6 @@ with open('./v_exp_lb.txt', 'w') as f, open('./v_exp_ub.txt', 'w') as f2, open('
             f.write("'"+i+"'" + ' ' + str(lb) + '\n')
             f2.write("'"+i+"'" + ' ' + str(ub) + '\n')
     if rxns_to_review:
-        print('Reactions to check manually for accurate stoichiometry:')
         for err, rxns in rxns_to_review.items():
             print(f"{err}:")
             for rxn_id, details in rxns.items():
