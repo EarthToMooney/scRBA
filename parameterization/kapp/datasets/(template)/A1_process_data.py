@@ -1,5 +1,6 @@
 # update model-specific settings in kapp_options.py
 from kapp_options import *
+from copy import deepcopy
 
 def convert_protein_abundance(abundance, output_units):
     if proteomics_units == output_units:
@@ -10,6 +11,9 @@ def convert_protein_abundance(abundance, output_units):
         return abundance / ptot
     else:
         raise ValueError("Invalid units specified. Use 'g/g protein' or 'g/gDW'.")
+
+# load SM model
+model = load_cobra_model(sm_path)
 
 aa_map = pd.read_csv(aa_mapping_path, sep='\t')
 aa_dict = dict(zip(aa_map['aa_abbv'], aa_map['MW']))
@@ -35,23 +39,77 @@ uniprot_url = 'https://rest.uniprot.org/uniprotkb/'
 # flux data (e.g., from MFA) is optional
 # runs only if flux data file exists
 try:
-    df_flux = pd.read_excel(flux_path)
+    df_flux = read_spreadsheet(flux_path)
+    if 'fluxes_to_ignore' in locals():
+        df_flux = df_flux[~df_flux['id'].isin(fluxes_to_ignore)]
+    # make a copy of the model to use for data processing (for comparing rxns)
+    model_from_data = deepcopy(model)
+    model_from_data.remove_reactions(model_from_data.reactions)
 except FileNotFoundError:
     # make empty dataframe
     df_flux = pd.DataFrame(columns=['id', col_LB, col_UB])
 df_flux.index = df_flux['id'].to_list()
 # make GAMS file for flux data
+
+# load path_model + 'SM_rxn_bounds.txt' as df (text between spaces represents the reaction ID, lower bound, and upper bound)
+df_flux_bounds = pd.read_csv(path_model + 'SM_rxn_bounds.txt', sep=r'\s+')
+df_flux_bounds.index.name = 'id'
+rxns_to_review = dict() # key: reaction ID, value: list of comments to review
+
+# whether to compare stoichiometry of flux data with model stoichiometry
+ignore_compartments_in_flux_data_stoich = True # if True, ignores compartments in flux data stoichiometries when comparing with model stoichiometries
+if 'reaction' in df_flux.columns:
+    check_stoich = True
+else:
+    print("No 'reaction' column in flux data; skipping stoichiometry check.")
+    check_stoich = False
+
 # write ID, then lower bound (-vmax if none) and upper bound (vmax if none)
 with open('./v_exp_lb.txt', 'w') as f, open('./v_exp_ub.txt', 'w') as f2, open('./sm_j_lumped.txt', 'w') as f3, open('./sm_j_lumped_mappings.txt', 'w') as f4:
     f.write('/\n'); f2.write('/\n'); f3.write("/\n'placeholder'\n"); f4.write('/\n*Uncomment lines to use them (e.g., if v=0 for \'DGAT\', which represents \'DGAT_c\' and \'DGAT_m\', line should be "\'DGAT\'.(\'DGAT_c\',\'DGAT_m\') 0")\n')
     for i in df_flux.index:
+        id = "'"+i+"'"
         # check if rxn in GSM_rxn_ids.txt
-        if "'"+i+"'" not in open(gsm_rxn_ids_path).read():
+        if id not in open(gsm_rxn_ids_path).read():
             print(f"'{i}' not in {gsm_rxn_ids_path}; adding to sm_j_lumped_mappings.txt")
             f3.write(f"'{i}'\n")
             f4.write(f"*'{i}'.('','') {df_flux.loc[i, col_LB]}\n") # if needed in the future, add support for upper bounds too
             continue
         else:
+            # if flux outside of df_flux_bounds, print warning
+            if id in df_flux_bounds.index:
+                if df_flux.loc[i, col_LB] < df_flux_bounds.loc[id, 'lo'] or df_flux.loc[i, col_UB] > df_flux_bounds.loc[id, 'up']:
+                    print(f"Warning: Flux bounds for '{i}' ({df_flux.loc[i, col_LB]}, {df_flux.loc[i, col_UB]}) are outside of the model bounds ({df_flux_bounds.loc[id, 'lo']}, {df_flux_bounds.loc[id, 'up']}) in {path_model + 'SM_rxn_bounds.txt'}.")
+                elif check_stoich: # ensure that direction/stoichiometry don't conflict with model stoichiometry
+                    rxn = cobra.Reaction(i)
+                    if i not in model_from_data.reactions:
+                        model_from_data.add_reactions([rxn])
+                    model_from_data.reactions.get_by_id(i).reaction = df_flux.loc[i, 'reaction']
+                    stoich_in_data_raw = dict(sorted({k.id:v for k,v in model_from_data.reactions.get_by_id(i).metabolites.items()}.items()))
+                    stoich_in_model_raw = dict(sorted({k.id:v for k,v in model.reactions.get_by_id(i).metabolites.items()}.items()))
+
+                    if ignore_compartments_in_flux_data_stoich:
+                        # remove compartment info from flux data stoichiometry
+                        stoich_in_data = {k.id.rsplit('_',1)[0]:v for k,v in model_from_data.reactions.get_by_id(i).metabolites.items()}
+                        stoich_in_model = {k.id.rsplit('_',1)[0]:v for k,v in model.reactions.get_by_id(i).metabolites.items()}
+                    else:
+                        stoich_in_data = stoich_in_data_raw
+                        stoich_in_model = stoich_in_model_raw
+                    stoich_in_data = dict(sorted(stoich_in_data.items()))
+                    stoich_in_model = dict(sorted(stoich_in_model.items()))
+                    if stoich_in_model != stoich_in_data and {k.id:v for k,v in model.reactions.get_by_id(i).metabolites.items()} != {k.id:v for k,v in model_from_data.reactions.get_by_id(i).metabolites.items()}:
+                        # if the only difference is the direction (i.e., signs of the coefficients), then make the signs match
+                        if {k:-v for k,v in stoich_in_model.items()} == stoich_in_data:
+                            err = 'Model and data have different directions'
+                            df_flux.loc[i, 'reaction'] = model.reactions.get_by_id(i).reaction
+                            # invert the signs in the flux data, and switch the upper and lower bounds
+                            df_flux.loc[i, col_LB], df_flux.loc[i, col_UB] = -df_flux.loc[i, col_UB], -df_flux.loc[i, col_LB]
+                        else:
+                            err = 'Model and data have different stoichiometries'
+                            # print(f"Warning: Stoichiometry for '{i}' in flux data does not match the model stoichiometry: {stoich_in_data} vs {stoich_in_model}.")
+                        rxns_to_review.setdefault(err, dict()).setdefault(i, []).append(f"(model: {model.reactions.get_by_id(i).reaction}, flux data: {df_flux.loc[i, 'reaction']})")
+            else:
+                print(f"Warning: Flux bounds for '{i}' not found in {path_model + 'SM_rxn_bounds.txt'}.")
             if pd.isnull(df_flux.loc[i, col_LB]):
                 lb = -vmax
             else:
@@ -62,7 +120,17 @@ with open('./v_exp_lb.txt', 'w') as f, open('./v_exp_ub.txt', 'w') as f2, open('
                 ub = df_flux.loc[i, col_UB]
             f.write("'"+i+"'" + ' ' + str(lb) + '\n')
             f2.write("'"+i+"'" + ' ' + str(ub) + '\n')
+    if rxns_to_review:
+        for err, rxns in rxns_to_review.items():
+            print(f"{err}:")
+            for rxn_id, details in rxns.items():
+                print(f"  {rxn_id}: {', '.join(details)}")
+
+    # save to fluxomics.tsv if df_flux is not empty
+    if not df_flux.empty:
+        df_flux.to_csv('./fluxomics.tsv', sep='\t', index=True, header=True)
     f.write('/'); f2.write('/'); f3.write('/\n'); f4.write('/\n')
+
 
 # Load protein
 df_prot_raw = read_spreadsheet(prot_path)
