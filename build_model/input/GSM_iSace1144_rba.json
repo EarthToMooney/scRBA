@@ -69914,11 +69914,12 @@
 "h_c":1,
 "pi_c":1
 },
-"lower_bound":0.0,
+"lower_bound":1.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Unassigned",
 "notes":{
+"notes":"lower bound set to minimum of scRBA NGAM values (DOI:10.1016/j.ymben.2023.04.009)",
 "Confidence Level":"0",
 "yeastgem.reaction":"r_4046"
 },

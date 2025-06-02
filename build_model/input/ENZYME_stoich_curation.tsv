@@ -370,7 +370,6 @@ CYTD_c	FWD	YLR245C	YLR245C:2	protStoichAsgnAuto
 CYTDK2_c	FWD	YNR012W	YNR012W:1	protStoichAsgnAuto	
 CSND_c	FWD	YPR062W	YPR062W:2	protStoichAsgnAuto	
 ARAB14LO_c	FWD	YML086C	YML086C:1	protStoichAsgnAuto	
-ARAB14LO_c	REV	YML086C	YML086C:1	protStoichAsgnAuto	
 ARAB1Dx_c	FWD	YMR041C	YMR041C:1	protStoichAsgnAuto	
 ARAB1D2_c	FWD	YBR149W	YBR149W:1	protStoichAsgnManual	Heterodimer of a heavy chain and a light chain.
 FBA2_c	FWD	YKL060C	YKL060C:2	protStoichAsgnAuto	
