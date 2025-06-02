@@ -33461,7 +33461,7 @@
 "atp_c":-1,
 "h_c":-14.0
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YLR410W",
 "subsystem":"Unassigned",
@@ -33486,7 +33486,7 @@
 "atp_c":-1,
 "h_c":-14.0
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YLR410W",
 "subsystem":"Unassigned",
@@ -33807,7 +33807,7 @@
 "accoa_c":-2.0,
 "coa_c":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YPL028W",
 "subsystem":"Terpenoid backbone biosynthesis",
@@ -39143,7 +39143,7 @@
 "h_c":3.0,
 "pi_c":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YNR057C",
 "subsystem":"Biotin metabolism",
@@ -41587,7 +41587,7 @@
 "ser__L_m":-1,
 "thf_m":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YBR263W",
 "subsystem":"Glycine, serine and threonine metabolism",
@@ -41747,7 +41747,7 @@
 "dag_r":1,
 "pe_r":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YCL052C and YJR013W",
 "subsystem":"GPI biosynthesis",
@@ -41772,7 +41772,7 @@
 "dolp_r":1,
 "h_r":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YKL165C",
 "subsystem":"GPI biosynthesis",
@@ -41797,7 +41797,7 @@
 "dolp_r":1,
 "h_r":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YBR004C and YNL158W",
 "subsystem":"GPI biosynthesis",
@@ -43547,7 +43547,7 @@
 "nad_m":-1,
 "nadh_m":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YHR037W",
 "subsystem":"Arginine and proline metabolism",
@@ -43573,7 +43573,7 @@
 "nad_m":-1,
 "nadh_m":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YHR037W",
 "subsystem":"Alanine, aspartate and glutamate metabolism",
@@ -45207,7 +45207,7 @@
 "glu__L_m":-1,
 "h_m":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YJL071W or YMR062C",
 "subsystem":"Arginine and proline metabolism",
@@ -46108,7 +46108,7 @@
 "didp_c":-1,
 "ditp_c":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YKL067W",
 "subsystem":"Purine metabolism",
@@ -46132,7 +46132,7 @@
 "dudp_c":-1,
 "dutp_c":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YKL067W",
 "subsystem":"Purine metabolism",
@@ -50428,7 +50428,7 @@
 "udpg_c":-1,
 "udpgal_c":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YBR018C",
 "subsystem":"Galactose metabolism",
@@ -55310,7 +55310,7 @@
 "cit_c":1,
 "cit_m":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YMR241W",
 "subsystem":"Transport",
@@ -56670,7 +56670,7 @@
 "h_c":1,
 "h_v":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YCR075C",
 "subsystem":"Transport",
@@ -56877,7 +56877,7 @@
 "ile__L_v":-1
 },
 "lower_bound":-1000.0,
-"upper_bound":0.0,
+"upper_bound":1000.0,
 "gene_reaction_rule":"YCL038C",
 "subsystem":"Transport",
 "notes":{
@@ -56924,7 +56924,7 @@
 "ile__L_c":1,
 "ile__L_v":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YKL146W or YNL101W",
 "subsystem":"Transport",
@@ -57015,7 +57015,7 @@
 "leu__L_v":-1
 },
 "lower_bound":-1000.0,
-"upper_bound":0.0,
+"upper_bound":1000.0,
 "gene_reaction_rule":"YCL038C",
 "subsystem":"Transport",
 "notes":{
@@ -57062,7 +57062,7 @@
 "leu__L_c":1,
 "leu__L_v":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YKL146W or YNL101W",
 "subsystem":"Transport",
@@ -57289,7 +57289,7 @@
 "tyr__L_v":-1
 },
 "lower_bound":-1000.0,
-"upper_bound":0.0,
+"upper_bound":1000.0,
 "gene_reaction_rule":"YCL038C",
 "subsystem":"Transport",
 "notes":{
@@ -57336,7 +57336,7 @@
 "tyr__L_c":1,
 "tyr__L_v":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YKL146W or YNL101W",
 "subsystem":"Transport",
@@ -57787,7 +57787,7 @@
 "k_c":1,
 "k_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YDR456W or YJL129C",
 "subsystem":"Transport",
@@ -58855,7 +58855,7 @@
 "metabolites":{
 "pnto__R_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -59664,7 +59664,7 @@
 "metabolites":{
 "4abz_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -60147,7 +60147,7 @@
 "acald_c":1,
 "acald_m":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"SPONT",
 "subsystem":"Transport",
@@ -60633,7 +60633,7 @@
 "h_e":1,
 "hco3_e":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Nitrogen metabolism",
@@ -60653,7 +60653,7 @@
 "hco3_c":-1,
 "hco3_n":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"SPONT",
 "subsystem":"Transport",
@@ -60918,7 +60918,7 @@
 "mal__L_c":-1,
 "mal__L_x":1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"SPONT",
 "subsystem":"Transport",
@@ -62432,7 +62432,7 @@
 "metabolites":{
 "fol_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -63070,7 +63070,7 @@
 "h_c":1,
 "h_v":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"SPONT",
 "subsystem":"Transport",
@@ -64568,7 +64568,7 @@
 "metabolites":{
 "inost_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -64684,7 +64684,7 @@
 "metabolites":{
 "nac_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -65481,7 +65481,7 @@
 "metabolites":{
 "pydxn_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -65621,7 +65621,7 @@
 "metabolites":{
 "ribflv_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -66125,7 +66125,7 @@
 "metabolites":{
 "thm_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -66307,7 +66307,7 @@
 "thymd_c":1,
 "thymd_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"SPONT",
 "subsystem":"Transport",
@@ -69914,12 +69914,13 @@
 "h_c":1,
 "pi_c":1
 },
-"lower_bound":0.0,
+"lower_bound":1.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Unassigned",
 "notes":{
 "Confidence Level":"0",
+"notes":"lower bound set to minimum of scRBA NGAM values (DOI:10.1016/j.ymben.2023.04.009)",
 "yeastgem.reaction":"r_4046"
 },
 "annotation":{

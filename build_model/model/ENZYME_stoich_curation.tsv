@@ -370,7 +370,6 @@ RXN-CYTD_c_FWD-YLR245C	CYTD_c	FWD	YLR245C	YLR245C:2	protStoichAsgnAuto		31.31988
 RXN-CYTDK2_c_FWD-YNR012W	CYTDK2_c	FWD	YNR012W	YNR012W:1	protStoichAsgnAuto		56.77966
 RXN-CSND_c_FWD-YPR062W	CSND_c	FWD	YPR062W	YPR062W:2	protStoichAsgnAuto		35.28758
 RXN-ARAB14LO_c_FWD-YML086C	ARAB14LO_c	FWD	YML086C	YML086C:1	protStoichAsgnAuto		59.99801
-RXN-ARAB14LO_c_REV-YML086C	ARAB14LO_c	REV	YML086C	YML086C:1	protStoichAsgnAuto		59.99801
 RXN-ARAB1Dx_c_FWD-YMR041C	ARAB1Dx_c	FWD	YMR041C	YMR041C:1	protStoichAsgnAuto		38.52702
 RXN-ARAB1D2_c_FWD-YBR149W	ARAB1D2_c	FWD	YBR149W	YBR149W:1	protStoichAsgnManual	Heterodimer of a heavy chain and a light chain.	39.20017
 RXN-FBA2_c_FWD-YKL060C	FBA2_c	FWD	YKL060C	YKL060C:2	protStoichAsgnAuto		79.89866
@@ -843,7 +842,6 @@ RXN-PUNP5_c_REV-YLR209C	PUNP5_c	REV	YLR209C	YLR209C:1	protStoichAsgnAuto		34.046
 RXN-PYDXO_c_FWD-YBR035C	PYDXO_c	FWD	YBR035C	YBR035C:2	protStoichAsgnAuto		54.23586
 RXN-PYAM5PO_c_FWD-YBR035C	PYAM5PO_c	FWD	YBR035C	YBR035C:2	protStoichAsgnAuto		54.23586
 RXN-PDX5POi_c_FWD-YBR035C	PDX5POi_c	FWD	YBR035C	YBR035C:2	protStoichAsgnAuto		54.23586
-RXN-PDX5POi_c_REV-YBR035C	PDX5POi_c	REV	YBR035C	YBR035C:2	protStoichAsgnAuto		54.23586
 RXN-PYDXNO_c_FWD-YBR035C	PYDXNO_c	FWD	YBR035C	YBR035C:2	protStoichAsgnAuto		54.23586
 RXN-P5CR_c_FWD-YER023W	P5CR_c	FWD	YER023W	YER023W:4	protStoichAsgnAuto		121.5744
 RXN-PC_c_FWD-YGL062W	PC_c	FWD	YGL062W	YGL062W:4	protStoichAsgnAuto		524.9486
@@ -915,6 +913,7 @@ RXN-SADT_c_FWD-YJR010W	SADT_c	FWD	YJR010W	YJR010W:6	protStoichAsgnAuto		349.2170
 RXN-SLFAT_c_FWD-YCL050C	SLFAT_c	FWD	YCL050C	YCL050C:1	protStoichAsgnAuto		36.77818
 RXN-TAUDO_c_FWD-YLL057C	TAUDO_c	FWD	YLL057C	YLL057C:1	protStoichAsgnAuto		47.36814
 RXN-THFGLUS_c_FWD-YOR241W	THFGLUS_c	FWD	YOR241W	YOR241W:1	protStoichAsgnAuto		62.68888
+RXN-THFGLUS_c_REV-YOR241W	THFGLUS_c	REV	YOR241W	YOR241W:1	protStoichAsgnAuto	Not present in original scRBA release, but added to align w/ GSM model	62.68888
 RXN-THMDP_e_FWD-YBR092C	THMDP_e	FWD	YBR092C	YBR092C:1	protStoichAsgnAuto		53.19367
 RXN-THMP_e_FWD-YBR092C	THMP_e	FWD	YBR092C	YBR092C:1	protStoichAsgnAuto		53.19367
 RXN-TMDPK_c_FWD-YOR143C	TMDPK_c	FWD	YOR143C	YOR143C:2	protStoichAsgnAuto		73.82528
@@ -1323,7 +1322,9 @@ RXN-G3PIt_c_e_REV-YCR098C	G3PIt_c_e	REV	YCR098C	YCR098C:1	protStoichAsgnAuto		57
 RXN-G3PCt_c_e_FWD-YCR098C	G3PCt_c_e	FWD	YCR098C	YCR098C:1	protStoichAsgnAuto		57.82808
 RXN-G3PCt_c_e_REV-YCR098C	G3PCt_c_e	REV	YCR098C	YCR098C:1	protStoichAsgnAuto		57.82808
 RXN-GLYCtps_e_FWD-YDR536W	GLYCtps_e	FWD	YDR536W	YDR536W:1	protStoichAsgnManual	Interacts with mitochondrial outer membrane voltage-dependent anion channel (VDAC) POR1.	64.07809
+RXN-GLYCtps_e_REV-YDR536W	GLYCtps_e	REV	YDR536W	YDR536W:1	protStoichAsgnManual	Not present in original scRBA release, but added to align w/ GSM model	64.07809
 RXN-GLYCtps_e_FWD-YGL084C	GLYCtps_e	FWD	YGL084C	YGL084C:1	protStoichAsgnManual	Interacts with mitochondrial outer membrane voltage-dependent anion channel (VDAC) POR1.	65.90032
+RXN-GLYCtps_e_REV-YGL084C	GLYCtps_e	REV	YGL084C	YGL084C:1	protStoichAsgnManual	Not present in original scRBA release, but added to align w/ GSM model	65.90032
 RXN-GLYCt_e_FWD-YLL043W	GLYCt_e	FWD	YLL043W	YLL043W:1	protStoichAsgnAuto		74.52261
 RXN-GLYCt_e_FWD-YFL054C	GLYCt_e	FWD	YFL054C	YFL054C:1	protStoichAsgnAuto		71.13871
 RXN-GLYtps_e_FWD-YPL265W	GLYtps_e	FWD	YPL265W	YPL265W:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	68.69977
@@ -1401,6 +1402,7 @@ RXN-CYStps_e_REV-YDR508C	CYStps_e	REV	YDR508C	YDR508C:1	protStoichAsgnManual	Int
 RXN-CYStps_e_FWD-YCL025C	CYStps_e	FWD	YCL025C	YCL025C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	70.28271
 RXN-CYStps_e_REV-YCL025C	CYStps_e	REV	YCL025C	YCL025C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	70.28271
 RXN-CYSItps_v_FWD-YCR075C	CYSItps_v	FWD	YCR075C	YCR075C:1	protStoichAsgnAuto		30.36303
+RXN-CYSItps_v_REV-YCR075C	CYSItps_v	REV	YCR075C	YCR075C:1	protStoichAsgnAuto		30.36303
 RXN-GLUt_c_m_FWD-YPR021C	GLUt_c_m	FWD	YPR021C	YPR021C:1	protStoichAsgnAuto		105.19006
 RXN-GLUt_c_m_FWD-YBR104W	GLUt_c_m	FWD	YBR104W	YBR104W:1	protStoichAsgnAuto		36.87487
 RXN-GLUtps_v_FWD-YER119C	GLUtps_v	FWD	YER119C	YER119C:1	protStoichAsgnAuto		49.27912
@@ -1431,7 +1433,9 @@ RXN-ILEt_c_v_FWD-YCL038C	ILEt_c_v	FWD	YCL038C	YCL038C:1	protStoichAsgnAuto		59.3
 RXN-ILEt_c_v_REV-YCL038C	ILEt_c_v	REV	YCL038C	YCL038C:1	protStoichAsgnAuto		59.3572
 RXN-ILEtpa_v_FWD-YJR001W	ILEtpa_v	FWD	YJR001W	YJR001W:1	protStoichAsgnAuto		65.93451
 RXN-ILEtps_v_FWD-YNL101W	ILEtps_v	FWD	YNL101W	YNL101W:1	protStoichAsgnAuto		80.73418
+RXN-ILEtps_v_REV-YNL101W	ILEtps_v	REV	YNL101W	YNL101W:1	protStoichAsgnAuto		80.73418
 RXN-ILEtps_v_FWD-YKL146W	ILEtps_v	FWD	YKL146W	YKL146W:1	protStoichAsgnAuto		76.13984
+RXN-ILEtps_v_REV-YKL146W	ILEtps_v	REV	YKL146W	YKL146W:1	protStoichAsgnAuto		76.13984
 RXN-ILEtps_e_FWD-YBR068C	ILEtps_e	FWD	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	68.36477
 RXN-ILEtps_e_REV-YBR068C	ILEtps_e	REV	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	68.36477
 RXN-ILEtps_e_FWD-YDR046C	ILEtps_e	FWD	YDR046C	YDR046C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	67.95437
@@ -1447,7 +1451,9 @@ RXN-LEUt_c_v_FWD-YCL038C	LEUt_c_v	FWD	YCL038C	YCL038C:1	protStoichAsgnAuto		59.3
 RXN-LEUt_c_v_REV-YCL038C	LEUt_c_v	REV	YCL038C	YCL038C:1	protStoichAsgnAuto		59.3572
 RXN-LEUtpa_v_FWD-YJR001W	LEUtpa_v	FWD	YJR001W	YJR001W:1	protStoichAsgnAuto		65.93451
 RXN-LEUtps_v_FWD-YNL101W	LEUtps_v	FWD	YNL101W	YNL101W:1	protStoichAsgnAuto		80.73418
+RXN-LEUtps_v_REV-YNL101W	LEUtps_v	REV	YNL101W	YNL101W:1	protStoichAsgnAuto		80.73418
 RXN-LEUtps_v_FWD-YKL146W	LEUtps_v	FWD	YKL146W	YKL146W:1	protStoichAsgnAuto		76.13984
+RXN-LEUtps_v_REV-YKL146W	LEUtps_v	REV	YKL146W	YKL146W:1	protStoichAsgnAuto		76.13984
 RXN-LEUtps_e_FWD-YBR068C	LEUtps_e	FWD	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	68.36477
 RXN-LEUtps_e_REV-YBR068C	LEUtps_e	REV	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	68.36477
 RXN-LEUtps_e_FWD-YDR046C	LEUtps_e	FWD	YDR046C	YDR046C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	67.95437
@@ -1517,7 +1523,9 @@ RXN-TYRt_c_v_REV-YCL038C	TYRt_c_v	REV	YCL038C	YCL038C:1	protStoichAsgnAuto		59.3
 RXN-TYRtpa_v_FWD-YJR001W	TYRtpa_v	FWD	YJR001W	YJR001W:1	protStoichAsgnAuto		65.93451
 RXN-TYRtpa_v_FWD-YBR293W	TYRtpa_v	FWD	YBR293W	YBR293W:1	protStoichAsgnAuto		52.15278
 RXN-TYRtps_v_FWD-YNL101W	TYRtps_v	FWD	YNL101W	YNL101W:1	protStoichAsgnAuto		80.73418
+RXN-TYRtps_v_REV-YNL101W	TYRtps_v	REV	YNL101W	YNL101W:1	protStoichAsgnAuto		80.73418
 RXN-TYRtps_v_FWD-YKL146W	TYRtps_v	FWD	YKL146W	YKL146W:1	protStoichAsgnAuto		76.13984
+RXN-TYRtps_v_REV-YKL146W	TYRtps_v	REV	YKL146W	YKL146W:1	protStoichAsgnAuto		76.13984
 RXN-TYRtps_e_FWD-YBR068C	TYRtps_e	FWD	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	68.36477
 RXN-TYRtps_e_REV-YBR068C	TYRtps_e	REV	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	68.36477
 RXN-TYRtps_e_FWD-YDR046C	TYRtps_e	FWD	YDR046C	YDR046C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).	67.95437
@@ -2928,7 +2936,7 @@ RXN-MIPCt_g_r_REV-SPONT	MIPCt_g_r	REV	SPONT	zeroCost	protStoichAsgnAuto
 RXN-MIP2Ct_g_r_FWD-SPONT	MIP2Ct_g_r	FWD	SPONT	zeroCost	protStoichAsgnAuto		
 RXN-MIP2Ct_g_r_REV-SPONT	MIP2Ct_g_r	REV	SPONT	zeroCost	protStoichAsgnAuto		
 RXN-FADt_c_m_FWD-YIL134W	FADt_c_m	FWD	YIL134W	YIL134W:1	protStoichAsgnAuto		34.71997
-RXN-FADt_c_m_REV-YIL134W	FADt_c_m	REV	YIL134W	YIL134W:1	protStoichAsgnAuto		34.71997
+RXN-FADt_c_m_REV-YIL134W	FADt_c_m	REV	YIL134W	YIL134W:1	protStoichAsgnAuto	Disabled by GSM model due to lack of evidence for this direction	34.71997
 RXN-PRENT13_rm_FWD-RER2NUS1	PRENT13_rm	FWD	RER2NUS1	YBR002C:1,YDL193W:1	protStoichAsgnManual	Forms an active dehydrodolichyl diphosphate synthase complex with NUS1.	75.87398999999999
 RXN-PRENT11_rm_FWD-RER2NUS1	PRENT11_rm	FWD	RER2NUS1	YBR002C:1,YDL193W:1	protStoichAsgnManual	Forms an active dehydrodolichyl diphosphate synthase complex with NUS1.	75.87398999999999
 RXN-PRENT20_rm_FWD-RER2NUS1	PRENT20_rm	FWD	RER2NUS1	YBR002C:1,YDL193W:1	protStoichAsgnManual	Forms an active dehydrodolichyl diphosphate synthase complex with NUS1.	75.87398999999999
@@ -3041,8 +3049,10 @@ RXN-GTHO_c_FWD-GLR1GRX2	GTHO_c	FWD	GLR1GRX2	YDR513W:1,YPL091W:1	protStoichAsgnMa
 RXN-GTHO_c_FWD-GLR1GRX4	GTHO_c	FWD	GLR1GRX4	YER174C:2,YPL091W:1	protStoichAsgnManual	Homodimer. Heterodimer with FRA2.	109.30748
 RXN-GTHO_m_FWD-GLR1GRX5	GTHO_m	FWD	GLR1GRX5	YPL059W:2,YPL091W:1	protStoichAsgnManual	Homodimer (By similarity). Interacts with SSQ1 (PubMed:23615440). Interacts with BOL1 (PubMed:27532773).	88.02091999999999
 RXN-G3PD1r_c_FWD-YOL059W_c	G3PD1r_c	FWD	YOL059W_c	YOL059W_c:1	protStoichAsgnAuto		49.8392
+RXN-G3PD1r_c_REV-YOL059W_c	G3PD1r_c	REV	YOL059W_c	YOL059W_c:1	protStoichAsgnAuto	Not present in original scRBA release, but added to align w/ GSM model	49.8392
 RXN-G3PD1i_m_FWD-YOL059W_m	G3PD1i_m	FWD	YOL059W_m	YOL059W_m:1	protStoichAsgnAuto		49.8392
 RXN-GLYCL_m_FWD-GCV123LPD1	GLYCL_m	FWD	GCV123LPD1	YAL044C:1,YDR019C:1,YFL018C:1,YMR189W:1	protStoichAsgnManual	Component of the glycine decarboxylase complex (GDC), which is composed of four proteins: P, T, L and H. | Component of the glycine decarboxylase complex (GDC), which is composed of four proteins: P, T, L and H. | LPD1 is a homodimer. Eukaryotic pyruvate dehydrogenase (PDH) complexes are organized as a core consisting of the oligomeric dihydrolipoamide acetyl-transferase (E2), around which are arranged multiple copies of pyruvate dehydrogenase (E1), dihydrolipoamide dehydrogenase (E3) and protein X (E3BP) bound by non-covalent bonds. LPD1 is a component of the glycine decarboxylase complex (GDC), which is composed of four proteins: P, T, L and H. | Component of the glycine decarboxylase complex (GDC), which is composed of four proteins: P, T, L and H.	233.74539
+RXN-GLYCL_m_REV-GCV123LPD1	GLYCL_m	REV	GCV123LPD1	YAL044C:1,YDR019C:1,YFL018C:1,YMR189W:1	protStoichAsgnManual	Not present in original scRBA release, but added to align w/ GSM model	233.74539
 RXN-GLYGS_c_FWD-GSY1GLG2	GLYGS_c	FWD	GSY1GLG2	YFR015C:1,YJL137C:1	protStoichAsgnManual	Interacts with glycogen synthase GSY2.	126.07875
 RXN-GLYGS_c_FWD-GSY1GLG1	GLYGS_c	FWD	GSY1GLG1	YFR015C:1,YKR058W:1	protStoichAsgnManual		151.43316
 RXN-GLYGS_c_FWD-GSY2GLG2	GLYGS_c	FWD	GSY2GLG2	YJL137C:1,YLR258W:1	protStoichAsgnManual	Interacts with glycogen synthase GSY2. | Interacts with PCL10.	125.6474
@@ -3057,6 +3067,7 @@ RXN-THIORDXi_c_FWD-YDR453C	THIORDXi_c	FWD	YDR453C	YDR453C:2	protStoichAsgnManual
 RXN-THIORDXi_x_FWD-YLR109W	THIORDXi_x	FWD	YLR109W	YLR109W:2	protStoichAsgnManual	Homodimer; disulfide-linked, upon oxidation.	38.53288
 RXN-ICDHx_m_FWD-IDH12	ICDHx_m	FWD	IDH12	YNL037C:4,YOR136W:4	protStoichAsgnManual	Octamer of two non-identical subunits IDH1 and IDH2. | Octamer of two non-identical subunits IDH1 and IDH2.	319.05492
 RXN-ITCOAL_m_FWD-LSC12	ITCOAL_m	FWD	LSC12	YGR244C:1,YOR142W:1	protStoichAsgnManual	Heterodimer of an alpha and a beta subunit. | Heterodimer of an alpha and a beta subunit.	82.65551
+RXN-ITCOAL_m_REV-LSC12	ITCOAL_m	REV	LSC12	YGR244C:1,YOR142W:1	protStoichAsgnManual	Not present in original scRBA release, but added to align w/ GSM model	82.65551
 RXN-AASADy_c_FWD-LYS25	AASADy_c	FWD	LYS25	YBR115C:1,YGL154C:1	protStoichAsgnManual		187.61764
 RXN-EGHLAT_c_FWD-YLR027C_c	EGHLAT_c	FWD	YLR027C_c	YLR027C_c:2	protStoichAsgnAuto		92.9204
 RXN-EGHLAT_x_FWD-YLR027C_x	EGHLAT_x	FWD	YLR027C_x	YLR027C_x:2	protStoichAsgnAuto		92.9204
