@@ -39,6 +39,7 @@ aa_dict = dict(zip(aa_map['aa_abbv'], aa_map['MW']))
 
 # for flux data; keep path blank if none provided
 flux_path = '../raw_data_files/SC_MFA_flux_CENPK_batch_Rabinowitz.xlsx'
+fluxes_to_ignore = ['Ht_c_e','EX_h_e'] # Excluded these fluxes since we're unsure if this species acidifies its environment, or proton export is due to other reasons (e.g., missing ATP maintenance systems, Ht_c_e being used to lump together proton transport from other processes, etc.)
 col_LB = 'pfba'
 col_UB = 'pfba'
 

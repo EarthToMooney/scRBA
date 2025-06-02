@@ -40,6 +40,8 @@ uniprot_url = 'https://rest.uniprot.org/uniprotkb/'
 # runs only if flux data file exists
 try:
     df_flux = read_spreadsheet(flux_path)
+    if 'fluxes_to_ignore' in locals():
+        df_flux = df_flux[~df_flux['id'].isin(fluxes_to_ignore)]
     # make a copy of the model to use for data processing (for comparing rxns)
     model_from_data = deepcopy(model)
     model_from_data.remove_reactions(model_from_data.reactions)
