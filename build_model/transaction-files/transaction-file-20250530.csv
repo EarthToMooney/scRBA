@@ -1,0 +1,27 @@
+id,object_type,command
+# updated bounds to match scRBA's original version; corroborated by yeast9 (https://github.com/SysBioChalmers/yeast-GEM/blob/main/model/yeast-GEM.xlsx)
+IPPYP2_c,r,lower_bound:-1000
+IPPYP3_c,r,lower_bound:-1000
+ACACT40ir_c,r,lower_bound:-1000
+DBTS_c,r,lower_bound:-1000
+GHMT2r_m,r,lower_bound:-1000
+GPIA6_r,r,lower_bound:-1000
+GPIA7_r,r,lower_bound:-1000
+PHCD_m,r,lower_bound:-1000
+4HGLSD_m,r,lower_bound:-1000
+ACGS_m,r,lower_bound:-1000
+NDPK10_c,r,lower_bound:-1000
+NDPK6_c,r,lower_bound:-1000
+UGLT_c,r,lower_bound:-1000
+AKGCITta_m,r,lower_bound:-1000
+ILEt_c_v,r,upper_bound:1000
+LEUt_c_v,r,upper_bound:1000
+TYRt_c_v,r,upper_bound:1000
+Ktps_e,r,lower_bound:-1000
+ACALDt_c_m,r,lower_bound:-1000
+HCO3E_e,r,lower_bound:-1000
+HCO3t_c_n,r,lower_bound:-1000
+CITMALta_x,r,lower_bound:-1000
+Ht_c_v,r,lower_bound:-1000
+THYMDt_c_e,r,lower_bound:-1000
+GPIA5_r,r,lower_bound:-1000

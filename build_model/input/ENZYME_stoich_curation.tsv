@@ -843,7 +843,6 @@ PUNP5_c	REV	YLR209C	YLR209C:1	protStoichAsgnAuto
 PYDXO_c	FWD	YBR035C	YBR035C:2	protStoichAsgnAuto	
 PYAM5PO_c	FWD	YBR035C	YBR035C:2	protStoichAsgnAuto	
 PDX5POi_c	FWD	YBR035C	YBR035C:2	protStoichAsgnAuto	
-PDX5POi_c	REV	YBR035C	YBR035C:2	protStoichAsgnAuto	
 PYDXNO_c	FWD	YBR035C	YBR035C:2	protStoichAsgnAuto	
 P5CR_c	FWD	YER023W	YER023W:4	protStoichAsgnAuto	
 PC_c	FWD	YGL062W	YGL062W:4	protStoichAsgnAuto	
@@ -915,6 +914,7 @@ SADT_c	FWD	YJR010W	YJR010W:6	protStoichAsgnAuto
 SLFAT_c	FWD	YCL050C	YCL050C:1	protStoichAsgnAuto	
 TAUDO_c	FWD	YLL057C	YLL057C:1	protStoichAsgnAuto	
 THFGLUS_c	FWD	YOR241W	YOR241W:1	protStoichAsgnAuto	
+THFGLUS_c	REV	YOR241W	YOR241W:1	protStoichAsgnAuto	"Not present in original scRBA release, but added to align w/ GSM model"
 THMDP_e	FWD	YBR092C	YBR092C:1	protStoichAsgnAuto	
 THMP_e	FWD	YBR092C	YBR092C:1	protStoichAsgnAuto	
 TMDPK_c	FWD	YOR143C	YOR143C:2	protStoichAsgnAuto	
@@ -1323,7 +1323,9 @@ G3PIt_c_e	REV	YCR098C	YCR098C:1	protStoichAsgnAuto
 G3PCt_c_e	FWD	YCR098C	YCR098C:1	protStoichAsgnAuto	
 G3PCt_c_e	REV	YCR098C	YCR098C:1	protStoichAsgnAuto	
 GLYCtps_e	FWD	YDR536W	YDR536W:1	protStoichAsgnManual	Interacts with mitochondrial outer membrane voltage-dependent anion channel (VDAC) POR1.
+GLYCtps_e	REV	YDR536W	YDR536W:1	protStoichAsgnManual	"Not present in original scRBA release, but added to align w/ GSM model"
 GLYCtps_e	FWD	YGL084C	YGL084C:1	protStoichAsgnManual	Interacts with mitochondrial outer membrane voltage-dependent anion channel (VDAC) POR1.
+GLYCtps_e	REV	YGL084C	YGL084C:1	protStoichAsgnManual	"Not present in original scRBA release, but added to align w/ GSM model"
 GLYCt_e	FWD	YLL043W	YLL043W:1	protStoichAsgnAuto	
 GLYCt_e	FWD	YFL054C	YFL054C:1	protStoichAsgnAuto	
 GLYtps_e	FWD	YPL265W	YPL265W:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).
@@ -2928,7 +2930,7 @@ MIPCt_g_r	REV	SPONT	zeroCost	protStoichAsgnAuto
 MIP2Ct_g_r	FWD	SPONT	zeroCost	protStoichAsgnAuto	
 MIP2Ct_g_r	REV	SPONT	zeroCost	protStoichAsgnAuto	
 FADt_c_m	FWD	YIL134W	YIL134W:1	protStoichAsgnAuto	
-FADt_c_m	REV	YIL134W	YIL134W:1	protStoichAsgnAuto	
+FADt_c_m	REV	YIL134W	YIL134W:1	protStoichAsgnAuto	Disabled by GSM model due to lack of evidence for this direction
 PRENT13_rm	FWD	RER2NUS1	"YBR002C:1,YDL193W:1"	protStoichAsgnManual	Forms an active dehydrodolichyl diphosphate synthase complex with NUS1.
 PRENT11_rm	FWD	RER2NUS1	"YBR002C:1,YDL193W:1"	protStoichAsgnManual	Forms an active dehydrodolichyl diphosphate synthase complex with NUS1.
 PRENT20_rm	FWD	RER2NUS1	"YBR002C:1,YDL193W:1"	protStoichAsgnManual	Forms an active dehydrodolichyl diphosphate synthase complex with NUS1.
@@ -3041,8 +3043,10 @@ GTHO_c	FWD	GLR1GRX2	"YDR513W:1,YPL091W:1"	protStoichAsgnManual
 GTHO_c	FWD	GLR1GRX4	"YER174C:2,YPL091W:1"	protStoichAsgnManual	Homodimer. Heterodimer with FRA2.
 GTHO_m	FWD	GLR1GRX5	"YPL059W:2,YPL091W:1"	protStoichAsgnManual	Homodimer (By similarity). Interacts with SSQ1 (PubMed:23615440). Interacts with BOL1 (PubMed:27532773).
 G3PD1r_c	FWD	YOL059W_c	YOL059W_c:1	protStoichAsgnAuto	
+G3PD1r_c	REV	YOL059W_c	YOL059W_c:1	protStoichAsgnAuto	"Not present in original scRBA release, but added to align w/ GSM model"
 G3PD1i_m	FWD	YOL059W_m	YOL059W_m:1	protStoichAsgnAuto	
 GLYCL_m	FWD	GCV123LPD1	"YAL044C:1,YDR019C:1,YFL018C:1,YMR189W:1"	protStoichAsgnManual	"Component of the glycine decarboxylase complex (GDC), which is composed of four proteins: P, T, L and H. | Component of the glycine decarboxylase complex (GDC), which is composed of four proteins: P, T, L and H. | LPD1 is a homodimer. Eukaryotic pyruvate dehydrogenase (PDH) complexes are organized as a core consisting of the oligomeric dihydrolipoamide acetyl-transferase (E2), around which are arranged multiple copies of pyruvate dehydrogenase (E1), dihydrolipoamide dehydrogenase (E3) and protein X (E3BP) bound by non-covalent bonds. LPD1 is a component of the glycine decarboxylase complex (GDC), which is composed of four proteins: P, T, L and H. | Component of the glycine decarboxylase complex (GDC), which is composed of four proteins: P, T, L and H."
+GLYCL_m	REV	GCV123LPD1	"YAL044C:1,YDR019C:1,YFL018C:1,YMR189W:1"	protStoichAsgnManual	"Not present in original scRBA release, but added to align w/ GSM model"
 GLYGS_c	FWD	GSY1GLG2	"YFR015C:1,YJL137C:1"	protStoichAsgnManual	Interacts with glycogen synthase GSY2.
 GLYGS_c	FWD	GSY1GLG1	"YFR015C:1,YKR058W:1"	protStoichAsgnManual	
 GLYGS_c	FWD	GSY2GLG2	"YJL137C:1,YLR258W:1"	protStoichAsgnManual	Interacts with glycogen synthase GSY2. | Interacts with PCL10.
@@ -3057,6 +3061,7 @@ THIORDXi_c	FWD	YDR453C	YDR453C:2	protStoichAsgnManual	"Homodimer; disulfide-link
 THIORDXi_x	FWD	YLR109W	YLR109W:2	protStoichAsgnManual	"Homodimer; disulfide-linked, upon oxidation."
 ICDHx_m	FWD	IDH12	"YNL037C:4,YOR136W:4"	protStoichAsgnManual	Octamer of two non-identical subunits IDH1 and IDH2. | Octamer of two non-identical subunits IDH1 and IDH2.
 ITCOAL_m	FWD	LSC12	"YGR244C:1,YOR142W:1"	protStoichAsgnManual	Heterodimer of an alpha and a beta subunit. | Heterodimer of an alpha and a beta subunit.
+ITCOAL_m	REV	LSC12	"YGR244C:1,YOR142W:1"	protStoichAsgnManual	"Not present in original scRBA release, but added to align w/ GSM model"
 AASADy_c	FWD	LYS25	"YBR115C:1,YGL154C:1"	protStoichAsgnManual	
 EGHLAT_c	FWD	YLR027C_c	YLR027C_c:2	protStoichAsgnAuto	
 EGHLAT_x	FWD	YLR027C_x	YLR027C_x:2	protStoichAsgnAuto	
