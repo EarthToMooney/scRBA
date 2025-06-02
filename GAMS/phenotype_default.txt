@@ -1,5 +1,6 @@
 * all default settings (except paths run at start) specific to your model and preferred phenotype
 * if different values needed for specific tasks, make a separate phenotype.txt file for them
+* Represents aerobic growth on glucose in batch culture with MFA data from Shen et al. 2024 (https://doi.org/10.1038/s41589-024-01571-y)
 * mmol/gDCW/h
 $setGlobal vglc 28.24 
 

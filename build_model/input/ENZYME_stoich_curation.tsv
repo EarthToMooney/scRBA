@@ -1402,6 +1402,7 @@ CYStps_e	REV	YDR508C	YDR508C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:
 CYStps_e	FWD	YCL025C	YCL025C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).
 CYStps_e	REV	YCL025C	YCL025C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).
 CYSItps_v	FWD	YCR075C	YCR075C:1	protStoichAsgnAuto	
+CYSItps_v	REV	YCR075C	YCR075C:1	protStoichAsgnAuto	
 GLUt_c_m	FWD	YPR021C	YPR021C:1	protStoichAsgnAuto	
 GLUt_c_m	FWD	YBR104W	YBR104W:1	protStoichAsgnAuto	
 GLUtps_v	FWD	YER119C	YER119C:1	protStoichAsgnAuto	
@@ -1432,7 +1433,9 @@ ILEt_c_v	FWD	YCL038C	YCL038C:1	protStoichAsgnAuto
 ILEt_c_v	REV	YCL038C	YCL038C:1	protStoichAsgnAuto	
 ILEtpa_v	FWD	YJR001W	YJR001W:1	protStoichAsgnAuto	
 ILEtps_v	FWD	YNL101W	YNL101W:1	protStoichAsgnAuto	
+ILEtps_v	REV	YNL101W	YNL101W:1	protStoichAsgnAuto	
 ILEtps_v	FWD	YKL146W	YKL146W:1	protStoichAsgnAuto	
+ILEtps_v	REV	YKL146W	YKL146W:1	protStoichAsgnAuto	
 ILEtps_e	FWD	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).
 ILEtps_e	REV	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).
 ILEtps_e	FWD	YDR046C	YDR046C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).
@@ -1448,7 +1451,9 @@ LEUt_c_v	FWD	YCL038C	YCL038C:1	protStoichAsgnAuto
 LEUt_c_v	REV	YCL038C	YCL038C:1	protStoichAsgnAuto	
 LEUtpa_v	FWD	YJR001W	YJR001W:1	protStoichAsgnAuto	
 LEUtps_v	FWD	YNL101W	YNL101W:1	protStoichAsgnAuto	
+LEUtps_v	REV	YNL101W	YNL101W:1	protStoichAsgnAuto	
 LEUtps_v	FWD	YKL146W	YKL146W:1	protStoichAsgnAuto	
+LEUtps_v	REV	YKL146W	YKL146W:1	protStoichAsgnAuto	
 LEUtps_e	FWD	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).
 LEUtps_e	REV	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).
 LEUtps_e	FWD	YDR046C	YDR046C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).
@@ -1518,7 +1523,9 @@ TYRt_c_v	REV	YCL038C	YCL038C:1	protStoichAsgnAuto
 TYRtpa_v	FWD	YJR001W	YJR001W:1	protStoichAsgnAuto	
 TYRtpa_v	FWD	YBR293W	YBR293W:1	protStoichAsgnAuto	
 TYRtps_v	FWD	YNL101W	YNL101W:1	protStoichAsgnAuto	
+TYRtps_v	REV	YNL101W	YNL101W:1	protStoichAsgnAuto	
 TYRtps_v	FWD	YKL146W	YKL146W:1	protStoichAsgnAuto	
+TYRtps_v	REV	YKL146W	YKL146W:1	protStoichAsgnAuto	
 TYRtps_e	FWD	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).
 TYRtps_e	REV	YBR068C	YBR068C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).
 TYRtps_e	FWD	YDR046C	YDR046C:1	protStoichAsgnManual	Interacts with RRT2 (PubMed:21880895).

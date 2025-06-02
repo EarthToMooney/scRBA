@@ -56670,7 +56670,7 @@
 "h_c":1,
 "h_v":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YCR075C",
 "subsystem":"Transport",
@@ -56924,7 +56924,7 @@
 "ile__L_c":1,
 "ile__L_v":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YKL146W or YNL101W",
 "subsystem":"Transport",
@@ -57062,7 +57062,7 @@
 "leu__L_c":1,
 "leu__L_v":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YKL146W or YNL101W",
 "subsystem":"Transport",
@@ -57336,7 +57336,7 @@
 "tyr__L_c":1,
 "tyr__L_v":-1
 },
-"lower_bound":0.0,
+"lower_bound":-1000.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"YKL146W or YNL101W",
 "subsystem":"Transport",
@@ -58855,7 +58855,7 @@
 "metabolites":{
 "pnto__R_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -59664,7 +59664,7 @@
 "metabolites":{
 "4abz_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -62432,7 +62432,7 @@
 "metabolites":{
 "fol_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -64568,7 +64568,7 @@
 "metabolites":{
 "inost_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -64684,7 +64684,7 @@
 "metabolites":{
 "nac_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -65481,7 +65481,7 @@
 "metabolites":{
 "pydxn_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -65621,7 +65621,7 @@
 "metabolites":{
 "ribflv_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -66125,7 +66125,7 @@
 "metabolites":{
 "thm_e":-1
 },
-"lower_bound":0.0,
+"lower_bound":-0.25,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
 "subsystem":"Exchange",
@@ -69919,8 +69919,8 @@
 "gene_reaction_rule":"",
 "subsystem":"Unassigned",
 "notes":{
-"notes":"lower bound set to minimum of scRBA NGAM values (DOI:10.1016/j.ymben.2023.04.009)",
 "Confidence Level":"0",
+"notes":"lower bound set to minimum of scRBA NGAM values (DOI:10.1016/j.ymben.2023.04.009)",
 "yeastgem.reaction":"r_4046"
 },
 "annotation":{

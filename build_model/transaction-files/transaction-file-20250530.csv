@@ -25,3 +25,32 @@ CITMALta_x,r,lower_bound:-1000
 Ht_c_v,r,lower_bound:-1000
 THYMDt_c_e,r,lower_bound:-1000
 GPIA5_r,r,lower_bound:-1000
+
+# 2025-06-02: updated bounds to match in-house iRhtoC model for R. toruloides. Ensures more accurate comparisons with rtRBA.
+## Disabled due to not matching yeast9 or medium of iRhtoC; included for reference: 
+#ALCD2i2_c,r,lower_bound:-1000
+#ASNtps_v,r,lower_bound:-1000
+#G3PD1i_m,r,lower_bound:-1000
+#GLNtps_v,r,lower_bound:-1000
+#GLUtps_v,r,lower_bound:-1000
+#GLYAT_c,r,lower_bound:-1000
+#HMGCOAS_m,r,lower_bound:-1000
+#ASPtps_v,r,lower_bound:-1000
+#PHCHGS_m,r,lower_bound:-1000
+#XYLK_c,r,lower_bound:-1000
+
+## Matches medium of iRhtoC but not yeast9 or yeast8.3.4:
+EX_4abz_e,r,lower_bound:-0.25
+EX_fol_e,r,lower_bound:-0.25
+EX_inost_e,r,lower_bound:-0.25
+EX_nac_e,r,lower_bound:-0.25
+EX_pnto__R_e,r,lower_bound:-0.25
+EX_pydxn_e,r,lower_bound:-0.25
+EX_ribflv_e,r,lower_bound:-0.25
+EX_thm_e,r,lower_bound:-0.25
+
+## These risk allowing cycles but are allowed in iRhtoC plus yeast9 and yeast8.3.4:
+CYSItps_v,r,lower_bound:-1000
+ILEtps_v,r,lower_bound:-1000
+LEUtps_v,r,lower_bound:-1000
+TYRtps_v,r,lower_bound:-1000
