@@ -5,6 +5,7 @@ $setGlobal vglc 28.24
 
 * biomass rxn
 $setGlobal bio 'BIOSYN-BIODILAERO-NOGAM'
+$setGlobal bio 'BIOSYN-BIODILAERO'
 * growth rate
 $setGlobal mu 0.367
 *$setGlobal mu 0.3909
@@ -16,7 +17,9 @@ v.up('BIOSYN-CARBTOBIO') = %mu% * (0.2964 + 0.0001);
 v.up('BIOSYN-RNATOBIO') = %mu% * (0.0819 + 0.0001);
 
 * NGAM + GAM
-v_sm.lo('ATPM_c') = (1 + (%mu% * 2.088));
+* v_sm.lo('ATPM_c') = (1 + (%mu% * 2.088));
+* NGAM only
+v_sm.lo('ATPM_c') = 1;
 
 * included in model-version-settings:
 * max_allowed_mito_proteome_allo_fraction
