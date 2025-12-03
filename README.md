@@ -1,7 +1,7 @@
 # *sc*RBA: *S. cerevisiae* Resource Balance Analysis model
 This repository provides resources and model files for the genome-scale resource balance analysis (RBA) model *sc*RBA that accompanies the following manuscript:
 
-  - Hoang V. Dinh and Costas D. Maranas. "Evaluating proteome allocation of *Saccharomyces cerevisiae* phenotypes with resource balance analysis." Metab. Eng., 2023, 77:242-255; doi: https://doi.org/10.1016/j.ymben.2023.04.009
+  - Hoang V. Dinh and Costas D. Maranas. "Evaluating proteome allocation of *Saccharomyces cerevisiae* phenotypes with resource balance analysis." Metab. Eng., 2023, 77:242-255. https://doi.org/10.1016/j.ymben.2023.04.009
 
 which have been updated to follow the conventions in the following manuscript: 
   - Eric J. Mooney, Patrick F. Suthers, Wheaton L. Schroeder, Hoang V. Dinh, Xi Li, Yihui Shen, Tianxia Xiao, Catherine M. Call, Heide Baron, Arjuna M. Subramanian, Daniel R. Weilandt, Felix C. Keber, Martin Wühr, Joshua D. Rabinowitz, Costas D. Maranas. "Metabolic flux and resource balance in the oleaginous yeast Rhodotorula toruloides." Metab. Eng. https://doi.org/10.1016/j.ymben.2025.11.012.
